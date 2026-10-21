@@ -115,7 +115,7 @@
 			"page": 82,
 			"versatile": true,
 			"entries": [
-				"You have elves, or possibly other aiuvarins, in your family tree. You have pointed ears and other telltale signs of elf heritage. You gain the {@trait elf} trait, the {@trait aiuvarin|PC1} trait, and lowlight vision. In addition, when you gain an ancestry feat, you can choose from {@filter aiuvarin feats|feats||type=ancestry|ancestry & heritage=aiuvarin} and {@filter elf feats|feats||type=ancestry|ancestry & heritage=elf} in addition to those from your ancestry."
+				"You have elves, or possibly other aiuvarins, in your family tree. You have pointed ears and other telltale signs of elf heritage. You gain the {@trait elfo} trait, the {@trait aiuvarin|PC1} trait, and lowlight vision. In addition, when you gain an ancestry feat, you can choose from {@filter aiuvarin feats|feats||type=ancestry|ancestry & heritage=aiuvarin} and {@filter elf feats|feats||type=ancestry|ancestry & heritage=elf} in addition to those from your ancestry."
 			],
 			"info": [
 				{
@@ -616,7 +616,7 @@
 			"versatile": true,
 			"rarity": "rare",
 			"entries": [
-				"The blood of a beast flows through your veins, granting you the ferocity and might of animals. Only creatures with the {@trait humanoid} trait can take the beastkin versatile heritage. Choose a type of animal such as bat, eagle, shark, spider, tyrannosaurus, wasp, or wolf. This is the type of animal tied to your heritage and is known as your inherent animal. You gain the {@trait beast} and {@trait beastkin} traits, in addition to the traits from your ancestry. A beastkin's hybrid form is their natural shape. You gain the {@action Change Shape|LOAG} ability. You can choose from {@filter beastkin feats|feats||type=ancestry|ancestry & heritage=beastkin} and feats from your ancestry whenever you gain an ancestry feat.",
+				"The blood of a beast flows through your veins, granting you the ferocity and might of animals. Only creatures with the {@trait humanoide} trait can take the beastkin versatile heritage. Choose a type of animal such as bat, eagle, shark, spider, tyrannosaurus, wasp, or wolf. This is the type of animal tied to your heritage and is known as your inherent animal. You gain the {@trait beast} and {@trait beastkin} traits, in addition to the traits from your ancestry. A beastkin's hybrid form is their natural shape. You gain the {@action Change Shape|LOAG} ability. You can choose from {@filter beastkin feats|feats||type=ancestry|ancestry & heritage=beastkin} and feats from your ancestry whenever you gain an ancestry feat.",
 				{
 					"type": "ability",
 					"style": "full",

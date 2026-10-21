@@ -12,7 +12,7 @@
 			],
 			"prerequisites": "master in {@skill Occultism}",
 			"entries": [
-				"Your {@trait occult} connection to the world helps you deal with being {@condition frightened} or {@condition stupefied}. When your {@condition frightened} or {@condition stupefied} condition values would decrease, decrease the value by 2."
+				"Your {@trait ocultista} connection to the world helps you deal with being {@condition frightened} or {@condition stupefied}. When your {@condition frightened} or {@condition stupefied} condition values would decrease, decrease the value by 2."
 			]
 		},
 		{
@@ -35,7 +35,7 @@
 			"prerequisites": "master in {@skill Occultism}",
 			"trigger": "An adjacent ally becomes {@condition frightened} or {@condition stupefied}.",
 			"entries": [
-				"You use your {@trait occult} connection to your allies to take on the fear and confusion they feel. Focus on your own calmness and pull in your nearby allies' emotions. Reduce the {@condition frightened} and {@condition stupefied} condition values of adjacent allies by 1, and increase your {@condition frightened} and {@condition stupefied} condition values by the same amount."
+				"You use your {@trait ocultista} connection to your allies to take on the fear and confusion they feel. Focus on your own calmness and pull in your nearby allies' emotions. Reduce the {@condition frightened} and {@condition stupefied} condition values of adjacent allies by 1, and increase your {@condition frightened} and {@condition stupefied} condition values by the same amount."
 			]
 		},
 		{
@@ -60,7 +60,7 @@
 			},
 			"trigger": "A creature detects your attempt to {@action Impersonate}, and you're within 30 feet of at least one other creature.",
 			"entries": [
-				"You have an {@trait occult} connection to the world that helps you blend in with the cacophony of life around you. Attempt an {@skill Occultism} check against the creature's {@skill Perception} DC. On a success, the creature mistakenly identifies another creature within 30 feet of you as you instead."
+				"You have an {@trait ocultista} connection to the world that helps you blend in with the cacophony of life around you. Attempt an {@skill Occultism} check against the creature's {@skill Perception} DC. On a success, the creature mistakenly identifies another creature within 30 feet of you as you instead."
 			]
 		}
 	]

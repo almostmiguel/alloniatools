@@ -2561,7 +2561,7 @@
 				"mid": [
 					{
 						"entries": [
-							"While aghashes hate all mortals, they particularly despise beautiful objects and beautiful or charismatic mortals. When not in physical peril, an aghash is compelled to destroy art and other works of beauty. An aghash can't enter an area of pristine beauty without first marring it in some way. Given a choice, an aghash attacks a foe with the highest Charisma score first. If barred from doing so by force or some {@trait magical} effect, they take {@damage 1d6} mental damage at the end of their turn."
+							"While aghashes hate all mortals, they particularly despise beautiful objects and beautiful or charismatic mortals. When not in physical peril, an aghash is compelled to destroy art and other works of beauty. An aghash can't enter an area of pristine beauty without first marring it in some way. Given a choice, an aghash attacks a foe with the highest Charisma score first. If barred from doing so by force or some {@trait mágico} effect, they take {@damage 1d6} mental damage at the end of their turn."
 						],
 						"name": "Hatred of Beauty"
 					}
@@ -17922,7 +17922,7 @@
 							"primal"
 						],
 						"entries": [
-							"30 feet. All allies within 30 feet of the feathered bear gain a +1 status bonus to saves against {@trait magical} effects. The bonus increases to +2 if the effect originated from a demon or other chaotic evil fiend."
+							"30 feet. All allies within 30 feet of the feathered bear gain a +1 status bonus to saves against {@trait mágico} effects. The bonus increases to +2 if the effect originated from a demon or other chaotic evil fiend."
 						],
 						"name": "Guardian's Aegis"
 					},
@@ -21421,9 +21421,9 @@
 							"abjuration",
 							"divine"
 						],
-						"trigger": "The girtablilu seer attempts a saving throw against a {@trait magical} effect but hasn't rolled yet",
+						"trigger": "The girtablilu seer attempts a saving throw against a {@trait mágico} effect but hasn't rolled yet",
 						"entries": [
-							"The seer summons divine energy to protect themself at the cost of their other magical defenses. Until the start of their next turn, they gain a +1 circumstance bonus to saving throws against non-divine {@trait magical} effects and a \u20131 circumstance penalty to saves against {@trait divine} effects."
+							"The seer summons divine energy to protect themself at the cost of their other magical defenses. Until the start of their next turn, they gain a +1 circumstance bonus to saving throws against non-divine {@trait mágico} effects and a \u20131 circumstance penalty to saves against {@trait divino} effects."
 						],
 						"name": "Divine Aegis"
 					}
@@ -40612,7 +40612,7 @@
 				"mid": [
 					{
 						"entries": [
-							"Pairakas hate the color red. They won't wear the color or willingly enter any place painted red. Given a choice, they'll attack a creature wearing red first. If barred from expressing their displeasure toward the color by force or some {@trait magical} effect, they take {@damage 2d6} mental damage at the end of their turn."
+							"Pairakas hate the color red. They won't wear the color or willingly enter any place painted red. Given a choice, they'll attack a creature wearing red first. If barred from expressing their displeasure toward the color by force or some {@trait mágico} effect, they take {@damage 2d6} mental damage at the end of their turn."
 						],
 						"name": "Hatred of Red"
 					}
@@ -55491,7 +55491,7 @@
 				"mid": [
 					{
 						"entries": [
-							"Umasi can't heal or recover HP in any way except their {@footnote flesh grafting|An umasi can spend 10 minutes grafting the flesh of other living or recently dead {@trait humanoid||humanoids} onto their body, attempting a DC 20 {@skill Medicine} check with the effects of {@action Treat Wounds}. This process is the only way an umasi can recover Hit Points.|Flesh Grafting, page 280} techniques (see sidebar). However, despite being living creatures, they don't take damage from either positive or negative damage."
+							"Umasi can't heal or recover HP in any way except their {@footnote flesh grafting|An umasi can spend 10 minutes grafting the flesh of other living or recently dead {@trait humanoide||humanoids} onto their body, attempting a DC 20 {@skill Medicine} check with the effects of {@action Treat Wounds}. This process is the only way an umasi can recover Hit Points.|Flesh Grafting, page 280} techniques (see sidebar). However, despite being living creatures, they don't take damage from either positive or negative damage."
 						],
 						"name": "Immortal Flesh"
 					},

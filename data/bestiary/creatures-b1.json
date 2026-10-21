@@ -12852,7 +12852,7 @@
 							"light"
 						],
 						"entries": [
-							"When the caligni creeper dies, their body combusts in a flash of bright light. All creatures in a 10-foot emanation must succeed at a {@dc 17} Fortitude save or be {@condition blinded} for {@dice 1d6} rounds. Creatures with light blindness who successfully save are still {@condition blinded} for 1 round. The creeper's gear and treasure are left in a pile where they died. As this isn't a {@trait magical} effect, the light has no effect within magical darkness."
+							"When the caligni creeper dies, their body combusts in a flash of bright light. All creatures in a 10-foot emanation must succeed at a {@dc 17} Fortitude save or be {@condition blinded} for {@dice 1d6} rounds. Creatures with light blindness who successfully save are still {@condition blinded} for 1 round. The creeper's gear and treasure are left in a pile where they died. As this isn't a {@trait mágico} effect, the light has no effect within magical darkness."
 						],
 						"name": "Death Flash"
 					}
@@ -13035,7 +13035,7 @@
 						],
 						"entries": [
 							"When the dancer dies, their body combusts in a flare of white light. All creatures in a 10-foot emanation must succeed at a {@dc 17} Fortitude save or be {@condition dazzled} for {@dice 1d4} rounds.",
-							"Calignis that fail this save are also {@condition frightened 1}. The dancer's gear and treasure are left in a pile where they died. As this isn't a {@trait magical} effect, the light has no effect within magical darkness."
+							"Calignis that fail this save are also {@condition frightened 1}. The dancer's gear and treasure are left in a pile where they died. As this isn't a {@trait mágico} effect, the light has no effect within magical darkness."
 						],
 						"name": "Death Flare"
 					}

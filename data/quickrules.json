@@ -174,7 +174,7 @@
 							]
 						},
 						"Great character concepts don't always fit neatly into a single class. If you want to build on what your character's class allows them to do, using an archetype is a simple way to adapt any class to fit your vision for your character.",
-						"Applying an archetype requires you to select archetype feats instead of class feats. Start by finding the archetype that best fits your character concept, and select the archetype's dedication feat using one of your class feat choices. Once you have the dedication feat, you can select any feat from that archetype in place of a class feat as long as you meet its prerequisites. The archetype feat you select is still subject to any selection restrictions on the class feat it replaces. For example, if you gained an ability at 6th level that granted you a 4th-level class feat with the {@trait dwarf} trait, you could swap out that class feat only for an archetype feat of 4th level or lower with the {@trait dwarf} trait. Archetype feats you gain in place of a class feat are called archetype class feats.",
+						"Applying an archetype requires you to select archetype feats instead of class feats. Start by finding the archetype that best fits your character concept, and select the archetype's dedication feat using one of your class feat choices. Once you have the dedication feat, you can select any feat from that archetype in place of a class feat as long as you meet its prerequisites. The archetype feat you select is still subject to any selection restrictions on the class feat it replaces. For example, if you gained an ability at 6th level that granted you a 4th-level class feat with the {@trait anão} trait, you could swap out that class feat only for an archetype feat of 4th level or lower with the {@trait anão} trait. Archetype feats you gain in place of a class feat are called archetype class feats.",
 						"Occasionally, an archetype feat works like a skill feat instead of a class feat. These archetype feats have the skill trait, and you select them in place of a skill feat, otherwise following the same rules above. These aren't archetype class feats (for instance, to determine the number of Hit Points you gain from the {@feat Fighter Resiliency} archetype feat). Each archetype's dedication feat represents a certain portion of your character's time and focus, so once you select a dedication feat for an archetype, you must satisfy its requirements before you can gain another dedication feat. Typically, you satisfy an archetype dedication feat by gaining a certain number of feats from the archetype's list. You can't retrain a dedication feat as long as you have any other feats from that archetype.",
 						"Sometimes an archetype feat grants another feat, such as the alchemist's Basic Concoction. You must still meet the prerequisites of the feat you gain in this way.",
 						{
@@ -748,7 +748,7 @@
 																"teleportation"
 															],
 															"entries": [
-																"The familiar teleports itself up to 30 feet. The destination must be in dim light or darkness and must be within your familiar's line of sight and line of effect. This action has the trait matching your tradition of magic, or {@trait occult} if you aren't a spellcaster."
+																"The familiar teleports itself up to 30 feet. The destination must be in dim light or darkness and must be within your familiar's line of sight and line of effect. This action has the trait matching your tradition of magic, or {@trait ocultista} if you aren't a spellcaster."
 															]
 														}
 													]
@@ -1743,9 +1743,9 @@
 			"entries": [
 				{
 					"type": "pf2-h4",
-					"name": "Traits",
+					"name": "Traço",
 					"entries": [
-						"A trait is a keyword that conveys additional information about a rules element, such as a school of magic or rarity. Often, a trait indicates how other rules interact with an ability, creature, item, or another rules element that has that trait."
+						"Um traço é uma palavra-chave que transmite informações adicionais sobre um elemento de regra, como uma escola de magia ou raridade. Frequentemente, um traço indica como outras regras interagem com uma habilidade, criatura, item ou outros elementos de regra que possuem esse traço."
 					]
 				}
 			]
@@ -1898,7 +1898,7 @@
 					"page": 94,
 					"name": "Relics",
 					"entries": [
-						"Relics begin as a simple item, called a relic seed, which is little more than a functional item with a minor {@trait magical} effect associated with it. As the owner of the relic grows in power, so does the relic. It develops gifts, which are new magical abilities and activations. These abilities might be themed to the relic, the character, or the nature of the campaign. If a relic is passed to another character, this process begins anew, sometimes granting the same abilities again over time, but possibly unlocking entirely new powers. If someone else takes the relic from its owner, it usually works for a while, though it might lose its power incrementally over time if not returned to its owner. How the relic changes in such a circumstance is up to you, and should fit the story.",
+						"Relics begin as a simple item, called a relic seed, which is little more than a functional item with a minor {@trait mágico} effect associated with it. As the owner of the relic grows in power, so does the relic. It develops gifts, which are new magical abilities and activations. These abilities might be themed to the relic, the character, or the nature of the campaign. If a relic is passed to another character, this process begins anew, sometimes granting the same abilities again over time, but possibly unlocking entirely new powers. If someone else takes the relic from its owner, it usually works for a while, though it might lose its power incrementally over time if not returned to its owner. How the relic changes in such a circumstance is up to you, and should fit the story.",
 						{
 							"type": "pf2-h2",
 							"source": "GMG",

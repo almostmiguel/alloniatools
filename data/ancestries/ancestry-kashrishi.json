@@ -35,7 +35,7 @@
 				{
 					"name": "Glowing Horn",
 					"entries": [
-						"Your horn reacts to psychic energy by softly glowing. The horn emanates dim light in a 10-foot emanation until the start of your next turn whenever you use an {@trait occult} action you gained from an ancestry feat, cast an innate occult spell, or {@action Cast a Spell} that has the {@trait mental} trait."
+						"Your horn reacts to psychic energy by softly glowing. The horn emanates dim light in a 10-foot emanation until the start of your next turn whenever you use an {@trait ocultista} action you gained from an ancestry feat, cast an innate occult spell, or {@action Cast a Spell} that has the {@trait mental} trait."
 					]
 				}
 			],

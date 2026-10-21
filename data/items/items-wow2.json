@@ -48,7 +48,7 @@
 						"unit": "day"
 					},
 					"entries": [
-						"You hurl the axe horizontally, sending it flying through the air in a wild, whirling cyclone. The axe flies in a 30-foot emanation around you, eliminating all non-magical undergrowth and any resulting difficult terrain, cover, and concealment in area. It attempts to counteract one {@trait magical} effect that affects a {@trait plant} in the area (counteract {@hit +20}). {@trait Plant} creatures in the area take {@damage 5d6} slashing damage (DC 25 basic Reflex save). As the axe finishes its circuit, it returns to your hand."
+						"You hurl the axe horizontally, sending it flying through the air in a wild, whirling cyclone. The axe flies in a 30-foot emanation around you, eliminating all non-magical undergrowth and any resulting difficult terrain, cover, and concealment in area. It attempts to counteract one {@trait mágico} effect that affects a {@trait plant} in the area (counteract {@hit +20}). {@trait Plant} creatures in the area take {@damage 5d6} slashing damage (DC 25 basic Reflex save). As the axe finishes its circuit, it returns to your hand."
 					],
 					"type": "ability"
 				}
@@ -1224,7 +1224,7 @@
 			"bulk": "L",
 			"category": "Worn",
 			"entries": [
-				"This glossy black brooch is made of solidified shadows and is a gift, given by Avathrael Realmshaper to their allies to allow them to navigate the heart of the forest within Gloaming Arbor. While wearing a {@i passage charm}, you can cast {@spell darkness|PC1} as an innate {@trait occult} spell twice per day.",
+				"This glossy black brooch is made of solidified shadows and is a gift, given by Avathrael Realmshaper to their allies to allow them to navigate the heart of the forest within Gloaming Arbor. While wearing a {@i passage charm}, you can cast {@spell darkness|PC1} as an innate {@trait ocultista} spell twice per day.",
 				{
 					"name": "Activate\u2014Shape the Shadows",
 					"activity": {

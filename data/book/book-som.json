@@ -837,7 +837,7 @@
 							"page": 158,
 							"entries": [
 								"{@b {@trait Fulu}:} Fulus are small paper charms that can be affixed to a suit of armor, a shield, a weapon, a creature, or even a structure. Some fulus are composed of multiple such charms, taking effect only once all have been affixed. Normal fulus have effects immediately once affixed, while fulu talismans have an effect only once activated. Once a fulu has been activated, it lasts for the given duration and then burns out. Unless otherwise noted, fulus expire one year after being created, reverting to mundane paper.",
-								"All fulus have the {@trait fulu} and {@trait consumable} traits. Fulus also have a tradition trait\u2014either {@trait arcane}, {@trait divine}, {@trait occult} or {@trait primal}\u2014determined by the magical tradition of its creator. For example, a fulu created by a priest would have the {@trait divine} trait, whereas a witch who dabbles in fate might create a fulu with the {@trait occult} trait. Some fulus also have the {@trait talisman} trait, if they work similarly to talismans (such as being affixed to a suit of armor, a shield, or a weapon.",
+								"All fulus have the {@trait fulu} and {@trait consumable} traits. Fulus also have a tradition trait\u2014either {@trait arcano}, {@trait divino}, {@trait ocultista} or {@trait primal}\u2014determined by the magical tradition of its creator. For example, a fulu created by a priest would have the {@trait divino} trait, whereas a witch who dabbles in fate might create a fulu with the {@trait ocultista} trait. Some fulus also have the {@trait talisman} trait, if they work similarly to talismans (such as being affixed to a suit of armor, a shield, or a weapon.",
 								"Each fulu's stat block indicates the type of item or creature it can be affixed to. Affixing or removing a fulu requires using the {@action Affix a Fulu|SoM} activity, or the {@action Affix a Talisman} action instead if the fulu is also a talisman."
 							]
 						},
@@ -1113,7 +1113,7 @@
 										},
 										"Once you've themed and designed your staff, you can craft it with the following the guidelines, along with previously established rules for crafting magical items.",
 										"As with normal staves, one casting of all listed levels of all spells in the staff must be provided during {@action Craft||Crafting}.",
-										"Choose a magical school for your staff from among the schools the spells on it have. Pick the one that best reflects the spells, usually the one most shared among them. You can optionally give your staff a trait for one magic tradition, instead of the {@trait magical} trait, if the staff is fully steeped in that tradition and contains spells only from that tradition's spell list.",
+										"Choose a magical school for your staff from among the schools the spells on it have. Pick the one that best reflects the spells, usually the one most shared among them. You can optionally give your staff a trait for one magic tradition, instead of the {@trait mágico} trait, if the staff is fully steeped in that tradition and contains spells only from that tradition's spell list.",
 										"You still need to {@action Craft} the staff. If you're not good at {@skill Crafting}, you can have somebody use the {@action Craft} activity for you, but you must be present the whole time. Since the creation of a custom staff is {@trait rare}, you and the GM might decide to have a special quest for esoteric ingredients and methods as part of the story.",
 										{
 											"type": "pf2-h4",
@@ -1121,7 +1121,7 @@
 											"source": "SoM",
 											"page": 167,
 											"entries": [
-												"Lini selected mostly transmutation spells for her staff, so she chooses the {@trait transmutation} trait. She could give it the primal trait, but choses to keep it open with the {@trait magical} trait, much like the {@item verdant staff} in the Core Rulebook.",
+												"Lini selected mostly transmutation spells for her staff, so she chooses the {@trait transmutation} trait. She could give it the primal trait, but choses to keep it open with the {@trait mágico} trait, much like the {@item verdant staff} in the Core Rulebook.",
 												"To Craft the staff, Lini follows the normal rules. She provides 3,250 gp in raw materials, spends 4 days at work, and attempts a {@skill Crafting} check. Each day she works on it, she prepares the spells she needs to put into the staff given its Craft Requirements."
 											]
 										}
@@ -2170,7 +2170,7 @@
 										"sections": [
 											[
 												[
-													"Most ley lines are simply naturally occurring conduits of pure magical energy. Tapping into a basic ley line allows spellcasters to modify their spells. This ley line has the {@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal} trait as appropriate.",
+													"Most ley lines are simply naturally occurring conduits of pure magical energy. Tapping into a basic ley line allows spellcasters to modify their spells. This ley line has the {@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal} trait as appropriate.",
 													{
 														"type": "successDegree",
 														"entries": {
@@ -2460,7 +2460,7 @@
 								{
 									"type": "list",
 									"items": [
-										"A trait associated with one of the magic traditions: {@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal}.",
+										"A trait associated with one of the magic traditions: {@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal}.",
 										"The ability to cast a cantrip (PCs choose one upon character creation) from the tradition associated with that trait.",
 										"The {@action Cast a Spell} activity.",
 										"Proficiency rank in spell DCs and spell attack rolls with the chosen tradition equal to their class DC or their highest proficiency rank in spell DCs, whichever is higher. They can choose any mental ability score (Intelligence, Wisdom, or Charisma) to be associated with their innate spells granted by pervasive magic.",
@@ -2511,7 +2511,7 @@
 									"type": "pf2-h3",
 									"name": "Arcane Adjustments",
 									"entries": [
-										"The creature gains the {@trait arcane} trait and can cast a single innate spell from the arcane spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
+										"The creature gains the {@trait arcano} trait and can cast a single innate spell from the arcane spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
 										{
 											"source": "SoM",
 											"page": 220,
@@ -2593,7 +2593,7 @@
 									"type": "pf2-h3",
 									"name": "Divine Adjustments",
 									"entries": [
-										"The creature gains the {@trait divine} trait and can cast a single innate spell from the divine spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
+										"The creature gains the {@trait divino} trait and can cast a single innate spell from the divine spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
 										{
 											"source": "SoM",
 											"page": 220,
@@ -2675,7 +2675,7 @@
 									"type": "pf2-h3",
 									"name": "Occult Adjustments",
 									"entries": [
-										"The creature gains the {@trait occult} trait and can cast a single innate spell from the occult spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
+										"The creature gains the {@trait ocultista} trait and can cast a single innate spell from the occult spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
 										{
 											"source": "SoM",
 											"page": 220,
@@ -2922,7 +2922,7 @@
 									"type": "pf2-h3",
 									"name": "Absalom and Starstone Isle",
 									"entries": [
-										"Traces of the dead god Aroden's divine power might create areas of pervasive magic. Creatures of any type might gain the {@trait divine} trait.",
+										"Traces of the dead god Aroden's divine power might create areas of pervasive magic. Creatures of any type might gain the {@trait divino} trait.",
 										"{@b Starstone Cathedral:} The magic of the Starstone could make this divine spell-touched terrain.",
 										"{@b Tyrant's Grasp:} The site of the Whispering Tyrant's defeat is still suffused with powerful necromantic magic. Necromantic spells could be heightened in this area."
 									]
@@ -2941,7 +2941,7 @@
 									"name": "Eye of Dread",
 									"entries": [
 										"The Eye of Dread region has seen multiple events of immense magical power, and pockets of pervasive magic could riddle the entire region.",
-										"{@b Gallowspire:} The broken fortress of Tar-Baphon still teems with power. It might heighten necromantic magic and imbue undead inhabitants with the {@trait arcane} trait.",
+										"{@b Gallowspire:} The broken fortress of Tar-Baphon still teems with power. It might heighten necromantic magic and imbue undead inhabitants with the {@trait arcano} trait.",
 										"{@b Nirmathas:} Nirmathas has strong First World connections through the Fangwood forest and could be filled with primal magic near portals to the First World."
 									]
 								},
@@ -2950,7 +2950,7 @@
 									"name": "Golden Road",
 									"entries": [
 										"Mostly due to the influence of Ancient Osirion, divine spell-touched terrain might appear in the region.",
-										"{@b Black Desert:} The power of unlife flourishes in this Vault deep in the Darklands. All necromancy spells could be heightened, and undead creatures from this area might gain the {@trait divine} trait."
+										"{@b Black Desert:} The power of unlife flourishes in this Vault deep in the Darklands. All necromancy spells could be heightened, and undead creatures from this area might gain the {@trait divino} trait."
 									]
 								},
 								{
@@ -2969,7 +2969,7 @@
 										"The Impossible Lands is the most magic-infused region in the Inner Sea. Many types of pervasive magic effects and terrain might be found throughout its reaches.",
 										"{@b Geb:} Geb's cities, especially the capital of Mechitar, might have heightened necromantic magic.",
 										"{@b Jalmeray:} The island nation might have energy surge terrain or other such areas that heighten elemental magic.",
-										"{@b Nex:} Several prominent locations within the magical kingdom might heighten {@trait arcane} magic."
+										"{@b Nex:} Several prominent locations within the magical kingdom might heighten {@trait arcano} magic."
 									]
 								},
 								{
@@ -2977,8 +2977,8 @@
 									"name": "Mwangi Expanse",
 									"entries": [
 										"The Mwangi Expanse is a verdant region, and it could have pockets of primal magic terrain secreted throughout its wild lands.",
-										"{@b Mzali:} The temple-city of Mzali was once the center of an empire ruled by divine sun kings. A few creatures in this area might have the {@trait divine} trait, and divine magic could be heightened in parts of the city proper.",
-										"{@b Ruins of Kho:} These ruins of the first Shory flying city, smashed to the earth by the Tarrasque, still sputter with magical energies. Creatures from areas near the fallen city might gain the {@trait arcane} trait, and {@trait arcane} magic could be heightened in the area. Specific spots among the ruins might feature various types of energy surge terrain."
+										"{@b Mzali:} The temple-city of Mzali was once the center of an empire ruled by divine sun kings. A few creatures in this area might have the {@trait divino} trait, and divine magic could be heightened in parts of the city proper.",
+										"{@b Ruins of Kho:} These ruins of the first Shory flying city, smashed to the earth by the Tarrasque, still sputter with magical energies. Creatures from areas near the fallen city might gain the {@trait arcano} trait, and {@trait arcano} magic could be heightened in the area. Specific spots among the ruins might feature various types of energy surge terrain."
 									]
 								},
 								{
@@ -3119,7 +3119,7 @@
 												"teleportation"
 											],
 											"entries": [
-												"The familiar teleports itself up to 30 feet. The destination must be in dim light or darkness and must be within your familiar's line of sight and line of effect. This action has the trait matching your tradition of magic, or {@trait occult} if you aren't a spellcaster."
+												"The familiar teleports itself up to 30 feet. The destination must be in dim light or darkness and must be within your familiar's line of sight and line of effect. This action has the trait matching your tradition of magic, or {@trait ocultista} if you aren't a spellcaster."
 											]
 										}
 									]
@@ -3639,7 +3639,7 @@
 										],
 										[
 											"8",
-											"{@b Oppressive Voice} ({@trait divination}, {@trait mental}, {@trait nonlethal}) The voice of your muse, your deity, an ancestor, or another appropriate entity suddenly overwhelms your mind. You must attempt a Will saving throw. You take {@scaledice 1d4|1-10|1d4} mental damage per spell level with a basic Will save. On a failure, you're also {@condition stunned 1} ({@condition stunned 2} on a critical failure)."
+											"{@b Oppressive Voice} ({@trait divinotion}, {@trait mental}, {@trait nonlethal}) The voice of your muse, your deity, an ancestor, or another appropriate entity suddenly overwhelms your mind. You must attempt a Will saving throw. You take {@scaledice 1d4|1-10|1d4} mental damage per spell level with a basic Will save. On a failure, you're also {@condition stunned 1} ({@condition stunned 2} on a critical failure)."
 										],
 										[
 											"9",
@@ -3651,7 +3651,7 @@
 										],
 										[
 											"11",
-											"{@b Mental Broadcast} ({@trait detection}, {@trait divination}, {@trait mental}) For 1 minute, everyone within 30 feet of you can hear your surface thoughts."
+											"{@b Mental Broadcast} ({@trait detection}, {@trait divinotion}, {@trait mental}) For 1 minute, everyone within 30 feet of you can hear your surface thoughts."
 										],
 										[
 											"12",

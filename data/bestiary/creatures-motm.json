@@ -378,7 +378,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"The pairaka can take the appearance of any Small or Medium {@trait humanoid} or {@trait animal}. This doesn't change her Speed or her attack and damage modifiers with the {@action Strike||Strikes}, but it might change the damage type her strikes deal."
+							"The pairaka can take the appearance of any Small or Medium {@trait humanoide} or {@trait animal}. This doesn't change her Speed or her attack and damage modifiers with the {@action Strike||Strikes}, but it might change the damage type her strikes deal."
 						]
 					},
 					{

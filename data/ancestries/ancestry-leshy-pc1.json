@@ -10,7 +10,7 @@
 				"small"
 			],
 			"speed": {
-				"walk": 25
+				"walk": 7.5
 			},
 			"boosts": [
 				"constitution",

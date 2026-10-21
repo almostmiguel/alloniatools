@@ -2696,7 +2696,7 @@
 				"entry": "until your next daily preparations"
 			},
 			"entries": [
-				"You conjure a towering mansion up to four stories tall and up to 300 feet on a side. While Casting the Spell, you hold an image of the mansion and its desired appearance in your mind. The mansion can contain as many or as few rooms as you desire, and it's decorated as you imagine it. You can imagine a purpose for each room of the mansion, and the proper accouterments appear within. Any furniture or other mundane fixtures function normally for anyone inside the mansion, but they cease to exist if taken beyond its walls. No fixture created with this spell can create {@trait magical} effects, but magical devices brought into the mansion function normally.",
+				"You conjure a towering mansion up to four stories tall and up to 300 feet on a side. While Casting the Spell, you hold an image of the mansion and its desired appearance in your mind. The mansion can contain as many or as few rooms as you desire, and it's decorated as you imagine it. You can imagine a purpose for each room of the mansion, and the proper accouterments appear within. Any furniture or other mundane fixtures function normally for anyone inside the mansion, but they cease to exist if taken beyond its walls. No fixture created with this spell can create {@trait mágico} effects, but magical devices brought into the mansion function normally.",
 				"Your mansion contains the same types and quantities of foodstuffs and servants as created by the {@spell planar palace|PC1} spell. Each of the mansion's exterior doorways and windows are protected by {@spell alarm|PC1} spells. You choose whether each alarm is audible or mental as you Cast the Spell, and each has a different sound (for an audible alarm) or sensation (for a mental one), allowing you to instantly determine which portal has been used."
 			]
 		},
@@ -3232,7 +3232,7 @@
 				"entry": "varies"
 			},
 			"entries": [
-				"You curse the target, sapping its spirit and leaving a contagious trap in its essence. The target must attempt a Will save. Any creature that casts a {@trait divine} or {@trait occult} spell on the target while it's affected is targeted by spiritual epidemic and must also attempt a Will save. The curse continues to spread in this way.",
+				"You curse the target, sapping its spirit and leaving a contagious trap in its essence. The target must attempt a Will save. Any creature that casts a {@trait divino} or {@trait ocultista} spell on the target while it's affected is targeted by spiritual epidemic and must also attempt a Will save. The curse continues to spread in this way.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -3391,7 +3391,7 @@
 			},
 			"entries": [
 				"You accelerate the processes of decay in the area. Each living creature in the area takes {@damage 2d10} void damage with a basic Fortitude save. A creature afflicted by a disease takes a \u22122 circumstance penalty to this save.",
-				"You can also direct the blight to rot all Small and Tiny non-creature plants in the area, eliminating non-magical undergrowth and any resulting difficult terrain, cover, and concealment. Sudden blight attempts to counteract any {@trait magical} effect on the plants before withering them."
+				"You can also direct the blight to rot all Small and Tiny non-creature plants in the area, eliminating non-magical undergrowth and any resulting difficult terrain, cover, and concealment. Sudden blight attempts to counteract any {@trait mágico} effect on the plants before withering them."
 			],
 			"heightened": {
 				"plusX": {
@@ -6277,7 +6277,7 @@
 				]
 			},
 			"entries": [
-				"Vicious dragon claws appear and slash at two nearby foes. Make a spell attack roll against each creature. This counts as two attacks for your multiple attack penalty, but the penalty doesn't increase until you've made both attacks. On a hit, the creatures takes {@damage 1d8} slashing plus {@damage 1d4} additional damage of a type determined by the magical tradition related to the dragon that influenced your bloodline: {@b {@trait arcane}} force, {@b {@trait divine}} spirit, {@b {@trait occult}} mental, or {@b {@trait primal}} fire."
+				"Vicious dragon claws appear and slash at two nearby foes. Make a spell attack roll against each creature. This counts as two attacks for your multiple attack penalty, but the penalty doesn't increase until you've made both attacks. On a hit, the creatures takes {@damage 1d8} slashing plus {@damage 1d4} additional damage of a type determined by the magical tradition related to the dragon that influenced your bloodline: {@b {@trait arcano}} force, {@b {@trait divino}} spirit, {@b {@trait ocultista}} mental, or {@b {@trait primal}} fire."
 			],
 			"heightened": {
 				"plusX": {
@@ -6318,7 +6318,7 @@
 				"basic": true
 			},
 			"entries": [
-				"You spew energy from your mouth, dealing {@dice 5d6} damage with a basic Reflex save. The damage type depends on the magical tradition related to the dragon that influenced your bloodline: {@b {@trait arcane}} force, {@b {@trait divine}} spirit, {@b {@trait occult}} mental, or {@b {@trait primal}} fire."
+				"You spew energy from your mouth, dealing {@dice 5d6} damage with a basic Reflex save. The damage type depends on the magical tradition related to the dragon that influenced your bloodline: {@b {@trait arcano}} force, {@b {@trait divino}} spirit, {@b {@trait ocultista}} mental, or {@b {@trait primal}} fire."
 			],
 			"heightened": {
 				"plusX": {

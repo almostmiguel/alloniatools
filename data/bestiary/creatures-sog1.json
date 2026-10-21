@@ -1027,7 +1027,7 @@
 							"occult"
 						],
 						"entries": [
-							"A living {@trait humanoid} who's slain by a red-hooded thatchling while under the effects of Thatchling's Curse rises as a {@creature thatchling|SoG1} after {@dice 1d4} rounds. This spawn is under the command of the red-hooded thatchling that killed it. If a red-hooded thatchling controls too many at once (as determined by the GM), some thatchlings can free themselves with a DC 18 Will saving throw at the start of their turn. If the red-hooded thatchling who created the spawn is destroyed, the spawn becomes an autonomous thatchling."
+							"A living {@trait humanoide} who's slain by a red-hooded thatchling while under the effects of Thatchling's Curse rises as a {@creature thatchling|SoG1} after {@dice 1d4} rounds. This spawn is under the command of the red-hooded thatchling that killed it. If a red-hooded thatchling controls too many at once (as determined by the GM), some thatchlings can free themselves with a DC 18 Will saving throw at the start of their turn. If the red-hooded thatchling who created the spawn is destroyed, the spawn becomes an autonomous thatchling."
 						]
 					},
 					{
@@ -2875,7 +2875,7 @@
 							"occult"
 						],
 						"entries": [
-							"A living {@trait humanoid} who's slain by a red-hooded thatchling while under the effects of Thatchling's Curse rises as a {@creature thatchling|SoG1} after {@dice 1d4} rounds. This spawn is under the command of the red-hooded thatchling that killed it. If a red-hooded thatchling controls too many at once (as determined by the GM), some thatchlings can free themselves with a DC 18 Will saving throw at the start of their turn. If the red-hooded thatchling who created the spawn is destroyed, the spawn becomes an autonomous thatchling."
+							"A living {@trait humanoide} who's slain by a red-hooded thatchling while under the effects of Thatchling's Curse rises as a {@creature thatchling|SoG1} after {@dice 1d4} rounds. This spawn is under the command of the red-hooded thatchling that killed it. If a red-hooded thatchling controls too many at once (as determined by the GM), some thatchlings can free themselves with a DC 18 Will saving throw at the start of their turn. If the red-hooded thatchling who created the spawn is destroyed, the spawn becomes an autonomous thatchling."
 						]
 					},
 					{

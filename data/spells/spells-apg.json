@@ -1111,7 +1111,7 @@
 				]
 			],
 			"entries": [
-				"With a quick burst of laughter, you prolong a {@trait magical} effect you created. You {@action Sustain a Spell}."
+				"With a quick burst of laughter, you prolong a {@trait mágico} effect you created. You {@action Sustain a Spell}."
 			]
 		},
 		{
@@ -6083,7 +6083,7 @@
 			},
 			"entries": [
 				"You accelerate the processes of decay in the area. Each living creature in the area takes {@damage 2d10} negative damage (basic Fortitude save). A creature afflicted by a disease takes a \u20132 circumstance penalty to this save.",
-				"You can also direct the blight to rot all Small and Tiny non-creature plants in the area, eliminating non-magical undergrowth and any resulting {@quickref difficult terrain||3|terrain}, cover, and concealment. Sudden blight attempts to counteract any {@trait magical} effect on the plants before withering them."
+				"You can also direct the blight to rot all Small and Tiny non-creature plants in the area, eliminating non-magical undergrowth and any resulting {@quickref difficult terrain||3|terrain}, cover, and concealment. Sudden blight attempts to counteract any {@trait mágico} effect on the plants before withering them."
 			],
 			"heightened": {
 				"plusX": {

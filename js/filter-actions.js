@@ -45,7 +45,7 @@ class PageFilterActions extends PageFilter {
 		it._fMisc = [];
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(it._fSources);
@@ -69,7 +69,7 @@ class PageFilterActions extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

@@ -4659,7 +4659,7 @@
 						"std": 39
 					},
 					"abilities": [
-						"+2 status to all saves vs. {@trait magical||magic}"
+						"+2 status to all saves vs. {@trait mágico||magic}"
 					]
 				},
 				"hp": [

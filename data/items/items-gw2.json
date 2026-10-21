@@ -67,7 +67,7 @@
 			"category": "Held",
 			"entries": [
 				"This {@item astrolabe (generic)|GW2|astrolabe} is fashioned of magically attuned platinum plates and rings and is inset with carefully measured ruby gems. The astrolabe's back is engraved with helpful charts, a calendar, and a maker's mark.",
-				"An {@i astrolabe of falling stars} can be used as a mariner's astrolabe. In addition, it can produce the following {@trait magical} effect.",
+				"An {@i astrolabe of falling stars} can be used as a mariner's astrolabe. In addition, it can produce the following {@trait mágico} effect.",
 				{
 					"type": "ability",
 					"activity": {

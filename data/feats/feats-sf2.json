@@ -11,7 +11,7 @@
 			],
 			"prerequisites": "Exposure to the Well of Axuma",
 			"entries": [
-				"Choose two cantrips from the {@trait arcane} spells list. You can cast these cantrips at will as arcane innate spells. A cantrip is heightened to a spell level equal to half your level rounded up. Then, choose one 1st-level spell and one 2nd-level spell from the {@trait arcane} spells list. You can cast each of these spells once per day as arcane innate spells. Spells gained from this feat must be {@trait common} spells or spells to which you have access."
+				"Choose two cantrips from the {@trait arcano} spells list. You can cast these cantrips at will as arcane innate spells. A cantrip is heightened to a spell level equal to half your level rounded up. Then, choose one 1st-level spell and one 2nd-level spell from the {@trait arcano} spells list. You can cast each of these spells once per day as arcane innate spells. Spells gained from this feat must be {@trait common} spells or spells to which you have access."
 			]
 		},
 		{

@@ -18,7 +18,7 @@ class PageFilterEvents extends PageFilter {
 		it._fSkills = Parser.parseSkills(it.applicableSkills, {toNone: true, toTitleCase: true});
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 		this._sourceFilter.addItem(it._fSources);
 		this._levelFilter.addItem(Math.floor(it.level));
@@ -33,7 +33,7 @@ class PageFilterEvents extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

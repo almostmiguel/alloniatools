@@ -10,7 +10,7 @@
 				"small"
 			],
 			"speed": {
-				"walk": 25
+				"walk": 7.5
 			},
 			"boosts": [
 				"constitution",
@@ -63,7 +63,7 @@
 					"remaster": true,
 					"page": 51,
 					"entries": [
-						"The blood of the fey flows through your veins, saturating you with their magic and making you truly one of them. You gain the {@trait fey} trait, in addition to the {@trait gnome} and {@trait humanoid} traits. Choose one cantrip from the {@filter primal spell list|spells||tradition & spell list=primal|level=0}. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. You can change this cantrip to a different one from the same list once per day by meditating to realign yourself with the First World; this is a 10-minute activity that has the {@trait concentrate} trait."
+						"The blood of the fey flows through your veins, saturating you with their magic and making you truly one of them. You gain the {@trait fey} trait, in addition to the {@trait gnome} and {@trait humanoide} traits. Choose one cantrip from the {@filter primal spell list|spells||tradition & spell list=primal|level=0}. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up. You can change this cantrip to a different one from the same list once per day by meditating to realign yourself with the First World; this is a 10-minute activity that has the {@trait concentrate} trait."
 					]
 				},
 				{

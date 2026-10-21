@@ -81,7 +81,7 @@
 						"type": "pf2-h4",
 						"name": "Failed Prophet Abilities",
 						"entries": [
-							"Failed prophets gain the following abilities. If the base creature has any abilities that specifically come from it being a living creature, it loses them. It also loses any traits that represented its life prior to the transformation, such as {@trait human} or {@trait humanoid}."
+							"Failed prophets gain the following abilities. If the base creature has any abilities that specifically come from it being a living creature, it loses them. It also loses any traits that represented its life prior to the transformation, such as {@trait human} or {@trait humanoide}."
 						]
 					}
 				],
@@ -128,7 +128,7 @@
 					{
 						"name": "Fists",
 						"entries": [
-							"Failed prophets have a fist unarmed {@action Strike|PC1} that deals bludgeoning damage. This attack has the {@trait magical} trait, {@trait reach} 5 feet longer than the base creature, and triggers Greedy Grab. Use the high {@action Strike|PC1} attack bonus and moderate {@action Strike|PC1} damage of the failed prophet's level."
+							"Failed prophets have a fist unarmed {@action Strike|PC1} that deals bludgeoning damage. This attack has the {@trait mágico} trait, {@trait reach} 5 feet longer than the base creature, and triggers Greedy Grab. Use the high {@action Strike|PC1} attack bonus and moderate {@action Strike|PC1} damage of the failed prophet's level."
 						]
 					},
 					{
@@ -284,7 +284,7 @@
 					{
 						"name": "Resistances",
 						"entries": [
-							"All damage 5 (except force, {@item ghost touch}, or positive; double resistance to {@trait magical||non-magical}). This resistance increases to 10 at 9th level and 15 at 16th level."
+							"All damage 5 (except force, {@item ghost touch}, or positive; double resistance to {@trait mágico||non-magical}). This resistance increases to 10 at 9th level and 15 at 16th level."
 						]
 					},
 					{
@@ -311,7 +311,7 @@
 					{
 						"name": "Occult Innate Spells",
 						"entries": [
-							"All path maidens have a limited selection of {@trait occult} innate spells. A typical path maiden has six innate spells\u2014two of a spell level equal to their actual level divided by 2 (rounded down), and then two more for the next two spell levels below that. In addition, all path maidens have the following cantrips (cast at a level equal to their highest-level innate spell): {@spell dancing lights}, {@spell ghost sound}, {@spell know direction}, {@spell mage hand}, and {@spell telekinetic projectile}. The path maiden's spell DC and spell attack use high values, as defined on page 66 of the {@i Gamemastery Guide}."
+							"All path maidens have a limited selection of {@trait ocultista} innate spells. A typical path maiden has six innate spells\u2014two of a spell level equal to their actual level divided by 2 (rounded down), and then two more for the next two spell levels below that. In addition, all path maidens have the following cantrips (cast at a level equal to their highest-level innate spell): {@spell dancing lights}, {@spell ghost sound}, {@spell know direction}, {@spell mage hand}, and {@spell telekinetic projectile}. The path maiden's spell DC and spell attack use high values, as defined on page 66 of the {@i Gamemastery Guide}."
 						]
 					}
 				]
@@ -387,7 +387,7 @@
 					{
 						"name": "Resistances",
 						"entries": [
-							"The strigoi progenitor resists all physical damage except {@trait magical} {@item silver weapon (generic)||silver weapons} or {@trait magical} weapons that shed at least 5 feet of bright light."
+							"The strigoi progenitor resists all physical damage except {@trait mágico} {@item silver weapon (generic)||silver weapons} or {@trait mágico} weapons that shed at least 5 feet of bright light."
 						]
 					},
 					{
@@ -531,7 +531,7 @@
 					{
 						"name": "Claws",
 						"entries": [
-							"If the creature had hands, its shadow solidifies around the fingers when it attacks, granting it a claw {@action Strike} that deals slashing damage, and has the {@trait agile} and {@trait magical||magic} traits. The damage caused by its claws should be roughly the same as the moderate {@action Strike} damage for a creature of its level."
+							"If the creature had hands, its shadow solidifies around the fingers when it attacks, granting it a claw {@action Strike} that deals slashing damage, and has the {@trait agile} and {@trait mágico||magic} traits. The damage caused by its claws should be roughly the same as the moderate {@action Strike} damage for a creature of its level."
 						]
 					},
 					{
@@ -1298,7 +1298,7 @@
 					{
 						"name": "Resistances",
 						"entries": [
-							"The jiang-shi resists all physical damage (except {@trait magical} {@item darkwood (generic)||darkwood})."
+							"The jiang-shi resists all physical damage (except {@trait mágico} {@item darkwood (generic)||darkwood})."
 						]
 					},
 					{
@@ -1948,7 +1948,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The experimental cryptid unleashes a 30-foot line of energy of a type specific to the experimental cryptid (typically electricity or fire). Creatures in the area take {@dice 1d6} damage per level of the cryptid with a basic Reflex save. The experimental cryptid can use this ability once every {@dice 1d4} rounds. This action has the damage type's trait. If the experiments that reshaped the creature were magical, this action also has the {@trait evocation} trait and the trait matching the magical tradition of the experiments ({@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal})."
+							"The experimental cryptid unleashes a 30-foot line of energy of a type specific to the experimental cryptid (typically electricity or fire). Creatures in the area take {@dice 1d6} damage per level of the cryptid with a basic Reflex save. The experimental cryptid can use this ability once every {@dice 1d4} rounds. This action has the damage type's trait. If the experiments that reshaped the creature were magical, this action also has the {@trait evocation} trait and the trait matching the magical tradition of the experiments ({@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal})."
 						]
 					},
 					{
@@ -2355,7 +2355,7 @@
 						"Add the following immunities: {@trait death} effects, {@trait disease}, {@condition paralyzed}, {@trait poison}, precision, {@condition unconscious}.",
 						"Add the following weaknesses, with a value based on the creature's level: force, {@item ghost touch}, positive.",
 						"If the creature can't fly, change its highest Speed to a fly Speed. Remove all other Speeds.",
-						"The damage of the creature's physical {@action Strike||Strikes} changes to negative damage, and those {@action Strike||Strikes} are {@trait magical}.",
+						"The damage of the creature's physical {@action Strike||Strikes} changes to negative damage, and those {@action Strike||Strikes} are {@trait mágico}.",
 						"Add {@spell darkness} as an innate divine spell usable once per day."
 					]
 				},
@@ -2549,7 +2549,7 @@
 			"page": 204,
 			"type": "Template",
 			"entries": [
-				"Change the {@trait human} trait to {@trait dwarf}.",
+				"Change the {@trait human} trait to {@trait anão}.",
 				{
 					"type": "list",
 					"items": [
@@ -2576,7 +2576,7 @@
 			"page": 204,
 			"type": "Template",
 			"entries": [
-				"Change the {@trait human} trait to {@trait elf}.",
+				"Change the {@trait human} trait to {@trait elfo}.",
 				{
 					"type": "list",
 					"items": [
@@ -2661,7 +2661,7 @@
 						"type": "pf2-h4",
 						"name": "Graveknight Abilities",
 						"entries": [
-							"A graveknight gains the {@trait undead} and {@trait graveknight} traits, and its alignment is usually adjusted to evil. It loses any abilities that come from it being a living creature and any traits that represent its life, such as {@trait human} and {@trait humanoid}."
+							"A graveknight gains the {@trait undead} and {@trait graveknight} traits, and its alignment is usually adjusted to evil. It loses any abilities that come from it being a living creature and any traits that represent its life, such as {@trait human} and {@trait humanoide}."
 						]
 					}
 				],
@@ -2870,7 +2870,7 @@
 				{
 					"type": "list",
 					"items": [
-						"It gains the {@trait uncommon} and {@trait divine} traits. Its alignment changes to match that of its patron deity. For example, a divine warden of a lawful good deity becomes a lawful good creature.",
+						"It gains the {@trait uncommon} and {@trait divino} traits. Its alignment changes to match that of its patron deity. For example, a divine warden of a lawful good deity becomes a lawful good creature.",
 						"Increase AC, attack bonuses, DCs, saving throws, and skill modifiers by 1. If the creature didn't have any listed DCs, use the moderate DC for a creature of its level for any new abilities that require a DC.",
 						"Increase its Hit Points as shown on the table below."
 					]
@@ -2990,7 +2990,7 @@
 					{
 						"name": "Ghostly Hand",
 						"entries": [
-							"All ghosts have a ghostly hand unarmed attack that deals negative damage. It typically has the {@trait agile}, {@trait finesse}, and {@trait magical} traits. Some ghosts wield ghostly memories of weapons they held in life, but the effect is the same."
+							"All ghosts have a ghostly hand unarmed attack that deals negative damage. It typically has the {@trait agile}, {@trait finesse}, and {@trait mágico} traits. Some ghosts wield ghostly memories of weapons they held in life, but the effect is the same."
 						]
 					}
 				]

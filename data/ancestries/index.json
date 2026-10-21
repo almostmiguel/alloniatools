@@ -1,8 +1,6 @@
 {
 	"dwarf": "ancestry-dwarf.json",
-	"dwarf (PC1)": "ancestry-dwarf-pc1.json",
 	"elf": "ancestry-elf.json",
-	"elf (PC1)": "ancestry-elf-pc1.json",
 	"gnome": "ancestry-gnome.json",
 	"gnome (PC1)": "ancestry-gnome-pc1.json",
 	"goblin": "ancestry-goblin.json",

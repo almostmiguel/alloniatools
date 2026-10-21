@@ -956,7 +956,7 @@
 					},
 					"requirements": "You must be aboard a ship",
 					"entries": [
-						"You play the song. Once it's completed, the weather immediately calms to the normal as it would for the season, as control weather. For the next day, the weather remains in this state, unless affected by other {@trait magical} effects.",
+						"You play the song. Once it's completed, the weather immediately calms to the normal as it would for the season, as control weather. For the next day, the weather remains in this state, unless affected by other {@trait mágico} effects.",
 						"Anyone aboard the ship finds their mind wanders when performing tasks however, daydreaming of drunken revelry or other forms of entertainment, and the crew of the ship takes a \u20132 status penalty to skill checks to do anything other than participate in such revelry."
 					]
 				}

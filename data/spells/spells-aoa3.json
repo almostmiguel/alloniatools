@@ -24,7 +24,7 @@
 					"V"
 				]
 			],
-			"requirements": "You have the {@trait humanoid} trait.",
+			"requirements": "You have the {@trait humanoide} trait.",
 			"range": {
 				"number": 1,
 				"unit": "touch"

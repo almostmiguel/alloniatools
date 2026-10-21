@@ -5335,7 +5335,7 @@
 				],
 				[
 					"24",
-					"{@b Ruptured Spleen} Normal damage. {@i Crit Effect:} The target takes 1 {@condition persistent damage||persistent bleed damage} that can't be removed until the target has been subject to {@trait magical} healing."
+					"{@b Ruptured Spleen} Normal damage. {@i Crit Effect:} The target takes 1 {@condition persistent damage||persistent bleed damage} that can't be removed until the target has been subject to {@trait mágico} healing."
 				],
 				[
 					"25",
@@ -6528,11 +6528,11 @@
 				],
 				[
 					"3",
-					"{@b Anchored} ({@trait abjuration}, {@trait arcane}) Will. Creatures within a radius of 10 feet per level are affected by {@spell dimensional anchor}. Creatures that fail their saving throws also have their Speeds reduced by 10 feet (to a minimum of 5 feet) during the effect's duration."
+					"{@b Anchored} ({@trait abjuration}, {@trait arcano}) Will. Creatures within a radius of 10 feet per level are affected by {@spell dimensional anchor}. Creatures that fail their saving throws also have their Speeds reduced by 10 feet (to a minimum of 5 feet) during the effect's duration."
 				],
 				[
 					"4",
-					"{@b Unluck} ({@trait arcane}, {@trait divination}, {@trait misfortune}) Will. A zone of unluck and strange violet illumination fill a radius of 10 feet per level for 1 hour. Creatures in this area roll attack rolls, {@skill Perception} checks, saving throws, and skill checks twice and take the lower result."
+					"{@b Unluck} ({@trait arcano}, {@trait divinotion}, {@trait misfortune}) Will. A zone of unluck and strange violet illumination fill a radius of 10 feet per level for 1 hour. Creatures in this area roll attack rolls, {@skill Perception} checks, saving throws, and skill checks twice and take the lower result."
 				],
 				[
 					"5",
@@ -6540,15 +6540,15 @@
 				],
 				[
 					"6",
-					"{@b Gravity Surge} ({@trait arcane}, {@trait transmutation}) Reflex. Creatures within a radius of 10 feet per level, in random order, are pushed 10 feet per level away from the nearest creature. A pushed creature that hits an object or another creature stops but takes falling damage equal to the distance moved (a creature hit takes the same amount of falling damage)."
+					"{@b Gravity Surge} ({@trait arcano}, {@trait transmutation}) Reflex. Creatures within a radius of 10 feet per level, in random order, are pushed 10 feet per level away from the nearest creature. A pushed creature that hits an object or another creature stops but takes falling damage equal to the distance moved (a creature hit takes the same amount of falling damage)."
 				],
 				[
 					"7",
-					"{@b Psychic Assault} ({@trait illusion}, {@trait mental}, {@trait nonlethal}, {@trait occult}) Will. Creatures within a radius of 10 feet per level are affected by {@spell phantom pain}."
+					"{@b Psychic Assault} ({@trait illusion}, {@trait mental}, {@trait nonlethal}, {@trait ocultista}) Will. Creatures within a radius of 10 feet per level are affected by {@spell phantom pain}."
 				],
 				[
 					"8",
-					"{@b Dazzling Mein} ({@trait illusion}, {@trait occult}, {@trait visual}) One creature is affected by cloak of colors; that creature is immune to the effects, but all others around it are affected normally."
+					"{@b Dazzling Mein} ({@trait illusion}, {@trait ocultista}, {@trait visual}) One creature is affected by cloak of colors; that creature is immune to the effects, but all others around it are affected normally."
 				],
 				[
 					"9",
@@ -6560,7 +6560,7 @@
 				],
 				[
 					"11",
-					"{@b Befuddlement} ({@trait arcane}, {@trait emotion}, {@trait enchantment}, {@trait mental}) Will. A number of creatures up to the level of the mana storm within a radius of 10 feet per level become {@condition confused} for 1 round per level."
+					"{@b Befuddlement} ({@trait arcano}, {@trait emotion}, {@trait enchantment}, {@trait mental}) Will. A number of creatures up to the level of the mana storm within a radius of 10 feet per level become {@condition confused} for 1 round per level."
 				],
 				[
 					"12",
@@ -6568,7 +6568,7 @@
 				],
 				[
 					"13",
-					"{@b Strangers to All} ({@trait arcane}, {@trait curse}, {@trait enchantment}, {@trait mental}, {@trait misfortune}) Will. A number of creatures up to the level of the mana storm within a radius of 10 feet per level are affected by outcast's curse."
+					"{@b Strangers to All} ({@trait arcano}, {@trait curse}, {@trait enchantment}, {@trait mental}, {@trait misfortune}) Will. A number of creatures up to the level of the mana storm within a radius of 10 feet per level are affected by outcast's curse."
 				],
 				[
 					"14-15",
@@ -6580,7 +6580,7 @@
 				],
 				[
 					"18-19",
-					"{@b Wondrous Effect} ({@trait arcane}, {@trait evocation}) Randomly choose one creature to be a \"wielder\" and a different random creature to be a \"target.\" Roll {@dice d100|d%} on the {@item rod of wonder} table to determine what sort of strange effect occurs between the creatures."
+					"{@b Wondrous Effect} ({@trait arcano}, {@trait evocation}) Randomly choose one creature to be a \"wielder\" and a different random creature to be a \"target.\" Roll {@dice d100|d%} on the {@item rod of wonder} table to determine what sort of strange effect occurs between the creatures."
 				],
 				[
 					"20",
@@ -15242,7 +15242,7 @@
 					"L",
 					"1",
 					"Knife",
-					"{@trait Agile}, {@trait dwarf}, {@trait parry}, {@trait versatile} B"
+					"{@trait Agile}, {@trait anão}, {@trait parry}, {@trait versatile} B"
 				],
 				[
 					"{@item Katar}",
@@ -15593,7 +15593,7 @@
 					"2",
 					"2",
 					"Sword",
-					"{@trait Elf}, {@trait finesse}, {@trait forceful}"
+					"{@trait Elfo}, {@trait finesse}, {@trait forceful}"
 				],
 				[
 					"{@item Filcher's fork}",
@@ -15710,7 +15710,7 @@
 					"2",
 					"1",
 					"Axe",
-					"{@trait Dwarf}, {@trait sweep}, {@trait two-hand} d12"
+					"{@trait anão}, {@trait sweep}, {@trait two-hand} d12"
 				],
 				[
 					"{@item Gnome flickmace}",
@@ -17956,7 +17956,7 @@
 				],
 				[
 					"8",
-					"{@b Oppressive Voice} ({@trait divination}, {@trait mental}, {@trait nonlethal}) The voice of your muse, your deity, an ancestor, or another appropriate entity suddenly overwhelms your mind. You must attempt a Will saving throw. You take {@scaledice 1d4|1-10|1d4} mental damage per spell level with a basic Will save. On a failure, you're also {@condition stunned 1} ({@condition stunned 2} on a critical failure)."
+					"{@b Oppressive Voice} ({@trait divinotion}, {@trait mental}, {@trait nonlethal}) The voice of your muse, your deity, an ancestor, or another appropriate entity suddenly overwhelms your mind. You must attempt a Will saving throw. You take {@scaledice 1d4|1-10|1d4} mental damage per spell level with a basic Will save. On a failure, you're also {@condition stunned 1} ({@condition stunned 2} on a critical failure)."
 				],
 				[
 					"9",
@@ -17968,7 +17968,7 @@
 				],
 				[
 					"11",
-					"{@b Mental Broadcast} ({@trait detection}, {@trait divination}, {@trait mental}) For 1 minute, everyone within 30 feet of you can hear your surface thoughts."
+					"{@b Mental Broadcast} ({@trait detection}, {@trait divinotion}, {@trait mental}) For 1 minute, everyone within 30 feet of you can hear your surface thoughts."
 				],
 				[
 					"12",

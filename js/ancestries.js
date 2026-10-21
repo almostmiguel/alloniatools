@@ -13,6 +13,10 @@ class AncestriesPage extends BaseComponent {
 		else return SortUtil.listSort(a, b);
 	}
 
+	static _getImages (entity) {
+		return entity.images || (entity.summary || {}).images || [];
+	}
+
 	constructor () {
 		super();
 		this.__ancestryId = {_: 0};
@@ -34,6 +38,7 @@ class AncestriesPage extends BaseComponent {
 
 		this._activeAncestryDataFiltered = null;
 		this._activeFeatDataFiltered = null;
+		this._activeAncestryTab = "mechanics";
 
 		this._didLoadNewAnc = false;
 		this._listFeat = null;
@@ -572,15 +577,7 @@ class AncestriesPage extends BaseComponent {
 		const $ele = $$`<li class="row ${isExcluded ? "row--blacklisted" : ""}">${$lnk}</li>`;
 
 		$ele.on("click", () => {
-			setTimeout(() => {
-				// Kill Fluff for Paizo (at least fill the page with heritages if no fluff is shown)
-				const nxtState = {};
-				this._listHeritage.visibleItems.concat(this._listVeHeritage.visibleItems)
-					.filter(it => it.values.mod === "brew" || it.values.mod === "fresh")
-					.map(it => it.values.stateKey)
-					.forEach(stateKey => nxtState[stateKey] = true);
-				this._proxyAssign("state", "_state", "__state", nxtState);
-			}, 1);
+			setTimeout(() => this._doSelectDefaultHeritages(), 1);
 		})
 
 		return new ListItem(
@@ -791,26 +788,12 @@ class AncestriesPage extends BaseComponent {
 		this._addHookBase("feature", hkScrollToFeature);
 		hkScrollToFeature();
 
-		const hkDisplayFluff = () => {
-			const $dispAncestryTitle = $(`#ancestry-name`);
-			if (this._state.isHideFeatures) $dispAncestryTitle.toggleClass("hidden", !this._state.isShowFluff)
-
-			$(`.pf2-fluff`).toggleClass("hidden-fluff", !this._state.isShowFluff);
-
-			if (!this._isAnyHeritageActive() && !this._state.isHideFeatures && !this._state.isShowFluff) this._$divNoHeritage.toggleClass("hidden", false);
-			else this._$divNoHeritage.toggleClass("hidden", true);
-
-			this._$divNoContent.toggleClass("hidden", this._isAnyContentActive());
-		}
-		this._addHookBase("isShowFluff", () => keepYScroll(hkDisplayFluff));
-		MiscUtil.pDefer(hkDisplayFluff);
-
 		const hkDisplayFeatures = () => {
 			const $dispAncestryFeatures = $(`[data-feature-type="ancestry"]`);
 			const $dispAncestryTitle = $(`#ancestry-name`);
 
 			if (this._state.isHideFeatures) {
-				$dispAncestryTitle.toggleClass("hidden", !this._state.isShowFluff)
+				$dispAncestryTitle.toggleClass("hidden", true)
 				$dispAncestryFeatures.toggleClass("hidden", true);
 				this._$wrpOutline.toggleClass("hidden", !this._isAnyHeritageActive());
 			} else {
@@ -819,7 +802,7 @@ class AncestriesPage extends BaseComponent {
 				$dispAncestryFeatures.toggleClass("hidden", false);
 			}
 
-			if (!this._isAnyHeritageActive() && !this._state.isHideFeatures && !this._state.isShowFluff) this._$divNoHeritage.toggleClass("hidden", false);
+			if (!this._isAnyHeritageActive() && !this._state.isHideFeatures) this._$divNoHeritage.toggleClass("hidden", false);
 			else this._$divNoHeritage.toggleClass("hidden", true);
 			this._$divNoContent.toggleClass("hidden", this._isAnyContentActive());
 		};
@@ -841,13 +824,6 @@ class AncestriesPage extends BaseComponent {
 		this._addHookBase("isShowFeats", hkShowFeats);
 		MiscUtil.pDefer(hkShowFeats);
 
-		const hkDisplayImages = () => {
-			const {veHerUrls, ancUrls} = this._getImageUrls();
-			const $btnShowImages = $(`#btn-show-images`);
-			$btnShowImages.toggleClass("hidden", veHerUrls.length === 0 && ancUrls.length === 0);
-		}
-		this._addHook("ancestryId", "_", hkDisplayImages);
-
 		this.activeAncestryAllHeritages.forEach(h => {
 			const stateKey = UrlUtil.getStateKeyHeritage(h);
 			const hkDisplayHeritage = () => {
@@ -855,12 +831,12 @@ class AncestriesPage extends BaseComponent {
 				$(`[data-heritage-id="${stateKey}"]`).toggleClass("hidden", !isVisible);
 			};
 			this._addHookBase(stateKey, () => keepYScroll(hkDisplayHeritage));
-			this._addHookBase(stateKey, hkDisplayImages);
+			this._addHookBase(stateKey, this._updateImageEmptyState.bind(this));
 			// Check/update main feature display here, as if there are no heritages active we can hide more
 			this._addHookBase(stateKey, () => keepYScroll(hkDisplayFeatures));
 			MiscUtil.pDefer(hkDisplayHeritage);
 		});
-		MiscUtil.pDefer(hkDisplayImages);
+		MiscUtil.pDefer(this._updateImageEmptyState.bind(this));
 		// endregion
 
 		this._handleFilterChange(false);
@@ -880,7 +856,7 @@ class AncestriesPage extends BaseComponent {
 	}
 
 	_isAnyContentActive () {
-		return this._isAnyHeritageActive() || !this._state.isHideFeatures || this._state.isShowFluff;
+		return this._isAnyHeritageActive() || !this._state.isHideFeatures;
 	}
 
 	_getActiveHeritages (asStateKeys) {
@@ -894,64 +870,123 @@ class AncestriesPage extends BaseComponent {
 		const anc = this.activeAncestry;
 
 		const renderer = Renderer.get().resetHeaderIndex().setFirstSection(false);
+		const $mechanics = $(`<div class="anc__tab-panel" data-ancestry-tab="mechanics"/>`).appendTo($ancestryStats);
+		const $info = $(`<div class="anc__tab-panel hidden" data-ancestry-tab="info"/>`).appendTo($ancestryStats);
+		const $images = $(`<div class="anc__tab-panel hidden" data-ancestry-tab="images"/>`).appendTo($ancestryStats);
 
 		const statSidebar = {
 			type: "pf2-sidebar",
 			entries: [
 				{
 					type: "pf2-title",
-					name: "Hit Points",
+					name: "Pontos de Vida",
 				},
 				`${anc.hp}`,
 				{
 					type: "pf2-title",
-					name: "Size",
+					name: "Tamanho",
 				},
 				`${anc.size.joinConjunct(", ", " or ").toTitleCase()}`,
 				{
 					type: "pf2-title",
-					name: "Speed",
+					name: "Velocidade",
 				},
 				...Parser.speedToFullMap(anc.speed),
 			],
 		};
-		if (anc.rarity) statSidebar.entries.unshift({type: "pf2-title", name: "Rarity"}, `{@trait ${anc.rarity.toTitleCase()}}`);
-		if (anc.boosts) statSidebar.entries.push({type: "pf2-title", name: "Ability Boosts"}, anc.boosts.join(" <br> ").toTitleCase());
-		if (anc.flaw) statSidebar.entries.push({type: "pf2-title", name: "Ability Flaw"}, anc.flaw.join(" <br> ").toTitleCase());
-		if (anc.languages) statSidebar.entries.push({type: "pf2-title", name: "Languages"}, ...anc.languages);
-		if (anc.traits) statSidebar.entries.push({type: "pf2-title", name: "Traits"}, anc.traits.map(t => `{@trait ${t.toTitleCase()}}`).join(", "));
+		if (anc.boosts) statSidebar.entries.push({type: "pf2-title", name: "Melhorias de Atributo"}, anc.boosts.join(" <br> ").toTitleCase());
+		if (anc.flaw) statSidebar.entries.push({type: "pf2-title", name: "Defeito de Atributo"}, anc.flaw.join(" <br> ").toTitleCase());
+		if (anc.languages) statSidebar.entries.push({type: "pf2-title", name: "Idiomas"}, ...anc.languages);
 		if (anc.feature) statSidebar.entries.push({type: "pf2-title", name: anc.feature.name}, ...anc.feature.entries);
 		if (anc.features) anc.features.forEach(f => statSidebar.entries.push({type: "pf2-title", name: f.name}, ...f.entries));
 		const ancestryName = {
 			type: "pf2-h1",
 			name: anc.name,
 		};
+		const ancestryTraits = [
+			...(anc.rarity ? [anc.rarity] : []),
+			...(anc.traits || []),
+		];
 		const flavor = {
 			type: "pf2-h1-flavor",
 			entries: anc.flavor,
 		};
-		const heritageTitle = {type: "pf2-h2", name: `${anc.name} Heritages`};
-		const veHeritageTitle = {type: "pf2-h2", name: `Versatile Heritages`};
-		const fluffStack = [""];
+		const heritageTitle = {type: "pf2-h2", name: `Heranças`};
+		const veHeritageTitle = {type: "pf2-h2", name: `Heranças Versáteis`};
 		const titleStack = [""];
-		renderer.recursiveRender(anc.info, fluffStack, {prefix: "<p class=\"pf2-p\">", suffix: "</p>"});
 		renderer.recursiveRender(anc.heritageInfo, titleStack, {prefix: "<p class=\"pf2-p\">", suffix: "</p>"})
 
 		$$`<div id="ancestry-name">${renderer.render(ancestryName)}</div>
-		<div class="pf2-fluff">${renderer.render(flavor)}</div>
+		${Renderer.utils.getDividerDiv()}
+		${Renderer.utils.getTraitsDiv(ancestryTraits.slice())}
 		<div data-feature-type="ancestry">${renderer.render(statSidebar)}</div>
-		<div class="pf2-fluff">${fluffStack.join("")}</div>
 		<div class="heritage-title">${renderer.render(heritageTitle)}${titleStack.join("")}</div>
 		${anc.heritage.map(h => this._render_renderHeritageStats(h)).join("")}
 		<div class="veheritage-title">${renderer.render(veHeritageTitle)}</div>
 		${this._veHeritagesDataList.map(h => this._render_renderHeritageStats(h)).join("")}
-		${this.activeAncestryAllHeritages.map(h => this._render_renderHeritageFluff(h)).join("")}
-		`.appendTo($ancestryStats);
+		`.appendTo($mechanics);
 
-		this._$divNoContent = AncestriesPage._render_$getNoContent().appendTo($ancestryStats);
-		this._$divNoHeritage = AncestriesPage._render_$getNoHeritage().appendTo($ancestryStats);
+		this._$divNoContent = AncestriesPage._render_$getNoContent().appendTo($mechanics);
+		this._$divNoHeritage = AncestriesPage._render_$getNoHeritage().appendTo($mechanics);
+
+		const infoStack = [""];
+		renderer.recursiveRender(anc.info, infoStack, {prefix: "<p class=\"pf2-p\">", suffix: "</p>"});
+		const flavorHtml = renderer.render(flavor);
+		const detailsTitle = {type: "pf2-h2", name: `Detalhes`};
+		$$`<div class="anc__info-name">${renderer.render(ancestryName)}</div>
+		${flavorHtml}
+		${renderer.render(detailsTitle)}
+		${infoStack.join("")}
+		${this.activeAncestryAllHeritages.map(h => this._render_renderHeritageFluff(h)).join("")}
+		`.appendTo($info);
+		if (!(anc.flavor || []).length && !(anc.info || []).length && !this.activeAncestryAllHeritages.some(h => (h.info || []).length)) {
+			$info.append(Renderer.utils.HTML_NO_INFO);
+		}
+
+		this._render_renderImages($images);
+		this._render_renderAncestryTabs();
 
 		$ancestryStats.show()
+	}
+
+	_render_renderAncestryTabs () {
+		const $wrpTabs = $(`#stat-tabs`).empty();
+		const tabs = [
+			{key: "mechanics", label: "Mechanics"},
+			{key: "info", label: "Info"},
+			{key: "images", label: "Images"},
+		];
+
+		const setActiveTab = (tab) => {
+			this._activeAncestryTab = tab.key;
+			$wrpTabs.find(`[data-ancestry-tab]`).toggleClass("ui-tab__btn-tab-head--active", false);
+			$wrpTabs.find(`[data-ancestry-tab="${tab.key}"]`).toggleClass("ui-tab__btn-tab-head--active", true);
+			$(`#ancestrystats`).find(`[data-ancestry-tab]`).toggleClass("hidden", true);
+			$(`#ancestrystats`).find(`[data-ancestry-tab="${tab.key}"]`).toggleClass("hidden", false);
+		};
+
+		tabs.forEach(tab => {
+			const $btn = $(`<button class="ui-tab__btn-tab-head btn btn-default" data-ancestry-tab="${tab.key}">${tab.label}</button>`)
+				.click(() => setActiveTab(tab));
+			$wrpTabs.append($btn);
+		});
+		setActiveTab(tabs.find(it => it.key === this._activeAncestryTab) || tabs[0]);
+	}
+
+	_render_renderImages ($wrp) {
+		const appendImage = (url, label, heritage) => {
+			const $figure = $(`<figure class="anc__image"/>`).appendTo($wrp);
+			if (heritage) $figure.attr("data-heritage-id", UrlUtil.getStateKeyHeritage(heritage));
+			const $link = $(`<a target="_blank" rel="noopener noreferrer"/>`).attr("href", url).appendTo($figure);
+			$(`<img loading="lazy"/>`).attr({src: url, alt: label}).appendTo($link);
+			$(`<figcaption/>`).text(label).appendTo($figure);
+		};
+
+		AncestriesPage._getImages(this.activeAncestry).forEach(url => appendImage(url, this.activeAncestry.name));
+		this.activeAncestryAllHeritages.forEach(heritage => {
+			AncestriesPage._getImages(heritage).forEach(url => appendImage(url, heritage.name, heritage));
+		});
+		this._$divNoImages = $(`<div class="anc__no-images">${Renderer.utils.HTML_NO_IMAGES}</div>`).appendTo($wrp);
 	}
 
 	_render_renderHeritageStats (heritage) {
@@ -966,7 +1001,7 @@ class AncestriesPage extends BaseComponent {
 	_render_renderHeritageFluff (heritage) {
 		const renderer = Renderer.get().setFirstSection(false);
 		const renderStack = [""]
-		renderStack.push(`<div class="pf2-fluff" data-heritage-id="${UrlUtil.getStateKeyHeritage(heritage)}">`)
+		renderStack.push(`<div data-heritage-id="${UrlUtil.getStateKeyHeritage(heritage)}">`)
 		renderer.recursiveRender(heritage.info, renderStack)
 		renderStack.push(`</div>`)
 		return renderStack.join("")
@@ -981,9 +1016,15 @@ class AncestriesPage extends BaseComponent {
 	}
 
 	_getImageUrls () {
-		const veHerUrls = this._veHeritagesDataList.filter(h => this._state[UrlUtil.getStateKeyHeritage(h)]).map(h => (h.summary || {}).images || []).flat();
-		const ancUrls = (this.activeAncestry.summary || {}).images || [];
+		const veHerUrls = this._getActiveHeritages().map(h => AncestriesPage._getImages(h)).flat();
+		const ancUrls = AncestriesPage._getImages(this.activeAncestry);
 		return {veHerUrls, ancUrls};
+	}
+
+	_updateImageEmptyState () {
+		if (!this._$divNoImages) return;
+		const {veHerUrls, ancUrls} = this._getImageUrls();
+		this._$divNoImages.toggleClass("hidden", !!(ancUrls.length || veHerUrls.length));
 	}
 
 	_render_renderHeritagePrimaryControls ($wrp) {
@@ -992,9 +1033,6 @@ class AncestriesPage extends BaseComponent {
 			isInverted: true,
 		}).title("Toggle Ancestry Features");
 
-		// Kill Fluff for Paizo
-		const $btnToggleFluff = "" // ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Info"}).title("Toggle Ancestry Info");
-
 		const $btnToggleFeats = ComponentUiUtil.$getBtnBool(this, "isShowFeats", {
 			text: "Show Feats",
 			activeClass: "btn-danger",
@@ -1002,37 +1040,19 @@ class AncestriesPage extends BaseComponent {
 			inactiveText: "Show Feats",
 		}).title("Toggle Feat View").addClass("mb-1");
 
-		const $dropDownImages = $(`<li class="dropdown" style="list-style: none"></li>`);
-		const $dropDownImagesContent = $(`<li class="dropdown-menu dropdown-menu--top" style="margin-top: -0.25rem !important; border-radius: 0"></li>`).appendTo($dropDownImages);
-		const $dropDownImagesButton = $(`<button class="btn btn-default btn-xs mr-2 mb-1 flex-3">Images</button>`).on("click", (evt) => {
-			evt.preventDefault();
-			evt.stopPropagation();
-			$dropDownImagesContent.empty();
-			const {veHerUrls, ancUrls} = this._getImageUrls();
-			const ancLinks = ancUrls.map(l => `<a href="${l}" target="_blank" rel="noopener noreferrer">${l}</a>`);
-			const veHerLinks = veHerUrls.map(l => `<a href="${l}" target="_blank" rel="noopener noreferrer">${l}</a>`);
-			if (evt.ctrlKey || evt.shiftKey) {
-				[...ancLinks, ...veHerLinks].forEach(l => $(l)[0].click());
-			} else {
-				ancLinks.forEach(l => $dropDownImagesContent.append(`<li>${l}</li>`));
-				if (ancLinks.length && veHerLinks.length) $dropDownImagesContent.append($(`<li class="divider"></li>`))
-				veHerLinks.forEach(l => $dropDownImagesContent.append(`<li>${l}</li>`));
-				if (ancLinks.length === 0 && veHerLinks.length === 0) $dropDownImagesContent.append($(`<li class="p-1">No Images available.</li>`))
-
-				$dropDownImagesButton.toggleClass("ui-tab__btn-tab-head");
-				$dropDownImages.toggleClass("open");
-			}
-		}).appendTo($dropDownImages);
-		document.addEventListener("click", () => {
-			$dropDownImages.toggleClass("open", false)
-			$dropDownImagesButton.toggleClass("ui-tab__btn-tab-head", false);
-		});
-
 		$$`<div class="flex-v-center m-1 flex-wrap">
 			<div class="mr-2 no-shrink">${$btnToggleFeats}</div>
-			<div class="mr-2 no-shrink">${$dropDownImages}</div>
-			<div class="btn-group no-shrink mb-1 ml-auto">${$btnToggleFeatures}${$btnToggleFluff}</div>
-		</divc>`.appendTo($wrp);
+			<div class="btn-group no-shrink mb-1 ml-auto">${$btnToggleFeatures}</div>
+		</div>`.appendTo($wrp);
+	}
+
+	_doSelectDefaultHeritages () {
+		const nxtState = {};
+		this._listHeritage.visibleItems.concat(this._listVeHeritage.visibleItems)
+			.filter(it => it.values.mod === "brew" || it.values.mod === "fresh")
+			.map(it => it.values.stateKey)
+			.forEach(stateKey => nxtState[stateKey] = true);
+		this._proxyAssign("state", "_state", "__state", nxtState);
 	}
 
 	_doSelectAllHeritages () {
@@ -1368,16 +1388,11 @@ AncestriesPage._DEFAULT_STATE = {
 
 let ancestriesPage;
 window.addEventListener("load", async () => {
+	// Read the incoming state before pOnLoad normalizes the URL.
+	const hasLinkedState = Hist.getDoubleHashParts()[0].slice(1)
+		.some(sub => UrlUtil.unpackSubHash(sub).state);
 	await Renderer.trait.preloadTraits();
 	ancestriesPage = new AncestriesPage();
-	ancestriesPage.pOnLoad()
-	// Kill Fluff for Paizo (at least fill the page with heritages if no fluff is shown)
-		.then(() => {
-			const nxtState = {};
-			this._listHeritage.visibleItems.concat(this._listVeHeritage.visibleItems)
-				.filter(it => it.values.mod === "brew" || it.values.mod === "fresh")
-				.map(it => it.values.stateKey)
-				.forEach(stateKey => nxtState[stateKey] = true);
-			this._proxyAssign("state", "_state", "__state", nxtState);
-		})
+	await ancestriesPage.pOnLoad();
+	if (!hasLinkedState) ancestriesPage._doSelectDefaultHeritages();
 });

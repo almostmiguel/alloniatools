@@ -11,7 +11,7 @@
 			],
 			"prerequisites": "{@feat Halcyon Speaker Dedication|LOCG}, {@feat Cascade Bearers Spellcasting|LOCG}",
 			"entries": [
-				"When Vigil fell to Tar-Baphon's Radiant Fire, that lost innocence brought you a deeper understanding of what faith means in the context of your own magic. When you cast a halcyon spell, you can choose for it to be a {@trait divine} spell instead of {@trait arcane} or {@trait primal}. You gain a halcyon cantrip and a 1st-rank halcyon spell."
+				"When Vigil fell to Tar-Baphon's Radiant Fire, that lost innocence brought you a deeper understanding of what faith means in the context of your own magic. When you cast a halcyon spell, you can choose for it to be a {@trait divino} spell instead of {@trait arcano} or {@trait primal}. You gain a halcyon cantrip and a 1st-rank halcyon spell."
 			],
 			"leadsTo": [
 				"Tripartite Omen|CotT"
@@ -140,7 +140,7 @@
 			],
 			"prerequisites": "{@feat Reclaimant Plea|LOKL}",
 			"entries": [
-				"Your will is so steadfast that even death can't stop you. You gain the ability to cast {@spell breath of life|PC1} up to three times per day as a 5th-rank {@trait divine} innate spell."
+				"Your will is so steadfast that even death can't stop you. You gain the ability to cast {@spell breath of life|PC1} up to three times per day as a 5th-rank {@trait divino} innate spell."
 			]
 		},
 		{

@@ -2211,6 +2211,8 @@ SortUtil = {
 
 	// FIXME: I return 1, 10, 2, 3, 4 when it really should be 1, 2, 3, 4, 10
 	_ascSort: (a, b) => {
+		if (typeof a === "string") a = a.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+		if (typeof b === "string") b = b.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 		if (b === a) return 0;
 		return b < a ? 1 : -1;
 	},
@@ -2396,6 +2398,8 @@ DataUtil = {
 	},
 
 	async loadJSON (url, ...otherData) {
+		if (Parser.pInitTagSourceIndex) await Parser.pInitTagSourceIndex();
+
 		const procUrl = UrlUtil.link(url);
 
 		let ident = procUrl;
@@ -2672,7 +2676,7 @@ DataUtil = {
 			if (opts.isLower) uid = uid.toLowerCase();
 			let [name, source, displayText, ...others] = uid.split("|").map(it => it.trim());
 
-			source = Parser.getTagSource(tag, source);
+			source = Parser.getTagSource(tag, source, name);
 			if (opts.isLower) source = source.toLowerCase();
 
 			return {

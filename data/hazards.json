@@ -240,7 +240,7 @@
 				}
 			],
 			"routine": [
-				"(2 actions; {@trait death}, {@trait divine}, {@trait necromancy}) On its initiative, the pit uses its first action to use Damning Swarm against any creature within 5 feet of the pit floor. It then takes its second action to form a long, thrashing tendril composed of thousands of maggots to lash at a single target within area M1."
+				"(2 actions; {@trait death}, {@trait divino}, {@trait necromancy}) On its initiative, the pit uses its first action to use Damning Swarm against any creature within 5 feet of the pit floor. It then takes its second action to form a long, thrashing tendril composed of thousands of maggots to lash at a single target within area M1."
 			],
 			"attacks": [
 				{
@@ -545,14 +545,14 @@
 						"number": 1,
 						"unit": "reaction"
 					},
-					"trigger": "A creature within 60 feet casts a spell or uses {@trait magical} effect, or a creature within 60 feet is the target of an active spell that's 5th level or higher, carries a magic item of 10th level or higher, or is the target of an ongoing {@trait magical} effect created by a creature who's 10th level or higher",
+					"trigger": "A creature within 60 feet casts a spell or uses {@trait mágico} effect, or a creature within 60 feet is the target of an active spell that's 5th level or higher, carries a magic item of 10th level or higher, or is the target of an ongoing {@trait mágico} effect created by a creature who's 10th level or higher",
 					"entries": [
 						"The sphere flies 30 feet toward the triggering creature. If the sphere would enter a creature's space, it stops moving in that creature's space, then attempts to counter the triggering magic effect (or alternately, the strongest magic effect on the creature), with a counteract modifier of +28. A counteracted magic item becomes a mundane item of its type for 10 minutes. If the target is a creature, or is a creature who's carrying the targeted item, the creature takes {@damage 10d6} force damage from this effect (DC 36 basic Fortitude save). The rogue sphere then rolls initiative."
 					]
 				}
 			],
 			"routine": [
-				"(2 actions) The sphere uses its first action to fly 30 feet toward the closest creature currently under the effects of a spell, or it uses both actions to fly 60 feet toward the closest creature if none are within 30 feet. The rogue sphere attempts to enter the target's space. If a rogue sphere shares a creature's space, it uses an action to Magic Drift the target. If the target has no {@trait magical} effects or carries no magic items, the result of its Fortitude save to resist the force damage caused by Magic Drift is increased by one degree of success."
+				"(2 actions) The sphere uses its first action to fly 30 feet toward the closest creature currently under the effects of a spell, or it uses both actions to fly 60 feet toward the closest creature if none are within 30 feet. The rogue sphere attempts to enter the target's space. If a rogue sphere shares a creature's space, it uses an action to Magic Drift the target. If the target has no {@trait mágico} effects or carries no magic items, the result of its Fortitude save to resist the force damage caused by Magic Drift is increased by one degree of success."
 			],
 			"reset": [
 				"The sphere ceases moving when no creature remains to trigger Magic Drift. It then dissipates after an hour spent with no targets within 60 feet"
@@ -718,7 +718,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait divine}) The divine energy gathered by the ritual spikes. One of the eleven stained-glass windows (each depicting one of her Eleven Acts) transforms to feature {@deity Arazni|LODM} instead. Any creature that can see the window change must attempt a DC 50 Will save.",
+				"(1 action; {@trait divino}) The divine energy gathered by the ritual spikes. One of the eleven stained-glass windows (each depicting one of her Eleven Acts) transforms to feature {@deity Arazni|LODM} instead. Any creature that can see the window change must attempt a DC 50 Will save.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -1191,7 +1191,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait auditory}, {@trait divine}, {@trait emotion}, {@trait fear}, {@trait mental}) Spirits of the dead whisper their names into the minds of creatures in the room, dealing {@damage 2d10+11} mental damage (DC 28 basic Will save). A creature that fails the save is also {@condition frightened|PC1|frightened 1} (or {@condition frightened|PC1|frightened 2} on a critical failure)."
+				"(1 action; {@trait auditory}, {@trait divino}, {@trait emotion}, {@trait fear}, {@trait mental}) Spirits of the dead whisper their names into the minds of creatures in the room, dealing {@damage 2d10+11} mental damage (DC 28 basic Will save). A creature that fails the save is also {@condition frightened|PC1|frightened 1} (or {@condition frightened|PC1|frightened 2} on a critical failure)."
 			],
 			"reset": [
 				"If the haunt is disabled, divine light washes through the area. Living creatures in the area regain {@dice 4d8} Hit Points, and {@trait undead} creatures in the area take {@damage 4d8} vitality damage. The haunt deactivates 1 minute after all creatures leave the area but resets immediately thereafter."
@@ -3977,7 +3977,7 @@
 				}
 			],
 			"routine": [
-				"{@as 3} ({@trait arcane}, {@trait conjuration}) The slicing shadows congeal into the form of what appears to be the upper half of a skeletal, cowled humanoid: an {@creature owb prophet|B3}. This {@creature owb prophet|B3} is a creation of the paradox engine and does not have a forsaken patron. While the {@creature owb prophet|B3} is active, the paradox engine no longer uses its Slicing Shadows reaction; instead, the {@creature owb prophet|B3} focuses its attacks on creatures that attempt to damage or deactivate the engine. If the {@creature owb prophet|B3} is destroyed, the paradox engine's disable DCs and Hardness are reduced by 5. It thereafter functions as a simple hazard with the Slicing Shadows reaction, and resets after 1 round."
+				"{@as 3} ({@trait arcano}, {@trait conjuration}) The slicing shadows congeal into the form of what appears to be the upper half of a skeletal, cowled humanoid: an {@creature owb prophet|B3}. This {@creature owb prophet|B3} is a creation of the paradox engine and does not have a forsaken patron. While the {@creature owb prophet|B3} is active, the paradox engine no longer uses its Slicing Shadows reaction; instead, the {@creature owb prophet|B3} focuses its attacks on creatures that attempt to damage or deactivate the engine. If the {@creature owb prophet|B3} is destroyed, the paradox engine's disable DCs and Hardness are reduced by 5. It thereafter functions as a simple hazard with the Slicing Shadows reaction, and resets after 1 round."
 			],
 			"reset": [
 				"The paradox engine deactivates 1 minute, and its {@creature owb prophet|B3} returns to its interior after all creatures leave the area, but resets immediately thereafter."
@@ -4344,7 +4344,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait emotion}, {@trait fear}, {@trait mental}, {@trait occult}) The echoes continue to reverberate, tearing at those in the area and filling them with distrust of others. All creatures in the area take {@damage 2d10+11} mental damage and must attempt a DC 28 Will save.",
+				"(1 action; {@trait emotion}, {@trait fear}, {@trait mental}, {@trait ocultista}) The echoes continue to reverberate, tearing at those in the area and filling them with distrust of others. All creatures in the area take {@damage 2d10+11} mental damage and must attempt a DC 28 Will save.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -4746,7 +4746,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait evocation}, {@trait occult}) The churning vortex of beaks and bones takes its action through area {@b D2}, clawing and pecking at any creature in the area. All creatures in area {@b D2} take {@damage 2d8+9} slashing damage (DC 24 basic Reflex save)."
+				"(1 action; {@trait evocation}, {@trait ocultista}) The churning vortex of beaks and bones takes its action through area {@b D2}, clawing and pecking at any creature in the area. All creatures in area {@b D2} take {@damage 2d8+9} slashing damage (DC 24 basic Reflex save)."
 			],
 			"reset": [
 				"24 hours; defeating the corrupted psychopomps in areas {@b D5} and {@b E4} destroys this haunt forever."
@@ -4992,7 +4992,7 @@
 				}
 			],
 			"routine": [
-				"(3 actions; {@trait evocation}, {@trait occult}) The haunted hatchet uses an action to move to a square adjacent to a creature within 25 feet, attempts a wrathful hatchet {@action Strike} against an adjacent creature, or attempts to {@action Escape} from being {@condition immobilized} or {@condition restrained}. If there are no creatures within 25 feet, the hatchet moves in a random direction. If it ends its turn and there are no creatures within 25 feet, the hatchet falls to the ground, and the haunt ends."
+				"(3 actions; {@trait evocation}, {@trait ocultista}) The haunted hatchet uses an action to move to a square adjacent to a creature within 25 feet, attempts a wrathful hatchet {@action Strike} against an adjacent creature, or attempts to {@action Escape} from being {@condition immobilized} or {@condition restrained}. If there are no creatures within 25 feet, the hatchet moves in a random direction. If it ends its turn and there are no creatures within 25 feet, the hatchet falls to the ground, and the haunt ends."
 			],
 			"attacks": [
 				{
@@ -5079,7 +5079,7 @@
 				}
 			],
 			"routine": [
-				"(4 actions; {@trait emotion}, {@trait fear}, {@trait mental}, {@trait necromancy}, {@trait occult}) The haunt uses up to 4 actions to afflict bleeding wounds on different creatures in area {@b B22}. These bloody wounds manifest where the target would have felt pain from Inflict Agony, regardless of whether they succeeded in resisting that effect or not. A creature can't be targeted more than once by this routine. Each creature affected must attempt a DC 24 Fortitude save.",
+				"(4 actions; {@trait emotion}, {@trait fear}, {@trait mental}, {@trait necromancy}, {@trait ocultista}) The haunt uses up to 4 actions to afflict bleeding wounds on different creatures in area {@b B22}. These bloody wounds manifest where the target would have felt pain from Inflict Agony, regardless of whether they succeeded in resisting that effect or not. A creature can't be targeted more than once by this routine. Each creature affected must attempt a DC 24 Fortitude save.",
 				"The haunt loses 1 action for each painting that's disabled or destroyed.",
 				{
 					"type": "successDegree",
@@ -5182,7 +5182,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait fire}, {@trait necromancy}, {@trait occult}) If there are no targets within area {@b B18} when the haunt takes its action, it can use its Lure reaction to try to get nearby victims back inside. The haunt manifests several burning skeletal arms that reach up from the ruined floors or out of the burnt walls to claw at every creature in area {@b B18}. These creatures must attempt a DC 22 Reflex save (creatures seated on a sofa take a \u20132 circumstance penalty to this saving throw).",
+				"(1 action; {@trait fire}, {@trait necromancy}, {@trait ocultista}) If there are no targets within area {@b B18} when the haunt takes its action, it can use its Lure reaction to try to get nearby victims back inside. The haunt manifests several burning skeletal arms that reach up from the ruined floors or out of the burnt walls to claw at every creature in area {@b B18}. These creatures must attempt a DC 22 Reflex save (creatures seated on a sofa take a \u20132 circumstance penalty to this saving throw).",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -5942,7 +5942,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait divine}, {@trait emotion}, {@trait enchantment}, {@trait fear}, {@trait mental}) The warding bell emits a harrowing ring that can be heard only by {@trait undead} or {@ritual transmigrate|SoG3|transmigrated} PCs in area {@b C11}; affected characters must attempt a {@dc 30} Will save.",
+				"(1 action; {@trait divino}, {@trait emotion}, {@trait enchantment}, {@trait fear}, {@trait mental}) The warding bell emits a harrowing ring that can be heard only by {@trait undead} or {@ritual transmigrate|SoG3|transmigrated} PCs in area {@b C11}; affected characters must attempt a {@dc 30} Will save.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -6199,7 +6199,7 @@
 				}
 			],
 			"routine": [
-				"(2 actions; {@trait emotion}, {@trait enchantment}, {@trait fear}, {@trait incapacitation}, {@trait mental}, {@trait occult}) The haunt uses its first action to {@action grapple} with Goh and attempts to pull him underwater. Goh has a Fortitude DC of 19. In order to pull Goh underwater, the haunt must critically succeed at its grapple check against him with a result of 29 or higher to successfully {@condition restrained||restrain} Goh. Goh is overwhelmed by terror and makes no attempt to escape, so it falls to the PCs to get him free from the haunt. If Goh is restrained and pulled underwater, the haunt must continue to grapple him in following rounds. If the haunt manages to critically succeed at grappling Goh while he's restrained, the man dies from a combination of fright and drowning, at which point the haunt immediately ends.",
+				"(2 actions; {@trait emotion}, {@trait enchantment}, {@trait fear}, {@trait incapacitation}, {@trait mental}, {@trait ocultista}) The haunt uses its first action to {@action grapple} with Goh and attempts to pull him underwater. Goh has a Fortitude DC of 19. In order to pull Goh underwater, the haunt must critically succeed at its grapple check against him with a result of 29 or higher to successfully {@condition restrained||restrain} Goh. Goh is overwhelmed by terror and makes no attempt to escape, so it falls to the PCs to get him free from the haunt. If Goh is restrained and pulled underwater, the haunt must continue to grapple him in following rounds. If the haunt manages to critically succeed at grappling Goh while he's restrained, the man dies from a combination of fright and drowning, at which point the haunt immediately ends.",
 				"If Goh is pulled free and taken out of the water, the haunt loses one action and no longer attempts to grapple him. The haunt uses its second action to manifest the image of a frightening watery drowned ghost, causing one creature it targets within 30 feet to attempt a {@dc 22} Will save (the haunt always targets a creature who attempted to free Goh from its grip if possible).",
 				{
 					"type": "successDegree",
@@ -7459,7 +7459,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait illusion}, {@trait mental}, {@trait occult}) The atmosphere continues to affect all creatures in the area, requiring a new Fortitude save each round against its Poisonous Atmosphere (above). A creature holding its breath gains a +2 circumstance bonus to the save."
+				"(1 action; {@trait illusion}, {@trait mental}, {@trait ocultista}) The atmosphere continues to affect all creatures in the area, requiring a new Fortitude save each round against its Poisonous Atmosphere (above). A creature holding its breath gains a +2 circumstance bonus to the save."
 			]
 		},
 		{
@@ -7673,7 +7673,7 @@
 				}
 			],
 			"routine": [
-				"(3 actions; {@trait conjuration}, {@trait divine}, {@trait teleportation}) With spectral claws, the aiudara wraiths hurl trespassers through time and space. Each of the three wraiths has 1 action which it can use to make a forceful hand {@action Strike} against a creature within 60 feet. The haunt loses 1 action for each successful check to disable the haunt.",
+				"(3 actions; {@trait conjuration}, {@trait divino}, {@trait teleportation}) With spectral claws, the aiudara wraiths hurl trespassers through time and space. Each of the three wraiths has 1 action which it can use to make a forceful hand {@action Strike} against a creature within 60 feet. The haunt loses 1 action for each successful check to disable the haunt.",
 				"When the haunt rolls a critical hit to {@action Strike} a creature, the creature is instantly shunted to an empty space within 30 feet. The haunt chooses which space the creature is transported to."
 			],
 			"attacks": [
@@ -7880,7 +7880,7 @@
 				}
 			],
 			"routine": [
-				"(2 actions; {@trait cold}, {@trait enchantment}, {@trait mental}, {@trait occult}) The haunt uses its first action to light incense burners again, forcing any creature that isn't already {@condition unconscious} to save against that effect once more. Its second action is to cause any {@condition unconscious} creatures in the room to experience horrific, vivid dreams about being lost in the arctic during a blizzard, while enormous furred figures\u2014saumen kar\u2014lunge at them through the snow to attack repeatedly. Each {@condition unconscious} creature must attempt a DC 28 Fortitude saving throw. If at the end of the round there are no {@condition unconscious} creatures in the room, Etward's nightmare ends and the trap deactivates.",
+				"(2 actions; {@trait cold}, {@trait enchantment}, {@trait mental}, {@trait ocultista}) The haunt uses its first action to light incense burners again, forcing any creature that isn't already {@condition unconscious} to save against that effect once more. Its second action is to cause any {@condition unconscious} creatures in the room to experience horrific, vivid dreams about being lost in the arctic during a blizzard, while enormous furred figures\u2014saumen kar\u2014lunge at them through the snow to attack repeatedly. Each {@condition unconscious} creature must attempt a DC 28 Fortitude saving throw. If at the end of the round there are no {@condition unconscious} creatures in the room, Etward's nightmare ends and the trap deactivates.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -12068,7 +12068,7 @@
 				{
 					"name": "Earth Vulnerability",
 					"entries": [
-						"The Elemental Plane of Air is opposed by the Plane of Earth. Any spell or {@trait magical} effect with the {@trait earth} trait that targets a creature or area within 50 feet of the rift deals 10 damage to the rift per spell levels (or per 2 levels for magic items, feats, and so forth). For example, a 3rd-level {@spell earthbind} spell cast on a creature near the air rift deals 30 points of damage to the rift."
+						"The Elemental Plane of Air is opposed by the Plane of Earth. Any spell or {@trait mágico} effect with the {@trait earth} trait that targets a creature or area within 50 feet of the rift deals 10 damage to the rift per spell levels (or per 2 levels for magic items, feats, and so forth). For example, a 3rd-level {@spell earthbind} spell cast on a creature near the air rift deals 30 points of damage to the rift."
 					]
 				},
 				{
@@ -16329,7 +16329,7 @@
 			],
 			"disable": {
 				"entries": [
-					"{@skill Thievery} DC 27 (expert) to identify the proper sequence of buttons in the divots, or {@spell dispel magic} (4th level; counteract DC 25) to suppress the {@trait magical} effect for 1 hour."
+					"{@skill Thievery} DC 27 (expert) to identify the proper sequence of buttons in the divots, or {@spell dispel magic} (4th level; counteract DC 25) to suppress the {@trait mágico} effect for 1 hour."
 				]
 			},
 			"actions": [
@@ -23506,7 +23506,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait illusion}, {@trait incapacitation}, {@trait occult}) The haunt continues to confound victims' senses and inspire them to commit violence against each other. Each creature in the haunt's area must attempt a DC 26 Will save.",
+				"(1 action; {@trait illusion}, {@trait incapacitation}, {@trait ocultista}) The haunt continues to confound victims' senses and inspire them to commit violence against each other. Each creature in the haunt's area must attempt a DC 26 Will save.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -23752,7 +23752,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait auditory}, {@trait enchantment}, {@trait incapacitation}, {@trait occult}) The orchestra performs a raucous tune, compelling all creatures that can hear it to spend actions dancing.",
+				"(1 action; {@trait auditory}, {@trait enchantment}, {@trait incapacitation}, {@trait ocultista}) The orchestra performs a raucous tune, compelling all creatures that can hear it to spend actions dancing.",
 				"Each round, creature must attempt a DC 37 Will save; the results of this save modify the number of actions that the creature must spend dancing each round. If this would cause the creature to spend more actions dancing than it can use on its turn, the creature takes {@dice 10d6} damage (or double that on a critical failure) from moving faster than its body can manage.",
 				{
 					"type": "successDegree",
@@ -25897,7 +25897,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait enchantment}, {@trait mental}, {@trait occult}) The conductor urges each creature within 30 feet to play the hazardous instrument it holds. Each creature that is compelled to play its instrument does so, and those who succeeded on their save can choose to do so. Playing the instrument, either from the haunt's routine or of a creature's own volition during an attempt to disable the haunt, deals {@damage 1d6+3} slashing damage (DC 21 basic Reflex save), and the creature must attempt a DC 18 {@skill Performance} check. On a success, the conductor accepts the performance and dismisses that creature's instrument, and on a critical failure, the discordant sound and conductor's jeers deal an additional {@damage 1d6+3} sonic damage."
+				"(1 action; {@trait enchantment}, {@trait mental}, {@trait ocultista}) The conductor urges each creature within 30 feet to play the hazardous instrument it holds. Each creature that is compelled to play its instrument does so, and those who succeeded on their save can choose to do so. Playing the instrument, either from the haunt's routine or of a creature's own volition during an attempt to disable the haunt, deals {@damage 1d6+3} slashing damage (DC 21 basic Reflex save), and the creature must attempt a DC 18 {@skill Performance} check. On a success, the conductor accepts the performance and dismisses that creature's instrument, and on a critical failure, the discordant sound and conductor's jeers deal an additional {@damage 1d6+3} sonic damage."
 			]
 		},
 		{
@@ -26141,7 +26141,7 @@
 				}
 			],
 			"routine": [
-				"(1 action; {@trait death}, {@trait divine}, {@trait necromancy}, {@trait negative}) The spirit inhales, siphoning the souls of the living and becoming more visible. Each creature within 60 feet takes {@damage 4d10+20} negative damage, with a DC 41 Fortitude save. If no creatures are within the area, the haunt moves up to 120 feet into the largest concentration of living creatures and then inhales.",
+				"(1 action; {@trait death}, {@trait divino}, {@trait necromancy}, {@trait negative}) The spirit inhales, siphoning the souls of the living and becoming more visible. Each creature within 60 feet takes {@damage 4d10+20} negative damage, with a DC 41 Fortitude save. If no creatures are within the area, the haunt moves up to 120 feet into the largest concentration of living creatures and then inhales.",
 				{
 					"type": "successDegree",
 					"entries": {

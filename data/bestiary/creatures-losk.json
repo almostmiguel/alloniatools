@@ -1817,7 +1817,7 @@
 					{
 						"name": "Replacement Parts",
 						"entries": [
-							"A torn quartet can spend 1 minute tearing apart the corpse of a {@trait humanoid} creature that was killed within the last hour to regain 60 Hit Points and restore one of its nonfunctioning limbs. A torn quartet can't have more than four limbs."
+							"A torn quartet can spend 1 minute tearing apart the corpse of a {@trait humanoide} creature that was killed within the last hour to regain 60 Hit Points and restore one of its nonfunctioning limbs. A torn quartet can't have more than four limbs."
 						]
 					},
 					{

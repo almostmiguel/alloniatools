@@ -74,7 +74,7 @@ class PageFilterBackgrounds extends PageFilter {
 		if (bg.remaster) bg._fMisc.push("Remaster");
 	}
 
-	addToFilters (bg, isExcluded) {
+	_addToFilters (bg, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(bg._fSources);
@@ -100,7 +100,7 @@ class PageFilterBackgrounds extends PageFilter {
 		];
 	}
 
-	toDisplay (values, bg) {
+	_toDisplay (values, bg) {
 		return this._filterBox.toDisplay(
 			values,
 			bg._fSources,

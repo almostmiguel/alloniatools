@@ -559,7 +559,7 @@
 				"Over millennia, these mysterious, intricately cut gemstones have been hoarded by mystics and fanatics hoping to discover their secrets. Despite their myriad forms and functions, these stones are purportedly all fragments of crystal tools used by otherworldly entities to construct the universe in primeval times.",
 				"When you invest one of these precisely shaped crystals, the stone orbits your head instead of being worn on your body.",
 				"You can stow an aeon stone with an {@action Interact} action, and an orbiting stone can be snatched out of the air with a successful {@action Disarm} action against you. A stowed or removed stone remains invested, but its effects are suppressed until you return it to orbit your head again.",
-				"There are various types of aeon stones, each with a different shape, color, and {@trait magical} effect. Each aeon stone also gains a resonant power when slotted into a special magical item called a {@item wayfinder|crb}."
+				"There are various types of aeon stones, each with a different shape, color, and {@trait mágico} effect. Each aeon stone also gains a resonant power when slotted into a special magical item called a {@item wayfinder|crb}."
 			],
 			"generic": "G",
 			"variants": [
@@ -1363,7 +1363,7 @@
 				"Armor"
 			],
 			"entries": [
-				"This intricate rune displaces spell energy, granting you a +1 status bonus to saving throws against {@trait magical} effects.",
+				"This intricate rune displaces spell energy, granting you a +1 status bonus to saving throws against {@trait mágico} effects.",
 				{
 					"type": "ability",
 					"style": "compact",
@@ -1419,7 +1419,7 @@
 			"category": "Oil",
 			"entries": [
 				"This oil contains energy that repels nearly all types of magic.",
-				"When you apply this oil to armor, the creature wearing the armor becomes immune to all spells, effects of magic items (the wearer's and those of others), and effects with the {@trait magical} trait for 1 minute. The oil affects neither the magic of the armor nor the fundamental runes of weapons attacking the wearer.",
+				"When you apply this oil to armor, the creature wearing the armor becomes immune to all spells, effects of magic items (the wearer's and those of others), and effects with the {@trait mágico} trait for 1 minute. The oil affects neither the magic of the armor nor the fundamental runes of weapons attacking the wearer.",
 				"Magical effects from a source of 20th level or higher, such as a deity, still function on the armor's wearer."
 			]
 		},
@@ -6844,7 +6844,7 @@
 			},
 			"category": "Talisman",
 			"entries": [
-				"Made from a treated sliver of cold iron, this talisman allows you to counteract {@trait magical} effects. When you activate the dispelling sliver, it attempts to counteract a single spell active on the target, with the effects of an 8th-level {@spell dispel magic} spell (counteract modifier +29).",
+				"Made from a treated sliver of cold iron, this talisman allows you to counteract {@trait mágico} effects. When you activate the dispelling sliver, it attempts to counteract a single spell active on the target, with the effects of an 8th-level {@spell dispel magic} spell (counteract modifier +29).",
 				"If you activate the talisman on a successful Dispelling Slice, the talisman attempts to counteract all spells active on the target."
 			]
 		},
@@ -9475,7 +9475,7 @@
 			"category": "Armor",
 			"entries": [
 				"Stitched together from pieces of ghoul skin, this suit of +1 hide armor grants you a +1 item bonus to saving throws against disease and paralysis and makes you immune to the paralysis of ghouls. Ghoul hide with a resilient rune increases the resilient rune's item bonus to saving throws against disease and paralysis by 1 (maximum +4)",
-				"Ghoul hide hisses with sibilant hatred at the touch of elves. When worn by a creature with the {@trait elf} trait, the armor gains the {@trait noisy} trait."
+				"Ghoul hide hisses with sibilant hatred at the touch of elves. When worn by a creature with the {@trait elfo} trait, the armor gains the {@trait noisy} trait."
 			]
 		},
 		{

@@ -1069,7 +1069,7 @@
 				"cleric"
 			],
 			"entries": [
-				"Your extensive service has made you a lesser herald of your deity, which affords you certain privileges. First, any creature you encounter knows instinctively that you speak for your deity. Second, if you conduct the {@ritual commune} ritual to contact your deity, you don't have to pay any cost and you automatically get a critical success. Third, once per day, you can cast {@spell plane shift} as a divine innate spell, but only to travel to the realm of your deity. When you cast it this way, its casting time is 1 minute, your religious symbol is a sufficient tuning fork for this spell, and you appear exactly where you want to be. If you're in your deity's realm due to this spell, you can return to the point you left when you cast it by spending a single action, which has the {@trait concentrate} and {@trait divine} traits."
+				"Your extensive service has made you a lesser herald of your deity, which affords you certain privileges. First, any creature you encounter knows instinctively that you speak for your deity. Second, if you conduct the {@ritual commune} ritual to contact your deity, you don't have to pay any cost and you automatically get a critical success. Third, once per day, you can cast {@spell plane shift} as a divine innate spell, but only to travel to the realm of your deity. When you cast it this way, its casting time is 1 minute, your religious symbol is a sufficient tuning fork for this spell, and you appear exactly where you want to be. If you're in your deity's realm due to this spell, you can return to the point you left when you cast it by spending a single action, which has the {@trait concentrate} and {@trait divino} traits."
 			]
 		},
 		{
@@ -1892,7 +1892,7 @@
 				"sorcerer"
 			],
 			"entries": [
-				"Your magical blood makes you more resistant to magic. You gain a +1 status bonus to saving throws against spells and {@trait magical} effects."
+				"Your magical blood makes you more resistant to magic. You gain a +1 status bonus to saving throws against spells and {@trait mágico} effects."
 			]
 		},
 		{
@@ -2950,7 +2950,7 @@
 				"You expend one of your spell slots to counter the triggering creature's casting of a spell that you have in your repertoire. You lose your spell slot as if you had cast the triggering spell. You then attempt to {@quickref counteract|CRB|3|counteracting} the triggering spell."
 			],
 			"special": [
-				"This feat has the trait corresponding to the tradition of spells you cast ({@trait arcane}, {@trait divine}, {@trait natural}, or {@trait occult})."
+				"This feat has the trait corresponding to the tradition of spells you cast ({@trait arcano}, {@trait divino}, {@trait natural}, or {@trait ocultista})."
 			],
 			"leadsTo": [
 				"Reflect Spell (Sorcerer)"
@@ -8085,7 +8085,7 @@
 				"You have a literal sixth sense for magic. You can sense the presence of magic auras as though you were always using a 1st-level {@spell detect magic} spell. This detects magic in your field of vision only. When you {@action Seek}, you gain the benefits of a 3rd-level {@spell detect magic} spell on things you see (in addition to the normal benefits of {@action Seek||Seeking}). You can turn this sense off and on with a free action at the start or the end of your turn."
 			],
 			"special": [
-				"This feat has the trait corresponding to the tradition of spells you cast ({@trait arcane}, {@trait divine}, {@trait natural}, or {@trait occult})."
+				"This feat has the trait corresponding to the tradition of spells you cast ({@trait arcano}, {@trait divino}, {@trait natural}, or {@trait ocultista})."
 			]
 		},
 		{
@@ -9269,9 +9269,9 @@
 				"concentrate",
 				"orc"
 			],
-			"trigger": "You attempt a saving throw against a spell or {@trait magical} effect, before rolling.",
+			"trigger": "You attempt a saving throw against a spell or {@trait mágico} effect, before rolling.",
 			"entries": [
-				"You defend yourself against magic by relying on techniques derived from orc cultural superstitions. You gain a +1 circumstance bonus to your saving throw against the triggering spell or {@trait magical} effect."
+				"You defend yourself against magic by relying on techniques derived from orc cultural superstitions. You gain a +1 circumstance bonus to your saving throw against the triggering spell or {@trait mágico} effect."
 			],
 			"leadsTo": [
 				"Pervasive Superstition",
@@ -9626,7 +9626,7 @@
 			],
 			"prerequisites": "{@feat Orc Superstition}",
 			"entries": [
-				"You steep yourself in superstition and practice ancient orc mental exercises for shrugging off the effects of magic. You gain a +1 circumstance bonus to saving throws against spells and {@trait magical} effects at all times."
+				"You steep yourself in superstition and practice ancient orc mental exercises for shrugging off the effects of magic. You gain a +1 circumstance bonus to saving throws against spells and {@trait mágico} effects at all times."
 			],
 			"leadsTo": [
 				"Spell Devourer|APG"
@@ -11731,7 +11731,7 @@
 			],
 			"prerequisites": "master in {@skill Deception}",
 			"entries": [
-				"You elude and evade attempts to uncover your true nature or intentions. When a spell or {@trait magical} effect tries to read your mind, detect whether you are lying, or reveal your alignment, you can attempt a {@skill Deception} check against the spell or effect's DC. If you succeed, the effect reveals nothing."
+				"You elude and evade attempts to uncover your true nature or intentions. When a spell or {@trait mágico} effect tries to read your mind, detect whether you are lying, or reveal your alignment, you can attempt a {@skill Deception} check against the spell or effect's DC. If you succeed, the effect reveals nothing."
 			]
 		},
 		{
@@ -13077,7 +13077,7 @@
 			],
 			"prerequisites": "legendary in {@skill Survival}",
 			"entries": [
-				"Your ability to track your prey has surpassed explanation, allowing you to trace your prey's movements and predict its location with ease. When you use {@action Hunt Prey} on a creature within 100 feet, you can follow that creature's movements, allowing you to know the creature's exact location no matter how far away it becomes, as long as it remains your prey. You must be legendary in {@skill Nature} to track your prey's location across {@trait teleportation} or planar travel. This feat gains the {@trait detection}, {@trait divination}, and {@trait primal} traits if you're legendary in {@skill Nature}."
+				"Your ability to track your prey has surpassed explanation, allowing you to trace your prey's movements and predict its location with ease. When you use {@action Hunt Prey} on a creature within 100 feet, you can follow that creature's movements, allowing you to know the creature's exact location no matter how far away it becomes, as long as it remains your prey. You must be legendary in {@skill Nature} to track your prey's location across {@trait teleportation} or planar travel. This feat gains the {@trait detection}, {@trait divinotion}, and {@trait primal} traits if you're legendary in {@skill Nature}."
 			]
 		},
 		{
@@ -13158,7 +13158,7 @@
 			"prerequisites": "trained in {@skill Arcana}, {@skill Nature}, {@skill Occultism}, or {@skill Religion}",
 			"entries": [
 				"You examine a magic item you normally couldn't use in an effort to fool it and activate it temporarily. For example, this might allow a fighter to cast a spell from a wand or allow a wizard to cast a spell that's not on the arcane list using a scroll. You must know what activating the item does, or you can't attempt to trick it.",
-				"Attempt a check using the skill matching the item's magic tradition, or matching a tradition that has the spell on its list, if you're trying to cast a spell from the item. The relevant skills are {@skill Arcana} for arcane, {@skill Nature} for primal, {@skill Occultism} for occult, {@skill Religion} for divine, or any of the four for an item that has the {@trait magical} trait and not a tradition trait. The GM determines the DC based on the item's level (possibly adjusted depending on the item or situation)",
+				"Attempt a check using the skill matching the item's magic tradition, or matching a tradition that has the spell on its list, if you're trying to cast a spell from the item. The relevant skills are {@skill Arcana} for arcane, {@skill Nature} for primal, {@skill Occultism} for occult, {@skill Religion} for divine, or any of the four for an item that has the {@trait mágico} trait and not a tradition trait. The GM determines the DC based on the item's level (possibly adjusted depending on the item or situation)",
 				"If you activate a magic item that requires a spell attack roll or spell DC and you don't have the ability to cast spells of the relevant tradition, use your level as your proficiency bonus and the highest of your Intelligence, Wisdom, or Charisma modifiers. If you're a master in the appropriate skill for the item's tradition, you instead use the trained proficiency bonus, and if you're legendary, you instead use the expert proficiency bonus.",
 				{
 					"type": "successDegree",
@@ -13589,7 +13589,7 @@
 				"human"
 			],
 			"entries": [
-				"You've familiarized yourself with a particular weapon, potentially from another ancestry or culture. Choose an uncommon simple or martial weapon with a trait corresponding to an ancestry (such as {@trait dwarf}, {@trait goblin}, or {@trait orc}) or that is common in another culture. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a simple weapon.",
+				"You've familiarized yourself with a particular weapon, potentially from another ancestry or culture. Choose an uncommon simple or martial weapon with a trait corresponding to an ancestry (such as {@trait anão}, {@trait goblin}, or {@trait orc}) or that is common in another culture. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a simple weapon.",
 				"If you are trained in all martial weapons, you can choose an uncommon advanced weapon with such a trait. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a martial weapon."
 			],
 			"leadsTo": [

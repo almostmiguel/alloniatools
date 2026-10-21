@@ -127,7 +127,7 @@ class PageFilterCompanionsFamiliars extends PageFilter {
 		it._fLanguages = (it.languages ?? []).map((language) => Renderer.stripTags(language));
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(it._fSources);
@@ -165,7 +165,7 @@ class PageFilterCompanionsFamiliars extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

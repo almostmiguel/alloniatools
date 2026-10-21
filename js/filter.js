@@ -11,6 +11,13 @@ class PageFilter {
 	constructor (opts) {
 		opts = opts || {};
 		this._sourceFilter = new SourceFilter(opts.sourceFilterOpts);
+		this._reprintedFilter = new Filter({
+			header: "Reprinted",
+			headerHelp: "Older entries with the same name in another source. Red hides older versions; clear shows all versions; blue shows only older versions. Compared using publication dates of entries loaded in this list.",
+			items: ["Reprinted"],
+			deselFn: () => true,
+		});
+		this._reprintSources = new Map();
 		this._filterBox = null;
 	}
 
@@ -53,13 +60,50 @@ class PageFilter {
 				}));
 		});
 	}
-	addToFilters (entity, isExcluded, opts) { throw new Error("Unimplemented!"); }
-	toDisplay (values, entity) { throw new Error("Unimplemented!"); }
+	// Register in the shared layer, including pages which call addToFilters directly.
+	addToFilters (entity, isExcluded, opts) {
+		if (!isExcluded) this._registerReprint(entity);
+		return this._addToFilters(entity, isExcluded, opts);
+	}
+
+	static _getReprintKey (entity) {
+		// Keep distinct record types and explicitly named variants separate.
+		return JSON.stringify([entity.__prop || "", entity.name.trim().toLowerCase(), entity.add_hash || ""]);
+	}
+
+	_registerReprint (entity) {
+		if (!entity.name || !entity.source) return;
+		const date = Date.parse(Parser.sourceJsonToDate(entity.source));
+		if (!Number.isFinite(date)) return;
+		const key = PageFilter._getReprintKey(entity);
+		if (!this._reprintSources.has(key)) this._reprintSources.set(key, new Map());
+		this._reprintSources.get(key).set(entity.source.toLowerCase(), date);
+	}
+
+	isReprinted (entity) {
+		if (!entity.name || !entity.source) return false;
+		const sources = this._reprintSources.get(PageFilter._getReprintKey(entity));
+		if (!sources || sources.size < 2) return false;
+		const date = Date.parse(Parser.sourceJsonToDate(entity.source));
+		if (!Number.isFinite(date)) return false;
+		return [...sources].some(([source, otherDate]) => source !== entity.source.toLowerCase() && otherDate > date);
+	}
+
+	toDisplay (values, entity, ...args) {
+		return this._reprintedFilter.toDisplay(values, this.isReprinted(entity) ? ["Reprinted"] : [])
+			&& this._toDisplay(values, entity, ...args);
+	}
+
+	_addToFilters (entity, isExcluded, opts) { throw new Error("Unimplemented!"); }
+	_toDisplay (values, entity) { throw new Error("Unimplemented!"); }
 	async _pPopulateBoxOptions () { throw new Error("Unimplemented!"); }
 
 	async pInitFilterBox (opts) {
 		opts = opts || {};
 		await this._pPopulateBoxOptions(opts);
+		opts.filters.push(this._reprintedFilter);
+		// Evaluated against the entity above, separately from page-specific positional values.
+		opts.reprintedFilter = this._reprintedFilter;
 		this._filterBox = new FilterBox(opts);
 		await this._filterBox.pDoLoadState();
 		return this._filterBox;
@@ -337,6 +381,7 @@ class FilterBox extends ProxyBase {
 	 * @param [opts.$wrpMiniPills] Element to house mini pills.
 	 * @param [opts.$btnToggleSummaryHidden] Button which toggles the filter summary.
 	 * @param opts.filters Array of filters to be included in this box.
+	 * @param [opts.reprintedFilter] Shared filter evaluated by PageFilter rather than positional values.
 	 * @param [opts.isCompact] True if this box should have a compact/reduced UI.
 	 * @param [opts.namespace] Namespace for this filter, to prevent collisions with other filters on the same page.
 	 */
@@ -350,6 +395,7 @@ class FilterBox extends ProxyBase {
 		this._$wrpMiniPills = opts.$wrpMiniPills;
 		this._$btnToggleSummaryHidden = opts.$btnToggleSummaryHidden;
 		this._filters = opts.filters;
+		this._reprintedFilter = opts.reprintedFilter;
 		this._isCompact = opts.isCompact;
 		this._namespace = opts.namespace;
 
@@ -912,7 +958,7 @@ class FilterBox extends ProxyBase {
 	}
 
 	toDisplay (boxState, ...entryVals) {
-		return this._toDisplay(boxState, this._filters, entryVals);
+		return this._toDisplay(boxState, this._filters.filter(it => it !== this._reprintedFilter), entryVals);
 	}
 
 	/** `filterToValueTuples` should be an array of `{filter: <Filter>, value: <Any>}` objects */

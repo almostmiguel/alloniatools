@@ -133,7 +133,7 @@
 			"entries": [
 				"When you cast {@spell sigil}, you can modify the spell to add the following heightened entry.",
 				"{@b Heightened (4th)} You attune yourself to the marked target.",
-				"While the spell lasts, you can spend a single action, which has the concentrate, {@trait detection}, and {@trait divination} traits, to attempt to locate the target, learning the direction to the target as long as you are within 1 mile of it. If the target is a creature or a creature is in possession of the target object, the creature can attempt a Will saving throw against your spell DC. If it succeeds, your attempt to locate the target fails and you can't attempt this again for 1 day. You can only have a single target marked with a sigil modified in this way. If you {@action Cast a Spell||Cast this Spell} again on a second target, the {@spell sigil} spell on the first target ends, and your mark fades."
+				"While the spell lasts, you can spend a single action, which has the concentrate, {@trait detection}, and {@trait divinotion} traits, to attempt to locate the target, learning the direction to the target as long as you are within 1 mile of it. If the target is a creature or a creature is in possession of the target object, the creature can attempt a Will saving throw against your spell DC. If it succeeds, your attempt to locate the target fails and you can't attempt this again for 1 day. You can only have a single target marked with a sigil modified in this way. If you {@action Cast a Spell||Cast this Spell} again on a second target, the {@spell sigil} spell on the first target ends, and your mark fades."
 			]
 		},
 		{

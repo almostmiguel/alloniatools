@@ -419,7 +419,7 @@
 				"Path Maiden"
 			],
 			"entries": [
-				"All {@creature path maiden|SoG4|path maidens} have an apostate's shroud unarmed attack that deals mental damage. This attack, which manifests as a whipping lash from the path maiden's sleeves or hem, has the {@trait agile}, {@trait finesse}, and {@trait magical traits}. A creature damaged by this attack must succeed at a Fortitude save against the path maiden's spell DC. On a failure, the creature becomes cursed for 1 hour; if the creature dies while cursed, it immediately rises from death as a {@trait ghost}. If the creature is a lower level than the path maiden that cursed it, it treats that path maiden as an ally and loyally obeys her; otherwise, it manifests as a free-willed ghost. In either case, it becomes {@ability site bound} to the site of their death."
+				"All {@creature path maiden|SoG4|path maidens} have an apostate's shroud unarmed attack that deals mental damage. This attack, which manifests as a whipping lash from the path maiden's sleeves or hem, has the {@trait agile}, {@trait finesse}, and {@trait mágico traits}. A creature damaged by this attack must succeed at a Fortitude save against the path maiden's spell DC. On a failure, the creature becomes cursed for 1 hour; if the creature dies while cursed, it immediately rises from death as a {@trait ghost}. If the creature is a lower level than the path maiden that cursed it, it treats that path maiden as an ally and loyally obeys her; otherwise, it manifests as a free-willed ghost. In either case, it becomes {@ability site bound} to the site of their death."
 			]
 		},
 		{
@@ -583,7 +583,7 @@
 				"visual"
 			],
 			"entries": [
-				"The vampire can cast {@spell dominate} at will as a {@trait divine} innate spell. Casting it requires staring into the target's eyes, giving the spell the {@trait visual} trait. The save DC uses the {@table DCs by Level|CRB|DC of the vampire's level}, and a creature that succeeds is temporarily immune to that vampire's Dominate for 24 hours. Fully destroying the vampire ends the domination, but merely reducing the vampire to 0 HP is insufficient to break the spell."
+				"The vampire can cast {@spell dominate} at will as a {@trait divino} innate spell. Casting it requires staring into the target's eyes, giving the spell the {@trait visual} trait. The save DC uses the {@table DCs by Level|CRB|DC of the vampire's level}, and a creature that succeeds is temporarily immune to that vampire's Dominate for 24 hours. Fully destroying the vampire ends the domination, but merely reducing the vampire to 0 HP is insufficient to break the spell."
 			]
 		},
 		{
@@ -725,7 +725,7 @@
 				"shadow"
 			],
 			"entries": [
-				"Strigoi can cast {@spell levitate} at will as a {@trait divine} innate spell; when they do so, they appear to ascend or descend on a coiling mass of shadows."
+				"Strigoi can cast {@spell levitate} at will as a {@trait divino} innate spell; when they do so, they appear to ascend or descend on a coiling mass of shadows."
 			]
 		},
 		{
@@ -1187,11 +1187,11 @@
 			]
 		},
 		{
-			"name": "Darkvision",
-			"source": "B1",
-			"page": 343,
+			"name": "Visão no Escuro",
+			"source": "PC1",
+			"page": 433,
 			"entries": [
-				"A monster with darkvision can see perfectly well in areas of darkness and dim light, though such vision is in black and white only. Some forms of magical darkness, such as a 4th-level {@spell darkness|CRB} spell, block normal {@ability darkvision}. A monster with greater darkvision, however, can see through even these forms of magical darkness."
+				"Criaturas com visão no escuro ou visão no escuro maior conseguem enxergar perfeitamente bem em áreas de escuridão e luz fraca, embora somente em preto e branco. Algumas formas de escuridão mágica, como uma magia {@spell darkness} de 4º círculo, bloqueiam a visão no escuro normal. No entanto, criaturas com visão no escuro maior conseguem enxergar até mesmo nessas formas de escuridão mágica."
 			]
 		},
 		{
@@ -1399,11 +1399,11 @@
 			]
 		},
 		{
-			"name": "Low-Light Vision",
-			"source": "B1",
-			"page": 343,
+			"name": "Visão na Penumbra",
+			"source": "PC1",
+			"page": 433,
 			"entries": [
-				"The monster can see in dim light as though it were bright light, so it ignores the {@condition concealed} condition due to dim light."
+				"Criaturas com visão na penumbra conseguem enxergar na luz fraca como se fosse luz forte, ou seja, ignoram a condição {@condition concealed} causada por luz fraca."
 			]
 		},
 		{

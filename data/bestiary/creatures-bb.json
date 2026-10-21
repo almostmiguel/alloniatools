@@ -837,7 +837,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"The doppelganger takes on the specific appearance of any {@trait Small} or {@trait Medium} {@trait humanoid} it has seen. This doesn't change the doppelganger's {@action Stride} speed or their attack and damage bonuses with their {@action Strike||Strikes}, but it might change the damage type their {@action Strike||Strikes} deal (typically to bludgeoning)."
+							"The doppelganger takes on the specific appearance of any {@trait Small} or {@trait Medium} {@trait humanoide} it has seen. This doesn't change the doppelganger's {@action Stride} speed or their attack and damage bonuses with their {@action Strike||Strikes}, but it might change the damage type their {@action Strike||Strikes} deal (typically to bludgeoning)."
 						],
 						"generic": {
 							"tag": "ability"
@@ -2375,7 +2375,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"Any living creature (except an {@trait elf}) that takes damage from the ghoul's {@action Strike} must succeed at a {@dc 15} Fortitude save or gain the {@condition flat-footed} condition for 1 round and lose its next turn. If the creature is level 3 or higher, this happens only on a critical failure."
+							"Any living creature (except an {@trait elfo}) that takes damage from the ghoul's {@action Strike} must succeed at a {@dc 15} Fortitude save or gain the {@condition flat-footed} condition for 1 round and lose its next turn. If the creature is level 3 or higher, this happens only on a critical failure."
 						]
 					},
 					{
@@ -4850,7 +4850,7 @@
 					{
 						"name": "Light Vulnerability",
 						"entries": [
-							"A weapon with a {@spell light} spell cast on it gains the {@trait magical} trait when used to attack the shadow."
+							"A weapon with a {@spell light} spell cast on it gains the {@trait mágico} trait when used to attack the shadow."
 						]
 					}
 				],

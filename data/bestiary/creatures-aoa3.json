@@ -4077,8 +4077,8 @@
 						"std": 23
 					},
 					"abilities": [
-						"+2 status to all saves vs. {@trait magical||magic}",
-						"+3 status to all saves vs. {@trait divine||divine magic}"
+						"+2 status to all saves vs. {@trait mágico||magic}",
+						"+3 status to all saves vs. {@trait divino||divine magic}"
 					]
 				},
 				"hp": [

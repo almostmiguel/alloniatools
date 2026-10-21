@@ -311,7 +311,7 @@
 			"level": 1,
 			"entries": [
 				"An impulse is a special type of magical action available to kineticists, allowing them to wield or shape their element into diverse and powerful forms. To wield an element, you must have your kinetic aura active and have a free hand, as described in the {@trait impulse} trait. You automatically gain the Elemental Blast and Base Kinesis impulses, and your kinetic gate selection gives you additional impulse feats. You can select more impulse feats with kineticist class feats, and at higher levels, you'll automatically get more with the gate's threshold class feature. You can select an impulse feat only if it matches one of your kinetic elements.",
-				"Impulses are {@trait magical}, and though they aren't spells, some things that affect spells also affect impulses.",
+				"Impulses are {@trait mágico}, and though they aren't spells, some things that affect spells also affect impulses.",
 				"Abilities that restrict you from casting spells (such as being polymorphed into a battle form) or protect against spells (such as a spell that protects against other spells or a creature's bonus to saves against spells) also apply to impulses.",
 				{
 					"type": "pf2-h4",

@@ -1159,7 +1159,7 @@
 						"std": 38
 					},
 					"abilities": [
-						"+1 status to all saves vs. {@trait magical||magic}"
+						"+1 status to all saves vs. {@trait mágico||magic}"
 					]
 				},
 				"hp": [
@@ -1477,7 +1477,7 @@
 						"std": 12
 					},
 					"abilities": [
-						"+1 status to all saves vs. {@trait magical||magic}"
+						"+1 status to all saves vs. {@trait mágico||magic}"
 					]
 				},
 				"hp": [
@@ -2195,7 +2195,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"The Kallas Devil can take on the appearance of any Medium or Small female {@trait humanoid}. This doesn't change her Speed or her attack and damage bonuses with her {@action strike||Strikes} but might change the damage type her Strikes deal (typically to bludgeoning)."
+							"The Kallas Devil can take on the appearance of any Medium or Small female {@trait humanoide}. This doesn't change her Speed or her attack and damage bonuses with her {@action strike||Strikes} but might change the damage type her Strikes deal (typically to bludgeoning)."
 						]
 					},
 					{

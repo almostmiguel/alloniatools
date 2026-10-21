@@ -7,7 +7,7 @@
 			"page": 43,
 			"level": 1,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"You are naturally calm and collected in the face of imminent danger. At the end of your turn, reduce your {@condition frightened|PC1} condition by 2 instead of 1."
@@ -20,10 +20,10 @@
 			"page": 43,
 			"level": 1,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
-				"You eagerly absorbed the old stories and traditions of your ancestors, your gods, and your people, studying subjects and techniques passed down for generation upon generation. You gain the trained proficiency rank in {@skill Crafting|PC1} and {@skill Religion|PC1}. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the {@feat Additional Lore|PC1} general feat for {@skill Lore|PC1|Dwarf Lore}."
+				"You eagerly absorbed the old stories and traditions of your ancestors, your gods, and your people, studying subjects and techniques passed down for generation upon generation. You gain the trained proficiency rank in {@skill Crafting|PC1} and {@skill Religion|PC1}. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the {@feat Additional Lore|PC1} general feat for {@skill Lore|PC1|anão Lore}."
 			]
 		},
 		{
@@ -33,10 +33,10 @@
 			"page": 44,
 			"level": 1,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
-				"Your kin have instilled in you an affinity for hard-hitting weapons, and you prefer these to more elegant arms. You gain access to all {@filter uncommon weapons|items||Category=Weapon|rarity=uncommon|ancestry & heritage=dwarf} with the {@trait dwarf} trait. You have familiarity with weapons with the {@trait dwarf} trait plus the {@item battle axe|PC1}, {@item pick|PC1}, and {@item warhammer|PC1}\u2014for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.",
+				"Your kin have instilled in you an affinity for hard-hitting weapons, and you prefer these to more elegant arms. You gain access to all {@filter uncommon weapons|items||Category=Weapon|rarity=uncommon|ancestry & heritage=anão} with the {@trait anão} trait. You have familiarity with weapons with the {@trait anão} trait plus the {@item battle axe|PC1}, {@item pick|PC1}, and {@item warhammer|PC1}\u2014for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.",
 				"At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect."
 			]
 		},
@@ -47,7 +47,7 @@
 			"page": 44,
 			"level": 1,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"Dwarves have a long history fighting common foes, and you've mastered the ancient tactics to better face these enemies. You gain a +1 circumstance bonus to damage with weapons and unarmed attacks against creatures with the giant, goblin, hryngar, or {@trait orc} trait. If your attack would deal more than one weapon die of damage (as is common at higher levels than 1st), the bonus is equal to the number of weapon dice or unarmed attack dice.",
@@ -64,7 +64,7 @@
 			"page": 44,
 			"level": 1,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"Your innate connection to stone makes you adept at moving across uneven surfaces. You can ignore difficult terrain caused by stone (such as rubble or gravel) and uneven ground made of stone and earth. In addition, when you use the {@skill Acrobatics|PC1} skill to {@action Balance|PC1} on narrow surfaces or uneven ground made of stone or earth, you aren't {@condition off-guard|PC1}, and when you roll a success at one of these {@skill Acrobatics|PC1} checks, you get a critical success instead."
@@ -80,7 +80,7 @@
 			"page": 44,
 			"level": 1,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"You understand the intricacies of stonework. You become trained in {@skill Crafting|PC1}. If you're already trained in {@skill Crafting|PC1}, you instead gain the {@feat Specialty Crafting|PC1} skill feat for stonemasonry.",
@@ -95,7 +95,7 @@
 			"page": 44,
 			"level": 1,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"You've learned techniques first devised by your ancestors during their ancient wars, allowing you to comfortably wear massive suits of armor. Ignore the reduction to your Speed from any armor you wear.",
@@ -113,7 +113,7 @@
 			},
 			"level": 5,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"prerequisites": "{@feat Rock Runner|PC1}",
 			"entries": [
@@ -128,7 +128,7 @@
 			"page": 44,
 			"level": 5,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"prerequisites": "darkvision",
 			"entries": [
@@ -142,7 +142,7 @@
 			"page": 44,
 			"level": 5,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"prerequisites": "expert in {@skill Crafting|PC1}",
 			"entries": [
@@ -161,7 +161,7 @@
 			"level": 9,
 			"traits": [
 				"concentrate",
-				"dwarf"
+				"anão"
 			],
 			"requirements": "You are standing on a stone or earthen surface.",
 			"entries": [
@@ -175,7 +175,7 @@
 			"page": 45,
 			"level": 9,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"Your hardiness lets you withstand more punishment than most. Increase your maximum Hit Points by your level. When you have the {@condition dying|PC1} condition, the DC of your recovery checks is equal to 9 + your {@condition dying|PC1} value (instead of 10 + your {@condition dying|PC1} value). If you also have the {@feat Toughness|PC1} feat, the Hit Points gained from it and this feat are cumulative, and the DC of your recovery checks is equal to 6 + your {@condition dying|PC1} value."
@@ -192,7 +192,7 @@
 			},
 			"level": 9,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"trigger": "You are struck by a critical hit that deals physical damage.",
 			"entries": [
@@ -206,7 +206,7 @@
 			"page": 45,
 			"level": 9,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"You have a deep reverence for and connection to stone. You can cast {@spell one with stone|PC1} as a 3rd-rank divine innate spell once per day.",
@@ -227,7 +227,7 @@
 			},
 			"level": 13,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"You march through the earth and lead an ally along. You gain a burrow Speed of 15 feet when you use this activity (if you don't have a higher one), and then you either {@action Stride|PC1} twice or {@action Burrow|PC1} twice. You can choose one willing ally adjacent to you at the start of your movement to move with you. That ally ends its movement one square behind you."
@@ -240,7 +240,7 @@
 			"page": 45,
 			"level": 13,
 			"traits": [
-				"dwarf"
+				"anão"
 			],
 			"entries": [
 				"You channel strength from the earth beneath your feet to pummel your enemies. When making a melee {@action Strike|PC1} against a target who is standing on the same earth or stone surface as you are, you gain a circumstance bonus to the damage roll equal to the number of weapon damage dice."
@@ -254,7 +254,7 @@
 			"level": 17,
 			"traits": [
 				"uncommon",
-				"dwarf"
+				"anão"
 			],
 			"prerequisites": "{@feat Stonewalker|PC1}",
 			"entries": [
@@ -272,7 +272,7 @@
 			},
 			"level": 17,
 			"traits": [
-				"dwarf",
+				"anão",
 				"earth",
 				"polymorph"
 			],
@@ -293,7 +293,7 @@
 			"page": 48,
 			"level": 1,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"prerequisites": "at least 100 years old",
 			"entries": [
@@ -311,7 +311,7 @@
 			"page": 48,
 			"level": 1,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"You've studied traditional elven arts, learning about arcane magic and the world around you. You gain the trained proficiency rank in {@skill Arcana|PC1} and {@skill Nature|PC1}. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.",
@@ -325,10 +325,10 @@
 			"page": 48,
 			"level": 1,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
-				"You favor bows and other elegant weapons. You gain access to all {@filter uncommon weapons|items||Category=Weapon|rarity=uncommon|ancestry & heritage=elf} with the {@trait elf} trait. You have familiarity with weapons with the {@trait elf} trait plus {@item longbow|PC1|longbows}, {@item composite longbow|PC1|composite longbows}, {@item rapier|PC1|rapiers}, {@item shortbow|PC1|shortbows}, and {@item composite shortbow|PC1|composite shortbows}\u2014for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.",
+				"You favor bows and other elegant weapons. You gain access to all {@filter uncommon weapons|items||Category=Weapon|rarity=uncommon|ancestry & heritage=elfo} with the {@trait elfo} trait. You have familiarity with weapons with the {@trait elfo} trait plus {@item longbow|PC1|longbows}, {@item composite longbow|PC1|composite longbows}, {@item rapier|PC1|rapiers}, {@item shortbow|PC1|shortbows}, and {@item composite shortbow|PC1|composite shortbows}\u2014for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.",
 				"At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect."
 			]
 		},
@@ -339,7 +339,7 @@
 			"page": 48,
 			"level": 1,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"Watching your friends age and die fills you with moroseness that protects you against harmful emotions. You gain a +1 circumstance bonus to saving throws against {@trait emotion} effects. If you roll a success on a saving throw against an {@trait emotion} effect, you get a critical success instead."
@@ -352,7 +352,7 @@
 			"page": 48,
 			"level": 1,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"Your muscles are tightly honed. Your Speed increases by 5 feet."
@@ -365,7 +365,7 @@
 			"page": 48,
 			"level": 1,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"Your elven magic manifests as a simple arcane spell, even if you aren't formally trained in magic. Choose one cantrip from the arcane spell list. You can cast this cantrip as an arcane innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up."
@@ -378,7 +378,7 @@
 			"page": 48,
 			"level": 1,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"Your mystic control and meditations allow you to resist external influences upon your consciousness. Whenever you are affected by a {@trait mental} effect that lasts at least 2 rounds, you can reduce the duration by 1 round.",
@@ -392,7 +392,7 @@
 			"page": 48,
 			"level": 5,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"You work at a pace born from longevity that enhances your thoroughness. You can voluntarily spend twice as much time as normal on a {@skill Perception|PC1} check or skill check. If you do, you gain a +2 circumstance bonus to the check and don't automatically reduce your degree of success on a natural 1 (you get a critical failure only if your result is 10 lower than the DC). For example, you could get these benefits if you spent 2 actions to {@action Seek|PC1}, which normally takes 1 action. You can get these benefits during exploration by taking twice as long exploring as normal, or in downtime by spending twice as much downtime.",
@@ -406,7 +406,7 @@
 			"page": 48,
 			"level": 5,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"Long-lived elves have seen civilizations rise and fall, often at the hands of outside forces. As a result, they have developed a wariness of others who might seek to influence or control them. You've been trained to resist such manipulation, gaining a +2 circumstance bonus to saving throws against effects that would make you {@condition controlled|PC1}, such as dominate, and to {@skill Perception|PC1} checks to {@action Sense Motive|PC1} when trying to determine if a creature is under the influence of such an effect. When you roll a success on a saving throw against such an effect, you get a critical success instead."
@@ -419,7 +419,7 @@
 			"page": 48,
 			"level": 5,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"You've crossed blades with a wide variety of foes wielding a wide variety of weapons, and you've learned the basics of fighting with nearly any of them. When wielding a weapon you aren't proficient with, treat your level as your proficiency bonus.",
@@ -437,7 +437,7 @@
 			},
 			"level": 9,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"You move in a graceful dance, and even your steps are broad. You {@action Step|PC1} 5 feet twice."
@@ -450,7 +450,7 @@
 			"page": 49,
 			"level": 9,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"prerequisites": "{@feat Ancestral Longevity|PC1}",
 			"entries": [
@@ -465,11 +465,11 @@
 			"page": 49,
 			"level": 9,
 			"traits": [
-				"elf"
+				"elfo"
 			],
-			"prerequisites": "at least one innate spell gained from an elf ancestry feat",
+			"prerequisites": "at least one innate spell gained from an elfo ancestry feat",
 			"entries": [
-				"The arcane magic you possess grows in power and complexity. Choose one common 2nd-rank spell from the same tradition as an innate spell you previously gained from another elf ancestry feat (from the arcane list if you have Otherworldly Magic, for example). You can cast that spell as an innate spell once per day, using the same tradition as the list you chose the spell from.",
+				"The arcane magic you possess grows in power and complexity. Choose one common 2nd-rank spell from the same tradition as an innate spell you previously gained from another elfo ancestry feat (from the arcane list if you have Otherworldly Magic, for example). You can cast that spell as an innate spell once per day, using the same tradition as the list you chose the spell from.",
 				"Your magic is adaptable. By spending 1 day of downtime, you can change the spell you chose to a different common 2nd-rank spell from the same tradition."
 			]
 		},
@@ -480,7 +480,7 @@
 			"page": 49,
 			"level": 9,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"You've spent much of your life among the treetops and have become an expert at quickly and safely climbing them. You gain a climb Speed of 10 feet."
@@ -497,7 +497,7 @@
 			},
 			"level": 13,
 			"traits": [
-				"elf",
+				"elfo",
 				"fortune"
 			],
 			"frequency": {
@@ -522,7 +522,7 @@
 			},
 			"level": 13,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"prerequisites": "{@feat Ancestral Longevity|PC1}",
 			"frequency": {
@@ -540,7 +540,7 @@
 			"page": 49,
 			"level": 17,
 			"traits": [
-				"elf"
+				"elfo"
 			],
 			"entries": [
 				"Your people used powerful magic to travel between distant worlds in the distant past, and the remnants of that magic make such transportation easier for you. When you are the target of a teleportation spell that transports more than one person, it can affect an additional person beyond the normal limit, chosen by the caster. Additionally, when you're the target of a {@spell teleport|PC1} spell, you and the other targets arrive no farther than 1 mile off target, regardless of distance traveled."
@@ -1443,7 +1443,7 @@
 			"traits": [
 				"leshy"
 			],
-			"trigger": "You attempt a saving throw against a spell or {@trait magical} effect, but haven't rolled yet.",
+			"trigger": "You attempt a saving throw against a spell or {@trait mágico} effect, but haven't rolled yet.",
 			"entries": [
 				"You notice spirits that inhabit objects, learning which bring good fortune and which are unlucky. You focus on the power of a lucky object, granting you a +1 circumstance bonus to your saving throw against the triggering effect."
 			],
@@ -1592,7 +1592,7 @@
 			],
 			"prerequisites": "{@feat Leshy Superstition|PC1}",
 			"entries": [
-				"You have a keepsake that grants you luck. You gain a +1 circumstance bonus to saves against spells and {@trait magical} effects at all times, not just when you use {@feat Leshy Superstition|PC1}. If you lose the keepsake, you lose the bonus until you designate a new keepsake, typically over the course of a week."
+				"You have a keepsake that grants you luck. You gain a +1 circumstance bonus to saves against spells and {@trait mágico} effects at all times, not just when you use {@feat Leshy Superstition|PC1}. If you lose the keepsake, you lose the bonus until you designate a new keepsake, typically over the course of a week."
 			]
 		},
 		{
@@ -1768,9 +1768,9 @@
 				"concentrate",
 				"orc"
 			],
-			"trigger": "You attempt a saving throw against a spell or {@trait magical} effect, and have not yet rolled.",
+			"trigger": "You attempt a saving throw against a spell or {@trait mágico} effect, and have not yet rolled.",
 			"entries": [
-				"You defend yourself against magic by relying on techniques derived from orc cultural superstitions. You gain a +1 circumstance bonus to your saving throw against the triggering spell or {@trait magical} effect."
+				"You defend yourself against magic by relying on techniques derived from orc cultural superstitions. You gain a +1 circumstance bonus to your saving throw against the triggering spell or {@trait mágico} effect."
 			],
 			"leadsTo": [
 				"Pervasive Superstition|PC1",
@@ -1924,7 +1924,7 @@
 			],
 			"prerequisites": "{@feat Orc Superstition|PC1}",
 			"entries": [
-				"You steep yourself in superstition and practice ancient orc mental exercises for shrugging off the effects of magic. You gain a +1 circumstance bonus to saving throws against spells and {@trait magical} effects at all times."
+				"You steep yourself in superstition and practice ancient orc mental exercises for shrugging off the effects of magic. You gain a +1 circumstance bonus to saving throws against spells and {@trait mágico} effects at all times."
 			]
 		},
 		{
@@ -1980,7 +1980,7 @@
 			],
 			"prerequisites": "{@feat Orc Superstition|PC1}",
 			"entries": [
-				"You don't just resist magic; you devour it. Whenever you succeed at a saving throw against a spell or {@trait magical} effect, you gain temporary Hit Points equal to double the spell's rank, or equal to the level if the {@trait magical} effect isn't a spell. These temporary Hit Points last until the end of your next turn."
+				"You don't just resist magic; you devour it. Whenever you succeed at a saving throw against a spell or {@trait mágico} effect, you gain temporary Hit Points equal to double the spell's rank, or equal to the level if the {@trait mágico} effect isn't a spell. These temporary Hit Points last until the end of your next turn."
 			]
 		},
 		{
@@ -2156,7 +2156,7 @@
 			],
 			"prerequisites": "expert in {@skill Occultism|PC1}",
 			"entries": [
-				"Your study of occult practices has shown you how to best defend against them. You gain a +1 circumstance bonus to all saving throws against {@trait occult} effects."
+				"Your study of occult practices has shown you how to best defend against them. You gain a +1 circumstance bonus to all saving throws against {@trait ocultista} effects."
 			]
 		},
 		{
@@ -2309,7 +2309,7 @@
 				"nephilim"
 			],
 			"entries": [
-				"You have a halo of light and goodness that sheds light with the effects of a {@trait divine} {@spell light|PC1} cantrip. A cantrip is heightened to a spell rank equal to half your level rounded up. You can {@action Sustain|PC1} to suppress or reestablish the halo."
+				"You have a halo of light and goodness that sheds light with the effects of a {@trait divino} {@spell light|PC1} cantrip. A cantrip is heightened to a spell rank equal to half your level rounded up. You can {@action Sustain|PC1} to suppress or reestablish the halo."
 			]
 		},
 		{
@@ -2447,7 +2447,7 @@
 				"nephilim"
 			],
 			"entries": [
-				"You've studied your extraplanar heritage with the intent of better defending yourself, whether against creatures aligned with or opposed to your extraplanar lineage, and you've found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against {@trait divine} effects."
+				"You've studied your extraplanar heritage with the intent of better defending yourself, whether against creatures aligned with or opposed to your extraplanar lineage, and you've found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against {@trait divino} effects."
 			]
 		},
 		{
@@ -2487,7 +2487,7 @@
 			],
 			"prerequisites": "{@feat Grimspawn|PC1}, {@feat Pitborn|PC1}, or {@feat Hellspawn|PC1}",
 			"entries": [
-				"You possess fiendish magic. Choose two of the following spells: {@spell disguise magic|PC1}, {@spell false vitality|PC1}, {@spell invisibility|PC1}, {@spell see the unseen|PC1}, {@spell shatter|PC1}, or {@spell paranoia|PC1}. You can use each of the chosen spells once per day as 2nd-rank {@trait divine} innate spells.",
+				"You possess fiendish magic. Choose two of the following spells: {@spell disguise magic|PC1}, {@spell false vitality|PC1}, {@spell invisibility|PC1}, {@spell see the unseen|PC1}, {@spell shatter|PC1}, or {@spell paranoia|PC1}. You can use each of the chosen spells once per day as 2nd-rank {@trait divino} innate spells.",
 				"{@feat Grimspawn|PC1} typically take {@spell false vitality|PC1} and {@spell see the unseen|PC1}, {@feat pitborn|PC1} typically take {@spell paranoia|PC1} and {@spell shatter|PC1}, and {@feat hellspawn|PC1} typically take {@spell invisibility|PC1} and {@spell disguise magic|PC1}."
 			]
 		},
@@ -2571,7 +2571,7 @@
 			],
 			"entries": [
 				"Elves often struggle with underestimating aiuvarins, and you are experienced at telling stories of your accomplishments to gain their respect. You are trained in {@skill Performance|PC1}. If you would automatically become trained in {@skill Performance|PC1} (from your background or class, for example), you instead become trained in a skill of your choice.",
-				"You gain the {@feat Impressive Performance|PC1} feat. When you attempt a {@skill Performance|PC1} check to {@action Make an Impression|PC1} on an elf, if you roll a critical failure, you get a failure instead."
+				"You gain the {@feat Impressive Performance|PC1} feat. When you attempt a {@skill Performance|PC1} check to {@action Make an Impression|PC1} on an elfo, if you roll a critical failure, you get a failure instead."
 			]
 		},
 		{
@@ -2584,7 +2584,7 @@
 				"aiuvarin"
 			],
 			"entries": [
-				"Your elven blood runs particularly strong, granting you features far more elven than those of a typical aiuvarin. You may also have been raised among elves, steeped in your elven ancestors' heritage. You gain the benefits of the elf heritage of your elven parent or ancestors. You typically can't select a heritage that depends on or improves an elven feature you don't have. For example, you couldn't take the {@ancestry elf|PC1|Ancient Elf|ancient|PC1} heritage unless your non-elf ancestry also has a lifespan measured in multiple centuries. In these cases, at the GM's discretion, you might gain a different benefit."
+				"Your elven blood runs particularly strong, granting you features far more elven than those of a typical aiuvarin. You may also have been raised among elves, steeped in your elven ancestors' heritage. You gain the benefits of the elfo heritage of your elven parent or ancestors. You typically can't select a heritage that depends on or improves an elven feature you don't have. For example, you couldn't take the {@ancestry elfo|PC1|Ancient Elf|ancient|PC1} heritage unless your non-elfo ancestry also has a lifespan measured in multiple centuries. In these cases, at the GM's discretion, you might gain a different benefit."
 			],
 			"special": [
 				"You can take this feat only at 1st level, and you can't retrain out of this feat or into this feat."
@@ -4132,7 +4132,7 @@
 			],
 			"requirements": "You are wielding a religious symbol.",
 			"entries": [
-				"You present your religious symbol emphatically. You gain a +2 circumstance bonus to saving throws until the start of your next turn. While it's raised, if you roll a success at a saving throw against a {@trait vitality} or {@trait void} effect, you get a critical success instead.",
+				"You present your religious symbol emphatically. You gain a +2 circumstance bonus to saving throws until the start of your next turn. While it's raised, if you roll a success at a saving throw against a {@trait vitality} or {@trait eversão} effect, you get a critical success instead.",
 				"If the religious symbol you're raising is a shield, such as with {@feat Emblazon Armaments|PC1}, you gain the effects of {@action Raise a Shield|PC1} when you use this action and the effects of this action when you {@action Raise a Shield|PC1}."
 			],
 			"leadsTo": [
@@ -4178,7 +4178,7 @@
 			},
 			"entries": [
 				"You pray continuously for 1 minute to call a subtle shadow of your deity's realm over a 30-foot burst centered on you. It lasts for 10 minutes, and a creature that remains in the area for the entire 10 minutes regains Hit Points equal to your level.",
-				"If you have a healing font, this activity has the {@trait healing} and {@trait vitality} traits and heals living creatures. If you have a harmful font, this activity has the {@trait healing} and {@trait void} traits and heals {@trait undead} creatures (or other creatures with void healing). Clerics with {@feat Versatile Font|PC1} can choose either or both. It can't damage creatures in any case."
+				"If you have a healing font, this activity has the {@trait healing} and {@trait vitality} traits and heals living creatures. If you have a harmful font, this activity has the {@trait healing} and {@trait eversão} traits and heals {@trait undead} creatures (or other creatures with void healing). Clerics with {@feat Versatile Font|PC1} can choose either or both. It can't damage creatures in any case."
 			]
 		},
 		{
@@ -4833,7 +4833,7 @@
 				"unit": "hour"
 			},
 			"entries": [
-				"If your next action is to use your divine font to cast a 3-action {@spell heal|PC1} or {@spell harm|PC1} spell, you can harness the residual energy to counterbalance opposing forces. In addition to its normal effects, you use your {@spell heal|PC1} or {@spell harm|PC1} spell to attempt to counteract one {@trait divine|PC1} effect in the spell's area."
+				"If your next action is to use your divine font to cast a 3-action {@spell heal|PC1} or {@spell harm|PC1} spell, you can harness the residual energy to counterbalance opposing forces. In addition to its normal effects, you use your {@spell heal|PC1} or {@spell harm|PC1} spell to attempt to counteract one {@trait divino|PC1} effect in the spell's area."
 			]
 		},
 		{
@@ -4946,7 +4946,7 @@
 				"cleric"
 			],
 			"entries": [
-				"Your extensive service affords you certain divine privileges. First, any creature you encounter knows instinctively that you speak for your deity. Second, if you conduct the {@ritual commune|PC1} ritual to contact your deity, you don't have to pay any cost, and you automatically get a critical success. Third, once per day, you can cast {@spell interplanar teleport|PC1} as a divine innate spell, but only to travel to the realm of your deity. When you cast it this way, its casting time is 1 minute, your religious symbol is a sufficient planar key for this spell, and you appear exactly where you want to be. If you're in your deity's realm due to this spell, you can return to the point you left when you cast it by spending a single action, which has the {@trait concentrate} and {@trait divine} traits."
+				"Your extensive service affords you certain divine privileges. First, any creature you encounter knows instinctively that you speak for your deity. Second, if you conduct the {@ritual commune|PC1} ritual to contact your deity, you don't have to pay any cost, and you automatically get a critical success. Third, once per day, you can cast {@spell interplanar teleport|PC1} as a divine innate spell, but only to travel to the realm of your deity. When you cast it this way, its casting time is 1 minute, your religious symbol is a sufficient planar key for this spell, and you appear exactly where you want to be. If you're in your deity's realm due to this spell, you can return to the point you left when you cast it by spending a single action, which has the {@trait concentrate} and {@trait divino} traits."
 			]
 		},
 		{
@@ -5736,7 +5736,7 @@
 			],
 			"prerequisites": "{@feat Verdant Weapon|PC1}",
 			"entries": [
-				"Your verdant weapon can cut through the resistances of {@trait magical} creatures. The weapon is treated as cold iron and silver. If you critically hit a creature that has a weakness to cold iron or silver, the target takes {@damage 1d6} {@condition persistent damage|PC1|persistent bleed damage} as the primal energies within your weapon slow its natural healing."
+				"Your verdant weapon can cut through the resistances of {@trait mágico} creatures. The weapon is treated as cold iron and silver. If you critically hit a creature that has a weakness to cold iron or silver, the target takes {@damage 1d6} {@condition persistent damage|PC1|persistent bleed damage} as the primal energies within your weapon slow its natural healing."
 			]
 		},
 		{
@@ -5992,7 +5992,7 @@
 			],
 			"prerequisites": "{@feat Untamed Form|PC1}",
 			"entries": [
-				"You can transform into a powerful {@trait magical} creature. Add the cave worm and sea serpent shapes listed in {@spell monstrosity form|PC1} to your {@spell untamed form|PC1} list. If you have {@feat Soaring Shape|PC1}, also add the phoenix shape to your {@spell untamed form|PC1} list."
+				"You can transform into a powerful {@trait mágico} creature. Add the cave worm and sea serpent shapes listed in {@spell monstrosity form|PC1} to your {@spell untamed form|PC1} list. If you have {@feat Soaring Shape|PC1}, also add the phoenix shape to your {@spell untamed form|PC1} list."
 			]
 		},
 		{
@@ -7561,7 +7561,7 @@
 				"unit": "day"
 			},
 			"entries": [
-				"Your training allows you to shrug off your foes' spells and conditions when the need is dire. Choose a single nonpermanent condition, spell, or {@trait magical} effect that is affecting you. If you chose a condition, its effect on you ends. If you chose a spell or other {@trait magical} effect, attempt to counteract the spell (your counteract rank is equal to half your level, rounded up, and you attempt a Will save as your counteract check).",
+				"Your training allows you to shrug off your foes' spells and conditions when the need is dire. Choose a single nonpermanent condition, spell, or {@trait mágico} effect that is affecting you. If you chose a condition, its effect on you ends. If you chose a spell or other {@trait mágico} effect, attempt to counteract the spell (your counteract rank is equal to half your level, rounded up, and you attempt a Will save as your counteract check).",
 				"This doesn't remove any Hit Point damage you already took from the spell or condition, and it removes the effect from only you, not from other creatures or the environment around you. It can't remove an ongoing affliction or prevent such an affliction from inflicting conditions on you later. It can't remove conditions occurring automatically due to your situation or positioning (such as {@condition prone|PC1} or flanked)."
 			]
 		},
@@ -10978,7 +10978,7 @@
 				"witch"
 			],
 			"entries": [
-				"A broom is the only steed you need to fly through the night sky. During your daily preparations, you can anoint a single broom, staff, polearm, or similarly shaped object with a flying ointment made of special herbs and oils. Until the next time you make your daily preparations, it gains the {@trait magical} trait, and you can ride on it while you're holding it with at least 1 hand. It moves at a fly Speed of 20 feet. The broom takes a \u201310-foot penalty to its Speed if laden with more than 20 Bulk, and crashes to the ground if it carries more than 30 Bulk. The broom can't be controlled by anyone but you. If you anoint a weapon or other held item, you can't ride the broom and wield it at the same time.",
+				"A broom is the only steed you need to fly through the night sky. During your daily preparations, you can anoint a single broom, staff, polearm, or similarly shaped object with a flying ointment made of special herbs and oils. Until the next time you make your daily preparations, it gains the {@trait mágico} trait, and you can ride on it while you're holding it with at least 1 hand. It moves at a fly Speed of 20 feet. The broom takes a \u201310-foot penalty to its Speed if laden with more than 20 Bulk, and crashes to the ground if it carries more than 30 Bulk. The broom can't be controlled by anyone but you. If you anoint a weapon or other held item, you can't ride the broom and wield it at the same time.",
 				"You can {@action Craft|PC1} your broomstick into a {@item flying broomstick|GMC} as though you had the formula for that item. If you anoint an item that's already a {@item flying broomstick|GMC}, the broom gains a +10-foot status bonus to its Speed and you can choose whether it works for anyone or only you."
 			]
 		},
@@ -11082,7 +11082,7 @@
 				"You draw upon the reservoir of your patron's magic that resides within your familiar. During your turn, you can cast one spell your familiar knows that was granted by your patron or lessons without spending a spell slot to do so (or even having it prepared). The spell must be at least 1 rank lower than your highest-rank witch spell slot."
 			],
 			"special": [
-				"This feat has the trait corresponding to the tradition of spells you cast ({@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal})."
+				"This feat has the trait corresponding to the tradition of spells you cast ({@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal})."
 			]
 		},
 		{
@@ -11364,7 +11364,7 @@
 				"wizard"
 			],
 			"entries": [
-				"You can alter offensive spells to be less deadly. If your next action is to Cast a Spell that deals damage and doesn't have the {@trait death} or {@trait void} trait, that spell gains the {@trait nonlethal} trait."
+				"You can alter offensive spells to be less deadly. If your next action is to Cast a Spell that deals damage and doesn't have the {@trait death} or {@trait eversão} trait, that spell gains the {@trait nonlethal} trait."
 			]
 		},
 		{
@@ -11386,7 +11386,7 @@
 			},
 			"requirements": "Your most recent action was to cast a non-cantrip spell.",
 			"entries": [
-				"You siphon spell energy into one weapon you're wielding, or into one of your unarmed attacks, such as a fist. Until the end of your turn, the weapon or unarmed attack deals an extra {@damage 1d6} force damage and gains the {@trait arcane} trait if it didn't have it already. If the spell dealt a different type of damage, the {@action Strike|PC1} deals this type of damage instead (or one type of your choice if the spell could deal multiple types of damage)."
+				"You siphon spell energy into one weapon you're wielding, or into one of your unarmed attacks, such as a fist. Until the end of your turn, the weapon or unarmed attack deals an extra {@damage 1d6} force damage and gains the {@trait arcano} trait if it didn't have it already. If the spell dealt a different type of damage, the {@action Strike|PC1} deals this type of damage instead (or one type of your choice if the spell could deal multiple types of damage)."
 			]
 		},
 		{
@@ -11685,7 +11685,7 @@
 				"wizard"
 			],
 			"entries": [
-				"You sense magical dangers. When using the {@action Detect Magic|PC1} exploration activity, you can roll initiative twice and use the better result so long as at least one opponent has a {@trait magical} effect or magic item and is in range of your {@spell detect magic|PC1}."
+				"You sense magical dangers. When using the {@action Detect Magic|PC1} exploration activity, you can roll initiative twice and use the better result so long as at least one opponent has a {@trait mágico} effect or magic item and is in range of your {@spell detect magic|PC1}."
 			]
 		},
 		{
@@ -13535,7 +13535,7 @@
 			],
 			"prerequisites": "expert in {@skill Crafting|PC1}",
 			"entries": [
-				"You can have other PCs help you {@action Craft|PC1} an item, under your direction. A helper PC rolls a check with a skill in which they're trained. The skill must be {@skill Crafting|PC1} or another skill relevant to the item, as determined by the GM. For example, a PC might use {@skill Religion|PC1} to help you {@action Craft|PC1} an item with the {@trait divine} trait or {@skill Lore|PC1|Warfare Lore} to help you {@action Craft|PC1} a weapon. Your roll still determines whether you successfully create the item. Any helper's roll contributes toward reducing the cost of raw materials using the numbers from the {@action Earn Income|PC1} table; this uses the ally PC's proficiency rank in the skill and their level \u2013 1 for their level.",
+				"You can have other PCs help you {@action Craft|PC1} an item, under your direction. A helper PC rolls a check with a skill in which they're trained. The skill must be {@skill Crafting|PC1} or another skill relevant to the item, as determined by the GM. For example, a PC might use {@skill Religion|PC1} to help you {@action Craft|PC1} an item with the {@trait divino} trait or {@skill Lore|PC1|Warfare Lore} to help you {@action Craft|PC1} a weapon. Your roll still determines whether you successfully create the item. Any helper's roll contributes toward reducing the cost of raw materials using the numbers from the {@action Earn Income|PC1} table; this uses the ally PC's proficiency rank in the skill and their level \u2013 1 for their level.",
 				"Helping PCs must accompany you throughout the {@action Craft|PC1} activity (preventing them from pursuing other downtime activities) or the benefit is lost. The GM might determine that only a certain number of PCs can help depending on the circumstances.",
 				"Communal {@skill Crafting|PC1} also allows you to take the role of a helper when someone else is crafting, provided they accept your help"
 			]
@@ -14329,7 +14329,7 @@
 			],
 			"prerequisites": "trained in {@skill Occultism|PC1}",
 			"entries": [
-				"When you become aware of a {@trait magical} effect or see a spell being cast, you can immediately determine if it twists minds (with the {@trait mental} trait), fights against fortune (with the {@trait fortune} or {@trait misfortune} trait), or reveals secrets (with the detection, prediction, {@trait revelation}, or {@trait scrying} traits). At the GM's discretion, similar effects can also fall into these categories. When you {@action Identify Magic|PC1} or {@action Recall Knowledge|PC1} to learn more about these effects, you can always use {@skill Occultism|PC1} without penalty and gain a +2 circumstance bonus."
+				"When you become aware of a {@trait mágico} effect or see a spell being cast, you can immediately determine if it twists minds (with the {@trait mental} trait), fights against fortune (with the {@trait fortune} or {@trait misfortune} trait), or reveals secrets (with the detection, prediction, {@trait revelation}, or {@trait scrying} traits). At the GM's discretion, similar effects can also fall into these categories. When you {@action Identify Magic|PC1} or {@action Recall Knowledge|PC1} to learn more about these effects, you can always use {@skill Occultism|PC1} without penalty and gain a +2 circumstance bonus."
 			]
 		},
 		{
@@ -14858,7 +14858,7 @@
 			],
 			"prerequisites": "master in {@skill Deception|PC1}",
 			"entries": [
-				"You elude and evade attempts to uncover your true nature or intentions. When a spell or {@trait magical} effect tries to read your mind, detect whether you are lying, or reveal your identity, you can attempt a {@skill Deception|PC1} check against the spell or effect's DC. If you succeed, the effect reveals nothing."
+				"You elude and evade attempts to uncover your true nature or intentions. When a spell or {@trait mágico} effect tries to read your mind, detect whether you are lying, or reveal your identity, you can attempt a {@skill Deception|PC1} check against the spell or effect's DC. If you succeed, the effect reveals nothing."
 			]
 		},
 		{
@@ -15174,7 +15174,7 @@
 			"prerequisites": "trained in {@skill Arcana|PC1}, {@skill Nature|PC1}, {@skill Occultism|PC1}, or {@skill Religion|PC1}",
 			"entries": [
 				"You examine a magic item you normally couldn't use in an effort to fool it and activate it temporarily. For example, this might allow a fighter to cast a spell from a wand or allow a wizard to cast a spell that's not on the arcane list using a scroll. You must know what activating the item does, or you can't attempt to trick it.",
-				"Attempt a check using the skill matching the item's magic tradition, or matching a tradition that has the spell on its list, if you're trying to cast a spell from the item. The relevant skills are {@skill Arcana|PC1} for arcane, {@skill Nature|PC1} for primal, {@skill Occultism|PC1} for occult, {@skill Religion|PC1} for divine, or any of the four for an item that has the {@trait magical} trait and not a tradition trait. The GM determines the DC based on the item's level (possibly adjusted depending on the item or situation).",
+				"Attempt a check using the skill matching the item's magic tradition, or matching a tradition that has the spell on its list, if you're trying to cast a spell from the item. The relevant skills are {@skill Arcana|PC1} for arcane, {@skill Nature|PC1} for primal, {@skill Occultism|PC1} for occult, {@skill Religion|PC1} for divine, or any of the four for an item that has the {@trait mágico} trait and not a tradition trait. The GM determines the DC based on the item's level (possibly adjusted depending on the item or situation).",
 				"If you activate a magic item that requires a spell attack modifier or spell DC and you don't have the ability to cast spells of the relevant tradition, use your level as your proficiency bonus and the highest of your Intelligence, Wisdom, or Charisma modifiers. If you're a master in the appropriate skill for the item's tradition, you instead use the trained proficiency bonus; if you're legendary, you instead use the expert proficiency bonus.",
 				{
 					"type": "successDegree",

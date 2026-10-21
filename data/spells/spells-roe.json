@@ -2858,7 +2858,7 @@
 			"entries": [
 				"You briefly swap the outer surface of the metal in an object with a suitable amount of a common precious metal from the {@plane Plane of Metal|RoE}. You can instead choose an uncommon or rare metal if you have access to it or the GM has given you access to it.",
 				"The object functions as an item of that metal, provided the item would be 2nd level or lower. For example, you could make a dagger into a cold iron or silver dagger (2nd-level items) but couldn't make full plate into cold iron armor or silver armor (5th-level items). This imparts any special properties of the precious metal\u2014a weapon clad in cold iron activates weaknesses to cold iron, for example\u2014and suppresses any special properties of the original metal of which the item was made.",
-				"The spell neither changes the structural integrity of the item nor damages it. The object can pass a cursory inspection, but the {@trait magical} effect is obvious to anyone who studies the item closely, so it doesn't alter the Price of the item if you attempt to sell it."
+				"The spell neither changes the structural integrity of the item nor damages it. The object can pass a cursory inspection, but the {@trait mágico} effect is obvious to anyone who studies the item closely, so it doesn't alter the Price of the item if you attempt to sell it."
 			],
 			"heightened": {
 				"plusX": {
@@ -5304,13 +5304,13 @@
 			"heightened": {
 				"X": {
 					"3": [
-						"Your fists gain the {@trait magical} trait and become a striking weapon, increasing the damage your fists deal to {@damage 2d6} bludgeoning."
+						"Your fists gain the {@trait mágico} trait and become a striking weapon, increasing the damage your fists deal to {@damage 2d6} bludgeoning."
 					],
 					"7": [
-						"Your fists gain the {@trait magical} trait and become a greater striking weapon, increasing the damage your fists deal to {@damage 3d6} bludgeoning. The duration is 10 minutes."
+						"Your fists gain the {@trait mágico} trait and become a greater striking weapon, increasing the damage your fists deal to {@damage 3d6} bludgeoning. The duration is 10 minutes."
 					],
 					"9": [
-						"Your fists gain the {@trait magical} trait and become a major striking weapon, increasing the damage your fists deal to {@damage 4d6} bludgeoning. The duration is 1 hour."
+						"Your fists gain the {@trait mágico} trait and become a major striking weapon, increasing the damage your fists deal to {@damage 4d6} bludgeoning. The duration is 1 hour."
 					]
 				}
 			}

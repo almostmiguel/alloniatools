@@ -231,7 +231,7 @@
 						"unit": "day"
 					},
 					"entries": [
-						"The {@condition confused|PC1}, {@condition controlled|PC1}, {@condition grabbed|PC1}, {@condition immobilized|PC1}, {@condition paralyzed|PC1}, {@condition petrified|PC1}, and {@condition restrained|PC1} conditions, as well as any Speed penalties affecting you, immediately end unless the effect is {@trait magical} and of 12th level or higher. You can use this ability even if your actions are restricted or otherwise decided for you (such as being {@condition confused|PC1} or {@condition controlled|PC1})."
+						"The {@condition confused|PC1}, {@condition controlled|PC1}, {@condition grabbed|PC1}, {@condition immobilized|PC1}, {@condition paralyzed|PC1}, {@condition petrified|PC1}, and {@condition restrained|PC1} conditions, as well as any Speed penalties affecting you, immediately end unless the effect is {@trait mágico} and of 12th level or higher. You can use this ability even if your actions are restricted or otherwise decided for you (such as being {@condition confused|PC1} or {@condition controlled|PC1})."
 					]
 				}
 			],

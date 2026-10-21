@@ -187,7 +187,7 @@
 								]
 							},
 							"entries": [
-								"You arrange your bones into the form of a {@trait Small} or {@trait Medium} {@trait humanoid}'s skeleton. This doesn't change your normal Speeds, {@action strike||Strikes}, or senses. If you are wearing heavy clothing or {@action impersonate||impersonating} a skeleton, this counts as setting up a disguise for the Impersonate use of {@skill Deception}, and grants a +1 status bonus to those Deception checks."
+								"You arrange your bones into the form of a {@trait Small} or {@trait Medium} {@trait humanoide}'s skeleton. This doesn't change your normal Speeds, {@action strike||Strikes}, or senses. If you are wearing heavy clothing or {@action impersonate||impersonating} a skeleton, this counts as setting up a disguise for the Impersonate use of {@skill Deception}, and grants a +1 status bonus to those Deception checks."
 							]
 						}
 					]

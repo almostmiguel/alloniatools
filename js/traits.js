@@ -76,7 +76,14 @@ class TraitsPage extends ListPage {
 	}
 
 	async pOnLoad () {
-		this._traitIndex = TraitIndexer.decompressIndex(await DataUtil.loadJSON(`${Renderer.get().baseUrl}search/traits.json`));
+		// The references index is generated for production builds. It is not required to
+		// render the trait list, so allow source checkouts without a `search/` directory.
+		try {
+			const traitIndex = await DataUtil._pLoad(UrlUtil.link(`${Renderer.get().baseUrl}search/traits.json`));
+			this._traitIndex = TraitIndexer.decompressIndex(traitIndex);
+		} catch {
+			this._traitIndex = null;
+		}
 		await super.pOnLoad();
 	}
 

@@ -904,7 +904,7 @@
 							"polymorph"
 						],
 						"entries": [
-							"The aso berang takes the appearance of any {@trait Medium} or {@trait Small} {@trait humanoid} creature. In this form, the aso berang can't use their tusk {@action strike||Strikes}, and their claw Strike becomes a fist Strike that deals bludgeoning damage and loses the {@trait reach} trait."
+							"The aso berang takes the appearance of any {@trait Medium} or {@trait Small} {@trait humanoide} creature. In this form, the aso berang can't use their tusk {@action strike||Strikes}, and their claw Strike becomes a fist Strike that deals bludgeoning damage and loses the {@trait reach} trait."
 						]
 					},
 					{
@@ -1217,7 +1217,7 @@
 					{
 						"name": "Subsumed Traits",
 						"entries": [
-							"After it finishes digesting a full meal, the gau cho rong will gain a trait from that creature until the next time it's full. Gau cho rongs that gain the {@trait animal} trait have {@ability scent} out to 60 feet as an imprecise sense, while those with the {@trait amphibious} or {@trait aquatic} trait gain a swim speed of 25 feet. {@trait Humanoid} hollow bears gain the {@ability attack of opportunity||Reactive Strike} reaction. Traits like {@trait fire} add that damage type to a gau cho rong's resistances. Other traits have effects at the GM's discretion."
+							"After it finishes digesting a full meal, the gau cho rong will gain a trait from that creature until the next time it's full. Gau cho rongs that gain the {@trait animal} trait have {@ability scent} out to 60 feet as an imprecise sense, while those with the {@trait amphibious} or {@trait aquatic} trait gain a swim speed of 25 feet. {@trait humanoide} hollow bears gain the {@ability attack of opportunity||Reactive Strike} reaction. Traits like {@trait fire} add that damage type to a gau cho rong's resistances. Other traits have effects at the GM's discretion."
 						]
 					}
 				],
@@ -2256,7 +2256,7 @@
 							"unit": "reaction"
 						},
 						"trigger": "The jiidon takes damage from a {@action Strike}",
-						"requirements": "They're currently transformed into in a {@trait humanoid} form",
+						"requirements": "They're currently transformed into in a {@trait humanoide} form",
 						"entries": [
 							"The jiidon reverts to their rat form and {@action climb||Climbs} or {@action stride||Strides}. They can't resume humanoid form for 1 minute."
 						]
@@ -2275,7 +2275,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The jiidon takes on the form of any {@trait Medium} or {@trait Small} {@trait humanoid} creature whose fingernails or similar fragments they've consumed within the last week, gaining the effects of a 3rd-rank {@spell illusory disguise|PC1} spell to {@action impersonate} the creature for 8 hours; this is a {@trait polymorph} effect rather than an {@trait illusion} effect. Once a jiidon has transformed into a creature in this way, they must eat that creature's fingernails again to transform into it again. If a jiidon consumes the nails of a specific humanoid three nights in a row, they can take the form of that humanoid at will but can't use this ability to imitate any other humanoid thereafter."
+							"The jiidon takes on the form of any {@trait Medium} or {@trait Small} {@trait humanoide} creature whose fingernails or similar fragments they've consumed within the last week, gaining the effects of a 3rd-rank {@spell illusory disguise|PC1} spell to {@action impersonate} the creature for 8 hours; this is a {@trait polymorph} effect rather than an {@trait illusion} effect. Once a jiidon has transformed into a creature in this way, they must eat that creature's fingernails again to transform into it again. If a jiidon consumes the nails of a specific humanoid three nights in a row, they can take the form of that humanoid at will but can't use this ability to imitate any other humanoid thereafter."
 						]
 					},
 					{
@@ -2702,7 +2702,7 @@
 					{
 						"name": "Separated Body",
 						"entries": [
-							"A manananggal typically resembles a living {@trait humanoid}. They don't appear as an {@trait aberration} at first glance and receive a +4 status bonus to their {@skill Deception} DC when {@action impersonate||Impersonating} a humanoid. At any time, but especially at night, a manananggal can, as a 3-action activity with the {@trait manipulate} trait, rip their upper torso from their bottom half, leaving the lower torso limp and helpless but allowing the upper torso to fly free. A manananggal can separate their body at any time, but they risk further damage if they do so during the day.",
+							"A manananggal typically resembles a living {@trait humanoide}. They don't appear as an {@trait aberration} at first glance and receive a +4 status bonus to their {@skill Deception} DC when {@action impersonate||Impersonating} a humanoid. At any time, but especially at night, a manananggal can, as a 3-action activity with the {@trait manipulate} trait, rip their upper torso from their bottom half, leaving the lower torso limp and helpless but allowing the upper torso to fly free. A manananggal can separate their body at any time, but they risk further damage if they do so during the day.",
 							"The manananggal's upper and lower halves share the same pool of HP. If its lower half is damaged, the manananggal is immediately aware of the attack. Each minute a manananggal remains separated after sunrise and before sunset, it takes {@damage 2d6} points of damage until it reattaches its upper and lower torsos or is destroyed, whichever comes first."
 						]
 					}

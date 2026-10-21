@@ -661,7 +661,7 @@
 			"bulk": "L",
 			"category": "Consumable",
 			"entries": [
-				"This tiny magic item looks like a twig from the rare mti'le tree with its swirls of reddish-gold veins through dark brown wood. Each one is unique and fits easily in the palm of a Medium-sized creature's hand. When pressed to the temple or lips of a sentient creature, that creature can immediately attempt a check to {@action Recall Knowledge|PC1} about any subject using a corresponding skill (such as {@skill Society|PC1} to {@action Recall Knowledge|PC1} about a {@trait humanoid}); they gain a +1 status bonus on this check. This consumable is not immediately consumed on its first use, but can be used three times before it loses its power and becomes a mundane, if still beautiful, twig."
+				"This tiny magic item looks like a twig from the rare mti'le tree with its swirls of reddish-gold veins through dark brown wood. Each one is unique and fits easily in the palm of a Medium-sized creature's hand. When pressed to the temple or lips of a sentient creature, that creature can immediately attempt a check to {@action Recall Knowledge|PC1} about any subject using a corresponding skill (such as {@skill Society|PC1} to {@action Recall Knowledge|PC1} about a {@trait humanoide}); they gain a +1 status bonus on this check. This consumable is not immediately consumed on its first use, but can be used three times before it loses its power and becomes a mundane, if still beautiful, twig."
 			]
 		},
 		{
@@ -794,7 +794,7 @@
 			"usage": "worn",
 			"category": "Worn",
 			"entries": [
-				"Although not all attendants' masks are enchanted, many apply a first enchantment to celebrate their acceptance into a branch of the academy. While you wear the mask or have it as your bonded item, add the associated cantrip to your prepared cantrips. This has no effect if you do not prepare cantrips from the {@trait arcane} or {@trait primal} lists.",
+				"Although not all attendants' masks are enchanted, many apply a first enchantment to celebrate their acceptance into a branch of the academy. While you wear the mask or have it as your bonded item, add the associated cantrip to your prepared cantrips. This has no effect if you do not prepare cantrips from the {@trait arcano} or {@trait primal} lists.",
 				{
 					"type": "list",
 					"items": [
@@ -903,7 +903,7 @@
 			"category": "Consumable",
 			"entries": [
 				"Abhaya's tireless years of study have allowed her to reproduce, at some level, the unconscious melding of elements she experienced during the last Challenge of Sky and Heaven. A single drop of water in a crystalline container is the simplest application of her research.",
-				"When you activate this talisman, a watery echo of one of your limbs emerges from the container. Make a {@action Strike|PC1} with your fist or an unarmed attack from your ancestry. This attack gains the {@trait magical}, {@trait reach}, and {@trait water} traits, retains any benefits from appropriate weapon fundamental runes (but not of weapon property runes), and takes no penalties for being used underwater. You can perform this {@action Strike|PC1} even if you're in a stance or under a {@trait polymorph} effect that restricts your {@action Strike|PC1|Strikes}."
+				"When you activate this talisman, a watery echo of one of your limbs emerges from the container. Make a {@action Strike|PC1} with your fist or an unarmed attack from your ancestry. This attack gains the {@trait mágico}, {@trait reach}, and {@trait water} traits, retains any benefits from appropriate weapon fundamental runes (but not of weapon property runes), and takes no penalties for being used underwater. You can perform this {@action Strike|PC1} even if you're in a stance or under a {@trait polymorph} effect that restricts your {@action Strike|PC1|Strikes}."
 			]
 		},
 		{
@@ -1488,7 +1488,7 @@
 				]
 			},
 			"entries": [
-				"The vanishing shocker is a cube with extruding spikes at each corner. This inscrutable device channels {@trait occult} energy through the electricity it produces, creating the result of invisible lighting. When activated, the cube floats above your head, creating a field of invisible electricity in a 10-foot emanation that lasts for 1 round. You and creatures within the emanation are {@condition concealed|PC1}. Creatures that enter or start their turn within the area must attempt a DC 22 Reflex save.",
+				"The vanishing shocker is a cube with extruding spikes at each corner. This inscrutable device channels {@trait ocultista} energy through the electricity it produces, creating the result of invisible lighting. When activated, the cube floats above your head, creating a field of invisible electricity in a 10-foot emanation that lasts for 1 round. You and creatures within the emanation are {@condition concealed|PC1}. Creatures that enter or start their turn within the area must attempt a DC 22 Reflex save.",
 				{
 					"type": "successDegree",
 					"entries": {

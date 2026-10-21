@@ -4214,14 +4214,14 @@
 			},
 			"targets": "1 creature",
 			"entries": [
-				"You perform a ritual to free a creature imprisoned, {@condition petrified}, or otherwise put into stasis by any {@trait magical} effects from all such effects, even effects like imprisonment that don't have a duration, as long as freedom's spell level is equal to or higher than the effect's spell level. To perform the ritual, you must be within 10 feet of the target, or within 10 feet of the place where the target was imprisoned (in the case of effects that trap the creature in an unreachable prison, like the oubliette form of imprisonment). You must know the name of the creature and details of its background; if the creature is not a close associate, a failure or critical failure on a secondary {@skill Society} check reduces even a critical success on the primary check to a failure.",
+				"You perform a ritual to free a creature imprisoned, {@condition petrified}, or otherwise put into stasis by any {@trait mágico} effects from all such effects, even effects like imprisonment that don't have a duration, as long as freedom's spell level is equal to or higher than the effect's spell level. To perform the ritual, you must be within 10 feet of the target, or within 10 feet of the place where the target was imprisoned (in the case of effects that trap the creature in an unreachable prison, like the oubliette form of imprisonment). You must know the name of the creature and details of its background; if the creature is not a close associate, a failure or critical failure on a secondary {@skill Society} check reduces even a critical success on the primary check to a failure.",
 				{
 					"type": "successDegree",
 					"entries": {
-						"Critical Success": "You free the target from all {@trait magical} effects imprisoning it, petrifying it, or putting it into stasis. It gains a +1 status bonus to saving throws to resist those same {@trait magical} effects for 1 week.",
-						"Success": "You free the target from all {@trait magical} effects imprisoning it, petrifying it, or putting it into stasis.",
+						"Critical Success": "You free the target from all {@trait mágico} effects imprisoning it, petrifying it, or putting it into stasis. It gains a +1 status bonus to saving throws to resist those same {@trait mágico} effects for 1 week.",
+						"Success": "You free the target from all {@trait mágico} effects imprisoning it, petrifying it, or putting it into stasis.",
 						"Failure": "You fail to free the target.",
-						"Critical Failure": "The {@trait magical} effects imprisoning the target, petrifying the target, or putting it into stasis affect you and all secondary casters."
+						"Critical Failure": "The {@trait mágico} effects imprisoning the target, petrifying the target, or putting it into stasis affect you and all secondary casters."
 					}
 				}
 			]

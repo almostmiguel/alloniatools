@@ -2288,15 +2288,14 @@
 			}
 		},
 		{
-			"name": "Clan Dagger",
+			"name": "Adaga de Clã",
 			"source": "PC1",
-			"remaster": true,
 			"page": 277,
 			"equipment": true,
 			"type": "Item",
 			"traits": [
 				"agile",
-				"dwarf",
+				"anão",
 				"parry",
 				"versatile <b>",
 				"uncommon"
@@ -2310,7 +2309,7 @@
 			"category": "Weapon",
 			"subCategory": "Simple",
 			"entries": [
-				"This broad dagger is carried by {@ancestry dwarf|PC1|dwarves} as a weapon, tool, and designation of clan. Losing or having to surrender a clan dagger is considered a mark of embarrassment to most {@ancestry dwarf|PC1|dwarves}."
+				"This broad dagger is carried by {@ancestry anão|dwarves} as a weapon, tool, and designation of clan. Losing or having to surrender a clan dagger is considered a mark of embarrassment to most {@ancestry anão|dwarves}."
 			],
 			"weaponData": {
 				"damage": "1d4",
@@ -4959,36 +4958,6 @@
 				"damage": "1d8",
 				"damageType": "S",
 				"range": 20,
-				"group": "Knife"
-			}
-		},
-		{
-			"name": "Clan Dagger",
-			"source": "CRB",
-			"page": 280,
-			"equipment": true,
-			"type": "Item",
-			"traits": [
-				"agile",
-				"dwarf",
-				"parry",
-				"versatile <b>",
-				"uncommon"
-			],
-			"price": {
-				"amount": 2,
-				"coin": "gp"
-			},
-			"bulk": "L",
-			"hands": 1,
-			"category": "Weapon",
-			"subCategory": "Simple",
-			"entries": [
-				"This broad dagger is carried by {@ancestry dwarf||dwarves} as a weapon, tool, and designation of clan. Losing or having to surrender a clan dagger is considered a mark of embarrassment to most {@ancestry dwarf||dwarves}."
-			],
-			"weaponData": {
-				"damage": "1d4",
-				"damageType": "P",
 				"group": "Knife"
 			}
 		},

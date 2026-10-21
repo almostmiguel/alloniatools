@@ -7710,7 +7710,7 @@
 						"name": "portal toss"
 					}
 				],
-				"preface": "When casting the {@spell avatar} spell, a worshipper of Alseta gains the following additional abilities. The dimensional Speed allows the avatar of Alseta to cast {@spell dimension door} at will as a {@trait divine} innate spell, spending a single action to move up to 60 feet. The portal toss {@action Strike} causes the creature to fall through a series of portals before landing in the same spot and taking damage."
+				"preface": "When casting the {@spell avatar} spell, a worshipper of Alseta gains the following additional abilities. The dimensional Speed allows the avatar of Alseta to cast {@spell dimension door} at will as a {@trait divino} innate spell, spending a single action to move up to 60 feet. The portal toss {@action Strike} causes the creature to fall through a series of portals before landing in the same spot and taking damage."
 			},
 			"divineSkill": {
 				"skills": [
@@ -8774,7 +8774,7 @@
 					"Asmodeus tends to offer his gifts to entice those on the precipice of yielding to his vile temptations. His curses come most often in response to those who break contracts in his name, or commit other personal insults."
 				],
 				"Minor Boon": [
-					"Pleased by your talent for manipulation, Asmodeus amplifies your skills. Once, when you fail at the {@skill Diplomacy} check to make a significant or consequential {@action Request}, you can cast {@spell suggestion} on the target of your {@action Request}, suggesting the same course of action. This is a {@trait divine} innate spell."
+					"Pleased by your talent for manipulation, Asmodeus amplifies your skills. Once, when you fail at the {@skill Diplomacy} check to make a significant or consequential {@action Request}, you can cast {@spell suggestion} on the target of your {@action Request}, suggesting the same course of action. This is a {@trait divino} innate spell."
 				],
 				"Moderate Boon": [
 					"Your eyes glow red like embers and your skin takes on a crimson tone. You gain {@ability darkvision} and fire resistance 5."
@@ -12785,7 +12785,7 @@
 					"You share Erastil's sharp eye, allowing you to use a {@item longbow} in any situation. When you attack with a {@item longbow}, you can ignore the {@item longbow|CRB|longbow's} {@trait volley} trait, and {@item longbow|CRB|longbows} have double the normal range increment for you."
 				],
 				"Major Boon": [
-					"You become a friend to the land. You can cast {@spell speak with plants} as a {@trait divine} innate spell. When you are in a healthy natural environment, the land sustains you without need for food or drink. You can cast the {@ritual commune with nature} ritual without any secondary casters or secondary checks."
+					"You become a friend to the land. You can cast {@spell speak with plants} as a {@trait divino} innate spell. When you are in a healthy natural environment, the land sustains you without need for food or drink. You can cast the {@ritual commune with nature} ritual without any secondary casters or secondary checks."
 				],
 				"Minor Curse": [
 					"Erastil curses your table and punishes you for relying on others' hard work. Any food you didn't grow, gather, or otherwise harvest yourself tastes like ash and leaves you {@condition fatigued}."
@@ -15696,10 +15696,10 @@
 					"Irori grants you great insight and knowledge. Once, when you roll a failure at a check to {@action Recall Knowledge}, you get a critical success instead. Furthermore, the check loses the {@trait secret} trait, so you know for sure that the result was a critical success. Irori typically grants this boon for an extremely consequential check to {@action Recall Knowledge}."
 				],
 				"Moderate Boon": [
-					"Your body rebuilds after adversity, becoming stronger. You can cast {@spell wholeness of body} as an {@trait occult} ki spell. If you didn't have one already, you gain a focus pool with 1 Focus Point and are trained in {@trait occult} spell attack rolls and spell DCs."
+					"Your body rebuilds after adversity, becoming stronger. You can cast {@spell wholeness of body} as an {@trait ocultista} ki spell. If you didn't have one already, you gain a focus pool with 1 Focus Point and are trained in {@trait ocultista} spell attack rolls and spell DCs."
 				],
 				"Major Boon": [
-					"You can temporarily ascend to a greater form. You can cast 8th-level {@spell righteous might} once per day as an {@trait occult} innate spell. When you do, your form appears unremarkable, rather than clad in powerful armaments."
+					"You can temporarily ascend to a greater form. You can cast 8th-level {@spell righteous might} once per day as an {@trait ocultista} innate spell. When you do, your form appears unremarkable, rather than clad in powerful armaments."
 				],
 				"Minor Curse": [
 					"Irori challenges you to seek another path, rather than treat every problem as a nail just because you have a hammer. If you select a check for which you have a higher bonus when another method would have been more appropriate for the situation, such as using {@skill Deception} to lie through life because it's your highest modifier, even if it would be better to reach a compromise through {@skill Diplomacy}, you must roll twice and take the lower result."
@@ -16194,7 +16194,7 @@
 					"With Kazutal's blessing, food tastes richer. Any meal that you eat tastes delicious and has improved nutritional value. This doesn't protect you from anything dangerous in your food, but it also doesn't prevent you from tasting those dangerous elements of the food."
 				],
 				"Moderate Boon": [
-					"You always seem to find safe shelter when you most need it. Once per day, you can cast {@spell rope trick} as a {@trait divine} innate spell."
+					"You always seem to find safe shelter when you most need it. Once per day, you can cast {@spell rope trick} as a {@trait divino} innate spell."
 				],
 				"Major Boon": [
 					"Kazutal smiles upon those who seek to offer aid, no matter how meek or helpless they may be. Any time creatures attempt a check to {@action Aid} you, they can choose to automatically succeed. If a creature chooses to roll for the attempt and rolls a success, it gets a critical success instead, granting a +4 circumstance bonus even if it doesn't have legendary proficiency in that skill. You gain the same benefits when you attempt to {@action Aid} others."
@@ -17313,7 +17313,7 @@
 					"Lamashtu's touch mutates a part of your body. You gain either an unarmed Strike that deals {@damage 1d6} damage or one that deals {@damage 1d4} damage and has the {@trait finesse} and {@trait agile} traits. Whether the attack deals bludgeoning, slashing, or piercing damage depends on the mutation. If the unarmed Strike replaces a limb, you can still use the mutated limb for its original functions. Lamashtu chooses the form and function of your mutation."
 				],
 				"Moderate Boon": [
-					"You spread Lamashtu's nightmares everywhere you go. You can cast {@spell confusion} once per day as an {@trait divine} innate spell."
+					"You spread Lamashtu's nightmares everywhere you go. You can cast {@spell confusion} once per day as an {@trait divino} innate spell."
 				],
 				"Major Boon": [
 					"Lamashtu uses your body to birth a new monster, regardless of your gender. Once per day, you can spend 1 minute to birth a monster determined by the GM, which rips its way from your belly. The monster's level is up to your level and it does as it pleases, following Lamashtu's will, though it doesn't attack you unless you have lost her favor. You are {@condition drained 3} from the ordeal."
@@ -19676,7 +19676,7 @@
 					"The night sky inspires you in a specific way. Once, when you roll a failure on a {@skill Crafting} or {@skill Performance} check under the night sky, you critically succeed instead. Nocticula typically grants this boon for a consequential piece of artwork or performance."
 				],
 				"Moderate Boon": [
-					"You draw on the power of midnight to guide you on your journeys. You gain {@ability darkvision}. If you already had {@ability darkvision}, you can cast {@spell darkness} once per day as a {@trait divine} innate spell."
+					"You draw on the power of midnight to guide you on your journeys. You gain {@ability darkvision}. If you already had {@ability darkvision}, you can cast {@spell darkness} once per day as a {@trait divino} innate spell."
 				],
 				"Major Boon": [
 					"You become an idealized version of yourself, as if created by a divine artist. You permanently gain a set of 4 ability boosts that follow the same rules as the ability boosts you gain at every 5th level."
@@ -19852,7 +19852,7 @@
 					"Your poisons are everlasting. If your {@action Strike} with a poisoned weapon critically fails, or succeeds but fails to deal slashing or piercing damage, the poison is not spent. The poison is still spent once successfully applied to a creature."
 				],
 				"Major Boon": [
-					"You become a living secret. You are immune to {@trait divination} effects and attempts to magically alter your memory, unless you choose to be affected or those effects come from a deity, artifact, or similarly powerful source. You also can never be tricked or forced by mundane means into uttering a secret you wish to keep."
+					"You become a living secret. You are immune to {@trait divinotion} effects and attempts to magically alter your memory, unless you choose to be affected or those effects come from a deity, artifact, or similarly powerful source. You also can never be tricked or forced by mundane means into uttering a secret you wish to keep."
 				],
 				"Minor Curse": [
 					"Norgorber allows thieves to get the better of you. Whenever you {@action Earn Income}, you earn money as if the task were 2 levels lower due to theft, loss, or bad fortune."
@@ -22213,7 +22213,7 @@
 					"Sivanah prevents your enemies from pulling off your veil. Once, when a foe rolls a success on a {@skill Perception} check to disbelieve your illusion, it gets a critical failure instead. Sivanah typically grants this benefit to protect an elaborate or consequential illusory deception, and she never uses it to improve the effect of a harmful illusion."
 				],
 				"Moderate Boon": [
-					"You wear a veil of illusion wherever you go. You can cast {@spell illusory disguise} at will as an innate {@trait divine} spell."
+					"You wear a veil of illusion wherever you go. You can cast {@spell illusory disguise} at will as an innate {@trait divino} spell."
 				],
 				"Major Boon": [
 					"You spread your illusions over a larger area. You can designate an area to permanently gain the effects of {@spell hallucinatory terrain}. All creatures within this area gain the effects of {@spell illusory disguise}, changing their forms as you wish. You can designate a new area as a 1-minute activity, but doing so dismisses any previously designated areas."

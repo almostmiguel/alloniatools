@@ -141,7 +141,7 @@
 				"magus"
 			],
 			"entries": [
-				"Your physical training encompasses unarmed combat forms. The damage die for your fist changes to {@dice 1d6} instead of {@dice 1d4}. You don't take the normal \u20132 circumstance penalty when making a lethal attack with your fist or any other unarmed attacks. Your unarmed attacks gain the {@trait arcane} trait, making them magical. At 5th level, you also gain the critical specialization effects of unarmed attacks in the {@group brawling} group and weapons in the {@group brawling} group."
+				"Your physical training encompasses unarmed combat forms. The damage die for your fist changes to {@dice 1d6} instead of {@dice 1d4}. You don't take the normal \u20132 circumstance penalty when making a lethal attack with your fist or any other unarmed attacks. Your unarmed attacks gain the {@trait arcano} trait, making them magical. At 5th level, you also gain the critical specialization effects of unarmed attacks in the {@group brawling} group and weapons in the {@group brawling} group."
 			]
 		},
 		{
@@ -822,7 +822,7 @@
 			"prerequisites": "{@class Magus|SoM|laughing shadow|laughing shadow|SoM} hybrid study, {@action Spellstrike|SoM}",
 			"requirements": "You're in {@action Arcane Cascade|SoM} stance and have a hand free.",
 			"entries": [
-				"You weave distracting magic with one hand to enhance your {@action Spellstrike|SoM}. Make a {@action Spellstrike|SoM} and {@action Feint} against the target of your {@action Strike}. Do this immediately before making the {@action Strike}, but after choosing your target. The {@action Feint} gains the {@trait arcane}, {@trait illusion}, and {@trait visual} traits, and it always has the basic effects of a {@action Feint}, rather than applying any adjustments or alternate effects from other feats or abilities."
+				"You weave distracting magic with one hand to enhance your {@action Spellstrike|SoM}. Make a {@action Spellstrike|SoM} and {@action Feint} against the target of your {@action Strike}. Do this immediately before making the {@action Strike}, but after choosing your target. The {@action Feint} gains the {@trait arcano}, {@trait illusion}, and {@trait visual} traits, and it always has the basic effects of a {@action Feint}, rather than applying any adjustments or alternate effects from other feats or abilities."
 			]
 		},
 		{
@@ -2152,7 +2152,7 @@
 				"The power of your bond can protect you and your eidolon from harm. If you and your eidolon would take different amounts of damage from the area effect, you take the lower amount of damage instead of the greater amount of damage."
 			],
 			"special": [
-				"This feat has the trait matching your eidolon's tradition ({@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal})."
+				"This feat has the trait matching your eidolon's tradition ({@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal})."
 			]
 		},
 		{
@@ -2253,7 +2253,7 @@
 				"summoner"
 			],
 			"entries": [
-				"Spines, flame jets, and holy blasts are just some of the ways your eidolon might strike from a distance. It gains a ranged unarmed attack with a range increment of 30 feet that deals {@dice 1d4} damage and has the {@trait magical} and {@trait propulsive} traits. When you select this feat, choose a damage type: acid, bludgeoning, cold, electricity, fire, negative, piercing, positive, or slashing.",
+				"Spines, flame jets, and holy blasts are just some of the ways your eidolon might strike from a distance. It gains a ranged unarmed attack with a range increment of 30 feet that deals {@dice 1d4} damage and has the {@trait mágico} and {@trait propulsive} traits. When you select this feat, choose a damage type: acid, bludgeoning, cold, electricity, fire, negative, piercing, positive, or slashing.",
 				"If your eidolon is a celestial, fiend, or monitor with an alignment other than true neutral, you can choose a damage type in its alignment."
 			]
 		},
@@ -2384,7 +2384,7 @@
 				"While in Reflective Ripple Stance, you gain a +1 circumstance bonus to {@skill Athletics} checks to {@action Disarm}, {@action Swim}, or {@action Trip}, and you gain a +2 circumstance bonus to your Reflex DC to avoid being Disarmed and Tripped."
 			],
 			"special": [
-				"This feat gains your choice of either the {@trait divine} or {@trait occult} trait, matching your ki spell tradition if possible."
+				"This feat gains your choice of either the {@trait divino} or {@trait ocultista} trait, matching your ki spell tradition if possible."
 			],
 			"leadsTo": [
 				"Rippling Spin|SoM",
@@ -3200,7 +3200,7 @@
 				"While in Stoked Flame Stance, you gain a +5-foot status bonus to your Speed. If you have incredible movement, increase the benefit from incredible movement to a +15-foot status bonus plus 5 feet for every 4 levels beyond 3rd."
 			],
 			"special": [
-				"This feat gains your choice of either the {@trait divine} or {@trait occult} trait, matching your ki spell tradition if possible."
+				"This feat gains your choice of either the {@trait divino} or {@trait ocultista} trait, matching your ki spell tradition if possible."
 			],
 			"leadsTo": [
 				"Blazing Streak|SoM",

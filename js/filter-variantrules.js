@@ -25,7 +25,7 @@ class PageFilterVariantRules extends PageFilter {
 		}) : null;
 	}
 
-	addToFilters (rule, isExcluded) {
+	_addToFilters (rule, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(rule._fSources);
@@ -46,7 +46,7 @@ class PageFilterVariantRules extends PageFilter {
 		];
 	}
 
-	toDisplay (values, r) {
+	_toDisplay (values, r) {
 		return this._filterBox.toDisplay(
 			values,
 			r._fSources,

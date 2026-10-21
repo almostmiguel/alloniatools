@@ -239,7 +239,7 @@
 			],
 			"entries": [
 				"A bane rune causes a weapon to grant you improved understanding of creatures of a particular type, allowing you to deal more damage to those creatures. The crafter chooses {@trait aberration}, {@trait animal}, {@trait beast}, {@trait celestial}, {@trait construct}, {@trait dragon}, {@trait elemental}, {@trait fey}, {@trait fiend}, {@trait giant}, {@trait monitor}, {@trait ooze}, or both {@trait fungus} and {@trait plant}. The weapon deals {@damage 1d6} additional damage of the weapon's damage type to creatures with the chosen trait or traits. The benefit doesn't apply against creatures of the chosen type disguised as other creatures. It's up to GM discretion whether the bane rune applies against a creature disguised as a creature of the chosen type.",
-				"The GM might allow bane runes for other creature traits, such as {@trait astral}, {@trait dream}, or {@trait demon}. However, {@trait humanoid||humanoids}, {@trait undead}, and specific types of {@trait humanoid||humanoids} (such as {@trait elf||elves}) are never a valid option."
+				"The GM might allow bane runes for other creature traits, such as {@trait astral}, {@trait dream}, or {@trait demon}. However, {@trait humanoide||humanoids}, {@trait undead}, and specific types of {@trait humanoide||humanoids} (such as {@trait elfo||elves}) are never a valid option."
 			]
 		},
 		{
@@ -1019,7 +1019,7 @@
 			"usage": "held in 2 hands",
 			"category": "Held",
 			"entries": [
-				"This set of 34 parchment cards usually comes in a velvet bag or simple leather wrap. Each card depicts a different creature, monster, or other being that, when the deck is activated, immediately appears as a believable, life-size illusion. You can look at the card's artwork, but no {@trait magical} effect takes place until you Activate the deck, shuffling and drawing randomly.",
+				"This set of 34 parchment cards usually comes in a velvet bag or simple leather wrap. Each card depicts a different creature, monster, or other being that, when the deck is activated, immediately appears as a believable, life-size illusion. You can look at the card's artwork, but no {@trait mágico} effect takes place until you Activate the deck, shuffling and drawing randomly.",
 				{
 					"type": "ability",
 					"activity": {
@@ -4127,7 +4127,7 @@
 			"usage": "worn",
 			"category": "Worn",
 			"entries": [
-				"Each specialist's ring is dedicated to a single school of magic, and the ring is covered in symbols and glyphs related to that school according to the creator's arcane studies. A specialist's ring has the trait corresponding to its school of magic. You gain a +2 item bonus to {@skill Arcana} checks, and a +1 circumstance bonus to recognize {@trait magical} effects and items of the specific school of magic.",
+				"Each specialist's ring is dedicated to a single school of magic, and the ring is covered in symbols and glyphs related to that school according to the creator's arcane studies. A specialist's ring has the trait corresponding to its school of magic. You gain a +2 item bonus to {@skill Arcana} checks, and a +1 circumstance bonus to recognize {@trait mágico} effects and items of the specific school of magic.",
 				{
 					"type": "ability",
 					"activity": {
@@ -4310,7 +4310,7 @@
 						"number": 1
 					},
 					"entries": [
-						"You sing, hum, or whistle a note, and your bow provides appropriate accompaniment. Make a {@action Strike} with the bow. If it hits, the bow generates a {@trait magical} effect determined by the note you sung, which has the traits indicated in parentheses. This affects every creature in a 10-foot emanation from the creature you hit. As normal for an emanation, you choose whether the creature you hit is affected.",
+						"You sing, hum, or whistle a note, and your bow provides appropriate accompaniment. Make a {@action Strike} with the bow. If it hits, the bow generates a {@trait mágico} effect determined by the note you sung, which has the traits indicated in parentheses. This affects every creature in a 10-foot emanation from the creature you hit. As normal for an emanation, you choose whether the creature you hit is affected.",
 						{
 							"type": "list",
 							"items": [
@@ -5556,7 +5556,7 @@
 			"category": "Worn",
 			"entries": [
 				"This amulet bears the true name of a single creature with a level no higher than the item's level. These amulets are typically made of gold and engraved, but could be made of anything, including simple clay. The name is clearly visible, though only to you, and only while you have the amulet invested.",
-				"If you can read the language in which the name is written, that creature always takes the effects of invoke true name against your spells (with a spell level equal to half the item's level, rounded up). In addition, when the creature uses any {@trait magical} effect against you, you can immediately attempt to counteract it using {@skill Arcana}, {@skill Nature}, Occult, or {@skill Religion} for the counteract check and the true name amulet's level to determine the counteract level.",
+				"If you can read the language in which the name is written, that creature always takes the effects of invoke true name against your spells (with a spell level equal to half the item's level, rounded up). In addition, when the creature uses any {@trait mágico} effect against you, you can immediately attempt to counteract it using {@skill Arcana}, {@skill Nature}, Occult, or {@skill Religion} for the counteract check and the true name amulet's level to determine the counteract level.",
 				"Legendary amulets bearing the true names of creatures of level 21+ may exist."
 			],
 			"generic": "G",

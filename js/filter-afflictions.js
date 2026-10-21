@@ -24,7 +24,7 @@ class PageFilterAfflictions extends PageFilter {
 		if (it.temptedCurse) it._fMiscFilter.push("Tempted Curse");
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(it._fSources);
@@ -44,7 +44,7 @@ class PageFilterAfflictions extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

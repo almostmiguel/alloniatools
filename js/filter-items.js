@@ -167,7 +167,7 @@ class PageFilterItems extends PageFilter {
 		if (it.appliesTo) this._categoriesRuneItems.add(...it.appliesTo);
 	}
 
-	addToFilters (item, isExcluded) {
+	_addToFilters (item, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(item._fSources);
@@ -211,7 +211,7 @@ class PageFilterItems extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

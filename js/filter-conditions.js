@@ -13,7 +13,7 @@ class PageFilterConditions extends PageFilter {
 		it._fSources = SourceFilter.getCompleteFilterSources(it);
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		if (it._fGroup != null) this._groupFilter.addItem(it._fGroup);
@@ -27,7 +27,7 @@ class PageFilterConditions extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

@@ -179,7 +179,7 @@
 			"category": "Adventuring Gear",
 			"name": "Religious Symbol",
 			"entries": [
-				"This piece of wood or silver is emblazoned with an image representing a deity. Some {@trait divine} spellcasters, such as {@class cleric|PC1|clerics}, can use a religious symbol to use certain abilities. A religious symbol can be worn on the body on a chain or pin, or can be held."
+				"This piece of wood or silver is emblazoned with an image representing a deity. Some {@trait divino} spellcasters, such as {@class cleric|PC1|clerics}, can use a religious symbol to use certain abilities. A religious symbol can be worn on the body on a chain or pin, or can be held."
 			],
 			"hands": 1,
 			"variants": [
@@ -1437,7 +1437,7 @@
 			"bulk": "L",
 			"hands": 1,
 			"entries": [
-				"This manuscript contains scripture of a particular religion. Some {@trait divine} spellcasters, such as {@class cleric|PC1|clerics}, can use a religious text to use certain abilities. A religious text must be held in one hand to use it."
+				"This manuscript contains scripture of a particular religion. Some {@trait divino} spellcasters, such as {@class cleric|PC1|clerics}, can use a religious text to use certain abilities. A religious text must be held in one hand to use it."
 			],
 			"category": "Adventuring Gear",
 			"type": "Item"

@@ -5427,7 +5427,7 @@
 													"type": "item",
 													"name": "Rejuvenation",
 													"entries": [
-														"({@trait divine}, {@trait necromancy}) When a ghost is destroyed, it re-forms after {@dice 2d4} days within the location it's bound to, fully healed. A ghost can be permanently destroyed only if someone determines the reason for its existence and sets right whatever prevents the spirit from resting."
+														"({@trait divino}, {@trait necromancy}) When a ghost is destroyed, it re-forms after {@dice 2d4} days within the location it's bound to, fully healed. A ghost can be permanently destroyed only if someone determines the reason for its existence and sets right whatever prevents the spirit from resting."
 													]
 												},
 												{
@@ -5455,7 +5455,7 @@
 													"type": "item",
 													"name": "Ghostly Hand",
 													"entries": [
-														"All ghosts have a ghostly hand {@trait unarmed} attack that deals negative damage. It typically has the {@trait agile}, {@trait finesse}, and {@trait magical} traits. Some ghosts wield ghostly memories of weapons they held in life, but the effect is the same."
+														"All ghosts have a ghostly hand {@trait unarmed} attack that deals negative damage. It typically has the {@trait agile}, {@trait finesse}, and {@trait mágico} traits. Some ghosts wield ghostly memories of weapons they held in life, but the effect is the same."
 													]
 												}
 											]
@@ -5719,7 +5719,7 @@
 									"type": "pf2-h4",
 									"name": "Ghoul Abilities",
 									"entries": [
-										"A ghoul gains the {@trait undead} and {@trait ghoul} traits, and it usually becomes {@trait evil}. If the base creature has any abilities that come from it being a living creature, it loses them. It also loses any traits that represented its life as a living creature, such as {@trait human} and {@trait humanoid}. You might also need to adjust abilities that conflict with the theme of a ghoul. All ghouls gain the following abilities. The save DC for all abilities uses the DC of the {@table DCs by Level||ghoul's level}.",
+										"A ghoul gains the {@trait undead} and {@trait ghoul} traits, and it usually becomes {@trait evil}. If the base creature has any abilities that come from it being a living creature, it loses them. It also loses any traits that represented its life as a living creature, such as {@trait human} and {@trait humanoide}. You might also need to adjust abilities that conflict with the theme of a ghoul. All ghouls gain the following abilities. The save DC for all abilities uses the DC of the {@table DCs by Level||ghoul's level}.",
 										{
 											"type": "pf2-options",
 											"skipSort": true,
@@ -5787,7 +5787,7 @@
 													"type": "item",
 													"name": "Paralysis",
 													"entries": [
-														"({@trait incapacitation}, {@trait occult}, {@trait necromancy}) Any living, non-elf creature hit by a ghoul's attack must succeed at a Fortitude save or become {@condition paralyzed}. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save."
+														"({@trait incapacitation}, {@trait ocultista}, {@trait necromancy}) Any living, non-elf creature hit by a ghoul's attack must succeed at a Fortitude save or become {@condition paralyzed}. It can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each such save."
 													]
 												},
 												{
@@ -5855,7 +5855,7 @@
 													"type": "item",
 													"name": "Paralysis",
 													"entries": [
-														"({@trait incapacitation}, {@trait occult}, {@trait necromancy}) As ghoul, but elves are not immune."
+														"({@trait incapacitation}, {@trait ocultista}, {@trait necromancy}) As ghoul, but elves are not immune."
 													]
 												}
 											]
@@ -7533,7 +7533,7 @@
 													"type": "item",
 													"name": "Rejuvenation",
 													"entries": [
-														"({@trait arcane}, {@trait necromancy}) When a lich is destroyed, its soul immediately transfers to its phylactery. A lich can be permanently destroyed only if its phylactery is found and destroyed."
+														"({@trait arcano}, {@trait necromancy}) When a lich is destroyed, its soul immediately transfers to its phylactery. A lich can be permanently destroyed only if its phylactery is found and destroyed."
 													]
 												},
 												{
@@ -7589,7 +7589,7 @@
 													"type": "item",
 													"name": "Paralyzing Touch",
 													"entries": [
-														"({@trait arcane}, {@trait curse}, {@trait incapacitation}, {@trait necromancy}) A creature damaged by the lich's hand {@action Strike} must succeed at a Fortitude save against the lich's spell DC \u2013 4. The creature becomes {@condition paralyzed} for 1 round on a failure. On a critical failure, the creature is {@condition paralyzed} permanently, falls {@condition prone}, and seems dead. A DC 25 {@skill Medicine} check reveals the victim is alive."
+														"({@trait arcano}, {@trait curse}, {@trait incapacitation}, {@trait necromancy}) A creature damaged by the lich's hand {@action Strike} must succeed at a Fortitude save against the lich's spell DC \u2013 4. The creature becomes {@condition paralyzed} for 1 round on a failure. On a critical failure, the creature is {@condition paralyzed} permanently, falls {@condition prone}, and seems dead. A DC 25 {@skill Medicine} check reveals the victim is alive."
 													]
 												}
 											]
@@ -7610,7 +7610,7 @@
 													"type": "item",
 													"name": "Blasphemous Utterances",
 													"entries": [
-														"({@trait arcane}, {@trait aura}, {@trait enchantment}, {@trait mental}) 10 feet. The lich is accompanied by a constant echo of blasphemous murmurs and tainted whispers. A creature in the aura takes a \u20132 circumstance penalty to saves against mental effects and can't take actions that have the {@trait concentrate} trait unless they succeed at a DC {@flatDC 10} flat check. Failing this check wastes the action."
+														"({@trait arcano}, {@trait aura}, {@trait enchantment}, {@trait mental}) 10 feet. The lich is accompanied by a constant echo of blasphemous murmurs and tainted whispers. A creature in the aura takes a \u20132 circumstance penalty to saves against mental effects and can't take actions that have the {@trait concentrate} trait unless they succeed at a DC {@flatDC 10} flat check. Failing this check wastes the action."
 													]
 												},
 												{

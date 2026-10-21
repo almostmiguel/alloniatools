@@ -836,7 +836,7 @@ function Renderer () {
 
 		let onHit;
 		if (entry.effects && !entry.damage) {
-			onHit = `, <strong>Effect&nbsp;</strong>${entry.effects.map(e => this.render(e)).join(", ")}`;
+			onHit = `, <strong>Efeito&nbsp;</strong>${entry.effects.map(e => this.render(e)).join(", ")}`;
 		} else {
 			onHit = `, <strong>Damage&nbsp;</strong>${this.render(entry.damage)}`;
 		}
@@ -909,14 +909,14 @@ function Renderer () {
 		if (entry.frequency) preamble.push(`<strong>Frequency&nbsp;</strong>${Parser.freqToFullEntry(entry.frequency)}`);
 		if (entry.note) preamble.push(entry.note);
 		if (entry.range) preamble.push(`<strong>Range&nbsp;</strong>${entry.range.number} ${entry.range.unit}`);
-		if (entry.trigger) preamble.push(`<strong>Trigger&nbsp;</strong>${entry.trigger}`);
+		if (entry.trigger) preamble.push(`<strong>Gatilho&nbsp;</strong>${entry.trigger}`);
 		if (entry.requirements) preamble.push(`<strong>Requirements&nbsp;</strong>${entry.requirements}`);
 
 		if (entry.entries) {
 			if (preamble.length) {
-				textStack[0] += `${this.render(preamble.join("; "))}; <strong>Effect&nbsp;</strong>`;
+				textStack[0] += `${this.render(preamble.join("; "))}; <strong>Efeito&nbsp;</strong>`;
 			} else if (entry.components || wordyActivation) {
-				textStack[0] += `<strong>Effect&nbsp;</strong>`;
+				textStack[0] += `<strong>Efeito&nbsp;</strong>`;
 			}
 			textStack[0] += `${this.render(entry.entries[0], { isAbility: true })}</span>`;
 			for (let i = 1; i < entry?.entries?.length; i++) {
@@ -981,7 +981,7 @@ function Renderer () {
 			textStack[0] += renderer.render(entry.endnote);
 		}
 		if (entry.entries) {
-			textStack[0] += `<strong>Effect&nbsp;</strong>`;
+			textStack[0] += `<strong>Efeito&nbsp;</strong>`;
 			entry.entries.forEach(it => this._recursiveRender(it, textStack, meta));
 		} else {
 			textStack[0] = textStack[0].replace(/; $/, "");
@@ -1015,15 +1015,12 @@ function Renderer () {
 
 	this._renderPf2H1Flavor = function (entry, textStack, meta, options) {
 		this._getReference(entry);
-		if (entry.entries) {
-			const len = entry?.entries?.length;
-			for (let i = 0; i < len; ++i) {
-				textStack[0] += `<p class="pf2-h1-flavor rd__h${entry.centered ? " pf2-h1-flavor--centered" : ""}">${this.render(entry.entries[i])}</p>`;
-			}
+		if (!entry.entries?.length) return;
+		textStack[0] += `<div class="pf2-flavor"><img class="pf2-flavor__border" src="https://images.demiplane.com/nexus/pathfinder-2e/primer-top-border.png?format=webp" alt="">`;
+		for (let i = 0; i < entry.entries.length; ++i) {
+			textStack[0] += `<p class="pf2-h1-flavor rd__h${entry.centered ? " pf2-h1-flavor--centered" : ""}">${this.render(entry.entries[i])}</p>`;
 		}
-		// TODO: Swirls
-		// textStack[0] += this._getPf2ChapterSwirl()
-		textStack[0] += `<div class="flex"><div class="pf2-chapter__line mb-4" style="width: calc(100% - 2em); margin-left: 1em; height: 2px"></div></div>`
+		textStack[0] += `<img class="pf2-flavor__border" src="https://images.demiplane.com/nexus/pathfinder-2e/primer-bottom-border.png?format=webp" alt=""></div>`;
 	};
 
 	this._getPf2ChapterSwirl = function () {
@@ -1328,7 +1325,7 @@ function Renderer () {
 
 		if (entry.hp != null) {
 			textStack[0] += `<div class="pf2-key-abilities__hp">`;
-			textStack[0] += `<p class="pf2-key-abilities__title">HIT POINTS</p>`;
+			textStack[0] += `<p class="pf2-key-abilities__title">PONTOS DE VIDA</p>`;
 			const len = entry.hp.length;
 			for (let i = 0; i < len; ++i) {
 				this._recursiveRender(entry.hp[i], textStack, meta, {
@@ -1473,7 +1470,7 @@ function Renderer () {
 		this._renderDataHeader(textStack);
 		const tag = entry.tag;
 		const name = entry.name;
-		const source = entry.source || Parser.TAG_TO_DEFAULT_SOURCE[tag];
+		const source = Parser.getTagSource(tag, entry.source, name);
 		const catId = Parser._parse_bToA(Parser.CAT_ID_TO_PROP, tag);
 		const page = entry.page || UrlUtil.CAT_TO_PAGE[catId];
 		if (entry.data) {
@@ -2038,7 +2035,8 @@ function Renderer () {
 
 			case "@deity": {
 				const [name, source, displayText, ...others] = Renderer.splitTagByPipe(text);
-				const hash = `${name}${source ? `${HASH_LIST_SEP}${source}` : ""}`;
+				const resolvedSource = Parser.getTagSource(tag, source, name);
+				const hash = `${name}${HASH_LIST_SEP}${resolvedSource}`;
 
 				const fauxEntry = {
 					type: "link",
@@ -2050,10 +2048,9 @@ function Renderer () {
 				};
 
 				fauxEntry.href.path = UrlUtil.PG_DEITIES;
-				if (!source) fauxEntry.href.hash += `${HASH_LIST_SEP}${SRC_CRB}`;
 				fauxEntry.href.hover = {
 					page: UrlUtil.PG_DEITIES,
-					source: source || SRC_CRB,
+					source: resolvedSource,
 				};
 				this._recursiveRender(fauxEntry, textStack, meta);
 
@@ -3811,7 +3808,7 @@ Renderer.ability = {
 			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Frequency&nbsp;</strong>${renderer.render(Parser.freqToFullEntry(it.frequency))}</p>`);
 		}
 		if (it.trigger != null) {
-			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Trigger&nbsp;</strong>${renderer.render(it.trigger)}</p>`);
+			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Gatilho&nbsp;</strong>${renderer.render(it.trigger)}</p>`);
 		}
 		if (it.requirements != null) {
 			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Requirements&nbsp;</strong>${renderer.render(it.requirements)}</p>`);
@@ -3869,7 +3866,7 @@ Renderer.action = {
 					it.actionType.ancestry.forEach(a => {
 						ancestryName = a ? a.split(`|`)[0] : null
 						ancestrySource = a ? a.split(`|`)[1] || "" : ""
-						renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Ancestry&nbsp;</strong>${renderer.render(`{@ancestry ${ancestryName}|${ancestrySource}}`)}`);
+						renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Ancestralidade&nbsp;</strong>${renderer.render(`{@ancestry ${ancestryName}|${ancestrySource}}`)}`);
 						if (it.actionType.heritage || it.actionType.versatileHeritage) renderStack.push(`; `)
 					})
 				}
@@ -3877,7 +3874,7 @@ Renderer.action = {
 					it.actionType.heritage.forEach(h => {
 						heritageName = h ? h.split(`|`)[0] : null
 						heritageSource = h ? h.split(`|`)[1] || "" : ""
-						renderStack.push(`<strong>Heritage&nbsp;</strong>${renderer.render(`{@ancestry ${ancestryName}|${ancestrySource}|${heritageName}|${heritageName}|${heritageSource}|}`)}`);
+						renderStack.push(`<strong>Herança&nbsp;</strong>${renderer.render(`{@ancestry ${ancestryName}|${ancestrySource}|${heritageName}|${heritageName}|${heritageSource}|}`)}`);
 						if (it.actionType.versatileHeritage) renderStack.push(`; `)
 					})
 				}
@@ -3886,7 +3883,7 @@ Renderer.action = {
 						versatileHeritageName = v ? v.split(`|`)[0] : null
 						versatileHeritageSource = v ? v.split(`|`)[1] || "" : ""
 						if (!it.actionType.ancestry) renderStack.push(`<p class="pf2-stat pf2-stat__section">`);
-						renderStack.push(`<strong>Versatile Heritage&nbsp;</strong>${renderer.render(`{@ancestry ${it.actionType.ancestry ? `${ancestryName}|${ancestrySource}` : "Human|CRB"}|${versatileHeritageName}|${versatileHeritageName}|${versatileHeritageSource}|}`)}`);
+						renderStack.push(`<strong>Herança Versátil&nbsp;</strong>${renderer.render(`{@ancestry ${it.actionType.ancestry ? `${ancestryName}|${ancestrySource}` : "Human|CRB"}|${versatileHeritageName}|${versatileHeritageName}|${versatileHeritageSource}|}`)}`);
 					})
 				}
 				renderStack.push(`</p>`)
@@ -3906,7 +3903,7 @@ Renderer.action = {
 			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Frequency&nbsp;</strong>${renderer.render(Parser.freqToFullEntry(it.frequency))}</p>`);
 		}
 		if (it.trigger != null) {
-			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Trigger&nbsp;</strong>${renderer.render(it.trigger)}</p>`);
+			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Gatilho&nbsp;</strong>${renderer.render(it.trigger)}</p>`);
 		}
 		if (it.overcome != null) {
 			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Overcome&nbsp;</strong>${renderer.render(it.overcome)}</p>`);
@@ -4026,16 +4023,18 @@ Renderer.ancestry = {
 		const renderStack = [];
 		renderStack.push(`${Renderer.utils.getNameDiv(anc, { page: UrlUtil.PG_ANCESTRIES, type: "Ancestry", ...opts })}`)
 		renderStack.push(Renderer.utils.getDividerDiv())
+		renderStack.push(Renderer.utils.getTraitsDiv([
+			...(anc.rarity ? [anc.rarity] : []),
+			...(anc.traits || []),
+		]))
 		renderStack.push(`<div class="pf2-sidebar--compact">`)
-		if (anc.rarity) renderStack.push(renderer.render(`<div><p class="pf2-title">Rarity</p><p class="pf2-sidebar__text">{@trait ${anc.rarity.toTitleCase()}}</p></div>`))
-		renderStack.push(`<div><p class="pf2-title">Hit Points</p><p class="pf2-sidebar__text">${anc.hp}</p></div>`)
-		renderStack.push(`<div><p class="pf2-title">Size</p><p class="pf2-sidebar__text">${anc.size.joinConjunct(", ", " or ").toTitleCase()}</p></div>`)
-		renderStack.push(`<div><p class="pf2-title">Speed</p><p class="pf2-sidebar__text">${Parser.speedToFullMap(anc.speed).join(", ")}</p></div>`)
-		if (anc.boosts) renderStack.push(`<div><p class="pf2-title">Ability Boosts</p><p class="pf2-sidebar__text">${anc.boosts.join(", ").toTitleCase()}</p></div>`)
-		if (anc.flaw) renderStack.push(`<div><p class="pf2-title">Ability Flaw</p><p class="pf2-sidebar__text">${anc.flaw.join(", ").toTitleCase()}</p></div>`)
+		renderStack.push(`<div><p class="pf2-title">Pontos de Vida</p><p class="pf2-sidebar__text">${anc.hp}</p></div>`)
+		renderStack.push(`<div><p class="pf2-title">Tamanho</p><p class="pf2-sidebar__text">${anc.size.joinConjunct(", ", " or ").toTitleCase()}</p></div>`)
+		renderStack.push(`<div><p class="pf2-title">Velocidade</p><p class="pf2-sidebar__text">${Parser.speedToFullMap(anc.speed).join(", ")}</p></div>`)
+		if (anc.boosts) renderStack.push(`<div><p class="pf2-title">Melhorias de Atributo</p><p class="pf2-sidebar__text">${anc.boosts.join(", ").toTitleCase()}</p></div>`)
+		if (anc.flaw) renderStack.push(`<div><p class="pf2-title">Defeito de Atributo</p><p class="pf2-sidebar__text">${anc.flaw.join(", ").toTitleCase()}</p></div>`)
 		// FIXME: This is a wonky solution to the hover pup-up being spammed with the "you can choose your language" text. Perhaps split the data between languages you always know and ones you can choose?
-		if (anc.languages) renderStack.push(`<div><p class="pf2-title">Languages</p><p class="pf2-sidebar__text">${renderer.render(anc.languages.join(", ").replace(/, Additional languages [\s\S]+region\)\./g, ""))}</p></div>`)
-		if (anc.traits) renderStack.push(`<div><p class="pf2-title">Traits</p><p class="pf2-sidebar__text">${renderer.render(anc.traits.join(", ").toTitleCase())}</p></div>`)
+		if (anc.languages) renderStack.push(`<div><p class="pf2-title">Idiomas</p><p class="pf2-sidebar__text">${renderer.render(anc.languages.join(", ").replace(/, Additional languages [\s\S]+region\)\./g, ""))}</p></div>`)
 		renderStack.push(`
 			${anc.feature ? `<div><p class="pf2-title">${anc.feature.name}</p><p class="pf2-sidebar__text">${renderer.render(anc.feature.entries)}</p></div>` : ""}
 			${anc.features ? anc.features.map(f => `<div><p class="pf2-title">${f.name}</p><p class="pf2-sidebar__text">${renderer.render(f.entries)}</p></div>`).join("") : ""}
@@ -4136,10 +4135,10 @@ Renderer.companion = {
 		${Renderer.utils.getTraitsDiv(companion.traits)}
 		${companion.access ? `<p class="pf2-stat pf2-stat__section"><strong>Access&nbsp;</strong>${renderer.render(companion.access)}</p>` : ""}
 		${(companion.traits && companion.traits.length) || companion.access ? Renderer.utils.getDividerDiv() : ""}
-		<p class="pf2-stat pf2-stat__section"><strong>Size&nbsp;</strong>${companion.size.map(s => s.toTitleCase()).join(" or ")}</p>
+		<p class="pf2-stat pf2-stat__section"><strong>Tamanho&nbsp;</strong>${companion.size.map(s => s.toTitleCase()).join(" or ")}</p>
 		${Renderer.creature.getAttacks(companion)}
 		${Renderer.creature.getAbilityMods(companion.abilityMods)}
-		<p class="pf2-stat pf2-stat__section"><strong>Hit Points&nbsp;</strong>${companion.hp}${companion.hpAbilities ? `(${companion.hpAbilities.join(",")})` : ""}</p>
+		<p class="pf2-stat pf2-stat__section"><strong>Pontos de Vida&nbsp;</strong>${companion.hp}${companion.hpAbilities ? `(${companion.hpAbilities.join(",")})` : ""}</p>
 		<p class="pf2-stat pf2-stat__section"><strong>Skill&nbsp;</strong>${renderer.render(companion.skill.startsWith("none") ? companion.skill : `{@skill ${companion.skill.toTitleCase()}${companion.remaster ? "|PC1" : ""}}`)}</p>
 		${Renderer.companionfamiliar.getRenderedSenses(companion)}
 		${Renderer.creature.getSpeed(companion)}
@@ -4623,10 +4622,10 @@ Renderer.creature = {
 					${ability.note ? renderer.render_addTerm(ability.note) : ""}
 					${ability.frequency ? `<strong>Frequency&nbsp;</strong>${renderer.render_addTerm(Parser.freqToFullEntry(ability.frequency))}` : ""}
 					${ability.prerequisites ? `<strong>Prerequisites&nbsp;</strong>${renderer.render_addTerm(ability.prerequisites)}` : ""}
-					${ability.trigger ? `<strong>Trigger&nbsp;</strong>${renderer.render_addTerm(ability.trigger)}` : ""}
+					${ability.trigger ? `<strong>Gatilho&nbsp;</strong>${renderer.render_addTerm(ability.trigger)}` : ""}
 					${ability.cost ? `<strong>Cost&nbsp;</strong>${renderer.render_addTerm(ability.cost)}` : ""}
 					${ability.requirements ? `<strong>Requirements&nbsp;</strong>${renderer.render_addTerm(ability.requirements)}` : ""}
-					${ability.note || ability.frequency || ability.prerequisites || ability.requirements || ability.trigger || ability.cost ? "<strong>Effect</strong>" : ""}
+					${ability.note || ability.frequency || ability.prerequisites || ability.requirements || ability.trigger || ability.cost ? "<strong>Efeito</strong>" : ""}
 					${(ability.entries || []).map(it => renderer.render(it)).join(" ")}
 					</p>
 					${/* renderedGenericAbility || null */ ""}`;
@@ -5085,7 +5084,7 @@ Renderer.feat = {
 			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Frequency&nbsp;</strong>${renderer.render(Parser.freqToFullEntry(feat.frequency))}</p>`);
 		}
 		if (feat.trigger != null) {
-			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Trigger&nbsp;</strong>${renderer.render(feat.trigger)}</p>`);
+			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Gatilho&nbsp;</strong>${renderer.render(feat.trigger)}</p>`);
 		}
 		if (feat.cost != null) {
 			renderStack.push(`<p class="pf2-stat pf2-stat__section"><strong>Cost&nbsp;</strong>${renderer.render(feat.cost)}</p>`);
@@ -5320,7 +5319,7 @@ Renderer.item = {
 				renderStack.push(`${renderStack[activateTextIndex] ? "; " : ""}<strong>Frequency&nbsp;</strong>${renderer.render(Parser.freqToFullEntry(item.activate.frequency))}`);
 			}
 			if (item.activate.trigger != null) {
-				renderStack.push(`${renderStack[activateTextIndex] ? "; " : ""}<strong>Trigger&nbsp;</strong>${renderer.render(item.activate.trigger)}`);
+				renderStack.push(`${renderStack[activateTextIndex] ? "; " : ""}<strong>Gatilho&nbsp;</strong>${renderer.render(item.activate.trigger)}`);
 			}
 			if (item.activate.requirements != null) {
 				renderStack.push(`${renderStack[activateTextIndex] ? "; " : ""}<strong>Requirements&nbsp;</strong>${renderer.render(item.activate.requirements)}`);
@@ -6200,7 +6199,7 @@ Renderer.spell = {
 
 		let castParts = [];
 		if (sp.cost != null) castParts.push(`<strong>Cost&nbsp;</strong>${renderer.render(sp.cost)}`);
-		if (sp.trigger != null) castParts.push(`<strong>Trigger&nbsp;</strong>${renderer.render(sp.trigger)}`);
+		if (sp.trigger != null) castParts.push(`<strong>Gatilho&nbsp;</strong>${renderer.render(sp.trigger)}`);
 		if (sp.requirements != null) castParts.push(`<strong>Requirements&nbsp;</strong>${renderer.render(sp.requirements)}`);
 
 		const targetingParts = [];

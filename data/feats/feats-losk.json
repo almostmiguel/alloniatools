@@ -370,7 +370,7 @@
 			"access": "You're from Druma.",
 			"entries": [
 				"After induction into the ranks of the Kalistocrats, you learned the skills necessary to succeed in business and rise above others by following a set of detailed strictures. Unless you take measures to hide your affiliation, anyone who has heard of the Prophets of Kalistrade will know you're one of them when they see you.",
-				"You become an expert in {@skill Society|PC1} and can use {@skill Society|PC1} instead of {@skill Diplomacy|PC1} to {@action Make an Impression|PC1} on merchants and traders. Additionally, if you don't already cast spells from spell slots, you learn to cast spontaneous spells and gain the Cast a Spell activity. You gain a spell repertoire with two {@trait common} {@trait occult} cantrips, plus either {@spell prestidigitation|PC1} or {@spell read aura|PC1}. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for these spells is Charisma, and they're {@trait occult} spells."
+				"You become an expert in {@skill Society|PC1} and can use {@skill Society|PC1} instead of {@skill Diplomacy|PC1} to {@action Make an Impression|PC1} on merchants and traders. Additionally, if you don't already cast spells from spell slots, you learn to cast spontaneous spells and gain the Cast a Spell activity. You gain a spell repertoire with two {@trait common} {@trait ocultista} cantrips, plus either {@spell prestidigitation|PC1} or {@spell read aura|PC1}. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for these spells is Charisma, and they're {@trait ocultista} spells."
 			],
 			"featType": {
 				"archetype": [
@@ -399,7 +399,7 @@
 			],
 			"prerequisites": "{@feat Prophet of Kalistrade Dedication|LOSK}",
 			"entries": [
-				"You gain the basic spellcasting benefits. Each time you gain a spell slot of a new rank from the {@archetype prophet of Kalistrade|LOSK} archetype, add a common {@trait occult} spell of the appropriate rank, or another appropriate {@trait occult} spell you've learned or discovered, to your repertoire."
+				"You gain the basic spellcasting benefits. Each time you gain a spell slot of a new rank from the {@archetype prophet of Kalistrade|LOSK} archetype, add a common {@trait ocultista} spell of the appropriate rank, or another appropriate {@trait ocultista} spell you've learned or discovered, to your repertoire."
 			],
 			"featType": {
 				"archetype": [
@@ -489,7 +489,7 @@
 			],
 			"prerequisites": "{@feat Prophet of Kalistrade Dedication|LOSK}",
 			"entries": [
-				"You've learned secret methods that allow you to store your valuables where no one else can reach them. You can cast {@spell imaginary lockbox|PC2} as a 5th-rank innate {@trait occult} spell once per day. At 12th level and every 2 levels thereafter, the maximum amount you can target with this spell increases by 1 Bulk."
+				"You've learned secret methods that allow you to store your valuables where no one else can reach them. You can cast {@spell imaginary lockbox|PC2} as a 5th-rank innate {@trait ocultista} spell once per day. At 12th level and every 2 levels thereafter, the maximum amount you can target with this spell increases by 1 Bulk."
 			],
 			"featType": {
 				"archetype": [

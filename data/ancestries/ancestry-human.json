@@ -448,7 +448,7 @@
 						"half-elf"
 					],
 					"entries": [
-						"Either one of your parents was an elf, or one or both were half-elves. You have pointed ears and other telltale signs of elf heritage. You gain the {@trait elf} trait and {@ability low-light vision}. In addition, you can select elf, half-elf, and human feats whenever you gain an {@filter ancestry feat|feats||type=ancestry|ancestry & heritage=elf;half-elf;human}."
+						"Either one of your parents was an elf, or one or both were half-elves. You have pointed ears and other telltale signs of elf heritage. You gain the {@trait elfo} trait and {@ability low-light vision}. In addition, you can select elf, half-elf, and human feats whenever you gain an {@filter ancestry feat|feats||type=ancestry|ancestry & heritage=elf;half-elf;human}."
 					],
 					"info": [
 						{

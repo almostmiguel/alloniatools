@@ -2721,7 +2721,7 @@
 				"aasimar"
 			],
 			"entries": [
-				"Your connection to good arms all your attacks against forces of evil. All your weapon and unarmed {@action Strike|CRB|Strikes} deal 1 additional good damage and have the {@trait good} and {@trait magical} traits."
+				"Your connection to good arms all your attacks against forces of evil. All your weapon and unarmed {@action Strike|CRB|Strikes} deal 1 additional good damage and have the {@trait good} and {@trait mágico} traits."
 			]
 		},
 		{
@@ -3330,7 +3330,7 @@
 				"When a foe {@action Cast a Spell||Casts a Spell} and you can see its manifestations, you can use your own magic to disrupt it. You expend a prepared spell to counter the triggering creature's casting of that same spell. You lose your spell slot as if you had cast the triggering spell. You then attempt to {@quickref counteract|CRB|3|counteracting} the triggering spell."
 			],
 			"special": [
-				"This feat has the trait corresponding to the tradition of spells you cast ({@trait arcane}, {@trait divine}, {@trait primal}, or {@trait occult})."
+				"This feat has the trait corresponding to the tradition of spells you cast ({@trait arcano}, {@trait divino}, {@trait primal}, or {@trait ocultista})."
 			],
 			"leadsTo": [
 				"Reflect Spell (Witch)|APG"
@@ -3440,7 +3440,7 @@
 			],
 			"prerequisites": "trained in {@skill Crafting}",
 			"entries": [
-				"Your knowledge of items' construction allows you to discern their {@trait magical} effects as well. You can use {@skill Crafting} instead of a skill associated with a magic tradition to {@action Identify Magic} on magic items, though not on any other sorts of magic."
+				"Your knowledge of items' construction allows you to discern their {@trait mágico} effects as well. You can use {@skill Crafting} instead of a skill associated with a magic tradition to {@action Identify Magic} on magic items, though not on any other sorts of magic."
 			]
 		},
 		{
@@ -4271,9 +4271,9 @@
 				"divine",
 				"oracle"
 			],
-			"trigger": "You attempt a saving throw against a {@trait magical} effect, but you haven't rolled yet.",
+			"trigger": "You attempt a saving throw against a {@trait mágico} effect, but you haven't rolled yet.",
 			"entries": [
-				"You summon divine energy to shield yourself, offering protection against other traditions but leaving you exposed to other {@trait divine} effects. Until the beginning of your next turn, you gain a +1 circumstance bonus to saving throws against non-divine {@trait magical} effects, but you also take a \u20131 circumstance penalty to saves against {@trait divine} effects."
+				"You summon divine energy to shield yourself, offering protection against other traditions but leaving you exposed to other {@trait divino} effects. Until the beginning of your next turn, you gain a +1 circumstance bonus to saving throws against non-divine {@trait mágico} effects, but you also take a \u20131 circumstance penalty to saves against {@trait divino} effects."
 			]
 		},
 		{
@@ -4285,7 +4285,7 @@
 				"aasimar"
 			],
 			"entries": [
-				"You've studied your celestial heritage with the intent of better defending yourself, and you've found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against {@trait divine} effects."
+				"You've studied your celestial heritage with the intent of better defending yourself, and you've found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against {@trait divino} effects."
 			]
 		},
 		{
@@ -4311,7 +4311,7 @@
 				"wizard"
 			],
 			"entries": [
-				"You sense magical dangers. When using the {@action Detect Magic} exploration activity, you can roll initiative twice and use the better result so long as at least one opponent has a {@trait magical} effect or magic item and is in range of your {@spell detect magic}."
+				"You sense magical dangers. When using the {@action Detect Magic} exploration activity, you can roll initiative twice and use the better result so long as at least one opponent has a {@trait mágico} effect or magic item and is in range of your {@spell detect magic}."
 			]
 		},
 		{
@@ -6228,7 +6228,7 @@
 				"tiefling"
 			],
 			"entries": [
-				"Your festering connection to the forces of evil infuses your weapons with debilitating malevolence, tearing down creatures of good with every attack. All your weapon and unarmed {@action Strike|CRB|Strikes} deal 1 additional evil damage and have the {@trait evil} and {@trait magical} traits."
+				"Your festering connection to the forces of evil infuses your weapons with debilitating malevolence, tearing down creatures of good with every attack. All your weapon and unarmed {@action Strike|CRB|Strikes} deal 1 additional evil damage and have the {@trait evil} and {@trait mágico} traits."
 			]
 		},
 		{
@@ -8859,7 +8859,7 @@
 				"tiefling"
 			],
 			"entries": [
-				"You've battled the fiendish power within your nature and come out on top; whatever you decide to do with your life, for good or evil, will be your choice and your choice alone. This struggle has granted you powerful resistance against the divine. You gain a +1 circumstance bonus to all saving throws against {@trait divine} effects."
+				"You've battled the fiendish power within your nature and come out on top; whatever you decide to do with your life, for good or evil, will be your choice and your choice alone. This struggle has granted you powerful resistance against the divine. You gain a +1 circumstance bonus to all saving throws against {@trait divino} effects."
 			]
 		},
 		{
@@ -9111,7 +9111,7 @@
 			],
 			"prerequisites": "{@feat Healing Hands}",
 			"entries": [
-				"The blessing of your deity heightens your healing ability, making your mundane healing work as if by magic. When you succeed at a {@skill Medicine} check to {@action Treat Wounds}, your action gains the {@trait divine} trait and you heal the maximum amount for the {@dice 2d8} (or {@dice 4d8} on a critical success). If you have an ability that adds additional dice to your {@action Treat Wounds}, you still roll those normally."
+				"The blessing of your deity heightens your healing ability, making your mundane healing work as if by magic. When you succeed at a {@skill Medicine} check to {@action Treat Wounds}, your action gains the {@trait divino} trait and you heal the maximum amount for the {@dice 2d8} (or {@dice 4d8} on a critical success). If you have an ability that adds additional dice to your {@action Treat Wounds}, you still roll those normally."
 			]
 		},
 		{
@@ -9602,7 +9602,7 @@
 			"prerequisites": "{@feat Celebrity Dedication|APG}",
 			"entries": [
 				"When you meet someone's gaze, they are unable to look away. Choose one target creature. That creature must succeed at a Will save or be {@condition fascinated} until the end of your next turn; the DC for this save is equal to your class DC or spell DC, whichever is higher. If the creature succeeds at its save or its fascination ends due to a {@condition hostile} action, it becomes temporarily immune to your Mesmerizing Gaze for 1 day.",
-				"When you select this feat, it gains either the {@trait arcane} or {@trait occult} trait; once you make this choice, you can't change it."
+				"When you select this feat, it gains either the {@trait arcano} or {@trait ocultista} trait; once you make this choice, you can't change it."
 			]
 		},
 		{
@@ -10083,7 +10083,7 @@
 			],
 			"prerequisites": "expert in {@skill Occultism}",
 			"entries": [
-				"Your study of occult practices has shown you how to best defend against them. You gain a +1 circumstance bonus to all saving throws against {@trait occult} effects."
+				"Your study of occult practices has shown you how to best defend against them. You gain a +1 circumstance bonus to all saving throws against {@trait ocultista} effects."
 			]
 		},
 		{
@@ -13990,7 +13990,7 @@
 			],
 			"prerequisites": "{@feat Pervasive Superstition}",
 			"entries": [
-				"You don't just resist magic; you devour it. Whenever you succeed at a saving throw against a spell or {@trait magical} effect, you gain temporary Hit Points equal to double the spell's level, or equal to the level if the {@trait magical} effect isn't a spell. These temporary Hit Points last until the end of your next turn."
+				"You don't just resist magic; you devour it. Whenever you succeed at a saving throw against a spell or {@trait mágico} effect, you gain temporary Hit Points equal to double the spell's level, or equal to the level if the {@trait mágico} effect isn't a spell. These temporary Hit Points last until the end of your next turn."
 			]
 		},
 		{
@@ -14723,7 +14723,7 @@
 			"prerequisites": "{@class barbarian|crb|superstition instinct|superstition}",
 			"entries": [
 				"You draw upon your superstitious fury to destroy a spell. Make a {@action Strike} with a melee weapon or an unarmed attack against a creature, object, or a spell manifestation (such as the wall created by {@spell wall of fire} or the guardian from {@spell spiritual guardian}). If you're targeting something that doesn't have an AC listed, its AC is usually 10 against this Strike for targets that are very easy to hit, like a wall, or a different AC determined by the GM.",
-				"If your {@action Strike} hits, you can attempt to {@quickref counteract|CRB|3|counteracting} a single spell or {@trait magical} effect on the target. Your counteract level for this attempt is equal to half your level rounded up, and you use the result of your attack roll for the counteract check.",
+				"If your {@action Strike} hits, you can attempt to {@quickref counteract|CRB|3|counteracting} a single spell or {@trait mágico} effect on the target. Your counteract level for this attempt is equal to half your level rounded up, and you use the result of your attack roll for the counteract check.",
 				"Whether or not you succeed at your {@action Strike}, the target becomes temporarily immune to your Sunder Spell for 24 hours."
 			],
 			"leadsTo": [
@@ -16606,7 +16606,7 @@
 				{
 					"type": "list",
 					"items": [
-						"Was the clue left by a [creature trait]? (Choose a creature trait such as {@trait humanoid}, {@trait undead}, or {@trait dwarf}; this trait must be accurate as of the time the clue was left.)",
+						"Was the clue left by a [creature trait]? (Choose a creature trait such as {@trait humanoide}, {@trait undead}, or {@trait anão}; this trait must be accurate as of the time the clue was left.)",
 						"Was this clue left within the last hour?",
 						"Was this clue left within the last day?",
 						"Was the creature that left the clue in a heightened emotional state when it left the clue?",

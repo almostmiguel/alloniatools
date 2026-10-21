@@ -3691,7 +3691,7 @@
 							"unit": "day"
 						},
 						"entries": [
-							"Brumesgarth causes the pages of his spell tome to flip open, revealing an {@trait occult} spell of 9th rank or lower of his choice. For the remainder of the day, Brumesgarth can cast that spell as if it were one of his spells known for every rank of its base rank up to 9th."
+							"Brumesgarth causes the pages of his spell tome to flip open, revealing an {@trait ocultista} spell of 9th rank or lower of his choice. For the remainder of the day, Brumesgarth can cast that spell as if it were one of his spells known for every rank of its base rank up to 9th."
 						]
 					},
 					{
@@ -5229,7 +5229,7 @@
 							"divine"
 						],
 						"entries": [
-							"A wyrmwraith's claws rend divine magic. Whenever a wyrmwraith hits a creature with a spectral claw {@action Strike|PC1}, the wyrmwraith can attempt a {@skill Religion|PC1} check to counteract an ongoing {@trait divine|PC1} spell effect on the creature."
+							"A wyrmwraith's claws rend divine magic. Whenever a wyrmwraith hits a creature with a spectral claw {@action Strike|PC1}, the wyrmwraith can attempt a {@skill Religion|PC1} check to counteract an ongoing {@trait divino|PC1} spell effect on the creature."
 						]
 					},
 					{

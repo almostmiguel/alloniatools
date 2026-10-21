@@ -4426,7 +4426,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Syndara makes six {@action Strike||Strikes}. Any creature struck must succeed at a {@dc 46} Will save or be teleported to a location of Syndara's choice within 60 feet of him when the flurry is complete. The teleportation has the {@trait conjuration}, {@trait divine}, and {@trait teleportation} traits."
+							"Syndara makes six {@action Strike||Strikes}. Any creature struck must succeed at a {@dc 46} Will save or be teleported to a location of Syndara's choice within 60 feet of him when the flurry is complete. The teleportation has the {@trait conjuration}, {@trait divino}, and {@trait teleportation} traits."
 						],
 						"name": "Dimensional Flurry"
 					},
@@ -5220,7 +5220,7 @@
 						],
 						"requirements": "Syndara is in the {@i Glass Lighthouse}",
 						"entries": [
-							"Syndara exerts his will over the {@i Glass Lighthouse} to cause one of several effects. The effect is magical, but Syndara isn't using magic when he takes this action\u2014just triggering a {@trait magical} effect he already set up. The level for each of these effects is 10, and any save is {@dc 45}. Syndara or Syndara's Reflection can't use Planar Restructuring for {@dice 1d4} rounds.",
+							"Syndara exerts his will over the {@i Glass Lighthouse} to cause one of several effects. The effect is magical, but Syndara isn't using magic when he takes this action\u2014just triggering a {@trait mágico} effect he already set up. The level for each of these effects is 10, and any save is {@dc 45}. Syndara or Syndara's Reflection can't use Planar Restructuring for {@dice 1d4} rounds.",
 							{
 								"type": "list",
 								"items": [

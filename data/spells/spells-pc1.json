@@ -1911,7 +1911,7 @@
 				"unit": "action"
 			},
 			"entries": [
-				"Divine grace ensure that nothing can keep you prisoner or hold you back. You immediately escape from every {@trait magical} effect that has you {@condition immobilized|PC1} or {@condition grabbed|PC1} unless the effect is of a higher rank than your {@spell unimpeded stride|PC1} spell. You then {@action Stride|PC1}. During this movement, you ignore difficult terrain and any circumstance or status penalties to your Speed."
+				"Divine grace ensure that nothing can keep you prisoner or hold you back. You immediately escape from every {@trait mágico} effect that has you {@condition immobilized|PC1} or {@condition grabbed|PC1} unless the effect is of a higher rank than your {@spell unimpeded stride|PC1} spell. You then {@action Stride|PC1}. During this movement, you ignore difficult terrain and any circumstance or status penalties to your Speed."
 			]
 		},
 		{
@@ -4654,7 +4654,7 @@
 				"unit": "free"
 			},
 			"entries": [
-				"With a quick burst of laughter, you prolong a {@trait magical} effect you created. You {@action Sustain|PC1} a spell."
+				"With a quick burst of laughter, you prolong a {@trait mágico} effect you created. You {@action Sustain|PC1} a spell."
 			]
 		},
 		{
@@ -6042,7 +6042,7 @@
 				"number": 1,
 				"unit": "reaction"
 			},
-			"trigger": "A creature within 30 feet casts an {@trait arcane} spell.",
+			"trigger": "A creature within 30 feet casts an {@trait arcano} spell.",
 			"entries": [
 				"You gather the embers of another caster's spell, using your understanding of unified magic to pick apart their formulas and incantations well enough to imitate the spell yourself, if only for a short time. Until the end of your next turn, you can Cast the triggering Spell by expending a wizard spell slot of the same rank. That caster's spells can't trigger your {@spell interdisciplinary incantation|PC1} again for 24 hours."
 			]
@@ -8502,7 +8502,7 @@
 			},
 			"entries": [
 				"You alter how an item's or spell's magical aura appears to effects like {@spell detect magic|PC1}. You can hide the auras entirely, have an item register as a {@trait common} item of lower level, or make a spell register as a common spell of the same or lower rank. You can {@action Dismiss|PC1} the spell.",
-				"A caster using {@spell detect magic|PC1} or {@spell read aura|PC1} of an equal or higher rank can attempt to {@quickref disbelieve the illusion|CRB|2|disbelieving illusions|0} from magic aura using the skill matching the tradition of the spell ({@skill Arcana|PC1} for {@trait arcane}, {@skill Religion|PC1} for {@trait divine}, {@skill Occultism|PC1} for {@trait occult}, or {@skill Nature|PC1} for {@trait primal}). Further attempts by the same caster get the same result as the initial check to disbelieve."
+				"A caster using {@spell detect magic|PC1} or {@spell read aura|PC1} of an equal or higher rank can attempt to {@quickref disbelieve the illusion|CRB|2|disbelieving illusions|0} from magic aura using the skill matching the tradition of the spell ({@skill Arcana|PC1} for {@trait arcano}, {@skill Religion|PC1} for {@trait divino}, {@skill Occultism|PC1} for {@trait ocultista}, or {@skill Nature|PC1} for {@trait primal}). Further attempts by the same caster get the same result as the initial check to disbelieve."
 			],
 			"heightened": {
 				"X": {
@@ -9004,7 +9004,7 @@
 						"The following unarmed melee attacks, which are the only attacks you can {@action Strike|PC1} with. You're trained with them. Your attack modifier is +22, and your damage bonus is +6. These attacks are Strength based (for the purpose of the {@condition enfeebled|PC1} condition, for example). If your unarmed attack modifier is higher, you can use it instead. See below for more on these attacks. {@bold Melee} {@as 1} jaws, {@bold Damage} {@damage 2d12} piercing plus {@damage 2d6} damage of the same type as your Dragon Breath (see below); {@bold Melee} {@as 1} claw ({@trait agile}), {@bold Damage} {@damage 3d10} slashing; {@bold Melee} {@as 1} tail ({@trait reach} 10 feet), {@bold Damage} {@damage 3d10} bludgeoning.",
 						"{@skill Athletics|PC1} modifier of +23, unless your own modifier is higher.",
 						"{@bold Breath Weapon} {@as 2} You exhale deadly magical energy in an area, dealing {@damage 10d6} damage to each creature in the area with a basic save against your spell DC. The shape, damage type, and save type match that of your chosen dragon's breath. If the chosen dragon's breath can deal more than one type of damage, choose one when you cast dragon form. The shape is a 30-foot cone or a 100-foot line. Once activated, Dragon Breath can't be used again for {@dice 1d4} rounds. Dragon Breath has the tradition trait matching the type of dragon and the damage trait matching the type of damage it deals, if applicable.",
-						"{@bold Tradition Resistance} If the dragon's magical tradition matches that of your dragon form spell, you gain the listed ability. {@trait Arcane} resistance 5 against magic; {@trait divine} resistance 10 to {@trait spirit}, {@trait vitality}, and {@trait void}; {@trait occult} resistance 10 to {@trait mental}; {@trait primal} resistance 5 to physical damage."
+						"{@bold Tradition Resistance} If the dragon's magical tradition matches that of your dragon form spell, you gain the listed ability. {@trait Arcane} resistance 5 against magic; {@trait divino} resistance 10 to {@trait spirit}, {@trait vitality}, and {@trait eversão}; {@trait ocultista} resistance 10 to {@trait mental}; {@trait primal} resistance 5 to physical damage."
 					]
 				},
 				"The dragons from Monster Core use the following specifications for dragon form:",
@@ -9853,7 +9853,7 @@
 				"basic": true
 			},
 			"entries": [
-				"You point at a creature and invoke the demise of all things. The target takes 70 void damage with a basic Fortitude save. If the target is {@trait undead} or otherwise has {@trait void} healing, the spell loses the {@trait death} and void traits and gains the {@trait vitality} trait, and the target takes 70 vitality damage with a basic Fortitude save."
+				"You point at a creature and invoke the demise of all things. The target takes 70 void damage with a basic Fortitude save. If the target is {@trait undead} or otherwise has {@trait eversão} healing, the spell loses the {@trait death} and void traits and gains the {@trait vitality} trait, and the target takes 70 vitality damage with a basic Fortitude save."
 			],
 			"heightened": {
 				"plusX": {
@@ -10850,7 +10850,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"The target weapon becomes translucent and ghostly, and it can affect material and incorporeal creatures and objects. It gains the effects of the {@item ghost touch|PC1} property rune (GM Core 238), meaning it is {@trait magical} if it wasn't already, is especially effective against {@trait incorporeal} creatures, and can be wielded by a corporeal or incorporeal creature."
+				"The target weapon becomes translucent and ghostly, and it can affect material and incorporeal creatures and objects. It gains the effects of the {@item ghost touch|PC1} property rune (GM Core 238), meaning it is {@trait mágico} if it wasn't already, is especially effective against {@trait incorporeal} creatures, and can be wielded by a corporeal or incorporeal creature."
 			]
 		},
 		{
@@ -11376,7 +11376,7 @@
 				"unit": "special"
 			},
 			"entries": [
-				"Powerful wards hide a creature from divination magic. The target gains a +4 status bonus to saves against {@trait mental} effects. Hidden Mind attempts to counteract any detection, {@trait revelation}, and {@trait scrying} effects as if its spell level were 1 higher than its actual level. On a success, the {@trait divination} effect functions normally except that it detects nothing about the target and its possessions. For instance, detect magic would still detect other magic in the area, but not any magic on the target."
+				"Powerful wards hide a creature from divination magic. The target gains a +4 status bonus to saves against {@trait mental} effects. Hidden Mind attempts to counteract any detection, {@trait revelation}, and {@trait scrying} effects as if its spell level were 1 higher than its actual level. On a success, the {@trait divinotion} effect functions normally except that it detects nothing about the target and its possessions. For instance, detect magic would still detect other magic in the area, but not any magic on the target."
 			]
 		},
 		{
@@ -11529,7 +11529,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"You transform your appearance to that of a Small or Medium humanoid, such as a dwarf, elf, goblin, halfling, human, or orc. You gain the {@trait humanoid} trait in addition to your other traits while in this form, as well as any trait related to the creature's kind (such as goblin or human). If this transformation reduces your size, it reduces your reach accordingly (as the {@spell shrink|PC1} spell). This transformation doesn't change your statistics in any way, and you don't gain any special abilities of the humanoid form you assume. You can still wear and use your gear, which changes size (if necessary) to match your new form. If items leave your person, they return to their usual size.",
+				"You transform your appearance to that of a Small or Medium humanoid, such as a dwarf, elf, goblin, halfling, human, or orc. You gain the {@trait humanoide} trait in addition to your other traits while in this form, as well as any trait related to the creature's kind (such as goblin or human). If this transformation reduces your size, it reduces your reach accordingly (as the {@spell shrink|PC1} spell). This transformation doesn't change your statistics in any way, and you don't gain any special abilities of the humanoid form you assume. You can still wear and use your gear, which changes size (if necessary) to match your new form. If items leave your person, they return to their usual size.",
 				"Humanoid form grants you a +4 status bonus to {@skill Deception|PC1} checks to pass as a generic member of the chosen ancestry, and you add your level even if you're untrained, but you can't make yourself look like a specific person. If you want to {@action Impersonate|PC1} an individual, you still need to create a disguise, though the GM won't factor in the difference in ancestry when determining the DC of your {@skill Deception|PC1} check. You can {@action Dismiss|PC1} this spell."
 			],
 			"heightened": {
@@ -14605,7 +14605,7 @@
 				"sustained": true
 			},
 			"entries": [
-				"You summon a {@creature phantasmal minion|crb} (see below). The minion is roughly the shape of a humanoid. You can choose to have it be {@condition invisible|PC1} or have an ephemeral appearance, but it's obviously a {@trait magical} effect, not a real creature.",
+				"You summon a {@creature phantasmal minion|crb} (see below). The minion is roughly the shape of a humanoid. You can choose to have it be {@condition invisible|PC1} or have an ephemeral appearance, but it's obviously a {@trait mágico} effect, not a real creature.",
 				{
 					"type": "pf2-sample-box",
 					"name": "",
@@ -14978,7 +14978,7 @@
 				"sustained": true
 			},
 			"entries": [
-				"The simplest magic does your bidding. You can perform simple {@trait magical} effects for as long as you {@action Sustain|PC1} the Spell. Each time you {@action Sustain|PC1} the Spell, you can choose one of four options.",
+				"The simplest magic does your bidding. You can perform simple {@trait mágico} effects for as long as you {@action Sustain|PC1} the Spell. Each time you {@action Sustain|PC1} the Spell, you can choose one of four options.",
 				{
 					"type": "list",
 					"items": [
@@ -15283,7 +15283,7 @@
 			},
 			"targets": "1 object",
 			"entries": [
-				"You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is {@trait magical}. You or anyone you advise about the aura gains a +2 circumstance bonus to {@action Identify Magic|PC1} on the item. If the object is illusory, you detect this only if the effect's rank is lower than the rank of your read aura spell."
+				"You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is {@trait mágico}. You or anyone you advise about the aura gains a +2 circumstance bonus to {@action Identify Magic|PC1} on the item. If the object is illusory, you detect this only if the effect's rank is lower than the rank of your read aura spell."
 			],
 			"heightened": {
 				"X": {
@@ -19418,7 +19418,7 @@
 				"number": 30,
 				"unit": "feet"
 			},
-			"targets": "1 creature that is undead or otherwise has {@trait void} healing",
+			"targets": "1 creature that is undead or otherwise has {@trait eversão} healing",
 			"savingThrow": {
 				"type": [
 					"F"

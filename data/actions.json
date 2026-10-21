@@ -1187,7 +1187,7 @@
 				"move"
 			],
 			"entries": [
-				"You stalk the shadows, watching for targets and preparing to dispatch them with a quiet, decisive blow. While using this activity, if you are unnoticed by a {@trait humanoid} of your level or lower, you can {@action Stride} up to half your Speed, ending the movement adjacent to the target. Attempt either an attack roll against the target's AC + 5, or attempt a {@skill Deception} check or {@skill Stealth} check against the target's {@skill Perception} DC.",
+				"You stalk the shadows, watching for targets and preparing to dispatch them with a quiet, decisive blow. While using this activity, if you are unnoticed by a {@trait humanoide} of your level or lower, you can {@action Stride} up to half your Speed, ending the movement adjacent to the target. Attempt either an attack roll against the target's AC + 5, or attempt a {@skill Deception} check or {@skill Stealth} check against the target's {@skill Perception} DC.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -1496,9 +1496,8 @@
 			]
 		},
 		{
-			"name": "Call on Ancient Blood",
+			"name": "Invocar Sangue Ancestral",
 			"source": "PC1",
-			"remaster": true,
 			"page": 43,
 			"activity": {
 				"number": 1,
@@ -1506,15 +1505,15 @@
 			},
 			"actionType": {
 				"ancestry": [
-					"Dwarf"
+					"Anão|PC1"
 				],
 				"heritage": [
-					"Ancient-Blooded"
+					"Sangue Ancestral"
 				]
 			},
-			"trigger": "You attempt a saving throw against a {@trait magical} effect, but you haven't rolled yet.",
+			"trigger": "Você fará um teste de salvamento contra um efeito {@trait mágico}, mas ainda não jogou os dados.",
 			"entries": [
-				"Your ancestors' innate resistance to magic surges before slowly ebbing down. You gain a +1 circumstance bonus to saving throws on the triggering save and other saves against magical effects until the end of this turn."
+				"A resistência mágica inata dos seus ancestrais se manifesta, antes de lentamente começar a desvanecer. Até o fim deste turno, você recebe +1 de bônus de circustância em salvamentos contra o efeito acionador e outros efeitos mágicos."
 			]
 		},
 		{
@@ -5372,9 +5371,9 @@
 				{
 					"type": "successDegree",
 					"entries": {
-						"Critical Success": "You remember the creature's weaknesses, and as you empower your esoterica, you have a flash of insight that grants even more knowledge about the creature. You learn all of the creature's resistances, weaknesses, and immunities, including the amounts of the resistances and weaknesses and any unusual weaknesses or vulnerabilities, such as what spells will pass through a golem's antimagic. You can exploit either the creature's mortal weakness or personal antithesis. Your unarmed and weapon {@action Strike||Strikes} against the creature also become {@trait magical} if they weren't already.",
-						"Success": "You recall an important fact about the creature, learning its highest weakness (or one of its highest weaknesses, if it has multiple with the same value) but not its other weaknesses, resistances, or immunities. You can exploit either the creature's mortal weakness or personal antithesis. Your unarmed and weapon {@action Strike||Strikes} against the creature also become {@trait magical} if they weren't already.",
-						"Failure": "Failing to recall a salient weakness about the creature, you instead attempt to exploit a more personal vulnerability. You can exploit only the creature's personal antithesis. Your unarmed and weapon {@action Strike||Strikes} against the creature also become {@trait magical} if they weren't already.",
+						"Critical Success": "You remember the creature's weaknesses, and as you empower your esoterica, you have a flash of insight that grants even more knowledge about the creature. You learn all of the creature's resistances, weaknesses, and immunities, including the amounts of the resistances and weaknesses and any unusual weaknesses or vulnerabilities, such as what spells will pass through a golem's antimagic. You can exploit either the creature's mortal weakness or personal antithesis. Your unarmed and weapon {@action Strike||Strikes} against the creature also become {@trait mágico} if they weren't already.",
+						"Success": "You recall an important fact about the creature, learning its highest weakness (or one of its highest weaknesses, if it has multiple with the same value) but not its other weaknesses, resistances, or immunities. You can exploit either the creature's mortal weakness or personal antithesis. Your unarmed and weapon {@action Strike||Strikes} against the creature also become {@trait mágico} if they weren't already.",
+						"Failure": "Failing to recall a salient weakness about the creature, you instead attempt to exploit a more personal vulnerability. You can exploit only the creature's personal antithesis. Your unarmed and weapon {@action Strike||Strikes} against the creature also become {@trait mágico} if they weren't already.",
 						"Critical Failure": "You couldn't remember the right object to use and become distracted while you rummage through your esoterica. You become {@condition flat-footed} until the beginning of your next turn."
 					}
 				}
@@ -6424,27 +6423,6 @@
 			"requirements": "You have a burrow Speed",
 			"entries": [
 				"You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can't burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so."
-			]
-		},
-		{
-			"name": "Call on Ancient Blood",
-			"source": "CRB",
-			"page": 35,
-			"activity": {
-				"number": 1,
-				"unit": "reaction"
-			},
-			"actionType": {
-				"ancestry": [
-					"Dwarf"
-				],
-				"heritage": [
-					"Ancient-Blooded"
-				]
-			},
-			"trigger": "You attempt a saving throw against a {@trait magical} effect, but you haven't rolled yet.",
-			"entries": [
-				"Your ancestors' innate resistance to magic surges, before slowly ebbing down. You gain a +1 circumstance bonus until the end of this turn. This bonus also applies to the triggering save."
 			]
 		},
 		{
@@ -8702,9 +8680,9 @@
 					"Celestial Envoy|LOAG"
 				]
 			},
-			"trigger": "You attempt a saving throw against a {@trait divine} effect, but you haven't rolled yet.",
+			"trigger": "You attempt a saving throw against a {@trait divino} effect, but you haven't rolled yet.",
 			"entries": [
-				"You rise above the triggering effect, refusing to be harmed by it. You gain a +1 circumstance bonus to the triggering saving throw and to any other saving throws you attempt against {@trait divine} effects until the start of your next turn."
+				"You rise above the triggering effect, refusing to be harmed by it. You gain a +1 circumstance bonus to the triggering saving throw and to any other saving throws you attempt against {@trait divino} effects until the start of your next turn."
 			]
 		},
 		{
@@ -9115,7 +9093,7 @@
 				"The conduit that allows your eidolon to manifest is also a tether between you. Your eidolon must remain within 100 feet of you at all times and can't willingly go beyond that limit. If forced beyond this distance, or if you are reduced to 0 Hit Points, your eidolon's physical form dissolves: your eidolon unmanifests, and you need to use Manifest Eidolon to manifest it again."
 			],
 			"special": [
-				"This activity has the trait matching your eidolon's tradition ({@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal})."
+				"This activity has the trait matching your eidolon's tradition ({@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal})."
 			]
 		},
 		{
@@ -10550,7 +10528,7 @@
 				"You project your senses into your eidolon, allowing you to perceive through it. When you do, you lose all sensory information from your own body, but can sense through your eidolon's body for up to 1 minute. You can {@action Dismiss} this effect."
 			],
 			"special": [
-				"This action has the trait matching your eidolon's tradition ({@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal}). Your eidolon can also use this ability. When it does, it projects its senses into your body."
+				"This action has the trait matching your eidolon's tradition ({@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal}). Your eidolon can also use this ability. When it does, it projects its senses into your body."
 			]
 		},
 		{
@@ -10680,7 +10658,7 @@
 				"special": "until recharged (see below)"
 			},
 			"entries": [
-				"You channel a spell into a punch or sword thrust to deliver a combined attack. You {@action Cast a Spell} that takes 1 or 2 actions to cast and requires a spell attack roll. The effects of the spell don't occur immediately but are imbued into your attack instead. Make a melee Strike with a weapon or unarmed attack. Your spell is coupled with your attack, using your attack roll result to determine the effects of both the Strike and the spell. This counts as two attacks for your multiple attack penalty, but you don't apply the penalty until after you've completed the Spellstrike. The infusion of spell energy grants your {@action Strike} the {@trait arcane} trait, making it {@trait magical}.",
+				"You channel a spell into a punch or sword thrust to deliver a combined attack. You {@action Cast a Spell} that takes 1 or 2 actions to cast and requires a spell attack roll. The effects of the spell don't occur immediately but are imbued into your attack instead. Make a melee Strike with a weapon or unarmed attack. Your spell is coupled with your attack, using your attack roll result to determine the effects of both the Strike and the spell. This counts as two attacks for your multiple attack penalty, but you don't apply the penalty until after you've completed the Spellstrike. The infusion of spell energy grants your {@action Strike} the {@trait arcano} trait, making it {@trait mágico}.",
 				"After you use Spellstrike, you can't do so again until you recharge your Spellstrike as a single action, which has the {@trait concentrate} trait. You also recharge your Spellstrike when you cast a {@filter conflux spell|spells||Class=Magus} that takes at least 1 action to cast; casting a focus spell of another type doesn't recharge your Spellstrike."
 			],
 			"info": [
@@ -12855,7 +12833,7 @@
 				{
 					"type": "successDegree",
 					"entries": {
-						"Critical Success": "The deity blesses the copper coin but also imbues you with additional divine energy and insight. You heal {@dice 1d8+8} Hit Points and can cast {@spell guidance} once in the next 24 hours as a {@trait divine} spell. You treat all further critical successes at Invoking Shrine Blessing as regular successes instead.",
+						"Critical Success": "The deity blesses the copper coin but also imbues you with additional divine energy and insight. You heal {@dice 1d8+8} Hit Points and can cast {@spell guidance} once in the next 24 hours as a {@trait divino} spell. You treat all further critical successes at Invoking Shrine Blessing as regular successes instead.",
 						"Success": "The deity blesses the copper coin.",
 						"Failure": "You fail to achieve a blessing but suffer no ill effects. You can't attempt to invoke a blessing at this specific shrine again for 24 hours.",
 						"Critical Failure": "You anger the deity. The copper coin vanishes, you can't attempt to invoke a blessing at this shrine again for 1 week, and you become {@condition stupefied||stupefied 1} for 1 hour."

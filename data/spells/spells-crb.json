@@ -2715,7 +2715,7 @@
 							"style": "list-no-bullets",
 							"items": [
 								"5. {@b Blue} The wall stops {@trait auditory}, {@trait petrification}, {@trait sonic}, and {@trait visual} effects from passing through, and creatures passing through are subject to the effects of {@spell flesh to stone}. {@spell Magic missile} can counteract a blue chromatic wall.",
-								"6. {@b Indigo} The wall stops {@trait divination} and {@trait mental} effects from passing through, and those passing through are subject to the effects of {@spell warp mind}. {@spell Searing light} can counteract an indigo chromatic wall.",
+								"6. {@b Indigo} The wall stops {@trait divinotion} and {@trait mental} effects from passing through, and those passing through are subject to the effects of {@spell warp mind}. {@spell Searing light} can counteract an indigo chromatic wall.",
 								"7. {@b Violet} The wall prevents spells from targeting the other side (area effects still cross as normal). Creatures passing through must succeed at a Will save or they are {@condition slowed 1} for 1 minute; on a critical failure, the creature is instead sent to another plane, with the effect of {@spell plane shift}. {@spell Dispel magic} can counteract a violet chromatic wall.",
 								"8. Reroll, and creatures that pass through the wall take a \u20132 circumstance penalty to their saves."
 							]
@@ -5946,7 +5946,7 @@
 						"{@ability Darkvision} and imprecise {@ability scent} 60 feet.",
 						"One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can {@action Strike} with. You're trained with them. Your attack modifier is +22, and your damage bonus is +6. These attacks are Strength based (for the purpose of the {@condition enfeebled} condition, for example). If your unarmed attack modifier is higher, you can use it instead. See below for more on these attacks.",
 						"{@skill Athletics} modifier of +23, unless your own modifier is higher.",
-						"{@bold Breath Weapon} {@as 2} ({@trait arcane}, {@trait evocation}) The shape, damage, and damage type of your breath weapon depend on your specific dragon form (see below). A creature in the area attempts a basic save against your spell DC. This is a Reflex save unless stated otherwise in the special ability description for your specific dragon form. Once activated, your breath weapon can't be used again for {@dice 1d4} rounds. Your breath weapon has the trait corresponding to the type of damage it deals."
+						"{@bold Breath Weapon} {@as 2} ({@trait arcano}, {@trait evocation}) The shape, damage, and damage type of your breath weapon depend on your specific dragon form (see below). A creature in the area attempts a basic save against your spell DC. This is a Reflex save unless stated otherwise in the special ability description for your specific dragon form. Once activated, your breath weapon can't be used again for {@dice 1d4} rounds. Your breath weapon has the trait corresponding to the type of damage it deals."
 					]
 				},
 				"You also gain specific abilities based on the type of dragon you choose:",
@@ -10583,7 +10583,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"You transform your appearance to that of a Small or Medium humanoid, such as a dwarf, elf, goblin, halfling, human, orc, or lizardfolk. You gain the {@trait humanoid} trait in addition to your other traits while in this form, as well as any trait related to the creature's kind (such as goblin or human). If this transformation reduces your size, it reduces your reach accordingly (as the {@spell shrink} spell). This transformation doesn't change your statistics in any way, and you don't gain any special abilities of the humanoid form you assume. You can still wear and use your gear, which changes size (if necessary) to match your new form.",
+				"You transform your appearance to that of a Small or Medium humanoid, such as a dwarf, elf, goblin, halfling, human, orc, or lizardfolk. You gain the {@trait humanoide} trait in addition to your other traits while in this form, as well as any trait related to the creature's kind (such as goblin or human). If this transformation reduces your size, it reduces your reach accordingly (as the {@spell shrink} spell). This transformation doesn't change your statistics in any way, and you don't gain any special abilities of the humanoid form you assume. You can still wear and use your gear, which changes size (if necessary) to match your new form.",
 				"If items leave your person, they return to their usual size.",
 				"Humanoid form grants you a +4 status bonus to {@skill Deception} checks to pass as a generic member of the chosen ancestry, and you add your level even if you're untrained, but you can't make yourself look like a specific person. If you want to {@action Impersonate} an individual, you still need to create a disguise, though the GM won't factor in the difference in ancestry when determining the DC of your {@skill Deception} check. You can {@action Dismiss} this spell."
 			],
@@ -13278,7 +13278,7 @@
 			},
 			"entries": [
 				"Powerful wards hide a creature from divination magic. The target gains a +4 status bonus to saves against {@trait mental} effects.",
-				"Mind blank attempts to counteract any detection, {@trait revelation}, and {@trait scrying} effects as if its spell level were 1 higher than its actual level. On a success, the {@trait divination} effect functions normally except that it detects nothing about the target and its possessions. For instance, detect magic would still detect other magic in the area, but not any magic on the target."
+				"Mind blank attempts to counteract any detection, {@trait revelation}, and {@trait scrying} effects as if its spell level were 1 higher than its actual level. On a success, the {@trait divinotion} effect functions normally except that it detects nothing about the target and its possessions. For instance, detect magic would still detect other magic in the area, but not any magic on the target."
 			]
 		},
 		{
@@ -15421,7 +15421,7 @@
 				"sustained": true
 			},
 			"entries": [
-				"The simplest magic does your bidding. You can perform simple {@trait magical} effects for as long as you {@action Sustain a Spell||Sustain the Spell}. Each time you {@action Sustain a Spell||Sustain the Spell}, you can choose one of four options.",
+				"The simplest magic does your bidding. You can perform simple {@trait mágico} effects for as long as you {@action Sustain a Spell||Sustain the Spell}. Each time you {@action Sustain a Spell||Sustain the Spell}, you can choose one of four options.",
 				{
 					"type": "list",
 					"items": [
@@ -17073,7 +17073,7 @@
 				"unit": "special"
 			},
 			"entries": [
-				"You conjure a towering mansion up to four stories tall and up to 300 feet on a side. While {@action Cast a Spell||Casting the Spell}, you hold an image of the mansion and its desired appearance in your mind. The mansion can contain as many or as few rooms as you desire, and it is decorated as you imagine it. You can imagine a purpose for each room of the mansion, and the proper accouterments appear within. Any furniture or other mundane fixtures function normally for anyone inside the mansion, but they cease to exist if taken beyond its walls. No fixture created with this spell can create {@trait magical} effects, but magical devices brought into the mansion function normally.",
+				"You conjure a towering mansion up to four stories tall and up to 300 feet on a side. While {@action Cast a Spell||Casting the Spell}, you hold an image of the mansion and its desired appearance in your mind. The mansion can contain as many or as few rooms as you desire, and it is decorated as you imagine it. You can imagine a purpose for each room of the mansion, and the proper accouterments appear within. Any furniture or other mundane fixtures function normally for anyone inside the mansion, but they cease to exist if taken beyond its walls. No fixture created with this spell can create {@trait mágico} effects, but magical devices brought into the mansion function normally.",
 				"Your mansion contains the same types and quantities of foodstuffs and servants as created by the {@spell magnificent mansion} spell.",
 				"Each of the mansion's exterior doorways and windows are protected by {@spell alarm} spells. You choose whether each alarm is audible or mental as you {@action Cast a Spell||Cast the Spell}, and each has a different sound (for an audible alarm) or sensation (for a mental one), allowing you to instantly determine which portal has been used."
 			]
@@ -17980,7 +17980,7 @@
 					"V"
 				]
 			],
-			"trigger": "A spell or {@trait magical} effect deals damage.",
+			"trigger": "A spell or {@trait mágico} effect deals damage.",
 			"range": {
 				"number": 60,
 				"unit": "feet"
@@ -22680,7 +22680,7 @@
 				]
 			],
 			"entries": [
-				"Nothing can hold you in place. You immediately escape from every {@trait magical} effect that has you {@condition immobilized} or {@condition grabbed} unless the effect is of a higher level than your {@spell unimpeded stride} spell.",
+				"Nothing can hold you in place. You immediately escape from every {@trait mágico} effect that has you {@condition immobilized} or {@condition grabbed} unless the effect is of a higher level than your {@spell unimpeded stride} spell.",
 				"You then {@action Stride}. During this movement, you ignore {@quickref difficult terrain||3|terrain} and any circumstance or status penalties to your Speed."
 			]
 		},

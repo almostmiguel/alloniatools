@@ -881,9 +881,16 @@ class ClassesPage extends BaseComponent {
 		};
 		const fluffStack = [""];
 		renderer.recursiveRender(cls.fluff, fluffStack, {prefix: "<p class=\"pf2-p\">", suffix: "</p>"})
+		const $flavor = $(`<div class="pf2-fluff"/>`).toggleClass("hidden-fluff", !this._state.isShowFluff);
+		((cls.summary || {}).images || []).forEach(url => {
+			const $link = $(`<a class="cls__info-image" target="_blank" rel="noopener noreferrer"/>`)
+				.attr("href", url).appendTo($flavor);
+			$(`<img loading="lazy"/>`).attr({src: url, alt: cls.name}).appendTo($link);
+		});
+		$flavor.append(renderer.render(flavor));
 
 		$$`<div id="class-name">${renderer.render(className)}</div>
-		<div class="pf2-fluff">${renderer.render(flavor)}</div>
+		${$flavor}
 		<div data-feature-type="class"><div class="pf2-sidebar--class mobile__hidden">${renderer.render(statSidebar)}</div></div>
 		<div data-feature-type="class">${renderer.render(keyAbility)}</div>
 		<div data-feature-type="class"><div class="pf2-sidebar--class pf2-sidebar--compact mobile__visible">${statSidebarEntries.map(e => `<div>${renderer.render({type: "pf2-title", name: e.name})}${e.entries.map(r => `<p class="pf2-sidebar__text">${renderer.render(r)}</p>`).join("")}</div>`)}</div></div>
@@ -1105,30 +1112,10 @@ class ClassesPage extends BaseComponent {
 			inactiveText: "Show Feats",
 		}).title("Toggle Feat View").addClass("mb-1");
 
-		const imageLinks = ((this.activeClass.summary || {}).images || []).map(l => `<a href="${l}" target="_blank" rel="noopener noreferrer">${l}</a>`);
-		const $dropDownImages = $(`<li class="dropdown" style="list-style: none"></li>`);
-		const $dropDownImagesButton = $(`<button class="btn btn-default btn-xs mr-2 mb-1 flex-3">Images</button>`).on("click", (evt) => {
-			evt.preventDefault();
-			evt.stopPropagation();
-			if (evt.ctrlKey || evt.shiftKey) {
-				imageLinks.forEach(link => $(link)[0].click());
-			} else {
-				$dropDownImagesButton.toggleClass("ui-tab__btn-tab-head");
-				$dropDownImages.toggleClass("open");
-			}
-		}).appendTo($dropDownImages);
-		const $dropDownImagesContent = $(`<li class="dropdown-menu dropdown-menu--top" style="margin-top: -0.25rem !important; border-radius: 0"></li>`).appendTo($dropDownImages);
-		imageLinks.forEach(l => $dropDownImagesContent.append(`<li>${l}</li>`));
-		document.addEventListener("click", () => {
-			$dropDownImages.toggleClass("open", false);
-			$dropDownImagesButton.toggleClass("ui-tab__btn-tab-head", false);
-		});
-
 		$$`<div class="flex-v-center m-1 flex-wrap">
 			<div class="mr-2 no-shrink">${$btnToggleFeats}</div>
-			${imageLinks.length ? $$`<div class="mr-2 no-shrink">${$dropDownImages}</div>` : ""}
 			<div class="btn-group no-shrink mb-1 ml-auto">${$btnToggleFeatures}${$btnToggleFluff}</div>
-		</divc>`.appendTo($wrp);
+		</div>`.appendTo($wrp);
 	}
 
 	_render_renderSubclassButtons ($wrp) {

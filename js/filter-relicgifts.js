@@ -40,7 +40,7 @@ class PageFilterRelicGifts extends PageFilter {
 		if (it.prerequisites) it._fMisc.push("Has Prerequisites");
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(it._fSources);
@@ -62,7 +62,7 @@ class PageFilterRelicGifts extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

@@ -22,8 +22,8 @@ class PageFilterAncestries extends PageFilter {
 		this._speedFilter = new RangeFilter({
 			header: "Speed",
 			isLabelled: true,
-			labels: [20, 25, 30],
-			labelDisplayFn: (it) => `${it} feet`,
+			labels: [6, 7.5, 9],
+			labelDisplayFn: (it) => `${it} metros`,
 		});
 		this._speedTypeFilter = new Filter({
 			header: "Speed Types",
@@ -82,7 +82,7 @@ class PageFilterAncestries extends PageFilter {
 		});
 	}
 
-	addToFilters (ancestry, isExcluded, opts) {
+	_addToFilters (ancestry, isExcluded, opts) {
 		if (isExcluded) return;
 		this._sourceFilter.addItem(ancestry._fSources);
 		this._hpFilter.addItem(ancestry.hp);
@@ -112,7 +112,7 @@ class PageFilterAncestries extends PageFilter {
 		];
 	}
 
-	toDisplay (values, a) {
+	_toDisplay (values, a) {
 		return this._filterBox.toDisplay(
 			values,
 			a._fSources,

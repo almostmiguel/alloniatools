@@ -2486,7 +2486,7 @@
 					{
 						"name": "all damage",
 						"amount": 10,
-						"note": "except force, {@item ghost touch}, {@trait spirit}, or {@trait vitality}; double resistance vs. non-{@trait magical}"
+						"note": "except force, {@item ghost touch}, {@trait spirit}, or {@trait vitality}; double resistance vs. non-{@trait mágico}"
 					}
 				]
 			},
@@ -2873,7 +2873,7 @@
 					{
 						"name": "all damage",
 						"amount": 10,
-						"note": "except force, {@item ghost touch}, {@trait spirit}, or {@trait vitality}; double resistance vs. non-{@trait magical}"
+						"note": "except force, {@item ghost touch}, {@trait spirit}, or {@trait vitality}; double resistance vs. non-{@trait mágico}"
 					}
 				]
 			},

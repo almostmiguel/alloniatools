@@ -88,7 +88,7 @@ class PageFilterClasses extends PageFilter {
 
 	_addEntrySourcesToFilter (entry) { this._sourceWalker(entry, this._sourcePrimitiveHandlers); }
 
-	addToFilters (cls, isExcluded, opts) {
+	_addToFilters (cls, isExcluded, opts) {
 		if (isExcluded) return;
 		opts = opts || {};
 		const subclassExclusions = opts.subclassExclusions || {};
@@ -134,7 +134,7 @@ class PageFilterClasses extends PageFilter {
 		});
 	}
 
-	toDisplay (values, c) {
+	_toDisplay (values, c) {
 		return this._filterBox.toDisplay(
 			values,
 			this.isAnySubclassDisplayed(values, c) ? c._fSourceSubclass : c._fSources,

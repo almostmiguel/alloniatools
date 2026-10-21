@@ -1059,7 +1059,7 @@
 			],
 			"prerequisites": "{@feat Easily Dismissed|LOCG}",
 			"entries": [
-				"Your ability to blend into the background allows you to fade away entirely or appear innocuous even to {@trait magical} effects. You gain invisibility and misdirection as 2nd-level innate occult spells. You can target only yourself with invisibility, and you must be the primary target of misdirection. You can cast each spell once per day."
+				"Your ability to blend into the background allows you to fade away entirely or appear innocuous even to {@trait mágico} effects. You gain invisibility and misdirection as 2nd-level innate occult spells. You can target only yourself with invisibility, and you must be the primary target of misdirection. You can cast each spell once per day."
 			]
 		},
 		{
@@ -2152,7 +2152,7 @@
 			"traits": [
 				"leshy"
 			],
-			"trigger": "You attempt a saving throw against a spell or {@trait magical} effect, but haven't rolled yet.",
+			"trigger": "You attempt a saving throw against a spell or {@trait mágico} effect, but haven't rolled yet.",
 			"entries": [
 				"You notice spirits that inhabit objects, learning which bring good fortune and which are unlucky. You focus on the power of a lucky object, granting you a +1 circumstance bonus to your saving throw against the triggering effect."
 			],
@@ -2238,7 +2238,7 @@
 			],
 			"prerequisites": "{@feat Leshy Superstition|LOCG}",
 			"entries": [
-				"You have a keepsake that grants you luck. You gain a +1 circumstance bonus to saves against spells and {@trait magical} effects at all times, not just when you use Leshy Superstition. If you lose the keepsake, you lose the bonus until you designate a new keepsake, typically over the course of a week."
+				"You have a keepsake that grants you luck. You gain a +1 circumstance bonus to saves against spells and {@trait mágico} effects at all times, not just when you use Leshy Superstition. If you lose the keepsake, you lose the bonus until you designate a new keepsake, typically over the course of a week."
 			]
 		},
 		{

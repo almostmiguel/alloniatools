@@ -87,7 +87,7 @@ class PageFilterFeats extends PageFilter {
 		}
 	}
 
-	addToFilters (feat, isExcluded) {
+	_addToFilters (feat, isExcluded) {
 		if (isExcluded) return;
 
 		this._typeFilter.addItem(feat._fType);
@@ -117,7 +117,7 @@ class PageFilterFeats extends PageFilter {
 		];
 	}
 
-	toDisplay (values, ft) {
+	_toDisplay (values, ft) {
 		return this._filterBox.toDisplay(
 			values,
 			ft._fSources,

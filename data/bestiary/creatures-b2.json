@@ -32033,7 +32033,7 @@
 							"primal"
 						],
 						"entries": [
-							"The leydroth unleashes a bestial roar that reverberates within a 30-foot emanation. It rolls an {@skill Intimidation} check and compares the result to the Will DC of each creature in the area, with the effects of {@action Demoralize}. It also uses this result to attempt to counteract each spell or {@trait magical} effect in the area, plus one item or effect on each creature in the area, with the effects of dispel magic. The leydroth can't use Dispelling Roar again for {@dice 1d4} rounds."
+							"The leydroth unleashes a bestial roar that reverberates within a 30-foot emanation. It rolls an {@skill Intimidation} check and compares the result to the Will DC of each creature in the area, with the effects of {@action Demoralize}. It also uses this result to attempt to counteract each spell or {@trait mágico} effect in the area, plus one item or effect on each creature in the area, with the effects of dispel magic. The leydroth can't use Dispelling Roar again for {@dice 1d4} rounds."
 						],
 						"name": "Dispelling Roar"
 					},

@@ -278,7 +278,7 @@
 			],
 			"prerequisites": "trained in {@skill Crafting|PC1}",
 			"entries": [
-				"Your knowledge of items' construction allows you to discern their {@trait magical} effects as well. You can use {@skill Crafting|PC1} instead of a skill associated with a magic tradition to {@action Identify Magic|PC1} on magic items, though not on any other sorts of magic."
+				"Your knowledge of items' construction allows you to discern their {@trait mágico} effects as well. You can use {@skill Crafting|PC1} instead of a skill associated with a magic tradition to {@action Identify Magic|PC1} on magic items, though not on any other sorts of magic."
 			]
 		},
 		{

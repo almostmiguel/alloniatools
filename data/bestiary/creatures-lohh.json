@@ -348,7 +348,7 @@
 						},
 						"requirements": "The Bloodstorm is in Demon Shape",
 						"entries": [
-							"pincer {@hit +27||Pincer} ({@trait evil}, {@trait magical}, {@trait reach <20 feet>}), {@b Damage} {@damage 3d8+15} piercing plus {@damage 1d4} evil and {@ability Improved Grab}"
+							"pincer {@hit +27||Pincer} ({@trait evil}, {@trait mágico}, {@trait reach <20 feet>}), {@b Damage} {@damage 3d8+15} piercing plus {@damage 1d4} evil and {@ability Improved Grab}"
 						]
 					},
 					{

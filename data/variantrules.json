@@ -812,7 +812,7 @@
 														"type": "list",
 														"items": [
 															"{@i Two Items:} Word of faith restores {@dice 1d10} Hit Points per relic level and reduces the target's {@condition frightened} value by 2.",
-															"{@i Three Items:} The claws you gain from feral claws are {@trait magical} and deal {@damage 1d4} good damage.",
+															"{@i Three Items:} The claws you gain from feral claws are {@trait mágico} and deal {@damage 1d4} good damage.",
 															"{@i Four Items:} You and your allies affected by {@relicGift righteous call} deal {@damage 1d4} additional good damage with successful {@action Strike||Strikes}, rather than none or 1. This {@damage 1d4} stacks with that from your feral claws and damage from the {@item holy} rune effect you gain from {@relicGift righteous call}.",
 															"{@i Five Items:} In your form of fury, you have darkvision and gain 20 additional temporary Hit Points, but you have weakness 5 to evil damage. You don't need to change your size to gain the benefits, other than reach, of a higher-level battle form. Also, your unarmed attacks from this form have the {@item holy} weapon property rune."
 														]
@@ -7449,7 +7449,7 @@
 										"sections": [
 											[
 												[
-													"Most ley lines are simply naturally occurring conduits of pure magical energy. Tapping into a basic ley line allows spellcasters to modify their spells. This ley line has the {@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal} trait as appropriate.",
+													"Most ley lines are simply naturally occurring conduits of pure magical energy. Tapping into a basic ley line allows spellcasters to modify their spells. This ley line has the {@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal} trait as appropriate.",
 													{
 														"type": "successDegree",
 														"entries": {
@@ -7883,7 +7883,7 @@
 								{
 									"type": "list",
 									"items": [
-										"A trait associated with one of the magic traditions: {@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal}.",
+										"A trait associated with one of the magic traditions: {@trait arcano}, {@trait divino}, {@trait ocultista}, or {@trait primal}.",
 										"The ability to cast a cantrip (PCs choose one upon character creation) from the tradition associated with that trait.",
 										"The {@action Cast a Spell} activity.",
 										"Proficiency rank in spell DCs and spell attack rolls with the chosen tradition equal to their class DC or their highest proficiency rank in spell DCs, whichever is higher. They can choose any mental ability score (Intelligence, Wisdom, or Charisma) to be associated with their innate spells granted by pervasive magic.",
@@ -7912,7 +7912,7 @@
 										"entries": [
 											"Exposure to a significant magical event overloaded you with magical energy. Perhaps you were exposed to dangerous levels of magical energy that left you near death, or it built up over long-term exposure to a powerful source of magic.",
 											"Choose two ability boosts. One must be Constitution and one is a free ability boost.",
-											"Your innate {@trait magical} trait is {@trait primal}. Choose acid, cold, electricity, fire, force, negative, positive, or sonic. You are trained in a {@skill Lore} skill associated with the chosen energy (such as {@skill Lore||Fire Lore}) and you gain resistance to that energy type equal to half your level (minimum 1)."
+											"Your innate {@trait mágico} trait is {@trait primal}. Choose acid, cold, electricity, fire, force, negative, positive, or sonic. You are trained in a {@skill Lore} skill associated with the chosen energy (such as {@skill Lore||Fire Lore}) and you gain resistance to that energy type equal to half your level (minimum 1)."
 										],
 										"boosts": [
 											"Constitution",
@@ -7938,7 +7938,7 @@
 										"entries": [
 											"You spent years predicting, identifying, and harnessing the innate magical talents of those around you. A magic-rich world has taught you that you can never have too much training when everyone around you is capable of magic.",
 											"Choose two ability boosts. One must be Intelligence or Wisdom and one is a free ability boost.",
-											"Your innate {@trait magical} trait is {@trait arcane} or {@trait occult}. You're trained in either {@skill Arcana} or {@skill Occultism}, depending on your innate {@trait magical} trait, and the {@skill Lore||Academia Lore} skill. You gain the {@feat Recognize Spell} skill feat."
+											"Your innate {@trait mágico} trait is {@trait arcano} or {@trait ocultista}. You're trained in either {@skill Arcana} or {@skill Occultism}, depending on your innate {@trait mágico} trait, and the {@skill Lore||Academia Lore} skill. You gain the {@feat Recognize Spell} skill feat."
 										],
 										"boosts": [
 											"Intelligence",
@@ -8102,7 +8102,7 @@
 									"type": "pf2-h3",
 									"name": "Arcane Adjustments",
 									"entries": [
-										"The creature gains the {@trait arcane} trait and can cast a single innate spell from the arcane spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
+										"The creature gains the {@trait arcano} trait and can cast a single innate spell from the arcane spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
 										{
 											"source": "SoM",
 											"page": 220,
@@ -8184,7 +8184,7 @@
 									"type": "pf2-h3",
 									"name": "Divine Adjustments",
 									"entries": [
-										"The creature gains the {@trait divine} trait and can cast a single innate spell from the divine spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
+										"The creature gains the {@trait divino} trait and can cast a single innate spell from the divine spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
 										{
 											"source": "SoM",
 											"page": 220,
@@ -8266,7 +8266,7 @@
 									"type": "pf2-h3",
 									"name": "Occult Adjustments",
 									"entries": [
-										"The creature gains the {@trait occult} trait and can cast a single innate spell from the occult spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
+										"The creature gains the {@trait ocultista} trait and can cast a single innate spell from the occult spell list once per day. Use the creature's level (see the table below) to determine the spell's level. Use the spell DC and spell attack roll on the table if the creature does not already have those statistics.",
 										{
 											"source": "SoM",
 											"page": 220,
@@ -8513,7 +8513,7 @@
 									"type": "pf2-h3",
 									"name": "Absalom and Starstone Isle",
 									"entries": [
-										"Traces of the dead god Aroden's divine power might create areas of pervasive magic. Creatures of any type might gain the {@trait divine} trait.",
+										"Traces of the dead god Aroden's divine power might create areas of pervasive magic. Creatures of any type might gain the {@trait divino} trait.",
 										"{@b Starstone Cathedral:} The magic of the Starstone could make this divine spell-touched terrain.",
 										"{@b Tyrant's Grasp:} The site of the Whispering Tyrant's defeat is still suffused with powerful necromantic magic. Necromantic spells could be heightened in this area."
 									]
@@ -8532,7 +8532,7 @@
 									"name": "Eye of Dread",
 									"entries": [
 										"The Eye of Dread region has seen multiple events of immense magical power, and pockets of pervasive magic could riddle the entire region.",
-										"{@b Gallowspire:} The broken fortress of Tar-Baphon still teems with power. It might heighten necromantic magic and imbue undead inhabitants with the {@trait arcane} trait.",
+										"{@b Gallowspire:} The broken fortress of Tar-Baphon still teems with power. It might heighten necromantic magic and imbue undead inhabitants with the {@trait arcano} trait.",
 										"{@b Nirmathas:} Nirmathas has strong First World connections through the Fangwood forest and could be filled with primal magic near portals to the First World."
 									]
 								},
@@ -8541,7 +8541,7 @@
 									"name": "Golden Road",
 									"entries": [
 										"Mostly due to the influence of Ancient Osirion, divine spell-touched terrain might appear in the region.",
-										"{@b Black Desert:} The power of unlife flourishes in this Vault deep in the Darklands. All necromancy spells could be heightened, and undead creatures from this area might gain the {@trait divine} trait."
+										"{@b Black Desert:} The power of unlife flourishes in this Vault deep in the Darklands. All necromancy spells could be heightened, and undead creatures from this area might gain the {@trait divino} trait."
 									]
 								},
 								{
@@ -8560,7 +8560,7 @@
 										"The Impossible Lands is the most magic-infused region in the Inner Sea. Many types of pervasive magic effects and terrain might be found throughout its reaches.",
 										"{@b Geb:} Geb's cities, especially the capital of Mechitar, might have heightened necromantic magic.",
 										"{@b Jalmeray:} The island nation might have energy surge terrain or other such areas that heighten elemental magic.",
-										"{@b Nex:} Several prominent locations within the magical kingdom might heighten {@trait arcane} magic."
+										"{@b Nex:} Several prominent locations within the magical kingdom might heighten {@trait arcano} magic."
 									]
 								},
 								{
@@ -8568,8 +8568,8 @@
 									"name": "Mwangi Expanse",
 									"entries": [
 										"The Mwangi Expanse is a verdant region, and it could have pockets of primal magic terrain secreted throughout its wild lands.",
-										"{@b Mzali:} The temple-city of Mzali was once the center of an empire ruled by divine sun kings. A few creatures in this area might have the {@trait divine} trait, and divine magic could be heightened in parts of the city proper.",
-										"{@b Ruins of Kho:} These ruins of the first Shory flying city, smashed to the earth by the Tarrasque, still sputter with magical energies. Creatures from areas near the fallen city might gain the {@trait arcane} trait, and {@trait arcane} magic could be heightened in the area. Specific spots among the ruins might feature various types of energy surge terrain."
+										"{@b Mzali:} The temple-city of Mzali was once the center of an empire ruled by divine sun kings. A few creatures in this area might have the {@trait divino} trait, and divine magic could be heightened in parts of the city proper.",
+										"{@b Ruins of Kho:} These ruins of the first Shory flying city, smashed to the earth by the Tarrasque, still sputter with magical energies. Creatures from areas near the fallen city might gain the {@trait arcano} trait, and {@trait arcano} magic could be heightened in the area. Specific spots among the ruins might feature various types of energy surge terrain."
 									]
 								},
 								{
@@ -8790,7 +8790,7 @@
 										"teleportation"
 									],
 									"entries": [
-										"The familiar teleports itself up to 30 feet. The destination must be in dim light or darkness and must be within your familiar's line of sight and line of effect. This action has the trait matching your tradition of magic, or {@trait occult} if you aren't a spellcaster."
+										"The familiar teleports itself up to 30 feet. The destination must be in dim light or darkness and must be within your familiar's line of sight and line of effect. This action has the trait matching your tradition of magic, or {@trait ocultista} if you aren't a spellcaster."
 									]
 								}
 							]
@@ -9337,7 +9337,7 @@
 										],
 										[
 											"8",
-											"{@b Oppressive Voice} ({@trait divination}, {@trait mental}, {@trait nonlethal}) The voice of your muse, your deity, an ancestor, or another appropriate entity suddenly overwhelms your mind. You must attempt a Will saving throw. You take {@scaledice 1d4|1-10|1d4} mental damage per spell level with a basic Will save. On a failure, you're also {@condition stunned 1} ({@condition stunned 2} on a critical failure)."
+											"{@b Oppressive Voice} ({@trait divinotion}, {@trait mental}, {@trait nonlethal}) The voice of your muse, your deity, an ancestor, or another appropriate entity suddenly overwhelms your mind. You must attempt a Will saving throw. You take {@scaledice 1d4|1-10|1d4} mental damage per spell level with a basic Will save. On a failure, you're also {@condition stunned 1} ({@condition stunned 2} on a critical failure)."
 										],
 										[
 											"9",
@@ -9349,7 +9349,7 @@
 										],
 										[
 											"11",
-											"{@b Mental Broadcast} ({@trait detection}, {@trait divination}, {@trait mental}) For 1 minute, everyone within 30 feet of you can hear your surface thoughts."
+											"{@b Mental Broadcast} ({@trait detection}, {@trait divinotion}, {@trait mental}) For 1 minute, everyone within 30 feet of you can hear your surface thoughts."
 										],
 										[
 											"12",

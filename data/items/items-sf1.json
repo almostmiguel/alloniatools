@@ -157,7 +157,7 @@
 			],
 			"category": "Artifact",
 			"entries": [
-				"{@i The Carnival} represents false dreams. When you have {@i The Carnival} invested, your flat check DCs to obtain reliable information from {@trait divination} effects (such as {@spell augury} or {@spell read fate}, or the activation of this card) are reduced by 2 (but not to less than 2). Casting a {@trait divination} effect with a flat check, whether or not the flat check succeeds, gives a series of subtly different visions that don't confuse the meaning but make you stupefied 1 for 1 round. If you're at least 17th level, the flat check is instead reduced by 3.",
+				"{@i The Carnival} represents false dreams. When you have {@i The Carnival} invested, your flat check DCs to obtain reliable information from {@trait divinotion} effects (such as {@spell augury} or {@spell read fate}, or the activation of this card) are reduced by 2 (but not to less than 2). Casting a {@trait divinotion} effect with a flat check, whether or not the flat check succeeds, gives a series of subtly different visions that don't confuse the meaning but make you stupefied 1 for 1 round. If you're at least 17th level, the flat check is instead reduced by 3.",
 				{
 					"type": "ability",
 					"activity": {

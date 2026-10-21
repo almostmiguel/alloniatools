@@ -608,7 +608,7 @@
 							"aura"
 						],
 						"entries": [
-							"10 feet. The vehicle has a warding {@trait aura} that protects its passengers. Creatures and objects in the {@trait aura} gain resistance 10 to {@trait acid}, {@trait cold}, {@trait electricity}, {@trait fire}, {@trait force}, {@trait sonic}, {@trait vitality}, and {@trait void} damage. They are also protected from severe cold, severe heat, extreme cold, and extreme heat. The {@trait aura} also provides breathable air for all passengers, though this air can still become filled with smoke and similar substances."
+							"10 feet. The vehicle has a warding {@trait aura} that protects its passengers. Creatures and objects in the {@trait aura} gain resistance 10 to {@trait acid}, {@trait cold}, {@trait electricity}, {@trait fire}, {@trait force}, {@trait sonic}, {@trait vitality}, and {@trait eversão} damage. They are also protected from severe cold, severe heat, extreme cold, and extreme heat. The {@trait aura} also provides breathable air for all passengers, though this air can still become filled with smoke and similar substances."
 						]
 					},
 					{
@@ -5229,7 +5229,7 @@
 					{
 						"name": "Protective Barrier",
 						"entries": [
-							"While the swirling rings of the vehicle don't fully cover the pilot, they offer incredible protection, magically maintaining the temperature within and ablating physical attacks. The pilot is protected from severe cold, severe heat, extreme cold, and extreme heat. The pilot also gains resistance 10 to all physical damage (except adamantine). {@b Prismatic Defense} {@as 1} ({@trait abjuration}, {@trait magical}) The pilot harnesses power from the magical gemstones hidden among this vehicle's extravagant embellishments to grant the vehicle additional defenses. This vehicle gains resistance 20 to one of the following energy damage types: acid, cold, electricity, fire, force, or sonic. This immunity lasts until Prismatic Defense is next activated."
+							"While the swirling rings of the vehicle don't fully cover the pilot, they offer incredible protection, magically maintaining the temperature within and ablating physical attacks. The pilot is protected from severe cold, severe heat, extreme cold, and extreme heat. The pilot also gains resistance 10 to all physical damage (except adamantine). {@b Prismatic Defense} {@as 1} ({@trait abjuration}, {@trait mágico}) The pilot harnesses power from the magical gemstones hidden among this vehicle's extravagant embellishments to grant the vehicle additional defenses. This vehicle gains resistance 20 to one of the following energy damage types: acid, cold, electricity, fire, force, or sonic. This immunity lasts until Prismatic Defense is next activated."
 						]
 					},
 					{

@@ -10,7 +10,7 @@ class PageFilterTraits extends PageFilter {
 		it._fSources = SourceFilter.getCompleteFilterSources(it);
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(it._fSources);
@@ -24,7 +24,7 @@ class PageFilterTraits extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

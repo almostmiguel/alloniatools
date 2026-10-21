@@ -24,7 +24,7 @@ class PageFilterTables extends PageFilter {
 		if (it.id) it._fMisc.push("Has Table Number");
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 		this._sourceFilter.addItem(it._fSources);
 		this._miscFilter.addItem(it._fMisc);
@@ -37,7 +37,7 @@ class PageFilterTables extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

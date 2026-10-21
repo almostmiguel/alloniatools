@@ -232,7 +232,7 @@ class PageFilterBestiary extends PageFilter {
 		cr._fFoundIn = cr.foundIn || [];
 	}
 
-	addToFilters (cr, isExcluded) {
+	_addToFilters (cr, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(cr._fSources);
@@ -292,7 +292,7 @@ class PageFilterBestiary extends PageFilter {
 		];
 	}
 
-	toDisplay (values, c) {
+	_toDisplay (values, c) {
 		return this._filterBox.toDisplay(
 			values,
 			c._fSources,

@@ -640,7 +640,7 @@
 			"bulk": "L",
 			"bulkNote": "when not activated",
 			"entries": [
-				"Though it looks like a simple profile of a bird's wing and body carved into a flat triangle of wood, this {@trait magical} object can transform into a tree house.",
+				"Though it looks like a simple profile of a bird's wing and body carved into a flat triangle of wood, this {@trait mágico} object can transform into a tree house.",
 				{
 					"name": "Activate\u2014Unfold",
 					"activity": {

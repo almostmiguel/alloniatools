@@ -19,7 +19,7 @@ class PageFilterLanguages extends PageFilter {
 		it._fMisc = it.fonts ? ["Has Fonts"] : [];
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(it._fSources);
@@ -29,7 +29,7 @@ class PageFilterLanguages extends PageFilter {
 		opts.filters = [this._sourceFilter, this._typeFilter, this._miscFilter];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(values, it._fSources, it.type, it._fMisc);
 	}
 }

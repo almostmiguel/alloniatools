@@ -3170,7 +3170,7 @@
 			},
 			"category": "Consumable",
 			"entries": [
-				"An etheric essence disruptor emits bursts of discordant ethereal energy through a process based upon Stasian etheric-spirit singers, though without the need for a Stasian coil. Etheric essence disruptors attempt to break down the workings of a spell that manipulates spiritual essence. Upon activation, attempt to counteract an active {@trait divine} or {@trait occult} spell within the listed range, with the listed counteract modifier and counteract level."
+				"An etheric essence disruptor emits bursts of discordant ethereal energy through a process based upon Stasian etheric-spirit singers, though without the need for a Stasian coil. Etheric essence disruptors attempt to break down the workings of a spell that manipulates spiritual essence. Upon activation, attempt to counteract an active {@trait divino} or {@trait ocultista} spell within the listed range, with the listed counteract modifier and counteract level."
 			],
 			"generic": "G",
 			"variants": [
@@ -3186,7 +3186,7 @@
 					],
 					"_mod": {
 						"entries": {
-							"with": "Upon activation, attempt to counteract an active {@trait divine} or {@trait occult} spell within 30 feet, with a +7 counteract modifier and counteract level of 2."
+							"with": "Upon activation, attempt to counteract an active {@trait divino} or {@trait ocultista} spell within 30 feet, with a +7 counteract modifier and counteract level of 2."
 						}
 					}
 				},
@@ -3202,7 +3202,7 @@
 					],
 					"_mod": {
 						"entries": {
-							"with": "Upon activation, attempt to counteract an active {@trait divine} or {@trait occult} spell within 40 feet, with a +13 counteract modifier and counteract level of 4."
+							"with": "Upon activation, attempt to counteract an active {@trait divino} or {@trait ocultista} spell within 40 feet, with a +13 counteract modifier and counteract level of 4."
 						}
 					}
 				},
@@ -3218,7 +3218,7 @@
 					],
 					"_mod": {
 						"entries": {
-							"with": "Upon activation, attempt to counteract an active {@trait divine} or {@trait occult} spell within 60 feet, with a +18 counteract modifier and counteract level of 6."
+							"with": "Upon activation, attempt to counteract an active {@trait divino} or {@trait ocultista} spell within 60 feet, with a +18 counteract modifier and counteract level of 6."
 						}
 					}
 				},
@@ -3234,7 +3234,7 @@
 					],
 					"_mod": {
 						"entries": {
-							"with": "Upon activation, attempt to counteract an active {@trait divine} or {@trait occult} spell within 90 feet, with a +24 counteract modifier and counteract level of 8."
+							"with": "Upon activation, attempt to counteract an active {@trait divino} or {@trait ocultista} spell within 90 feet, with a +24 counteract modifier and counteract level of 8."
 						}
 					}
 				}
@@ -3243,7 +3243,7 @@
 				"entries": {
 					"mode": "replaceTxt",
 					"replaceTags": true,
-					"replace": "Upon activation, attempt to counteract an active \\{@trait divine\\} or \\{@trait occult\\} spell within the listed range, with the listed counteract modifier and counteract level."
+					"replace": "Upon activation, attempt to counteract an active \\{@trait divino\\} or \\{@trait ocultista\\} spell within the listed range, with the listed counteract modifier and counteract level."
 				},
 				"entriesMode": "generic"
 			}
@@ -5675,7 +5675,7 @@
 			},
 			"category": "Consumable",
 			"entries": [
-				"A material essence disruptor emits bursts of disordered energy to break down the structure of a spell that manipulates material essence. Attempt to counteract an active {@trait arcane} or {@trait primal} spell within the listed range, with the listed counteract modifier and counteract level."
+				"A material essence disruptor emits bursts of disordered energy to break down the structure of a spell that manipulates material essence. Attempt to counteract an active {@trait arcano} or {@trait primal} spell within the listed range, with the listed counteract modifier and counteract level."
 			],
 			"generic": "G",
 			"variants": [
@@ -5691,7 +5691,7 @@
 					],
 					"_mod": {
 						"entries": {
-							"with": "Attempt to counteract an active {@trait arcane} or {@trait primal} spell within 30 feet, with a +7 counteract modifier and counteract level of 2."
+							"with": "Attempt to counteract an active {@trait arcano} or {@trait primal} spell within 30 feet, with a +7 counteract modifier and counteract level of 2."
 						}
 					}
 				},
@@ -5707,7 +5707,7 @@
 					],
 					"_mod": {
 						"entries": {
-							"with": "Attempt to counteract an active {@trait arcane} or {@trait primal} spell within 40 feet, with a +13 counteract modifier and counteract level of 4."
+							"with": "Attempt to counteract an active {@trait arcano} or {@trait primal} spell within 40 feet, with a +13 counteract modifier and counteract level of 4."
 						}
 					}
 				},
@@ -5723,7 +5723,7 @@
 					],
 					"_mod": {
 						"entries": {
-							"with": "Attempt to counteract an active {@trait arcane} or {@trait primal} spell within 60 feet, with a +18 counteract modifier and counteract level of 6."
+							"with": "Attempt to counteract an active {@trait arcano} or {@trait primal} spell within 60 feet, with a +18 counteract modifier and counteract level of 6."
 						}
 					}
 				},
@@ -5739,7 +5739,7 @@
 					],
 					"_mod": {
 						"entries": {
-							"with": "Attempt to counteract an active {@trait arcane} or {@trait primal} spell within 90 feet, with a +24 counteract modifier and counteract level of 8."
+							"with": "Attempt to counteract an active {@trait arcano} or {@trait primal} spell within 90 feet, with a +24 counteract modifier and counteract level of 8."
 						}
 					}
 				}
@@ -5748,7 +5748,7 @@
 				"entries": {
 					"mode": "replaceTxt",
 					"replaceTags": true,
-					"replace": "Attempt to counteract an active \\{@trait arcane\\} or \\{@trait primal\\} spell within the listed range, with the listed counteract modifier and counteract level."
+					"replace": "Attempt to counteract an active \\{@trait arcano\\} or \\{@trait primal\\} spell within the listed range, with the listed counteract modifier and counteract level."
 				},
 				"entriesMode": "generic"
 			}

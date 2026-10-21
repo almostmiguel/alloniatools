@@ -233,12 +233,12 @@
 								"unit": "reaction"
 							},
 							"entries": [
-								"You rise above the triggering effect, refusing to be harmed by it. You gain a +1 circumstance bonus to the triggering saving throw and to any other saving throws you attempt against {@trait divine} effects until the start of your next turn."
+								"You rise above the triggering effect, refusing to be harmed by it. You gain a +1 circumstance bonus to the triggering saving throw and to any other saving throws you attempt against {@trait divino} effects until the start of your next turn."
 							],
 							"type": "ability",
 							"style": "full",
 							"name": "Invoke Celestial Privilege",
-							"trigger": "You attempt a saving throw against a {@trait divine} effect, but you haven't rolled yet."
+							"trigger": "You attempt a saving throw against a {@trait divino} effect, but you haven't rolled yet."
 						}
 					]
 				},

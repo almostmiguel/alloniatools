@@ -3408,7 +3408,7 @@
 						"amount": 160
 					},
 					"entries": [
-						"These pointed crystal shards embedded in your fingers grant you a fist {@action Strike} that deals {@damage 1d6} piercing damage, is in the {@group brawling} group, and has the {@trait magical} and {@trait unarmed} traits. Combat fleshgems can be enhanced with the effects of {@item handwraps of mighty blows}, as normal for an unarmed attack."
+						"These pointed crystal shards embedded in your fingers grant you a fist {@action Strike} that deals {@damage 1d6} piercing damage, is in the {@group brawling} group, and has the {@trait mágico} and {@trait unarmed} traits. Combat fleshgems can be enhanced with the effects of {@item handwraps of mighty blows}, as normal for an unarmed attack."
 					],
 					"variantType": "combat fleshgem"
 				},
@@ -4608,7 +4608,7 @@
 						"number": 1
 					},
 					"entries": [
-						"You scan up to two pages of writing with the magnifying glass of elucidation, imbuing the magnifying glass with the information you scanned. You can use a separate 3-action activity to have the magnifying glass reproduce the imbued information onto blank paper exactly as it appeared when you Activated the magnifying glass. The reproduction is a direct copy of the pages but doesn't imbue the reproduction with any {@trait magical} effects or other special effects. As such, you can copy the writing of a scroll, for example, but it will only be mundane writing and not have any {@trait magical} effect. The magnifying glass can only hold one instance of information at a given time; {@action Activate an Item||Activating} the magnifying glass a second time or reproducing the information clears out the magnifying glass's information."
+						"You scan up to two pages of writing with the magnifying glass of elucidation, imbuing the magnifying glass with the information you scanned. You can use a separate 3-action activity to have the magnifying glass reproduce the imbued information onto blank paper exactly as it appeared when you Activated the magnifying glass. The reproduction is a direct copy of the pages but doesn't imbue the reproduction with any {@trait mágico} effects or other special effects. As such, you can copy the writing of a scroll, for example, but it will only be mundane writing and not have any {@trait mágico} effect. The magnifying glass can only hold one instance of information at a given time; {@action Activate an Item||Activating} the magnifying glass a second time or reproducing the information clears out the magnifying glass's information."
 					]
 				}
 			],

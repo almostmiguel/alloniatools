@@ -671,8 +671,8 @@ Parser.savingThrowAbvToFull = function (abv) {
 
 Parser.speedToFullMap = function (speed) {
 	return Object.keys(speed).map((k) => {
-		if (k === "walk") return `${speed.walk} feet`;
-		else return `${k.uppercaseFirst()} ${speed[k]} feet`;
+		if (k === "walk") return `${speed.walk} metros`;
+		else return `${k.uppercaseFirst()} ${speed[k]} metros`;
 	});
 };
 
@@ -2446,6 +2446,30 @@ Parser.TAG_TO_DEFAULT_SOURCE = {
 	vehicle: SRC_GMG,
 	versatileHeritage: SRC_APG,
 };
+
+Parser._tagSourceIndex = null;
+Parser._pTagSourceIndex = null;
+
+Parser.pInitTagSourceIndex = async function () {
+	if (Parser._tagSourceIndex) return;
+	if (Parser._pTagSourceIndex) return Parser._pTagSourceIndex;
+
+	Parser._pTagSourceIndex = (async () => {
+		if (typeof XMLHttpRequest === "undefined") {
+			Parser._tagSourceIndex = {};
+			return;
+		}
+
+		try {
+			Parser._tagSourceIndex = await DataUtil._pLoad(UrlUtil.link("data/generated/tag-source-index.json"));
+		} catch {
+			// The index is generated during builds. Source checkouts without generated data retain the legacy defaults.
+			Parser._tagSourceIndex = {};
+		}
+	})();
+
+	return Parser._pTagSourceIndex;
+};
 [
 	SRC_AAWS,
 	SRC_APG,
@@ -2603,10 +2627,13 @@ Parser.SOURCES_CORE_SUPPLEMENTS = new Set(
 	),
 );
 
-Parser.getTagSource = function (tag, source) {
+Parser.getTagSource = function (tag, source, name) {
 	if (source && source.trim()) return source;
 	tag = tag.trim();
 	if (tag.startsWith("@")) tag = tag.slice(1);
+
+	const uniqueSource = name && Parser._tagSourceIndex?.[tag]?.[name.trim().toLowerCase()];
+	if (uniqueSource) return uniqueSource;
 
 	if (!Parser.TAG_TO_DEFAULT_SOURCE[tag]) {
 		throw new Error(`Unhandled tag source "${tag}"`);

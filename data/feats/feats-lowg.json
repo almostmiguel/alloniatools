@@ -803,7 +803,7 @@
 			"access": "You are from the Mwangi Expanse.",
 			"entries": [
 				"You have taken up a nameless mask and sworn the oath of the magic warriors. You become trained in your choice of {@skill Arcana} or {@skill Nature} and in {@skill Lore||Magic Warrior Lore}; if you were already trained in the skill, you become an expert instead.",
-				"You hide your identity behind a mask representing an animal of your choice, corresponding to one of the general animal types in the {@spell animal form} spell. You gain a +1 circumstance bonus to saves against {@trait divination} effects, though sometimes refusing to remove your mask can cause issues in areas that don't respect or understand the magic warrior tradition.",
+				"You hide your identity behind a mask representing an animal of your choice, corresponding to one of the general animal types in the {@spell animal form} spell. You gain a +1 circumstance bonus to saves against {@trait divinotion} effects, though sometimes refusing to remove your mask can cause issues in areas that don't respect or understand the magic warrior tradition.",
 				"Once you take this feat, if another creature ever learns your true face or name, you lose your abilities from this archetype.",
 				"Close allies who knew of your decision to take the mask before your dedication don't break this taboo unless they tell someone else. To regain your abilities, you must discard your mask and obtain a new one of a different animal, then retrain Magic Warrior Dedication into a new Magic Warrior Dedication with your new mask. Your focus spells from the magic warrior archetype are the same tradition as your other spells (choose one if you have spells from multiple traditions)."
 			],
@@ -1139,8 +1139,8 @@
 			],
 			"prerequisites": "{@feat Lion Blade Dedication|LOWG}",
 			"entries": [
-				"You've learned how to analyze and fake your responses to the most common magic used against spies. Whenever you succeed at your save against a {@trait divination} or {@trait mental} effect, you can {@action Identify Magic} to identify the spell as a free action triggered when you succeed, even if you didn't notice the spell being cast.",
-				"If you successfully identify a {@trait divination} effect targeting you and the spell would normally fail or have no effect, you can create a substitute result, causing the spell's caster to think the spell succeeded, with a result of your choice. If you successfully identify a {@trait mental} effect targeting you and the spell would normally fail or have no effect, you can make it appear as if you were affected and attempt to play along with the spell; if the spell normally establishes a mental link, it functions normally but you can disregard any commands you receive through the link."
+				"You've learned how to analyze and fake your responses to the most common magic used against spies. Whenever you succeed at your save against a {@trait divinotion} or {@trait mental} effect, you can {@action Identify Magic} to identify the spell as a free action triggered when you succeed, even if you didn't notice the spell being cast.",
+				"If you successfully identify a {@trait divinotion} effect targeting you and the spell would normally fail or have no effect, you can create a substitute result, causing the spell's caster to think the spell succeeded, with a result of your choice. If you successfully identify a {@trait mental} effect targeting you and the spell would normally fail or have no effect, you can make it appear as if you were affected and attempt to play along with the spell; if the spell normally establishes a mental link, it functions normally but you can disregard any commands you receive through the link."
 			]
 		},
 		{

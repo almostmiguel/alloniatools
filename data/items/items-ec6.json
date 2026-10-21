@@ -315,7 +315,7 @@
 			"category": "Worn",
 			"entries": [
 				"As long as this locket of horn and silver is closed, you don't need to sleep. However, you can still overexert your body with too much activity, so you still need to rest to avoid becoming {@condition fatigued} or to remove the {@condition fatigued} condition.",
-				"You also gain a +4 item bonus on saving throws against mental illusions, {@trait magical} effects that would make you {@condition unconscious}, and effects that would make you {@condition fatigued}.",
+				"You also gain a +4 item bonus on saving throws against mental illusions, {@trait mágico} effects that would make you {@condition unconscious}, and effects that would make you {@condition fatigued}.",
 				"Each time dawn occurs, you regain the ability to make your daily preparations as if you had rested for 8 hours.",
 				"Daily preparations still take about an hour, as normal.",
 				{

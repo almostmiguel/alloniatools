@@ -133,7 +133,7 @@
 			"prerequisites": "{@feat Campfire Chronicler Dedication|LORA}",
 			"entries": [
 				"You spend 1 hour building a campfire in a single unoccupied square and whispering the stories of those you've met on your journeys. The campfire sheds bright light in a 30-foot radius (and dim light for the next 30 feet). The campfire can't be put out or get larger through mundane means; it instead burns out after your next daily preparations or when you use this ability again.",
-				"The first time each round a creature within the campfire's bright light performs an action with the {@trait attack} trait, they must then attempt a Will save against your class DC or spell DC (whichever is higher). This is a {@trait divine} {@trait curse} effect, and you are aware of any attempt, although other creatures in the area are not.",
+				"The first time each round a creature within the campfire's bright light performs an action with the {@trait attack} trait, they must then attempt a Will save against your class DC or spell DC (whichever is higher). This is a {@trait divino} {@trait curse} effect, and you are aware of any attempt, although other creatures in the area are not.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -809,7 +809,7 @@
 				"While in Reflective Ripple Stance, you gain a +1 circumstance bonus to {@skill Athletics|PC1} checks to {@action Disarm}, {@action Swim|PC1}, or {@action Trip|PC1}, and you gain a +2 circumstance bonus to your Reflex DC to avoid being {@action Disarm|PC1|Disarmed} and {@action Trip|PC1|Tripped}."
 			],
 			"special": [
-				"This feat gains your choice of either the {@trait divine} or {@trait occult} trait, matching your qi spell tradition if possible."
+				"This feat gains your choice of either the {@trait divino} or {@trait ocultista} trait, matching your qi spell tradition if possible."
 			],
 			"leadsTo": [
 				"Rippling Spin|LORA",

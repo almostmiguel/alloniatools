@@ -84,7 +84,7 @@ class PageFilterDeities extends PageFilter {
 		if (g.remaster) g._fMisc.push("Remaster");
 	}
 
-	addToFilters (g, isExcluded) {
+	_addToFilters (g, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(g._fSources);
@@ -129,7 +129,7 @@ class PageFilterDeities extends PageFilter {
 		];
 	}
 
-	toDisplay (values, g) {
+	_toDisplay (values, g) {
 		return this._filterBox.toDisplay(
 			values,
 			g._fSources,

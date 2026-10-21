@@ -3198,7 +3198,7 @@
 						"traits": [
 							"concentrate"
 						],
-						"trigger": "Onyiji is about to make a saving throw against a spell or {@trait magical} effect",
+						"trigger": "Onyiji is about to make a saving throw against a spell or {@trait mágico} effect",
 						"entries": [
 							"Onyiji gains a +1 circumstance bonus to the triggering save."
 						]

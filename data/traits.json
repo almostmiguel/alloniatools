@@ -115,20 +115,15 @@
 			]
 		},
 		{
-			"name": "Void",
+			"name": "Eversão",
 			"source": "PC1",
-			"page": 463,
-			"otherSources": {
-				"Originally": [
-					"RoE|238"
-				]
-			},
+			"page": 456,
 			"categories": [
 				"General",
 				"Energy & Element"
 			],
 			"entries": [
-				"Effects with this trait heal {@trait undead} creatures with void energy, deal void damage to living creatures, or manipulate void energy."
+				"Efeitos com este traço curam criaturas {@trait undead} com energia eversiva, causam dano eversivo a criaturas vivas ou manipulam energia eversiva."
 			]
 		},
 		{
@@ -723,14 +718,14 @@
 			]
 		},
 		{
-			"name": "[Magical Tradition]",
+			"name": "[Tradição Mágica]",
 			"source": "B1",
 			"page": 342,
 			"categories": [
-				"Tradition"
+				"Tradição"
 			],
 			"entries": [
-				"{@note Replace this trait with another fitting magic tradition, such as {@trait Arcane}, {@trait Divine}, {@trait Primal}, or {@trait Occult}.}"
+				"{@note Substitua este traço por outra tradição mágica adequada, como {@trait arcano}, {@trait divino}, {@trait primal}, or {@trait ocultista}.}"
 			]
 		},
 		{
@@ -936,7 +931,7 @@
 				"Item"
 			],
 			"entries": [
-				"Alchemical items are powered by reactions of alchemical reagents. Alchemical items aren't {@trait magical} and don't radiate a magical aura."
+				"Alchemical items are powered by reactions of alchemical reagents. Alchemical items aren't {@trait mágico} and don't radiate a magical aura."
 			]
 		},
 		{
@@ -1081,20 +1076,15 @@
 			]
 		},
 		{
-			"name": "Arcane",
-			"source": "CRB",
-			"page": 628,
-			"otherSources": {
-				"Expanded": [
-					"G&G|230"
-				]
-			},
+			"name": "Arcano",
+			"source": "PC1",
+			"page": 452,
 			"categories": [
-				"Tradition"
+				"Tradição"
 			],
 			"entries": [
-				"This magic comes from the arcane tradition, which is built on logic and rationality. Anything with this trait is {@trait magical}.",
-				"A creature with this trait is primarily constituted of or has a strong connection to arcane magic."
+				"Esta magia vem da tradição arcana, que é fundamentalmente sobre lógica e racionalidade. Tudo que tiver esse traço é {@trait mágico}.",
+				"Uma criatura com este traço é constituída principalmente de magia arcana ou possui uma forte ligação com ela."
 			]
 		},
 		{
@@ -2323,19 +2313,14 @@
 			}
 		},
 		{
-			"name": "Divine",
-			"source": "CRB",
-			"page": 631,
-			"otherSources": {
-				"Reprinted": [
-					"G&G|232"
-				]
-			},
+			"name": "Divino",
+			"source": "PC1",
+			"page": 455,
 			"categories": [
-				"Tradition"
+				"Tradição"
 			],
 			"entries": [
-				"This magic comes from the divine tradition, drawing power from deities or similar sources. Anything with this trait is {@trait magical}."
+				"Esta magia vem da tradição divina, extraindo poder de divindades ou fontes semelhantes. Tudo que tiver esse traço é {@trait mágico}."
 			]
 		},
 		{
@@ -2458,7 +2443,7 @@
 			]
 		},
 		{
-			"name": "Dwarf",
+			"name": "Anão",
 			"source": "CRB",
 			"page": 631,
 			"otherSources": {
@@ -2471,7 +2456,7 @@
 				"Creature"
 			],
 			"entries": [
-				"A creature with this trait is a member of the dwarf ancestry. Dwarves are stout folk who often live underground and typically have {@ability darkvision}. An ability with this trait can be used or selected only by dwarves. An item with this trait is created and used by dwarves."
+				"Uma criatura com este traço é membro da ancestralidade anão. Anões são um povo atarracado que frequentemente vive no subterrâneo e normalmente possuem visão no escuro. Uma habilidade com este traço pode ser usada ou selecionada somente por anões. Um item com este traço é criado e usado por anões."
 			]
 		},
 		{
@@ -2560,20 +2545,15 @@
 			]
 		},
 		{
-			"name": "Elf",
-			"source": "CRB",
+			"name": "Elfo",
+			"source": "PC1",
 			"page": 631,
-			"otherSources": {
-				"Reprinted": [
-					"B1|346"
-				]
-			},
 			"categories": [
 				"Ancestry & Heritage",
 				"Creature"
 			],
 			"entries": [
-				"A creature with this trait is a member of the elf ancestry. Elves are mysterious people with rich traditions of magic and scholarship who typically have {@ability low-light vision}. An ability with this trait can be used or selected only by elves. A weapon with this trait is created and used by elves."
+				"Criaturas com este traço são da ancestralidade elfo. Elfos são pessoas misteriosas com ricas tradições de magia e erudição que normalmente têm {@ability visão na penumbra}. Habilidades com este traço só podem ser usadas ou selecionadas por elfos. Itens com este traço são criados e usados por elfos."
 			]
 		},
 		{
@@ -3651,7 +3631,7 @@
 			]
 		},
 		{
-			"name": "Humanoid",
+			"name": "Humanoide",
 			"source": "CRB",
 			"page": 633,
 			"otherSources": {
@@ -3665,7 +3645,7 @@
 				"Creature Type"
 			],
 			"entries": [
-				"Humanoid creatures reason and act much like humans. They typically stand upright and have two arms and two legs."
+				"Criaturas humanoides raciocinam e agem muito similarmente a humanos. Elas normalmente andam de pé e possuem dois braços e duas pernas."
 			]
 		},
 		{
@@ -3987,7 +3967,7 @@
 					"source": "LOAG",
 					"page": 139,
 					"entries": [
-						"A small, reptilian {@trait humanoid} ancestry proud of their kinship to {@filter dragons|bestiary||creature=dragon}."
+						"A small, reptilian {@trait humanoide} ancestry proud of their kinship to {@filter dragons|bestiary||creature=dragon}."
 					]
 				}
 			]
@@ -4183,32 +4163,14 @@
 			]
 		},
 		{
-			"name": "Magical",
-			"source": "CRB",
-			"page": 633,
-			"otherSources": {
-				"Reprinted": [
-					"B1|347",
-					"B2|309"
-				],
-				"Expanded": [
-					"G&G|234"
-				]
-			},
+			"name": "Mágico",
+			"source": "PC1",
+			"page": 459,
 			"categories": [
 				"Item"
 			],
 			"entries": [
-				"Something with the magical trait is imbued with magical energies not tied to a specific tradition of magic. A magical item radiates a magic aura infused with its dominant school of magic.",
-				"Some items or effects are closely tied to a particular tradition of magic. In these cases, the item has the {@trait arcane}, {@trait divine}, {@trait occult}, or {@trait primal} trait instead of the magical trait. Any of these traits indicate that the item is magical.",
-				{
-					"type": "entriesOtherSource",
-					"entries": [
-						"Something with the {@trait magical} trait is imbued with magical energies not tied to a specific tradition of magic. A magical item radiates a magic aura infused with its dominant school of magic."
-					],
-					"source": "G&G",
-					"page": 234
-				}
+				"Coisas com o traço mágico estão imbuídas com energia mágicas que não estão ligadas a uma tradição de magia específica. Alguns itens ou efeitos estão intimamente ligados a uma tradição. Nesses casos, o item possui o traço {@trait arcano}, {@trait divino}, {@trait ocultista} ou {@trait primordial}, em vez do traço mágico. Qualquer um desses traços indica que o item é mágico."
 			]
 		},
 		{
@@ -4756,19 +4718,14 @@
 			]
 		},
 		{
-			"name": "Occult",
-			"source": "CRB",
-			"page": 634,
-			"otherSources": {
-				"Reprinted": [
-					"G&G|234"
-				]
-			},
+			"name": "Ocultista",
+			"source": "PC1",
+			"page": 460,
 			"categories": [
-				"Tradition"
+				"Tradição"
 			],
 			"entries": [
-				"This magic comes from the occult tradition, calling upon bizarre and ephemeral mysteries. Anything with this trait is {@trait magical}."
+				"Esta magia vem da tradição ocultista, invocando mistérios bizarros e efêmeros. Tudo que tiver esse traço é {@trait mágico}."
 			]
 		},
 		{
@@ -4970,7 +4927,7 @@
 				"Effect"
 			],
 			"entries": [
-				"These effects transform the target into a new form. A target can't be under the effect of more than one polymorph effect at a time. If it comes under the effect of a second polymorph effect, the second polymorph effect attempts to counteract the first. If it succeeds, it takes effect, and if it fails, the spell has no effect on that target. Any {@action Strike||Strikes} specifically granted by a polymorph effect are {@trait magical}. Unless otherwise stated, polymorph spells don't allow the target to take on the appearance of a specific individual creature, but rather just a General creature of a general type or ancestry.",
+				"These effects transform the target into a new form. A target can't be under the effect of more than one polymorph effect at a time. If it comes under the effect of a second polymorph effect, the second polymorph effect attempts to counteract the first. If it succeeds, it takes effect, and if it fails, the spell has no effect on that target. Any {@action Strike||Strikes} specifically granted by a polymorph effect are {@trait mágico}. Unless otherwise stated, polymorph spells don't allow the target to take on the appearance of a specific individual creature, but rather just a General creature of a general type or ancestry.",
 				"If you take on a battle form with a polymorph spell, the special statistics can be adjusted only by circumstance bonuses, status bonuses, and penalties. Unless otherwise noted, the battle form prevents you from casting spells, speaking, and using most {@trait manipulate} actions that require hands. (If there's doubt about whether you can use an action, the GM decides.) Your gear is absorbed into you; the constant abilities of your gear still function, but you can't activate any items."
 			]
 		},
@@ -5073,7 +5030,7 @@
 				"Effect"
 			],
 			"entries": [
-				"Effects with this trait determine what is likely to happen in the near future. Most predictions are {@trait divination|divinations}."
+				"Effects with this trait determine what is likely to happen in the near future. Most predictions are {@trait divinotion|divinations}."
 			]
 		},
 		{
@@ -5089,18 +5046,13 @@
 		},
 		{
 			"name": "Primal",
-			"source": "CRB",
-			"page": 635,
-			"otherSources": {
-				"Reprinted": [
-					"G&G|235"
-				]
-			},
+			"source": "PC1",
+			"page": 461,
 			"categories": [
-				"Tradition"
+				"Tradição"
 			],
 			"entries": [
-				"This magic comes from the primal tradition, connecting to the natural world and instinct. Anything with this trait is {@trait magical}."
+				"Esta magia vem da tradição primal, conectada ao mundo natural e ao instinto. Tudo que tiver esse traço é {@trait mágico}."
 			]
 		},
 		{

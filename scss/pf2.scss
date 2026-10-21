@@ -388,7 +388,7 @@
 }
 
 .pf2-h1 {
-	color: #5e0000;
+	color: #2f8b62;
 	position: relative;
 	width: 100%;
 	margin: 0;
@@ -418,15 +418,15 @@
 }
 
 .pf2-h1-flavor {
-	color: #5e0000;
+	color: black;
 	margin: 0;
 	padding: 0;
 	font-family: SabonLTStd, sans-serif;
 	font-style: italic;
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: 400;
 	text-align: justify;
-	line-height: 1.34em;
+	line-height: 1.35em;
 
 	+ .pf2-h1-flavor {
 		text-indent: 1em;
@@ -435,6 +435,40 @@
 	&--centered {
 		text-align: center;
 	}
+}
+
+.pf2-flavor {
+	margin: 0.5rem 0 1rem;
+}
+
+.pf2-flavor__border {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0.5rem 0;
+}
+
+.anc__image {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% - 1rem);
+	margin: 0.5rem;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	figcaption {
+		padding-top: 0.25rem;
+		text-align: center;
+	}
+}
+
+.anc__no-images {
+	padding: 1rem;
+	text-align: center;
 }
 
 .pf2-h2 {
@@ -729,9 +763,9 @@
 
 	.pf2-title {
 		font-size: 1.1em;
-		font-weight: 700;
+		font-weight: 400;
 		margin: 0;
-		font-family: good-pro, sans-serif;
+		font-family: Gin, sans-serif;
 		padding: 0.6em 0.82em 0;
 	}
 
@@ -1601,8 +1635,10 @@ $night-accent-gold: #c99d51;
 $night-pf2-brown: #2e2c27;
 
 .night-mode {
-	.pf2-h1,
-	.pf2-h1-flavor,
+	.pf2-h1 {
+		color: #2f8b62;
+	}
+
 	.pf2-h3,
 	.pf2-sidebar {
 		color: $night-pf2-red;
@@ -1658,6 +1694,10 @@ $night-pf2-brown: #2e2c27;
 	}
 
 	.pf2-p {
+		color: #bbb;
+	}
+
+	.pf2-h1-flavor {
 		color: #bbb;
 	}
 

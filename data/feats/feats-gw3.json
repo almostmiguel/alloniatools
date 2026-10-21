@@ -110,7 +110,7 @@
 			],
 			"prerequisites": "Twilight Speaker Dedication",
 			"entries": [
-				"Your keen study of other cultures gives you insights into the ways those cultures fight. When you use {@skill Perception} to roll initiative and none of your enemies have the {@trait elf} trait, you can choose to roll {@skill Society} instead."
+				"Your keen study of other cultures gives you insights into the ways those cultures fight. When you use {@skill Perception} to roll initiative and none of your enemies have the {@trait elfo} trait, you can choose to roll {@skill Society} instead."
 			]
 		},
 		{

@@ -19,7 +19,7 @@ class PageFilterArchetypes extends PageFilter {
 		if (archetype.rarity) archetype._fRarity = archetype.rarity.toTitleCase();
 	}
 
-	addToFilters (archetype, isExcluded, opts) {
+	_addToFilters (archetype, isExcluded, opts) {
 		if (isExcluded) return;
 		this._traitFilter.addItem(archetype._fTraits);
 		this._sourceFilter.addItem(archetype._fSources);
@@ -38,7 +38,7 @@ class PageFilterArchetypes extends PageFilter {
 		];
 	}
 
-	toDisplay (values, a) {
+	_toDisplay (values, a) {
 		return this._filterBox.toDisplay(
 			values,
 			a._fSources,

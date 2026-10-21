@@ -10,7 +10,7 @@
 				"medium"
 			],
 			"speed": {
-				"walk": 25
+				"walk": 7.5
 			},
 			"boosts": [
 				"strength",
@@ -78,7 +78,7 @@
 					"remaster": true,
 					"page": 71,
 					"entries": [
-						"You were exposed to powerful necromantic energies that should have killed you\u2014but you survived. Your skin is cold, clammy, and gray. You gain resistance to void damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against effects with the {@trait death} or {@trait void} trait."
+						"You were exposed to powerful necromantic energies that should have killed you\u2014but you survived. Your skin is cold, clammy, and gray. You gain resistance to void damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against effects with the {@trait death} or {@trait eversão} trait."
 					]
 				},
 				{

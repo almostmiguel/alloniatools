@@ -188,7 +188,7 @@
 			"traits": [
 				"automaton"
 			],
-			"trigger": "You attempt a saving throw against a harmful {@trait magical} effect but haven't rolled yet.",
+			"trigger": "You attempt a saving throw against a harmful {@trait mágico} effect but haven't rolled yet.",
 			"entries": [
 				"Your innate magic protects you. You gain a +1 circumstance bonus to the triggering saving throw. Additionally, if the triggering effect is arcane, if you roll a success, you get a critical success instead."
 			]
@@ -4408,7 +4408,7 @@
 			],
 			"prerequisites": "way of the spellshot",
 			"entries": [
-				"You cast {@trait arcane} spells like a wizard, gaining a spellbook with four {@trait common} {@trait arcane} {@trait cantrip||cantrips} of your choice. You gain the {@action Cast a Spell} activity. You can prepare two {@trait cantrip||cantrips} each day from your spellbook. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for spellshot archetype spells is Intelligence, and they are {@trait arcane} spells. You become trained in {@skill Arcana}; if you were already trained in {@skill Arcana}, you instead become trained in a skill of your choice. This counts as the wizard archetype for the benefits of {@feat Basic Wizard Spellcasting}. "
+				"You cast {@trait arcano} spells like a wizard, gaining a spellbook with four {@trait common} {@trait arcano} {@trait cantrip||cantrips} of your choice. You gain the {@action Cast a Spell} activity. You can prepare two {@trait cantrip||cantrips} each day from your spellbook. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for spellshot archetype spells is Intelligence, and they are {@trait arcano} spells. You become trained in {@skill Arcana}; if you were already trained in {@skill Arcana}, you instead become trained in a skill of your choice. This counts as the wizard archetype for the benefits of {@feat Basic Wizard Spellcasting}. "
 			],
 			"special": [
 				"You can't select another dedication feat other than {@feat Beast Gunner Dedication|G&G} until you've gained two other feats from the spellshot or beast gunner archetypes."

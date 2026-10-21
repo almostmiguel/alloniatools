@@ -280,7 +280,7 @@ class PageFilterSpells extends PageFilter {
 		if (spell.remaster) spell._fMisc.push("Remaster");
 	}
 
-	addToFilters (spell, isExcluded) {
+	_addToFilters (spell, isExcluded) {
 		if (isExcluded) return;
 
 		if (spell.level > 10) this._levelFilter.addItem(spell.level);
@@ -321,7 +321,7 @@ class PageFilterSpells extends PageFilter {
 		];
 	}
 
-	toDisplay (values, s) {
+	_toDisplay (values, s) {
 		return this._filterBox.toDisplay(
 			values,
 			s._fSources,

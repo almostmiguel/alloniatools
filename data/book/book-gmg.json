@@ -7034,7 +7034,7 @@
 												[
 													{
 														"name": "Traits",
-														"entry": "{@trait Large} or bigger, {@trait humanoid}"
+														"entry": "{@trait Large} or bigger, {@trait humanoide}"
 													}
 												],
 												[
@@ -9817,7 +9817,7 @@
 					"page": 94,
 					"name": "Relics",
 					"entries": [
-						"Relics begin as a simple item, called a relic seed, which is little more than a functional item with a minor {@trait magical} effect associated with it. As the owner of the relic grows in power, so does the relic. It develops gifts, which are new magical abilities and activations. These abilities might be themed to the relic, the character, or the nature of the campaign. If a relic is passed to another character, this process begins anew, sometimes granting the same abilities again over time, but possibly unlocking entirely new powers. If someone else takes the relic from its owner, it usually works for a while, though it might lose its power incrementally over time if not returned to its owner. How the relic changes in such a circumstance is up to you, and should fit the story.",
+						"Relics begin as a simple item, called a relic seed, which is little more than a functional item with a minor {@trait mágico} effect associated with it. As the owner of the relic grows in power, so does the relic. It develops gifts, which are new magical abilities and activations. These abilities might be themed to the relic, the character, or the nature of the campaign. If a relic is passed to another character, this process begins anew, sometimes granting the same abilities again over time, but possibly unlocking entirely new powers. If someone else takes the relic from its owner, it usually works for a while, though it might lose its power incrementally over time if not returned to its owner. How the relic changes in such a circumstance is up to you, and should fit the story.",
 						"The decision to add relics to the game is entirely up to you as the GM. If you decide to add them, you'll need to adjust treasure somewhat. It's also wise to consider how many players you expect to end up with relics. Will they each get one? Or will there be just one or two tied to the theme of the campaign?",
 						{
 							"type": "pf2-h2",
@@ -17237,7 +17237,7 @@
 									"page": 204,
 									"name": "Dwarf",
 									"entries": [
-										"Change the {@trait human} trait to {@trait dwarf}.",
+										"Change the {@trait human} trait to {@trait anão}.",
 										{
 											"type": "list",
 											"items": [
@@ -17254,7 +17254,7 @@
 									"page": 204,
 									"name": "Elf",
 									"entries": [
-										"Change the {@trait human} trait to {@trait elf}.",
+										"Change the {@trait human} trait to {@trait elfo}.",
 										{
 											"type": "list",
 											"items": [

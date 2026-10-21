@@ -899,7 +899,7 @@
 					"type": "pf2-h4",
 					"name": "Draconic Rage (Instinct Ability)",
 					"entries": [
-						"While raging, you can increase the additional damage from {@action Rage} from 2 to 4 and change its damage type to match that of your dragon's breath weapon instead of the damage type for your weapon or unarmed attack. If you do this, your {@action Rage} action gains the {@trait arcane} and {@trait evocation} traits, as well as the trait matching the damage type."
+						"While raging, you can increase the additional damage from {@action Rage} from 2 to 4 and change its damage type to match that of your dragon's breath weapon instead of the damage type for your weapon or unarmed attack. If you do this, your {@action Rage} action gains the {@trait arcano} and {@trait evocation} traits, as well as the trait matching the damage type."
 					]
 				}
 			]
@@ -1292,7 +1292,7 @@
 					"type": "pf2-h4",
 					"name": "Raging Resistance",
 					"entries": [
-						"Choose two associated magical traditions: {@trait arcane} and {@trait occult}, {@trait arcane} and {@trait primal}, {@trait divine} and {@trait occult}, or {@trait divine} and {@trait primal}. The resistance from your raging resistance class feature applies against all damage you take from spells cast with these two traditions of magic, regardless of the type of damage dealt by the spell."
+						"Choose two associated magical traditions: {@trait arcano} and {@trait ocultista}, {@trait arcano} and {@trait primal}, {@trait divino} and {@trait ocultista}, or {@trait divino} and {@trait primal}. The resistance from your raging resistance class feature applies against all damage you take from spells cast with these two traditions of magic, regardless of the type of damage dealt by the spell."
 					]
 				}
 			]

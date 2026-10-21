@@ -266,7 +266,7 @@
 						],
 						"requirements": "The Blade magi can enter this stance if their most recent action was to {@action Cast a Spell} or make a {@action Spellstrike|SoM}, but the Blade magi can remain in the stance even if they no longer meet the requirements",
 						"entries": [
-							"When the Blade magi enters this stance and at the beginning of each of their turns while in it, the Blade magi gains 5 temporary Hit Points. While in this stance, the Blade magi's melee {@action Strike||Strikes} gain the {@trait arcane} trait, deal an extra 2 force damage, and deal 4 {@trait splash} force damage to foes adjacent to the target."
+							"When the Blade magi enters this stance and at the beginning of each of their turns while in it, the Blade magi gains 5 temporary Hit Points. While in this stance, the Blade magi's melee {@action Strike||Strikes} gain the {@trait arcano} trait, deal an extra 2 force damage, and deal 4 {@trait splash} force damage to foes adjacent to the target."
 						]
 					},
 					{
@@ -276,7 +276,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The Blade magi channels a spell into a melee {@action Strike} to deliver a magically charged attack. The Blade magi casts {@spell acid splash}, {@spell ray of frost}, or {@spell vampiric touch}. The effects of the spell don't occur immediately but are imbued into the Blade magi's attack instead. The Blade magi makes a melee {@action Strike}, which gains the {@trait arcane} trait. The spell is coupled with the attack, using the Blade magi's attack roll to determine the effects of both the {@action Strike} and the spell. This counts as two attacks for their multiple attack penalty, but the penalty isn't applied until after the magus has completed the {@action Spellstrike|SoM}.",
+							"The Blade magi channels a spell into a melee {@action Strike} to deliver a magically charged attack. The Blade magi casts {@spell acid splash}, {@spell ray of frost}, or {@spell vampiric touch}. The effects of the spell don't occur immediately but are imbued into the Blade magi's attack instead. The Blade magi makes a melee {@action Strike}, which gains the {@trait arcano} trait. The spell is coupled with the attack, using the Blade magi's attack roll to determine the effects of both the {@action Strike} and the spell. This counts as two attacks for their multiple attack penalty, but the penalty isn't applied until after the magus has completed the {@action Spellstrike|SoM}.",
 							"After using {@action Spellstrike|SoM}, the Blade magi can't do so again until they recharge this ability as a single action, which has the {@trait concentrate} trait. The Blade magi also recharges their {@action Spellstrike|SoM} when they cast {@spell thunderous strike|SoM}."
 						],
 						"generic": {
@@ -4367,7 +4367,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Arodeth channels a spell into a melee {@action Strike} to deliver a charged attack. She casts {@spell chill touch}, {@spell disintegrate}, or {@spell produce flame}. The effects of the spell don't occur immediately but are imbued into her attack instead. Arodeth makes a staff {@action Strike}, which gains the {@trait arcane} trait. The spell is coupled with the attack, using Arodeth's attack roll to determine the effects of both the {@action Strike} and the spell. This counts as two attacks for her multiple attack penalty, but the penalty isn't applied until after she has completed the {@action Spellstrike|SoM}. After using {@action Spellstrike|SoM}, she can't do so again until she recharges this ability as a single action, which has the {@trait concentrate} trait. She also recharges her {@action Spellstrike|SoM} when she casts {@spell runic impression|SoM} or {@spell spinning staff|SoM}."
+							"Arodeth channels a spell into a melee {@action Strike} to deliver a charged attack. She casts {@spell chill touch}, {@spell disintegrate}, or {@spell produce flame}. The effects of the spell don't occur immediately but are imbued into her attack instead. Arodeth makes a staff {@action Strike}, which gains the {@trait arcano} trait. The spell is coupled with the attack, using Arodeth's attack roll to determine the effects of both the {@action Strike} and the spell. This counts as two attacks for her multiple attack penalty, but the penalty isn't applied until after she has completed the {@action Spellstrike|SoM}. After using {@action Spellstrike|SoM}, she can't do so again until she recharges this ability as a single action, which has the {@trait concentrate} trait. She also recharges her {@action Spellstrike|SoM} when she casts {@spell runic impression|SoM} or {@spell spinning staff|SoM}."
 						],
 						"generic": {
 							"tag": "action",

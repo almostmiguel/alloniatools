@@ -86,7 +86,7 @@ class PageFilterVehicles extends PageFilter {
 		it._fWeaknesses = it.defenses.weaknesses ? it.defenses.weaknesses.map(w => w.name) : [];
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(it._fSources);
@@ -129,7 +129,7 @@ class PageFilterVehicles extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,

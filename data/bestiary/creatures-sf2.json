@@ -2064,7 +2064,7 @@
 							"unit": "year"
 						},
 						"entries": [
-							"Markish casts {@spell wish} as an {@trait arcane} spell to grant a wish to a mortal or {@trait undead} creature (excluding himself), but he does his best to warp the effects of the wish to cause suffering or interprets the wish's wording in a way to torment the one who asks for it."
+							"Markish casts {@spell wish} as an {@trait arcano} spell to grant a wish to a mortal or {@trait undead} creature (excluding himself), but he does his best to warp the effects of the wish to cause suffering or interprets the wish's wording in a way to torment the one who asks for it."
 						]
 					},
 					{
@@ -2085,7 +2085,7 @@
 					{
 						"name": "Soul Spells",
 						"entries": [
-							"To cast occult innate spells, Markish must expend a number of soul charges equal to the spell's level. He can heighten any {@trait occult} spell to a maximum of 8th level by expending more charges as he {@action Cast a Spell||Casts the Spell}. Markish starts this combat with a trapped soul that has 16 soul charges."
+							"To cast occult innate spells, Markish must expend a number of soul charges equal to the spell's level. He can heighten any {@trait ocultista} spell to a maximum of 8th level by expending more charges as he {@action Cast a Spell||Casts the Spell}. Markish starts this combat with a trapped soul that has 16 soul charges."
 						]
 					}
 				]
@@ -4043,7 +4043,7 @@
 						},
 						"entries": [
 							"Sonnorae adds a creature that is affected by her Spirit-Flensing Touch and is within 100 feet to her choir of screams. Sonnorae can have any number of creatures in her choir, although a creature no longer affected by Spirit-Flensing Touch leaves the choir immediately. Creatures in Sonnorae's choir of screams are {@condition fascinated} by each other and Sonnorae, and they can't use {@condition hostile} actions toward each other or Sonnorae.",
-							"If Sonnorae uses a {@condition hostile} action toward a creature in her choir, it immediately leaves the choir. When Sonnorae casts an innate {@trait divine} spell, she can cause the effect to originate from any member of her choir instead of herself, using her saving throw DC and attack bonus."
+							"If Sonnorae uses a {@condition hostile} action toward a creature in her choir, it immediately leaves the choir. When Sonnorae casts an innate {@trait divino} spell, she can cause the effect to originate from any member of her choir instead of herself, using her saving throw DC and attack bonus."
 						]
 					},
 					{

@@ -35,7 +35,7 @@
 				"Magic has never worked quite right around you. Perhaps you have become a magic-user in spite of that, or perhaps you use your unique ability to fight magic-users.",
 				"Choose two ability boosts. One must be to Constitution or Wisdom, and one is a free ability boost.",
 				"You're trained in a {@skill Lore} skill of your choice, though it can't be about a magical subject (as determined by the GM if it's unclear). Whenever you would be affected by magic, even your own magic or that of an ally, the originator of the effect must attempt a DC {@flatDC 3} flat check.",
-				"On a failure, the magic doesn't affect you (though it still has its normal effects on anyone else). On a success, the magic affects you and there is no need to attempt further flat checks for the same {@trait magical} effect, even if it affects you again later."
+				"On a failure, the magic doesn't affect you (though it still has its normal effects on anyone else). On a success, the magic affects you and there is no need to attempt further flat checks for the same {@trait mágico} effect, even if it affects you again later."
 			],
 			"boosts": [
 				"constitution",
@@ -150,7 +150,7 @@
 			"entries": [
 				"Exposure to a significant magical event overloaded you with magical energy. Perhaps you were exposed to dangerous levels of magical energy that left you near death, or it built up over long-term exposure to a powerful source of magic.",
 				"Choose two ability boosts. One must be Constitution and one is a free ability boost.",
-				"Your innate {@trait magical} trait is {@trait primal}. Choose acid, cold, electricity, fire, force, negative, positive, or sonic. You are trained in a {@skill Lore} skill associated with the chosen energy (such as {@skill Lore||Fire Lore}) and you gain resistance to that energy type equal to half your level (minimum 1)."
+				"Your innate {@trait mágico} trait is {@trait primal}. Choose acid, cold, electricity, fire, force, negative, positive, or sonic. You are trained in a {@skill Lore} skill associated with the chosen energy (such as {@skill Lore||Fire Lore}) and you gain resistance to that energy type equal to half your level (minimum 1)."
 			],
 			"boosts": [
 				"constitution",
@@ -353,7 +353,7 @@
 			"entries": [
 				"You spent years predicting, identifying, and harnessing the innate magical talents of those around you. A magic-rich world has taught you that you can never have too much training when everyone around you is capable of magic.",
 				"Choose two ability boosts. One must be Intelligence or Wisdom and one is a free ability boost.",
-				"Your innate {@trait magical} trait is {@trait arcane} or {@trait occult}. You're trained in either {@skill Arcana} or {@skill Occultism}, depending on your innate {@trait magical} trait, and the {@skill Lore||Academia Lore} skill. You gain the {@feat Recognize Spell} skill feat."
+				"Your innate {@trait mágico} trait is {@trait arcano} or {@trait ocultista}. You're trained in either {@skill Arcana} or {@skill Occultism}, depending on your innate {@trait mágico} trait, and the {@skill Lore||Academia Lore} skill. You gain the {@feat Recognize Spell} skill feat."
 			],
 			"boosts": [
 				"intelligence",

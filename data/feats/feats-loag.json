@@ -1588,7 +1588,7 @@
 			],
 			"prerequisites": "{@feat Lawbringer|APG}",
 			"entries": [
-				"You never fail to strike down the ever-expanding reaches of chaos. All your weapon and unarmed {@action Strike||Strikes} deal 1 additional lawful damage and have the {@trait lawful} and {@trait magical} traits."
+				"You never fail to strike down the ever-expanding reaches of chaos. All your weapon and unarmed {@action Strike||Strikes} deal 1 additional lawful damage and have the {@trait lawful} and {@trait mágico} traits."
 			]
 		},
 		{
@@ -2049,7 +2049,7 @@
 				"kitsune"
 			],
 			"entries": [
-				"A crack of your tail sparks wisps of blue energy. Choose either electricity or fire when you gain this feat. You gain a foxfire ranged unarmed attack with a maximum range of 20 feet. The attack deals {@dice 1d4} damage of the chosen type (no ability modifier is added to the damage roll). Your foxfire attack is in the {@group sling} weapon group and has the {@trait magical} trait. Like other unarmed attacks, you can improve this attack with {@item handwraps of mighty blows (generic)|CRB|handwraps of mighty blows}."
+				"A crack of your tail sparks wisps of blue energy. Choose either electricity or fire when you gain this feat. You gain a foxfire ranged unarmed attack with a maximum range of 20 feet. The attack deals {@dice 1d4} damage of the chosen type (no ability modifier is added to the damage roll). Your foxfire attack is in the {@group sling} weapon group and has the {@trait mágico} trait. Like other unarmed attacks, you can improve this attack with {@item handwraps of mighty blows (generic)|CRB|handwraps of mighty blows}."
 			],
 			"special": [
 				"If you are a frozen wind kitsune, your foxfire deals cold damage instead of electricity or fire."
@@ -3585,7 +3585,7 @@
 				"orc"
 			],
 			"entries": [
-				"You paint your face to create a warmask, an invested magic item of negligible Bulk with an item level equal to your level and a usage of worn (mask). It has the {@trait divination} trait and a magical tradition trait depending on its type. Donning or removing your warmask requires 1 minute of work, though you don't need to Invest the mask each time. The warmask is unique to you and might signify your hold, your accomplishments, or your faith. While creating your mask, you must choose the source of your warmask's power from the options below. This source determines the mask's associated skill as well as magical tradition.",
+				"You paint your face to create a warmask, an invested magic item of negligible Bulk with an item level equal to your level and a usage of worn (mask). It has the {@trait divinotion} trait and a magical tradition trait depending on its type. Donning or removing your warmask requires 1 minute of work, though you don't need to Invest the mask each time. The warmask is unique to you and might signify your hold, your accomplishments, or your faith. While creating your mask, you must choose the source of your warmask's power from the options below. This source determines the mask's associated skill as well as magical tradition.",
 				"Once you select this source, it can't be changed. You become trained in the associated skill, and you gain the {@feat Dubious Knowledge} skill feat as a bonus feat.",
 				"You can spend 1 hour performing a ceremony that costs 50 gp to attune yourself more deeply with your warmask. If you do, you gain a +1 item bonus to the associated skill whenever you wear the warmask.",
 				{

@@ -197,7 +197,7 @@
 					],
 					"trigger": "You attempt a saving throw against a spell or magic effect but haven't rolled yet",
 					"entries": [
-						"You find some kind of fault with the magic, using that flaw to protect yourself from the effect. You gain a +1 circumstance bonus to your saving throw against the triggering effect, which increases to a +2 circumstance bonus if the effect is {@trait divine} and originates from a worshipper of the deity you chose for your grudge."
+						"You find some kind of fault with the magic, using that flaw to protect yourself from the effect. You gain a +1 circumstance bonus to your saving throw against the triggering effect, which increases to a +2 circumstance bonus if the effect is {@trait divino} and originates from a worshipper of the deity you chose for your grudge."
 					],
 					"type": "ability"
 				}
@@ -269,7 +269,7 @@
 			],
 			"prerequisites": "{@feat Faultspawn|LOIL}",
 			"entries": [
-				"You can cast {@spell blood vendetta|APG} and {@spell death knell} once per day each as 2nd-level {@trait divine} innate spells."
+				"You can cast {@spell blood vendetta|APG} and {@spell death knell} once per day each as 2nd-level {@trait divino} innate spells."
 			]
 		},
 		{
@@ -282,7 +282,7 @@
 			],
 			"prerequisites": "{@feat Beastbrood|LOAG}",
 			"entries": [
-				"You can cast {@spell dispel magic} and {@spell reaper's lantern|apg} once per day each as 2nd-level {@trait divine} innate spells. {@spell Reaper's lantern|apg} manifests as a lantern shaped like the head of your rakshasa incarnation."
+				"You can cast {@spell dispel magic} and {@spell reaper's lantern|apg} once per day each as 2nd-level {@trait divino} innate spells. {@spell Reaper's lantern|apg} manifests as a lantern shaped like the head of your rakshasa incarnation."
 			]
 		},
 		{
@@ -2507,7 +2507,7 @@
 						"{@b Anteater} You become an expert in primal DCs and spell attack rolls. You can cast {@spell slow} as an innate primal spell once per day.",
 						"{@b Cat} Sith You laugh off the outraged curses of those you have tricked or wronged. Whenever a creature targets you with a {@trait misfortune} effect, make a DC {@flatDC 13} flat check. On a success, you are unaffected.",
 						"{@b Cursed} Bluebird You have enough control over your curse to turn a bane into a minor blessing. Once per day, you can temporarily transform yourself or an ally into a blue bird, as a 4th-level {@spell pest form} (bird only) targeting one willing creature.",
-						"{@b Dryad} Your hair becomes intermixed with delicate but razor-edged leaves that move as you command. You gain a leaves ranged unarmed attack that deals {@damage 1d6} slashing damage. Your leaves are in the dart weapon group and have the {@trait magical} and {@trait unarmed} traits.",
+						"{@b Dryad} Your hair becomes intermixed with delicate but razor-edged leaves that move as you command. You gain a leaves ranged unarmed attack that deals {@damage 1d6} slashing damage. Your leaves are in the dart weapon group and have the {@trait mágico} and {@trait unarmed} traits.",
 						"{@b Faun} You can cast {@spell charm}, sleep, and triple time as innate primal spells once per day each. Whenever you cast one of these spells, you can {@action Step} or {@action Stride} as part of the activity.",
 						"{@b Gremlin} You become an expert in primal DCs and spell attack rolls. You can cast {@spell mad monkeys|APG} (Advanced Player's Guide 222) as an innate primal spell once per day.",
 						"{@b Monarch} Once per day, you gain the ability to manifest a pair of exquisite butterfly wings. These wings remain for 10 minutes. You gain a fly Speed equal to your Speed while you've manifested your wings.",

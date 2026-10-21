@@ -180,7 +180,7 @@
 					{
 						"name": "Elven Craft",
 						"entries": [
-							"{@trait Uncommon} {@trait elf} items, including magic items, are {@trait common} in Iadara, and magic items up to level 17 are available."
+							"{@trait Uncommon} {@trait elfo} items, including magic items, are {@trait common} in Iadara, and magic items up to level 17 are available."
 						]
 					},
 					{
@@ -1295,7 +1295,7 @@
 					{
 						"name": "Arcane Learning",
 						"entries": [
-							"Although Acadamae is the most notable college in Korvosa, smaller schools also teach arcane arts. Many graduates remain in the city, leading to a thriving trade in {@trait arcane} items and information. {@trait Arcane} scrolls and wands of up to level 13 are often available in shops, along with many other components and ritual ingredients."
+							"Although Acadamae is the most notable college in Korvosa, smaller schools also teach arcane arts. Many graduates remain in the city, leading to a thriving trade in {@trait arcano} items and information. {@trait Arcane} scrolls and wands of up to level 13 are often available in shops, along with many other components and ritual ingredients."
 						]
 					}
 				]

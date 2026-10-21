@@ -599,7 +599,7 @@
 								{
 									"name": "Light Vulnerability",
 									"entries": [
-										"An object shedding magical light (such as from the {@spell light} spell) gains the {@trait magical} trait when used to attack the shadow."
+										"An object shedding magical light (such as from the {@spell light} spell) gains the {@trait mágico} trait when used to attack the shadow."
 									]
 								}
 							]

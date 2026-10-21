@@ -130,6 +130,13 @@
 						},
 						"minItems": 1
 					},
+					"images": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"minItems": 1
+					},
 					"heritageInfo": {
 						"type": "array",
 						"items": {
@@ -175,6 +182,13 @@
 									"type": "array",
 									"items": {
 										"$ref": "entry.json"
+									},
+									"minItems": 1
+								},
+								"images": {
+									"type": "array",
+									"items": {
+										"type": "string"
 									},
 									"minItems": 1
 								}

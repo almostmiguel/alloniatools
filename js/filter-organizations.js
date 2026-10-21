@@ -27,7 +27,7 @@ class PageFilterOrganizations extends PageFilter {
 		if (it.followerAlignment) it.followerAlignment.map(i => it._fFollowerAlignment.push(i.main))
 	}
 
-	addToFilters (it, isExcluded) {
+	_addToFilters (it, isExcluded) {
 		if (isExcluded) return;
 
 		this._sourceFilter.addItem(it._fSources);
@@ -45,7 +45,7 @@ class PageFilterOrganizations extends PageFilter {
 		];
 	}
 
-	toDisplay (values, it) {
+	_toDisplay (values, it) {
 		return this._filterBox.toDisplay(
 			values,
 			it._fSources,
