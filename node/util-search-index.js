@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 require("../js/parser.js");
 require("../js/utils.js");
 require("../js/render.js");
@@ -47,16 +49,20 @@ class UtilSearchIndex {
 			.filter(indexMeta => opts.alternate ? indexMeta.alternateIndexes && indexMeta.alternateIndexes[opts.alternate] : true);
 
 		for (const indexMeta of toIndexMultiPart) {
-			const dataIndex = require(`../data/${indexMeta.dir}/${indexMeta.indexFile ? indexMeta.indexFile : "index.json"}`);
+			const indexFilename = indexMeta.indexFile || "index.json";
+			const dataIndexPath = path.join(__dirname, "..", "data", indexMeta.dir, indexFilename);
+			if (!fs.existsSync(dataIndexPath)) continue;
+			const dataIndex = require(dataIndexPath);
 
 			const loadedFiles = Object.entries(dataIndex)
 				.sort(([kA], [kB]) => UtilSearchIndex._sortSources(kA, kB))
 				.map(([_, filename]) => filename);
 
 			for (const filename of loadedFiles) {
-				const filePath = `../data/${indexMeta.dir}/${filename}`;
-				const contents = require(filePath);
-				if (doLogging) console.log(`indexing${opts.traits ? " traits " : " "}${filePath}`);
+				const dataPath = path.join(__dirname, "..", "data", indexMeta.dir, filename);
+				if (!fs.existsSync(dataPath)) continue;
+				const contents = require(dataPath);
+				if (doLogging) console.log(`indexing${opts.traits ? " traits " : " "}${dataPath}`);
 				const optsNxt = {isNoFilter: noFilter};
 				if (opts.alternate) optsNxt.alt = indexMeta.alternateIndexes[opts.alternate];
 				await indexer.pAddToIndex(indexMeta, contents, optsNxt);
@@ -69,12 +75,13 @@ class UtilSearchIndex {
 			.filter(indexMeta => opts.alternate ? indexMeta.alternateIndexes && indexMeta.alternateIndexes[opts.alternate] : true);
 
 		for (const indexMeta of toIndexSingle) {
-			const filePath = `../data/${indexMeta.file}`;
-			const data = require(filePath);
+			const dataPath = path.join(__dirname, "..", "data", indexMeta.file);
+			if (!fs.existsSync(dataPath)) continue;
+			const data = require(dataPath);
 
 			if (indexMeta.postLoad) indexMeta.postLoad(data);
 
-			if (doLogging) console.log(`indexing${opts.traits ? " traits " : " "}${filePath}`);
+			if (doLogging) console.log(`indexing${opts.traits ? " traits " : " "}${dataPath}`);
 			Object.values(data)
 				.filter(it => it instanceof Array)
 				.forEach(it => it.sort((a, b) => UtilSearchIndex._sortSources(a.source || MiscUtil.get(a, "inherits", "source"), b.source || MiscUtil.get(b, "inherits", "source")) || SortUtil.ascSortLower(a.name || MiscUtil.get(a, "inherits", "name") || "", b.name || MiscUtil.get(b, "inherits", "name") || "")));
@@ -102,13 +109,14 @@ class UtilSearchIndex {
 		const indexer = new od.Omnidexer(baseIndex);
 
 		await Promise.all(od.Omnidexer.TO_INDEX.filter(it => it.category === Parser.CAT_ID_ITEM).map(async ti => {
-			const filename = `../data/${ti.file}`;
-			const data = require(filename);
+			const dataPath = path.join(__dirname, "..", "data", ti.file);
+			if (!fs.existsSync(dataPath)) return;
+			const data = require(dataPath);
 
 			if (ti.postLoad) ti.postLoad(data);
 
 			if (ti.additionalIndexes && ti.additionalIndexes.item) {
-				if (doLogging) console.log(`indexing ${filename}`);
+				if (doLogging) console.log(`indexing ${dataPath}`);
 				const extra = await ti.additionalIndexes.item(indexer, data);
 				extra.forEach(add => indexer.pushToIndex(add));
 			}

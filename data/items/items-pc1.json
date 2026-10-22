@@ -880,7 +880,7 @@
 			"bulk": 6,
 			"hands": 2,
 			"entries": [
-				"You need an alchemist's lab to {@action Craft|PC1} {@trait alchemical} items during {@trait downtime}."
+				"You need an alchemist's lab to {@action Craft|PC1} {@trait alquímico} items during {@trait downtime}."
 			],
 			"variants": [
 				{
@@ -900,7 +900,7 @@
 						"coin": "gp"
 					},
 					"entries": [
-						"An expanded alchemist's lab gives a +1 item bonus to {@skill Crafting|PC1} checks to create {@trait alchemical} items."
+						"An expanded alchemist's lab gives a +1 item bonus to {@skill Crafting|PC1} checks to create {@trait alquímico} items."
 					]
 				}
 			]
@@ -1182,7 +1182,7 @@
 			"bulk": "L",
 			"hands": 1,
 			"entries": [
-				"A formula book holds the formulas necessary to make items other than the {@trait common} equipment from this chapter; characters of the {@class alchemist|PC2} class typically get one for free. Each formula book can hold the formulas for up to 100 different items. Formulas can also appear on parchment sheets, tablets, and almost any other medium; there's no need for you to copy them into a specific book as long as you can keep them on hand to reference them."
+				"A formula book holds the formulas necessary to make items other than the {@trait comum} equipment from this chapter; characters of the {@class alchemist|PC2} class typically get one for free. Each formula book can hold the formulas for up to 100 different items. Formulas can also appear on parchment sheets, tablets, and almost any other medium; there's no need for you to copy them into a specific book as long as you can keep them on hand to reference them."
 			],
 			"category": "Adventuring Gear",
 			"type": "Item"

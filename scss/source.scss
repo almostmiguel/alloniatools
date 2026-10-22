@@ -3,6 +3,7 @@
 .source {
 	$rgb-source-APG: #4a6898;
 	$rgb-source-GMG: purple;
+	$rgb-source-GMC: #76518c;
 	$rgb-source-B1: rgb(0 137 0);
 	$rgb-source-B2: rgb(0 107 0);
 	$rgb-source-B3: rgb(0 77 0);
@@ -23,6 +24,8 @@
 	$rgb-source-TV: #8b8b56;
 	$rgb-source-PC1: #038027;
 	$rgb-source-PC2: #852d23;
+	$rgb-source-MC1: #1d6f87;
+	$rgb-source-MC2: #95512d;
 	$rgb-source-LOTXWG: #ca3052;
 	$rgb-source-LOACLO: #91d4d1;
 	$rgb-source-LORA: #dfa4a4;
@@ -59,6 +62,13 @@
 		color: $rgb-source-GMG !important;
 		border-color: $rgb-source-GMG !important;
 		text-decoration-color: $rgb-source-GMG !important;
+	}
+
+	&GMC {
+		color: $rgb-source-GMC !important;
+		border-color: $rgb-source-GMC !important;
+		text-decoration-color: $rgb-source-GMC !important;
+		font-style: italic;
 	}
 
 	&B1 {
@@ -181,6 +191,20 @@
 		border-color: $rgb-source-PC2 !important;
 		text-decoration-color: $rgb-source-PC2 !important;
 		font-style: italic; /* hack to make remaster stuff obvious */
+	}
+
+	&MC1 {
+		color: $rgb-source-MC1 !important;
+		border-color: $rgb-source-MC1 !important;
+		text-decoration-color: $rgb-source-MC1 !important;
+		font-style: italic;
+	}
+
+	&MC2 {
+		color: $rgb-source-MC2 !important;
+		border-color: $rgb-source-MC2 !important;
+		text-decoration-color: $rgb-source-MC2 !important;
+		font-style: italic;
 	}
 
 	&LOTXWG {

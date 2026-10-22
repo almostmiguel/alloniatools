@@ -222,7 +222,7 @@
 				}
 			],
 			"flavor": [
-				"You command powerful magic, not through study or devotion, but as an agent for an otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, an ancient spirit, or any other mighty supernatural being\u2014but its nature is likely as much a mystery to you as it is to others. Through a special familiar, your patron grants you versatile spells and powerful hexes to use as you see fit, though you're never certain if you're merely serving your patron's larger plan."
+				"You command powerful magic, not through study or devotion, but as an agent for an otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to others. Through a special familiar, your patron grants you versatile spells and powerful hexes to use as you see fit, though you're never certain if you're merely serving your patron's larger plan."
 			],
 			"fluff": [
 				{
@@ -348,7 +348,7 @@
 			"type": "Patron",
 			"entries": [
 				"You weren't born with the power to cast spells, nor have you spent years dedicated to worship, study, or uncovering mystical secrets. Your magic instead has been gifted to you by a potent being, one who knows that by empowering you so, you'll further the being's agenda in the world, whatever it may be. This entity is typically mysterious and distant, revealing little of their identity and motivations. They make their will known to you in abstract signs such as omens, dreams, or similar subtleties rather than words.",
-				"Rather than interacting with you directly, your patron works through a familiar\u2014a mystical creature that teaches you, serves as the conduit for your patron's magic, and maybe even keeps an eye on you to ensure you're furthering your patron's nebulous ends.",
+				"Rather than interacting with you directly, your patron works through a familiar—a mystical creature that teaches you, serves as the conduit for your patron's magic, and maybe even keeps an eye on you to ensure you're furthering your patron's nebulous ends.",
 				"At 1st level, choose your patron, which determines your spellcasting tradition and grants you the skill for that tradition of magic, your first witch's lesson and a unique familiar ability."
 			]
 		},
@@ -378,7 +378,7 @@
 					"page": 181,
 					"name": "Cantrips",
 					"entries": [
-						"Some of your spells are cantrips. A cantrip is a special type of spell that doesn't use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is always automatically heightened to half your level rounded up\u2014this is usually equal to the highest rank of witch spell slot you have. For example, as a 1st-level witch, your cantrips are 1st-rank spells, and as a 5thlevel witch, your cantrips are 3rd-rank spells."
+						"Some of your spells are cantrips. A cantrip is a special type of spell that doesn't use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is always automatically heightened to half your level rounded up—this is usually equal to the highest rank of witch spell slot you have. For example, as a 1st-level witch, your cantrips are 1st-rank spells, and as a 5thlevel witch, your cantrips are 3rd-rank spells."
 					]
 				},
 				{
@@ -463,57 +463,57 @@
 							1,
 							5,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							2,
 							5,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							3,
 							5,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							4,
 							5,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							5,
@@ -521,13 +521,13 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							6,
@@ -535,13 +535,13 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							7,
@@ -550,12 +550,12 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							8,
@@ -564,12 +564,12 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							9,
@@ -579,11 +579,11 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							10,
@@ -593,11 +593,11 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							11,
@@ -608,10 +608,10 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							12,
@@ -622,10 +622,10 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							13,
@@ -637,9 +637,9 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—"
 						],
 						[
 							14,
@@ -651,9 +651,9 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—"
 						],
 						[
 							15,
@@ -666,8 +666,8 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014"
+							"—",
+							"—"
 						],
 						[
 							16,
@@ -680,8 +680,8 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014"
+							"—",
+							"—"
 						],
 						[
 							17,
@@ -695,7 +695,7 @@
 							3,
 							3,
 							2,
-							"\u2014"
+							"—"
 						],
 						[
 							18,
@@ -709,7 +709,7 @@
 							3,
 							3,
 							3,
-							"\u2014"
+							"—"
 						],
 						[
 							19,
@@ -1126,7 +1126,7 @@
 					"remaster": true,
 					"page": 185,
 					"entries": [
-						"Bitter cold heralded your patron's appearance, in the depths of the winter solstice or on a frozen peak at the end of the world. Your patron might be a winter hag, ice yai, or other spirit of the cold, but one thing is clear as ice\u2014their power is not to be underestimated.",
+						"Bitter cold heralded your patron's appearance, in the depths of the winter solstice or on a frozen peak at the end of the world. Your patron might be a winter hag, ice yai, or other spirit of the cold, but one thing is clear as ice—their power is not to be underestimated.",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -1175,7 +1175,7 @@
 					"remaster": true,
 					"page": 185,
 					"entries": [
-						"You met your patron in a memory of an encounter yet to come or a premonition of something long since passed, as they untangled and re-spun the tapestry of time and fate. Was your patron a norn? A herald of a deity like Pharasma, Alseta, or Grandmother Spider? Could it even be a single individual appearing at three or more points in its timeline\u2014multiple versions of the same being, parallel threads converging on a single moment?",
+						"You met your patron in a memory of an encounter yet to come or a premonition of something long since passed, as they untangled and re-spun the tapestry of time and fate. Was your patron a norn? A herald of a deity like Pharasma, Alseta, or Grandmother Spider? Could it even be a single individual appearing at three or more points in its timeline—multiple versions of the same being, parallel threads converging on a single moment?",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -1198,7 +1198,7 @@
 								{
 									"type": "item",
 									"name": "Familiar of Balanced Luck",
-									"entry": "Your familiar has a spot on its body that looks like a good luck charm or a bad omen, depending on the angle. When you Cast or {@action Sustain|PC1} a hex, one creature within 15 feet of your familiar gets your choice of either a +1 status bonus to its AC or a \u20131 status penalty to its AC until the start of your next turn."
+									"entry": "Your familiar has a spot on its body that looks like a good luck charm or a bad omen, depending on the angle. When you Cast or {@action Sustain|PC1} a hex, one creature within 15 feet of your familiar gets your choice of either a +1 status bonus to its AC or a –1 status penalty to its AC until the start of your next turn."
 								}
 							]
 						}
@@ -1224,7 +1224,7 @@
 					"remaster": true,
 					"page": 185,
 					"entries": [
-						"Your patron first contacted you at the witching hour, as your body lay paralyzed by sleep while your mind had yet to escape the waking world. Your patron might be a creature of the Netherworld or a long-forgotten spirit of twilight\u2014all you remember of them are haunting eyes of moonlight, offering you power from the darkness.",
+						"Your patron first contacted you at the witching hour, as your body lay paralyzed by sleep while your mind had yet to escape the waking world. Your patron might be a creature of the Netherworld or a long-forgotten spirit of twilight—all you remember of them are haunting eyes of moonlight, offering you power from the darkness.",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -1297,56 +1297,6 @@
 									"type": "item",
 									"name": "Familiar of Restored Spirit",
 									"entry": "Your familiar has glinting eyes, twitching ears, or some other sign of a beast's powerful senses. When you Cast or {@action Sustain|PC1} a hex, your familiar gains your choice of an imprecise scent, tremorsense, or wavesense, with a range of 60 feet until the start of your next turn, and it can immediately {@action Point Out|PC1} as a free action."
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Patron",
-			"source": "LORA",
-			"remaster": true,
-			"page": 44,
-			"className": "Witch",
-			"classSource": "PC1",
-			"subclassShortName": "Cobyslarni",
-			"subclassSource": "LORA",
-			"level": 1,
-			"entries": [
-				{
-					"type": "pf2-h4",
-					"name": "Cobyslarni ({@trait Rare} Witch Patron)",
-					"source": "LORA",
-					"remaster": true,
-					"page": 44,
-					"entries": [
-						"Though Cobyslarni doesn't often interact directly with mortals these days, your quest for wisdom has drawn his attention. You studied at his academy, encountered him on his travels throughout the planes, or responded to his strange psychic call. However your meeting occurred, Cobyslarni empowered your studies. Though Cobyslarni rarely demands anything directly from his witches, you may receive visions of danger to the academy or its students in times of dire need.",
-						"Most witches chosen by Cobyslarni, if they're not already students at the academy, make their way there at some point. Some who follow these nudges remain at the academy indefinitely, but most eventually move on to experience their own journeys or even establish their own schools.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Spell List",
-									"entry": "{@filter occult|spells||tradition & spell list=occult}"
-								},
-								{
-									"type": "item",
-									"name": "Patron Skill",
-									"entry": "{@skill Occultism|PC1}"
-								},
-								{
-									"type": "item",
-									"name": "Lesson of Wandering Mind",
-									"entry": "Cobyslarni has taught you to keep an open mind and seek knowledge in all things, sifting through an array of facts that others would find bewildering. You gain the {@spell information overload|LORA} {@trait hex} cantrip and your familiar learns {@spell déjà vu|PC2}."
-								},
-								{
-									"type": "item",
-									"name": "Familiar of Restored Spirit",
-									"entry": "Your familiar boasts a third eye upon their head or body, resembling the one set in Cobyslarni's forehead. When you Cast or {@action Sustain|PC1} a hex, your familiar can attempt a check to {@action Recall Knowledge|PC1} as a free action with any skill in which you are trained or better, using your bonus, and psychically transmit the information to you."
 								}
 							]
 						}

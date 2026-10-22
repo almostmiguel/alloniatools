@@ -1637,6 +1637,7 @@ SRC_FRP1 = "FRP1";
 SRC_FRP2 = "FRP2";
 SRC_FRP3 = "FRP3";
 SRC_GMG = "GMG";
+SRC_GMC = "GMC";
 SRC_GnG = "G&G";
 SRC_GW0 = "GW0";
 SRC_GW1 = "GW1";
@@ -1667,6 +1668,8 @@ SRC_LOWG = "LOWG";
 SRC_LTiBA = "LTiBA";
 SRC_Mal = "Mal";
 SRC_MotM = "MotM";
+SRC_MC1 = "MC1";
+SRC_MC2 = "MC2";
 SRC_NGD = "NGD";
 SRC_MS0 = "MS0";
 SRC_OoA0 = "OoA0";
@@ -1778,6 +1781,7 @@ Parser.SOURCE_JSON_TO_ABV[SRC_FRP1] = "FRP1";
 Parser.SOURCE_JSON_TO_ABV[SRC_FRP2] = "FRP2";
 Parser.SOURCE_JSON_TO_ABV[SRC_FRP3] = "FRP3";
 Parser.SOURCE_JSON_TO_ABV[SRC_GMG] = "GMG";
+Parser.SOURCE_JSON_TO_ABV[SRC_GMC] = "GMC";
 Parser.SOURCE_JSON_TO_ABV[SRC_GnG] = "G&G";
 Parser.SOURCE_JSON_TO_ABV[SRC_GW0] = "Gw0";
 Parser.SOURCE_JSON_TO_ABV[SRC_GW1] = "Gw1";
@@ -1808,6 +1812,8 @@ Parser.SOURCE_JSON_TO_ABV[SRC_LOWG] = "LOWG";
 Parser.SOURCE_JSON_TO_ABV[SRC_LTiBA] = "LTiBA";
 Parser.SOURCE_JSON_TO_ABV[SRC_Mal] = "Mal";
 Parser.SOURCE_JSON_TO_ABV[SRC_MotM] = "MotM";
+Parser.SOURCE_JSON_TO_ABV[SRC_MC1] = "MC1";
+Parser.SOURCE_JSON_TO_ABV[SRC_MC2] = "MC2";
 Parser.SOURCE_JSON_TO_ABV[SRC_NGD] = "NGD";
 Parser.SOURCE_JSON_TO_ABV[SRC_MS0] = "MS0";
 Parser.SOURCE_JSON_TO_ABV[SRC_OoA0] = "OoA0";
@@ -1919,6 +1925,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_FRP1] = "2021-07-07";
 Parser.SOURCE_JSON_TO_DATE[SRC_FRP2] = "2021-07-07";
 Parser.SOURCE_JSON_TO_DATE[SRC_FRP3] = "2021-07-07";
 Parser.SOURCE_JSON_TO_DATE[SRC_GMG] = "2020-02-26";
+Parser.SOURCE_JSON_TO_DATE[SRC_GMC] = "2023-11-15";
 Parser.SOURCE_JSON_TO_DATE[SRC_GnG] = "2021-10-13";
 Parser.SOURCE_JSON_TO_DATE[SRC_GW0] = "2023-01-10";
 Parser.SOURCE_JSON_TO_DATE[SRC_GW1] = "2023-01-25";
@@ -1949,6 +1956,8 @@ Parser.SOURCE_JSON_TO_DATE[SRC_LOWG] = "2019-08-31";
 Parser.SOURCE_JSON_TO_DATE[SRC_LTiBA] = "2020-07-25";
 Parser.SOURCE_JSON_TO_DATE[SRC_Mal] = "2021-07-07";
 Parser.SOURCE_JSON_TO_DATE[SRC_MotM] = "2022-02-23";
+Parser.SOURCE_JSON_TO_DATE[SRC_MC1] = "2024-03-27";
+Parser.SOURCE_JSON_TO_DATE[SRC_MC2] = "2025-11-05";
 Parser.SOURCE_JSON_TO_DATE[SRC_NGD] = "2021-10-13";
 Parser.SOURCE_JSON_TO_DATE[SRC_MS0] = "2025-06-16";
 Parser.SOURCE_JSON_TO_DATE[SRC_OoA0] = "2022-03-28";
@@ -2060,6 +2069,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_FRP1] = "Fists of the Ruby Phoenix #1: Despair on
 Parser.SOURCE_JSON_TO_FULL[SRC_FRP2] = "Fists of the Ruby Phoenix #2: Ready? Fight!";
 Parser.SOURCE_JSON_TO_FULL[SRC_FRP3] = "Fists of the Ruby Phoenix #3: King of the Mountain";
 Parser.SOURCE_JSON_TO_FULL[SRC_GMG] = "Gamemastery Guide";
+Parser.SOURCE_JSON_TO_FULL[SRC_GMC] = "GM Core";
 Parser.SOURCE_JSON_TO_FULL[SRC_GnG] = "Guns & Gears";
 Parser.SOURCE_JSON_TO_FULL[SRC_GW0] = "Gatewalkers Player's Guide";
 Parser.SOURCE_JSON_TO_FULL[SRC_GW1] = "Gatewalkers #1: The Seventh Arch";
@@ -2090,6 +2100,8 @@ Parser.SOURCE_JSON_TO_FULL[SRC_LOWG] = "Lost Omens: World Guide";
 Parser.SOURCE_JSON_TO_FULL[SRC_LTiBA] = "Little Trouble in Big Absalom";
 Parser.SOURCE_JSON_TO_FULL[SRC_Mal] = "Malevolence";
 Parser.SOURCE_JSON_TO_FULL[SRC_MotM] = "Mark of the Mantis";
+Parser.SOURCE_JSON_TO_FULL[SRC_MC1] = "Monster Core";
+Parser.SOURCE_JSON_TO_FULL[SRC_MC2] = "Monster Core 2";
 Parser.SOURCE_JSON_TO_FULL[SRC_NGD] = "Night of the Gray Death";
 Parser.SOURCE_JSON_TO_FULL[SRC_MS0] = "Myth-Speaker Player's Guide";
 Parser.SOURCE_JSON_TO_FULL[SRC_OoA0] = "Outlaws of Alkenstar Player's Guide";
@@ -2202,6 +2214,7 @@ Parser.SOURCE_JSON_TO_STORE[SRC_FRP1] = "https://paizo.com/products/btq027qd";
 Parser.SOURCE_JSON_TO_STORE[SRC_FRP2] = "https://paizo.com/products/btq027sp";
 Parser.SOURCE_JSON_TO_STORE[SRC_FRP3] = "https://paizo.com/products/btq027sq";
 Parser.SOURCE_JSON_TO_STORE[SRC_GMG] = "https://paizo.com/products/btq022c1";
+Parser.SOURCE_JSON_TO_STORE[SRC_GMC] = "https://store.paizo.com/pathfinder-gm-core/";
 Parser.SOURCE_JSON_TO_STORE[SRC_GnG] = "https://paizo.com/products/btq026mw";
 Parser.SOURCE_JSON_TO_STORE[SRC_GW0] = "https://downloads.paizo.com/GatewalkersPlayersGuide.pdf";
 Parser.SOURCE_JSON_TO_STORE[SRC_GW1] = "https://paizo.com/products/btq02dsq";
@@ -2232,6 +2245,8 @@ Parser.SOURCE_JSON_TO_STORE[SRC_LOWG] = "https://paizo.com/products/btq01zoj";
 Parser.SOURCE_JSON_TO_STORE[SRC_LTiBA] = "https://paizo.com/products/btq024ys";
 Parser.SOURCE_JSON_TO_STORE[SRC_Mal] = "https://paizo.com/products/btq027qf";
 Parser.SOURCE_JSON_TO_STORE[SRC_MotM] = "https://paizo.com/products/btq02c32";
+Parser.SOURCE_JSON_TO_STORE[SRC_MC1] = "https://store.paizo.com/pathfinder-monster-core/";
+Parser.SOURCE_JSON_TO_STORE[SRC_MC2] = "https://store.paizo.com/pathfinder-monster-core-2/";
 Parser.SOURCE_JSON_TO_STORE[SRC_NGD] = "https://paizo.com/products/btq027o0";
 Parser.SOURCE_JSON_TO_STORE[SRC_MS0] = "https://downloads.paizo.com/Myth-Speaker_Players-Guide.pdf";
 Parser.SOURCE_JSON_TO_STORE[SRC_OoA0] = "https://downloads.paizo.com/Outlaws+of+Alkenstar+Player's+Guide.pdf";
@@ -2395,10 +2410,13 @@ Parser.SOURCES_VANILLA = new Set([
 	SRC_CRB,
 	SRC_DA,
 	SRC_GMG,
+	SRC_GMC,
 	SRC_GnG,
 	SRC_HotW,
 	SRC_PC1,
 	SRC_PC2,
+	SRC_MC1,
+	SRC_MC2,
 	SRC_RoE,
 	SRC_SoM,
 ]);

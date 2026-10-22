@@ -261,7 +261,7 @@
 								"All kinds of experiences and training can shape your character beyond what you learn by advancing in your class. Abilities that require a degree of training but can be learned by anyone\u2014not only members of certain ancestries or classes\u2014are called general feats."
 							]
 						},
-						"For most classes, you gain a general feat when you reach 3rd level and every 4 levels thereafter. Each time you gain a general feat, you can select any feat with the {@trait general} trait whose prerequisites you satisfy.",
+						"For most classes, you gain a general feat when you reach 3rd level and every 4 levels thereafter. Each time you gain a general feat, you can select any feat with the {@trait geral} trait whose prerequisites you satisfy.",
 						"General feats also include a subcategory of skill feats, which expand on what you can accomplish via skills. These feats also have the {@trait skill} trait. Most characters gain skill feats at 2nd level and every 2 levels thereafter. When you gain a skill feat, you must select a {@filter general feat with the skill trait|feats||general=general;skill=sand}; you can't select a general feat that lacks the {@trait skill} trait. The level of a skill feat is typically the minimum level at which a character could meet its proficiency prerequisite."
 					]
 				}
@@ -1682,7 +1682,7 @@
 									"type": "pf2-h3",
 									"name": "Learning Rituals",
 									"entries": [
-										"Learning a ritual does not count against any limits on spells in your spell repertoire or on any other normal spellcasting ability. Rituals are never {@trait common}, though if you look hard, you can probably find someone who can perform an {@trait uncommon} ritual for you. They may still be unwilling to teach it to you."
+										"Learning a ritual does not count against any limits on spells in your spell repertoire or on any other normal spellcasting ability. Rituals are never {@trait comum}, though if you look hard, you can probably find someone who can perform an {@trait uncommon} ritual for you. They may still be unwilling to teach it to you."
 									]
 								},
 								{

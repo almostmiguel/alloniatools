@@ -236,7 +236,7 @@
 				}
 			],
 			"flavor": [
-				"The power of nature is impossible to resist. It can bring ruin to the stoutest fortress in minutes, reducing even the mightiest works to rubble, burning them to ash, burying them beneath an avalanche of snow, or drowning them beneath the waves. It can provide endless bounty and breathtaking splendor to those who respect it\u2014and an agonizing death to those who take it too lightly. You are one of those who hear nature's call. You stand in awe of the majesty of its power and give yourself over to its service."
+				"The power of nature is impossible to resist. It can bring ruin to the stoutest fortress in minutes, reducing even the mightiest works to rubble, burning them to ash, burying them beneath an avalanche of snow, or drowning them beneath the waves. It can provide endless bounty and breathtaking splendor to those who respect it—and an agonizing death to those who take it too lightly. You are one of those who hear nature's call. You stand in awe of the majesty of its power and give yourself over to its service."
 			],
 			"fluff": [
 				{
@@ -376,7 +376,7 @@
 					"page": 124,
 					"name": "Cantrips",
 					"entries": [
-						"Some of your spells are cantrips. A cantrip is a special type of spell that doesn't use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is always automatically heightened to half your level rounded up\u2014this is usually equal to the highest rank of druid spell slot you have. For example, as a 1st-level druid, your cantrips are 1st-rank spells, and a 5th-level druid's are 3rd rank."
+						"Some of your spells are cantrips. A cantrip is a special type of spell that doesn't use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is always automatically heightened to half your level rounded up—this is usually equal to the highest rank of druid spell slot you have. For example, as a 1st-level druid, your cantrips are 1st-rank spells, and a 5th-level druid's are 3rd rank."
 					]
 				},
 				{
@@ -449,57 +449,57 @@
 							1,
 							5,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							2,
 							5,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							3,
 							5,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							4,
 							5,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							5,
@@ -507,13 +507,13 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							6,
@@ -521,13 +521,13 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							7,
@@ -536,12 +536,12 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							8,
@@ -550,12 +550,12 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							9,
@@ -565,11 +565,11 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							10,
@@ -579,11 +579,11 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							11,
@@ -594,10 +594,10 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							12,
@@ -608,10 +608,10 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							13,
@@ -623,9 +623,9 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—"
 						],
 						[
 							14,
@@ -637,9 +637,9 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—"
 						],
 						[
 							15,
@@ -652,8 +652,8 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014"
+							"—",
+							"—"
 						],
 						[
 							16,
@@ -666,8 +666,8 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014"
+							"—",
+							"—"
 						],
 						[
 							17,
@@ -681,7 +681,7 @@
 							3,
 							3,
 							2,
-							"\u2014"
+							"—"
 						],
 						[
 							18,
@@ -695,7 +695,7 @@
 							3,
 							3,
 							3,
-							"\u2014"
+							"—"
 						],
 						[
 							19,
@@ -1089,110 +1089,6 @@
 						"{@b Druid Feat} {@feat Untamed Form|PC1}",
 						"{@b Order Spell} {@spell untamed shift|PC1}",
 						"{@b Anathema} Become fully domesticated by the temptations of civilization. (This doesn't prevent you from buying and using processed goods or staying in a city for an adventure, but you can never come to rely on these conveniences or truly call such a place your permanent home.)"
-					]
-				}
-			]
-		},
-		{
-			"name": "Druidic Order",
-			"source": "SoM",
-			"page": 198,
-			"className": "Druid",
-			"classSource": "PC1",
-			"subclassShortName": "Flame",
-			"subclassSource": "SoM",
-			"level": 1,
-			"entries": [
-				{
-					"type": "pf2-h4",
-					"page": 198,
-					"name": "Flame",
-					"entries": [
-						"You feel a kinship with flames and can use them for succor and destruction. You're trained in {@skill Acrobatics|PC1}. You also gain the {@feat Fire Lung|SoM} druid feat. You gain the {@spell wildfire|SoM} order spell. Allowing unnatural fires to spread or preventing natural fires from occurring in a way that harms the environment are anathema to your order (this doesn't prevent you from using fire destructively or force you to combat a controlled or natural fire)."
-					]
-				}
-			]
-		},
-		{
-			"name": "Druidic Order",
-			"source": "SoM",
-			"page": 198,
-			"className": "Druid",
-			"classSource": "PC1",
-			"subclassShortName": "Stone",
-			"subclassSource": "SoM",
-			"level": 1,
-			"entries": [
-				{
-					"type": "pf2-h4",
-					"page": 198,
-					"name": "Stone",
-					"entries": [
-						"You're as enduring as stone, and you take comfort in its steadfast presence, both natural and worked. You're trained in {@skill Crafting|PC1}. You also gain the {@feat Steadying Stone|SoM} druid feat. You gain the {@spell crushing ground|SoM} order spell. Poisoning or polluting the land and heedlessly carving the earth to plunder its natural resources are anathema to your order (this doesn't prevent you from responsibly digging or mining)."
-					]
-				}
-			]
-		},
-		{
-			"name": "Druidic Order",
-			"source": "SoM",
-			"page": 198,
-			"className": "Druid",
-			"classSource": "PC1",
-			"subclassShortName": "Wave",
-			"subclassSource": "SoM",
-			"level": 1,
-			"entries": [
-				{
-					"type": "pf2-h4",
-					"page": 198,
-					"name": "Wave",
-					"entries": [
-						"Water is the source of life, and you've learned to shape how it flows. You're trained in {@skill Medicine|PC1}. You also gain the {@feat Shore Step|SoM} druid feat. You gain the {@spell rising surf|SoM} order spell. Polluting water or allowing those who pollute water sources to go unpunished is anathema to your order (this doesn't force you to take action against potential water pollution or to sacrifice yourself against an obviously superior foe)."
-					]
-				}
-			]
-		},
-		{
-			"name": "Druidic Order",
-			"source": "WoW2",
-			"page": 72,
-			"className": "Druid",
-			"classSource": "PC1",
-			"subclassShortName": "Cultivation",
-			"subclassSource": "WoW2",
-			"level": 1,
-			"entries": [
-				{
-					"type": "pf2-h4",
-					"page": 198,
-					"name": "Cultivation Order (Leaf Order Variant)",
-					"entries": [
-						"You believe that nature is best tended, pruned, and maintained. Nature is inherently random and chaotic out of necessity of survival\u2014the flower spreads its seeds far and wide, hoping that some might sprout, but you believe that plants truly thrive in orderly environments. Thus, you lend a hand, decluttering that which is stagnant, planting in ideal locations, replanting that which grows in suboptimal locations, mulching the soil, and performing other maintenance. While many druids might consider your approach \"meddling\" or \"unnatural,\" you know that the work you do is vital for the overall health of the environment you tend.",
-						"You're trained in {@skill Crafting|PC1}. You also gain the {@feat Leshy Familiar|PC1} druid feat. You gain the cornucopia order spell, and you increase the number of Focus Points in your focus pool by 1. Committing wanton cruelty to plants or fungi or neglecting to nurture plants in need of tending is anathema to your order. This doesn't prevent you from killing plants or fungi and it doesn't prevent you from defending yourself against plants or fungi.",
-						"{@b Special:} The cultivation order is a variant of the {@class druid|PC1|leaf order|leaf}. If you have the cultivation order, you count as a member of the {@class druid|PC1|leaf order|leaf}, and you qualify for leaf order feats."
-					]
-				}
-			]
-		},
-		{
-			"name": "Druidic Order",
-			"source": "WoW2",
-			"page": 72,
-			"className": "Druid",
-			"classSource": "PC1",
-			"subclassShortName": "Spore",
-			"subclassSource": "WoW2",
-			"level": 1,
-			"entries": [
-				{
-					"type": "pf2-h4",
-					"page": 198,
-					"name": "Spore Order (Leaf Order Variant)",
-					"entries": [
-						"You're fascinated by molds and fungi, and you understand the important role they play in the continued health of ecosystems. This interest often puts you at odds with local communities, who view molds and fungi as something to be eradicated, rather than nurtured.",
-						"You're trained in Intimidation. You also gain the {@feat Leshy Familiar|PC1} druid feat, but you must create a fungus leshy. You gain the {@spell mushroom patch|WoW2} order spell, and you increase the number of Focus Points in your focus pool by 1. Committing wanton cruelty to molds or fungi, killing molds or fungi unnecessarily, or interfering with the natural processes of decay, is anathema to your order. This doesn't prevent you from defending yourself against fungi or molds or from harvesting fungi or molds for sustenance.",
-						"{@b Special:} The cultivation order is a variant of the {@class druid|PC1|leaf order|leaf}. If you have the cultivation order, you count as a member of the {@class druid|PC1|leaf order|leaf}, and you qualify for leaf order feats."
 					]
 				}
 			]

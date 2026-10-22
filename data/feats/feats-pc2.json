@@ -119,7 +119,7 @@
 			],
 			"prerequisites": "expert in {@skill Lore|PC1|Warfare Lore}",
 			"entries": [
-				"You are constantly drawing up plans and battle scenarios, assembling strategies and gathered intelligence for later use. When you scout an enemy's position or receive a detailed report from an ally who scouted the enemy's position, if you have a clear indication of the number, position, and identities of your potential foes, you can spend 1 minute to come up with a battle plan that takes such potential factors into account and reduces the role luck plays in the equation. Roll a {@skill Lore|PC1|Warfare Lore} check. As long as the information was accurate and remains accurate when you roll initiative against those enemies, you can use the {@skill Lore|PC1|Warfare Lore} result you previously rolled for your initiative roll; if you do, this is a {@trait fortune} effect."
+				"You are constantly drawing up plans and battle scenarios, assembling strategies and gathered intelligence for later use. When you scout an enemy's position or receive a detailed report from an ally who scouted the enemy's position, if you have a clear indication of the number, position, and identities of your potential foes, you can spend 1 minute to come up with a battle plan that takes such potential factors into account and reduces the role luck plays in the equation. Roll a {@skill Lore|PC1|Warfare Lore} check. As long as the information was accurate and remains accurate when you roll initiative against those enemies, you can use the {@skill Lore|PC1|Warfare Lore} result you previously rolled for your initiative roll; if you do, this is a {@trait fortúnio} effect."
 			]
 		},
 		{
@@ -963,7 +963,7 @@
 			"prerequisites": "trained in {@skill Acrobatics|PC1} or {@skill Athletics|PC1}",
 			"entries": [
 				"You're able to escape bonds more easily than others. When you attempt to {@action Escape|PC1} using {@skill Acrobatics|PC1} or {@skill Athletics|PC1}, you reduce the multiple attack penalty for repeated attempts to \u22124 and \u22128 if you're trained in the skill. The penalty becomes \u22123 and \u22126 if you're a master in the appropriate skill. If you're legendary in the skill, you don't take penalties for multiple {@action Escape|PC1} attempts in the same turn.",
-				"Regardless of your training, your attempts to {@action Escape|PC1} still have the {@trait attack} trait and incur a multiple attack penalty with other actions."
+				"Regardless of your training, your attempts to {@action Escape|PC1} still have the {@trait ataque} trait and incur a multiple attack penalty with other actions."
 			]
 		},
 		{

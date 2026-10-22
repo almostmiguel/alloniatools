@@ -362,7 +362,7 @@
 						{
 							"type": "list",
 							"items": [
-								"Have an unquenchable intellectual curiosity about how everything in the world around you works\u2014magic in particular.",
+								"Have an unquenchable intellectual curiosity about how everything in the world around you works—magic in particular.",
 								"Look for ways to apply the teachings of your school to any situation, seeing problems through the lens of the spells you've devoted your life to learning.",
 								"Use esoteric jargon and technical terms to precisely describe the minutiae of magical effects, even though the difference is probably lost on other people."
 							]
@@ -461,7 +461,7 @@
 					"page": 194,
 					"name": "Cantrips",
 					"entries": [
-						"Some of your spells are cantrips. A cantrip is a special type of spell that doesn't use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is always automatically heightened to half your level rounded up\u2014 this is usually equal to the highest rank of wizard spell slot you have. For example, as a 1st-level wizard, your cantrips are 1st-rank spells, and as a 5th-level wizard, your cantrips are 3rd-rank spells."
+						"Some of your spells are cantrips. A cantrip is a special type of spell that doesn't use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is always automatically heightened to half your level rounded up— this is usually equal to the highest rank of wizard spell slot you have. For example, as a 1st-level wizard, your cantrips are 1st-rank spells, and as a 5th-level wizard, your cantrips are 3rd-rank spells."
 					]
 				},
 				{
@@ -544,57 +544,57 @@
 							1,
 							5,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							2,
 							5,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							3,
 							5,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							4,
 							5,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							5,
@@ -602,13 +602,13 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							6,
@@ -616,13 +616,13 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							7,
@@ -631,12 +631,12 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							8,
@@ -645,12 +645,12 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							9,
@@ -660,11 +660,11 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							10,
@@ -674,11 +674,11 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							11,
@@ -689,10 +689,10 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							12,
@@ -703,10 +703,10 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—",
+							"—"
 						],
 						[
 							13,
@@ -718,9 +718,9 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—"
 						],
 						[
 							14,
@@ -732,9 +732,9 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014",
-							"\u2014"
+							"—",
+							"—",
+							"—"
 						],
 						[
 							15,
@@ -747,8 +747,8 @@
 							3,
 							3,
 							2,
-							"\u2014",
-							"\u2014"
+							"—",
+							"—"
 						],
 						[
 							16,
@@ -761,8 +761,8 @@
 							3,
 							3,
 							3,
-							"\u2014",
-							"\u2014"
+							"—",
+							"—"
 						],
 						[
 							17,
@@ -776,7 +776,7 @@
 							3,
 							3,
 							2,
-							"\u2014"
+							"—"
 						],
 						[
 							18,
@@ -790,7 +790,7 @@
 							3,
 							3,
 							3,
-							"\u2014"
+							"—"
 						],
 						[
 							19,
@@ -1068,78 +1068,6 @@
 	"subclassFeature": [
 		{
 			"name": "Arcane School",
-			"page": 148,
-			"source": "LOSK",
-			"remaster": true,
-			"className": "Wizard",
-			"classSource": "PC1",
-			"subclassShortName": "Gates",
-			"subclassSource": "LOSK",
-			"level": 1,
-			"entries": [
-				{
-					"name": "School of Gates ({@trait Uncommon})",
-					"type": "pf2-h4",
-					"entries": [
-						"Some are content to stay in place and let the world shape them, but you prefer to move at your own pace. You've studied the ancient aiudara and other structures to learn the magic of transposition, using your knowledge to move across great distances and even planes. With knowledge as your path and magic as your key, there's no door you can't open, and no world you won't explore.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Curriculum",
-									"entry": "cantrips: {@spell message|PC1}, {@spell telekinetic hand|PC1}; 1st: {@spell fleet step|PC1}, {@spell lock|PC1}, {@spell thoughtful gift|PC2}; 2nd: {@spell knock|PC1}, {@spell warping pull|LOSK}{@sup U}; 3rd: {@spell echo jump|LOSK}{@sup U}, {@spell trade items|LOSK}{@sup U}; 4th: {@spell flicker|PC1}, {@spell translocate|PC1}; 5th: {@spell king's castle|LOSK}{@sup U}, {@spell magic passage|PC1}{@sup U}; 6th: {@spell collective transposition|PC2}, {@spell teleport|PC1}{@sup U}; 7th: {@spell interplanar teleport|PC1}{@sup U}, {@spell planar seal|PC1}{@sup U}; 8th: {@spell quandary|PC1}, {@spell sudden transposition|LOSK}{@sup U}; 9th {@spell forest of gates|LOSK}{@sup U}"
-								},
-								{
-									"type": "item",
-									"name": "School Spells",
-									"entry": "initial: {@spell friendly push|LOSK}{@sup U}; advanced: {@spell rapid retreat|LOSK}{@sup U}"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Arcane School",
-			"page": 32,
-			"source": "LOSK",
-			"remaster": true,
-			"className": "Wizard",
-			"classSource": "PC1",
-			"subclassShortName": "Kalistrade",
-			"subclassSource": "LOSK",
-			"level": 1,
-			"entries": [
-				{
-					"name": "School of Kalistrade ({@trait Uncommon})",
-					"type": "pf2-h4",
-					"entries": [
-						"Power and money are closely intertwined, and you recognize the potential for magic to assist in your pursuit of wealth and influence. Though you might study this school without joining the Prophets of Kalistrade, most who do so are either a part of the organization or local to Kerse and therefore used to the customs and culture of the Kalistocrats. You deploy magic to help you see through the illusions and trickery of others. At the same time, you push boundaries and exploit loopholes to get ahead of your competitors.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Curriculum",
-									"entry": "cantrips: {@spell prestidigitation|PC1}, {@spell read aura|PC1}; 1st: {@spell alarm|PC1}, {@spell charm|PC1}, {@spell item facade|PC1}, 2nd: {@spell ghostly carrier|PC1}, {@spell invisibility|PC1}; 3rd: {@spell clairaudience|PC1}, {@spell veil of privacy|PC1}; 4th: {@spell outcast's curse|PC1}, {@spell suggestion|PC1}; 5th: {@spell imaginary lockbox|PC2}, {@spell subconscious suggestion|PC1}; 6th: {@spell repulsion|PC1}, {@spell scrying|PC1}; 7th: {@spell project image|PC1}, {@spell retrocognition|PC1}; 8th: {@spell disappearance|PC1}, {@spell hidden mind|PC1}; 9th: {@spell resplendent mansion|PC2}"
-								},
-								{
-									"type": "item",
-									"name": "School Spells",
-									"entry": "initial: {@spell unexpected windfall|LOSK}; advanced: {@spell capital dividend|LOSK}"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Arcane School",
 			"page": 198,
 			"source": "PC1",
 			"remaster": true,
@@ -1153,7 +1081,7 @@
 					"name": "School of Ars Grammatica",
 					"type": "pf2-h4",
 					"entries": [
-						"Runes and wards, numbers and letters\u2014they underpin all magic, making them the logical subject for a wizard who studies fundamental forces. Perhaps you studied at the Pathfinder Society's School of Spells or a similar institution, but whether you're lacing your words with magic to compel others, casting wards around your workshop, or destabilizing the very structure of an opponent's spells, you know this unassuming school carries elegant power.",
+						"Runes and wards, numbers and letters—they underpin all magic, making them the logical subject for a wizard who studies fundamental forces. Perhaps you studied at the Pathfinder Society's School of Spells or a similar institution, but whether you're lacing your words with magic to compel others, casting wards around your workshop, or destabilizing the very structure of an opponent's spells, you know this unassuming school carries elegant power.",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -1189,7 +1117,7 @@
 					"name": "School of Battle Magic",
 					"type": "pf2-h4",
 					"entries": [
-						"Magic is power, and there are always those who will use power for the art of battle. You may have studied in the military of a nation of the brink of war\u2014Cheliax and Andoran perhaps, or Geb and Nex. You summon whirling energies that can lay waste to both soldiers and armies, while being sure not to neglect arcane countermeasures for common tactical complications or the shields and defenses that keep combatants alive on the battlefield.",
+						"Magic is power, and there are always those who will use power for the art of battle. You may have studied in the military of a nation of the brink of war—Cheliax and Andoran perhaps, or Geb and Nex. You summon whirling energies that can lay waste to both soldiers and armies, while being sure not to neglect arcane countermeasures for common tactical complications or the shields and defenses that keep combatants alive on the battlefield.",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -1203,168 +1131,6 @@
 									"type": "item",
 									"name": "School Spells",
 									"entry": "initial: {@spell force bolt|PC1}; advanced: {@spell energy absorption|PC1}"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Arcane School",
-			"page": 32,
-			"source": "LORA",
-			"remaster": true,
-			"className": "Wizard",
-			"classSource": "PC1",
-			"subclassShortName": "Reclamation",
-			"subclassSource": "LORA",
-			"level": 1,
-			"entries": [
-				{
-					"name": "School of the Reclamation ({@trait Uncommon})",
-					"type": "pf2-h4",
-					"entries": [
-						"Whether it's been lost to war, abandoned during calamity, or simply buried by the ages, there is as much important knowledge to be found in the hidden corners of the world as in the schools and libraries of the academy. Your study of magic in the service of rediscovering lost knowledge for the Sarkoris Reclamation has taught you that much that was once lost can still be found, but only if someone is willing to seek it out and retrieve it. You've focused your magic on reaching the world's hidden and forgotten places, whether they are found in a distant ruin or the depths of a lost memory, and bringing their knowledge back to the surface\u2014whatever the cost.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Curriculum",
-									"entry": "cantrips: {@spell telekinetic hand|PC1}, {@spell telekinetic projectile|PC1}; 1st: {@spell fleet step|PC1}, {@spell gust of wind|PC1}, {@spell mending|PC1}; 2nd: {@spell knock|PC1}, {@spell mental map|LORA}; 3rd: {@spell locate|PC1}, {@spell overwhelming memory|LORA}; 4th: {@spell bridge of vines|LORA}, {@spell shape stone|PC1}; 5th: {@spell mind probe|PC1}, {@spell scouting eye|PC1}; 6th: {@spell truesight|PC1}, {@spell wall of force|PC1}; 7th: {@spell restore ground|LORA}, {@spell retrocognition|PC1}; 8th: {@spell pinpoint|PC1}, {@spell unrelenting observation|PC1}; 9th: {@spell metamorphosis|PC1}"
-								},
-								{
-									"type": "item",
-									"name": "School Spells",
-									"entry": "initial: {@spell grasping vine|LORA}; advanced: {@spell unsettling knowledge|LORA}"
-								}
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Arcane School",
-			"page": 68,
-			"source": "LORA",
-			"remaster": true,
-			"className": "Wizard",
-			"classSource": "PC1",
-			"subclassShortName": "Rooted Wisdom",
-			"subclassSource": "LORA",
-			"level": 1,
-			"entries": [
-				{
-					"name": "School of Rooted Wisdom ({@trait Uncommon})",
-					"type": "pf2-h4",
-					"entries": [
-						"You've studied at the Magaambya or under one of its traveling professors, learning the ancient magic of Golarion's oldest academy. Your curriculum is selfdirected, allowing you to choose a branch of study and personalize your learning. If you choose the School of Rooted Wisdom, you gain the below curriculum and school spells. This is your primary trunk of study, to which you add one of the following five secondary branches, granting you additional curriculum spells.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Curriculum",
-									"entry": "cantrips: {@spell detect magic|PC1}; 1st: {@spell alarm|PC1}; 2nd: {@spell dispel magic|PC1}; 3rd: {@spell safe passage|PC1}; 4th: {@spell mountain resilience|PC1}; 5th: {@spell control water|PC1}; 6th: {@spell truesight|PC1}; 7th: {@spell energy aegis|PC1}; 8th: {@spell quandary|PC1}; 9th: \u2014"
-								},
-								{
-									"type": "item",
-									"name": "School Spells",
-									"entry": "initial: {@spell halcyon mists|LORA}; advanced: {@spell call the ten|LORA}"
-								}
-							]
-						}
-					]
-				},
-				{
-					"name": "Cascade Bearers",
-					"type": "pf2-h4",
-					"entries": [
-						"Cascade Bearers spend considerable time studying the qualities of magic itself as they seek to advance magical theory. They prize imagination and often bring a sense of playful curiosity to what would otherwise be intense inquiries at the borders of known magic. Of all the branches, these students are most likely to become teachers and to continue their research after graduation. In fact, some Cascade Bearers never leave the Magaambya, whether or not they attain an official teaching or research post. Their coursework draws broadly across the uses of magic, including attacking, protecting, manipulating objects, and seeing through matter.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Additional Curriculum",
-									"entry": "cantrips: {@spell telekinetic projectile|PC1}; 1st: {@spell force barrage|PC1}, {@spell mystic armor|PC1}; 2nd: {@spell telekinetic maneuver|PC1}; 3rd: {@spell levitate|PC1}; 4th: {@spell flicker|PC1}; 5th: {@spell telekinetic haul|PC1}; 6th: {@spell cursed metamorphosis|PC1}; 7th: {@spell contingency|PC1}, {@spell project image|PC1}; 8th: {@spell pinpoint|PC1}{@sup U}; 9th: {@spell detonate magic|PC1}{@sup U}"
-								}
-							]
-						}
-					]
-				},
-				{
-					"name": "Emerald Boughs",
-					"type": "pf2-h4",
-					"entries": [
-						"Emerald Boughs value the societies and natural communities of the present day, seeking to understand the world as it is and how magic operates therein. Emphasizing camaraderie and sociality, these students tend to be the ones that most eagerly embrace the Magaambya's \"practical magic\" curriculum where they leave campus and work within communities. While some of these students have been accused of spying for the school, espionage is not an official part of their curriculum. Magic that can serve or sway others\u2014as well as magic that reveals knowledge or allows access to it\u2014is, instead, at the heart of this curriculum.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Additional Curriculum",
-									"entry": "cantrips: {@spell summon instrument|PC1}; 1st: {@spell charm|PC1}, {@spell disguise magic|PC1}; 2nd: {@spell revealing light|PC1}; 3rd: {@spell hypnotize|PC1}; 4th: {@spell confusion|PC1}; 5th: {@spell scouting eye|PC1}; 6th: {@spell scrying|PC1}{@sup U}; 7th: {@spell true target|PC1}; 8th: {@spell disappearance|PC1}; 9th: {@spell foresight|PC1}"
-								}
-							]
-						}
-					]
-				},
-				{
-					"name": "Rain-Scribes",
-					"type": "pf2-h4",
-					"entries": [
-						"Rain-Scribes, who seek to explore the world and especially its unknown corners, draw the closest of all the branches to primal magic in their study of the arcane. They also embrace the \"practical magic\" schooling that takes them off of campus, often into the wilds of the Mwangi Expanse but sometimes beyond to other continents on Golarion or even onto distant planes. Their course of magical study includes connecting with and understanding nature, working with the elements, summoning animals, and providing for their own survival.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Additional Curriculum",
-									"entry": "cantrips: {@spell light|PC1}; 1st: {@spell mending|PC1}, {@spell summon animal|PC1}; 2nd: {@spell shape wood|PC1}; 3rd: {@spell cozy cabin|PC1}; 4th: {@spell liminal doorway|PC1}{@sup U}, {@spell unfettered movement|PC1}; 5th: {@spell magic passage|PC1}{@sup U}, {@spell summon dragon|PC1}; 6th: {@spell chain lightning|PC1}; 7th: {@spell planar palace|PC1}{@sup U}; 8th: {@spell earthquake|PC1}; 9th: {@spell metamorphosis|PC1}"
-								}
-							]
-						}
-					]
-				},
-				{
-					"name": "Tempest-Sun Mages",
-					"type": "pf2-h4",
-					"entries": [
-						"Tempest-Sun Mages prize physical courage as well as intellectual bravery. They feel called to defend against threats of all kinds, from tyranny and invasion to intellectual subversion and bullying. Generally having a keen sense of justice, they stand up for the downtrodden and step up whenever danger presents itself. Their classes often feature heated debates that occasionally spill over into rivalries and duels outside of class. Seeing themselves as the direct heirs to the power that the Ten Magic Warriors used to transform the world, Tempest-Sun Mages tend to see magic as a fundamental power in the service of a larger purpose to extend justice and create a better world, focusing on magic that invokes the power of the sun and strengthens their own resolve.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Additional Curriculum",
-									"entry": "cantrips: {@spell ignition|PC1}; 1st: {@spell breathe fire|PC1}, {@spell fleet step|PC1}; 2nd: {@spell blazing bolt|PC1}; 3rd: {@spell fireball|PC1}; 4th: {@spell fly|PC1}; 5th: {@spell elemental form|PC1}; 6th: {@spell wall of force|PC1}; 7th: {@spell fiery body|PC1}; 8th: {@spell monstrosity form|PC1}; 9th: {@spell implosion|PC1}"
-								}
-							]
-						}
-					]
-				},
-				{
-					"name": "Uzunjati",
-					"type": "pf2-h4",
-					"entries": [
-						"Uzunjati are perhaps the most iconic Magaambyans, and certainly the best known beyond the Mwangi Expanse, because they are the storytellers who roam across Golarion gathering knowledge embedded in oral traditions and folklore. While they often travel as widely as Rain-Scribes, their focus is substantially different, for their exploration is always in service to collecting and preserving the spoken knowledge of community and culture. In addition to the magic of their own stories, they emphasize magic that protects and that affects others' minds.",
-						{
-							"type": "list",
-							"style": "list-hang-notitle",
-							"items": [
-								{
-									"type": "item",
-									"name": "Additional Curriculum",
-									"entry": "cantrips: {@spell daze|PC1}; 1st: {@spell mindlink|PC1}, {@spell ventriloquism|PC1}; 2nd: {@spell Kgalaserke's axes|LORA}; 3rd: {@spell ibex's harvest|LORA}, 4th: {@spell telepathy|PC1}; 5th: {@spell mind probe|PC1}{@sup U}, {@spell truespeech|PC1}{@sup U}; 6th: {@spell mislead|PC1}; 7th: {@spell retrocognition|PC1}; 8th: {@spell hidden mind|PC1}{@sup U}; 9th: {@spell phantasmagoria|PC1}"
 								}
 							]
 						}
@@ -1423,7 +1189,7 @@
 					"name": "School of Civic Wizardry",
 					"type": "pf2-h4",
 					"entries": [
-						"Whether you studied in Manaket's Occularium or the Academy of Applied Magic, you learned that the fruits of arcane studies\u2014like any other field\u2014should ultimately help the common citizen. You've learned the humble art of construction, of finding lost people and things, of moving speedily among buildings and moats\u2014yet these same arts can be turned to demolition, and the constructs you animate to build bridges can just as easily tear them down.",
+						"Whether you studied in Manaket's Occularium or the Academy of Applied Magic, you learned that the fruits of arcane studies—like any other field—should ultimately help the common citizen. You've learned the humble art of construction, of finding lost people and things, of moving speedily among buildings and moats—yet these same arts can be turned to demolition, and the constructs you animate to build bridges can just as easily tear them down.",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -1459,7 +1225,7 @@
 					"name": "School of Mentalism",
 					"type": "pf2-h4",
 					"entries": [
-						"As a scholar, you know all too well the importance of a sound mind. Thus, you attended a school\u2014like the Farseer Tower or the Stone of the Seers\u2014that taught the arts of befuddling lesser minds with figments and illusions or implanted sensations and memories.",
+						"As a scholar, you know all too well the importance of a sound mind. Thus, you attended a school—like the Farseer Tower or the Stone of the Seers—that taught the arts of befuddling lesser minds with figments and illusions or implanted sensations and memories.",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -1495,7 +1261,7 @@
 					"name": "School of Mentalism",
 					"type": "pf2-h4",
 					"entries": [
-						"As a scholar, you know all too well the importance of a sound mind. Thus, you attended a school\u2014like the Farseer Tower or the Stone of the Seers\u2014that taught the arts of befuddling lesser minds with figments and illusions or implanted sensations and memories.",
+						"As a scholar, you know all too well the importance of a sound mind. Thus, you attended a school—like the Farseer Tower or the Stone of the Seers—that taught the arts of befuddling lesser minds with figments and illusions or implanted sensations and memories.",
 						{
 							"type": "list",
 							"style": "list-hang-notitle",
@@ -1575,7 +1341,7 @@
 								{
 									"type": "item",
 									"name": "No Curriculum",
-									"entry": "You don't have a set curriculum, and so you don't have curriculum spells and can't benefit from abilities that specifically affect them. Instead, you gain an additional {@filter 1st-level wizard class feat|feats||type=class|Class=wizard|level=[1]}, and you add one 1st-rank spell of your choice to your spellbook to represent your diverse studies. Your studies into the very nature of magic itself have let you use it more efficiently\u2014instead of using {@action Drain Bonded Item|PC1} only once per day, you can use it once per day for each rank of spell you can cast, recalling a spell of that rank each time."
+									"entry": "You don't have a set curriculum, and so you don't have curriculum spells and can't benefit from abilities that specifically affect them. Instead, you gain an additional {@filter 1st-level wizard class feat|feats||type=class|Class=wizard|level=[1]}, and you add one 1st-rank spell of your choice to your spellbook to represent your diverse studies. Your studies into the very nature of magic itself have let you use it more efficiently—instead of using {@action Drain Bonded Item|PC1} only once per day, you can use it once per day for each rank of spell you can cast, recalling a spell of that rank each time."
 								},
 								{
 									"type": "item",

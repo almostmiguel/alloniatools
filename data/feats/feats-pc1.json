@@ -132,7 +132,7 @@
 			],
 			"prerequisites": "darkvision",
 			"entries": [
-				"Using ancient dwarven methods developed to fight enemies wielding magical darkness, you've honed your darkvision and sworn not to use such magic yourself. You gain greater darkvision, enabling you to see through magical darkness even if it normally hampers darkvision (such as the darkness created by a 4th-rank {@spell darkness|PC1} spell). You can't cast spells with the {@trait darkness} trait, use item activations with the {@trait darkness} trait, or use any other ability with the {@trait darkness} trait."
+				"Using ancient dwarven methods developed to fight enemies wielding magical darkness, you've honed your darkvision and sworn not to use such magic yourself. You gain greater darkvision, enabling you to see through magical darkness even if it normally hampers darkvision (such as the darkness created by a 4th-rank {@spell darkness|PC1} spell). You can't cast spells with the {@trait escuridão} trait, use item activations with the {@trait escuridão} trait, or use any other ability with the {@trait escuridão} trait."
 			]
 		},
 		{
@@ -342,7 +342,7 @@
 				"elfo"
 			],
 			"entries": [
-				"Watching your friends age and die fills you with moroseness that protects you against harmful emotions. You gain a +1 circumstance bonus to saving throws against {@trait emotion} effects. If you roll a success on a saving throw against an {@trait emotion} effect, you get a critical success instead."
+				"Watching your friends age and die fills you with moroseness that protects you against harmful emotions. You gain a +1 circumstance bonus to saving throws against {@trait emoção} effects. If you roll a success on a saving throw against an {@trait emoção} effect, you get a critical success instead."
 			]
 		},
 		{
@@ -553,7 +553,7 @@
 			"page": 52,
 			"level": 1,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"entries": [
 				"You build a rapport with an animal, which becomes magically bonded to you. You gain a familiar. The type of animal is up to you, but most gnomes choose animals with a burrow Speed."
@@ -566,7 +566,7 @@
 			"page": 52,
 			"level": 1,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"entries": [
 				"You hear animal sounds as conversations instead of unintelligent noise, and you can respond in turn. You can ask questions of, receive answers from, and use the {@skill Diplomacy|PC1} skill with animals. In most cases, wild animals will give you time to make your case. You gain a +1 circumstance bonus to {@action Make an Impression|PC1} on animals."
@@ -579,11 +579,11 @@
 			"page": 52,
 			"level": 1,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"entries": [
 				"Your enhanced fey connection (either through your blood or via prolonged contact with their kind) affords you a warmer reception from creatures of the First World as well as tools to foil their tricks or withstand their magic. You gain a +2 circumstance bonus to both {@skill Perception|PC1} checks and saving throws against fey.",
-				"In addition, whenever you meet a {@trait fey} creature in a social situation, you can immediately attempt a {@skill Diplomacy|PC1} check to {@action Make an Impression|PC1} on that creature rather than needing to converse for 1 minute. You take a \u20135 penalty to the check. If you fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result."
+				"In addition, whenever you meet a {@trait fada} creature in a social situation, you can immediately attempt a {@skill Diplomacy|PC1} check to {@action Make an Impression|PC1} on that creature rather than needing to converse for 1 minute. You take a \u20135 penalty to the check. If you fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result."
 			]
 		},
 		{
@@ -593,7 +593,7 @@
 			"page": 52,
 			"level": 1,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"entries": [
 				"Your connection to the First World grants you a primal innate spell, much like those of the fey. Choose one cantrip from the primal spell list. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up."
@@ -606,10 +606,10 @@
 			"page": 52,
 			"level": 1,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"entries": [
-				"You might have a flighty nature, but when a topic captures your attention, you dive into it headfirst. You gain the {@feat Additional Lore|PC1} feat and the {@feat Assurance|PC1} feat for the chosen {@skill Lore|PC1}. As gnome obsessions can come and go quickly, you can retrain Gnome Obsession to a different {@skill Lore|PC1} subcategory in 1 day of downtime."
+				"You might have a flighty nature, but when a topic captures your attention, you dive into it headfirst. You gain the {@feat Additional Lore|PC1} feat and the {@feat Assurance|PC1} feat for the chosen {@skill Lore|PC1}. As gnomo obsessions can come and go quickly, you can retrain Gnome Obsession to a different {@skill Lore|PC1} subcategory in 1 day of downtime."
 			]
 		},
 		{
@@ -619,10 +619,10 @@
 			"page": 52,
 			"level": 1,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"entries": [
-				"You favor unusual weapons tied to your people, such as blades with curved and peculiar shapes. You gain access to kukris and all {@filter uncommon weapons|items||Category=Weapon|rarity=uncommon|ancestry & heritage=gnome} with the {@trait gnome} trait. You have familiarity with weapons with the {@trait gnome} trait plus the {@item glaive} and {@item kukri}\u2014for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.",
+				"You favor unusual weapons tied to your people, such as blades with curved and peculiar shapes. You gain access to kukris and all {@filter uncommon weapons|items||Category=Weapon|rarity=uncommon|ancestry & heritage=gnomo} with the {@trait gnomo} trait. You have familiarity with weapons with the {@trait gnomo} trait plus the {@item glaive} and {@item kukri}\u2014for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.",
 				"At 5th level, whenever you get a critical hit with one of these weapons, you get its critical specialization effect."
 			]
 		},
@@ -633,7 +633,7 @@
 			"page": 52,
 			"level": 1,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"entries": [
 				"Your ancestors spent their days cloaked and cradled in illusions, and as a result, sensing illusion magic is second nature to you. You gain a +1 circumstance bonus to both {@skill Perception|PC1} checks and Will saves against illusions.",
@@ -651,7 +651,7 @@
 			},
 			"level": 1,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"frequency": {
 				"number": 1,
@@ -674,9 +674,9 @@
 			},
 			"level": 5,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
-			"prerequisites": "focus pool, at least one innate spell from a gnome heritage or ancestry feat that shares a tradition with at least one of your focus spells",
+			"prerequisites": "focus pool, at least one innate spell from a gnomo heritage or ancestry feat that shares a tradition with at least one of your focus spells",
 			"frequency": {
 				"number": 1,
 				"unit": "day"
@@ -697,7 +697,7 @@
 			"level": 5,
 			"traits": [
 				"concentrate",
-				"gnome",
+				"gnomo",
 				"illusion",
 				"primal",
 				"visual"
@@ -713,11 +713,11 @@
 			"page": 53,
 			"level": 9,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
-			"prerequisites": "at least one arcane or occult innate spell gained from a gnome heritage or gnome ancestry feat",
+			"prerequisites": "at least one arcane or occult innate spell gained from a gnomo heritage or gnomo ancestry feat",
 			"entries": [
-				"You've learned a few magical techniques for getting yourself both into and out of trouble {@condition unnoticed|PC1}. You gain {@spell disguise magic|PC1} and {@spell silence|PC1} as 2nd-rank arcane or occult innate spells. The tradition of these spells must match the tradition you use for your gnome ancestry options. You can cast each spell once per day and can target only yourself."
+				"You've learned a few magical techniques for getting yourself both into and out of trouble {@condition unnoticed|PC1}. You gain {@spell disguise magic|PC1} and {@spell silence|PC1} as 2nd-rank arcane or occult innate spells. The tradition of these spells must match the tradition you use for your gnomo ancestry options. You can cast each spell once per day and can target only yourself."
 			]
 		},
 		{
@@ -727,7 +727,7 @@
 			"page": 53,
 			"level": 9,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"prerequisites": "at least one primal innate spell",
 			"entries": [
@@ -745,7 +745,7 @@
 			},
 			"level": 9,
 			"traits": [
-				"gnome",
+				"gnomo",
 				"move",
 				"teleportation"
 			],
@@ -762,7 +762,7 @@
 			"page": 53,
 			"level": 9,
 			"traits": [
-				"gnome"
+				"gnomo"
 			],
 			"entries": [
 				"Your connection to the First World has grown, and its vital energy flows into you rapidly. If you rest for 10 minutes, you regain Hit Points equal to your Constitution modifier × half your level. This is a healing {@trait vitality} effect and is cumulative with any healing you receive from {@action Treat Wounds|PC1}."
@@ -779,18 +779,18 @@
 			},
 			"level": 13,
 			"traits": [
-				"gnome",
+				"gnomo",
 				"illusion",
 				"visual"
 			],
-			"prerequisites": "at least one arcane or occult innate spell gained from a gnome heritage or gnome ancestry feat",
+			"prerequisites": "at least one arcane or occult innate spell gained from a gnomo heritage or gnomo ancestry feat",
 			"frequency": {
 				"number": 1,
 				"unit": "hour"
 			},
 			"trigger": "You are attacked by a foe, but they haven't rolled yet.",
 			"entries": [
-				"The magic within you manifests as a natural reaction to threats. An illusory double of you appears in your space for a brief moment. The triggering attacker must roll a DC {@flatDC 10} flat check; on a success, the attack targets you normally; if they fail, the attack targets the double and destroys it. The tradition of this action matches the tradition of your gnome ancestry options."
+				"The magic within you manifests as a natural reaction to threats. An illusory double of you appears in your space for a brief moment. The triggering attacker must roll a DC {@flatDC 10} flat check; on a success, the attack targets you normally; if they fail, the attack targets the double and destroys it. The tradition of this action matches the tradition of your gnomo ancestry options."
 			]
 		},
 		{
@@ -801,7 +801,7 @@
 			"level": 17,
 			"traits": [
 				"uncommon",
-				"gnome"
+				"gnomo"
 			],
 			"frequency": {
 				"number": 2,
@@ -1105,7 +1105,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You have learned to remain {@condition hidden|PC1} by using larger folk as a distraction to avoid drawing attention to yourself. You can use creatures that are at least one size larger than you (usually Medium or larger) as cover for the {@action Hide|PC1} and {@action Sneak|PC1} actions, though you still can't use such creatures as cover for other uses, such as the {@action Take Cover|PC1} action."
@@ -1121,7 +1121,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You are adept at disguising coded messages as folksy idioms. Using slang, jokes, halfling loanwords, and the like, you convey a simple message consisting of three basic words (such as \"Danger assassin flee\" or \"Meet me moonrise\"). Your intended listener can attempt a DC 20 {@skill Perception|PC1} check to discern the message.",
@@ -1135,7 +1135,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You've dutifully learned how to keep your balance and how to stick to the shadows where it's safe, important skills passed down through generations of halfling tradition. You gain the trained proficiency rank in {@skill Acrobatics|PC1} and {@skill Stealth|PC1}. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.",
@@ -1154,7 +1154,7 @@
 			"level": 1,
 			"traits": [
 				"fortune",
-				"halfling"
+				"nuuma"
 			],
 			"frequency": {
 				"number": 1,
@@ -1175,7 +1175,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You favor traditional halfling weapons, so you've learned how to use them more effectively. You gain access to all {@filter uncommon weapons|items||Category=Weapon|rarity=uncommon|ancestry & heritage=halfling} with the {@trait halfling} trait. You have familiarity with weapons with the {@trait halfling} trait plus the {@item sling} and {@item shortsword}\u2014 for the purposes of proficiency, you treat any of these that are martial weapons as simple weapons and any that are advanced weapons as martial weapons.",
@@ -1189,7 +1189,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You grew up riding your clan's shaggy ponies and riding dogs. You become trained in {@skill Nature|PC1}. If you would automatically become trained in {@skill Nature|PC1} (from your background or class, for example), you instead become trained in a skill of your choice. You also get a +1 circumstance bonus to {@action Command an Animal|PC1} if the target is a traditional halfling mount, such as a pony or riding dog"
@@ -1202,7 +1202,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"Whether keeping your balance or climbing, your feet easily find purchase. If you roll a success on an {@skill Acrobatics|PC1} check to {@action Balance|PC1} or an {@skill Athletics|PC1} check to {@action Climb|PC1}, you get a critical success instead.",
@@ -1216,7 +1216,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You have learned how to use your sling to fell enormous creatures.",
@@ -1230,7 +1230,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You were either pressed into indentured servitude or shackled in a prison, but you've since escaped and have trained to ensure you'll never be caught again. Whenever you roll a success on a check to {@action Escape|PC1} or a saving throw against an effect that would impose the {@condition grabbed|PC1}, {@condition immobilized|PC1}, or {@condition restrained|PC1} condition on you, you get a critical success instead. Whenever a creature rolls a failure on a check to {@action Grapple|PC1} you, it gets a critical failure instead."
@@ -1243,7 +1243,7 @@
 			"page": 60,
 			"level": 1,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You pay close attention to the people around you, allowing you to more easily notice when they act out of character. You gain a +2 circumstance bonus to {@skill Perception|PC1} checks when using the {@action Sense Motive|PC1} basic action to notice enchanted or possessed characters. If you aren't actively using {@action Sense Motive|PC1} on an enchanted or possessed character, the GM rolls a secret check, without your usual circumstance bonus, for you to potentially notice the enchantment or possession anyway.",
@@ -1257,7 +1257,7 @@
 			"page": 60,
 			"level": 5,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"During your adventures, you've honed your ability to adapt to the culture of the predominant ancestry around you. You gain the {@feat Adopted Ancestry|PC1} general feat, and you also gain one 1st-level ancestry feat from the ancestry you chose for the {@feat Adopted Ancestry|PC1} feat."
@@ -1274,7 +1274,7 @@
 			},
 			"level": 5,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"trigger": "A Large or larger enemy ends a move action adjacent to you.",
 			"entries": [
@@ -1292,7 +1292,7 @@
 			"page": 61,
 			"level": 9,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"prerequisites": "{@feat Step Lively|PC1}",
 			"entries": [
@@ -1309,7 +1309,7 @@
 			"page": 61,
 			"level": 9,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"prerequisites": "{@feat Halfling Luck|PC1}",
 			"entries": [
@@ -1323,11 +1323,11 @@
 			"page": 61,
 			"level": 9,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
-				"You are easily able to ward off attempts to play on your fears and emotions. When you roll a success on a saving throw against an {@trait emotion} effect, you get a critical success instead.",
-				"If your heritage is gutsy halfling, when you roll a critical failure on a saving throw against an {@trait emotion} effect, you get a failure instead."
+				"You are easily able to ward off attempts to play on your fears and emotions. When you roll a success on a saving throw against an {@trait emoção} effect, you get a critical success instead.",
+				"If your heritage is gutsy halfling, when you roll a critical failure on a saving throw against an {@trait emoção} effect, you get a failure instead."
 			]
 		},
 		{
@@ -1337,7 +1337,7 @@
 			"page": 61,
 			"level": 9,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"entries": [
 				"You won't allow others to restrain you. You can cast {@spell unfettered movement|PC1} on yourself as a primal innate spell once per day."
@@ -1350,7 +1350,7 @@
 			"page": 61,
 			"level": 13,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"prerequisites": "{@feat Distracting Shadows|PC1}",
 			"entries": [
@@ -1364,7 +1364,7 @@
 			"page": 61,
 			"level": 13,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"prerequisites": "{@feat Dance Underfoot|PC1}",
 			"entries": [
@@ -1378,7 +1378,7 @@
 			"page": 61,
 			"level": 17,
 			"traits": [
-				"halfling"
+				"nuuma"
 			],
 			"prerequisites": "legendary {@skill Stealth|PC1}",
 			"frequency": {
@@ -1490,7 +1490,7 @@
 				"leshy"
 			],
 			"entries": [
-				"Your spirit has endured many challenges over its long existence. You gain a +1 circumstance bonus to saves against {@trait emotion} effects. If you roll a success on a saving throw against an {@trait emotion} effect, you get a critical success instead."
+				"Your spirit has endured many challenges over its long existence. You gain a +1 circumstance bonus to saves against {@trait emoção} effects. If you roll a success on a saving throw against an {@trait emoção} effect, you get a critical success instead."
 			]
 		},
 		{
@@ -2238,7 +2238,7 @@
 				"nephilim"
 			],
 			"entries": [
-				"You trace your lineage to archons, guardians of the seventiered mountain of Heaven and nurturers of law and virtue within mortals. You gain a +1 circumstance bonus to saves against {@trait emotion} effects, and if you roll a success on a save against an {@trait emotion} effect, you get a critical success instead."
+				"You trace your lineage to archons, guardians of the seventiered mountain of Heaven and nurturers of law and virtue within mortals. You gain a +1 circumstance bonus to saves against {@trait emoção} effects, and if you roll a success on a save against an {@trait emoção} effect, you get a critical success instead."
 			],
 			"leadsTo": [
 				"Celestial Magic|PC1",
@@ -2530,7 +2530,7 @@
 			],
 			"prerequisites": "{@filter any nephilim lineage feat|feats||ancestry & heritage=nephilim|general=lineage}",
 			"entries": [
-				"You have a connection to the Outer Planes, allowing you to summon a divine ally. Choose either {@spell summon celestial|PC1}, {@spell summon fiend|PC1}, or another 5th-rank spell capable of summoning an extraplanar creature appropriate to your lineage. Once per day, you can cast the chosen spell as a 5th-rank divine innate spell, but the creature summoned must be from the same category as your own lineage, such as a creature with the {@trait angel} trait if you are an {@feat angelkin|PC1}."
+				"You have a connection to the Outer Planes, allowing you to summon a divine ally. Choose either {@spell summon celestial|PC1}, {@spell summon fiend|PC1}, or another 5th-rank spell capable of summoning an extraplanar creature appropriate to your lineage. Once per day, you can cast the chosen spell as a 5th-rank divine innate spell, but the creature summoned must be from the same category as your own lineage, such as a creature with the {@trait anjo} trait if you are an {@feat angelkin|PC1}."
 			]
 		},
 		{
@@ -3196,7 +3196,7 @@
 				"spellshape"
 			],
 			"entries": [
-				"Your composition takes the form of a call-and-response chant that lets your allies continue the effect without you. If your next action is to cast a composition cantrip with a duration of 1 round, it becomes a call. While the spell is active, one ally of your choice affected by the spell can respond to your call as a single action that has the {@trait auditory} and {@trait concentrate} traits to extend the spell's duration by 1 round. Only one ally can respond to a given call, and responding to the ally's response has no additional effect."
+				"Your composition takes the form of a call-and-response chant that lets your allies continue the effect without you. If your next action is to cast a composition cantrip with a duration of 1 round, it becomes a call. While the spell is active, one ally of your choice affected by the spell can respond to your call as a single action that has the {@trait auditivo} and {@trait concentrate} traits to extend the spell's duration by 1 round. Only one ally can respond to a given call, and responding to the ally's response has no additional effect."
 			]
 		},
 		{
@@ -3257,7 +3257,7 @@
 				"concentrate"
 			],
 			"prerequisites": "{@class bard|PC1|warrior muse|warrior}",
-			"trigger": "A creature within your reach uses an {@trait auditory} effect, manipulate action, or move action; makes a ranged attack; or leaves a square during its move action.",
+			"trigger": "A creature within your reach uses an {@trait auditivo} effect, manipulate action, or move action; makes a ranged attack; or leaves a square during its move action.",
 			"requirements": "You are affected by {@spell courageous anthem|PC1}.",
 			"entries": [
 				"You bellow a ferocious call to arms, inspiring yourself to lash out at a foe. Make a melee {@action Strike|PC1} against the triggering creature. If the attack is a critical hit and the trigger was a manipulate action, the action is disrupted."
@@ -4178,7 +4178,7 @@
 			},
 			"entries": [
 				"You pray continuously for 1 minute to call a subtle shadow of your deity's realm over a 30-foot burst centered on you. It lasts for 10 minutes, and a creature that remains in the area for the entire 10 minutes regains Hit Points equal to your level.",
-				"If you have a healing font, this activity has the {@trait healing} and {@trait vitality} traits and heals living creatures. If you have a harmful font, this activity has the {@trait healing} and {@trait eversão} traits and heals {@trait undead} creatures (or other creatures with void healing). Clerics with {@feat Versatile Font|PC1} can choose either or both. It can't damage creatures in any case."
+				"If you have a healing font, this activity has the {@trait cura} and {@trait vitality} traits and heals living creatures. If you have a harmful font, this activity has the {@trait cura} and {@trait eversão} traits and heals {@trait undead} creatures (or other creatures with void healing). Clerics with {@feat Versatile Font|PC1} can choose either or both. It can't damage creatures in any case."
 			]
 		},
 		{
@@ -4859,7 +4859,7 @@
 				"cleric"
 			],
 			"entries": [
-				"You can pour divine power into an item, letting the wearer exceed their limits. When you complete your daily preparations, you can touch one worn magical item that doesn't have the {@trait apex} trait. It gains the {@trait apex} trait until your next preparations, and you choose one of your deity's divine attributes. The item increases that attribute modifier by 1 or to +4, whichever is higher. A character can benefit from only one apex item at a time, as normal."
+				"You can pour divine power into an item, letting the wearer exceed their limits. When you complete your daily preparations, you can touch one worn magical item that doesn't have the {@trait apogeu} trait. It gains the {@trait apogeu} trait until your next preparations, and you choose one of your deity's divine attributes. The item increases that attribute modifier by 1 or to +4, whichever is higher. A character can benefit from only one apex item at a time, as normal."
 			]
 		},
 		{
@@ -5368,7 +5368,7 @@
 			],
 			"prerequisites": "storm order",
 			"entries": [
-				"The howling wind and precipitation of your magic turn to thick snow. If your next action is to Cast a Spell that has the air, {@trait water}, or {@trait cold} trait, and that does not have the {@trait fire} trait, select one creature affected by the spell on the ground. Each square on the ground under or adjacent to the creature fills with ankle-deep snow. Those squares are difficult terrain until the beginning of your next turn. A creature can {@action Interact|PC1} to clear a square of snow, and the snow in a square melts if that square is exposed to a {@trait fire} effect."
+				"The howling wind and precipitation of your magic turn to thick snow. If your next action is to Cast a Spell that has the air, {@trait água}, or {@trait frio} trait, and that does not have the {@trait fogo} trait, select one creature affected by the spell on the ground. Each square on the ground under or adjacent to the creature fills with ankle-deep snow. Those squares are difficult terrain until the beginning of your next turn. A creature can {@action Interact|PC1} to clear a square of snow, and the snow in a square melts if that square is exposed to a {@trait fogo} effect."
 			]
 		},
 		{
@@ -5387,7 +5387,7 @@
 				"spellshape"
 			],
 			"entries": [
-				"As you use your magic to manipulate air or water, you spin off some of its currents to form a barrier around you. If your next action is to Cast a Spell with the {@trait air} or {@trait water} trait, until the start of your next turn, you gain a +1 circumstance bonus to AC or a +2 circumstance bonus against ranged attacks. This effect has the {@trait air} or {@trait water} trait, or both, depending on the traits of the spell you cast. You also gain a +1 circumstance bonus to all saves against effects with the {@trait air} trait, {@trait water} trait, or both until the start of your next turn, depending on the spell's traits."
+				"As you use your magic to manipulate air or water, you spin off some of its currents to form a barrier around you. If your next action is to Cast a Spell with the {@trait ar} or {@trait água} trait, until the start of your next turn, you gain a +1 circumstance bonus to AC or a +2 circumstance bonus against ranged attacks. This effect has the {@trait ar} or {@trait água} trait, or both, depending on the traits of the spell you cast. You also gain a +1 circumstance bonus to all saves against effects with the {@trait ar} trait, {@trait água} trait, or both until the start of your next turn, depending on the spell's traits."
 			]
 		},
 		{
@@ -5487,7 +5487,7 @@
 			],
 			"prerequisites": "trained in {@skill Intimidation|PC1}",
 			"entries": [
-				"Imitating animal threat displays, you make yourself appear larger and more imposing. Roll one {@skill Intimidation|PC1} check to {@action Demoralize|PC1} and compare the result to the Will DC of each animal, {@trait fungus}, and {@trait plant} creature in a 15-foot cone. When you do, {@action Demoralize|PC1} gains the {@trait visual} trait, and creatures are not affected if they can see you. You don't take a penalty if the creature doesn't understand your language."
+				"Imitating animal threat displays, you make yourself appear larger and more imposing. Roll one {@skill Intimidation|PC1} check to {@action Demoralize|PC1} and compare the result to the Will DC of each animal, {@trait fungo}, and {@trait plant} creature in a 15-foot cone. When you do, {@action Demoralize|PC1} gains the {@trait visual} trait, and creatures are not affected if they can see you. You don't take a penalty if the creature doesn't understand your language."
 			]
 		},
 		{
@@ -5651,7 +5651,7 @@
 				"spellshape"
 			],
 			"entries": [
-				"You can take advantage of shapechanging magic to close wounds and patch injuries. If your next action is to cast a noncantrip polymorph spell that targets only one creature, your polymorph spell also restores {@dice 1d6} Hit Points per spell rank to that creature. This is a {@trait healing} effect."
+				"You can take advantage of shapechanging magic to close wounds and patch injuries. If your next action is to cast a noncantrip polymorph spell that targets only one creature, your polymorph spell also restores {@dice 1d6} Hit Points per spell rank to that creature. This is a {@trait cura} effect."
 			]
 		},
 		{
@@ -5771,7 +5771,7 @@
 			],
 			"prerequisites": "storm order",
 			"entries": [
-				"Your lightning splits the air, generating a booming shock wave. If your next action is to Cast a Spell that has the {@trait electricity} trait or deals electricity damage, has no duration, and requires creatures to attempt a saving throw, the force of the spell's lightning creates a thunderclap, in addition to its other effects. Each creature that failed its Reflex save against the spell is {@condition deafened|PC1} for 1 round, and those who critically failed are also knocked {@condition prone|PC1}."
+				"Your lightning splits the air, generating a booming shock wave. If your next action is to Cast a Spell that has the {@trait eletricidade} trait or deals electricity damage, has no duration, and requires creatures to attempt a saving throw, the force of the spell's lightning creates a thunderclap, in addition to its other effects. Each creature that failed its Reflex save against the spell is {@condition deafened|PC1} for 1 round, and those who critically failed are also knocked {@condition prone|PC1}."
 			]
 		},
 		{
@@ -5809,7 +5809,7 @@
 			],
 			"prerequisites": "plant order",
 			"entries": [
-				"If your next action is to Cast a Spell with the {@trait fungus} or {@trait plant} trait, a garland of plants grows in a 10-foot burst in the spell's range. The plants are difficult terrain and hazardous terrain, covered in your choice of thorns or poisonous vines. Any creature that moves into one of these squares or ends its turn in one takes {@dice 2d6} damage (piercing damage for thorns or poison for vines). A creature can take this damage only once per turn. You and your familiar are immune to this damage.",
+				"If your next action is to Cast a Spell with the {@trait fungo} or {@trait plant} trait, a garland of plants grows in a 10-foot burst in the spell's range. The plants are difficult terrain and hazardous terrain, covered in your choice of thorns or poisonous vines. Any creature that moves into one of these squares or ends its turn in one takes {@dice 2d6} damage (piercing damage for thorns or poison for vines). A creature can take this damage only once per turn. You and your familiar are immune to this damage.",
 				"The plants last for 1 minute or until you cast another Garland Spell, whichever comes first.",
 				"The damage increases to {@dice 3d6} at 16th level and {@dice 4d6} at 20th level."
 			]
@@ -6006,7 +6006,7 @@
 			],
 			"prerequisites": "storm order",
 			"entries": [
-				"The winds are eager to keep you aloft. When you are flying and Cast a Spell that has the {@trait air} or {@trait electricity} traits, you gain a +10 status bonus to your fly Speed, and you can immediately {@action Fly|PC1} up to half your Speed."
+				"The winds are eager to keep you aloft. When you are flying and Cast a Spell that has the {@trait ar} or {@trait eletricidade} traits, you gain a +10 status bonus to your fly Speed, and you can immediately {@action Fly|PC1} up to half your Speed."
 			]
 		},
 		{
@@ -8205,7 +8205,7 @@
 			"trigger": "You are about to roll a {@skill Perception|PC1} or {@skill Survival|PC1} check for initiative.",
 			"entries": [
 				"You visually or audibly warn your allies of danger, granting them each a +1 circumstance bonus to their initiative rolls.",
-				"Depending on whether you use gestures or call out, this action gains either the {@trait visual} or the {@trait auditory} trait, respectively."
+				"Depending on whether you use gestures or call out, this action gains either the {@trait visual} or the {@trait auditivo} trait, respectively."
 			]
 		},
 		{
@@ -8409,7 +8409,7 @@
 				"ranger"
 			],
 			"entries": [
-				"You point out vulnerabilities present in your hunted prey, granting the benefits listed in {@action Hunt Prey|PC1} and your hunter's edge to an ally until the end of their next turn. Depending on whether you call out or use gestures, this action gains either the {@trait auditory} or {@trait visual} trait."
+				"You point out vulnerabilities present in your hunted prey, granting the benefits listed in {@action Hunt Prey|PC1} and your hunter's edge to an ally until the end of their next turn. Depending on whether you call out or use gestures, this action gains either the {@trait auditivo} or {@trait visual} trait."
 			],
 			"leadsTo": [
 				"Shared Prey|PC1",
@@ -8902,7 +8902,7 @@
 			],
 			"prerequisites": "legendary in {@skill Survival|PC1}",
 			"entries": [
-				"Your ability to track your prey has surpassed explanation, allowing you to trace your prey's movements and predict its location with ease. When you use {@action Hunt Prey|PC1} on a creature within 100 feet, you can follow that creature's movements, allowing you to know the creature's exact location no matter how far away it becomes, as long as it remains your prey. You must be legendary in {@skill Nature|PC1} to track your prey's location across teleportation or planar travel. This feat gains the {@trait detection} and {@trait primal} traits if you're legendary in {@skill Nature|PC1}."
+				"Your ability to track your prey has surpassed explanation, allowing you to trace your prey's movements and predict its location with ease. When you use {@action Hunt Prey|PC1} on a creature within 100 feet, you can follow that creature's movements, allowing you to know the creature's exact location no matter how far away it becomes, as long as it remains your prey. You must be legendary in {@skill Nature|PC1} to track your prey's location across teleportation or planar travel. This feat gains the {@trait detecção} and {@trait primal} traits if you're legendary in {@skill Nature|PC1}."
 			]
 		},
 		{
@@ -9386,7 +9386,7 @@
 			],
 			"trigger": "You are about to roll a {@skill Perception|PC1} or {@skill Survival|PC1} check for initiative.",
 			"entries": [
-				"You visually or audibly warn your allies of danger, granting them each a +1 circumstance bonus to their initiative rolls. Depending on whether you use gestures or call out, this action gains either the {@trait visual} or {@trait auditory} trait, respectively."
+				"You visually or audibly warn your allies of danger, granting them each a +1 circumstance bonus to their initiative rolls. Depending on whether you use gestures or call out, this action gains either the {@trait visual} or {@trait auditivo} trait, respectively."
 			]
 		},
 		{
@@ -10165,7 +10165,7 @@
 				"rogue"
 			],
 			"entries": [
-				"You distract your opponent with a few choice words or a rude gesture. Choose a target within 30 feet. It's {@condition off-guard|PC1} against your attacks until the end of your next turn. Depending on the way you describe your distraction, this action gains either the {@trait auditory} or {@trait visual} trait."
+				"You distract your opponent with a few choice words or a rude gesture. Choose a target within 30 feet. It's {@condition off-guard|PC1} against your attacks until the end of your next turn. Depending on the way you describe your distraction, this action gains either the {@trait auditivo} or {@trait visual} trait."
 			]
 		},
 		{
@@ -10229,7 +10229,7 @@
 			],
 			"prerequisites": "legendary in {@skill Deception|PC1}",
 			"entries": [
-				"Your deceptions confound even the most powerful magic that could spy on you. {@trait Detection}, {@trait revelation}, and {@trait scrying} effects pass right over you, your possessions, and your auras, detecting nothing unless the detecting effect has a counteract rank of 10 or higher. For example, detect magic would still detect other magic in the area but not any magic on you, {@spell truesight|PC1} wouldn't reveal you, {@spell locate|PC1} or {@spell scrying|PC1} wouldn't find you, and so on."
+				"Your deceptions confound even the most powerful magic that could spy on you. {@trait Detecção}, {@trait revelation}, and {@trait scrying} effects pass right over you, your possessions, and your auras, detecting nothing unless the detecting effect has a counteract rank of 10 or higher. For example, detect magic would still detect other magic in the area but not any magic on you, {@spell truesight|PC1} wouldn't reveal you, {@spell locate|PC1} or {@spell scrying|PC1} wouldn't find you, and so on."
 			]
 		},
 		{
@@ -11171,7 +11171,7 @@
 			"entries": [
 				"Your home is an animated structure that obeys your commands. By performing a rite that takes 1 day, you create an animated object from a hut, small house, covered wagon, tent, or similar construction of up to Huge size.",
 				"The hut uses your AC, saving throw modifiers, and {@skill Perception|PC1} modifier and has 150 HP and Hardness 10. It has the construct armor ability, meaning once it's reduced to less than half its Hit Points, or immediately upon being damaged by a critical hit, its AC is reduced by 4 until it is repaired.",
-				"The hut can't attack or attempt skill checks. You can give the hut a command as a single action, which has the {@trait auditory} and {@trait concentrate} traits; after 1 round of reconfiguring itself, the hut then follows that command until you give it a different command.",
+				"The hut can't attack or attempt skill checks. You can give the hut a command as a single action, which has the {@trait auditivo} and {@trait concentrate} traits; after 1 round of reconfiguring itself, the hut then follows that command until you give it a different command.",
 				{
 					"type": "list",
 					"items": [
@@ -11205,8 +11205,7 @@
 			],
 			"leadsTo": [
 				"Clever Counterspell|PC1",
-				"Reflect Spell|PC1",
-				"Sin Counterspell|LORA"
+				"Reflect Spell|PC1"
 			]
 		},
 		{
@@ -11479,7 +11478,7 @@
 				"wizard"
 			],
 			"entries": [
-				"Your {@trait summoned} creature appears in a detonation of arcane runes. If your next action is to Cast a Spell with the {@trait summon} trait, all creatures in a 10-foot emanation around the creature you summoned take {@damage 1d4} fire damage per spell rank. If the creature summoned has the acid, cold, electricity, {@trait sonic}, or {@trait spirit} trait, you can deal damage of that type instead."
+				"Your {@trait convocado} creature appears in a detonation of arcane runes. If your next action is to Cast a Spell with the {@trait convocação} trait, all creatures in a 10-foot emanation around the creature you summoned take {@damage 1d4} fire damage per spell rank. If the creature summoned has the acid, cold, electricity, {@trait sonic}, or {@trait espiritual} trait, you can deal damage of that type instead."
 			]
 		},
 		{
@@ -11800,7 +11799,7 @@
 				"wizard"
 			],
 			"entries": [
-				"Your spells become a radiant display of light and color. If your next action is to Cast a Spell that doesn't have the {@trait darkness} trait, has no duration, and requires creatures to attempt a Reflex save, the spell explodes in a spray of scintillating lights, in addition to its other effects. Each creature that failed its Reflex save against the spell is {@condition dazzled|PC1} for 1 round, and those who critically failed are instead {@condition blinded|PC1} for 1 round."
+				"Your spells become a radiant display of light and color. If your next action is to Cast a Spell that doesn't have the {@trait escuridão} trait, has no duration, and requires creatures to attempt a Reflex save, the spell explodes in a spray of scintillating lights, in addition to its other effects. Each creature that failed its Reflex save against the spell is {@condition dazzled|PC1} for 1 round, and those who critically failed are instead {@condition blinded|PC1} for 1 round."
 			]
 		},
 		{
@@ -13945,7 +13944,7 @@
 			],
 			"prerequisites": "trained in {@skill Intimidation|PC1}",
 			"entries": [
-				"You can {@action Demoralize|PC1} with a mere glare. When you do, {@action Demoralize|PC1} loses the {@trait auditory} trait and gains the {@trait visual} trait, and you don't take a penalty if the creature doesn't understand your language."
+				"You can {@action Demoralize|PC1} with a mere glare. When you do, {@action Demoralize|PC1} loses the {@trait auditivo} trait and gains the {@trait visual} trait, and you don't take a penalty if the creature doesn't understand your language."
 			]
 		},
 		{
@@ -14329,7 +14328,7 @@
 			],
 			"prerequisites": "trained in {@skill Occultism|PC1}",
 			"entries": [
-				"When you become aware of a {@trait mágico} effect or see a spell being cast, you can immediately determine if it twists minds (with the {@trait mental} trait), fights against fortune (with the {@trait fortune} or {@trait misfortune} trait), or reveals secrets (with the detection, prediction, {@trait revelation}, or {@trait scrying} traits). At the GM's discretion, similar effects can also fall into these categories. When you {@action Identify Magic|PC1} or {@action Recall Knowledge|PC1} to learn more about these effects, you can always use {@skill Occultism|PC1} without penalty and gain a +2 circumstance bonus."
+				"When you become aware of a {@trait mágico} effect or see a spell being cast, you can immediately determine if it twists minds (with the {@trait mental} trait), fights against fortune (with the {@trait fortúnio} or {@trait misfortune} trait), or reveals secrets (with the detection, prediction, {@trait revelation}, or {@trait scrying} traits). At the GM's discretion, similar effects can also fall into these categories. When you {@action Identify Magic|PC1} or {@action Recall Knowledge|PC1} to learn more about these effects, you can always use {@skill Occultism|PC1} without penalty and gain a +2 circumstance bonus."
 			]
 		},
 		{
@@ -14347,12 +14346,12 @@
 				"{@b Modifiers and AC} Your pet's save modifiers and AC are equal to yours before applying circumstance or status bonuses or penalties. It uses 3 + your level as its modifier for {@skill Perception|PC1}, {@skill Acrobatics|PC1}, and {@skill Stealth|PC1}, and just your level as its modifier for other skill checks. It doesn't have or use its own attribute modifiers and can never benefit from item bonuses.",
 				"{@b Hit Points} Your pet has 5 Hit Points per level.",
 				"{@b Senses} Your pet has low-light vision and can gain additional senses from pet abilities.",
-				"{@b Speed} Your pet has a Speed of 25 feet. You can choose to instead have an aquatic pet, which breathes in water instead of air and has the {@trait aquatic} trait, no land Speed, and a swim Speed of 25 feet.",
+				"{@b Speed} Your pet has a Speed of 25 feet. You can choose to instead have an aquatic pet, which breathes in water instead of air and has the {@trait aquático} trait, no land Speed, and a swim Speed of 25 feet.",
 				"{@b Pet Abilities} When you gain your pet, choose two of the following abilities. If your pet is an animal that naturally has one of these abilities (for instance, an owl has a fly Speed), you must select that ability. Your pet can't be an animal that naturally has more pet abilities than the maximum. In some cases, the GM might add some familiar abilities to the pet abilities you can choose.",
 				{
 					"type": "list",
 					"items": [
-						"{@b Amphibious} It gains the {@trait amphibious} trait, allowing it to breathe in both air and water, and has both a land Speed and a swim Speed, each equal to its highest land Speed or swim Speed.",
+						"{@b Amphibious} It gains the {@trait anfíbio} trait, allowing it to breathe in both air and water, and has both a land Speed and a swim Speed, each equal to its highest land Speed or swim Speed.",
 						"{@b Burrower} It gains a burrow Speed of 5 feet, allowing it to dig Tiny holes.",
 						"{@b Climber} It gains a climb Speed of 25 feet.",
 						"{@b Darkvision} It gains darkvision.",
@@ -14555,7 +14554,7 @@
 			],
 			"prerequisites": "trained in {@skill Crafting|PC1}",
 			"entries": [
-				"For you, the {@action Repair|PC1} activity loses the {@trait exploration} trait and takes 1 minute instead of 10 minutes. If you're a master in {@skill Crafting|PC1}, it takes 3 actions. If you're legendary, it takes 1 action."
+				"For you, the {@action Repair|PC1} activity loses the {@trait exploração} trait and takes 1 minute instead of 10 minutes. If you're a master in {@skill Crafting|PC1}, it takes 3 actions. If you're legendary, it takes 1 action."
 			]
 		},
 		{
@@ -15080,9 +15079,6 @@
 			],
 			"special": [
 				"You can select this feat multiple times. Each time, choose a different type of terrain."
-			],
-			"leadsTo": [
-				"Vanish into the Land|LOSK"
 			]
 		},
 		{
@@ -15330,8 +15326,7 @@
 				}
 			],
 			"leadsTo": [
-				"Legendary Performer|PC1",
-				"Talent Envy|LORA"
+				"Legendary Performer|PC1"
 			]
 		},
 		{

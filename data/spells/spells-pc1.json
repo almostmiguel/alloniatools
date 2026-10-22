@@ -53,7 +53,7 @@
 				"number": 1,
 				"unit": "reaction"
 			},
-			"trigger": "You or an ally within 60 feet rolls a saving throw against an {@trait auditory} or {@trait visual} effect.",
+			"trigger": "You or an ally within 60 feet rolls a saving throw against an {@trait auditivo} or {@trait visual} effect.",
 			"area": {
 				"entry": "60-foot emanation",
 				"types": [
@@ -1693,13 +1693,13 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"You attempt to calm the target by uttering soothing words in a calm and even tone. The target gains a +1 status bonus to Will saving throws. This bonus increases to +2 against {@trait emotion} effects.",
-				"In addition, when you Cast this Spell, you can attempt to counteract one {@trait emotion} effect on the target."
+				"You attempt to calm the target by uttering soothing words in a calm and even tone. The target gains a +1 status bonus to Will saving throws. This bonus increases to +2 against {@trait emoção} effects.",
+				"In addition, when you Cast this Spell, you can attempt to counteract one {@trait emoção} effect on the target."
 			],
 			"heightened": {
 				"X": {
 					"5": [
-						"The bonus to saves increases to +2, or +3 against {@trait emotion} effects."
+						"The bonus to saves increases to +2, or +3 against {@trait emoção} effects."
 					]
 				}
 			}
@@ -1979,7 +1979,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"Your words bless a creature with an enhanced connection to vital energy. When the target regains Hit Points from a healing {@trait vitality} spell, it regains 2 additional Hit Points. The target regains additional Hit Points from {@spell healer's blessing|PC1} only the first time it regains HP from a given {@trait healing} spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once, when they are first healed."
+				"Your words bless a creature with an enhanced connection to vital energy. When the target regains Hit Points from a healing {@trait vitality} spell, it regains 2 additional Hit Points. The target regains additional Hit Points from {@spell healer's blessing|PC1} only the first time it regains HP from a given {@trait cura} spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once, when they are first healed."
 			],
 			"heightened": {
 				"plusX": {
@@ -3052,7 +3052,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"You suppress sound in an area, preventing anyone from giving away valuable secrets. This doesn't prevent those in the area from talking or Casting a Spell, but no creature more than 5 feet away can hear its voice without succeeding at a {@skill Perception|PC1} check against your spell DC, which might interfere with {@trait auditory} or {@trait linguistic} effects as well as communication. Other sounds created in the area are muffled to a similar volume unless that sound is created by an effect with the {@trait sonic} trait."
+				"You suppress sound in an area, preventing anyone from giving away valuable secrets. This doesn't prevent those in the area from talking or Casting a Spell, but no creature more than 5 feet away can hear its voice without succeeding at a {@skill Perception|PC1} check against your spell DC, which might interfere with {@trait auditivo} or {@trait linguistic} effects as well as communication. Other sounds created in the area are muffled to a similar volume unless that sound is created by an effect with the {@trait sonic} trait."
 			]
 		},
 		{
@@ -3888,7 +3888,7 @@
 				"unit": "free"
 			},
 			"entries": [
-				"You enhance a {@trait summoned} creature with the power of the elements. If your next action is to cast either summon animal or summon plant or fungus, choose air, earth, fire, metal, water, or wood; the creature you summon gains the corresponding abilities.",
+				"You enhance a {@trait convocado} creature with the power of the elements. If your next action is to cast either summon animal or summon plant or fungus, choose air, earth, fire, metal, water, or wood; the creature you summon gains the corresponding abilities.",
 				{
 					"type": "list",
 					"items": [
@@ -4625,7 +4625,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"Your patron's aegis descends to shield a target from harm. Designate one of the following creature traits: {@trait aberration}, {@trait animal}. The target gains a +1 status bonus to its saving throws and AC against creatures with that trait."
+				"Your patron's aegis descends to shield a target from harm. Designate one of the following creature traits: {@trait aberração}, {@trait animal}. The target gains a +1 status bonus to its saving throws and AC against creatures with that trait."
 			],
 			"heightened": {
 				"X": {
@@ -4834,7 +4834,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"Your patron uses its superior command of the elements, empowering them to undermine your foe. When you Cast this Spell, choose {@trait air}, {@trait earth}, {@trait metal}, {@trait fire}, {@trait water}, or {@trait wood}. The target gains weakness 2 to that trait."
+				"Your patron uses its superior command of the elements, empowering them to undermine your foe. When you Cast this Spell, choose {@trait ar}, {@trait earth}, {@trait metal}, {@trait fogo}, {@trait água}, or {@trait wood}. The target gains weakness 2 to that trait."
 			],
 			"heightened": {
 				"plusX": {
@@ -5013,7 +5013,7 @@
 			},
 			"trigger": "Your turn begins.",
 			"entries": [
-				"At your unspoken plea, your patron temporarily assumes control over your familiar. You Command your familiar, allowing it to take its normal actions this turn. Your Command does not have the {@trait auditory} or {@trait concentrate} traits; your patron simply moves its agent directly."
+				"At your unspoken plea, your patron temporarily assumes control over your familiar. You Command your familiar, allowing it to take its normal actions this turn. Your Command does not have the {@trait auditivo} or {@trait concentrate} traits; your patron simply moves its agent directly."
 			]
 		},
 		{
@@ -5544,7 +5544,7 @@
 			},
 			"entries": [
 				"Your patron's majesty\u2014or their displeasure\u2014comes in a growl from your throat, making other creatures reluctant to harm you.",
-				"The target must attempt a Will save; if the creature is an {@trait animal}, {@trait fungus}, or {@trait plant}, it takes a \u20131 circumstance penalty to its save.",
+				"The target must attempt a Will save; if the creature is an {@trait animal}, {@trait fungo}, or {@trait plant}, it takes a \u20131 circumstance penalty to its save.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -6229,7 +6229,7 @@
 				"unit": "hour"
 			},
 			"entries": [
-				"You ward an area to alert you when creatures enter without your permission. When you cast {@spell alarm|PC1}, select a password. Whenever a Small or larger corporeal creature enters the spell's area without speaking the password, alarm sends your choice of a mental alert (in which case the spell gains the {@trait mental} trait) or an audible alarm with the sound and volume of a hand bell (in which case the spell gains the {@trait auditory} trait). Either option automatically awakens you, and the bell allows each creature in the area to attempt a DC 15 {@skill Perception|PC1} check to wake up. A creature aware of the alarm must succeed at a {@skill Stealth|PC1} check against the spell's DC or trigger the spell when moving into the area."
+				"You ward an area to alert you when creatures enter without your permission. When you cast {@spell alarm|PC1}, select a password. Whenever a Small or larger corporeal creature enters the spell's area without speaking the password, alarm sends your choice of a mental alert (in which case the spell gains the {@trait mental} trait) or an audible alarm with the sound and volume of a hand bell (in which case the spell gains the {@trait auditivo} trait). Either option automatically awakens you, and the bell allows each creature in the area to attempt a DC 15 {@skill Perception|PC1} check to wake up. A creature aware of the alarm must succeed at a {@skill Stealth|PC1} check against the spell's DC or trigger the spell when moving into the area."
 			],
 			"heightened": {
 				"X": {
@@ -7069,7 +7069,7 @@
 					"entries": {
 						"Critical Success": "The creature is unaffected.",
 						"Success": "Calming urges impose a \u20131 status penalty to the creature's attack rolls.",
-						"Failure": "Any {@trait emotion} effects that would affect the creature are suppressed and the creature can't use {@condition hostile|PC1} actions. If the target is subject to hostility from any other creature, it ceases to be affected by calm emotions.",
+						"Failure": "Any {@trait emoção} effects that would affect the creature are suppressed and the creature can't use {@condition hostile|PC1} actions. If the target is subject to hostility from any other creature, it ceases to be affected by calm emotions.",
 						"Critical Failure": "As failure, but hostility doesn't end the effect."
 					}
 				}
@@ -7180,7 +7180,7 @@
 						"A blast of freezing wind deals {@damage 3d10} cold damage.",
 						"Incredible lightning lashes the area, dealing {@damage 3d10} electricity damage.",
 						"Beating winds churn across the sky, dealing {@damage 3d10} bludgeoning damage to creatures flying in the area.",
-						"An instant tsunami sweeps over creatures in the area, dealing {@damage 3d10} bludgeoning damage with the {@trait water} trait (doubled for creatures swimming in the area).",
+						"An instant tsunami sweeps over creatures in the area, dealing {@damage 3d10} bludgeoning damage with the {@trait água} trait (doubled for creatures swimming in the area).",
 						"A massive wildfire burns in a sudden inferno, dealing {@damage 3d10} fire damage."
 					]
 				}
@@ -7472,15 +7472,15 @@
 			},
 			"targets": "1 willing creature",
 			"entries": [
-				"Gentle restorative magic pushes back the effects of toxins and more complex maladies. Choose an {@quickref affliction||3|afflictions} on the target, such as a {@trait curse}, {@trait disease}, or {@trait poison}. If it has advanced past stage one, reduce the stage by one. This reduction can be applied only once to a given case of an affliction, with the case ending when it's completely cured. Although the reduction can't occur again, heightened versions of this spell attempt to {@quickref counteract||3|counteracting} with each casting."
+				"Gentle restorative magic pushes back the effects of toxins and more complex maladies. Choose an {@quickref affliction||3|afflictions} on the target, such as a {@trait curse}, {@trait doença}, or {@trait poison}. If it has advanced past stage one, reduce the stage by one. This reduction can be applied only once to a given case of an affliction, with the case ending when it's completely cured. Although the reduction can't occur again, heightened versions of this spell attempt to {@quickref counteract||3|counteracting} with each casting."
 			],
 			"heightened": {
 				"X": {
 					"3": [
-						"Attempt to {@quickref counteract||3|counteracting} the affliction if it is a {@trait disease} or {@trait poison}."
+						"Attempt to {@quickref counteract||3|counteracting} the affliction if it is a {@trait doença} or {@trait poison}."
 					],
 					"4": [
-						"Attempt to {@quickref counteract||3|counteracting} the affliction if it is a {@trait curse}, {@trait disease} or {@trait poison}."
+						"Attempt to {@quickref counteract||3|counteracting} the affliction if it is a {@trait curse}, {@trait doença} or {@trait poison}."
 					]
 				}
 			}
@@ -7546,7 +7546,7 @@
 			},
 			"targets": "1 willing creature",
 			"entries": [
-				"You drive mental contamination from the target's mind. Attempt to {@quickref counteract||3|counteracting} an effect of your choice imposing one of these conditions on the target: {@condition fleeing|PC1}, {@condition frightened|PC1}, and {@condition stupefied|PC1}. If you failed to counteract the effect but you would have if its counteract rank were 2 lower, instead suppress the effect until the beginning of your next turn. The effect's duration doesn't elapse while it's suppressed. This spell can't counteract or suppress conditions that are part of {@trait curse||curses}, {@trait disease||diseases}, or a natural state of the target."
+				"You drive mental contamination from the target's mind. Attempt to {@quickref counteract||3|counteracting} an effect of your choice imposing one of these conditions on the target: {@condition fleeing|PC1}, {@condition frightened|PC1}, and {@condition stupefied|PC1}. If you failed to counteract the effect but you would have if its counteract rank were 2 lower, instead suppress the effect until the beginning of your next turn. The effect's duration doesn't elapse while it's suppressed. This spell can't counteract or suppress conditions that are part of {@trait curse||curses}, {@trait doença||diseases}, or a natural state of the target."
 			],
 			"heightened": {
 				"X": {
@@ -7754,7 +7754,7 @@
 				"unit": "hour"
 			},
 			"entries": [
-				"By imposing your will upon the water, you can raise or lower the level of water in the chosen area by 10 feet. Creatures that have the {@trait water} and that are in the area when you Cast the Spell must attempt a Fortitude save, with the effects of the of {@spell slow|PC1} spell."
+				"By imposing your will upon the water, you can raise or lower the level of water in the chosen area by 10 feet. Creatures that have the {@trait água} and that are in the area when you Cast the Spell must attempt a Fortitude save, with the effects of the of {@spell slow|PC1} spell."
 			]
 		},
 		{
@@ -7786,7 +7786,7 @@
 				"unit": "hour"
 			},
 			"entries": [
-				"You shape a cabin 20 feet on each side and 10 feet high. This cabin has the {@trait structure} trait and the same restrictions as magic items that create structures. The walls of the hut are simple and wooden, with small, square glass windows, and it has one wooden door. It doesn't include its own lock, but it has a fastener to which a lock can be applied.",
+				"You shape a cabin 20 feet on each side and 10 feet high. This cabin has the {@trait estrutura} trait and the same restrictions as magic items that create structures. The walls of the hut are simple and wooden, with small, square glass windows, and it has one wooden door. It doesn't include its own lock, but it has a fastener to which a lock can be applied.",
 				"The interior contains three cots, one chamber pot, and a small fireplace holding a magical fire. The interior is lit with a small magical light that you can light or extinguish at will using a single action, which has the {@action Sustain|PC1} action. The climate inside the hut is comfortable and allows creatures inside it to withstand most {@condition hostile|PC1} weather conditions, but incredible heat or cold, powerful storms, and winds of hurricane force or greater destroy the hut. Other creatures can freely enter and exit the hut without damaging it, but if you exit the hut, the spell ends. You can {@action Dismiss|PC1} the spell."
 			]
 		},
@@ -8400,7 +8400,7 @@
 			},
 			"entries": [
 				"You channel the primal forces of nature to transform into a Large animal battle form, specifically that of a powerful and terrifying dinosaur. You must have space to expand or the spell is lost.",
-				"When you cast this spell, choose a listed battle form. You can decide the specific type of animal, but this has no effect on the form's Size or statistics. While in this form, you gain the {@trait animal} and {@trait dinosaur} traits. You can {@action Dismiss|PC1} the spell.",
+				"When you cast this spell, choose a listed battle form. You can decide the specific type of animal, but this has no effect on the form's Size or statistics. While in this form, you gain the {@trait animal} and {@trait dinossauro} traits. You can {@action Dismiss|PC1} the spell.",
 				"You gain the following statistics and abilities regardless of which battle form you choose:",
 				{
 					"type": "list",
@@ -8501,7 +8501,7 @@
 				"dismiss": true
 			},
 			"entries": [
-				"You alter how an item's or spell's magical aura appears to effects like {@spell detect magic|PC1}. You can hide the auras entirely, have an item register as a {@trait common} item of lower level, or make a spell register as a common spell of the same or lower rank. You can {@action Dismiss|PC1} the spell.",
+				"You alter how an item's or spell's magical aura appears to effects like {@spell detect magic|PC1}. You can hide the auras entirely, have an item register as a {@trait comum} item of lower level, or make a spell register as a common spell of the same or lower rank. You can {@action Dismiss|PC1} the spell.",
 				"A caster using {@spell detect magic|PC1} or {@spell read aura|PC1} of an equal or higher rank can attempt to {@quickref disbelieve the illusion|CRB|2|disbelieving illusions|0} from magic aura using the skill matching the tradition of the spell ({@skill Arcana|PC1} for {@trait arcano}, {@skill Religion|PC1} for {@trait divino}, {@skill Occultism|PC1} for {@trait ocultista}, or {@skill Nature|PC1} for {@trait primal}). Further attempts by the same caster get the same result as the initial check to disbelieve."
 			],
 			"heightened": {
@@ -8543,7 +8543,7 @@
 				"entry": "AC and Fortitude"
 			},
 			"entries": [
-				"A black tracer bolt flies toward your target, and upon making contact intensifies into a powerful destructive beam. Make a spell attack against the target. If you hit an object or {@trait force} construct (such as a {@spell wall of force|PC1}), it's destroyed with no save unless it's an {@trait artifact} or similarly powerful. A single casting can destroy no more than a 10-foot cube of matter.",
+				"A black tracer bolt flies toward your target, and upon making contact intensifies into a powerful destructive beam. Make a spell attack against the target. If you hit an object or {@trait força} construct (such as a {@spell wall of force|PC1}), it's destroyed with no save unless it's an {@trait artifact} or similarly powerful. A single casting can destroy no more than a 10-foot cube of matter.",
 				"If you hit a creature, it takes {@damage 12d10} damage (no damage type) with a basic Fortitude save. If you critically hit, the target gets a result one degree of success worse than the outcome of its Fortitude save. A creature reduced to 0 HP is blasted to fine powder; its gear remains."
 			],
 			"heightened": {
@@ -8991,7 +8991,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"Calling upon powerful transformative magic, you gain a Large dragon battle form. When you cast this spell, choose one type of common dragon or another type to which your GM allows access. While in this form, you gain the {@trait dragon} trait. You have hands in this battle form and can take {@trait manipulate} actions. You can {@action Dismiss|PC1} the spell.",
+				"Calling upon powerful transformative magic, you gain a Large dragon battle form. When you cast this spell, choose one type of common dragon or another type to which your GM allows access. While in this form, you gain the {@trait dragão} trait. You have hands in this battle form and can take {@trait manipulate} actions. You can {@action Dismiss|PC1} the spell.",
 				"You gain the following statistics and abilities regardless of which battle form you choose:",
 				{
 					"type": "list",
@@ -9004,7 +9004,7 @@
 						"The following unarmed melee attacks, which are the only attacks you can {@action Strike|PC1} with. You're trained with them. Your attack modifier is +22, and your damage bonus is +6. These attacks are Strength based (for the purpose of the {@condition enfeebled|PC1} condition, for example). If your unarmed attack modifier is higher, you can use it instead. See below for more on these attacks. {@bold Melee} {@as 1} jaws, {@bold Damage} {@damage 2d12} piercing plus {@damage 2d6} damage of the same type as your Dragon Breath (see below); {@bold Melee} {@as 1} claw ({@trait agile}), {@bold Damage} {@damage 3d10} slashing; {@bold Melee} {@as 1} tail ({@trait reach} 10 feet), {@bold Damage} {@damage 3d10} bludgeoning.",
 						"{@skill Athletics|PC1} modifier of +23, unless your own modifier is higher.",
 						"{@bold Breath Weapon} {@as 2} You exhale deadly magical energy in an area, dealing {@damage 10d6} damage to each creature in the area with a basic save against your spell DC. The shape, damage type, and save type match that of your chosen dragon's breath. If the chosen dragon's breath can deal more than one type of damage, choose one when you cast dragon form. The shape is a 30-foot cone or a 100-foot line. Once activated, Dragon Breath can't be used again for {@dice 1d4} rounds. Dragon Breath has the tradition trait matching the type of dragon and the damage trait matching the type of damage it deals, if applicable.",
-						"{@bold Tradition Resistance} If the dragon's magical tradition matches that of your dragon form spell, you gain the listed ability. {@trait Arcane} resistance 5 against magic; {@trait divino} resistance 10 to {@trait spirit}, {@trait vitality}, and {@trait eversão}; {@trait ocultista} resistance 10 to {@trait mental}; {@trait primal} resistance 5 to physical damage."
+						"{@bold Tradition Resistance} If the dragon's magical tradition matches that of your dragon form spell, you gain the listed ability. {@trait Arcano} resistance 5 against magic; {@trait divino} resistance 10 to {@trait espiritual}, {@trait vitality}, and {@trait eversão}; {@trait ocultista} resistance 10 to {@trait mental}; {@trait primal} resistance 5 to physical damage."
 					]
 				},
 				"The dragons from Monster Core use the following specifications for dragon form:",
@@ -9451,8 +9451,8 @@
 						"AC = 19 + your level. Ignore your armor's check penalty and Speed reduction.",
 						"10 temporary Hit Points.",
 						"{@ability Darkvision}.",
-						"One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can {@action Strike|PC1} with. You're trained with them. Your attack modifier is +18, and your damage bonus is +9. These are Dexterity based ({@trait air}, {@trait fire}, or {@trait metal}) or Strength based ({@trait earth}, {@trait water}, or {@trait wood}). If your corresponding unarmed attack modifier is higher, you can use it instead.",
-						"{@skill Acrobatics|PC1} ({@trait air}, {@trait fire}, or {@trait metal}) or {@skill Athletics|PC1} ({@trait earth}, {@trait water}, or {@trait wood}) modifier of +20; ignore this change if your own modifier is higher."
+						"One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can {@action Strike|PC1} with. You're trained with them. Your attack modifier is +18, and your damage bonus is +9. These are Dexterity based ({@trait ar}, {@trait fogo}, or {@trait metal}) or Strength based ({@trait earth}, {@trait água}, or {@trait wood}). If your corresponding unarmed attack modifier is higher, you can use it instead.",
+						"{@skill Acrobatics|PC1} ({@trait ar}, {@trait fogo}, or {@trait metal}) or {@skill Athletics|PC1} ({@trait earth}, {@trait água}, or {@trait wood}) modifier of +20; ignore this change if your own modifier is higher."
 					]
 				},
 				"You gain specific abilities based on the type of elemental you choose:",
@@ -9948,7 +9948,7 @@
 				"basic": true
 			},
 			"entries": [
-				"You reach into the skies and call down an array of falling stars that explode upon colliding with the ground. Choose for the falling stars to be airbursts ({@trait sonic}), asteroids ({@trait fire}), comets ({@trait cold}), or plasma ({@trait electricity}). The spell gains the trait of the falling star type you chose. The four stars' central 10-foot bursts can't overlap. Each falling star deals {@damage 6d10} bludgeoning damage to each creature in the 10-foot burst at the center of its area of effect before exploding, dealing {@damage 14d6} energy damage of the type you chose to each creature in its 40-foot burst. A creature in any of the areas attempts one basic Reflex save against the spell no matter how many overlapping explosions it's caught in and can take each type of damage only once."
+				"You reach into the skies and call down an array of falling stars that explode upon colliding with the ground. Choose for the falling stars to be airbursts ({@trait sonic}), asteroids ({@trait fogo}), comets ({@trait frio}), or plasma ({@trait eletricidade}). The spell gains the trait of the falling star type you chose. The four stars' central 10-foot bursts can't overlap. Each falling star deals {@damage 6d10} bludgeoning damage to each creature in the 10-foot burst at the center of its area of effect before exploding, dealing {@damage 14d6} energy damage of the type you chose to each creature in its 40-foot burst. A creature in any of the areas attempts one basic Reflex save against the spell no matter how many overlapping explosions it's caught in and can take each type of damage only once."
 			],
 			"heightened": {
 				"plusX": {
@@ -10250,7 +10250,7 @@
 				"sustained": true
 			},
 			"entries": [
-				"You create a simple illusory sound or vision. A sound adds the {@trait auditory} trait to the spell and the sound can't include intelligible words or elaborate music. A vision adds the {@trait visual} trait, can be no larger than a 5-foot cube, and is clearly crude and undetailed if viewed from within 15 feet. When you Cast or {@action Sustain|PC1} the Spell, you can attempt to {@action Create a Diversion|PC1} with the illusion, gaining a +2 circumstance bonus to your {@skill Deception|PC1} check. If the attempt fails against a creature, that creature disbelieves the figment."
+				"You create a simple illusory sound or vision. A sound adds the {@trait auditivo} trait to the spell and the sound can't include intelligible words or elaborate music. A vision adds the {@trait visual} trait, can be no larger than a 5-foot cube, and is clearly crude and undetailed if viewed from within 15 feet. When you Cast or {@action Sustain|PC1} the Spell, you can attempt to {@action Create a Diversion|PC1} with the illusion, gaining a +2 circumstance bonus to your {@skill Deception|PC1} check. If the attempt fails against a creature, that creature disbelieves the figment."
 			]
 		},
 		{
@@ -10280,7 +10280,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"You create a hovering shield made of fire. As long as the shield persists, its heat grants you cold resistance 5 and makes you immune to {@quickref mild and severe environmental cold||4|temperature}. You can {@action Raise a Shield|PC1} with the fire shield as a normal shield to gain a +1 circumstance bonus to AC. You can use the {@feat Shield Block|PC1} reaction with the fire shield, which has Hardness 10, is immune to fire, and has 40 HP (with no Broken Threshold), and its Hardness is halved against effects that have the {@trait water} trait. If you {@feat Shield Block|PC1} a melee attack that is either an unarmed attack or made by an adjacent attacker, the attacker takes {@damage 2d6} fire damage."
+				"You create a hovering shield made of fire. As long as the shield persists, its heat grants you cold resistance 5 and makes you immune to {@quickref mild and severe environmental cold||4|temperature}. You can {@action Raise a Shield|PC1} with the fire shield as a normal shield to gain a +1 circumstance bonus to AC. You can use the {@feat Shield Block|PC1} reaction with the fire shield, which has Hardness 10, is immune to fire, and has 40 HP (with no Broken Threshold), and its Hardness is halved against effects that have the {@trait água} trait. If you {@feat Shield Block|PC1} a melee attack that is either an unarmed attack or made by an adjacent attacker, the attacker takes {@damage 2d6} fire damage."
 			],
 			"heightened": {
 				"plusX": {
@@ -10614,7 +10614,7 @@
 					},
 					"trigger": "The target of foresight defends against a {@condition hostile|PC1} creature or other danger.",
 					"entries": [
-						"If the {@condition hostile|PC1} creature or danger forces the target to roll dice (a saving throw, for example), the target rolls twice and uses the higher result, and this spell gains the {@trait fortune} trait. But if the {@condition hostile|PC1} creature or danger is rolling against the target (an attack roll or skill check, for example), that {@condition hostile|PC1} creature or danger rolls twice and uses the lower result, and this spell gains the {@trait misfortune} trait."
+						"If the {@condition hostile|PC1} creature or danger forces the target to roll dice (a saving throw, for example), the target rolls twice and uses the higher result, and this spell gains the {@trait fortúnio} trait. But if the {@condition hostile|PC1} creature or danger is rolling against the target (an attack roll or skill check, for example), that {@condition hostile|PC1} creature or danger rolls twice and uses the lower result, and this spell gains the {@trait misfortune} trait."
 					]
 				}
 			]
@@ -11931,7 +11931,7 @@
 			"heightened": {
 				"X": {
 					"2": [
-						"Your image makes appropriate sounds, generates normal smells, and feels right to the touch. The spell gains the {@trait auditory} and {@trait olfactory} trait. The duration increases to 1 hour."
+						"Your image makes appropriate sounds, generates normal smells, and feels right to the touch. The spell gains the {@trait auditivo} and {@trait olfactory} trait. The duration increases to 1 hour."
 					],
 					"5": [
 						"As the 2nd-level version, but the duration is unlimited."
@@ -12900,7 +12900,7 @@
 				"unit": "action"
 			},
 			"entries": [
-				"You spin secrets from the fundaments of magic, shaping them into a power with nearly unlimited potential. You duplicate a spell of 9th rank or lower of the tradition from which you cast manifestation, or a spell of 7th rank or lower from any tradition. Though you can normally choose only spells that are {@trait common} or to which you have access, the GM might allow broader options."
+				"You spin secrets from the fundaments of magic, shaping them into a power with nearly unlimited potential. You duplicate a spell of 9th rank or lower of the tradition from which you cast manifestation, or a spell of 7th rank or lower from any tradition. Though you can normally choose only spells that are {@trait comum} or to which you have access, the GM might allow broader options."
 			]
 		},
 		{
@@ -13454,7 +13454,7 @@
 			},
 			"entries": [
 				"You turn yourself {@condition invisible|PC1} and create an illusory duplicate of yourself. When you {@action Sustain|PC1} the Spell, you can mentally dictate a course of action for your duplicate to follow that round. Your duplicate acts as though it had your full number of actions, though it can't actually affect anything in the environment. Both the duplicate and your invisibility persist for the spell's duration. Performing a {@condition hostile|PC1} action doesn't end mislead's invisibility, just like a 4th-level {@spell invisibility|PC1} spell. A creature that determines the duplicate is an illusion doesn't necessarily know you're {@condition invisible|PC1}, and one that can see your {@condition invisible|PC1} form doesn't necessarily know your duplicate is an illusion.",
-				"If you Cast a Spell, {@trait attack}, or otherwise {@action interact|PC1} with another creature, as a part of that action you can attempt a {@skill Deception|PC1} check against observers' {@skill Perception|PC1} DCs to convince them your duplicate used that action. This doesn't fool anyone who's aware your duplicate is an illusion, nor does it work if the attack obviously couldn't have come from the duplicate. For instance, if you fired a ray, you could make it look like it came from the duplicate as long as the duplicate was positioned appropriately, but if you attacked with a sword and your duplicate was across the room from the target, your {@skill Deception|PC1} check would automatically fail."
+				"If you Cast a Spell, {@trait ataque}, or otherwise {@action interact|PC1} with another creature, as a part of that action you can attempt a {@skill Deception|PC1} check against observers' {@skill Perception|PC1} DCs to convince them your duplicate used that action. This doesn't fool anyone who's aware your duplicate is an illusion, nor does it work if the attack obviously couldn't have come from the duplicate. For instance, if you fired a ray, you could make it look like it came from the duplicate as long as the duplicate was positioned appropriately, but if you attacked with a sword and your duplicate was across the room from the target, your {@skill Deception|PC1} check would automatically fail."
 			]
 		},
 		{
@@ -13551,7 +13551,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"You transform into the shape of a legendary monster, assuming a Huge battle form. You must have enough space to expand into or the spell is lost. When you cast this spell, choose phoenix, purple worm, or sea serpent. While in this form, you gain the {@trait beast} trait (for phoenix) or the {@trait animal} trait (for cave worm or sea serpent). You can {@action Dismiss|PC1} the spell.",
+				"You transform into the shape of a legendary monster, assuming a Huge battle form. You must have enough space to expand into or the spell is lost. When you cast this spell, choose phoenix, purple worm, or sea serpent. While in this form, you gain the {@trait besta} trait (for phoenix) or the {@trait animal} trait (for cave worm or sea serpent). You can {@action Dismiss|PC1} the spell.",
 				"You gain the following statistics and abilities regardless of which battle form you choose:",
 				{
 					"type": "list",
@@ -13568,7 +13568,7 @@
 					"type": "list",
 					"items": [
 						"{@bold Cave Worm} Speed 40 feet, burrow Speed 30 feet, swim Speed 20 feet; {@b Melee} {@as 1} jaws ({@trait reach <10 feet>}), {@b Damage} {@damage 2d12+20} piercing; {@b Melee} {@as 1} stinger ({@trait agile}, {@trait reach <10 feet>}), {@b Damage} {@damage 2d8+15} piercing plus {@damage 2d6} {@condition persistent damage|PC1|persistent poison}; {@b Melee} {@as 1} body ({@trait reach <10 feet>}) {@b Damage} {@damage 2d8+20} bludgeoning; {@b Inexorable} You automatically recover from the {@condition paralyzed|PC1}, {@condition slowed|PC1}, and {@condition stunned|PC1} conditions at the end of each of your turns. You're also immune to being {@condition immobilized|PC1} and ignore {@quickref difficult terrain||3|terrain} and {@quickref greater difficult terrain||3|terrain}.",
-						"{@bold Phoenix} Speed 30 feet, fly Speed 90 feet; {@b Melee} {@as 1} beak ({@trait reach <15 feet>}), {@b Damage} {@damage 2d6+12} piercing plus {@damage 2d4} fire and {@damage 2d4} {@condition persistent damage|PC1|persistent fire}; {@b Melee} {@as 1} talon ({@trait agile}, {@trait reach <15 feet>}), {@b Damage} {@damage 2d8+12} slashing; {@b Shroud of Flame} ({@trait aura}, {@trait evocation}, {@trait fire}, {@trait primal}) 20 feet. You gain an aura of fire that extends out from you. A creature that enters or ends its turn within the aura takes {@damage 2d6} fire damage. A creature can take this damage only once per turn. You can use a single action, which has the {@trait concentrate} trait, to activate or deactivate this aura.",
+						"{@bold Phoenix} Speed 30 feet, fly Speed 90 feet; {@b Melee} {@as 1} beak ({@trait reach <15 feet>}), {@b Damage} {@damage 2d6+12} piercing plus {@damage 2d4} fire and {@damage 2d4} {@condition persistent damage|PC1|persistent fire}; {@b Melee} {@as 1} talon ({@trait agile}, {@trait reach <15 feet>}), {@b Damage} {@damage 2d8+12} slashing; {@b Shroud of Flame} ({@trait aura}, {@trait evocation}, {@trait fogo}, {@trait primal}) 20 feet. You gain an aura of fire that extends out from you. A creature that enters or ends its turn within the aura takes {@damage 2d6} fire damage. A creature can take this damage only once per turn. You can use a single action, which has the {@trait concentrate} trait, to activate or deactivate this aura.",
 						"{@bold Sea Serpent} Speed 20 feet, swim Speed 90 feet; {@b Melee} {@as 1} jaws ({@trait reach <15 feet>}), {@b Damage} {@damage 2d12+20} piercing; {@b Melee} {@as 1} tail ({@trait reach <25 feet>}), {@b Damage} {@damage 2d8+20} bludgeoning; {@b Spine Rake} {@as 2} ({@trait move}) You extend your spines and {@action Swim|PC1} or {@action Stride|PC1}. Each creature you're adjacent to at any point during your movement takes {@damage 4d8+10} slashing damage (basic Reflex against your spell DC)."
 					]
 				}
@@ -13613,7 +13613,7 @@
 			},
 			"entries": [
 				"A feral aspect overcomes the targets, making them tough and savage. Targets gain 5 temporary Hit Points, a +10-foot status bonus to their Speeds, and weakness 5 to silver. They also grow vicious fangs and claws, which are unarmed attacks. The fangs deal {@damage 2d8} piercing damage; the claws deal {@damage 2d6} slashing damage and have the {@trait agile} and {@trait finesse} traits. The targets use their highest weapon or unarmed attack proficiency with these attacks, and if they have weapon specialization or greater weapon specialization, they add this damage as well. On a critical hit with one of these unarmed attacks, the creature struck takes {@damage 1d4} {@condition persistent damage|PC1|persistent bleed damage}.",
-				"The targets can't use concentrate actions unless those actions also have the {@trait rage} trait, with the exception of {@action Seek|PC1}. A creature can attempt to end the spell's effect on itself by using a single action, which has the {@trait rage} trait, to attempt a Will save against your spell DC; on a success, it ends the spell's effect on itself.",
+				"The targets can't use concentrate actions unless those actions also have the {@trait fúria} trait, with the exception of {@action Seek|PC1}. A creature can attempt to end the spell's effect on itself by using a single action, which has the {@trait fúria} trait, to attempt a Will save against your spell DC; on a success, it ends the spell's effect on itself.",
 				"If a target is in the light of a full moon, it also grows by one size if it were Medium or smaller. This increases the reach of a Medium or Tiny creature by 5 feet."
 			],
 			"heightened": {
@@ -13749,7 +13749,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"The primal power of the world flows through you. You transform into an incarnation of nature, either a green man or a kaiju. Your battle form is Medium for a green man or Gargantuan (30-foot-by-30-foot space) for a kaiju. You must have enough space to expand into or the spell is lost. While in this form, you gain the {@trait plant} trait (for a green man) or the {@trait beast} trait (for a kaiju). You can {@action Dismiss|PC1} the spell.",
+				"The primal power of the world flows through you. You transform into an incarnation of nature, either a green man or a kaiju. Your battle form is Medium for a green man or Gargantuan (30-foot-by-30-foot space) for a kaiju. You must have enough space to expand into or the spell is lost. While in this form, you gain the {@trait plant} trait (for a green man) or the {@trait besta} trait (for a kaiju). You can {@action Dismiss|PC1} the spell.",
 				"You gain the following statistics and abilities regardless of which battle form you choose:",
 				{
 					"type": "list",
@@ -14305,7 +14305,7 @@
 				"unit": "hour"
 			},
 			"entries": [
-				"An opaque shell of drifting, iridescent runes covers the area, creating a bubble. You can choose to make the burst smaller,n 10-foot increments. The runes don't block travel, but those inside the bubble can't perceive those outside it and vice versa. {@trait Detection} and {@trait scrying} effects are likewise blocked.",
+				"An opaque shell of drifting, iridescent runes covers the area, creating a bubble. You can choose to make the burst smaller,n 10-foot increments. The runes don't block travel, but those inside the bubble can't perceive those outside it and vice versa. {@trait Detecção} and {@trait scrying} effects are likewise blocked.",
 				"Creatures sleeping within the bubble are immune to dreams sent by spells. Those sleeping 8 hours reduce their {@condition doomed|PC1} condition by 2 instead of 1."
 			]
 		},
@@ -16113,7 +16113,7 @@
 				"basic": true
 			},
 			"entries": [
-				"You shape the shadow substance of the Netherworld into a blast. Choose {@trait acid}, {@quickref bludgeoning|CRB|1|damage|0}, {@trait cold}, {@trait electricity}, {@trait fire}, {@trait force}, {@quickref piercing|CRB|1|damage|0}, {@quickref slashing|CRB|1|damage|0}, {@trait sonic}, or {@trait spirit} damage, and choose a 30-foot cone, a 15-foot burst within 120 feet, or a 50-foot line. The blast deals {@damage 6d8} damage of the type you chose to each creature in the area."
+				"You shape the shadow substance of the Netherworld into a blast. Choose {@trait ácido}, {@quickref bludgeoning|CRB|1|damage|0}, {@trait frio}, {@trait eletricidade}, {@trait fogo}, {@trait força}, {@quickref piercing|CRB|1|damage|0}, {@quickref slashing|CRB|1|damage|0}, {@trait sonic}, or {@trait espiritual} damage, and choose a 30-foot cone, a 15-foot burst within 120 feet, or a 50-foot line. The blast deals {@damage 6d8} damage of the type you chose to each creature in the area."
 			],
 			"heightened": {
 				"plusX": {
@@ -16413,7 +16413,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"The target makes no sound, preventing creatures from noticing it using hearing alone. The target can't use {@trait sonic} attacks, nor can it use {@trait auditory} actions. This also prevents the target from casting spells due to the magical words involved in casting, with the exception of {@trait subtle} spells."
+				"The target makes no sound, preventing creatures from noticing it using hearing alone. The target can't use {@trait sonic} attacks, nor can it use {@trait auditivo} actions. This also prevents the target from casting spells due to the magical words involved in casting, with the exception of {@trait subtle} spells."
 			],
 			"heightened": {
 				"X": {
@@ -16996,7 +16996,7 @@
 				"sustained": true
 			},
 			"entries": [
-				"You create a ghostly, magical echo of one weapon you're wielding or wearing and fling it. Attempt a spell attack roll against the target's AC, dealing {@damage 2d8} damage on a hit (or double damage on a critical hit). The damage type is the same as the chosen weapon (or any of its types for a versatile weapon). The attack deals {@trait spirit} damage instead if that would be more detrimental to the creature (as determined by the GM). This attack uses and contributes to your multiple attack penalty. After the attack, the weapon returns to your side. If you {@trait sanctified||sanctify} the spell, the attacks are sanctified as well.",
+				"You create a ghostly, magical echo of one weapon you're wielding or wearing and fling it. Attempt a spell attack roll against the target's AC, dealing {@damage 2d8} damage on a hit (or double damage on a critical hit). The damage type is the same as the chosen weapon (or any of its types for a versatile weapon). The attack deals {@trait espiritual} damage instead if that would be more detrimental to the creature (as determined by the GM). This attack uses and contributes to your multiple attack penalty. After the attack, the weapon returns to your side. If you {@trait sanctified||sanctify} the spell, the attacks are sanctified as well.",
 				"Each time you {@action Sustain|PC1} the spell, you can repeat the attack against any creature within 120 feet."
 			],
 			"heightened": {
@@ -17041,7 +17041,7 @@
 				{
 					"type": "list",
 					"items": [
-						"{@b Attack} The guardian makes a melee spell attack against an adjacent creature, dealing {@damage 3d8} damage on a hit (or double damage on a critical hit). The damage type is the same as the chosen weapon (or any of its types for a versatile weapon). The attack deals {@trait spirit} damage instead if that would be more detrimental to the creature (as determined by the GM). This attack uses and contributes to your multiple attack penalty.",
+						"{@b Attack} The guardian makes a melee spell attack against an adjacent creature, dealing {@damage 3d8} damage on a hit (or double damage on a critical hit). The damage type is the same as the chosen weapon (or any of its types for a versatile weapon). The attack deals {@trait espiritual} damage instead if that would be more detrimental to the creature (as determined by the GM). This attack uses and contributes to your multiple attack penalty.",
 						"{@b Protect} The guardian protects a creature of your choice. Each time the chosen creature would take damage and the guardian is adjacent to it, the guardian takes the first 10 damage instead of the ally. This protection lasts until you command the guardian to attack or to protect a different creature, or the guardian is destroyed."
 					]
 				}
@@ -17317,7 +17317,7 @@
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17359,7 +17359,7 @@
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17395,12 +17395,12 @@
 				"sustained": true
 			},
 			"entries": [
-				"You summon a creature that has the {@trait construct} trait and whose level is \u20131 to fight for you."
+				"You summon a creature that has the {@trait construto} trait and whose level is \u20131 to fight for you."
 			],
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17439,12 +17439,12 @@
 				"sustained": true
 			},
 			"entries": [
-				"You summon a creature that has the {@trait dragon} trait and whose level is 5 to fight for you. If the dragon has a magical tradition trait (arcane, divine, occult, or primal), you can summon it only if you're using that tradition to cast summon dragon."
+				"You summon a creature that has the {@trait dragão} trait and whose level is 5 to fight for you. If the dragon has a magical tradition trait (arcane, divine, occult, or primal), you can summon it only if you're using that tradition to cast summon dragon."
 			],
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17486,7 +17486,7 @@
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17522,12 +17522,12 @@
 				"sustained": true
 			},
 			"entries": [
-				"You summon a creature that has the {@trait aberration} trait and whose level is 5 to fight for you."
+				"You summon a creature that has the {@trait aberração} trait and whose level is 5 to fight for you."
 			],
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17564,12 +17564,12 @@
 				"sustained": true
 			},
 			"entries": [
-				"You summon a creature that has the {@trait fey} trait and whose level is \u20131 to fight for you."
+				"You summon a creature that has the {@trait fada} trait and whose level is \u20131 to fight for you."
 			],
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17611,7 +17611,7 @@
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17647,12 +17647,12 @@
 				"sustained": true
 			},
 			"entries": [
-				"You summon a creature that has the {@trait giant} trait and whose level is 5 to fight for you."
+				"You summon a creature that has the {@trait gigante} trait and whose level is 5 to fight for you."
 			],
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17728,7 +17728,7 @@
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17764,12 +17764,12 @@
 				"sustained": true
 			},
 			"entries": [
-				"You summon a creature that has the {@trait plant} or {@trait fungus} trait and whose level is \u20131 to fight for you."
+				"You summon a creature that has the {@trait plant} or {@trait fungo} trait and whose level is \u20131 to fight for you."
 			],
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17812,7 +17812,7 @@
 			"heightened": {
 				"plusX": {
 					"1": [
-						"As listed on the {@trait summon} trait."
+						"As listed on the {@trait convocação} trait."
 					]
 				}
 			},
@@ -17870,7 +17870,7 @@
 						"Critical Failure": "The creature takes full damage and becomes {@condition blinded|PC1} permanently."
 					}
 				},
-				"If the globe overlaps with an area of magical darkness, sunburst attempts to {@quickref counteract||3|counteracting} the {@trait darkness} effect."
+				"If the globe overlaps with an area of magical darkness, sunburst attempts to {@quickref counteract||3|counteracting} the {@trait escuridão} effect."
 			],
 			"heightened": {
 				"plusX": {
@@ -18612,7 +18612,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"You cause a Small tree to instantly sprout in an unoccupied space on the ground. Four seedpods grow from the tree, each filled with the magic of a different one of the four seasons. A creature can Interact to pluck one of the pods, and can then either throw it up to 30 feet as part of the same action or do so with a separate {@action Interact|PC1} action later. When thrown, a pod explodes in a 5-foot burst, dealing {@damage 6d6} damage with a basic Reflex save against your spell DC. The damage type depends on the season of the pod: {@trait electricity} for spring, {@trait fire} for summer, {@trait poison} for autumn, or {@trait cold} for winter. When the spell ends, the tree withers away and any remaining pods rot, leaving behind non-magical seeds."
+				"You cause a Small tree to instantly sprout in an unoccupied space on the ground. Four seedpods grow from the tree, each filled with the magic of a different one of the four seasons. A creature can Interact to pluck one of the pods, and can then either throw it up to 30 feet as part of the same action or do so with a separate {@action Interact|PC1} action later. When thrown, a pod explodes in a 5-foot burst, dealing {@damage 6d6} damage with a basic Reflex save against your spell DC. The damage type depends on the season of the pod: {@trait eletricidade} for spring, {@trait fogo} for summer, {@trait poison} for autumn, or {@trait frio} for winter. When the spell ends, the tree withers away and any remaining pods rot, leaving behind non-magical seeds."
 			],
 			"heightened": {
 				"plusX": {
@@ -19177,7 +19177,7 @@
 				"unit": "minute"
 			},
 			"entries": [
-				"The target transforms into a vaporous state. In this state, the target is amorphous. It loses any item bonus to AC and all other effects and bonuses from armor, and it uses its proficiency modifier for unarmored defense. It gains resistance 8 to physical damage and is immune to precision damage. It can't cast spells, activate items, or use actions that have the {@trait attack} or {@trait manipulate} trait. It gains a fly Speed of 10 feet and can slip through tiny cracks. The target can {@action Dismiss|PC1|Dismiss the spell}."
+				"The target transforms into a vaporous state. In this state, the target is amorphous. It loses any item bonus to AC and all other effects and bonuses from armor, and it uses its proficiency modifier for unarmored defense. It gains resistance 8 to physical damage and is immune to precision damage. It can't cast spells, activate items, or use actions that have the {@trait ataque} or {@trait manipulate} trait. It gains a fly Speed of 10 feet and can slip through tiny cracks. The target can {@action Dismiss|PC1|Dismiss the spell}."
 			]
 		},
 		{
