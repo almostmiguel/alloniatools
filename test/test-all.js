@@ -7,8 +7,6 @@ function handleFail () {
 
 async function main () {
 	let testsPassed = true;
-	// FIXME Once we have schemas, skipping these for now
-	// testsPassed = testsPassed && await require("./test-json");
 	if (!testsPassed) handleFail();
 	testsPassed = testsPassed && await require("./test-misc");
 	if (!testsPassed) handleFail();

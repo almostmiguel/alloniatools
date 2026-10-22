@@ -11,10 +11,6 @@ on:
     #           description: Input Version (ex. v0.7.4)
     #           required: true
 
-env:
-    # See: https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio
-    IMAGE_NAME: pf2etools
-
 concurrency:
     group: "release"
     cancel-in-progress: true
@@ -85,29 +81,5 @@ jobs:
                   branch: prod
                   folder: .
 
-            # region See: https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio
-            - name: Build Image
-              run: |
-                  docker build -t $IMAGE_NAME .
-            - name: Log In to Registry
-              run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-
-            - name: Push Image
-              run: |
-                  IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
-                  # Change all uppercase to lowercase
-                  IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-                  # Strip git ref prefix from version
-                  VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-                  # Strip "v" prefix from tag name
-                  [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-                  echo IMAGE_ID=$IMAGE_ID
-                  echo VERSION=$VERSION
-                  docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
-                  # Always tag latest when pushing a tag, as we don't expect to ever merge old tags
-                  [[ "${{ github.ref }}" == "refs/tags/"* ]] && docker tag $IMAGE_NAME $IMAGE_ID:latest
-                  docker push $IMAGE_ID:$VERSION
-                  docker push $IMAGE_ID:latest
-            # endregion
             - name: Post Changelogs to Discord
               run: bash ./.github/discord.sh --webhook-url="${{ secrets.DISCORD_WEBHOOK }}" --text "<@&901146147480043520>" --title "Pf2eTools $(head -n 1 RELEASE_NOTES.md | sed -E "s/(\"[^\"]+\")( edition)/_\1_\2/" | jq -Rs . | cut -c 2- | rev | cut -c 2- | rev)" --description "$(jq -Rs . <<< $(tail -n +2 "RELEASE_NOTES.md") | cut -c 2- | rev | cut -c 2- | rev)" --color "0x6f1c17" --url "https://github.com/Pf2eToolsOrg/Pf2eTools/releases/tag/${{ env.RELEASE_VERSION }}" --timestamp
