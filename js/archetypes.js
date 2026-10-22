@@ -103,7 +103,6 @@ class ArchetypesPage extends BaseComponent {
 		await this._pHandleBrew(homebrew);
 		await BrewUtil.pAddLocalBrewData();
 
-		BrewUtil.makeBrewButton("manage-brew");
 		await ListUtil.pLoadState();
 		RollerUtil.addListRollButton(true, null, 0);
 		RollerUtil.addListRollButton(true, {roll: "feat-feelinglucky", reset: "feat-reset", search: "feat-filter-search-group"}, 1);
@@ -701,7 +700,7 @@ class ArchetypesPage extends BaseComponent {
 			$archetypeStats.empty().append(Renderer.archetype.getRenderedString(arc));
 		}
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("archetype");
+			const quickRules = await Renderer.utils.pGetQuickReference("archetype");
 			$archetypeStats.empty().append(quickRules);
 		}
 
@@ -712,7 +711,7 @@ class ArchetypesPage extends BaseComponent {
 		);
 
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

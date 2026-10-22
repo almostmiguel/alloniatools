@@ -117,7 +117,7 @@ function renderStatblock (organization) {
 		$content.append(Renderer.organization.getRenderedLore({lore: await pGetFluff()}))
 	}
 	const buildInfoTab = async () => {
-		const quickRules = await Renderer.utils.pGetQuickRules("organization");
+		const quickRules = await Renderer.utils.pGetQuickReference("organization");
 		$content.append(quickRules);
 	}
 	const buildImageTab = async () => {
@@ -134,7 +134,7 @@ function renderStatblock (organization) {
 		buildLoreTab,
 	);
 	const infoTab = Renderer.utils.tabButton(
-		"Quick Rules",
+		"Quick Reference",
 		() => {},
 		buildInfoTab,
 	);

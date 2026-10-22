@@ -382,7 +382,6 @@ class BestiaryPage extends ListPage {
 		this._addCreatures(homebrew.creature);
 		BrewUtil.bind({list: this._list, pHandleBrew: this._handleBrew.bind(this)});
 		await BrewUtil.pAddLocalBrewData();
-		BrewUtil.makeBrewButton("manage-brew");
 		BrewUtil.bind({filterBox: this._pageFilter.filterBox, sourceFilter: this._pageFilter.sourceFilter});
 		await ListUtil.pLoadState();
 	}

@@ -254,7 +254,7 @@ const BookUtil = {
 			BookUtil.renderArea.html("");
 
 			const chapterTitle = (fromIndex.contents[chapter] || {}).name;
-			document.title = `${chapterTitle ? `${chapterTitle} - ` : ""}${fromIndex.name} - Pf2eTools`;
+			document.title = `${chapterTitle ? `${chapterTitle} - ` : ""}${fromIndex.name} - AvalonTools`;
 
 			const goToPage = (mod, isGetHref) => {
 				const getHashPart = () => {
@@ -370,7 +370,7 @@ const BookUtil = {
 					$btnPrev
 						.toggle(showPrev)
 						.appendTo(BookUtil.$wrpFloatControls)
-						.title("Previous Chapter");
+						.title(BookUtil.contentType === "campaign" ? "Previous Session" : "Previous Chapter");
 					BookUtil.curRender.controls.$btnsPrv.push($btnPrev);
 
 					let $btnNext;
@@ -384,7 +384,7 @@ const BookUtil = {
 					$btnNext
 						.toggle(showNxt)
 						.appendTo(BookUtil.$wrpFloatControls)
-						.title("Next Chapter");
+						.title(BookUtil.contentType === "campaign" ? "Next Session" : "Next Chapter");
 					BookUtil.curRender.controls.$btnsNxt.push($btnNext);
 
 					BookUtil.$wrpFloatControls.toggleClass("btn-group", showPrev && showNxt);
@@ -543,9 +543,9 @@ const BookUtil = {
 		}
 
 		async function pHandleFound (fromIndex, homebrewData) {
-			document.title = `${fromIndex.name} - Pf2eTools`;
+			document.title = `${fromIndex.name} - AvalonTools`;
 			$(`.book-head-header`).html(cleanName(fromIndex.name));
-			$(`.book-head-message`).html("Browse content. Press F to find, and G to go to page.");
+			$(`.book-head-message`).text(BookUtil.contentType === "campaign" ? "Browse sessions. Press F to search this campaign." : "Browse content. Press F to find, and G to go to page.");
 			await BookUtil.pLoadBook(fromIndex, bookId, hashParts, homebrewData);
 			NavBar.highlightCurrentPage();
 		}
@@ -553,7 +553,7 @@ const BookUtil = {
 		function handleNotFound () {
 			if (!window.location.hash) window.history.back();
 			else {
-				$(`.initial-message`).text(`Loading failed\u2014could not find ${Parser.getArticle(BookUtil.contentType)} ${BookUtil.contentType} with ID "${bookId}." You may need to load it as homebrew.`);
+				$(`.initial-message`).text(`Loading failed\u2014could not find ${Parser.getArticle(BookUtil.contentType)} ${BookUtil.contentType} with ID "${bookId}." Check that the campaign is listed in data/adventures.json and its content file exists.`);
 				throw new Error(`No book with ID: ${bookId}`);
 			}
 		}

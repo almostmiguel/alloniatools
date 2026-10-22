@@ -1002,7 +1002,7 @@ Parser.CAT_ID_TO_FULL[Parser.CAT_ID_EIDOLON] = "Eidolon";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_OPTIONAL_FEATURE] = "Optional Feature";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_OPTIONAL_FEATURE_LESSON] = "Lesson";
 
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ADVENTURE] = "Adventure";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ADVENTURE] = "Campaign";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_HAZARD] = "Hazard";
 
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ACTION] = "Action";
@@ -1105,6 +1105,8 @@ Parser.bookOrdinalToAbv = (ordinal, preNoSuff) => {
 			return `${preNoSuff ? " " : ""}Ch. ${ordinal.identifier}${
 				preNoSuff ? "" : ": "
 			}`;
+		case "session":
+			return `${preNoSuff ? " " : ""}Session ${ordinal.identifier}${preNoSuff ? "" : ": "}`;
 		case "episode":
 			return `${preNoSuff ? " " : ""}Ep. ${ordinal.identifier}${
 				preNoSuff ? "" : ": "

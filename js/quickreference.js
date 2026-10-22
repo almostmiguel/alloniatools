@@ -17,10 +17,17 @@ window.addEventListener("load", () => {
 	}
 
 	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
-	DataUtil.loadJSON(JSON_URL).then(onJsonLoad);
+	DataUtil.loadJSON(JSON_URL).then(onJsonLoad).catch(error => {
+		BookUtil.renderArea.text("Could not load Quick Reference. Run npm run gen-all to rebuild the reference data.");
+		console.error(error);
+	});
 });
 
 function onJsonLoad (data) {
+	if (!data.reference?.["bookref-quick"]?.contents?.length || !data.data?.["bookref-quick"]?.length) {
+		BookUtil.renderArea.text("Quick Reference has no sections. Add reference text in data/quickreference.json, then run npm run gen-all.");
+		return;
+	}
 	reference = [data.reference["bookref-quick"]];
 	BookUtil.contentType = "document";
 

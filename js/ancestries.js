@@ -129,7 +129,6 @@ class AncestriesPage extends BaseComponent {
 		await this._pHandleBrew(homebrew);
 		await BrewUtil.pAddLocalBrewData();
 
-		BrewUtil.makeBrewButton("manage-brew");
 		await ListUtil.pLoadState();
 		RollerUtil.addListRollButton(true, null, 0);
 		RollerUtil.addListRollButton(true, {roll: "feat-feelinglucky", reset: "feat-reset", search: "feat-filter-search-group"}, 1);
@@ -142,9 +141,9 @@ class AncestriesPage extends BaseComponent {
 		$(`.initial-message`).text(`Select an ancestry from the list to view it here`);
 
 		this._setAncestryFromHash(Hist.initialLoad);
-		this._setFeatAncestryFilters()
 		this._setFeatFromHash(Hist.initialLoad);
 		this._setStateFromHash(Hist.initialLoad);
+		this._setFeatAncestryFilters();
 
 		const $btnLink = ListUtil.getOrTabRightButton(`btn-feat-link`, `list`, "a");
 		$btnLink.title("View this feat on the Feats page");
@@ -320,13 +319,16 @@ class AncestriesPage extends BaseComponent {
 	}
 
 	_setFeatAncestryFilters () {
-		let names = this._getActiveHeritages().map(it => it.name);
-		names.push(...this._getActiveHeritages().map(it => it.traits).filter(Boolean).flat())
-		names.push(this.activeAncestry.name);
-		Object.keys(this._featFilter._ancestryFilter.getValues()[this._featFilter._ancestryFilter.header]).forEach(key => {
-			if (!key.startsWith("_")) this._featFilter._ancestryFilter.setValue(key, 0)
+		const heritages = this._getActiveHeritages();
+		const names = new Set([
+			this.activeAncestry.name,
+			...heritages.map(heritage => heritage.name),
+			...heritages.flatMap(heritage => heritage.traits || []),
+		].map(name => Parser.getTraitName(name).toLowerCase()));
+		const filter = this._featFilter._ancestryFilter;
+		Object.keys(filter.getValues()[filter.header]).forEach(key => {
+			if (!key.startsWith("_")) filter.setValue(key, names.has(Parser.getTraitName(key).toLowerCase()) ? 1 : 0);
 		});
-		names.forEach(name => { this._featFilter._ancestryFilter.setValue(name, 1) });
 		this._handleFeatFilterChange();
 	}
 
@@ -336,9 +338,9 @@ class AncestriesPage extends BaseComponent {
 
 		const doSetFeatFilters = Hist.getDoubleHashParts()[0][0].toLowerCase() !== UrlUtil.autoEncodeHash(this.activeAncestry).toLowerCase();
 		this._setAncestryFromHash();
-		if (doSetFeatFilters) this._setFeatAncestryFilters();
 		this._setFeatFromHash();
 		this._setStateFromHash();
+		if (doSetFeatFilters) this._setFeatAncestryFilters();
 	}
 
 	_setAncestryFromHash (isInitialLoad) {
@@ -814,6 +816,7 @@ class AncestriesPage extends BaseComponent {
 			const $featView = $(`.feat-view`);
 
 			if (this._state.isShowFeats) {
+				this._setFeatAncestryFilters();
 				$acnWrp.toggleClass("hidden", true);
 				$featView.toggleClass("hidden", false);
 			} else {
@@ -829,6 +832,7 @@ class AncestriesPage extends BaseComponent {
 			const hkDisplayHeritage = () => {
 				const isVisible = this._state[stateKey];
 				$(`[data-heritage-id="${stateKey}"]`).toggleClass("hidden", !isVisible);
+				if (this._state.isShowFeats) this._setFeatAncestryFilters();
 			};
 			this._addHookBase(stateKey, () => keepYScroll(hkDisplayHeritage));
 			this._addHookBase(stateKey, this._updateImageEmptyState.bind(this));
@@ -897,16 +901,17 @@ class AncestriesPage extends BaseComponent {
 		if (anc.boosts) statSidebar.entries.push({type: "pf2-title", name: "Melhorias de Atributo"}, anc.boosts.join(" <br> ").toTitleCase());
 		if (anc.flaw) statSidebar.entries.push({type: "pf2-title", name: "Defeito de Atributo"}, anc.flaw.join(" <br> ").toTitleCase());
 		if (anc.languages) statSidebar.entries.push({type: "pf2-title", name: "Idiomas"}, ...anc.languages);
+		const ancestryTraits = [
+			...(anc.rarity ? [anc.rarity] : []),
+			...(anc.traits || []),
+		];
+		if (ancestryTraits.length) statSidebar.entries.push({type: "pf2-title", name: "Traços"}, Renderer.utils.getTraitsDiv(ancestryTraits.slice()));
 		if (anc.feature) statSidebar.entries.push({type: "pf2-title", name: anc.feature.name}, ...anc.feature.entries);
 		if (anc.features) anc.features.forEach(f => statSidebar.entries.push({type: "pf2-title", name: f.name}, ...f.entries));
 		const ancestryName = {
 			type: "pf2-h1",
 			name: anc.name,
 		};
-		const ancestryTraits = [
-			...(anc.rarity ? [anc.rarity] : []),
-			...(anc.traits || []),
-		];
 		const flavor = {
 			type: "pf2-h1-flavor",
 			entries: anc.flavor,
@@ -918,7 +923,6 @@ class AncestriesPage extends BaseComponent {
 
 		$$`<div id="ancestry-name">${renderer.render(ancestryName)}</div>
 		${Renderer.utils.getDividerDiv()}
-		${Renderer.utils.getTraitsDiv(ancestryTraits.slice())}
 		<div data-feature-type="ancestry">${renderer.render(statSidebar)}</div>
 		<div class="heritage-title">${renderer.render(heritageTitle)}${titleStack.join("")}</div>
 		${anc.heritage.map(h => this._render_renderHeritageStats(h)).join("")}
@@ -930,7 +934,7 @@ class AncestriesPage extends BaseComponent {
 		this._$divNoHeritage = AncestriesPage._render_$getNoHeritage().appendTo($mechanics);
 
 		const infoStack = [""];
-		renderer.recursiveRender(anc.info, infoStack, {prefix: "<p class=\"pf2-p\">", suffix: "</p>"});
+		renderer.recursiveRender(anc.info, infoStack, {prefix: `<p class="pf2-p">`, suffix: "</p>"});
 		const flavorHtml = renderer.render(flavor);
 		const detailsTitle = {type: "pf2-h2", name: `Detalhes`};
 		$$`<div class="anc__info-name">${renderer.render(ancestryName)}</div>
@@ -939,7 +943,7 @@ class AncestriesPage extends BaseComponent {
 		${infoStack.join("")}
 		${this.activeAncestryAllHeritages.map(h => this._render_renderHeritageFluff(h)).join("")}
 		`.appendTo($info);
-		if (!(anc.flavor || []).length && !(anc.info || []).length && !this.activeAncestryAllHeritages.some(h => (h.info || []).length)) {
+		if (!(anc.flavor || []).length && !(anc.info || []).length && !this.activeAncestryAllHeritages.some(h => (h.info || []).length || (h.versatile && h.flavor?.length))) {
 			$info.append(Renderer.utils.HTML_NO_INFO);
 		}
 
@@ -991,20 +995,27 @@ class AncestriesPage extends BaseComponent {
 
 	_render_renderHeritageStats (heritage) {
 		const renderer = Renderer.get().setFirstSection(false);
-		const renderStack = [""]
-		renderStack.push(`<div data-heritage-id="${UrlUtil.getStateKeyHeritage(heritage)}">`)
-		renderer.recursiveRender({type: "pf2-h3", name: heritage.name, entries: heritage.entries}, renderStack)
-		renderStack.push(`</div>`)
-		return renderStack.join("")
+		const name = heritage.versatile && heritage.rarity ? `${heritage.name} ({@trait ${Parser.getTraitName(heritage.rarity)}})` : heritage.name;
+		return `<div data-heritage-id="${UrlUtil.getStateKeyHeritage(heritage)}">${renderer.render({type: "pf2-h3", name, entries: heritage.entries})}</div>`;
 	}
 
 	_render_renderHeritageFluff (heritage) {
 		const renderer = Renderer.get().setFirstSection(false);
-		const renderStack = [""]
-		renderStack.push(`<div data-heritage-id="${UrlUtil.getStateKeyHeritage(heritage)}">`)
-		renderer.recursiveRender(heritage.info, renderStack)
-		renderStack.push(`</div>`)
-		return renderStack.join("")
+		const renderStack = [""];
+		renderStack.push(`<div data-heritage-id="${UrlUtil.getStateKeyHeritage(heritage)}">`);
+		if (heritage.versatile && heritage.flavor?.length) {
+			const flavor = {type: "pf2-h1-flavor", entries: heritage.flavor};
+			const [first, ...rest] = heritage.info || [];
+			const headingTypes = ["section", "chapter", "pf2-h1", "pf2-h2", "pf2-h3", "pf2-h4", "pf2-h5"];
+			if (first?.name && Array.isArray(first.entries) && headingTypes.includes(first.type)) {
+				renderer.recursiveRender({...first, entries: [flavor, ...first.entries]}, renderStack);
+				rest.forEach(entry => renderer.recursiveRender(entry, renderStack));
+			} else {
+				renderer.recursiveRender({type: "pf2-h2", name: heritage.name, entries: [flavor, ...(heritage.info || [])]}, renderStack);
+			}
+		} else renderer.recursiveRender(heritage.info, renderStack);
+		renderStack.push(`</div>`);
+		return renderStack.join("");
 	}
 
 	_render_renderHeritageTabs () {

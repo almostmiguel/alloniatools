@@ -115,7 +115,6 @@ class ClassesPage extends BaseComponent {
 		await this._pHandleBrew(homebrew);
 		await BrewUtil.pAddLocalBrewData();
 
-		BrewUtil.makeBrewButton("manage-brew");
 		await ListUtil.pLoadState();
 		RollerUtil.addListRollButton(true, null, 0);
 		RollerUtil.addListRollButton(true, {

@@ -104,7 +104,7 @@ class TablesPage extends ListPage {
 				default:
 					return;
 			}
-			const quickRules = await Renderer.utils.pGetQuickRules(quickRulesType);
+			const quickRules = await Renderer.utils.pGetQuickReference(quickRulesType);
 			$pgContent.append(quickRules);
 		}
 		const statsTab = Renderer.utils.tabButton(
@@ -115,7 +115,7 @@ class TablesPage extends ListPage {
 		const tabs = [statsTab];
 		if (it.source === "CFD" || it.source === "CHD" || it.source === "HPD") {
 			const infoTab = Renderer.utils.tabButton(
-				"Quick Rules",
+				"Quick Reference",
 				() => {},
 				buildInfoTab,
 			);

@@ -85,7 +85,7 @@ class VehiclesPage extends ListPage {
 			$content.append(Renderer.vehicle.getRenderedString(it));
 		}
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("vehicle");
+			const quickRules = await Renderer.utils.pGetQuickReference("vehicle");
 			$content.append(quickRules);
 		}
 
@@ -95,7 +95,7 @@ class VehiclesPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

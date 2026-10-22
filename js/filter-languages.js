@@ -7,7 +7,7 @@ class PageFilterLanguages extends PageFilter {
 		this._sourceFilter = new SourceFilter();
 		this._typeFilter = new Filter({
 			header: "Type",
-			items: ["Common", "Uncommon", "Rare", "Regional", "Secret"],
+			items: ["Comum", "Incomum", "Raro", "Regional", "Secreto"],
 			itemSortFn: null,
 			displayFn: StrUtil.uppercaseFirst,
 		});

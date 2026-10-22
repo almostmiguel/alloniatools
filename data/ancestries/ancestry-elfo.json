@@ -32,12 +32,12 @@
 				{
 					"name": "Visão na Penumbra",
 					"entries": [
-						"Você consegue enxergar na luz fraca como se fosse luz forte, portanto ignora a condição {@condition concealed} causada por luz fraca."
+						"Você consegue enxergar na luz fraca como se fosse luz forte, portanto ignora a condição {@condition ocultado} causada por luz fraca."
 					]
 				}
 			],
 			"flavor": [
-				"Sendo um povo muito antigo, os elfos já testemunharam inúmeras mudanças e têm uma perspectiva que só surge com a contemplação dos grandes arcos da história. Após terem deixado Allonia nos tempos antigos, eles retornaram, deparando-se com uma terra mudada, e lutam até hoje para retomar seus lares ancestrais."
+				"Sendo um povo muito antigo, os elfos já testemunharam inúmeras mudanças e têm uma perspectiva que só surge com a contemplação dos grandes arcos da história. Após terem deixado Avalon nos tempos antigos, eles retornaram, deparando-se com uma terra mudada, e lutam até hoje para retomar seus lares ancestrais."
 			],
 			"info": [
 				"Elfos valorizam a gentileza, o intelecto e a beleza, e muitos deles se focam em refinar seus modos, aparência e cultura. Os estudos élficos se aprofundam até um nível de detalhe que a maioria dos povos de vida mais curta considera excessivos ou ineficientes. Elfos são um povo um tanto reservado, imerso nos segredos de seus bosques e grupos familiares. Eles custam a formar laços de amizade fora de sua própria gente, já que os elfos que vivem entre povos de vida mais curta costumam ficar melancólicos após testemunhar gerações de companheiros envelhecerem e morrerem. Eesses elfos são conhecidos como Abandonados entre seus companheiros élficos.",
@@ -143,7 +143,7 @@
 				},
 				{
 					"name": "Elfo dos Sussurros",
-					"shortName": "Sussurros",
+					"shortName": "Sussurro",
 					"source": "PC1",
 					"page": 47,
 					"entries": [

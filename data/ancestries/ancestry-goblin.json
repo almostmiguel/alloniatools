@@ -3,27 +3,26 @@
 		{
 			"name": "Goblin",
 			"source": "PC1",
-			"remaster": true,
 			"page": 54,
 			"hp": 6,
 			"size": [
-				"small"
+				"pequeno"
 			],
 			"speed": {
 				"walk": 7.5
 			},
 			"boosts": [
-				"dexterity",
-				"charisma",
-				"free"
+				"destreza",
+				"carisma",
+				"livre"
 			],
 			"flaw": [
-				"wisdom"
+				"sabedoria"
 			],
 			"languages": [
-				"{@language Common|PC1}",
-				"{@language Goblin|PC1}",
-				"Additional languages equal to your Intelligence modifier (if it's positive). Choose from {@language Draconic|PC1}, {@language Dwarven|PC1}, {@language Gnomish|PC1}, {@language Halfling|PC1}, {@language Kholo|PC1}, {@language Orcish|PC1}, and any other languages to which you have access (such as the languages prevalent in your region)."
+				"{@language Common}",
+				"{@language Goblin}",
+				"Uma quantidade de idiomas adicionais igual ao seu modificador de inteligência (se for positivo). Escolha entre {@language Draconic}, {@language Dwarven}, {@language Gnomish}, {@language Halfling}, {@language Kholo}, {@language Orcish} e quaisquer outros idiomas aos quais você tenha acesso (como os falados na sua região)."
 			],
 			"traits": [
 				"goblin",
@@ -31,9 +30,9 @@
 			],
 			"features": [
 				{
-					"name": "Darkvision",
+					"name": "Visão no Escuro",
 					"entries": [
-						"You can see in darkness and dim light just as well as you can see in bright light, though your vision in darkness is in black and white."
+						"Você consegue enxergar na escuridão e na luz fraca como se fosse luz forte, embora sua visão no escuro seja em preto e branco."
 					]
 				}
 			],
@@ -46,20 +45,27 @@
 			],
 			"heritage": [
 				{
-					"name": "Charhide Goblin",
-					"shortName": "Charhide",
+					"name": "Goblin chamuscado",
+					"shortName": "Chamuscado",
 					"source": "PC1",
-					"remaster": true,
 					"page": 55,
 					"entries": [
 						"Your ancestors have always had a connection to fire and a thicker skin, which allows you to resist burning. You gain fire resistance equal to half your level (minimum 1). You can also recover from being on fire more easily. Your flat check to remove {@condition persistent damage|PC1|persistent fire damage} is DC 10 instead of DC 15, which is reduced to DC 5 if another creature uses a particularly appropriate action to help."
 					]
 				},
 				{
-					"name": "Irongut Goblin",
-					"shortName": "Irongut",
+					"name": "Goblin das neves",
+					"shortName": "Neve",
 					"source": "PC1",
-					"remaster": true,
+					"page": 55,
+					"entries": [
+						"You are acclimated to living in frigid lands and have skin ranging from sky blue to navy in color, as well as blue fur. You gain cold resistance equal to half your level (minimum 1). You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on)."
+					]
+				},
+				{
+					"name": "Goblin eupéptico",
+					"shortName": "Eupéptico",
+					"source": "PC1",
 					"page": 55,
 					"entries": [
 						"You can subsist on food that most folks would consider spoiled. You can keep yourself fed with poor meals in a settlement as long as garbage is readily available, without using the {@action Subsist|PC1} downtime activity. You can eat and drink things when you are {@condition sickened|PC1}.",
@@ -67,33 +73,21 @@
 					]
 				},
 				{
-					"name": "Razortooth Goblin",
-					"shortName": "Razortooth",
+					"name": "Goblin inquebrável",
+					"shortName": "Inquebrável",
 					"source": "PC1",
-					"remaster": true,
-					"page": 55,
-					"entries": [
-						"Your family's teeth are formidable weapons. You gain a jaws unarmed attack that deals {@damage 1d6} piercing damage. Your jaws are in the {@group brawling} group and have the {@trait finesse} and {@trait unarmed} traits."
-					]
-				},
-				{
-					"name": "Snow Goblin",
-					"shortName": "Snow",
-					"source": "PC1",
-					"remaster": true,
-					"page": 55,
-					"entries": [
-						"You are acclimated to living in frigid lands and have skin ranging from sky blue to navy in color, as well as blue fur. You gain cold resistance equal to half your level (minimum 1). You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on)."
-					]
-				},
-				{
-					"name": "Unbreakable Goblin",
-					"shortName": "Unbreakable",
-					"source": "PC1",
-					"remaster": true,
 					"page": 55,
 					"entries": [
 						"You're able to bounce back from injuries easily due to an exceptionally thick skull, cartilaginous bones, or some other mixed blessing. You gain 10 Hit Points from your ancestry instead of 6. When you fall, reduce the falling damage you take as though you had fallen half the distance."
+					]
+				},
+				{
+					"name": "Goblin predador",
+					"shortName": "Predador",
+					"source": "PC1",
+					"page": 55,
+					"entries": [
+						"Your family's teeth are formidable weapons. You gain a jaws unarmed attack that deals {@damage 1d6} piercing damage. Your jaws are in the {@group brawling} group and have the {@trait finesse} and {@trait unarmed} traits."
 					]
 				}
 			],

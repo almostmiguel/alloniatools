@@ -96,7 +96,7 @@ class TraitsPage extends ListPage {
 			$content.append(Renderer.trait.getRenderedString(trt));
 		}
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("trait");
+			const quickRules = await Renderer.utils.pGetQuickReference("trait");
 			$content.append(quickRules);
 		}
 		function buildUsesTab () {
@@ -123,7 +123,7 @@ class TraitsPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

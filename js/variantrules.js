@@ -18,7 +18,7 @@ class VariantRulesPage extends ListPage {
 				$btnOpen: $(`#btn-bookview`),
 				fnPopulate: ($wrpContent) => {
 					const rule = this._dataList[Hist.lastLoadedId];
-					Renderer.variantrule.getRenderedString(rule).appendTo($wrpContent);
+					$wrpContent.append(Renderer.variantrule.getRenderedString(rule));
 				},
 			},
 		});
@@ -118,7 +118,7 @@ function renderStatblock (rule) {
 		$content.append(Renderer.variantrule.getRenderedString(rule));
 	}
 	async function buildInfoTab () {
-		const quickRules = await Renderer.utils.pGetQuickRules("variantrule");
+		const quickRules = await Renderer.utils.pGetQuickReference("variantrule");
 		$content.append(quickRules);
 	}
 
@@ -128,7 +128,7 @@ function renderStatblock (rule) {
 		buildStatsTab,
 	);
 	const infoTab = Renderer.utils.tabButton(
-		"Quick Rules",
+		"Quick Reference",
 		() => {},
 		buildInfoTab,
 	);

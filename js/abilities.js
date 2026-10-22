@@ -118,7 +118,7 @@ function renderStatblock (ability) {
 		$content.append(Renderer.ability.getRenderedString(ability));
 	}
 	const buildInfoTab = async () => {
-		const quickRules = await Renderer.utils.pGetQuickRules("ability");
+		const quickRules = await Renderer.utils.pGetQuickReference("ability");
 		$content.append(quickRules);
 	}
 	const statTab = Renderer.utils.tabButton(
@@ -127,7 +127,7 @@ function renderStatblock (ability) {
 		buildStatsTab,
 	);
 	const infoTab = Renderer.utils.tabButton(
-		"Quick Rules",
+		"Quick Reference",
 		() => { },
 		buildInfoTab,
 	);

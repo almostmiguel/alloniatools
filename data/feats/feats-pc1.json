@@ -1391,6 +1391,289 @@
 			]
 		},
 		{
+			"name": "Adapted Cantrip",
+			"source": "PC1",
+			"page": 64,
+			"level": 1,
+			"traits": [
+				"humano"
+			],
+			"prerequisites": "spellcasting class feature",
+			"entries": [
+				"Through study of multiple magical traditions, you've altered a spell to suit your spellcasting style. Choose one cantrip from a magical tradition other than your own. If you have a spell repertoire or a spellbook, replace one of the cantrips you know or have in your spellbook with the chosen spell. If you prepare spells without a spellbook (if you're a cleric or druid, for example), one of your cantrips must always be the chosen spell, and you prepare the rest normally. You can cast this cantrip as a spell of your class's tradition.",
+				"If you swap or retrain this cantrip later, you can choose its replacement from the same alternate tradition or a different one."
+			],
+			"leadsTo": [
+				"Adaptive Adept"
+			]
+		},
+		{
+			"name": "Cooperative Nature",
+			"source": "PC1",
+			"page": 64,
+			"level": 1,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"The short human life span lends perspective and has taught you from a young age to set aside differences and work with others to achieve greatness. You gain a +4 circumstance bonus on checks to {@action Aid}."
+			],
+			"leadsTo": [
+				"Cooperative Soul"
+			]
+		},
+		{
+			"name": "General Training",
+			"source": "PC1",
+			"page": 64,
+			"level": 1,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"Your adaptability manifests in your mastery of a range of useful abilities. You gain a {@filter 1st-level general feat|feats||source=|type=general|Level=[1]|miscellaneous=}. You must meet the feat's prerequisites, but if you select this feat during character creation, you can select the feat later in the process in order to determine which prerequisites you meet."
+			],
+			"special": [
+				"You can select this feat multiple times, choosing a different feat each time."
+			]
+		},
+		{
+			"name": "Haughty Obstinacy",
+			"source": "PC1",
+			"page": 64,
+			"level": 1,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"Your powerful ego makes it harder for others to order you around. If you roll a success on a saving throw against a {@trait mental} effect that attempts to directly control your actions, you critically succeed instead. If a creature rolls a failure on a check to {@action Coerce} you using {@skill Intimidation}, it gets a critical failure instead (so it can't try to {@action Coerce} you again for 1 week)."
+			]
+		},
+		{
+			"name": "Natural Ambition",
+			"source": "PC1",
+			"page": 64,
+			"level": 1,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"You were raised to be ambitious and always reach for the stars, leading you to progress quickly in your chosen field. You gain a {@filter 1st-level class feat|feats||type=class|Level=[1]} for your class. You must meet the prerequisites, but you can select the feat later in the character creation process in order to determine which prerequisites you meet."
+			]
+		},
+		{
+			"name": "Natural Skill",
+			"source": "PC1",
+			"page": 64,
+			"level": 1,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"Your ingenuity allows you to learn a wide variety of skills. You gain the trained proficiency rank in two skills of your choice."
+			]
+		},
+		{
+			"name": "Unconventional Weaponry",
+			"source": "PC1",
+			"page": 64,
+			"level": 1,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"You've familiarized yourself with a particular weapon, potentially from another ancestry or culture. Choose an uncommon simple or martial weapon with a trait corresponding to an ancestry (such as {@trait dwarf}, {@trait goblin}, or {@trait orc}) or that is common in another culture. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a simple weapon.",
+				"If you are trained in all martial weapons, you can choose an uncommon advanced weapon with such a trait. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a martial weapon."
+			],
+			"leadsTo": [
+				"Unconventional Expertise"
+			]
+		},
+		{
+			"name": "Adaptive Adept",
+			"source": "PC1",
+			"page": 64,
+			"level": 5,
+			"traits": [
+				"humano"
+			],
+			"prerequisites": "{@feat Adapted Cantrip}, can cast 3rd-level spells",
+			"entries": [
+				"You've continued adapting your magic to blend your class's tradition with your adapted tradition. Choose a cantrip or 1st-level spell from the same magical tradition as your cantrip from {@feat Adapted Cantrip}. You gain that spell, adding it to your spell repertoire, spellbook, or prepared spells just like the cantrip from {@feat Adapted Cantrip}. You can cast this spell as a spell of your class's magical tradition. If you choose a 1st-level spell, you don't gain access to the heightened versions of that spell, meaning you can't prepare them if you prepare spells and you can't learn them or select the spell as a signature spell if you have a spell repertoire."
+			]
+		},
+		{
+			"name": "Clever Improviser",
+			"source": "PC1",
+			"page": 64,
+			"level": 5,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"You've learned how to handle situations when you're out of your depth. You gain the {@feat Untrained Improvisation} general feat. In addition, you can attempt skill actions that normally require you to be trained, even if you are untrained."
+			],
+			"leadsTo": [
+				"Incredible Improvisation"
+			]
+		},
+		{
+			"name": "Sense Allies",
+			"source": "PC1",
+			"page": 64,
+			"level": 5,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"Like many humans raised in a close-knit community, you have always been strongly attuned to the presence of others. Willing allies that you are aware of within 60 feet that would otherwise be {@condition undetected} by you are instead {@condition hidden} from you. The flat check for you to target willing allies within 60 feet that are {@condition hidden} from you is 5 instead of 11."
+			]
+		},
+		{
+			"name": "Cooperative Soul",
+			"source": "PC1",
+			"page": 64,
+			"level": 9,
+			"traits": [
+				"humano"
+			],
+			"prerequisites": "{@feat Cooperative Nature}",
+			"entries": [
+				"You have developed a soul-deep bond with your comrades and maintain an even greater degree of cooperation with them. If you are at least an expert in the skill you are Aiding, you get a success on any outcome rolled to {@action Aid} other than a critical success."
+			]
+		},
+		{
+			"name": "Group Aid",
+			"source": "PC1",
+			"page": 64,
+			"level": 9,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"Your upbringing emphasized teamwork and helping your allies comes naturally to you. After you {@action Aid} an ally at a skill check that doesn't have the {@trait attack} trait, you can also {@action Aid} any other ally who attempts the same skill check for the same purpose that round.",
+				"You do so as a free action rather than a reaction.",
+				"The preparation you did to help must still apply to the other allies, and you can {@action Aid} each ally only once. For example, if you helped lift up an ally to {@action Aid} them on an {@skill Athletics} check to scale a wall, you could keep the same posture to give a boost to other allies attempting to scale the wall in the same round."
+			]
+		},
+		{
+			"name": "Hardy Traveler",
+			"source": "PC1",
+			"page": 65,
+			"level": 9,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"There's no journey too far or burden too heavy when your friends are at your side. Increase your maximum and {@condition encumbered} Bulk limits by 1. In addition, you gain a +10-foot circumstance bonus to your Speed during overland travel."
+			]
+		},
+		{
+			"name": "Incredible Improvisation",
+			"source": "PC1",
+			"page": 65,
+			"activity": {
+				"number": 1,
+				"unit": "free"
+			},
+			"level": 9,
+			"traits": [
+				"humano"
+			],
+			"prerequisites": "{@feat Clever Improviser}",
+			"frequency": {
+				"unit": "day",
+				"number": 1
+			},
+			"trigger": "You attempt a check using a skill you're untrained in.",
+			"entries": [
+				"A stroke of brilliance gives you a major advantage with a skill despite your inexperience. Gain a +4 circumstance bonus to the triggering skill check."
+			]
+		},
+		{
+			"name": "Multitalented",
+			"source": "PC1",
+			"page": 65,
+			"level": 9,
+			"traits": [
+				"human"
+			],
+			"entries": [
+				"You've learned to split your focus between multiple classes with ease. You gain a {@filter 2nd-level multiclass dedication feat|feats||type=archetype|Level=[2]|feat=multiclass}, even if you normally couldn't take another dedication feat until you take more feats from your current archetype.",
+				"If you're a {@ancestry human||half-elf|half-elf}, you don't need to meet the feat's ability score prerequisites."
+			]
+		},
+		{
+			"name": "Advanced General Training",
+			"source": "PC1",
+			"page": 65,
+			"level": 13,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"Over the course of adventuring, your adaptability has let you pick up numerous useful abilities. You gain a general feat of 7th level or lower. You must meet the feat's prerequisites."
+			],
+			"special": [
+				"You can select this feat multiple times, choosing a different feat each time."
+			]
+		},
+		{
+			"name": "Bounce Back",
+			"source": "PC1",
+			"page": 65,
+			"activity": {
+				"number": 1,
+				"unit": "free"
+			},
+			"level": 13,
+			"traits": [
+				"humano"
+			],
+			"frequency": {
+				"unit": "day",
+				"number": 1
+			},
+			"trigger": "You lose the {@condition dying} condition.",
+			"entries": [
+				"You recover from near-death experiences with astounding resilience. Don't increase the value of your {@condition wounded} condition due to losing the {@condition dying} condition."
+			]
+		},
+		{
+			"name": "Stubborn Persistence",
+			"source": "PC1",
+			"page": 65,
+			"level": 13,
+			"traits": [
+				"humano"
+			],
+			"entries": [
+				"Humans are renowned for their ability to persist through the most grueling of trials. When you would become {@condition fatigued}, attempt a DC {@flatDC 17} flat check. On a success, you aren't {@condition fatigued}. If the {@condition fatigued} condition has an underlying cause that you don't address, such as lack of rest, you must attempt the check again at an interval determined by the GM until you fail the flat check or address the underlying cause."
+			]
+		},
+		{
+			"name": "Heroic Presence",
+			"source": "PC1",
+			"page": 65,
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"level": 17,
+			"traits": [
+				"emoção",
+				"humano",
+				"mental"
+			],
+			"frequency": {
+				"unit": "day",
+				"number": 1
+			},
+			"entries": [
+				"The blood of heroes courses through your veins, and you inspire your allies to dig deep and find a new level of resolve. You grant up to 10 willing creatures within 30 feet the effects of a 6th-level {@spell zealous conviction}, though the effect automatically ends on a target if you give that target a command they would normally find repugnant. This action has the {@trait auditory} trait or {@trait visual} trait, depending on how you inspire your allies."
+			]
+		},
+		{
 			"name": "Grasping Reach",
 			"remaster": true,
 			"source": "PC1",
@@ -2009,7 +2292,7 @@
 			"page": 77,
 			"level": 1,
 			"traits": [
-				"changeling",
+				"cambiante",
 				"lineage"
 			],
 			"entries": [
@@ -2023,11 +2306,11 @@
 			"page": 77,
 			"level": 1,
 			"traits": [
-				"changeling",
+				"cambiante",
 				"lineage"
 			],
 			"entries": [
-				"You are among the most common of changelings\u2014those born to sweet hags\u2014and a vibrant green eye signifies that parentage. Your mother's manipulative nature and versatile voice gives you an edge when deceiving others. You gain the {@feat Charming Liar|PC1} skill feat. If you roll {@skill Deception|PC1} for initiative, foes in that combat encounter that haven't acted yet are {@condition off-guard|PC1} against you."
+				"You are among the most common of cambiantes\u2014those born to sweet hags\u2014and a vibrant green eye signifies that parentage. Your mother's manipulative nature and versatile voice gives you an edge when deceiving others. You gain the {@feat Charming Liar|PC1} skill feat. If you roll {@skill Deception|PC1} for initiative, foes in that combat encounter that haven't acted yet are {@condition off-guard|PC1} against you."
 			]
 		},
 		{
@@ -2037,7 +2320,7 @@
 			"page": 77,
 			"level": 1,
 			"traits": [
-				"changeling",
+				"cambiante",
 				"lineage"
 			],
 			"entries": [
@@ -2052,7 +2335,7 @@
 			"page": 77,
 			"level": 1,
 			"traits": [
-				"changeling",
+				"cambiante",
 				"lineage"
 			],
 			"entries": [
@@ -2067,7 +2350,7 @@
 			"page": 77,
 			"level": 1,
 			"traits": [
-				"changeling"
+				"cambiante"
 			],
 			"entries": [
 				"All too aware of your true nature, you've studied hags and their powers. You gain the trained proficiency rank in {@skill Deception|PC1} and {@skill Occultism|PC1}. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.",
@@ -2081,14 +2364,14 @@
 			"page": 77,
 			"level": 1,
 			"traits": [
-				"changeling"
+				"cambiante"
 			],
 			"entries": [
 				"When you came of age, your fingernails grew long and sharp. You gain a claw unarmed attack that deals {@damage 1d4} slashing damage.",
 				"Your claws are in the brawling group and have the agile, {@trait finesse}, and {@trait unarmed} traits."
 			],
 			"special": [
-				"Hag claws can develop at any point in a changeling's life. You can select this feat anytime you would gain an ancestry feat, but you can't retrain out of it."
+				"Hag claws can develop at any point in a cambiante's life. You can select this feat anytime you would gain an ancestry feat, but you can't retrain out of it."
 			]
 		},
 		{
@@ -2098,7 +2381,7 @@
 			"page": 77,
 			"level": 1,
 			"traits": [
-				"changeling"
+				"cambiante"
 			],
 			"entries": [
 				"You've nurtured the supernatural abilities gifted by your hag mother, particularly your sight. You gain darkvision."
@@ -2111,7 +2394,7 @@
 			"page": 77,
 			"level": 5,
 			"traits": [
-				"changeling"
+				"cambiante"
 			],
 			"entries": [
 				"You've heard the Call, and by resisting it, you've developed a bulwark against effects that target your mind. You gain a +1 circumstance bonus to Will saving throws against {@trait mental} effects.",
@@ -2125,7 +2408,7 @@
 			"page": 77,
 			"level": 5,
 			"traits": [
-				"changeling"
+				"cambiante"
 			],
 			"entries": [
 				"You blend in with unnatural subtlety. When you are {@condition concealed|PC1} or {@condition hidden|PC1}, increase the DC of the flat check to target you to 6 if you're {@condition concealed|PC1} or 12 if you're {@condition hidden|PC1}."
@@ -2138,7 +2421,7 @@
 			"page": 77,
 			"level": 9,
 			"traits": [
-				"changeling"
+				"cambiante"
 			],
 			"prerequisites": "claw unarmed attack",
 			"entries": [
@@ -2152,7 +2435,7 @@
 			"page": 77,
 			"level": 9,
 			"traits": [
-				"changeling"
+				"cambiante"
 			],
 			"prerequisites": "expert in {@skill Occultism|PC1}",
 			"entries": [
@@ -2166,7 +2449,7 @@
 			"page": 77,
 			"level": 13,
 			"traits": [
-				"changeling"
+				"cambiante"
 			],
 			"entries": [
 				"Through your heritage, you can replicate a hag's magic. Choose one common spell of 4th rank or lower from those available to a coven, including the spells contributed to a coven by a hag of your mother's type. You can cast this spell once per day as a 4th-rank occult innate spell.",
@@ -2181,7 +2464,7 @@
 			"level": 1,
 			"traits": [
 				"lineage",
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You descend from an angel, a winged messenger from Nirvana or one of the other celestial realms. You gain the trained proficiency rank in {@skill Society|PC1}. If you would automatically become trained in {@skill Society|PC1} (from your background or class, for example), you instead become trained in a skill of your choice. You know the {@language Empyrean|PC1} language, and you gain the {@feat Multilingual|PC1} skill feat."
@@ -2199,7 +2482,7 @@
 			"level": 1,
 			"traits": [
 				"lineage",
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"Your lineage traces back to a daemon, one of the manifestations of horrific forms of death that devour souls within their foul home of Abaddon. As a result, you cling tenaciously to the last shreds of your own life force. You gain the {@feat Diehard|PC1} general feat."
@@ -2217,7 +2500,7 @@
 			"level": 1,
 			"traits": [
 				"lineage",
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"Your lineage descends from devils, conniving schemers of Hell. You're as skilled at noticing lies and twisted wordings as you are at constructing them. You are trained in {@skill Deception|PC1} and {@skill Lore|PC1|Legal Lore}. If you were already trained in {@skill Deception|PC1} (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the {@feat Lie to Me|PC1} skill feat."
@@ -2235,7 +2518,7 @@
 			"level": 1,
 			"traits": [
 				"lineage",
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You trace your lineage to archons, guardians of the seventiered mountain of Heaven and nurturers of law and virtue within mortals. You gain a +1 circumstance bonus to saves against {@trait emoção} effects, and if you roll a success on a save against an {@trait emoção} effect, you get a critical success instead."
@@ -2253,7 +2536,7 @@
 			"level": 1,
 			"traits": [
 				"lineage",
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"Your blood sings with the liberating power of the azatas, living embodiments of freedom from the wild realm of Elysium. You gain a +1 circumstance bonus to {@action Escape|PC1}. When you roll a critical failure on a check to {@action Escape|PC1}, you get a failure instead, and when you roll a success, you get a critical success instead."
@@ -2271,7 +2554,7 @@
 			"level": 1,
 			"traits": [
 				"lineage",
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"Your blood bears the mark of a demon, a living embodiment of sin from the fetid depths of the Outer Rifts. Demonic power pulses through your veins and manifests in a different way for each pitborn, whether you have webbed fingers and thrive in the water, large hands capable of wrestling larger foes, or some other manifestation. You are trained in {@skill Athletics|PC1}. If you were already trained in {@skill Athletics|PC1} (from your background or class, for example), you instead become trained in a skill of your choice.",
@@ -2289,7 +2572,7 @@
 			"page": 80,
 			"level": 1,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"Part of your body has an animalistic influence from a planar creature. Your hands end in claws, you have hooves instead of feet, sharp teeth fill your mouth, or a tail extends from your spine. You gain your choice of one of the following unarmed attacks. The attack is in the brawling group and has the listed damage die and traits.",
@@ -2306,7 +2589,7 @@
 			"page": 80,
 			"level": 1,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You have a halo of light and goodness that sheds light with the effects of a {@trait divino} {@spell light|PC1} cantrip. A cantrip is heightened to a spell rank equal to half your level rounded up. You can {@action Sustain|PC1} to suppress or reestablish the halo."
@@ -2319,7 +2602,7 @@
 			"page": 80,
 			"level": 1,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"prerequisites": "low-light vision",
 			"entries": [
@@ -2333,7 +2616,7 @@
 			"page": 80,
 			"level": 1,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You know the secrets of the Multiverse. You gain the trained proficiency rank in either {@skill Diplomacy|PC1} or {@skill Intimidation|PC1}, and {@skill Religion|PC1}. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.",
@@ -2347,7 +2630,7 @@
 			"page": 80,
 			"level": 1,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You possess hooves, ankle wings, or some other feature that hastens your movement. Your Speed increases by 5 feet."
@@ -2363,7 +2646,7 @@
 			"page": 80,
 			"level": 5,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"Your spilled blood is sanctified, with effects similar to those of {@item holy water|GMC}. Whenever a fiend, undead, or creature with a weakness to holy drinks your blood or deals piercing or slashing damage to you with jaws, fangs, or a similar attack, that creature takes {@damage 1d6} spirit damage with the {@trait holy|PC1} trait. You gain a +4 circumstance bonus to {@skill Crafting|PC1} checks to {@action Craft|PC1} holy water using your blood as one of the ingredients."
@@ -2376,7 +2659,7 @@
 			"page": 80,
 			"level": 5,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You call upon divine power to place a benediction upon your allies or a malediction upon your foes. Choose either {@spell bless|PC1} or {@spell bane|PC1}. You can cast the chosen spell once per day as a 1st-rank divine innate spell."
@@ -2389,7 +2672,7 @@
 			"page": 80,
 			"level": 5,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You resist energy like your extraplanar predecessors. Choose one of the following energy damage types: acid, cold, electricity, fire, or sonic. You gain resistance 5 to that damage type.",
@@ -2403,10 +2686,10 @@
 			"page": 80,
 			"level": 5,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
-				"The long and complicated history of your bloodline manifests in your ability to draw power from more planar sources than most other nephilim. Choose one nephilim lineage feat that you do not already possess; you gain that feat and all of its benefits, even if you already took a lineage feat at 1st level."
+				"The long and complicated history of your bloodline manifests in your ability to draw power from more planar sources than most other nefilim. Choose one nefilim lineage feat that you do not already possess; you gain that feat and all of its benefits, even if you already took a lineage feat at 1st level."
 			]
 		},
 		{
@@ -2416,7 +2699,7 @@
 			"page": 80,
 			"level": 5,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You've always had a tail, but with practice, you've learned to use it for more than signaling your mood. You can perform simple {@action Interact|PC1} actions with your tail, such as opening an unlocked door. Your tail can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items."
@@ -2429,7 +2712,7 @@
 			"page": 80,
 			"level": 9,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"prerequisites": "{@feat Angelkin|PC1}, {@feat Lawbringer|PC1}, {@feat Musetouched|PC1}, or another lineage feat associated with celestials",
 			"entries": [
@@ -2444,7 +2727,7 @@
 			"page": 80,
 			"level": 9,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You've studied your extraplanar heritage with the intent of better defending yourself, whether against creatures aligned with or opposed to your extraplanar lineage, and you've found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against {@trait divino} effects."
@@ -2463,7 +2746,7 @@
 			"traits": [
 				"divine",
 				"morph",
-				"nephilim"
+				"nefilim"
 			],
 			"frequency": {
 				"number": 1,
@@ -2483,7 +2766,7 @@
 			"page": 81,
 			"level": 9,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"prerequisites": "{@feat Grimspawn|PC1}, {@feat Pitborn|PC1}, or {@feat Hellspawn|PC1}",
 			"entries": [
@@ -2498,7 +2781,7 @@
 			"page": 81,
 			"level": 13,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"prerequisites": "{@feat Angelkin|PC1}, {@feat Lawbringer|PC1}, {@feat Musetouched|PC1}, or another lineage feat associated with celestials",
 			"entries": [
@@ -2512,7 +2795,7 @@
 			"page": 81,
 			"level": 13,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"prerequisites": "{@feat Grimspawn|PC1}, {@feat Pitborn|PC1}, or {@feat Hellspawn|PC1}, or another lineage feat associated with fiends or the Maelstrom",
 			"entries": [
@@ -2526,9 +2809,9 @@
 			"page": 81,
 			"level": 13,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
-			"prerequisites": "{@filter any nephilim lineage feat|feats||ancestry & heritage=nephilim|general=lineage}",
+			"prerequisites": "{@filter any nefilim lineage feat|feats||ancestry & heritage=nefilim|general=lineage}",
 			"entries": [
 				"You have a connection to the Outer Planes, allowing you to summon a divine ally. Choose either {@spell summon celestial|PC1}, {@spell summon fiend|PC1}, or another 5th-rank spell capable of summoning an extraplanar creature appropriate to your lineage. Once per day, you can cast the chosen spell as a 5th-rank divine innate spell, but the creature summoned must be from the same category as your own lineage, such as a creature with the {@trait anjo} trait if you are an {@feat angelkin|PC1}."
 			]
@@ -2540,7 +2823,7 @@
 			"page": 81,
 			"level": 17,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"entries": [
 				"You can call forth a holy or unholy word from the realms beyond to punish your foes. Once per day, you can cast {@spell divine decree|PC1} as a 7th-rank divine innate spell."
@@ -2553,7 +2836,7 @@
 			"page": 81,
 			"level": 17,
 			"traits": [
-				"nephilim"
+				"nefilim"
 			],
 			"prerequisites": "{@feat Divine Wings|PC1}",
 			"entries": [

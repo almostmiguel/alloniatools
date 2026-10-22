@@ -92,7 +92,6 @@ class ListPage {
 		await this._pHandleBrew(homebrew);
 		await BrewUtil.pAddLocalBrewData();
 
-		BrewUtil.makeBrewButton("manage-brew");
 		await ListUtil.pLoadState();
 		RollerUtil.addListRollButton();
 		ListUtil.addListShowHide();

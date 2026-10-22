@@ -7,6 +7,7 @@ const _PROPS_TO_INDEX = [
 	"name",
 	"id",
 	"source",
+	"color",
 	"parentSource",
 	"group",
 	"level",

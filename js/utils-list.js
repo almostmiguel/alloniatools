@@ -665,11 +665,6 @@ const ListUtil = {
 			),
 			null,
 			new ContextUtil.Action(
-				"Send to GM Screen",
-				() => ListUtil._pDoSendSublistToDmScreen(),
-			),
-			null,
-			new ContextUtil.Action(
 				"Download JSON Data",
 				() => ListUtil._handleJsonDownload(),
 			),
@@ -731,28 +726,11 @@ const ListUtil = {
 			),
 			null,
 			new ContextUtil.Action(
-				"Send to GM Screen",
-				() => ListUtil._pDoSendSublistToDmScreen(),
-			),
-			null,
-			new ContextUtil.Action(
 				"Download JSON Data",
 				() => ListUtil._handleJsonDownload(),
 			),
 		].filter(it => it !== undefined);
 		ListUtil.contextMenuAddableListSub = ContextUtil.getMenu(subActions);
-	},
-
-	async _pDoSendSublistToDmScreen () {
-		try {
-			const list = ListUtil.getExportableSublist();
-			const len = list.items.length;
-			await StorageUtil.pSet(VeCt.STORAGE_DMSCREEN_TEMP_SUBLIST, {page: UrlUtil.getCurrentPage(), list});
-			JqueryUtil.doToast(`${len} pin${len === 1 ? "" : "s"} will be loaded into the GM Screen on your next visit.`)
-		} catch (e) {
-			JqueryUtil.doToast(`Failed! ${VeCt.STR_SEE_CONSOLE}`);
-			setTimeout(() => { throw e; })
-		}
 	},
 
 	async _handleGenericContextMenuClick_pDoMassPopout (evt, ele, selection) {

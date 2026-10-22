@@ -100,7 +100,7 @@ class FeatsPage extends ListPage {
 			$pgContent.append(Renderer.feat.getRenderedString(feat, {renderLeadsTo: true}));
 		};
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("feat");
+			const quickRules = await Renderer.utils.pGetQuickReference("feat");
 			$pgContent.append(quickRules);
 		}
 		const statsTab = Renderer.utils.tabButton(
@@ -109,7 +109,7 @@ class FeatsPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

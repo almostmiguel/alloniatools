@@ -41,6 +41,13 @@
 						},
 						"minItems": 1
 					},
+					"flavor": {
+						"type": "array",
+						"items": {
+							"$ref": "entry.json"
+						},
+						"minItems": 1
+					},
 					"info": {
 						"type": "array",
 						"items": {
@@ -56,6 +63,13 @@
 						},
 						"minItems": 1,
 						"uniqueItems": true
+					},
+					"images": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"minItems": 1
 					},
 					"summary": {
 						"type": "object",

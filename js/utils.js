@@ -1996,9 +1996,7 @@ UrlUtil.PG_BOOKS = "books.html";
 UrlUtil.PG_DEITIES = "deities.html";
 UrlUtil.PG_HAZARDS = "hazards.html";
 UrlUtil.PG_QUICKREF = "quickreference.html";
-UrlUtil.PG_MANAGE_BREW = "managebrew.html";
 UrlUtil.PG_MAKE_BREW = "makebrew.html";
-UrlUtil.PG_DEMO_RENDER = "renderdemo.html";
 UrlUtil.PG_TABLES = "tables.html";
 UrlUtil.PG_ORGANIZATIONS = "organizations.html";
 UrlUtil.PG_CREATURETEMPLATE = "creaturetemplates.html";
@@ -2008,7 +2006,6 @@ UrlUtil.PG_ABILITIES = "abilities.html";
 UrlUtil.PG_LANGUAGES = "languages.html";
 UrlUtil.PG_TRAITS = "traits.html"
 UrlUtil.PG_VEHICLES = "vehicles.html"
-UrlUtil.PG_GM_SCREEN = "gmscreen.html";
 UrlUtil.PG_CHANGELOG = "changelog.html";
 UrlUtil.PG_PLACES = "places.html";
 UrlUtil.PG_EVENTS = "events.html";
@@ -2078,21 +2075,18 @@ UrlUtil.PG_TO_NAME[UrlUtil.PG_FEATS] = "Feats";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_COMPANIONS_FAMILIARS] = "Companions and Familiars";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_ANCESTRIES] = "Ancestries";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_ARCHETYPES] = "Archetypes";
-UrlUtil.PG_TO_NAME[UrlUtil.PG_VARIANTRULES] = "Variant Rules";
-UrlUtil.PG_TO_NAME[UrlUtil.PG_ADVENTURES] = "Adventures";
+UrlUtil.PG_TO_NAME[UrlUtil.PG_VARIANTRULES] = "Rules Glossary";
+UrlUtil.PG_TO_NAME[UrlUtil.PG_ADVENTURES] = "Campaigns";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_BOOKS] = "Books";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_DEITIES] = "Deities";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_HAZARDS] = "Hazards";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_QUICKREF] = "Quick Reference";
-UrlUtil.PG_TO_NAME[UrlUtil.PG_MANAGE_BREW] = "Homebrew Manager";
-UrlUtil.PG_TO_NAME[UrlUtil.PG_DEMO_RENDER] = "Renderer Demo";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_TABLES] = "Tables";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_ORGANIZATIONS] = "Organizations";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_CREATURETEMPLATE] = "Creature Templates";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_ACTIONS] = "Actions";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_ABILITIES] = "Creature Abilities";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_LANGUAGES] = "Languages";
-UrlUtil.PG_TO_NAME[UrlUtil.PG_GM_SCREEN] = "GM Screen";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_CHANGELOG] = "Changelog";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_PLACES] = "Planes and Places";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_EVENTS] = "Events";
@@ -3925,8 +3919,8 @@ SessionStorageUtil = {
 BrewUtil = {
 	_PAGE: null, // Allow the current page to be forcibly specified externally
 
-	homebrew: null,
-	homebrewMeta: null,
+	homebrew: {},
+	homebrewMeta: {sources: []},
 	_lists: null,
 	_sourceCache: null,
 	_filterBoxes: null,
@@ -3957,658 +3951,15 @@ BrewUtil = {
 		if (options.pHandleBrew !== undefined) this._pHandleBrew = options.pHandleBrew;
 	},
 
+	// Setting content lives in data/. Keep these entry points for the shared reference loaders.
 	async pAddBrewData () {
-		if (BrewUtil.homebrew) {
-			return BrewUtil.homebrew;
-		} else {
-			try {
-				const homebrew = await StorageUtil.pGet(VeCt.STORAGE_HOMEBREW) || {};
-				BrewUtil.homebrewMeta = StorageUtil.syncGet(VeCt.STORAGE_HOMEBREW_META) || { sources: [] };
-				BrewUtil.homebrewMeta.sources = BrewUtil.homebrewMeta.sources || [];
-
-				BrewUtil.homebrew = homebrew;
-
-				BrewUtil._resetSourceCache();
-
-				return BrewUtil.homebrew;
-			} catch (e) {
-				BrewUtil.pPurgeBrew(e);
-			}
-		}
+		return BrewUtil.homebrew;
 	},
+
+	async pAddLocalBrewData () {},
 
 	async pPurgeBrew (error) {
-		JqueryUtil.doToast({
-			content: "Error when loading homebrew! Purged homebrew data. (See the log for more information.)",
-			type: "danger",
-		});
-		await StorageUtil.pRemove(VeCt.STORAGE_HOMEBREW);
-		StorageUtil.syncRemove(VeCt.STORAGE_HOMEBREW_META);
-		BrewUtil.homebrew = null;
-		window.location.hash = "";
-		BrewUtil.homebrew = {};
-		BrewUtil.homebrewMeta = { sources: [] };
-		if (error) {
-			setTimeout(() => {
-				throw error;
-			});
-		}
-	},
-
-	async pAddLocalBrewData (callbackFn = async (d, page) => BrewUtil.pDoHandleBrewJson(d, page, null)) {
-		if (!IS_VTT && !IS_DEPLOYED) {
-			const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}${VeCt.JSON_HOMEBREW_INDEX}`);
-			// auto-load from `homebrew/`, for custom versions of the site
-			if (data.toImport && data.toImport.length) {
-				const page = BrewUtil._PAGE || UrlUtil.getCurrentPage();
-				const allData = await Promise.all(data.toImport.map(it => DataUtil.loadJSON(`homebrew/${it}`)));
-				await Promise.all(allData.map(d => callbackFn(d, page)));
-			}
-		}
-	},
-
-	/**
-	 * @param $appendTo Parent element
-	 * @param [opts] Options object
-	 * @param [opts.isModal]
-	 * @param [opts.isShowAll]
-	 */
-	async _pRenderBrewScreen ($appendTo, opts) {
-		opts = opts || {};
-
-		const page = BrewUtil._PAGE || UrlUtil.getCurrentPage();
-
-		const $brewList = $(`<div class="manbrew__current_brew flex-col h-100 mt-1"></div>`);
-
-		await BrewUtil._pRenderBrewScreen_pRefreshBrewList($brewList);
-
-		const $iptAdd = $(`<input multiple type="file" accept=".json" style="display: none;">`)
-			.change(evt => {
-				const input = evt.target;
-
-				let readIndex = 0;
-				const reader = new FileReader();
-				reader.onload = async () => {
-					const json = JSON.parse(reader.result);
-
-					await DataUtil.pDoMetaMerge(CryptUtil.uid(), json);
-
-					await BrewUtil.pDoHandleBrewJson(json, page, BrewUtil._pRenderBrewScreen_pRefreshBrewList.bind(this, $brewList));
-
-					if (input.files[readIndex]) reader.readAsText(input.files[readIndex++]);
-					else $(evt.target).val(""); // reset the input
-				};
-				reader.readAsText(input.files[readIndex++]);
-			});
-
-		const $btnLoadFromUrl = $(`<button class="btn btn-default btn-sm mr-2">Load from URL</button>`)
-			.click(async () => {
-				const enteredUrl = await InputUiUtil.pGetUserString({ title: "Homebrew URL" });
-				if (!enteredUrl || !enteredUrl.trim()) return;
-
-				let parsedUrl;
-				try {
-					parsedUrl = new URL(enteredUrl);
-				} catch (e) {
-					JqueryUtil.doToast({
-						content: `The provided URL does not appear to be valid.`,
-						type: "danger",
-					});
-					return;
-				}
-				BrewUtil.addBrewRemote(null, parsedUrl.href).catch(err => {
-					JqueryUtil.doToast({
-						content: "Could not load homebrew from the provided URL.",
-						type: "danger",
-					});
-					setTimeout(() => {
-						throw err;
-					});
-				});
-			});
-
-		const $btnGet = $(`<button class="btn btn-info btn-sm">Get Homebrew</button>`)
-			.click(() => BrewUtil._pHandleClickBtnGet(opts));
-
-		const $btnCustomUrl = $(`<button class="btn btn-info btn-sm px-2" title="Set Custom Repository URL"><span class="glyphicon glyphicon-cog"></span></button>`)
-			.click(async () => {
-				const customBrewUtl = await StorageUtil.pGet(`HOMEBREW_CUSTOM_REPO_URL`);
-
-				const nxtUrl = await InputUiUtil.pGetUserString({
-					title: "Homebrew Repository URL (Blank for Default)",
-					default: customBrewUtl,
-				});
-
-				if (nxtUrl == null) await StorageUtil.pRemove(`HOMEBREW_CUSTOM_REPO_URL`);
-				else await StorageUtil.pSet(`HOMEBREW_CUSTOM_REPO_URL`, nxtUrl);
-			});
-
-		const $btnDelAll = opts.isModal ? null : BrewUtil._$getBtnDeleteAll();
-
-		const $wrpBtns = $$`<div class="flex-vh-center no-shrink mobile__flex-col">
-			<div class="flex-v-center mobile__mb-2">
-				<div class="flex-v-center btn-group mr-2">
-					${$btnGet}
-					${$btnCustomUrl}
-				</div>
-				<label role="button" class="btn btn-default btn-sm mr-2">Upload File${$iptAdd}</label>
-				${$btnLoadFromUrl}
-			</div>
-			<div class="flex-v-center">
-				<a href="https://github.com/Pf2eToolsOrg/homebrew" class="flex-v-center" target="_blank" rel="noopener noreferrer"><button class="btn btn-default btn-sm">Browse Source Repository</button></a>
-				${$btnDelAll}
-				${opts.isModal ? $(`<button class="btn btn-danger btn-sm ml-2">Cancel</button>`).click(() => opts.doClose()) : ""}
-			</div>
-		</div>`;
-
-		if (opts.isModal) {
-			$$($appendTo)`
-			${$brewList}
-			${$wrpBtns.addClass("mb-2")}`
-		} else {
-			$$($appendTo)`
-			${$wrpBtns.addClass("mb-3")}
-			${$brewList}`
-		}
-
-		BrewUtil.addBrewRemote = async ($ele, jsonUrl, doUnescape) => {
-			let cached;
-			if ($ele) {
-				cached = $ele.html();
-				$ele.text("Loading...");
-			}
-			if (doUnescape) jsonUrl = jsonUrl.unescapeQuotes();
-			const data = await DataUtil.loadJSON(`${jsonUrl}?${(new Date()).getTime()}`);
-			await BrewUtil.pDoHandleBrewJson(data, page, BrewUtil._pRenderBrewScreen_pRefreshBrewList.bind(this, $brewList));
-			if ($ele) {
-				$ele.text("Done!");
-				setTimeout(() => $ele.html(cached), VeCt.DUR_INLINE_NOTIFY);
-			}
-		};
-	},
-
-	async _pHandleClickBtnGet (opts) {
-		const $btnToggleDisplayNonPageBrews = opts.isModal ? $(`<button class="btn btn-default btn-xs mr-2 ${opts.isShowAll ? "" : "active"}" disabled title="Hides homebrews which do not contain content relevant to this page.">Hide Unrelated</button>`) : null;
-
-		const $btnAll = $(`<button class="btn btn-default btn-xs" disabled title="(Excluding samples)">Add All</button>`);
-
-		const $ulRows = $$`<ul class="list"><li><div class="lst__wrp-cells"><span style="font-style: italic;">Loading...</span></div></li></ul>`;
-
-		const $iptSearch = $(`<input type="search" class="search manbrew__search form-control w-100" placeholder="Find homebrew...">`)
-			.keydown(evt => {
-				switch (evt.which) {
-					case 13: { // enter
-						return $ulRows.find(`li`).first().find(`.manbrew__load_from_url`).click()
-					}
-					case 40: { // down
-						const firstItem = list.visibleItems[0];
-						if (firstItem) firstItem.ele.focus();
-					}
-				}
-			});
-
-		const { $modalInner, doClose } = UiUtil.getShowModal({
-			isHeight100: true,
-			title: `Get Homebrew`,
-			isUncappedHeight: true,
-			isWidth100: true,
-			overlayColor: "transparent",
-			isHeaderBorder: true,
-		});
-
-		const $wrpBtn = $$`<div class="flex-vh-center no-shrink mobile__flex-col">
-			${$(`<button class="btn btn-danger btn-sm">Cancel</button>`).click(() => doClose())}
-			</div>`;
-
-		$$($modalInner)`
-		<div class="mt-1"><i>A list of homebrew available in the public repository. Click a name to load the homebrew, or view the source directly.<br>
-		Contributions are welcome; see the <a href="https://github.com/Pf2eToolsOrg/homebrew#readme" target="_blank" rel="noopener noreferrer">README</a>, or stop by our <a href="https://discord.gg/2hzNxErtVu" target="_blank" rel="noopener noreferrer">Discord</a>.</i></div>
-		<hr class="hr-1">
-		<div class="flex-h-right mb-1">${$btnToggleDisplayNonPageBrews}${$btnAll}</div>
-		${$iptSearch}
-		<div class="filtertools manbrew__filtertools btn-group input-group input-group--bottom flex no-shrink">
-			<button class="col-4 sort btn btn-default btn-xs" data-sort="name">Name</button>
-			<button class="col-3 sort btn btn-default btn-xs" data-sort="author">Author</button>
-			<button class="col-1-2 sort btn btn-default btn-xs" data-sort="category">Category</button>
-			<button class="col-1-4 sort btn btn-default btn-xs" data-sort="modified">Modified</button>
-			<button class="col-1-4 sort btn btn-default btn-xs" data-sort="added">Added</button>
-			<button class="sort btn btn-default btn-xs ve-grow" disabled>Source</button>
-		</div>
-		${$ulRows}${$wrpBtn}`;
-
-		// populate list
-		let dataList;
-
-		function fnSort (a, b, o) {
-			a = dataList[a.ix];
-			b = dataList[b.ix];
-
-			if (o.sortBy === "name") return byName();
-			if (o.sortBy === "author") return orFallback(SortUtil.ascSortLower, "_brewAuthor");
-			if (o.sortBy === "category") return orFallback(SortUtil.ascSortLower, "_brewCat");
-			if (o.sortBy === "added") return orFallback(SortUtil.ascSort, "_brewAdded");
-			if (o.sortBy === "modified") return orFallback(SortUtil.ascSort, "_brewModified");
-
-			function byName () {
-				return SortUtil.ascSortLower(a._brewName, b._brewName);
-			}
-
-			function orFallback (func, prop) {
-				return func(a[prop], b[prop]) || byName();
-			}
-		}
-
-		const urlRoot = await StorageUtil.pGet(`HOMEBREW_CUSTOM_REPO_URL`);
-		const [timestamps, propIndex] = await Promise.all([
-			DataUtil.brew.pLoadTimestamps(urlRoot),
-			DataUtil.brew.pLoadPropIndex(urlRoot),
-		]);
-		const props = opts.isShowAll ? BrewUtil.getPageProps(UrlUtil.PG_MANAGE_BREW) : BrewUtil.getPageProps();
-
-		const seenPaths = new Set();
-
-		dataList = [];
-		props.forEach(prop => {
-			Object.entries(propIndex[prop] || {})
-				.forEach(([path, dir]) => {
-					if (seenPaths.has(path)) return;
-					seenPaths.add(path);
-					dataList.push({
-						download_url: DataUtil.brew.getFileUrl(path, urlRoot),
-						path,
-						name: path.slice(path.indexOf("/") + 1),
-						_cat: BrewUtil.dirToProp(dir),
-					})
-				})
-		});
-
-		dataList.forEach(it => {
-			const cleanFilename = it.name.trim().replace(/\.json$/, "");
-			const spl = cleanFilename.split(";").map(it => it.trim());
-			if (spl.length > 1) {
-				it._brewName = spl[1];
-				it._brewAuthor = spl[0];
-			} else {
-				it._brewName = cleanFilename;
-				it._brewAuthor = "";
-			}
-		});
-		dataList.sort((a, b) => SortUtil.ascSortLower(a._brewName, b._brewName));
-
-		const list = new List({
-			$iptSearch,
-			$wrpList: $ulRows,
-			fnSort,
-			isUseJquery: true,
-		});
-		SortUtil.initBtnSortHandlers($modalInner.find(".manbrew__filtertools"), list);
-
-		dataList.forEach((it, i) => {
-			it._brewAdded = (timestamps[it.path] || {}).a || 0;
-			it._brewModified = (timestamps[it.path] || {}).m || 0;
-			it._brewCat = BrewUtil._pRenderBrewScreen_getDisplayCat(BrewUtil.dirToProp(it._cat));
-
-			const timestampAdded = it._brewAdded ? MiscUtil.dateToStr(new Date(it._brewAdded * 1000), true) : "";
-			const timestampModified = it._brewModified ? MiscUtil.dateToStr(new Date(it._brewModified * 1000), true) : "";
-
-			const $btnAdd = $(`<span class="col-4 bold manbrew__load_from_url pl-0 clickable"></span>`)
-				.text(it._brewName)
-				.click(() => BrewUtil.addBrewRemote($btnAdd, it.download_url || "", true));
-
-			const $li = $$`<li class="not-clickable lst--border lst__row--focusable" tabindex="1">
-				<div class="lst__wrp-cells">
-					${$btnAdd}
-					<span class="col-3">${it._brewAuthor}</span>
-					<span class="col-1-2 text-center">${it._brewCat}</span>
-					<span class="col-1-4 text-center">${timestampModified}</span>
-					<span class="col-1-4 text-center">${timestampAdded}</span>
-					<span class="col-1 manbrew__source text-center"><a href="${it.download_url}" target="_blank" rel="noopener noreferrer">View Raw</a></span>
-				</div>
-			</li>`;
-
-			$li.keydown(evt => {
-				switch (evt.which) {
-					case 13: { // enter
-						return $btnAdd.click()
-					}
-					case 38: { // up
-						const ixCur = list.visibleItems.indexOf(listItem);
-						if (~ixCur) {
-							const prevItem = list.visibleItems[ixCur - 1];
-							if (prevItem) prevItem.ele.focus();
-						} else {
-							const firstItem = list.visibleItems[0];
-							if (firstItem) firstItem.ele.focus();
-						}
-						return;
-					}
-					case 40: { // down
-						const ixCur = list.visibleItems.indexOf(listItem);
-						if (~ixCur) {
-							const nxtItem = list.visibleItems[ixCur + 1];
-							if (nxtItem) nxtItem.ele.focus();
-						} else {
-							const lastItem = list.visibleItems.last();
-							if (lastItem) lastItem.ele.focus();
-						}
-					}
-				}
-			});
-
-			const listItem = new ListItem(
-				i,
-				$li,
-				it._brewName,
-				{
-					author: it._brewAuthor,
-					category: it._brewCat,
-					added: timestampAdded,
-					modified: timestampAdded,
-				},
-				{
-					$btnAdd,
-					isSample: it._brewAuthor.toLowerCase().startsWith("sample -"),
-				},
-			);
-			list.addItem(listItem);
-		});
-
-		list.init();
-
-		$btnAll.prop("disabled", false).click(() => list.visibleItems.filter(it => !it.data.isSample).forEach(it => it.data.$btnAdd.click()));
-
-		if ($btnToggleDisplayNonPageBrews) {
-			$btnToggleDisplayNonPageBrews
-				.prop("disabled", false)
-				.click(() => {
-					$btnToggleDisplayNonPageBrews.toggleClass("active");
-					doClose();
-					BrewUtil._pHandleClickBtnGet({
-						...opts,
-						isShowAll: !$btnToggleDisplayNonPageBrews.hasClass("active"),
-					});
-				});
-		}
-
-		$iptSearch.focus();
-	},
-
-	_$getBtnDeleteAll (isModal) {
-		return $(`<button class="btn ${isModal ? "btn-xs" : "btn-sm ml-2"} btn-danger">Delete All</button>`)
-			.click(async () => {
-				if (!window.confirm("Are you sure?")) return;
-				await StorageUtil.pSet(VeCt.STORAGE_HOMEBREW, {});
-				StorageUtil.syncSet(VeCt.STORAGE_HOMEBREW_META, {});
-				window.location.hash = "";
-				location.reload();
-			});
-	},
-
-	async _pCleanSaveBrew () {
-		const cpy = MiscUtil.copy(BrewUtil.homebrew);
-		BrewUtil._STORABLE.forEach(prop => {
-			(cpy[prop] || []).forEach(ent => {
-				// FIXME: This breaks item _vmod
-				// Object.keys(ent).filter(k => k.startsWith("_")).forEach(k => delete ent[k]);
-			});
-		});
-		await StorageUtil.pSet(VeCt.STORAGE_HOMEBREW, cpy);
-	},
-
-	async _pRenderBrewScreen_pDeleteSource ($brewList, source, doConfirm, isAllSources) {
-		if (doConfirm && !window.confirm(`Are you sure you want to remove all homebrew${!isAllSources ? ` with${source ? ` source "${Parser.sourceJsonToFull(source)}"` : `out a source`}` : ""}?`)) return;
-
-		const vetoolsSourceSet = new Set(BrewUtil._getActiveVetoolsSources().map(it => it.json));
-		const isMatchingSource = (itSrc) => isAllSources || (itSrc === source || (source === undefined && !vetoolsSourceSet.has(itSrc) && !BrewUtil.hasSourceJson(itSrc)));
-
-		await Promise.all(BrewUtil._getBrewCategories().map(async k => {
-			const cat = BrewUtil.homebrew[k];
-			const pDeleteFn = BrewUtil._getPDeleteFunction(k);
-			const toDel = [];
-			cat.filter(it => isMatchingSource(it.source)).forEach(it => toDel.push(it.uniqueId));
-			await Promise.all(toDel.map(async uId => pDeleteFn(uId)));
-		}));
-		if (BrewUtil._lists) BrewUtil._lists.forEach(l => l.update());
-		BrewUtil._persistHomebrewDebounced();
-		BrewUtil.removeJsonSource(source);
-		// remove the source from the filters and re-render the filter box
-		if (BrewUtil._sourceFilters) BrewUtil._sourceFilters.forEach(sf => sf.removeItem(source));
-		if (BrewUtil._filterBoxes) BrewUtil._filterBoxes.forEach(fb => fb.render());
-		await BrewUtil._pRenderBrewScreen_pRefreshBrewList($brewList);
-		window.location.hash = "";
-		if (BrewUtil._filterBoxes) BrewUtil._filterBoxes.forEach(fb => fb.fireChangeEvent());
-	},
-
-	async _pRenderBrewScreen_pRefreshBrewList ($brewList) {
-		function showSourceManager (source, showAll) {
-			const $wrpBtnDel = $(`<div class="flex-v-center"></div>`);
-
-			const { $modalInner, doClose } = UiUtil.getShowModal({
-				isHeight100: true,
-				title: `View/Manage ${source ? `Source Contents: ${Parser.sourceJsonToFull(source)}` : showAll ? "Entries from All Sources" : `Entries with No Source`}`,
-				isUncappedHeight: true,
-				isWidth100: true,
-				overlayColor: "transparent",
-				$titleSplit: $wrpBtnDel,
-				isHeaderBorder: true,
-			});
-
-			const $cbAll = $(`<input type="checkbox">`);
-			const $ulRows = $$`<ul class="list"></ul>`;
-			const $iptSearch = $(`<input type="search" class="search manbrew__search form-control w-100 mt-1" placeholder="Search entries...">`);
-			const $wrpBtnsSort = $$`<div class="filtertools manbrew__filtertools btn-group">
-				<button class="col-6 sort btn btn-default btn-xs" data-sort="name">Name</button>
-				<button class="col-5 sort btn btn-default btn-xs" data-sort="category">Category</button>
-				<label class="wrp-cb-all pr-0 flex-vh-center mb-0 h-100">${$cbAll}</label>
-			</div>`;
-			$$($modalInner)`
-				${$iptSearch}
-				${$wrpBtnsSort}
-				${$ulRows}`;
-
-			let list;
-
-			// populate list
-			function populateList () {
-				$ulRows.empty();
-
-				list = new List({
-					$iptSearch,
-					$wrpList: $ulRows,
-					fnSort: SortUtil.listSort,
-				});
-
-				ListUiUtil.bindSelectAllCheckbox($cbAll.off("change"), list);
-
-				function mapCategoryEntry (cat, bru) {
-					const out = {};
-					out.name = bru.name;
-					out.uniqueId = bru.uniqueId;
-					out.extraInfo = "";
-					switch (cat) {
-						case "subclass":
-							out.extraInfo = ` (${bru.class})`;
-							break;
-						case "subrace":
-							out.extraInfo = ` (${(bru.race || {}).name})`;
-							break;
-						case "psionic":
-							out.extraInfo = ` (${Parser.psiTypeToMeta(bru.type).short})`;
-							break;
-						case "itemProperty": {
-							if (bru.entries) out.name = Renderer.findName(bru.entries);
-							if (!out.name) out.name = bru.abbreviation;
-							break;
-						}
-						case "adventureData":
-						case "bookData": {
-							const assocData = {
-								"adventureData": "adventure",
-								"bookData": "book",
-							};
-							out.name = (((BrewUtil.homebrew[assocData[cat]] || []).find(a => a.id === bru.id) || {}).name || bru.id);
-						}
-					}
-					out.name = out.name || `(Unknown)`;
-					return out;
-				}
-
-				const vetoolsSourceSet = new Set(BrewUtil._getActiveVetoolsSources().map(it => it.json));
-
-				const isMatchingSource = (itSrc) => showAll || (itSrc === source || (source === undefined && !vetoolsSourceSet.has(itSrc) && !BrewUtil.hasSourceJson(itSrc)));
-				BrewUtil._getBrewCategories().forEach(cat => {
-					BrewUtil.homebrew[cat]
-						.filter(it => isMatchingSource(it.source))
-						.map(it => mapCategoryEntry(cat, it))
-						.sort((a, b) => SortUtil.ascSort(a.name, b.name))
-						.forEach((it, i) => {
-							const dispCat = BrewUtil._pRenderBrewScreen_getDisplayCat(cat, true);
-
-							const eleLi = document.createElement("li");
-							eleLi.className = "row px-0";
-
-							eleLi.innerHTML = `<label class="lst--border no-select mb-0 flex-v-center">
-								<div class="col-6 bold">${it.name}</div>
-								<div class="col-5 flex-vh-center">${dispCat}${it.extraInfo}</div>
-								<div class="pr-0 col-1 flex-vh-center"><input type="checkbox" class="no-events"></div>
-							</label>`;
-
-							const listItem = new ListItem(
-								i,
-								eleLi,
-								it.name,
-								{
-									category: dispCat,
-									category_raw: cat,
-								},
-								{
-									uniqueId: it.uniqueId,
-									cbSel: eleLi.firstElementChild.children[2].firstElementChild,
-								},
-							);
-							list.addItem(listItem);
-
-							eleLi.addEventListener("click", evt => ListUiUtil.handleSelectClick(list, listItem, evt));
-						});
-				});
-				$ulRows.empty();
-
-				list.init();
-				if (!list.items.length) $ulRows.append(`<h5 class="text-center">No results found.</h5>`);
-				SortUtil.initBtnSortHandlers($wrpBtnsSort, list);
-			}
-
-			populateList();
-
-			$(`<button class="btn btn-danger btn-xs">Delete Selected</button>`).on("click", async () => {
-				const toDel = list.items.filter(it => $(it.ele).find(`input`).prop("checked")).map(it => ({ ...it.values, ...it.data }));
-
-				if (!toDel.length) return;
-				if (!window.confirm(`Are you sure you want to delete the ${toDel.length} selected item${toDel.length === 1 ? "" : "s"}?`)) return;
-
-				if (toDel.length === list.items.length) {
-					await BrewUtil._pRenderBrewScreen_pDeleteSource($brewList, source, false, false);
-					doClose();
-				} else {
-					await Promise.all(toDel.map(async it => {
-						const pDeleteFn = BrewUtil._getPDeleteFunction(it.category_raw);
-						await pDeleteFn(it.uniqueId);
-					}));
-					if (BrewUtil._lists) BrewUtil._lists.forEach(l => l.update());
-					BrewUtil._persistHomebrewDebounced();
-					populateList();
-					await BrewUtil._pRenderBrewScreen_pRefreshBrewList($brewList);
-					window.location.hash = "";
-				}
-			}).appendTo($wrpBtnDel);
-
-			$iptSearch.focus();
-		}
-
-		$brewList.empty();
-		if (!BrewUtil.homebrew) return;
-
-		const $iptSearch = $(`<input type="search" class="search manbrew__search form-control" placeholder="Search active homebrew...">`);
-		const $wrpList = $(`<ul class="list-display-only brew-list brew-list--target manbrew__list"></ul>`);
-		const $ulGroup = $(`<ul class="list-display-only brew-list brew-list--groups no-shrink" style="height: initial;"></ul>`);
-
-		const list = new List({ $iptSearch, $wrpList, isUseJquery: true });
-
-		const $lst = $$`
-			<div class="flex-col h-100">
-				${$iptSearch}
-				<div class="filtertools manbrew__filtertools btn-group input-group input-group--bottom flex no-shrink">
-					<button class="col-5 sort btn btn-default btn-xs ve-grow" data-sort="source">Source</button>
-					<button class="col-4 sort btn btn-default btn-xs" data-sort="authors">Authors</button>
-					<button class="col-1 btn btn-default btn-xs" disabled>Origin</button>
-					<button class="col-2 ve-grow btn btn-default btn-xs" disabled>&nbsp;</button>
-				</div>
-				<div class="flex w-100 h-100 overflow-y-auto relative">${$wrpList}</div>
-			</div>
-		`.appendTo($brewList);
-		$ulGroup.appendTo($brewList);
-		SortUtil.initBtnSortHandlers($lst.find(".manbrew__filtertools"), list);
-
-		const createButtons = (src, $row) => {
-			const $btnViewManage = $(`<button class="btn btn-sm btn-default">View/Manage</button>`)
-				.on("click", () => {
-					showSourceManager(src.json, src._all);
-				});
-
-			const $btnDeleteAll = $(`<button class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></button>`)
-				.on("click", () => BrewUtil._pRenderBrewScreen_pDeleteSource($brewList, src.json, true, src._all));
-
-			$$`<div class="flex-h-right flex-v-center btn-group">
-				${$btnViewManage}
-				${$btnDeleteAll}
-			</div>`.appendTo($row);
-		};
-
-		const brewSources = MiscUtil.copy(BrewUtil.getJsonSources())
-			.filter(src => BrewUtil._isSourceRelevantForCurrentPage(src.json));
-		brewSources.sort((a, b) => SortUtil.ascSort(a.full, b.full));
-
-		brewSources.forEach((src, i) => {
-			const validAuthors = (!src.authors ? [] : !(src.authors instanceof Array) ? [] : src.authors).join(", ");
-			const isGroup = src._unknown || src._all;
-
-			const $row = $(`<li class="row manbrew__row lst--border">
-				<span class="col-5 manbrew__col--tall source manbrew__source">${isGroup ? "<i>" : ""}${src.full}${isGroup ? "</i>" : ""}</span>
-				<span class="col-4 manbrew__col--tall authors">${validAuthors}</span>
-				<${src.url ? "a" : "span"} class="col-1 manbrew__col--tall text-center" ${src.url ? `href="${src.url}" target="_blank" rel="noopener noreferrer"` : ""}>${src.url ? "View Source" : ""}</${src.url ? "a" : "span"}>
-				<span class="hidden">${src.abbreviation}</span>
-			</li>`);
-			createButtons(src, $row);
-
-			const listItem = new ListItem(
-				i,
-				$row,
-				src.full,
-				{
-					authors: validAuthors,
-					abbreviation: src.abbreviation,
-				},
-			);
-			list.addItem(listItem);
-		});
-
-		const createGroupRow = (fullText, modeProp) => {
-			const $row = $(`<div class="row manbrew__row flex-h-right">
-				<div class="manbrew__col--tall source manbrew__source text-right"><i class="mr-3">${fullText}</i></div>
-			</div>`);
-			createButtons({ [modeProp]: true }, $row);
-			$ulGroup.append($row);
-		};
-		createGroupRow("Entries From All Sources", "_all");
-		createGroupRow("Entries Without Sources", "_unknown");
-
-		list.init();
-		$iptSearch.focus();
-	},
-
-	_isSourceRelevantForCurrentPage (source) {
-		const cats = ["trait", ...BrewUtil.getPageProps()];
-		return !!cats.find(cat => !!(BrewUtil.homebrew[cat] || []).some(entry => (entry.inherits ? entry.inherits.source : entry.source) === source));
+		if (error) throw error;
 	},
 
 	getPageProps (page) {
@@ -4684,9 +4035,6 @@ BrewUtil = {
 					..._PG_BESTIARY,
 					"makebrewCreatureTrait",
 				];
-			case UrlUtil.PG_MANAGE_BREW:
-			case UrlUtil.PG_DEMO_RENDER:
-				return BrewUtil._STORABLE;
 			default:
 				throw new Error(`No homebrew properties defined for category ${page}`);
 		}
@@ -4706,34 +4054,6 @@ BrewUtil = {
 			}
 			throw new Error(`Directory was not mapped to a category: "${dir}"`);
 		}
-	},
-
-	_pRenderBrewScreen_getDisplayCat (cat, isManager) {
-		if (cat === "variantrule") return "Variant Rule";
-		if (cat === "optionalfeature") return "Optional Feature";
-		if (cat === "adventure") return isManager ? "Adventure Contents/Info" : "Adventure";
-		if (cat === "adventureData") return "Adventure Text";
-		if (cat === "book") return isManager ? "Book Contents/Info" : "Book";
-		if (cat === "bookData") return "Book Text";
-		if (cat === "baseitem") return "Base Item";
-		if (cat === "classFeature") return "Class Feature";
-		if (cat === "versatileHeritage") return "Versatile Heritage";
-		if (cat === "subclassFeature") return "Subclass Feature";
-		return cat.uppercaseFirst();
-	},
-
-	handleLoadbrewClick: async (ele, jsonUrl, name) => {
-		const $ele = $(ele);
-		if (!$ele.hasClass("rd__wrp-loadbrew--ready")) return; // an existing click is being handled
-		const cached = $ele.html();
-		const cachedTitle = $ele.title();
-		$ele.title("");
-		$ele.removeClass("rd__wrp-loadbrew--ready").html(`${name}<span class="glyphicon glyphicon-refresh rd__loadbrew-icon rd__loadbrew-icon--active"></span>`);
-		jsonUrl = jsonUrl.unescapeQuotes();
-		const data = await DataUtil.loadJSON(`${jsonUrl}?${(new Date()).getTime()}`);
-		await BrewUtil.pDoHandleBrewJson(data, BrewUtil._PAGE || UrlUtil.getCurrentPage());
-		$ele.html(`${name}<span class="glyphicon glyphicon-saved rd__loadbrew-icon"></span>`);
-		setTimeout(() => $ele.html(cached).addClass("rd__wrp-loadbrew--ready").title(cachedTitle), 500);
 	},
 
 	async _pDoRemove (arrName, uniqueId, isChild) {
@@ -4839,19 +4159,6 @@ BrewUtil = {
 			await BrewUtil._pDoRemove(category, uniqueId);
 			await BrewUtil._pDoRemove(`${category}Data`, uniqueId, true);
 		};
-	},
-
-	manageBrew: () => {
-		const { $modalInner, doClose } = UiUtil.getShowModal({
-			isHeight100: true,
-			isWidth100: true,
-			title: `Manage Homebrew`,
-			isUncappedHeight: true,
-			$titleSplit: BrewUtil._$getBtnDeleteAll(true),
-			isHeaderBorder: true,
-		});
-
-		BrewUtil._pRenderBrewScreen($modalInner, { isModal: true, doClose });
 	},
 
 	async pAddEntry (prop, obj) {
@@ -5039,8 +4346,6 @@ BrewUtil = {
 			case UrlUtil.PG_TRAITS:
 				await (BrewUtil._pHandleBrew || handleBrew)(MiscUtil.copy(toAdd));
 				break;
-			case UrlUtil.PG_MANAGE_BREW:
-			case UrlUtil.PG_DEMO_RENDER:
 			case VeCt.PG_NONE:
 				// No-op
 				break;
@@ -5066,10 +4371,6 @@ BrewUtil = {
 		}
 	},
 
-	makeBrewButton: (id) => {
-		$(`#${id}`).on("click", () => BrewUtil.manageBrew());
-	},
-
 	_getBrewCategories () {
 		return Object.keys(BrewUtil.homebrew).filter(it => !it.startsWith("_"));
 	},
@@ -5086,7 +4387,7 @@ BrewUtil = {
 			BrewUtil._sourceCache = {};
 
 			if (!BrewUtil.homebrewMeta) {
-				const temp = StorageUtil.syncGet(VeCt.STORAGE_HOMEBREW_META) || {};
+				const temp = {};
 				temp.sources = temp.sources || [];
 				BrewUtil.homebrewMeta = temp;
 				doBuild();
@@ -5858,101 +5159,13 @@ function PrintModeView (opts) {
 PrintModeView._PRINT_VIEW_COLUMNS_K = "printViewColumns";
 
 // CONTENT EXCLUSION ===================================================================================================
+// Compatibility interface for reference pages; content exclusions are disabled.
 ExcludeUtil = {
-	isInitialised: false,
-	_excludes: null,
-
-	async pInitialise () {
-		ExcludeUtil.pSave = MiscUtil.throttle(ExcludeUtil._pSave, 50);
-		try {
-			ExcludeUtil._excludes = await StorageUtil.pGet(VeCt.STORAGE_EXCLUDES) || [];
-			ExcludeUtil._excludes = ExcludeUtil._excludes.filter(it => it.hash); // remove legacy rows
-		} catch (e) {
-			JqueryUtil.doToast({
-				content: "Error when loading content blacklist! Purged blacklist data. (See the log for more information.)",
-				type: "danger",
-			});
-			try {
-				await StorageUtil.pRemove(VeCt.STORAGE_EXCLUDES);
-			} catch (e) {
-				setTimeout(() => {
-					throw e
-				});
-			}
-			ExcludeUtil._excludes = null;
-			window.location.hash = "";
-			setTimeout(() => {
-				throw e
-			});
-		}
-		ExcludeUtil.isInitialised = true;
-	},
-
-	getList () {
-		return ExcludeUtil._excludes || [];
-	},
-
-	async pSetList (toSet) {
-		ExcludeUtil._excludes = toSet;
-		await ExcludeUtil.pSave();
-	},
-
-	_excludeCount: 0,
-	/**
-	 * @param hash
-	 * @param category
-	 * @param source
-	 * @param [opts]
-	 * @param [opts.isNoCount]
-	 */
-	isExcluded (hash, category, source, opts) {
-		if (!ExcludeUtil._excludes || !ExcludeUtil._excludes.length) return false;
-		if (!source) throw new Error(`Entity had no source!`);
-		opts = opts || {};
-
-		source = source.source || source;
-		const out = !!ExcludeUtil._excludes.find(row => (row.source === "*" || row.source === source) && (row.category === "*" || row.category === category) && (row.hash === "*" || row.hash === hash));
-		if (out && !opts.isNoCount) ++ExcludeUtil._excludeCount;
-		return out;
-	},
-
-	checkShowAllExcluded (list, $pagecontent) {
-		if ((!list.length && ExcludeUtil._excludeCount) || (list.length > 0 && list.length === ExcludeUtil._excludeCount)) {
-			$pagecontent.html(`
-				<div class="initial-message">(Content <a href="blacklist.html">blacklisted</a>)</div>
-			`);
-		}
-	},
-
-	addExclude (displayName, hash, category, source) {
-		if (!ExcludeUtil._excludes.find(row => row.source === source && row.category === category && row.hash === hash)) {
-			ExcludeUtil._excludes.push({ displayName, hash, category, source });
-			ExcludeUtil.pSave();
-			return true;
-		}
-		return false;
-	},
-
-	removeExclude (hash, category, source) {
-		const ix = ExcludeUtil._excludes.findIndex(row => row.source === source && row.category === category && row.hash === hash);
-		if (~ix) {
-			ExcludeUtil._excludes.splice(ix, 1);
-			ExcludeUtil.pSave();
-		}
-	},
-
-	async _pSave () {
-		return StorageUtil.pSet(VeCt.STORAGE_EXCLUDES, ExcludeUtil._excludes);
-	},
-
-	// The throttled version, available post-initialisation
-	async pSave () { /* no-op */
-	},
-
-	resetExcludes () {
-		ExcludeUtil._excludes = [];
-		ExcludeUtil.pSave();
-	},
+	isInitialised: true,
+	async pInitialise () {},
+	getList () { return []; },
+	isExcluded () { return false; },
+	checkShowAllExcluded () {},
 };
 
 // ENCOUNTERS ==========================================================================================================

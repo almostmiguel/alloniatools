@@ -7,7 +7,6 @@ const PropOrder = require("../js/utils-proporder");
 
 const FILE_BLACKLIST = new Set([
 	"index.json",
-	"renderdemo.json",
 ]);
 
 const KEY_BLACKLIST = new Set(["data", "itemTypeAdditionalEntries", "itemType", "itemProperty"]);

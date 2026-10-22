@@ -19,7 +19,7 @@ class NavBar {
 
 		NavBar._clearAllTimers();
 
-		NavBar._initAdventureBookElements().then(null);
+		NavBar._initCampaignElements().then(null);
 	}
 
 	static _initInstallPrompt () {
@@ -47,12 +47,7 @@ class NavBar {
 
 		this._addElement_dropdown(null, NavBar._CAT_RULES);
 		this._addElement_li(NavBar._CAT_RULES, "quickreference.html", "Quick Reference");
-		this._addElement_li(NavBar._CAT_RULES, "variantrules.html", "Variant Rules & Subsystems");
-		this._addElement_li(NavBar._CAT_RULES, "tables.html", "Tables");
-		// Kill Fluff for Paizo
-		// this._addElement_divider(NavBar._CAT_RULES);
-		// this._addElement_dropdown(NavBar._CAT_RULES, NavBar._CAT_BOOKS, {isSide: true, page: "books.html"});
-		// this._addElement_li(NavBar._CAT_BOOKS, "books.html", "View All/Homebrew");
+		this._addElement_li(NavBar._CAT_RULES, "variantrules.html", "Rules Glossary");
 
 		this._addElement_dropdown(null, NavBar._CAT_PLAYER);
 		this._addElement_li(NavBar._CAT_PLAYER, "ancestries.html", "Ancestries");
@@ -66,10 +61,9 @@ class NavBar {
 		this._addElement_li(NavBar._CAT_PLAYER, "optionalfeatures.html", "Optional Features");
 
 		this._addElement_dropdown(null, NavBar._CAT_GAME_MASTER);
-		this._addElement_li(NavBar._CAT_GAME_MASTER, "gmscreen.html", "GM Screen");
+		this._addElement_dropdown(NavBar._CAT_GAME_MASTER, NavBar._CAT_CAMPAIGNS, {isSide: true, page: "adventures.html", menuClassName: "nav2-campaigns"});
+		this._addElement_li(NavBar._CAT_CAMPAIGNS, "adventures.html", "View All Campaigns", {isSide: true});
 		this._addElement_divider(NavBar._CAT_GAME_MASTER);
-		this._addElement_dropdown(NavBar._CAT_GAME_MASTER, NavBar._CAT_ADVENTURES, {isSide: true, page: "adventures.html"});
-		this._addElement_li(NavBar._CAT_ADVENTURES, "adventures.html", "View All/Homebrew");
 		this._addElement_li(NavBar._CAT_GAME_MASTER, "events.html", "Events");
 		this._addElement_li(NavBar._CAT_GAME_MASTER, "hazards.html", "Hazards");
 		this._addElement_li(NavBar._CAT_GAME_MASTER, "relicgifts.html", "Relic Gifts");
@@ -91,24 +85,11 @@ class NavBar {
 		this._addElement_li(NavBar._CAT_REFERENCES, "organizations.html", "Organizations");
 		this._addElement_divider(NavBar._CAT_REFERENCES);
 		this._addElement_li(NavBar._CAT_REFERENCES, "abilities.html", "Creature Abilities");
-		this._addElement_li(NavBar._CAT_REFERENCES, "creaturetemplates.html", "Creature Templates");
 		this._addElement_li(NavBar._CAT_REFERENCES, "traits.html", "Traits");
 
 		this._addElement_dropdown(null, NavBar._CAT_UTILITIES);
 		this._addElement_li(NavBar._CAT_UTILITIES, "search.html", "Search");
-		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "blacklist.html", "Content Blacklist");
-		this._addElement_li(NavBar._CAT_UTILITIES, "managebrew.html", "Homebrew Manager");
-		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "inittrackerplayerview.html", "Initiative Tracker Player View");
-		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "renderdemo.html", "Renderer Demo");
-		this._addElement_li(NavBar._CAT_UTILITIES, "textconverter.html", "Text Converter");
-		this._addElement_divider(NavBar._CAT_UTILITIES);
 		this._addElement_li(NavBar._CAT_UTILITIES, "changelog.html", "Changelog");
-		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "privacy-policy.html", "Privacy Policy");
-		this._addElement_li(NavBar._CAT_UTILITIES, "licenses.html", "Licenses");
 
 		this._addElement_dropdown(null, NavBar._CAT_SETTINGS);
 		this._addElement_button(
@@ -134,7 +115,7 @@ class NavBar {
 			{
 				html: "Save State to File",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_saveStateFile(evt),
-				title: "Save any locally-stored data (loaded homebrew, active blacklists, DM Screen configuration,...) to a file.",
+				title: "Save any locally-stored data (filters, pinned entries, dice macros, etc.) to a file.",
 			},
 		);
 		this._addElement_button(
@@ -142,7 +123,7 @@ class NavBar {
 			{
 				html: "Load State from File",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_loadStateFile(evt),
-				title: "Load previously-saved data (loaded homebrew, active blacklists, DM Screen configuration,...) from a file.",
+				title: "Load previously-saved data (filters, pinned entries, dice macros, etc.) from a file.",
 			},
 		);
 		this._addElement_divider(NavBar._CAT_SETTINGS);
@@ -151,24 +132,16 @@ class NavBar {
 			{
 				html: "Add as App",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_addApp(evt),
-				title: "Add the site to your home screen. When used in conjunction with the Preload Offline Data option, this can create a functional offline copy of the site.",
+				title: "Add the site to your home screen.",
 			},
 		);
 		this._addElement_divider(NavBar._CAT_SETTINGS);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Preload Images <small class=\"help--subtle\">(~23 MB)</small>",
-				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, /./),
-				title: "Preload all images for offline use. Mainly books covers.",
-			},
-		);
-		this._addElement_button(
-			NavBar._CAT_SETTINGS,
-			{
-				html: "Reset Preloaded Data",
+				html: "Clear Offline Cache",
 				click: (evt) => NavBar.InteractionManager._pOnClick_button_clearOffline(evt),
-				title: "Remove all preloaded data, and clear away any caches.",
+				title: "Clear cached site files and images.",
 			},
 		);
 	}
@@ -188,108 +161,44 @@ class NavBar {
 		return _getNodeInner(NavBar._tree.children);
 	}
 
-	/**
-	 * Adventure/book elements are added as a second, asynchronous, step, as they require loading of:
-	 * - An index JSON file.
-	 * - The user's Blacklist.
-	 */
-	static async _initAdventureBookElements () {
-		const [adventureBookIndex] = await Promise.all([
-			DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-nav-adventure-book-index.json`),
-			ExcludeUtil.pInitialise(),
-		]);
-		const brew = await BrewUtil.pAddBrewData();
-
-		[
-			// Kill Fluff for Paizo
-			// {
-			// 	prop: "book",
-			// 	parentCategory: NavBar._CAT_BOOKS,
-			// 	page: "book.html",
-			// 	fnSort: SortUtil.ascSortBook.bind(SortUtil),
-			// },
-			{
-				prop: "adventure",
-				page: "adventure.html",
-				parentCategory: NavBar._CAT_ADVENTURES,
-				fnSort: SortUtil.ascSortAdventure.bind(SortUtil),
-			},
-		].forEach(({prop, parentCategory, page, fnSort}) => {
-			const formBrew = MiscUtil.copy(brew[prop] || []);
-			formBrew.forEach(it => {
-				if (it.parentSource) it.parentName = Parser.sourceJsonToFull(it.parentSource);
-			});
-
-			const metas = [...adventureBookIndex[prop], ...formBrew]
-				.filter(it => !ExcludeUtil.isExcluded(UrlUtil.encodeForHash(it.id), prop, it.source, {isNoCount: true}));
-
-			if (!metas.length) return;
-
-			SourceUtil.ADV_BOOK_GROUPS
-				.forEach(({group, displayName}) => {
-					const inGroup = metas.filter(it => (it.group || "other") === group);
-					if (!inGroup.length) return;
-
-					this._addElement_divider(parentCategory);
-					this._addElement_label(parentCategory, displayName, {isAddDateSpacer: true});
-
-					const seenYears = new Set();
-
-					inGroup
-						.sort(fnSort)
-						.forEach(indexMeta => {
-							const year = indexMeta.published ? (new Date(indexMeta.published).getFullYear()) : null;
-							const isNewYear = year != null && !seenYears.has(year);
-							if (year != null) seenYears.add(year);
-
-							if (indexMeta.parentSource) {
-								if (!this._getNode(indexMeta.parentName)) {
-									this._addElement_accordion(
-										parentCategory,
-										indexMeta.parentName,
-										{
-											date: isNewYear ? year : null,
-											source: indexMeta.parentSource,
-											isAddDateSpacer: !isNewYear,
-										},
-									);
-								}
-
-								let cleanName = indexMeta.name.startsWith(indexMeta.parentName)
-									? indexMeta.name.slice(indexMeta.parentName.length).replace(/^:\s+/, "")
-									: indexMeta.name;
-								this._addElement_li(
-									indexMeta.parentName,
-									page,
-									cleanName,
-									{
-										aHash: indexMeta.id,
-										isAddDateSpacer: true,
-										isSide: true,
-										isInAccordion: true,
-									},
-								);
-
-								return;
-							}
-
-							this._addElement_li(
-								parentCategory,
-								page,
-								indexMeta.name,
-								{
-									aHash: indexMeta.id,
-									date: isNewYear ? year : null,
-									isAddDateSpacer: !isNewYear,
-									source: indexMeta.source,
-									isSide: true,
-								},
-							);
-						});
-				});
+	static async _initCampaignElements () {
+		const index = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/generated/gendata-nav-adventure-book-index.json`);
+		const campaigns = (index.adventure || []).slice().sort((a, b) => SortUtil.ascSort(a.published || "9999", b.published || "9999") || SortUtil.ascSortLower(a.name, b.name));
+		if (campaigns.length) {
+			this._addElement_divider(NavBar._CAT_CAMPAIGNS);
+			this._addElement_label(NavBar._CAT_CAMPAIGNS, "Campaigns", {isAddDateSpacer: true});
+		}
+		const seenYears = new Set();
+		campaigns.forEach(campaign => {
+			const startDate = campaign.published ? new Date(`${campaign.published}T00:00:00Z`) : null;
+			const year = startDate && !Number.isNaN(startDate.valueOf()) ? startDate.getUTCFullYear() : null;
+			const isNewYear = year != null && !seenYears.has(year);
+			if (year != null) seenYears.add(year);
+			if (year == null && !seenYears.has("undated")) {
+				this._addElement_label(NavBar._CAT_CAMPAIGNS, "Undated", {isAddDateSpacer: true});
+				seenYears.add("undated");
+			}
+			this._addElement_li(
+				NavBar._CAT_CAMPAIGNS,
+				"adventure.html",
+				campaign.name,
+				{
+					aHash: campaign.id,
+					date: isNewYear ? year : null,
+					isAddDateSpacer: true,
+					source: campaign.source || campaign.id,
+					color: this._getCampaignColor(campaign),
+					isSide: true,
+				},
+			);
 		});
-
 		NavBar.highlightCurrentPage();
+	}
+
+	static _getCampaignColor (campaign) {
+		if (/^#(?:[\da-f]{3}|[\da-f]{6})$/i.test(campaign.color || "")) return campaign.color;
+		const hash = Array.from(campaign.id).reduce((value, char) => ((value * 31) + char.charCodeAt(0)) >>> 0, 0);
+		return `hsl(${hash % 360}, 65%, 55%)`;
 	}
 
 	/**
@@ -305,6 +214,7 @@ class NavBar {
 	 * @param [opts.date] - A date to prefix the list item with.
 	 * @param [opts.isAddDateSpacer] - True if this item has no date, but is in a list of items with dates.
 	 * @param [opts.source] - A source associated with this item, which should be displayed as a colored marker.
+	 * @param [opts.color] - An optional color override for the marker.
 	 * @param [opts.isInAccordion] - True if this item is inside an accordion.
 	 *        FIXME(Future) this is a bodge; refactor the navbar CSS to avoid using Bootstrap.
 	 */
@@ -332,7 +242,7 @@ class NavBar {
 
 		const a = document.createElement("a");
 		a.href = href;
-		a.innerHTML = `${this._addElement_getDatePrefix({date: opts.date, isAddDateSpacer: opts.isAddDateSpacer})}${this._addElement_getSourcePrefix({source: opts.source})}${aText}`;
+		a.innerHTML = `${this._addElement_getDatePrefix({date: opts.date, isAddDateSpacer: opts.isAddDateSpacer})}${this._addElement_getSourcePrefix({source: opts.source, color: opts.color})}${aText}`;
 		a.classList.add("nav__link");
 		if (opts.isInAccordion) a.classList.add(`nav2-accord__lnk-item`, `inline-block`, `w-100`);
 
@@ -408,7 +318,10 @@ class NavBar {
 	}
 
 	static _addElement_getDatePrefix ({date, isAddDateSpacer}) { return `${(date != null || isAddDateSpacer) ? `<div class="ve-muted ve-small mr-2 page__nav-date inline-block text-right inline-block">${date || ""}</div>` : ""}`; }
-	static _addElement_getSourcePrefix ({source}) { return `${source != null ? `<div class="nav2-list__disp-source ${Parser.sourceJsonToColor(source)}" ${BrewUtil.sourceJsonToStyle(source)}></div>` : ""}`; }
+	static _addElement_getSourcePrefix ({source, color}) {
+		if (color) return `<span class="nav2-list__disp-source" style="color: ${color}" aria-hidden="true"></span>`;
+		return source != null ? `<div class="nav2-list__disp-source ${Parser.sourceJsonToColor(source)}" ${BrewUtil.sourceJsonToStyle(source)}></div>` : "";
+	}
 
 	static _addElement_divider (parentCategory) {
 		const parentNode = this._getNode(parentCategory);
@@ -438,7 +351,7 @@ class NavBar {
 	 * @param {boolean} [isSide=false] - If this is a sideways dropdown.
 	 * @param {String} [page=null] - The page this dropdown is associated with.
 	 */
-	static _addElement_dropdown (parentCategory, category, {isSide = false, page = null} = {}) {
+	static _addElement_dropdown (parentCategory, category, {isSide = false, page = null, menuClassName = null} = {}) {
 		const parentNode = this._getNode(parentCategory);
 
 		const li = document.createElement("li");
@@ -463,6 +376,7 @@ class NavBar {
 
 		const ul = document.createElement("ul");
 		ul.className = `dropdown-menu ${isSide ? "dropdown-menu--side" : "dropdown-menu--top"}`;
+		if (menuClassName) ul.classList.add(menuClassName);
 		ul.onclick = function (event) { event.stopPropagation(); };
 
 		li.appendChild(a);
@@ -662,7 +576,7 @@ NavBar._CAT_RULES = "Rules";
 NavBar._CAT_BOOKS = "Books";
 NavBar._CAT_PLAYER = "Player";
 NavBar._CAT_GAME_MASTER = "Game Master";
-NavBar._CAT_ADVENTURES = "Adventures";
+NavBar._CAT_CAMPAIGNS = "Campaigns";
 NavBar._CAT_REFERENCES = "References";
 NavBar._CAT_UTILITIES = "Utilities";
 NavBar._CAT_SETTINGS = "Settings";
@@ -723,17 +637,6 @@ NavBar.InteractionManager = class {
 		} catch (e) {
 			// Ignore errors
 		}
-	}
-
-	static async _pOnClick_button_preloadOffline (evt, route) {
-		evt.preventDefault();
-
-		if (globalThis.swCacheRoutes === undefined) {
-			JqueryUtil.doToast(`The loader was not yet available! Reload the page and try again. If this problem persists, your browser may not support preloading.`);
-			return;
-		}
-
-		globalThis.swCacheRoutes(route);
 	}
 
 	static async _pOnClick_button_clearOffline (evt) {

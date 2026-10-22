@@ -1,18 +1,10 @@
-# Pf2eTools
+# AvalonTools
 
-[![pages-build-deployment](https://github.com/Pf2eToolsOrg/Pf2eTools/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Pf2eToolsOrg/Pf2eTools/actions/workflows/pages/pages-build-deployment) [![Build and Deploy](https://github.com/Pf2eToolsOrg/Pf2eTools/actions/workflows/main.yml/badge.svg)](https://github.com/Pf2eToolsOrg/Pf2eTools/actions/workflows/main.yml)
+A personal Pathfinder 2e setting reference and campaign journal, based on [Pf2eTools](https://github.com/Pf2eToolsOrg/Pf2eTools).
 
--   **Main site:** [https://pf2etools.com](https://pf2etools.com) (recommended)
--   **Mirror 1:** [https://pf2oo.ls](https://pf2oo.ls)
--   **Mirror 2:** [https://pf2e.tools](https://pf2e.tools)
+Campaigns use the adventure reader, with one chapter per session. See [Campaigns and sessions](docs/campaigns.md) to replace the included example and add your games.
 
-Live development branch available on the [`dev` subdomain](https://dev.pf2etools.com).
-
-#### Join our [Discord server](https://discord.gg/2hzNxErtVu)!
-
-## Help and support
-
-Please see our [wiki](https://github.com/Pf2eToolsOrg/Pf2eTools/wiki) for an installation guide. For everything else, we have a variety of FAQs answered on our [Discord server](https://discord.gg/2hzNxErtVu), plus we're available for direct questions!
+Install dependencies with `npm install`, build with `npm run build`, and start the local site with `npm run serve:dev`.
 
 ## Developer notes
 
@@ -21,11 +13,18 @@ Please see our [wiki](https://github.com/Pf2eToolsOrg/Pf2eTools/wiki) for an ins
 
 ### Data sources and versioning
 
-Only "official" (that is, published by Paizo) data is to be included in the site. Anything else should be added to the homebrew repository.
+Setting content and rules are maintained directly in `data/`. Campaigns and sessions use the existing adventure data format; see [the campaign guide](docs/campaigns.md) for the example and instructions.
+
+All reference text is edited in `data/quickreference.json`. Its `quickReference` array contains the full reader's sections, and `pageReferences` contains the topic notes shown in each page's Quick Reference tab. Run `npm run gen-all` after editing reader sections; `data/generated/bookref-quick.json` is generated output and should not be edited directly. Rules Glossary entries, including variant rules and subsystems, live in `data/variantrules.json`.
+
+Ancestries and versatile heritages can include an `images` array, such as `"images": ["img/heritages/cambiante.webp"]`. Add the corresponding image file at that path. Images appear only in the Images tab, not beside Mechanics or Info text. Legacy `summary.images` is also supported.
+
+Versatile heritages can also include `"flavor": ["Your introductory flavor text."]`. It appears in the Info tab, under the heritage's heading and before its detailed `info` text, using the centered, italic flavor style and decorative borders. Multiple paragraphs and renderer tags are supported; `flavor` is optional and does not change the Mechanics tab.
+
 
 Prioritise RAW above all else. Aim to provide a 1:1 copy of the original data. Obvious typos (for instance, mathematical errors in creature statblocks) may be corrected at the discretion of the maintainer(s).
 
-Aim to use the latest version of any published material. Older versions which are sufficiently different (and relevant to community interests) can be moved to the homebrew repository.
+Keep setting content alongside the rules it references so the site can be built and published as one static website.
 
 ### Target JavaScript version
 
@@ -141,4 +140,4 @@ This feature can be easily disabled by doing `npm config set git-tag-version fal
 
 ## License
 
-This project is licensed under the terms of the [MIT license](LICENSE).
+This project is licensed under the terms of the [MIT license](LICENSE.md).

@@ -1465,19 +1465,19 @@ function Renderer () {
 	};
 
 	// Ex. {"type": "data", "tag": "spell", "name": "Fireball", "source": "CRB"}
-	this._renderData = async function (entry, textStack, meta, options) {
+	this._renderData = function (entry, textStack, meta, options) {
 		this._renderPrefix(entry, textStack, meta, options);
 		this._renderDataHeader(textStack);
 		const tag = entry.tag;
 		const name = entry.name;
-		const source = Parser.getTagSource(tag, entry.source, name);
 		const catId = Parser._parse_bToA(Parser.CAT_ID_TO_PROP, tag);
-		const page = entry.page || UrlUtil.CAT_TO_PAGE[catId];
+		const page = entry.page || (tag === "generic" ? UrlUtil.PG_GENERIC_DATA : UrlUtil.CAT_TO_PAGE[catId]);
 		if (entry.data) {
 			const renderFn = Renderer.hover._pageToRenderFn(page);
 			const rendered = renderFn ? renderFn(entry.data, { isEmbedded: true, noPage: true }) : `<div class="pf2-stat">Failed to render ${entry.data.name}.</div>`;
 			textStack[0] += typeof rendered === "object" ? [...rendered].map(e => e.outerHTML).join("") : rendered;
 		} else {
+			const source = Parser.getTagSource(tag, entry.source, name);
 			const hash = entry.hash || UrlUtil.URL_TO_HASH_BUILDER[page](entry);
 			textStack[0] += `<div class="pf2-stat" data-stat-tag="${tag.qq()}" data-stat-name="${name.qq()}" data-stat-hash="${hash.qq()}" data-stat-page="${page.qq()}" data-stat-source="${source.qq()}">
 				<i>Loading ${Renderer.get().render(`{@${tag} ${name}|${source}}`)}...</i>
@@ -1979,10 +1979,10 @@ function Renderer () {
 				break;
 			}
 
-			// HOMEBREW LOADING ////////////////////////////////////////////////////////////////////////////////
+			// Loader tags display their label; runtime homebrew imports are disabled.
 			case "@loader": {
-				const { name, path } = this._renderString_getLoaderTagMeta(text);
-				textStack[0] += `<span onclick="BrewUtil.handleLoadbrewClick(this, '${path.escapeQuotes()}', '${name.escapeQuotes()}')" class="rd__wrp-loadbrew--ready" title="Click to install homebrew">${name}<span class="glyphicon glyphicon-download-alt rd__loadbrew-icon rd__loadbrew-icon"></span></span>`;
+				const { name } = this._renderString_getLoaderTagMeta(text);
+				textStack[0] += name;
 				break;
 			}
 
@@ -3367,23 +3367,23 @@ Renderer.utils = {
 		const level = opts.level != null ? `${opts.level}` : (!isNaN(Number(it.level)) || typeof it.level === "string") ? ` ${it.level}` : ""
 		const activity = opts.activity ? ` ${it.activity != null && Parser.timeToFullEntry(it.activity).includes("@as") ? Renderer.get().render(Parser.timeToFullEntry(it.activity)) : ``}` : ``
 		let typesForSkills = it.traditions || it.traits || it.type || ""
-		const $ele = $$`<div class="flex ${opts.isEmbedded ? "pf2-embedded-name" : ""}" ${dataPart}>
+		// Static statblock names are also rendered by build scripts without a DOM.
+		const renderName = (parts, ...values) => {
+			if (opts.asJquery || opts.$btnScaleLvl || opts.$btnResetScaleLvl) {
+				const $ele = $$(parts, ...values);
+				return opts.asJquery ? $ele : $ele[0].outerHTML;
+			}
+			return parts.reduce((html, part, index) => `${html}${part}${values[index] ?? ""}`, "");
+		};
+		return renderName`<div class="flex ${opts.isEmbedded ? "pf2-embedded-name" : ""}" ${dataPart}>
 			<p class="pf2-stat pf2-stat__name"><span class="stats-name copyable" onmousedown="event.preventDefault()" onclick="Renderer.utils._pHandleNameClick(this)">${opts.prefix || ""}${it._displayName || it.name}${opts.suffix || ""}</span>${activity}</p>
 			<p class="pf2-stat pf2-stat__name pf2-stat__name--level">${opts.$btnScaleLvl ? opts.$btnScaleLvl : ""}${opts.$btnResetScaleLvl ? opts.$btnResetScaleLvl : ""}
 			<span title="${Parser.levelToDC(DC, type, it.traits) === "?" && Parser.typeToSkill(typesForSkills) === "" ? "" : `Identification DC ${Parser.levelToDC(DC, type, it.traits)} ${Renderer.stripTags(Parser.typeToSkill(typesForSkills))}`}">${type} ${level}</span>
 			${opts.isEmbedded ? ` ${Renderer.get()._renderData_getEmbeddedToggle()}` : ""}</p>
 		</div>`;
-		if (opts.asJquery) return $ele;
-		else return $ele[0].outerHTML;
 	},
 
-	getExcludedDiv (it, dataProp, page) {
-		if (!ExcludeUtil.isInitialised) return "";
-		// if (page === undefined) console.warn("No page provided to getExcludedDiv! Check if your UrlUtil.PG_* constant is correct.");
-		const hash = page ? UrlUtil.URL_TO_HASH_BUILDER[page](it) : UrlUtil.autoEncodeHash(it);
-		const isExcluded = ExcludeUtil.isExcluded(hash, dataProp, it.source);
-		return isExcluded ? `<div class="pt-3 text-center text-danger"><b><i>Warning: This content has been <a href="blacklist.html">blacklisted</a>.</i></b></div>` : "";
-	},
+	getExcludedDiv () { return ""; },
 
 	getPageP: (it, opts) => {
 		opts = opts || {};
@@ -3531,13 +3531,14 @@ Renderer.utils = {
 		return fluff;
 	},
 
-	async pGetQuickRules (prop) {
-		const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/quickrules.json`);
+	async pGetQuickReference (prop) {
+		const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/quickreference.json`);
 		const renderer = Renderer.get().setFirstSection(true);
-		const toRender = data.quickRules[prop];
+		const toRender = data.pageReferences?.[prop];
+		if (!toRender) return Renderer.utils.HTML_NO_INFO;
 		const textStack = [""];
 		renderer.recursiveRender(toRender.entries, textStack, { prefix: "<p class='pf2-p'>", suffix: "</p>" });
-		return $$`${textStack.join("")}${Renderer.utils.getPageP(toRender)}`;
+		return `${textStack.join("")}${Renderer.utils.getPageP(toRender)}`;
 	},
 
 	HTML_NO_INFO: "<i>No information available.</i>",
@@ -4021,12 +4022,12 @@ Renderer.ancestry = {
 		opts = opts || {};
 		const renderer = Renderer.get().setFirstSection(true);
 		const renderStack = [];
-		renderStack.push(`${Renderer.utils.getNameDiv(anc, { page: UrlUtil.PG_ANCESTRIES, type: "Ancestry", ...opts })}`)
-		renderStack.push(Renderer.utils.getDividerDiv())
-		renderStack.push(Renderer.utils.getTraitsDiv([
+		const ancestryTraits = [
 			...(anc.rarity ? [anc.rarity] : []),
 			...(anc.traits || []),
-		]))
+		];
+		renderStack.push(`${Renderer.utils.getNameDiv(anc, { page: UrlUtil.PG_ANCESTRIES, type: "Ancestry", ...opts })}`)
+		renderStack.push(Renderer.utils.getDividerDiv())
 		renderStack.push(`<div class="pf2-sidebar--compact">`)
 		renderStack.push(`<div><p class="pf2-title">Pontos de Vida</p><p class="pf2-sidebar__text">${anc.hp}</p></div>`)
 		renderStack.push(`<div><p class="pf2-title">Tamanho</p><p class="pf2-sidebar__text">${anc.size.joinConjunct(", ", " or ").toTitleCase()}</p></div>`)
@@ -4035,6 +4036,7 @@ Renderer.ancestry = {
 		if (anc.flaw) renderStack.push(`<div><p class="pf2-title">Defeito de Atributo</p><p class="pf2-sidebar__text">${anc.flaw.join(", ").toTitleCase()}</p></div>`)
 		// FIXME: This is a wonky solution to the hover pup-up being spammed with the "you can choose your language" text. Perhaps split the data between languages you always know and ones you can choose?
 		if (anc.languages) renderStack.push(`<div><p class="pf2-title">Idiomas</p><p class="pf2-sidebar__text">${renderer.render(anc.languages.join(", ").replace(/, Additional languages [\s\S]+region\)\./g, ""))}</p></div>`)
+		if (ancestryTraits.length) renderStack.push(`<div><p class="pf2-title">Traços</p><p class="pf2-sidebar__text">${Renderer.utils.getTraitsDiv(ancestryTraits)}</p></div>`);
 		renderStack.push(`
 			${anc.feature ? `<div><p class="pf2-title">${anc.feature.name}</p><p class="pf2-sidebar__text">${renderer.render(anc.feature.entries)}</p></div>` : ""}
 			${anc.features ? anc.features.map(f => `<div><p class="pf2-title">${f.name}</p><p class="pf2-sidebar__text">${renderer.render(f.entries)}</p></div>`).join("") : ""}

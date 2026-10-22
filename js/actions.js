@@ -135,7 +135,7 @@ function renderStatblock (action) {
 		buildStatsTab,
 	);
 	const infoTab = Renderer.utils.tabButton(
-		"Quick Rules",
+		"Quick Reference",
 		() => {},
 		buildInfoTab,
 	);

@@ -1,8 +1,8 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema",
 	"$id": "adventures.json",
-	"title": "Adventures",
-	"description": "The adventure contents data type for Pf2eTools.",
+	"title": "Campaigns",
+	"description": "Campaign metadata and session contents.",
 	"type": "object",
 	"version": "0.0.1",
 	"properties": {
@@ -21,6 +21,11 @@
 					},
 					"source": {
 						"type": "string"
+					},
+					"color": {
+						"type": "string",
+						"pattern": "^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$",
+						"description": "The campaign's navigation color, as a hex value."
 					},
 					"parentSource": {
 						"type": "string",
@@ -80,6 +85,7 @@
 											"type": "string",
 											"enum": [
 												"chapter",
+												"session",
 												"appendix",
 												"part",
 												"episode",
@@ -155,9 +161,7 @@
 					},
 					"storyline": {
 						"type": "string",
-						"enum": [
-							"Adventure Path"
-						]
+						"description": "The campaign setting or storyline."
 					}
 				},
 				"additionalProperties": false,
@@ -165,11 +169,7 @@
 					"name",
 					"id",
 					"source",
-					"contents",
-					"level",
-					"published",
-					"storyline",
-					"group"
+					"contents"
 				]
 			}
 		}

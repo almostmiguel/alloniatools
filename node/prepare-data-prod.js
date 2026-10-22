@@ -11,7 +11,7 @@ async function replaceReferences (folder) {
 	ut.patchLoadJson();
 	console.log(`Replacing statblock references in directory ${folder}...`);
 	const walker = MiscUtil.getWalker();
-	const fileBlacklist = ["renderdemo.json", "index", "bookref"];
+	const fileBlacklist = ["index", "bookref"];
 	const files = ut.listFiles({dir: folder, blacklistFilePrefixes: fileBlacklist}).filter(file => file.endsWith(".json"));
 	for (let file of files) {
 		console.log(`\tReplacing in ${file}...`);

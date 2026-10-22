@@ -3,23 +3,22 @@
 		{
 			"name": "Orc",
 			"source": "PC1",
-			"remaster": true,
 			"page": 71,
 			"hp": 10,
 			"size": [
-				"medium"
+				"médio"
 			],
 			"speed": {
 				"walk": 7.5
 			},
 			"boosts": [
-				"strength",
-				"free"
+				"força",
+				"livre"
 			],
 			"languages": [
-				"{@language Common|PC1}",
-				"{@language Orcish|PC1}",
-				"Additional languages equal to your Intelligence modifier (if it's positive). Choose from {@language Goblin|PC1}, {@language Jotun|PC1}, {@language Petran|PC1}, {@language Sakvroth|PC1}, and any other languages to which you have access (such as the languages prevalent in your region)."
+				"{@language Common}",
+				"{@language Orcish}",
+				"Uma quantidade de idiomas adicionais igual ao seu modificador de inteligência (se for positivo). Escolha entre {@language Goblin}, {@language Jotun}, {@language Petran}, {@language Sakvroth} e quaisquer outros idiomas aos quais você tenha acesso (como os falados na sua região)."
 			],
 			"traits": [
 				"orc",
@@ -27,9 +26,9 @@
 			],
 			"features": [
 				{
-					"name": "Darkvision",
+					"name": "Visão no Escuro",
 					"entries": [
-						"You can see in darkness and dim light just as well as you can see in bright light, though your vision in darkness is in black and white."
+						"Você consegue enxergar na escuridão e na luz fraca como se fosse luz forte, embora sua visão no escuro seja em preto e branco."
 					]
 				}
 			],
@@ -42,73 +41,66 @@
 			],
 			"heritage": [
 				{
-					"name": "Badlands Orc",
-					"shortName": "Badlands",
+					"name": "Orc bélico",
+					"shortName": "Bélico",
 					"source": "PC1",
-					"remaster": true,
-					"page": 71,
-					"entries": [
-						"You come from sun-scorched badlands, where long legs and an ability to withstand the elements helped you thrive. You can {@action Hustle|PC1} twice as long while exploring before you have to stop, and you treat environmental heat effects as if they were one step less extreme (incredible heat becomes extreme, extreme heat becomes severe, and so on)."
-					]
-				},
-				{
-					"name": "Battle-Ready Orc",
-					"shortName": "Battle-Ready",
-					"source": "PC1",
-					"remaster": true,
 					"page": 71,
 					"entries": [
 						"You descend from a line of terrifying battlefield commanders. You become trained in {@skill Intimidation|PC1}, and you gain the {@feat Intimidating Glare|PC1} skill feat."
 					]
 				},
 				{
-					"name": "Deep Orc",
-					"shortName": "Deep",
+					"name": "Orc das profundezas",
+					"shortName": "Profundezas",
 					"source": "PC1",
-					"remaster": true,
 					"page": 71,
 					"entries": [
 						"Your calloused hands and red eyes speak to a life spent in the deep darkness of mountain caverns, where you learned to battle on rocky cliffs and survive with minimal resources. You gain the {@feat Terrain Expertise|PC1} skill feat for underground terrain and the {@feat Combat Climber|PC1} skill feat."
 					]
 				},
 				{
-					"name": "Grave Orc",
-					"shortName": "Grave",
+					"name": "Orc chuvano",
+					"shortName": "Chuvano",
 					"source": "PC1",
-					"remaster": true,
-					"page": 71,
-					"entries": [
-						"You were exposed to powerful necromantic energies that should have killed you\u2014but you survived. Your skin is cold, clammy, and gray. You gain resistance to void damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against effects with the {@trait death} or {@trait eversão} trait."
-					]
-				},
-				{
-					"name": "Hold-Scarred Orc",
-					"shortName": "Hold-Scarred",
-					"source": "PC1",
-					"remaster": true,
-					"page": 71,
-					"entries": [
-						"You are part of an orc community that participates in ritual scarification or tattooing. The marks on your skin show your exceptional hardiness and vitality. You gain 12 Hit Points from your ancestry instead of 10. You also gain the {@feat Diehard|PC1} feat."
-					]
-				},
-				{
-					"name": "Rainfall Orc",
-					"shortName": "Rainfall",
-					"source": "PC1",
-					"remaster": true,
 					"page": 71,
 					"entries": [
 						"You were born in a rain forest with only tangles of trees providing protection from torrential rainstorms and flash floods. You've learned to move adeptly through jungle terrain and resist the various ailments common in humid environs. You gain a +2 circumstance bonus to {@skill Athletics|PC1} checks to {@skill Climb|PC1} or {@skill Swim|PC1} and a +1 circumstance bonus to saving throws against diseases. "
 					]
 				},
 				{
-					"name": "Winter Orc",
-					"shortName": "Winter",
+					"name": "Orc dos ermos",
+					"shortName": "Ermo",
 					"source": "PC1",
-					"remaster": true,
+					"page": 71,
+					"entries": [
+						"You come from sun-scorched badlands, where long legs and an ability to withstand the elements helped you thrive. You can {@action Hustle|PC1} twice as long while exploring before you have to stop, and you treat environmental heat effects as if they were one step less extreme (incredible heat becomes extreme, extreme heat becomes severe, and so on)."
+					]
+				},
+				{
+					"name": "Orc Invernal",
+					"shortName": "Invernal",
+					"source": "PC1",
 					"page": 71,
 					"entries": [
 						"Your ancestors survived in cold climates. You become trained in {@skill Survival|PC1}, and you treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on)."
+					]
+				},
+				{
+					"name": "Orc sarjado",
+					"shortName": "Sarjado",
+					"source": "PC1",
+					"page": 71,
+					"entries": [
+						"You are part of an orc community that participates in ritual scarification or tattooing. The marks on your skin show your exceptional hardiness and vitality. You gain 12 Hit Points from your ancestry instead of 10. You also gain the {@feat Diehard|PC1} feat."
+					]
+				},
+				{
+					"name": "Orc sepulcral",
+					"shortName": "Sepulcral",
+					"source": "PC1",
+					"page": 71,
+					"entries": [
+						"You were exposed to powerful necromantic energies that should have killed you\u2014but you survived. Your skin is cold, clammy, and gray. You gain resistance to void damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against effects with the {@trait death} or {@trait eversão} trait."
 					]
 				}
 			],

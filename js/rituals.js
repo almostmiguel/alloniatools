@@ -104,7 +104,7 @@ function renderStatblock (ritual) {
 		$content.append(Renderer.ritual.getRenderedString(ritual));
 	}
 	const buildInfoTab = async () => {
-		const quickRules = await Renderer.utils.pGetQuickRules("ritual");
+		const quickRules = await Renderer.utils.pGetQuickReference("ritual");
 		$content.append(quickRules);
 	}
 	const statTab = Renderer.utils.tabButton(
@@ -113,7 +113,7 @@ function renderStatblock (ritual) {
 		buildStatsTab,
 	);
 	const infoTab = Renderer.utils.tabButton(
-		"Quick Rules",
+		"Quick Reference",
 		() => {},
 		buildInfoTab,
 	);

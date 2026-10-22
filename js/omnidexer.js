@@ -675,7 +675,7 @@ class IndexableFileVariantRules extends IndexableFile {
 			listProp: "variantrule",
 			baseUrl: "variantrules.html",
 			isHover: true,
-			include: (it) => it.type !== "Subsystem",
+			include: (it) => (it.category || it.type) !== "Subsystem",
 		});
 	}
 }
@@ -688,7 +688,7 @@ class IndexableFileSubsystems extends IndexableFile {
 			listProp: "variantrule",
 			baseUrl: "variantrules.html",
 			isHover: true,
-			include: (it) => it.type === "Subsystem",
+			include: (it) => (it.category || it.type) === "Subsystem",
 		});
 	}
 }

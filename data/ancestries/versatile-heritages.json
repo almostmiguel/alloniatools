@@ -1,19 +1,76 @@
 {
 	"versatileHeritage": [
 		{
-			"name": "Changeling",
+			"name": "Aiuvarin",
 			"source": "PC1",
-			"remaster": true,
-			"page": 76,
+			"page": 82,
 			"versatile": true,
-			"rarity": "uncommon",
-			"entries": [
-				"Your mother was a hag. Your eyes' heterochromia is the most obvious signifier of this parentage, but you likely also have a slighter build, paler skin, and darker hair than most members of your other parent's ancestry. You gain the {@trait cambiante} trait. You also gain low-light vision, or you gain darkvision if your ancestry already has lowlight vision. You can select from {@filter changeling feats|feats||type=ancestry|ancestry & heritage=changeling} and feats from your ancestry whenever you gain an ancestry feat."
+			"flavor": [
+				"Filhos de elfos com pessoas de outras ancestralidades, e filhos dos filhos destes, são chamados de 'aiuvarin', uma palavra élfica que faz referência a um poema sobre folhas que caem rápido demais. Os aiuvarins mais comuns de Avalon são aqueles nascidos de um elfo e um humano, ou então de dois aiuvarins. Os que nascem dessas uniões muitas vezes são chamados de 'meio-elfos'. A vida de um aiuvarin pode ser complicada, muitas vezes marcada por uma dificuldade de se encaixar. Aiuvarins não têm uma terra própria em Avalon, e as populações de aiuvarins não são particularmente ligadas umas às outras, já que costumas ter tradições e culturas bem diferentes, herdadas de seus pais."
 			],
 			"info": [
 				{
 					"type": "pf2-h1",
-					"name": "Changeling",
+					"name": "Aiuvarin",
+					"entries": [
+						"Aiuvarins costumam ter orelhas pontudas e podem ser esguios, além de manifestarem traços de seus ancestrais não elfos. Eles não têm os olhos de aparência alienígena dos elfos, e as dificuldades que enfrentam para encontrar um lugar ao qual pertençam nas comunidades em que vivem — já que normalmente estão fora de sincronia com a cultura dominante — levam muitos aiuvarins a se tornarem artistas ou animadores. Apesar dessa socialização inata, muitos têm dificuldade em criar laços duradouros com ambos os povos de seus pais, devido à distância que sentem em relação às duas comunidades.",
+						"Aiuvarins herdam parte da longevidade élfica, mas não toda. Os que têm um genitor humano costumam viver cerca de 150 anos. Isso faz com que alguns deles temam criar amizades e ter romances com humanos, pois sabem que muito provavelmente viverão mais que seus companheiros.",
+						{
+							"type": "pf2-h3",
+							"name": "Você pode...",
+							"entries": [
+								{
+									"type": "list",
+									"items": [
+										"Ser reservado e sentir dificuldade para formar laços com os outros.",
+										"Abraçar ou rejeitar com mais intensidade a cultura de um dos seus pais.",
+										"Se identificar mais com pessoas que também têm ancestralidade mista."
+									]
+								}
+							]
+						},
+						{
+							"type": "pf2-h3",
+							"name": "Os outros provavelmente...",
+							"entries": [
+								{
+									"type": "list",
+									"items": [
+										"Consideram você mais amigável do que os elfos.",
+										"Enxergam você primariamente como se fosse um elfo.",
+										"Subestimam o quão difícil é estar dividido entre duas culturas."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"entries": [
+				"Você tem elfos, ou possivelmente outros aiuvarins, em sua árvore genealógica. Você tem orelhas pontudas ou outros sinais de sua herança élfica. Você tem o traço {@trait elfo}, o traço {@trait aiuvarin}, e {@ability visão na penumbra}. Além disso, quando adquire um talento de ancestralidade, você pode escolher entre os {@filter talentos de elfo|feats||type=ancestry|ancestry & heritage=elfo} e de {@filter aiuvarin|feats||type=ancestry|ancestry & heritage=aiuvarin}, além dos da sua ancestralidade."
+			],
+			"images": [
+				"https://images.demiplane.com/elements/pathfinder-2e/heritages/heritage-aiuvarin-detail.png?format=webp&quality=90&width=1920",
+				"https://app.demiplane.com/_next/image?url=https%3A%2F%2Fimages.demiplane.com%2Fcompendium%2Fpathfinder-2e%2Fplayer-core%2Fv8PSbsDpdfyioi4O%2F04-08-PZO9302%20Wildborn%20half-elf.png&w=384&q=90"
+			],
+			"traits": [
+				"aiuvarin",
+				"elfo"
+			]
+		},
+		{
+			"name": "Cambiante",
+			"source": "PC1",
+			"page": 76,
+			"versatile": true,
+			"rarity": "incomum",
+			"flavor": [
+ 			 "Histórias sobre crianças roubadas e substituídas por monstros existem em inúmeras culturas — mas os verdadeiros monstros são as estrigas, que trazem ao mundo esses estranhos bebês, seja diretamente, sendo mães biológicas, ou indiretamente, quando a estranha magia dos rituais de seus covens afetam os bebês de vilarejos próximos. Essas crianças enfrentam uma infinidade de adversidades, muitas vezes iniciando suas vidas como forasteiras abandonadas ou órfãs."
+			],
+			"info": [
+				{
+					"type": "pf2-h1",
+					"name": "Cambiante",
 					"entries": [
 						"Tales of children stolen away and replaced by monsters exist across countless cultures—but the true monsters are the hags who bring these strange children into the world, either directly as their birth parents or indirectly when strange magic from their coven rituals affects babies in nearby villages. Such a child faces no end of challenges, often beginning life as an abandoned or orphaned outsider.",
 						"Though a changeling generally resembles an ordinary member of their ancestry, their distinctive eyes—each a different color—set them apart. One of their eyes matches that of their father's lineage, while the other matches the color of their hag mother's, often in an unnatural shade such as violet or vivid green. Not everyone with differently colored eyes is a changeling, but this manifestation of changeling heritage makes it difficult for them to hide their nature and can lead to banishment. As they come of age, they manifest other characteristics from their mother, including supernatural abilities. Darkvision, clawlike fingernails, and innate magic are the most common.",
@@ -49,121 +106,19 @@
 					]
 				}
 			],
-			"traits": [
-				"changeling"
-			]
-		},
-		{
-			"name": "Nephilim",
-			"source": "PC1",
-			"remaster": true,
-			"page": 78,
-			"versatile": true,
-			"rarity": "uncommon",
 			"entries": [
-				"Your nature is influenced by celestials, fiends, or monitors. This manifests as a combination of features that belie your heritage, such as golden eyes, a halo, horns, or a tail. You gain the {@trait nephilim|PC1} trait, in addition to the traits from your ancestry. You gain low-light vision, or you gain darkvision if your ancestry already has low-light vision. You can choose from {@filter nephilim feats|feats||type=ancestry|ancestry & heritage=nephilim} and feats from your ancestry whenever you gain an ancestry feat."
+				"Your mother was a hag. Your eyes' heterochromia is the most obvious signifier of this parentage, but you likely also have a slighter build, paler skin, and darker hair than most members of your other parent's ancestry. You gain the {@trait cambiante} trait. You also gain low-light vision, or you gain darkvision if your ancestry already has lowlight vision. You can select from {@filter changeling feats|feats||type=ancestry|ancestry & heritage=changeling} and feats from your ancestry whenever you gain an ancestry feat."
 			],
-			"info": [
-				{
-					"type": "pf2-h1",
-					"name": "Nephilim",
-					"entries": [
-						"Countless legends tell of mortal dealings with immortal beings, and of the children born from those encounters. These children, known as planar scions, are mortals who inherit the supernatural essence of another plane, which manifests through their distinctive physical features and otherworldly powers. This section presents rules for nephilim, planar scions who can trace their extraplanar heritage back to celestials, fiends, monitors, and other entities who often become involved in the religious affairs of mortals.",
-						"A faithful priest of Erastil is visited by an angel in his youth, and many years later he fathers a child with the head of an elk and a birthmark shaped like Erastil's religious symbol, a bow and arrow. A powerful sorceress prevents an incursion from the Outer Rifts, but a sliver of demonic power infuses the child she carries, who is born with fangs and a pair of tiny horns. A planar caravan travels the Multiverse until its ranks are filled with children who possess devilish hooves and angelic halos. These children, known as nephilim, possess the ambition and capacity for growth and change inherent in their mortal forebears, while also possessing some portion of the power and appearance of an immortal entity or entities whose energies influenced their bloodline.",
-						"Nephilim are difficult to categorize by nature. Some possess both demonic and angelic traits, while others possess abilities that defy the neat categories of scholars. Many nephilim do have traits that strongly point to their lineage, though. Nephilim who carry the power of archons, sometimes known as lawbringers, may display golden eyes or flaming auras, while nephilim descended from devils, known as hellspawn, may have red skin and hooved feet. ",
-						"While the term nephilim broadly describes these individuals, some cultures use the name empyrean or cambion to refer to nephilim with celestial influence or fiendish influence respectively. Other nephilim sometimes earn the names of aphorite or ganzi, though this entry only focuses on empyreans and cambions.",
-						"If you want a character who is supernaturally infused with the power of the Outer Planes, whose appearance is striking and notable, and whose personal connections might extend beyond the bounds of the Universe, you should play a nephilim.",
-						{
-							"type": "pf2-h3",
-							"name": "You Might...",
-							"entries": [
-								{
-									"type": "list",
-									"items": [
-										"Have a strong sense of self-confidence due to the power or influence of your extraplanar heritage.",
-										"Lean into or rebel against your perceived extraplanar nature, embracing angelic goodness or twisting demonic rage towards better ends.",
-										"Find that building relationships with others is difficult, but treasure those who value you for who, and not what, you are."
-									]
-								}
-							]
-						},
-						{
-							"type": "pf2-h3",
-							"name": "Others Probably...",
-							"entries": [
-								{
-									"type": "list",
-									"items": [
-										"Assume you've faced numerous challenges or gained unfair advantages due to your heritage.",
-										"Mistake you for an agent of a holy or unholy organization.",
-										"Think you have associations with powerful extraplanar creatures, potentially trying to bargain with you for power of their own."
-									]
-								}
-							]
-						}
-					]
-				}
+			"images": [
+				"https://images.demiplane.com/elements/pathfinder-2e/heritages/heritage-changeling-detail.png?format=webp&quality=90&width=1920"
 			],
 			"traits": [
-				"nephilim"
-			]
-		},
-		{
-			"name": "Aiuvarin",
-			"source": "PC1",
-			"remaster": true,
-			"page": 82,
-			"versatile": true,
-			"entries": [
-				"You have elves, or possibly other aiuvarins, in your family tree. You have pointed ears and other telltale signs of elf heritage. You gain the {@trait elfo} trait, the {@trait aiuvarin|PC1} trait, and lowlight vision. In addition, when you gain an ancestry feat, you can choose from {@filter aiuvarin feats|feats||type=ancestry|ancestry & heritage=aiuvarin} and {@filter elf feats|feats||type=ancestry|ancestry & heritage=elf} in addition to those from your ancestry."
-			],
-			"info": [
-				{
-					"type": "pf2-h1",
-					"name": "Aiuvarin",
-					"entries": [
-						"Elves' children with people of other ancestries, and the children of their children, are called \"aiuvarin\", an elven word that refers to a poem about leaves that fall too quickly to the ground. The most familiar aiuvarins in Golarion are born to an elf and a human, or to two aiuvarins. Those born of these unions are commonly referred to as \"halfelves.\" The life of an aiuvarin can be difficult, often marked by a struggle to fit in. Aiuvarins don't have their own homeland on Golarion, nor are populations of aiuvarins particularly tied to one another since they often have very disparate traditions from their parents' ancestries. Instead, they often attempt to find acceptance in their parents' cultures or settlements.",
-						"Aiuvarins often have pointed ears and can be lanky, along with manifesting traits from their non-elven ancestors. They lack the almost-alien eyes of their elf parents, and their work to find a place for themselves in communities where they're often out of sync with the dominant culture leads many to become artists or entertainers. Despite this innate socialization, many aiuvarins have difficulty forming lasting bonds with either of their parents' people due to the distance they feel from both communities as a whole.",
-						"Aiuvarins gain some, but not all, of their elven parent's longevity, and those with a human parent often live for around 150 years. This causes some of them to fear friendship and romance with humans, knowing that they'll likely outlive their companions.",
-						{
-							"type": "pf2-h3",
-							"name": "You Might...",
-							"entries": [
-								{
-									"type": "list",
-									"items": [
-										"Keep to yourself and find it difficult to form close bonds with others.",
-										"Strongly embrace or reject one side or the other of your parentage.",
-										"Identify strongly with and relate to other people with mixed ancestries."
-									]
-								}
-							]
-						},
-						{
-							"type": "pf2-h3",
-							"name": "Others Probably...",
-							"entries": [
-								{
-									"type": "list",
-									"items": [
-										"Find you more approachable than elves.",
-										"See you primarily through the lens of your elven heritage.",
-										"Downplay the challenges of being caught between cultures."
-									]
-								}
-							]
-						}
-					]
-				}
-			],
-			"traits": [
-				"aiuvarin"
+				"cambiante"
 			]
 		},
 		{
 			"name": "Dromaar",
 			"source": "PC1",
-			"remaster": true,
 			"page": 83,
 			"versatile": true,
 			"entries": [
@@ -208,8 +163,69 @@
 					]
 				}
 			],
+			"images": [
+				"https://images.demiplane.com/elements/pathfinder-2e/heritages/heritage-dromaar-detail.png?format=webp&quality=90&width=1920"
+			],
 			"traits": [
-				"dromaar"
+				"dromaar",
+				"orc"
+			]
+		},
+		{
+			"name": "Nefilim",
+			"source": "PC1",
+			"page": 78,
+			"versatile": true,
+			"rarity": "incomum",
+			"entries": [
+				"Your nature is influenced by celestials, fiends, or monitors. This manifests as a combination of features that belie your heritage, such as golden eyes, a halo, horns, or a tail. You gain the {@trait nefilim|PC1} trait, in addition to the traits from your ancestry. You gain low-light vision, or you gain darkvision if your ancestry already has low-light vision. You can choose from {@filter nephilim feats|feats||type=ancestry|ancestry & heritage=nephilim} and feats from your ancestry whenever you gain an ancestry feat."
+			],
+			"info": [
+				{
+					"type": "pf2-h1",
+					"name": "Nephilim",
+					"entries": [
+						"Countless legends tell of mortal dealings with immortal beings, and of the children born from those encounters. These children, known as planar scions, are mortals who inherit the supernatural essence of another plane, which manifests through their distinctive physical features and otherworldly powers. This section presents rules for nephilim, planar scions who can trace their extraplanar heritage back to celestials, fiends, monitors, and other entities who often become involved in the religious affairs of mortals.",
+						"A faithful priest of Erastil is visited by an angel in his youth, and many years later he fathers a child with the head of an elk and a birthmark shaped like Erastil's religious symbol, a bow and arrow. A powerful sorceress prevents an incursion from the Outer Rifts, but a sliver of demonic power infuses the child she carries, who is born with fangs and a pair of tiny horns. A planar caravan travels the Multiverse until its ranks are filled with children who possess devilish hooves and angelic halos. These children, known as nephilim, possess the ambition and capacity for growth and change inherent in their mortal forebears, while also possessing some portion of the power and appearance of an immortal entity or entities whose energies influenced their bloodline.",
+						"Nephilim are difficult to categorize by nature. Some possess both demonic and angelic traits, while others possess abilities that defy the neat categories of scholars. Many nephilim do have traits that strongly point to their lineage, though. Nephilim who carry the power of archons, sometimes known as lawbringers, may display golden eyes or flaming auras, while nephilim descended from devils, known as hellspawn, may have red skin and hooved feet. ",
+						"While the term nephilim broadly describes these individuals, some cultures use the name empyrean or cambion to refer to nephilim with celestial influence or fiendish influence respectively. Other nephilim sometimes earn the names of aphorite or ganzi, though this entry only focuses on empyreans and cambions.",
+						"If you want a character who is supernaturally infused with the power of the Outer Planes, whose appearance is striking and notable, and whose personal connections might extend beyond the bounds of the Universe, you should play a nephilim.",
+						{
+							"type": "pf2-h3",
+							"name": "You Might...",
+							"entries": [
+								{
+									"type": "list",
+									"items": [
+										"Have a strong sense of self-confidence due to the power or influence of your extraplanar heritage.",
+										"Lean into or rebel against your perceived extraplanar nature, embracing angelic goodness or twisting demonic rage towards better ends.",
+										"Find that building relationships with others is difficult, but treasure those who value you for who, and not what, you are."
+									]
+								}
+							]
+						},
+						{
+							"type": "pf2-h3",
+							"name": "Others Probably...",
+							"entries": [
+								{
+									"type": "list",
+									"items": [
+										"Assume you've faced numerous challenges or gained unfair advantages due to your heritage.",
+										"Mistake you for an agent of a holy or unholy organization.",
+										"Think you have associations with powerful extraplanar creatures, potentially trying to bargain with you for power of their own."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				"https://images.demiplane.com/elements/pathfinder-2e/heritages/heritage-nephilim-detail.png?format=webp&quality=90&width=1920"
+			],
+			"traits": [
+				"nefilim"
 			]
 		}
 	]

@@ -60,13 +60,9 @@ class BooksList {
 		});
 
 		this.addData(data);
-		const brewData = await BrewUtil.pAddBrewData();
-		await handleBrew(brewData);
-		BrewUtil.bind({lists: [this._list, this._listAlt]});
-		await BrewUtil.pAddLocalBrewData();
-		BrewUtil.makeBrewButton("manage-brew");
 		this._list.init();
 		this._listAlt.init();
+		$(`#campaigns-empty`).toggle(!this._dataList.length);
 
 		window.dispatchEvent(new Event("toolsLoaded"));
 	}

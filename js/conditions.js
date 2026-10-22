@@ -89,7 +89,7 @@ class ConditionsPage extends ListPage {
 			$content.append(Renderer.condition.getRenderedString(it));
 		}
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("condition");
+			const quickRules = await Renderer.utils.pGetQuickReference("condition");
 			$content.append(quickRules);
 		}
 
@@ -99,7 +99,7 @@ class ConditionsPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

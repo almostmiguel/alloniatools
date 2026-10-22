@@ -91,10 +91,10 @@ class AfflictionsPage extends ListPage {
 			$content.append(Renderer.affliction.getRenderedString(it));
 		}
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules(it.__prop);
+			const quickRules = await Renderer.utils.pGetQuickReference(it.__prop);
 			$content.append(quickRules);
 			if (it.temptedCurse) {
-				const quickRulesExtra = await Renderer.utils.pGetQuickRules("temptedCurse");
+				const quickRulesExtra = await Renderer.utils.pGetQuickReference("temptedCurse");
 				$content.append(quickRulesExtra);
 			}
 		}
@@ -104,7 +104,7 @@ class AfflictionsPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

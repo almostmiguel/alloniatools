@@ -91,7 +91,7 @@ class PlacesPage extends ListPage {
 			$content.append(Renderer.place.getRenderedString(it));
 		}
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules(it.category);
+			const quickRules = await Renderer.utils.pGetQuickReference(it.category);
 			$content.append(quickRules);
 		}
 
@@ -101,7 +101,7 @@ class PlacesPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

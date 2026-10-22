@@ -97,7 +97,7 @@ class HazardsPage extends ListPage {
 			$pgContent.append(Renderer.hazard.getRenderedString(it));
 		};
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("hazard");
+			const quickRules = await Renderer.utils.pGetQuickReference("hazard");
 			$pgContent.append(quickRules);
 		}
 		const statsTab = Renderer.utils.tabButton(
@@ -106,7 +106,7 @@ class HazardsPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

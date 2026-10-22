@@ -3,25 +3,24 @@
 		{
 			"name": "Humano",
 			"source": "PC1",
-			"remaster": true,
 			"page": 62,
 			"hp": 8,
 			"size": [
-				"medium"
+				"médio"
 			],
 			"speed": {
 				"walk": 7.5
 			},
 			"boosts": [
-				"Two free ability boosts"
+				"Duas melhorias de atributo livres"
 			],
 			"languages": [
-				"{@language Common|PC1}",
-				"Additional languages equal to 1 + your Intelligence modifier (if it's positive). Choose from the list of {@filter common languages|languages||Type=Common} and any other languages to which you have access (such as the languages prevalent in your region)."
+				"{@language Common}",
+				"Uma quantidade de idiomas adicionais igual ao seu modificador de inteligência (se for positivo). Escolha entre {@filter idiomas comuns|languages||Type=Comum} e quaisquer outros idiomas aos quais você tenha acesso (como os falados na sua região)."
 			],
 			"traits": [
 				"humano",
-				"humanoid"
+				"humanoide"
 			],
 			"flavor": [
 				"As unpredictable and varied as any of Golarion's peoples, humans have exceptional drive and the capacity to endure and expand. Though many civilizations thrived before humanity rose to prominence, humans have built some of the greatest and the most terrible societies throughout the course of history, and today they are the most populous people in the realms around the Inner Sea.",
@@ -33,20 +32,18 @@
 			],
 			"heritage": [
 				{
-					"name": "Skilled Heritage",
-					"shortName": "Skilled",
+					"name": "Humano perito",
+					"shortName": "Perito",
 					"source": "PC1",
-					"remaster": true,
 					"page": 63,
 					"entries": [
 						"Your ingenuity allows you to train in a wide variety of skills. You become trained in one skill of your choice. At 5th level, you become an expert in the chosen skill."
 					]
 				},
 				{
-					"name": "Versatile Heritage",
-					"shortName": "Versatile",
+					"name": "Humano versátil",
+					"shortName": "Versátil",
 					"source": "PC1",
-					"remaster": true,
 					"page": 63,
 					"entries": [
 						"Humanity's versatility and ambition have fueled its ascendance to be the most common ancestry in most nations throughout the world. Select a {@filter general feat|feats||type=general} of your choice for which you meet the prerequisites (as with your ancestry feat, you can select this general feat at any point during character creation)."

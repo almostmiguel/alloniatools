@@ -186,7 +186,6 @@ class SpellsPage extends ListPage {
 			list: this._list,
 			pHandleBrew: this._handleBrew.bind(this),
 		});
-		BrewUtil.makeBrewButton("manage-brew");
 		BrewUtil.bind({
 			filterBox: this._pageFilter.filterBox,
 			sourceFilter: this._pageFilter.sourceFilter,

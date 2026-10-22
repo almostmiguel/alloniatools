@@ -169,6 +169,12 @@
 		}
 	}
 
+	&--quick-reference {
+		.pf2-wrp-h1 > .pf2-wrp-h1 {
+			margin-top: 1rem;
+		}
+	}
+
 	&__option {
 		font-family: good-pro, sans-serif;
 		font-size: 1em;
@@ -425,16 +431,9 @@
 	font-style: italic;
 	font-size: 1em;
 	font-weight: 400;
-	text-align: justify;
+	text-align: center;
+	text-indent: 0;
 	line-height: 1.35em;
-
-	+ .pf2-h1-flavor {
-		text-indent: 1em;
-	}
-
-	&--centered {
-		text-align: center;
-	}
 }
 
 .pf2-flavor {
@@ -470,6 +469,7 @@
 	padding: 1rem;
 	text-align: center;
 }
+
 
 .pf2-h2 {
 	color: #002664;
@@ -1519,10 +1519,6 @@
 	flex-grow: 1;
 
 	.pf2-p {
-		text-align: left;
-	}
-
-	.pf2-h1-flavor {
 		text-align: left;
 	}
 

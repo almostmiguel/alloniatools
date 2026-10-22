@@ -97,7 +97,7 @@ class BackgroundPage extends ListPage {
 			$pgContent.append(Renderer.background.getRenderedString(bg));
 		};
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("background");
+			const quickRules = await Renderer.utils.pGetQuickReference("background");
 			$pgContent.append(quickRules);
 		}
 		const statsTab = Renderer.utils.tabButton(
@@ -106,7 +106,7 @@ class BackgroundPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => { },
 			buildInfoTab,
 		);

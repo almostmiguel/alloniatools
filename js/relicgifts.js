@@ -89,10 +89,10 @@ class RelicGiftsPage extends ListPage {
 			$content.append(Renderer.relicGift.getRenderedString(it));
 		}
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("relicGift");
+			const quickRules = await Renderer.utils.pGetQuickReference("relicGift");
 			$content.append(quickRules);
 			if (it.miscTags.includes("soulSeed")) {
-				const quickRulesExtra = await Renderer.utils.pGetQuickRules("soulSeed");
+				const quickRulesExtra = await Renderer.utils.pGetQuickReference("soulSeed");
 				$content.append(quickRulesExtra);
 			}
 		}
@@ -103,7 +103,7 @@ class RelicGiftsPage extends ListPage {
 			buildStatsTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

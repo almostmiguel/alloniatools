@@ -354,7 +354,6 @@ class ItemsPage extends ListPage {
 			.then(() => BrewUtil.bind({ lists: [this._list], pHandleBrew: this._pHandleBrew.bind(this) }))
 			.then(() => BrewUtil.pAddLocalBrewData())
 			.then(async () => {
-				BrewUtil.makeBrewButton("manage-brew");
 				BrewUtil.bind({ lists: [this._list], filterBox: this._pageFilter.filterBox, sourceFilter: this._pageFilter.sourceFilter });
 				await ListUtil.pLoadState();
 				RollerUtil.addListRollButton();

@@ -68,6 +68,29 @@
 // endregion
 
 // region New
+.page__nav-date {
+	width: 3em;
+	flex-shrink: 0;
+}
+
+.nav2-campaigns {
+	min-width: 300px;
+	max-width: calc(100vw - 30px);
+	max-height: 70vh;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+
+	.nav__link {
+		display: flex;
+		align-items: center;
+	}
+
+	.nav2-list__disp-source {
+		flex-shrink: 0;
+		top: 0;
+	}
+}
+
 .nav2 {
 	&-list__ {
 		&label {

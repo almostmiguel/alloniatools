@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
-	<title>Adventures - Pf2eTools</title>
+	<title>Campaigns - AvalonTools</title>
 
 	<!--PF2ETOOLS_SCRIPT_HEAD_ANCHOR-->
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -18,7 +18,7 @@
 
 	<!-- Embeds -->
 	<meta content="Pf2eTools" property="og:site_name">
-	<meta content="Adventures" property="og:title">
+	<meta content="Campaigns" property="og:title">
 	<meta content="https://pf2etools.com/favicon-256x256.png" property="og:image">
 
 	<!-- Favicons -->
@@ -82,8 +82,8 @@
 
 <header class="hidden-xs hidden-sm page__header">
 	<div class="container">
-		<h1 class="page__title">Adventures</h1>
-		<p class="page__subtitle">Browse adventures by name and contents</p>
+		<h1 class="page__title">Campaigns</h1>
+		<p class="page__subtitle">Browse your campaigns and session notes</p>
 	</div>
 </header>
 
@@ -97,28 +97,26 @@
 	<div class="view-col" id="listcontainer">
 		<div class="lst__form-top">
 			<input type="search" id="search" autocomplete="off" autocapitalize="off" spellcheck="false"
-				   class="search form-control" placeholder="Find adventure...">
+				   class="search form-control" placeholder="Find campaign...">
 			<button class="btn btn-xs btn-default" title="Reset Selection" id="reset"><span class="glyphicon glyphicon-refresh"></span></button>
 		</div>
 
 		<div id="filtertools" class="input-group input-group--bottom flex no-shrink">
 			<button class="col-6 sort btn btn-default btn-xs" data-sort="name">Name <span class="caret_wrp"></span>
 			</button>
-			<button class="col-2-5 sort btn btn-default btn-xs" data-sort="storyline">Storyline <span
+			<button class="col-2-5 sort btn btn-default btn-xs" data-sort="storyline">Setting <span
 				class="caret_wrp"></span></button>
-			<button class="col-1-3 sort btn btn-default btn-xs" data-sort="level">Levels <span class="caret_wrp"></span>
+			<button class="col-1-3 sort btn btn-default btn-xs" data-sort="sessions">Sessions <span class="caret_wrp"></span>
 			</button>
-			<button class="sort btn btn-default btn-xs" data-sort="published">Published <span class="caret_wrp"></span>
+			<button class="sort btn btn-default btn-xs" data-sort="published">Started <span class="caret_wrp"></span>
 			</button>
 		</div>
 
+		<p id="campaigns-empty" class="text-muted text-center my-3" style="display: none;">No campaigns yet. Add a campaign to data/adventures.json to get started.</p>
 		<ul class="list books">
 			<!-- populate with JS -->
 		</ul>
 
-		<div class="text-center wrp-footer-buttons">
-			<button class="btn btn-xs btn-info" id="manage-brew">Manage Homebrew</button>
-		</div>
 
 		<hr class="hr-3 mt-4">
 

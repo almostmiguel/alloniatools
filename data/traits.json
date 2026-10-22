@@ -1056,6 +1056,18 @@
 			]
 		},
 		{
+			"name": "Nefilim",
+			"source": "PC1",
+			"page": 459,
+			"categories": [
+				"Ancestry & Heritage",
+				"Creature"
+			],
+			"entries": [
+				"Criaturas com este traço têm a herança versátil nefilim. Nefilins são herdeiros planares descendentes de seres imortais de outros planos. Habilidades com este traço só podem ser usadas ou selecionadas por nefilins."
+			]
+		},
+		{
 			"name": "Nuuma",
 			"source": "PC1",
 			"page": 460,

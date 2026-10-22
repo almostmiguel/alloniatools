@@ -89,7 +89,7 @@ class CompanionsFamiliarsPage extends ListPage {
 			$pgContent.append(Renderer.companionfamiliar.getRenderedString(it));
 		};
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules(it.__prop);
+			const quickRules = await Renderer.utils.pGetQuickReference(it.__prop);
 			$pgContent.append(quickRules);
 		}
 		const buildFluffTab = () => {
@@ -106,7 +106,7 @@ class CompanionsFamiliarsPage extends ListPage {
 			buildFluffTab,
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

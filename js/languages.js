@@ -92,7 +92,7 @@ class LanguagesPage extends ListPage {
 			$content.append(Renderer.language.getRenderedString(it));
 		}
 		const buildInfoTab = async () => {
-			const quickRules = await Renderer.utils.pGetQuickRules("language");
+			const quickRules = await Renderer.utils.pGetQuickReference("language");
 			$content.append(quickRules);
 		}
 		const statTab = Renderer.utils.tabButton(
@@ -182,7 +182,7 @@ class LanguagesPage extends ListPage {
 			},
 		);
 		const infoTab = Renderer.utils.tabButton(
-			"Quick Rules",
+			"Quick Reference",
 			() => {},
 			buildInfoTab,
 		);

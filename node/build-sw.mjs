@@ -55,7 +55,6 @@ const workboxPrecacheBuildResult = await injectManifest({
 		"fonts/AlbertusMT.ttf",
 		"fonts/Basing.ttf",
 		"fonts/Taroca.ttf",
-		"img/gmscreen/moon.webp",
 		"img/*.webp",
 		"fonts/fa-light*",
 		// we need to cache the sw-injector or we won't be injected

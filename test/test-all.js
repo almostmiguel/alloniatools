@@ -10,6 +10,18 @@ async function main () {
 	if (!testsPassed) handleFail();
 	testsPassed = testsPassed && await require("./test-misc");
 	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-campaigns");
+	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-reference-data");
+	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-navigation");
+	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-heritage-images");
+	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-ancestry-traits");
+	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-ancestry-feat-filters");
+	if (!testsPassed) handleFail();
 	process.exit(0);
 }
 

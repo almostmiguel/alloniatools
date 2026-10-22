@@ -169,7 +169,9 @@ PropOrder._VE_HERITAGE = [
 	"traits",
 
 	"entries",
+	"flavor",
 	"info",
+	"images",
 	"summary",
 ];
 PropOrder._BACKGROUND = [

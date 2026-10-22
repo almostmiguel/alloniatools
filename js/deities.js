@@ -129,17 +129,17 @@ function renderStatblock (deity) {
 	}
 	const buildInfoTab = async () => {
 		if (deity.category === "Philosophy") {
-			const quickRules = await Renderer.utils.pGetQuickRules("deityPhilosophy");
+			const quickRules = await Renderer.utils.pGetQuickReference("deityPhilosophy");
 			$content.append(quickRules);
 		} else {
-			const quickRules = await Renderer.utils.pGetQuickRules("deity");
+			const quickRules = await Renderer.utils.pGetQuickReference("deity");
 			$content.append(quickRules);
 			if (deity.category === "Pantheon") {
-				const quickRulesExtra = await Renderer.utils.pGetQuickRules("deityPantheon");
+				const quickRulesExtra = await Renderer.utils.pGetQuickReference("deityPantheon");
 				$content.append(quickRulesExtra);
 			}
 			if (deity.intercession) {
-				const quickRulesExtra = await Renderer.utils.pGetQuickRules("deityIntercession");
+				const quickRulesExtra = await Renderer.utils.pGetQuickReference("deityIntercession");
 				$content.append(quickRulesExtra);
 			}
 		}
@@ -163,7 +163,7 @@ function renderStatblock (deity) {
 		buildFluffTab,
 	);
 	const infoTab = Renderer.utils.tabButton(
-		"Quick Rules",
+		"Quick Reference",
 		() => {},
 		buildInfoTab,
 	);
