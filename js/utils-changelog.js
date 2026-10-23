@@ -4,7 +4,7 @@ class UtilsChangelog {
 	static renderChangelog (changelog, $wrp) {
 		$wrp.empty();
 		if (!changelog.length) {
-			$(`<p class="text-muted text-center mt-3">No updates recorded yet.</p>`).appendTo($wrp);
+			$(`<p class="text-muted text-center mt-3">Nenhuma alteração registrada.</p>`).appendTo($wrp);
 			return;
 		}
 

@@ -211,7 +211,7 @@ class ItemsPage extends ListPage {
 						values,
 						isResolveItem: true,
 						default: ~defaultSel ? defaultSel : 0,
-						title: "Select Currency Conversion Table",
+						title: "Selecionar Tabela de Conversão de Moedas",
 						fnDisplay: it => it === null ? values[0] : it,
 					});
 					if (userSel == null) return;
@@ -246,7 +246,7 @@ class ItemsPage extends ListPage {
 						values: modes,
 						isResolveItem: true,
 						default: ~defaultSel ? defaultSel : 0,
-						title: "Select Display Mode",
+						title: "Selecionar Modo de Exibição",
 						fnDisplay: it => it === null ? modes[0] : it,
 					});
 					if (userSel == null) return;
@@ -265,7 +265,7 @@ class ItemsPage extends ListPage {
 		await ExcludeUtil.pInitialise();
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`).title("Atalho: F"),
 			$btnReset: $(`#reset`),
 		});
 		$(`#btn-equip-buy`).on("click", () => {
@@ -423,7 +423,7 @@ class ItemsPage extends ListPage {
 
 		// region popout button
 		const $btnPop = ListUtil.getOrTabRightButton(`btn-popout`, `new-window`);
-		$btnPop.off("click").title("Popout Window (SHIFT for Source Data)");
+		$btnPop.off("click").title("Abrir em Janela Separada (SHIFT para Dados de Origem)");
 		$btnPop.on(
 			"click",
 			(evt) => {

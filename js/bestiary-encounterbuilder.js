@@ -107,27 +107,27 @@ class EncounterBuilder extends ProxyBase {
 		$(`.ecgen_rng_trivial`).click((evt) => {
 			evt.preventDefault();
 			this.pDoGenerateEncounter("trivial");
-			$btnGen.data("mode", "trivial").text("Random Trivial").title("Randomly generate a Trivial-threat encounter");
+			$btnGen.data("mode", "trivial").text("Sortear Trivial").title("Gerar encontro aleatório de ameaça trivial");
 		});
 		$(`.ecgen_rng_low`).click((evt) => {
 			evt.preventDefault();
 			this.pDoGenerateEncounter("low");
-			$btnGen.data("mode", "low").text("Random Low").title("Randomly generate a Low-threat encounter");
+			$btnGen.data("mode", "low").text("Sortear Baixa").title("Gerar encontro aleatório de ameaça baixa");
 		});
 		$(`.ecgen_rng_moderate`).click((evt) => {
 			evt.preventDefault();
 			this.pDoGenerateEncounter("moderate");
-			$btnGen.data("mode", "moderate").text("Random Moderate").title("Randomly generate a Moderate-threat encounter");
+			$btnGen.data("mode", "moderate").text("Sortear Moderada").title("Gerar encontro aleatório de ameaça moderada");
 		});
 		$(`.ecgen_rng_severe`).click((evt) => {
 			evt.preventDefault();
 			this.pDoGenerateEncounter("severe");
-			$btnGen.data("mode", "severe").text("Random Severe").title("Randomly generate a Severe-threat encounter");
+			$btnGen.data("mode", "severe").text("Sortear Severa").title("Gerar encontro aleatório de ameaça severa");
 		});
 		$(`.ecgen_rng_extreme`).click((evt) => {
 			evt.preventDefault();
 			this.pDoGenerateEncounter("extreme");
-			$btnGen.data("mode", "extreme").text("Random Extreme").title("Randomly generate an Extreme-threat encounter");
+			$btnGen.data("mode", "extreme").text("Sortear Extrema").title("Randomly generate an Extreme-threat encounter");
 		});
 	}
 
@@ -142,27 +142,27 @@ class EncounterBuilder extends ProxyBase {
 		$(`.ecgen_adj_trivial`).click((evt) => {
 			evt.preventDefault();
 			this.pDoAdjustEncounter("trivial");
-			$btnAdjust.data("mode", "trivial").text("Adjust to Trivial").title("Adjust the current encounter difficulty to a Trivial-threat encounter");
+			$btnAdjust.data("mode", "trivial").text("Ajustar para Trivial").title("Ajustar o encontro atual para ameaça trivial");
 		});
 		$(`.ecgen_adj_low`).click((evt) => {
 			evt.preventDefault();
 			this.pDoAdjustEncounter("low");
-			$btnAdjust.data("mode", "low").text("Adjust to Low").title("Adjust the current encounter difficulty to a Low-threat encounter");
+			$btnAdjust.data("mode", "low").text("Ajustar para Baixa").title("Ajustar o encontro atual para ameaça baixa");
 		});
 		$(`.ecgen_adj_moderate`).click((evt) => {
 			evt.preventDefault();
 			this.pDoAdjustEncounter("moderate");
-			$btnAdjust.data("mode", "moderate").text("Adjust to Moderate").title("Adjust the current encounter difficulty to a Moderate-threat encounter");
+			$btnAdjust.data("mode", "moderate").text("Ajustar para Moderada").title("Ajustar o encontro atual para ameaça moderada");
 		});
 		$(`.ecgen_adj_severe`).click((evt) => {
 			evt.preventDefault();
 			this.pDoAdjustEncounter("severe");
-			$btnAdjust.data("mode", "severe").text("Adjust to Severe").title("Adjust the current encounter difficulty to a Severe-threat encounter");
+			$btnAdjust.data("mode", "severe").text("Ajustar para Severa").title("Ajustar o encontro atual para ameaça severa");
 		});
 		$(`.ecgen_adj_extreme`).click((evt) => {
 			evt.preventDefault();
 			this.pDoAdjustEncounter("extreme");
-			$btnAdjust.data("mode", "extreme").text("Adjust to Extreme").title("Adjust the current encounter difficulty to an Extreme-threat encounter");
+			$btnAdjust.data("mode", "extreme").text("Ajustar para Extrema").title("Ajustar o encontro atual para ameaça extrema");
 		});
 	}
 
@@ -240,7 +240,7 @@ class EncounterBuilder extends ProxyBase {
 
 			this.updateDifficulty();
 		} catch (e) {
-			JqueryUtil.doToast({content: `Could not load encounter! Was the file valid?`, type: "danger"});
+			JqueryUtil.doToast({content: `Não foi possível carregar o encontro. Confira se o arquivo é válido.`, type: "danger"});
 			this.pReset();
 		}
 	}
@@ -294,7 +294,7 @@ class EncounterBuilder extends ProxyBase {
 	async pDoAdjustEncounter (difficulty) {
 		let currentEncounter = EncounterBuilderUtils.getSublistedEncounter();
 		if (!currentEncounter.length) {
-			return JqueryUtil.doToast({content: `The current encounter contained no creatures! Please add some first.`, type: "warning"})
+			return JqueryUtil.doToast({content: `O encontro não possui criaturas. Adicione algumas primeiro.`, type: "warning"})
 		}
 		currentEncounter.forEach(creatureType => creatureType.count = 1);
 
@@ -309,7 +309,7 @@ class EncounterBuilder extends ProxyBase {
 		];
 
 		if (encounterXp.XP > targetMax) {
-			JqueryUtil.doToast({content: `Could not adjust the current encounter to ${difficulty.uppercaseFirst()}, try removing some creatures!`, type: "danger"})
+			JqueryUtil.doToast({content: `Não foi possível ajustar o encontro para ameaça ${Parser.uiToFull(difficulty.uppercaseFirst()).toLowerCase()}. Tente remover algumas criaturas.`, type: "danger"})
 		} else {
 			// randomly choose creatures to skip
 			// generate array of [0, 1, ... n-1] where n = number of unique creatures
@@ -445,7 +445,7 @@ class EncounterBuilder extends ProxyBase {
 		}
 		if (EncounterBuilderUtils.calculateListEncounterXp(partyMeta).XP === 0) {
 			JqueryUtil.doToast({
-				content: `Could not generate a ${difficulty.uppercaseFirst()}-threat encounter with filtered creatures! Try adjusting the filters.`,
+				content: `Não foi possível gerar um encontro de ameaça ${Parser.uiToFull(difficulty.uppercaseFirst()).toLowerCase()} com as criaturas filtradas. Ajuste os filtros.`,
 				type: "warning",
 			});
 		}
@@ -639,10 +639,10 @@ class EncounterBuilder extends ProxyBase {
 		const {partyMeta, encounter} = this.calculateXp();
 
 		const $elTrivial = $(`.ecgen__trivial`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_TRIVIAL}">Trivial:</span> ${partyMeta.trivial.toLocaleString()} XP`);
-		const $elLow = $(`.ecgen__low`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_LOW}">Low:</span> ${partyMeta.low.toLocaleString()} XP`);
-		const $elModerate = $(`.ecgen__moderate`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_MODERATE}">Moderate:</span> ${partyMeta.moderate.toLocaleString()} XP`);
-		const $elSevere = $(`.ecgen__severe`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_SEVERE}">Severe:</span> ${partyMeta.severe.toLocaleString()} XP`);
-		const $elExtreme = $(`.ecgen__extreme`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_EXTREME}">Extreme:</span> ${partyMeta.extreme.toLocaleString()} XP`);
+		const $elLow = $(`.ecgen__low`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_LOW}">Baixa:</span> ${partyMeta.low.toLocaleString()} XP`);
+		const $elModerate = $(`.ecgen__moderate`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_MODERATE}">Moderada:</span> ${partyMeta.moderate.toLocaleString()} XP`);
+		const $elSevere = $(`.ecgen__severe`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_SEVERE}">Severa:</span> ${partyMeta.severe.toLocaleString()} XP`);
+		const $elExtreme = $(`.ecgen__extreme`).removeClass("bold").html(`<span class="help--subtle" title="${EncounterBuilder._TITLE_EXTREME}">Extrema:</span> ${partyMeta.extreme.toLocaleString()} XP`);
 
 		if (encounter.feasibleCount + encounter.underCount + encounter.overCount !== 0) {
 			let difficulty = "TPK";
@@ -832,7 +832,7 @@ class EncounterBuilder extends ProxyBase {
 	addAdvancedColumnFooter () {
 		$(`.ecgen__wrp_add_players`).append(`
 			<div class="ecgen__player_advanced_narrow ecgen__player_advanced_extra_foot mr-1">
-				<button class="btn btn-xs btn-danger ecgen__advanced_remove_col" onclick="encounterBuilder.removeAdvancedColumn(this)" title="Remove Column"><span class="glyphicon-trash glyphicon"/></button>
+				<button class="btn btn-xs btn-danger ecgen__advanced_remove_col" onclick="encounterBuilder.removeAdvancedColumn(this)" title="Remover Coluna"><span class="glyphicon-trash glyphicon"/></button>
 			</div>
 		`);
 	}
@@ -877,7 +877,7 @@ class EncounterBuilder extends ProxyBase {
 					<input value="${level || 1}" min="1" max="20" type="number" class="ecgen__player_advanced__level ecgen__player_advanced_narrow form-control form-control--minimal input-xs text-right mr-1" onchange="encounterBuilder.updateDifficulty()">
 					${extraVals.map(it => EncounterBuilder.getAdvancedPlayerDetailColumn(it)).join("")}
 					${!isFirst ? `
-					<button class="btn btn-danger btn-xs ecgen__del_players" onclick="encounterBuilder.removeAdvancedPlayerRow(this)" title="Remove Player">
+					<button class="btn btn-danger btn-xs ecgen__del_players" onclick="encounterBuilder.removeAdvancedPlayerRow(this)" title="Remover Jogador">
 						<span class="glyphicon glyphicon-trash"></span>
 					</button>
 					` : `<div class="ecgen__del_players_filler"/>`}
@@ -903,7 +903,7 @@ class EncounterBuilder extends ProxyBase {
 				</div>
 				${!isFirst ? `
 				<div class="ml-2 flex-v-center" style="height: 20px;">
-					<button class="btn btn-danger btn-xs ecgen__del_players" onclick="encounterBuilder.removePlayerRow(this)" title="Remove Player Group">
+					<button class="btn btn-danger btn-xs ecgen__del_players" onclick="encounterBuilder.removePlayerRow(this)" title="Remover Grupo de Jogadores">
 						<span class="glyphicon glyphicon-trash"></span>
 					</button>
 				</div>
@@ -914,19 +914,19 @@ class EncounterBuilder extends ProxyBase {
 
 	static getButtons (monId) {
 		return `<span class="ecgen__visible col-1 no-wrap pl-0" onclick="event.preventDefault(); event.stopPropagation()">
-			<button title="Add (SHIFT for 5)" class="btn btn-success btn-xs ecgen__btn_list" onclick="encounterBuilder.handleClick(event, ${monId}, 1)"><span class="glyphicon glyphicon-plus"></span></button>
-			<button title="Subtract (SHIFT for 5)" class="btn btn-danger btn-xs ecgen__btn_list" onclick="encounterBuilder.handleClick(event, ${monId}, 0)"><span class="glyphicon glyphicon-minus"></span></button>
+			<button title="Adicionar (SHIFT para 5)" class="btn btn-success btn-xs ecgen__btn_list" onclick="encounterBuilder.handleClick(event, ${monId}, 1)"><span class="glyphicon glyphicon-plus"></span></button>
+			<button title="Remover (SHIFT para 5)" class="btn btn-danger btn-xs ecgen__btn_list" onclick="encounterBuilder.handleClick(event, ${monId}, 0)"><span class="glyphicon glyphicon-minus"></span></button>
 		</span>`;
 	}
 
 	static $getSublistButtons (monId, customHashId) {
-		const $btnAdd = $(`<button title="Add (SHIFT for 5)" class="btn btn-success btn-xs ecgen__btn_list"><span class="glyphicon glyphicon-plus"/></button>`)
+		const $btnAdd = $(`<button title="Adicionar (SHIFT para 5)" class="btn btn-success btn-xs ecgen__btn_list"><span class="glyphicon glyphicon-plus"/></button>`)
 			.click(evt => encounterBuilder.handleClick(evt, monId, true, customHashId));
 
-		const $btnSub = $(`<button title="Subtract (SHIFT for 5)" class="btn btn-danger btn-xs ecgen__btn_list"><span class="glyphicon glyphicon-minus"/></button>`)
+		const $btnSub = $(`<button title="Remover (SHIFT para 5)" class="btn btn-danger btn-xs ecgen__btn_list"><span class="glyphicon glyphicon-minus"/></button>`)
 			.click(evt => encounterBuilder.handleClick(evt, monId, false, customHashId));
 
-		const $btnRandomize = $(`<button title="Randomize Creature" class="btn btn-default btn-xs ecgen__btn_list"><span class="glyphicon glyphicon-random" style="right: 1px"/></button>`)
+		const $btnRandomize = $(`<button title="Sortear Criatura" class="btn btn-default btn-xs ecgen__btn_list"><span class="glyphicon glyphicon-random" style="right: 1px"/></button>`)
 			.click(() => encounterBuilder.pHandleShuffleClick(monId));
 
 		return $$`<span class="ecgen__visible col-1-5 no-wrap pl-0">
@@ -979,7 +979,7 @@ class EncounterBuilder extends ProxyBase {
 		this._addHook("state", "activeKey", hookName);
 		hookName();
 
-		this._$btnNew = $(`<button class="btn btn-default btn-xs mr-2" title="New Encounter (SHIFT-click to reset players)"><span class="glyphicon glyphicon glyphicon-file"/></button>`)
+		this._$btnNew = $(`<button class="btn btn-default btn-xs mr-2" title="Novo Encontro (SHIFT + clique para redefinir jogadores)"><span class="glyphicon glyphicon glyphicon-file"/></button>`)
 			.click(evt => {
 				this._state.activeKey = null;
 				encounterBuilder.pReset({isNotResetPlayers: !evt.shiftKey, isNotAddInitialPlayers: !evt.shiftKey});
@@ -989,7 +989,7 @@ class EncounterBuilder extends ProxyBase {
 		hookDisplayNew();
 
 		// TODO set window title to encounter name on save?
-		this._$btnSave = $(`<button class="btn btn-default btn-xs mr-2" title="Save Encounter"/>`)
+		this._$btnSave = $(`<button class="btn btn-default btn-xs mr-2" title="Salvar Encontro"/>`)
 			.click(async () => {
 				if (this._state.activeKey) {
 					const encounter = this._state.savedEncounters[this._state.activeKey];
@@ -1000,9 +1000,9 @@ class EncounterBuilder extends ProxyBase {
 						[this._state.activeKey]: encounter,
 					};
 					this.pSetSavedEncountersThrottled();
-					JqueryUtil.doToast({type: "success", content: "Saved!"});
+					JqueryUtil.doToast({type: "success", content: "Salvo!"});
 				} else {
-					const name = await InputUiUtil.pGetUserString({title: "Enter Encounter Name"});
+					const name = await InputUiUtil.pGetUserString({title: "Digite o Nome do Encontro"});
 
 					if (name != null) {
 						const key = CryptUtil.uid();
@@ -1015,7 +1015,7 @@ class EncounterBuilder extends ProxyBase {
 						};
 						this._state.activeKey = key;
 						this.pSetSavedEncountersThrottled();
-						JqueryUtil.doToast({type: "success", content: "Saved!"});
+						JqueryUtil.doToast({type: "success", content: "Salvo!"});
 					}
 				}
 			});
@@ -1028,7 +1028,7 @@ class EncounterBuilder extends ProxyBase {
 			const prev = inStorage.savedEncounters[this._state.activeKey];
 			if (!prev) {
 				return JqueryUtil.doToast({
-					content: `Could not find encounter in storage! Has it been deleted?`,
+					content: `Não foi possível encontrar o encontro salvo. Ele pode ter sido excluído.`,
 					type: "danger",
 				});
 			} else {
@@ -1039,13 +1039,13 @@ class EncounterBuilder extends ProxyBase {
 				await pLoadActiveEncounter();
 			}
 		};
-		this._$btnReload = $(`<button class="btn btn-default btn-xs mr-2" title="Reload Current Encounter"><span class="glyphicon glyphicon-refresh"></span></button>`)
+		this._$btnReload = $(`<button class="btn btn-default btn-xs mr-2" title="Recarregar Encontro Atual"><span class="glyphicon glyphicon-refresh"></span></button>`)
 			.click(() => pDoReload());
 
-		this._$btnLoad = $(`<button class="btn btn-default btn-xs">Load Encounter</button>`)
+		this._$btnLoad = $(`<button class="btn btn-default btn-xs">Carregar Encontro</button>`)
 			.click(async () => {
 				const inStorage = await EncounterUtil.pGetSavedState();
-				const {$modalInner} = UiUtil.getShowModal({title: "Saved Encounters"});
+				const {$modalInner} = UiUtil.getShowModal({title: "Encontros Salvos"});
 				const $wrpRows = $(`<div class="flex-col w-100 h-100"/>`).appendTo($modalInner);
 
 				const encounters = inStorage.savedEncounters;
@@ -1065,7 +1065,7 @@ class EncounterBuilder extends ProxyBase {
 									this.pSetSavedEncountersThrottled();
 								});
 
-							const $btnLoad = $(`<button class="btn btn-primary btn-xs mr-2">Load</button>`)
+							const $btnLoad = $(`<button class="btn btn-primary btn-xs mr-2">Carregar</button>`)
 								.click(async () => {
 									// if we've already got the correct encounter loaded, reload it
 									if (this._state.activeKey === k) await pDoReload();
@@ -1081,7 +1081,7 @@ class EncounterBuilder extends ProxyBase {
 										.filter(it => it !== k)
 										.mergeMap(it => ({[it]: this._state.savedEncounters[it]}));
 									$row.remove();
-									if (!--rendered) $$`<div class="w-100 flex-vh-center italic">No saved encounters</div>`.appendTo($wrpRows);
+									if (!--rendered) $$`<div class="w-100 flex-vh-center italic">Nenhum encontro salvo</div>`.appendTo($wrpRows);
 									this.pSetSavedEncountersThrottled();
 								});
 
@@ -1091,7 +1091,7 @@ class EncounterBuilder extends ProxyBase {
 								${$btnDelete}
 							</div>`.appendTo($wrpRows);
 						});
-				} else $$`<div class="w-100 flex-vh-center italic">No saved encounters</div>`.appendTo($wrpRows)
+				} else $$`<div class="w-100 flex-vh-center italic">Nenhum encontro salvo</div>`.appendTo($wrpRows)
 			});
 
 		const hookActiveKey = () => {

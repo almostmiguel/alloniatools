@@ -136,8 +136,7 @@ class PageFilterSpells extends PageFilter {
 		this._traitFilter = new TraitsFilter({
 			header: "Traits",
 			discardCategories: {
-				Class: true,
-				School: true,
+				class: true,
 			},
 		});
 		this._schoolFilter = new Filter({
@@ -187,12 +186,12 @@ class PageFilterSpells extends PageFilter {
 		spell._fTraits = spell.traits.map((t) => Parser.getTraitName(t));
 		if (
 			!spell._fTraits
-				.map((t) => Renderer.trait.isTraitInCategory(t, "Rarity"))
+				.map((t) => Renderer.trait.isTraitInCategory(t, "rarity"))
 				.some(Boolean)
-		) { spell._fTraits.push("Common"); }
+		) { spell._fTraits.push(Renderer.trait.getDefaultRarity()); }
 		spell._fClasses =
 			spell._fTraits.filter((t) =>
-				Renderer.trait.isTraitInCategory(t, "Class"),
+				Renderer.trait.isTraitInCategory(t, "class"),
 			) || [];
 		spell._fSubClasses = Object.entries(spell.subclass || {})
 			.map(([k, v]) => {

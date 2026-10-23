@@ -208,17 +208,6 @@
 					"subclassFeatures": [
 						"Patron|Witch|PC1|Wilding Steward|PC1|1"
 					]
-				},
-				{
-					"name": "Cobyslarni",
-					"type": "Patron Theme",
-					"shortName": "Cobyslarni",
-					"source": "LORA",
-					"remaster": true,
-					"page": 44,
-					"subclassFeatures": [
-						"Patron|Witch|PC1|Cobyslarni|LORA|1"
-					]
 				}
 			],
 			"flavor": [

@@ -182,7 +182,7 @@ class RuneBuilder extends ProxyBase {
 				confirm = true;
 			} else if (this.baseItem.category !== selectedItem.category) {
 				confirm = await InputUiUtil.pGetUserBoolean({
-					title: "Changing to a different item category will remove selected runes.",
+					title: "Alterar a categoria do item removerá as runas selecionadas.",
 					textYesRemember: "Save & Create New",
 					textYes: "OK",
 					textNo: "Cancel",
@@ -287,7 +287,7 @@ class RuneBuilder extends ProxyBase {
 
 		const $ele = $$`<li class="row" data-idx="${idx}"><a class="lst--border">
 			<span class="col-1 no-wrap pl-0 text-center" onclick="event.preventDefault(); event.stopPropagation()">
-				<button title="Subtract" class="btn btn-danger btn-xs rigen__btn_list" onclick="runeBuilder.handleClick(event, ${idx}, 0)"><span class="glyphicon glyphicon-minus"></span></button>
+				<button title="Remover" class="btn btn-danger btn-xs rigen__btn_list" onclick="runeBuilder.handleClick(event, ${idx}, 0)"><span class="glyphicon glyphicon-minus"></span></button>
 			</span>
 			<span class="col-1"><span class="fa fa-ellipsis-h"></span></span>
 			<span class="bold col-4">${item.name}</span>
@@ -370,8 +370,8 @@ class RuneBuilder extends ProxyBase {
 
 	static getButtons (itemId) {
 		return `<span class="rigen__visible col-3 no-wrap pl-0 text-center" onclick="event.preventDefault(); event.stopPropagation()">
-			<button id="rigen__add-btn-${itemId}" title="Add" class="btn btn-success btn-xs rigen__btn_list" onclick="runeBuilder.handleClick(event, ${itemId}, 1)"><span class="glyphicon glyphicon-plus"></span></button>
-			<button id="rigen__subtract-btn-${itemId}" title="Subtract" class="btn btn-danger btn-xs rigen__btn_list hidden" onclick="runeBuilder.handleClick(event, ${itemId}, 0)"><span class="glyphicon glyphicon-minus"></span></button>
+			<button id="rigen__add-btn-${itemId}" title="Adicionar" class="btn btn-success btn-xs rigen__btn_list" onclick="runeBuilder.handleClick(event, ${itemId}, 1)"><span class="glyphicon glyphicon-plus"></span></button>
+			<button id="rigen__subtract-btn-${itemId}" title="Remover" class="btn btn-danger btn-xs rigen__btn_list hidden" onclick="runeBuilder.handleClick(event, ${itemId}, 0)"><span class="glyphicon glyphicon-minus"></span></button>
 		</span>`;
 	}
 
@@ -390,7 +390,7 @@ class RuneBuilder extends ProxyBase {
 			this.pSetSavedRuneItemsThrottled();
 		};
 
-		this._$btnSave = $(`<button class="btn btn-default btn-xs mr-2" title="Save Item"><span class="glyphicon glyphicon-floppy-disk"/></button>`)
+		this._$btnSave = $(`<button class="btn btn-default btn-xs mr-2" title="Salvar Item"><span class="glyphicon glyphicon-floppy-disk"/></button>`)
 			.click(() => this.pSaveRuneItemAndState());
 
 		const pDoReload = async () => {
@@ -409,13 +409,13 @@ class RuneBuilder extends ProxyBase {
 				await pLoadActiveRuneItem();
 			}
 		};
-		this._$btnReload = $(`<button class="btn btn-default btn-xs mr-2" title="Reload Current Item"><span class="glyphicon glyphicon-refresh"></span></button>`)
+		this._$btnReload = $(`<button class="btn btn-default btn-xs mr-2" title="Recarregar Item Atual"><span class="glyphicon glyphicon-refresh"></span></button>`)
 			.click(() => pDoReload());
 
-		this._$btnLoad = $(`<button class="btn btn-default btn-xs">Saved Items</button>`)
+		this._$btnLoad = $(`<button class="btn btn-default btn-xs">Itens Salvos</button>`)
 			.click(async () => {
 				const inStorage = await RuneItemUtil.pGetSavedState();
-				const {$modalInner} = UiUtil.getShowModal({title: "Saved Items"});
+				const {$modalInner} = UiUtil.getShowModal({title: "Itens Salvos"});
 				const $wrpRows = $(`<div class="flex-col w-100 h-100"/>`).appendTo($modalInner);
 
 				const runeItems = inStorage.savedRuneItems;
@@ -426,7 +426,7 @@ class RuneBuilder extends ProxyBase {
 						.forEach(([k, v]) => {
 							const $divName = $(`<div class="row w-100 mr-2 lst--border"><span class="bold text-left">${v.name}</span></div>`);
 
-							const $btnLoad = $(`<button class="btn btn-primary btn-xs mr-2">Load</button>`)
+							const $btnLoad = $(`<button class="btn btn-primary btn-xs mr-2">Carregar</button>`)
 								.click(async () => {
 									// if we've already got the correct item loaded, reload it
 									if (this._state.activeKey === k) await pDoReload();
@@ -442,7 +442,7 @@ class RuneBuilder extends ProxyBase {
 										.filter(it => it !== k)
 										.mergeMap(it => ({[it]: this._state.savedRuneItems[it]}));
 									$row.remove();
-									if (!--rendered) $$`<div class="w-100 flex-vh-center italic">No saved items</div>`.appendTo($wrpRows);
+									if (!--rendered) $$`<div class="w-100 flex-vh-center italic">Nenhum item salvo</div>`.appendTo($wrpRows);
 									this.pSetSavedRuneItemsThrottled();
 								});
 
@@ -452,8 +452,8 @@ class RuneBuilder extends ProxyBase {
 								${$btnDelete}
 							</div>`.appendTo($wrpRows);
 						});
-					$$`<div class="w-100 mt-3 flex-vh-center italic ve-muted">Rune Items are deleted from the item list when the items page is reloaded.</div>`.appendTo($wrpRows);
-				} else $$`<div class="w-100 flex-vh-center italic">No saved items</div>`.appendTo($wrpRows)
+					$$`<div class="w-100 mt-3 flex-vh-center italic ve-muted">Os itens com runas são removidos da lista quando a página de itens é recarregada.</div>`.appendTo($wrpRows);
+				} else $$`<div class="w-100 flex-vh-center italic">Nenhum item salvo</div>`.appendTo($wrpRows)
 			});
 
 		const hookActiveKey = () => {
@@ -568,7 +568,7 @@ const RuneListUtil = {
 	_updateNoRunesVisible () {
 		$(`#rigen__no-runes`).remove()
 		if (!this.list.items.length) {
-			this.list._$wrpList.append(`<li id="rigen__no-runes" class="row"><a class="lst--border"><span><i class="ve-muted">Add runes to this item by clicking the buttons on the left.</i></span></a></li>`);
+			this.list._$wrpList.append(`<li id="rigen__no-runes" class="row"><a class="lst--border"><span><i class="ve-muted">Adicione runas a este item usando os botões à esquerda.</i></span></a></li>`);
 		}
 	},
 

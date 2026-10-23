@@ -41,7 +41,7 @@ class PageFilterActions extends PageFilter {
 			it._fLegendary = it.actionType.skill.legendary || null;
 		}
 		it._fTraits = (it.traits || []).map(t => Parser.getTraitName(t));
-		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) it._fTraits.push("Common");
+		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "rarity")).some(Boolean)) it._fTraits.push(Renderer.trait.getDefaultRarity());
 		it._fMisc = [];
 	}
 

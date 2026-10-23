@@ -98,7 +98,7 @@ class AncestriesPage extends BaseComponent {
 
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`).title("Atalho: F"),
 			$btnReset: $(`#reset`),
 			namespace: "ancestries.ancestries",
 		});
@@ -138,7 +138,7 @@ class AncestriesPage extends BaseComponent {
 		this._list.init();
 		this._listFeat.init();
 
-		$(`.initial-message`).text(`Select an ancestry from the list to view it here`);
+		$(`.initial-message`).text(`Selecione uma ancestralidade na lista para exibir aqui`);
 
 		this._setAncestryFromHash(Hist.initialLoad);
 		this._setFeatFromHash(Hist.initialLoad);
@@ -146,7 +146,7 @@ class AncestriesPage extends BaseComponent {
 		this._setFeatAncestryFilters();
 
 		const $btnLink = ListUtil.getOrTabRightButton(`btn-feat-link`, `list`, "a");
-		$btnLink.title("View this feat on the Feats page");
+		$btnLink.title("Ver este talento na página de Talentos");
 		const $btnPop = ListUtil.getOrTabRightButton(`btn-popout`, `new-window`);
 		Renderer.hover.bindPopoutButton($btnPop, this._featDataList, null, null, UrlUtil.PG_FEATS);
 
@@ -562,7 +562,7 @@ class AncestriesPage extends BaseComponent {
 				const href = `${window.location.href.split("#")[0]}#${this._getHashState({state: curState})}`;
 
 				await MiscUtil.pCopyTextToClipboard(href);
-				JqueryUtil.showCopiedEffect($target, "Copied link!");
+				JqueryUtil.showCopiedEffect($target, "Link copiado!");
 			}
 		});
 	}
@@ -970,7 +970,7 @@ class AncestriesPage extends BaseComponent {
 		};
 
 		tabs.forEach(tab => {
-			const $btn = $(`<button class="ui-tab__btn-tab-head btn btn-default" data-ancestry-tab="${tab.key}">${tab.label}</button>`)
+			const $btn = $(`<button class="ui-tab__btn-tab-head btn btn-default" data-ancestry-tab="${tab.key}">${Parser.uiToFull(tab.label)}</button>`)
 				.click(() => setActiveTab(tab));
 			$wrpTabs.append($btn);
 		});
@@ -1040,16 +1040,16 @@ class AncestriesPage extends BaseComponent {
 
 	_render_renderHeritagePrimaryControls ($wrp) {
 		const $btnToggleFeatures = ComponentUiUtil.$getBtnBool(this, "isHideFeatures", {
-			text: "Features",
+			text: "Características",
 			isInverted: true,
-		}).title("Toggle Ancestry Features");
+		}).title("Alternar Características de Ancestralidade");
 
 		const $btnToggleFeats = ComponentUiUtil.$getBtnBool(this, "isShowFeats", {
-			text: "Show Feats",
+			text: "Mostrar Talentos",
 			activeClass: "btn-danger",
-			activeText: "Hide Feats",
-			inactiveText: "Show Feats",
-		}).title("Toggle Feat View").addClass("mb-1");
+			activeText: "Ocultar Talentos",
+			inactiveText: "Mostrar Talentos",
+		}).title("Alternar Visualização de Talentos").addClass("mb-1");
 
 		$$`<div class="flex-v-center m-1 flex-wrap">
 			<div class="mr-2 no-shrink">${$btnToggleFeats}</div>
@@ -1083,7 +1083,7 @@ class AncestriesPage extends BaseComponent {
 	}
 
 	_render_initHeritageControls ($wrp) {
-		const $btnSelAll = $(`<button class="btn btn-xs btn-default flex-1" title="Select All"><span class="glyphicon glyphicon-check"/></button>`)
+		const $btnSelAll = $(`<button class="btn btn-xs btn-default flex-1" title="Selecionar Tudo"><span class="glyphicon glyphicon-check"/></button>`)
 			.click(evt => {
 				const allStateKeys = this.activeAncestryAllHeritages.map(h => UrlUtil.getStateKeyHeritage(h));
 				// TODO:
@@ -1136,27 +1136,27 @@ class AncestriesPage extends BaseComponent {
 			this._listVeHeritage.visibleItems.filter(it => it.values.stateKey).forEach(it => this._state[it.values.stateKey] = true);
 			$selFilterPreset.val("-1");
 		};
-		const $selFilterPreset = $(`<select class="input-xs form-control cls-tabs__sel-preset mr-2 mb-1 flex-3"><option value="-1" disabled>Filter...</option></select>`)
+		const $selFilterPreset = $(`<select class="input-xs form-control cls-tabs__sel-preset mr-2 mb-1 flex-3"><option value="-1" disabled>Filtrar...</option></select>`)
 			.change(() => {
 				const val = Number($selFilterPreset.val());
 				if (val == null) return;
 				setFilterSet(val)
 			});
-		filterSets.forEach((it, i) => $selFilterPreset.append(`<option value="${i}">${it.name}</option>`));
+		filterSets.forEach((it, i) => $selFilterPreset.append(`<option value="${i}">${Parser.uiToFull(it.name)}</option>`));
 		$selFilterPreset.val("-1");
 
-		const $btnReset = $(`<button class="btn btn-xs btn-default flex-1" title="Reset Selection"><span class="glyphicon glyphicon-refresh"></span></button>`)
+		const $btnReset = $(`<button class="btn btn-xs btn-default flex-1" title="Redefinir Seleção"><span class="glyphicon glyphicon-refresh"></span></button>`)
 			.click(() => {
 				this._proxyAssign("state", "_state", "__state", this.activeAncestryAllHeritages.mergeMap(h => ({[UrlUtil.getStateKeyHeritage(h)]: false})));
 			});
 
-		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowHSources", {$ele: $(`<button class="btn btn-xs btn-default flex-1" title="Show Heritage Sources"><span class="glyphicon glyphicon-book"/></button>`)});
+		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowHSources", {$ele: $(`<button class="btn btn-xs btn-default flex-1" title="Mostrar Fontes das Heranças"><span class="glyphicon glyphicon-book"/></button>`)});
 
-		const $btnShuffle = $(`<button title="Feeling Lucky?" class="btn btn-xs btn-default flex-1"><span class="glyphicon glyphicon-random"/></button>`)
+		const $btnShuffle = $(`<button title="Estou com sorte" class="btn btn-xs btn-default flex-1"><span class="glyphicon glyphicon-random"/></button>`)
 			.click(() => {
 				if (!this._listHeritage.visibleItems.length && !this._listVeHeritage.visibleItems.length) {
 					return JqueryUtil.doToast({
-						content: "No heritages to choose from!",
+						content: "Nenhuma herança disponível!",
 						type: "warning",
 					});
 				}
@@ -1232,18 +1232,18 @@ class AncestriesPage extends BaseComponent {
 			$dispCount.off("click");
 			if (this._listHeritage.visibleItems.length) {
 				const cntNotShown = this._listHeritage.items.length - this._listHeritage.visibleItems.length;
-				$dispCount.html(cntNotShown ? `<i class="clickable" title="Adjust your filters to see more.">(${cntNotShown} more not shown)</i>` : "").click(() => this._doSelectAllHeritages_fromList(this._listHeritage));
+				$dispCount.html(cntNotShown ? `<i class="clickable" title="Ajuste os filtros para ver mais opções.">(${cntNotShown} opções ocultas)</i>` : "").click(() => this._doSelectAllHeritages_fromList(this._listHeritage));
 			} else if (this._listHeritage.items.length > 1) {
-				$dispCount.html(`<i class="clickable" title="Adjust your filters to see more.">(${this._listHeritage.items.length - 1} heritages not shown)</i>`).click(() => this._doSelectAllHeritages_fromList(this._listHeritage));
+				$dispCount.html(`<i class="clickable" title="Ajuste os filtros para ver mais opções.">(${this._listHeritage.items.length - 1} heranças ocultas)</i>`).click(() => this._doSelectAllHeritages_fromList(this._listHeritage));
 			} else $dispCount.html("");
 		});
 		this._listVeHeritage.on("updated", () => {
 			$dispVeCount.off("click");
 			if (this._listVeHeritage.visibleItems.length) {
 				const cntNotShown = this._listVeHeritage.items.length - this._listVeHeritage.visibleItems.length;
-				$dispVeCount.html(cntNotShown ? `<i class="clickable" title="Adjust your filters to see more.">(${cntNotShown} more not shown)</i>` : "").click(() => this._doSelectAllHeritages_fromList(this._listVeHeritage));
+				$dispVeCount.html(cntNotShown ? `<i class="clickable" title="Ajuste os filtros para ver mais opções.">(${cntNotShown} opções ocultas)</i>` : "").click(() => this._doSelectAllHeritages_fromList(this._listVeHeritage));
 			} else if (this._listVeHeritage.items.length > 1) {
-				$dispVeCount.html(`<i class="clickable" title="Adjust your filters to see more.">(${this._listVeHeritage.items.length - 1} heritages not shown)</i>`).click(() => this._doSelectAllHeritages_fromList(this._listVeHeritage));
+				$dispVeCount.html(`<i class="clickable" title="Ajuste os filtros para ver mais opções.">(${this._listVeHeritage.items.length - 1} heranças ocultas)</i>`).click(() => this._doSelectAllHeritages_fromList(this._listVeHeritage));
 			} else $dispVeCount.html("");
 		});
 
@@ -1377,11 +1377,11 @@ class AncestriesPage extends BaseComponent {
 	}
 
 	static _render_$getNoContent () {
-		return $(`<div class="pf2-h1-flavor text-center">Toggle a button to view ancestry and heritage information.</div>`)
+		return $(`<div class="pf2-h1-flavor text-center">Ative um botão para ver informações de ancestralidade e herança.</div>`)
 	}
 
 	static _render_$getNoHeritage () {
-		return $(`<div class="pf2-h1-flavor text-center" style="clear: none; width: 100%">Select Heritages to display them here.</div>`)
+		return $(`<div class="pf2-h1-flavor text-center" style="clear: none; width: 100%">Selecione heranças para exibi-las aqui.</div>`)
 	}
 
 	_getDefaultState () {

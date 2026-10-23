@@ -11,566 +11,337 @@
 			"description": "Any Trait in the game.",
 			"anyOf": [
 				{
-					"$ref": "#/definitions/morphicTrait"
+					"$ref": "#/definitions/variableTraits"
 				},
 				{
-					"$ref": "#/definitions/gravityTrait"
+					"$ref": "#/definitions/poisonTrait"
 				},
 				{
-					"$ref": "#/definitions/sizeTrait"
-				},
-				{
-					"$ref": "#/definitions/scopeTrait"
-				},
-				{
-					"$ref": "#/definitions/timeTrait"
-				},
-				{
-					"$ref": "#/definitions/hazardTrait"
+					"$ref": "#/definitions/afflictionTrait"
 				},
 				{
 					"$ref": "#/definitions/rarityTrait"
 				},
 				{
-					"$ref": "#/definitions/effectTrait"
-				},
-				{
-					"$ref": "#/definitions/alignabvTrait"
-				},
-				{
-					"$ref": "#/definitions/alignmentTrait"
+					"$ref": "#/definitions/classSpecificTrait"
 				},
 				{
 					"$ref": "#/definitions/weaponTrait"
 				},
 				{
-					"$ref": "#/definitions/schoolTrait"
+					"$ref": "#/definitions/classTrait"
 				},
 				{
-					"$ref": "#/definitions/traditionTrait"
+					"$ref": "#/definitions/senseTrait"
 				},
 				{
-					"$ref": "#/definitions/combatTrait"
+					"$ref": "#/definitions/mechanicsTrait"
 				},
 				{
 					"$ref": "#/definitions/featTrait"
 				},
 				{
-					"$ref": "#/definitions/settlementTrait"
+					"$ref": "#/definitions/hazardTrait"
 				},
 				{
-					"$ref": "#/definitions/variableTraits"
-				},
-				{
-					"$ref": "#/definitions/armorTrait"
-				},
-				{
-					"$ref": "#/definitions/planarTrait"
-				},
-				{
-					"$ref": "#/definitions/classTrait"
-				},
-				{
-					"$ref": "#/definitions/unknownTrait"
-				},
-				{
-					"$ref": "#/definitions/actionAbilityTrait"
+					"$ref": "#/definitions/traditionTrait"
 				},
 				{
 					"$ref": "#/definitions/equipmentTrait"
 				},
 				{
-					"$ref": "#/definitions/itemTrait"
+					"$ref": "#/definitions/ancestryTrait"
 				},
 				{
-					"$ref": "#/definitions/spellTrait"
+					"$ref": "#/definitions/planarTrait"
+				},
+				{
+					"$ref": "#/definitions/elementalTrait"
+				},
+				{
+					"$ref": "#/definitions/energyTrait"
+				},
+				{
+					"$ref": "#/definitions/monsterTrait"
 				},
 				{
 					"$ref": "#/definitions/creatureTypeTrait"
-				},
-				{
-					"$ref": "#/definitions/personaTrait"
-				},
-				{
-					"$ref": "#/definitions/energyElementTrait"
-				},
-				{
-					"$ref": "#/definitions/generalTrait"
-				},
-				{
-					"$ref": "#/definitions/creatureTrait"
-				},
-				{
-					"$ref": "#/definitions/ancestryHeritageTrait"
 				}
 			],
 			"uniqueItems": true
 		},
-		"ancestryHeritageTrait": {
-			"type": "string",
-			"description": "A list of all Ancestry & Heritage traits.",
-			"enum": [
-				"aasimar",
-				"aiuvarin",
-				"anadi",
-				"android",
-				"aphorite",
-				"ardande",
-				"automaton",
-				"azarketi",
-				"beastkin",
-				"catfolk",
-				"cambiante",
-				"conrasu",
-				"dhampir",
-				"dromaar",
-				"duskwalker",
-				"dwarf",
-				"elfo",
-				"fetchling",
-				"fleshwarp",
-				"ganzi",
-				"geniekin",
-				"ghoran",
-				"gnoll",
-				"gnomo",
-				"goblin",
-				"goloma",
-				"grippli",
-				"half-elf",
-				"half-orc",
-				"nuuma",
-				"hobgoblin",
-				"hryngar",
-				"humano",
-				"ifrit",
-				"kashrishi",
-				"kitsune",
-				"kobold",
-				"leshy",
-				"lizardfolk",
-				"nagaji",
-				"nefilim",
-				"orc",
-				"oread",
-				"poppet",
-				"ratfolk",
-				"reflection",
-				"reincarnated",
-				"shisk",
-				"shoony",
-				"skeleton",
-				"sprite",
-				"strix",
-				"suli",
-				"sylph",
-				"talos",
-				"tengu",
-				"tiefling",
-				"undine",
-				"vanara",
-				"vishkanya"
-			]
-		},
-		"creatureTrait": {
-			"type": "string",
-			"description": "A list of all Creature traits.",
-			"enum": [
-				"aasimar",
-				"aeon",
-				"aiuvarin",
-				"amphibious",
-				"anadi",
-				"angel",
-				"aquatic",
-				"archon",
-				"azarketi",
-				"azata",
-				"boggard",
-				"caligni",
-				"catfolk",
-				"cambiante",
-				"charau-ka",
-				"conrasu",
-				"couatl",
-				"daemon",
-				"demon",
-				"dero",
-				"devil",
-				"dhampir",
-				"dinosaur",
-				"dromaar",
-				"drow",
-				"duergar",
-				"duskwalker",
-				"dwarf",
-				"elfo",
-				"ethereal",
-				"fetchling",
-				"fleshwarp",
-				"ganzi",
-				"genie",
-				"geniekin",
-				"ghost",
-				"ghoul",
-				"gnoll",
-				"gnomo",
-				"goblin",
-				"golem",
-				"goloma",
-				"gremlin",
-				"grippli",
-				"hag",
-				"half-elf",
-				"half-orc",
-				"nuuma",
-				"herald",
-				"hobgoblin",
-				"hryngar",
-				"humano",
-				"ifrit",
-				"incorporeal",
-				"inevitable",
-				"kitsune",
-				"kobold",
-				"leshy",
-				"lizardfolk",
-				"merfolk",
-				"mindless",
-				"minion",
-				"morlock",
-				"mummy",
-				"mutant",
-				"nefilim",
-				"nymph",
-				"oni",
-				"orc",
-				"oread",
-				"phantom",
-				"poppet",
-				"protean",
-				"psychopomp",
-				"qlippoth",
-				"rakshasa",
-				"ratfolk",
-				"reflection",
-				"sea devil",
-				"serpentfolk",
-				"shisk",
-				"shoony",
-				"skeleton",
-				"skulk",
-				"soulbound",
-				"spirit",
-				"spriggan",
-				"sprite",
-				"strix",
-				"suli",
-				"summoned",
-				"swarm",
-				"sylph",
-				"tane",
-				"tengu",
-				"troll",
-				"undine",
-				"urdefhan",
-				"vampire",
-				"velstrac",
-				"werecreature",
-				"wight",
-				"wraith",
-				"xulgath",
-				"zombie"
-			]
-		},
-		"generalTrait": {
-			"type": "string",
-			"description": "A list of all General traits.",
-			"enum": [
-				"academic",
-				"holy",
-				"manipulate",
-				"metamagic",
-				"militaristic",
-				"pervasive magic",
-				"revolutionary",
-				"secret",
-				"shadow",
-				"spellshape",
-				"structure",
-				"subtle",
-				"true name",
-				"unholy",
-				"vitality",
-				"void",
-				"wayfaring"
-			]
-		},
-		"energyElementTrait": {
-			"type": "string",
-			"description": "A list of all Energy & Element traits.",
-			"enum": [
-				"acid",
-				"air",
-				"cold",
-				"earth",
-				"electricity",
-				"energy",
-				"fire",
-				"force",
-				"metal",
-				"negative",
-				"positive",
-				"sonic",
-				"vitality",
-				"void",
-				"water",
-				"wood"
-			]
-		},
-		"personaTrait": {
-			"type": "string",
-			"description": "A list of all Persona traits.",
-			"enum": [
-				"flirt",
-				"guardian",
-				"leader",
-				"scholar",
-				"scoundrel",
-				"underdog",
-				"warrior",
-				"wildcard"
-			]
-		},
 		"creatureTypeTrait": {
 			"type": "string",
-			"description": "A list of all Creature Type traits.",
+			"description": "A list of all creature type traits.",
 			"enum": [
-				"aberration",
+				"aberração",
 				"animal",
-				"astral",
-				"beast",
+				"besta",
 				"celestial",
-				"construct",
-				"div",
-				"dragon",
-				"dream",
-				"eidolon",
+				"construto",
+				"dragão",
 				"elemental",
-				"fey",
-				"fiend",
-				"fungus",
-				"giant",
-				"humanoid",
-				"kami",
+				"espiritual",
+				"eversão",
+				"fada",
+				"fungo",
+				"gigante",
+				"humanoide",
+				"ínfero",
+				"limo",
 				"monitor",
-				"nindoru",
-				"ooze",
-				"petitioner",
-				"plant",
-				"spirit",
-				"time",
-				"undead"
+				"morto-vivo",
+				"plant"
 			]
 		},
-		"spellTrait": {
+		"monsterTrait": {
 			"type": "string",
-			"description": "A list of all Spell traits.",
+			"description": "A list of all monster traits.",
 			"enum": [
-				"amp",
-				"cantrip",
-				"composition",
-				"consecration",
-				"contingency",
-				"cursebound",
-				"incarnate",
-				"litany",
-				"summon",
-				"trial"
+				"acéfalo",
+				"anfíbio",
+				"anjo",
+				"aquático",
+				"arconte",
+				"azata",
+				"convocado",
+				"daemon",
+				"demônio",
+				"diabo",
+				"dinossauro",
+				"estriga",
+				"etéreo",
+				"lacaio"
 			]
 		},
-		"itemTrait": {
+		"energyTrait": {
 			"type": "string",
-			"description": "A list of all Item traits.",
+			"description": "A list of all energy traits.",
 			"enum": [
-				"alchemical",
-				"apex",
-				"artifact",
-				"barding",
-				"bomb",
-				"catalyst",
-				"coda",
-				"companion",
-				"consumable",
-				"contact",
-				"contract",
-				"cursed",
-				"deflecting",
-				"drug",
-				"elixir",
-				"expandable",
-				"extradimensional",
-				"focused",
-				"foldaway",
-				"fulu",
-				"grimoire",
-				"harnessed",
-				"hefty",
-				"infused",
-				"ingested",
-				"inhaled",
-				"injury",
-				"integrated",
-				"intelligent",
-				"invested",
-				"launching",
-				"lozenge",
-				"magical",
-				"missive",
-				"mutagen",
-				"oil",
-				"poison",
-				"potion",
-				"precious",
-				"processed",
-				"relic",
-				"scroll",
-				"shield throw",
-				"snare",
-				"spellgun",
-				"staff",
-				"talisman",
-				"tattoo",
-				"tea",
-				"virulent",
-				"wand"
+				"ácido",
+				"eletricidade",
+				"eversão",
+				"fogo",
+				"força",
+				"frio",
+				"sônico",
+				"vitalidade"
 			]
 		},
-		"equipmentTrait": {
+		"elementalTrait": {
 			"type": "string",
-			"description": "A list of all Equipment traits.",
+			"description": "A list of all elemental traits.",
 			"enum": [
-				"bottled breath",
-				"censer",
-				"figurehead",
-				"spellheart"
-			]
-		},
-		"actionAbilityTrait": {
-			"type": "string",
-			"description": "A list of all Action & Ability traits.",
-			"enum": [
-				"composite",
-				"concentrate",
-				"deviant",
-				"downtime",
-				"esoterica",
-				"exploration",
-				"impulse",
-				"infusion",
-				"instinct",
-				"mindshift",
-				"overflow",
-				"psyche",
-				"reckless",
-				"tandem"
-			]
-		},
-		"unknownTrait": {
-			"type": "string",
-			"description": "A list of all Unknown traits.",
-			"enum": [
-				"adjustment",
-				"charm",
-				"clockwork",
-				"focus",
-				"gadget",
-				"hellknight",
-				"kaiju",
-				"lineage",
-				"saggorak",
-				"steam",
-				"unstable"
-			]
-		},
-		"classTrait": {
-			"type": "string",
-			"description": "A list of all Class traits.",
-			"enum": [
-				"[class]",
-				"aftermath",
-				"alchemist",
-				"barbarian",
-				"bard",
-				"champion",
-				"class",
-				"cleric",
-				"deviant",
-				"druid",
-				"fighter",
-				"gunslinger",
-				"inventor",
-				"investigator",
-				"kineticist",
-				"magus",
-				"monk",
-				"oracle",
-				"psychic",
-				"ranger",
-				"rogue",
-				"sorcerer",
-				"spellshot",
-				"summoner",
-				"swashbuckler",
-				"thaumaturge",
-				"witch",
-				"wizard"
+				"água",
+				"ar",
+				"fogo",
+				"madeira",
+				"metal",
+				"terra"
 			]
 		},
 		"planarTrait": {
 			"type": "string",
-			"description": "A list of all Planar traits.",
+			"description": "A list of all planar traits.",
 			"enum": [
-				"air",
-				"chaotic",
-				"earth",
-				"erratic",
-				"evil",
-				"finite",
-				"fire",
-				"flowing",
-				"good",
-				"high gravity",
-				"immeasurable",
-				"lawful",
-				"low gravity",
+				"água",
+				"ar",
+				"eversão",
+				"fogo",
+				"madeira",
 				"metal",
-				"microgravity",
-				"sentient",
-				"static",
-				"strange gravity",
-				"subjective gravity",
-				"timeless",
-				"unbounded",
-				"water",
-				"wood"
+				"sombra",
+				"terra",
+				"vitalidade"
 			]
 		},
-		"armorTrait": {
+		"ancestryTrait": {
 			"type": "string",
-			"description": "A list of all Armor traits.",
+			"description": "A list of all ancestry traits.",
 			"enum": [
-				"adjusted",
-				"aquadynamic",
-				"bulwark",
-				"comfort",
-				"entrench",
-				"flexible",
-				"hindering",
-				"inscribed",
-				"laminar",
-				"noisy",
-				"ponderous"
+				"aiuvarin",
+				"anão",
+				"cambiante",
+				"dromaar",
+				"elfo",
+				"gnomo",
+				"goblin",
+				"hryngar",
+				"humano",
+				"leshy",
+				"nefilim",
+				"nuuma",
+				"orc"
+			]
+		},
+		"equipmentTrait": {
+			"type": "string",
+			"description": "A list of all equipment traits.",
+			"enum": [
+				"alquímico",
+				"apogeu",
+				"bomba",
+				"cajado",
+				"consumível",
+				"elixir",
+				"extradimensional",
+				"ilusão",
+				"mágico",
+				"óleo",
+				"pergaminho",
+				"poção",
+				"varinha",
+				"veneno"
+			]
+		},
+		"traditionTrait": {
+			"type": "string",
+			"description": "A list of all tradition traits.",
+			"enum": [
+				"arcano",
+				"divino",
+				"ocultista",
+				"primal"
+			]
+		},
+		"hazardTrait": {
+			"type": "string",
+			"description": "A list of all hazard traits.",
+			"enum": [
+				"armadilha",
+				"assombração",
+				"mecânico"
+			]
+		},
+		"featTrait": {
+			"type": "string",
+			"description": "A list of all feat traits.",
+			"enum": [
+				"aditivo",
+				"arquétipo",
+				"dedicação",
+				"genealogia",
+				"geral",
+				"multiclasse",
+				"perícia"
+			]
+		},
+		"mechanicsTrait": {
+			"type": "string",
+			"description": "A list of all mechanics traits.",
+			"enum": [
+				"ataque",
+				"aura",
+				"concentração",
+				"consagração",
+				"convocação",
+				"cura",
+				"detecção",
+				"emoção",
+				"escuridão",
+				"estrutura",
+				"exploração",
+				"extradimensional",
+				"fortúnio",
+				"ilusão",
+				"incapacitação",
+				"infortúnio",
+				"luz",
+				"manuseio",
+				"medo",
+				"mental",
+				"morfia",
+				"morte",
+				"movimento",
+				"polimorfia",
+				"possessão",
+				"predição",
+				"profano",
+				"recesso",
+				"revelação",
+				"sagrado",
+				"santificado",
+				"secreto",
+				"sono",
+				"sutil",
+				"teleportação",
+				"truque",
+				"vidência"
+			]
+		},
+		"senseTrait": {
+			"type": "string",
+			"description": "A list of all sense traits.",
+			"enum": [
+				"auditivo",
+				"linguístico",
+				"olfativo",
+				"visual"
+			]
+		},
+		"classTrait": {
+			"type": "string",
+			"description": "A list of all class traits.",
+			"enum": [
+				"bardo",
+				"bruxo",
+				"clérigo",
+				"druida",
+				"guerreiro",
+				"ladino",
+				"mago",
+				"patrulheiro"
+			]
+		},
+		"weaponTrait": {
+			"type": "string",
+			"description": "A list of all weapon traits.",
+			"enum": [
+				"bomba",
+				"colateral",
+				"não letal"
+			]
+		},
+		"classSpecificTrait": {
+			"type": "string",
+			"description": "A list of all class-specific traits.",
+			"enum": [
+				"aditivo",
+				"composição",
+				"floreio",
+				"foco",
+				"fúria",
+				"moldamagia",
+				"postura",
+				"pressão",
+				"sortilégio"
+			]
+		},
+		"rarityTrait": {
+			"type": "string",
+			"description": "A list of all rarity traits.",
+			"enum": [
+				"comum",
+				"incomum",
+				"raro",
+				"único"
+			]
+		},
+		"afflictionTrait": {
+			"type": "string",
+			"description": "A list of all affliction traits.",
+			"enum": [
+				"doença",
+				"maldição",
+				"veneno"
+			]
+		},
+		"poisonTrait": {
+			"type": "string",
+			"description": "A list of all poison traits.",
+			"enum": [
+				"contato",
+				"veneno"
 			]
 		},
 		"variableTraits": {
@@ -579,384 +350,8 @@
 			"anyOf": [
 				{
 					"type": "string",
-					"pattern": "^entrench <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^adjusted <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^additive <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^attached <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^range increment <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^range <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^reload <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^capacity <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^deadly <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^fatal <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^fatal aim <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^jousting <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^modular <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^reach <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^scatter <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^hefty <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^launching <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^shield throw <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^integrated <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^deflecting <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^thrown <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^two-hand <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^two-handed <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^versatile <.*>$"
-				},
-				{
-					"type": "string",
-					"pattern": "^volley <.*>$"
+					"pattern": "^aditivo <.*>$"
 				}
-			]
-		},
-		"settlementTrait": {
-			"type": "string",
-			"description": "A list of all Settlement traits.",
-			"enum": [
-				"city",
-				"city-state",
-				"metropolis",
-				"town",
-				"village"
-			]
-		},
-		"featTrait": {
-			"type": "string",
-			"description": "A list of all Feat traits.",
-			"enum": [
-				"additive",
-				"aftermath",
-				"amp",
-				"archetype",
-				"dedication",
-				"deviant",
-				"esoterica",
-				"evolution",
-				"general",
-				"modification",
-				"multiclass",
-				"oath",
-				"skill",
-				"social",
-				"vigilante"
-			]
-		},
-		"combatTrait": {
-			"type": "string",
-			"description": "A list of all Combat traits.",
-			"enum": [
-				"attack",
-				"aura",
-				"certain kill",
-				"concentrate",
-				"finisher",
-				"flourish",
-				"hex",
-				"mindshift",
-				"move",
-				"open",
-				"press",
-				"psyche",
-				"rage",
-				"stance"
-			]
-		},
-		"traditionTrait": {
-			"type": "string",
-			"description": "A list of all Tradition traits.",
-			"enum": [
-				"[magical tradition]",
-				"arcane",
-				"divine",
-				"occult",
-				"primal"
-			]
-		},
-		"schoolTrait": {
-			"type": "string",
-			"description": "A list of all School traits.",
-			"enum": [
-				"abjuration",
-				"conjuration",
-				"divination",
-				"enchantment",
-				"evocation",
-				"illusion",
-				"necromancy",
-				"transmutation"
-			]
-		},
-		"weaponTrait": {
-			"type": "string",
-			"description": "A list of all Weapon traits.",
-			"enum": [
-				"agile",
-				"attached",
-				"backstabber",
-				"backswing",
-				"bomb",
-				"brace",
-				"brutal",
-				"capacity",
-				"climbing",
-				"cobbled",
-				"combination",
-				"concealable",
-				"concussive",
-				"critical fusion",
-				"deadly",
-				"disarm",
-				"double barrel",
-				"fatal",
-				"fatal aim",
-				"finesse",
-				"forceful",
-				"free-hand",
-				"grapple",
-				"hampering",
-				"injection",
-				"jousting",
-				"kickback",
-				"modular",
-				"mounted",
-				"nonlethal",
-				"parry",
-				"portable",
-				"propulsive",
-				"range",
-				"range increment",
-				"ranged trip",
-				"razing",
-				"reach",
-				"recovery",
-				"reload",
-				"repeating",
-				"resonant",
-				"scatter",
-				"shove",
-				"splash",
-				"sweep",
-				"tethered",
-				"thrown",
-				"training",
-				"trip",
-				"twin",
-				"two-hand",
-				"two-handed",
-				"unarmed",
-				"vehicular",
-				"versatile",
-				"volley"
-			]
-		},
-		"alignmentTrait": {
-			"type": "string",
-			"description": "A list of all Alignment traits.",
-			"enum": [
-				"any",
-				"ce",
-				"cg",
-				"chaotic",
-				"cn",
-				"evil",
-				"good",
-				"lawful",
-				"le",
-				"lg",
-				"ln",
-				"n",
-				"ne",
-				"ng"
-			]
-		},
-		"alignabvTrait": {
-			"type": "string",
-			"description": "A list of all _alignAbv traits.",
-			"enum": [
-				"any",
-				"ce",
-				"cg",
-				"cn",
-				"le",
-				"lg",
-				"ln",
-				"n",
-				"ne",
-				"ng"
-			]
-		},
-		"effectTrait": {
-			"type": "string",
-			"description": "A list of all Effect traits.",
-			"enum": [
-				"auditory",
-				"consecration",
-				"curse",
-				"darkness",
-				"death",
-				"detection",
-				"disease",
-				"emotion",
-				"extradimensional",
-				"fear",
-				"fortune",
-				"healing",
-				"incapacitation",
-				"light",
-				"linguistic",
-				"mental",
-				"misfortune",
-				"morph",
-				"olfactory",
-				"poison",
-				"polymorph",
-				"possession",
-				"prediction",
-				"revelation",
-				"scrying",
-				"sleep",
-				"teleportation",
-				"visual"
-			]
-		},
-		"rarityTrait": {
-			"type": "string",
-			"description": "A list of all Rarity traits.",
-			"enum": [
-				"common",
-				"rare",
-				"uncommon",
-				"unique"
-			]
-		},
-		"hazardTrait": {
-			"type": "string",
-			"description": "A list of all Hazard traits.",
-			"enum": [
-				"complex",
-				"environmental",
-				"haunt",
-				"mechanical",
-				"trap"
-			]
-		},
-		"timeTrait": {
-			"type": "string",
-			"description": "A list of all Time traits.",
-			"enum": [
-				"erratic",
-				"flowing",
-				"timeless"
-			]
-		},
-		"scopeTrait": {
-			"type": "string",
-			"description": "A list of all Scope traits.",
-			"enum": [
-				"finite",
-				"immeasurable"
-			]
-		},
-		"sizeTrait": {
-			"type": "string",
-			"description": "A list of all Size traits.",
-			"enum": [
-				"gargantuan",
-				"huge",
-				"large",
-				"medium",
-				"small",
-				"tiny"
-			]
-		},
-		"gravityTrait": {
-			"type": "string",
-			"description": "A list of all Gravity traits.",
-			"enum": [
-				"high gravity",
-				"low gravity",
-				"metamorphic",
-				"microgravity",
-				"strange gravity",
-				"subjective gravity"
-			]
-		},
-		"morphicTrait": {
-			"type": "string",
-			"description": "A list of all Morphic traits.",
-			"enum": [
-				"metamorphic",
-				"sentient"
 			]
 		}
 	}

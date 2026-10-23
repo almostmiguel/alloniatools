@@ -99,12 +99,12 @@ class BestiaryPage extends ListPage {
 		const type = cr._fCreatureType.join(", ") ?? "\u2014";
 		const level = cr.level;
 
-		const $hovStatblock = $(`<span class="col-1-9 text-center help--hover ecgen__visible">Statblock</span>`)
+		const $hovStatblock = $(`<span class="col-1-9 text-center help--hover ecgen__visible">Ficha</span>`)
 			.mouseover(evt => EncounterBuilder.doStatblockMouseOver(evt, $hovStatblock[0], pinId, cr._scaledLvl))
 			.mousemove(evt => Renderer.hover.handleLinkMouseMove(evt, $hovStatblock[0]))
 			.mouseleave(evt => Renderer.hover.handleLinkMouseLeave(evt, $hovStatblock[0]));
 
-		const $hovImage = $(`<span class="col-1-9 text-center ecgen__visible help--hover">Image</span>`)
+		const $hovImage = $(`<span class="col-1-9 text-center ecgen__visible help--hover">Imagem</span>`)
 			.mouseover(evt => EncounterBuilder.handleImageMouseOver(evt, $hovImage, pinId));
 
 		const $ptCr = (() => {
@@ -193,7 +193,7 @@ class BestiaryPage extends ListPage {
 
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`).title("Atalho: F"),
 			$btnReset: $(`#reset`),
 		});
 
@@ -413,7 +413,7 @@ class BestiaryPage extends ListPage {
 
 		const buildStatsTab = () => {
 			const $btnScaleLvl = cr.level != null ? $(`
-			<button id="btn-scale-lvl" title="Scale Creature By Level (Highly Experimental)" class="mon__btn-scale-lvl btn btn-xs btn-default">
+			<button id="btn-scale-lvl" title="Ajustar Criatura por Nível (Experimental)" class="mon__btn-scale-lvl btn btn-xs btn-default">
 				<span class="glyphicon glyphicon-signal"/>
 			</button>`)
 				.off("click").click((evt) => {
@@ -429,7 +429,7 @@ class BestiaryPage extends ListPage {
 				}).toggle(cr.level !== 100) : null;
 
 			const $btnResetScaleLvl = cr.level != null ? $(`
-			<button id="btn-scale-lvl" title="Reset Level Scaling" class="mon__btn-scale-lvl btn btn-xs btn-default">
+			<button id="btn-scale-lvl" title="Redefinir Ajuste de Nível" class="mon__btn-scale-lvl btn btn-xs btn-default">
 				<span class="glyphicon glyphicon-refresh"></span>
 			</button>`)
 				.click(() => Hist.setSubhash(VeCt.HASH_CR_SCALED, null))

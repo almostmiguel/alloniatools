@@ -262,50 +262,6 @@
 					"subclassFeatures": [
 						"Arcane School|Wizard|PC1|Unified Magical Theory|PC1|1"
 					]
-				},
-				{
-					"name": "School of the Reclamation",
-					"type": "Arcane School",
-					"shortName": "Reclamation",
-					"source": "LORA",
-					"remaster": true,
-					"page": 32,
-					"subclassFeatures": [
-						"Arcane School|Wizard|PC1|Reclamation|LORA|1"
-					]
-				},
-				{
-					"name": "School of Rooted Wisdom",
-					"type": "Arcane School",
-					"shortName": "Rooted Wisdom",
-					"source": "LORA",
-					"remaster": true,
-					"page": 68,
-					"subclassFeatures": [
-						"Arcane School|Wizard|PC1|Rooted Wisdom|LORA|1"
-					]
-				},
-				{
-					"name": "School of Kalistrade",
-					"type": "Arcane School",
-					"shortName": "Kalistrade",
-					"source": "LOSK",
-					"remaster": true,
-					"page": 75,
-					"subclassFeatures": [
-						"Arcane School|Wizard|PC1|Kalistrade|LOSK|1"
-					]
-				},
-				{
-					"name": "School of Gates",
-					"type": "Arcane School",
-					"shortName": "Gates",
-					"source": "LOSK",
-					"remaster": true,
-					"page": 148,
-					"subclassFeatures": [
-						"Arcane School|Wizard|PC1|Gates|LOSK|1"
-					]
 				}
 			],
 			"classFeaturesIntro": [

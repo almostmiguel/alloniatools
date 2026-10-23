@@ -60,7 +60,7 @@ class PageFilterAncestries extends PageFilter {
 	get optionsFilter () { return this._optionsFilter; }
 
 	mutateForFilters (ancestry, opts) {
-		ancestry._fRarity = ancestry.rarity ? ancestry.rarity.toTitleCase() : "Common";
+		ancestry._fRarity = ancestry.rarity ? ancestry.rarity.toTitleCase() : Renderer.trait.getDefaultRarity();
 		ancestry._fSources = SourceFilter.getCompleteFilterSources(ancestry);
 		ancestry._fLanguages = ancestry.languages.filter(it => it.length < 20);
 		ancestry._fAbilities = []

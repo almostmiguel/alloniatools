@@ -29,7 +29,7 @@ class PageFilterBestiary extends PageFilter {
 		this._traitFilter = new TraitsFilter({
 			header: "Traits",
 			discardCategories: {
-				"Ancestry & Heritage": true,
+				ancestry: true,
 			},
 		});
 		this._perceptionFilter = new RangeFilter({
@@ -226,8 +226,8 @@ class PageFilterBestiary extends PageFilter {
 
 		this.handleTraitImplies(cr, { traitProp: "_fTraits", entityTypes: ["creature"] });
 		cr._fTraits = cr._fTraits.map(t => Parser.getTraitName(t));
-		if (!cr._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) cr._fTraits.push("Common");
-		cr._fCreatureType = cr._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Creature Type") ? t : null).filter(Boolean);
+		if (!cr._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "rarity")).some(Boolean)) cr._fTraits.push(Renderer.trait.getDefaultRarity());
+		cr._fCreatureType = cr._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "creature type") ? t : null).filter(Boolean);
 
 		cr._fFoundIn = cr.foundIn || [];
 	}

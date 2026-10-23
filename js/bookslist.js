@@ -4,7 +4,7 @@ class BooksList {
 	static getDateStr (it) {
 		if (!it.published) return "\u2014";
 		const date = new Date(it.published);
-		return MiscUtil.dateToStr(date);
+		return new Intl.DateTimeFormat("pt-BR", {day: "numeric", month: "long", year: "numeric", timeZone: "UTC"}).format(date);
 	}
 
 	constructor (options) {

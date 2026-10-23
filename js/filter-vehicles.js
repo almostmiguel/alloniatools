@@ -76,7 +76,7 @@ class PageFilterVehicles extends PageFilter {
 		it._sPrice = Parser.priceToValue(it.price);
 
 		it._fTraits = ([...(it.traits || []), it.size]).filter(Boolean).map(t => Parser.getTraitName(t));
-		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) it._fTraits.push("Common");
+		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "rarity")).some(Boolean)) it._fTraits.push(Renderer.trait.getDefaultRarity());
 		it._fCrewSize = (it.crew || []).map(it => it.number).reduce((a, b) => a + b, 0);
 		it._fCrewTypes = (it.crew || []).map(it => it.type);
 		it._fAC = Math.max(...Object.values(it.defenses.ac));

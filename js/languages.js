@@ -27,7 +27,7 @@ class LanguagesPage extends ListPage {
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border">
 			<span class="col-6 bold pl-0">${it.name}</span>
-			<span class="col-3 text-center">${(it.type || "\u2014").uppercaseFirst()}</span>
+			<span class="col-3 text-center">${Parser.uiToFull((it.type || "\u2014").uppercaseFirst())}</span>
 			<span class="col-3 text-center ${Parser.sourceJsonToColor(it.source)}" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
@@ -66,7 +66,7 @@ class LanguagesPage extends ListPage {
 		const $ele = $(`<li class="row">
 			<a href="#${hash}" class="lst--border">
 				<span class="bold col-9 pl-0">${it.name}</span>
-				<span class="col-3 text-center">${(it.type || "\u2014").uppercaseFirst()}</span>
+				<span class="col-3 text-center">${Parser.uiToFull((it.type || "\u2014").uppercaseFirst())}</span>
 			</a>
 		</li>`)
 			.contextmenu(evt => ListUtil.openSubContextMenu(evt, listItem));
@@ -170,7 +170,7 @@ class LanguagesPage extends ListPage {
 
 				$$`<div class="flex-col w-100">
 					${$styleFont}
-					${$selFont ? $$`<label class="flex-v-center mb-2"><div class="mr-2">Font:</div>${$selFont}</div>` : ""}
+					${$selFont ? $$`<label class="flex-v-center mb-2"><div class="mr-2">Fonte:</div>${$selFont}</div>` : ""}
 					${$iptSample}
 					${$ptOutput}
 					<hr class="hr-4">

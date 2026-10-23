@@ -21,7 +21,7 @@ HASH_SUB_NONE = "null";
 
 VeCt = {
 	STR_NONE: "None",
-	STR_SEE_CONSOLE: "See the console (CTRL+SHIFT+J) for details.",
+	STR_SEE_CONSOLE: "Consulte o console (CTRL+SHIFT+J) para mais detalhes.",
 
 	HASH_CR_SCALED: "scaled",
 	HASH_ITEM_RUNES: "runeitem",
@@ -595,7 +595,7 @@ JqueryUtil = {
 		};
 	},
 
-	showCopiedEffect ($ele, text = "Copied!", bubble) {
+	showCopiedEffect ($ele, text = "Copiado!", bubble) {
 		const top = $(window).scrollTop();
 		const pos = $ele.offset();
 
@@ -1606,7 +1606,7 @@ ContextUtil = {
 		const $elesAction = this._actions.map(it => {
 			if (it == null) return $(`<div class="my-1 w-100 ui-ctx__divider"></div>`);
 
-			const $row = $$`<div class="py-1 px-5 ui-ctx__row ${it.isDisabled ? "disabled" : ""} ${it.style || ""}">${it.text}</div>`
+			const $row = $$`<div class="py-1 px-5 ui-ctx__row ${it.isDisabled ? "disabled" : ""} ${it.style || ""}">${Parser.uiToFull(it.text)}</div>`
 				.click(async evt => {
 					if (it.isDisabled) return;
 
@@ -1806,7 +1806,7 @@ UrlUtil = {
 				await MiscUtil.pCopyTextToClipboard(parts.join(HASH_PART_SEP));
 				JqueryUtil.showCopiedEffect($btn);
 			})
-			.title("Get link to filters (SHIFT adds list; CTRL copies @filter tag)")
+			.title("Obter link dos filtros (SHIFT inclui a lista; CTRL copia a etiqueta @filter)")
 	},
 
 	bindLinkExportButtonMulti (filterBox, $btn) {
@@ -1819,7 +1819,7 @@ UrlUtil = {
 
 			await MiscUtil.pCopyTextToClipboard(toCopy);
 			JqueryUtil.showCopiedEffect($btn);
-		}).title("Get Link to Filters");
+		}).title("Obter Link dos Filtros");
 	},
 
 	mini: {
@@ -2300,8 +2300,8 @@ SortUtil = {
 			if (a instanceof FilterItem) a = a.item;
 			if (b instanceof FilterItem) b = b.item;
 		}
-		if (Renderer.trait.isTraitInCategory(a, "Rarity")) return -1;
-		else if (Renderer.trait.isTraitInCategory(b, "Rarity")) return 1;
+		if (Renderer.trait.isTraitInCategory(a, "rarity")) return -1;
+		else if (Renderer.trait.isTraitInCategory(b, "rarity")) return 1;
 		else if (Renderer.trait.isTraitInCategory(a, "_alignAbv")) return -1;
 		else if (Renderer.trait.isTraitInCategory(b, "_alignAbv")) return 1;
 		else if (Renderer.trait.isTraitInCategory(a, "Size")) return -1;
@@ -2553,7 +2553,7 @@ DataUtil = {
 						const isSkipFile = expectedFileType != null && json.fileType && json.fileType !== expectedFileType && !(await InputUiUtil.pGetUserBoolean({
 							textYes: "Yes",
 							textNo: "Cancel",
-							title: "File Type Mismatch",
+							title: "Tipo de Arquivo Incompatível",
 							htmlDescription: `The file "${name}" has the type "${json.fileType}" when the expected file type was "${expectedFileType}".<br>Are you sure you want to upload this file?`,
 						}));
 
@@ -3628,7 +3628,7 @@ RollerUtil = {
 
 	addListRollButton (isCompact, ids, rollX) {
 		ids = ids || { roll: "feelinglucky", reset: "reset", search: "filter-search-group" }
-		const $btnRoll = $(`<button class="btn btn-xs btn-default ${isCompact ? "px-2" : ""}" id="${ids.roll}" title="Feeling Lucky?"><span class="glyphicon glyphicon-random"></span></button>`);
+		const $btnRoll = $(`<button class="btn btn-xs btn-default ${isCompact ? "px-2" : ""}" id="${ids.roll}" title="Estou com sorte"><span class="glyphicon glyphicon-random"></span></button>`);
 		$btnRoll.on("click", () => {
 			const primaryLists = ListUtil.getPrimaryLists();
 			if (primaryLists && primaryLists.length) {
@@ -5059,7 +5059,7 @@ function PrintModeView (opts) {
 			}
 		} else {
 			if (!this._$wrpNoneShown) {
-				const $btnClose = $(`<button class="btn btn-default">Close</button>`)
+				const $btnClose = $(`<button class="btn btn-default">Fechar</button>`)
 					.click(() => this._doHashTeardown());
 
 				this._$wrpNoneShown = $$`<div class="w-100 flex-col no-shrink prntv__footer mb-3">
@@ -5105,8 +5105,8 @@ function PrintModeView (opts) {
 			const lastColumns = StorageUtil.syncGetForPage(PrintModeView._PRINT_VIEW_COLUMNS_K);
 
 			const $selColumns = $(`<select class="form-control input-sm">
-				<option value="0">Two (book style)</option>
-				<option value="1">One</option>
+				<option value="0">Duas (estilo de livro)</option>
+				<option value="1">Uma</option>
 			</select>`)
 				.change(() => {
 					const val = Number($selColumns.val());
@@ -5119,7 +5119,7 @@ function PrintModeView (opts) {
 			$selColumns.change();
 
 			$wrpControlsToPass = $$`<div class="w-100 flex">
-				<div class="flex-vh-center"><div class="mr-2 no-wrap help--subtle" title="Applied when printing the page.">Print columns:</div>${$selColumns}</div>
+				<div class="flex-vh-center"><div class="mr-2 no-wrap help--subtle" title="Aplicado ao imprimir a página.">Colunas de Impressão:</div>${$selColumns}</div>
 			</div>`.appendTo($wrpControls);
 		}
 		// endregion

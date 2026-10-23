@@ -253,7 +253,7 @@
 			"page": 45,
 			"level": 17,
 			"traits": [
-				"uncommon",
+				"incomum",
 				"anão"
 			],
 			"prerequisites": "{@feat Stonewalker|PC1}",
@@ -800,7 +800,7 @@
 			"page": 53,
 			"level": 17,
 			"traits": [
-				"uncommon",
+				"incomum",
 				"gnomo"
 			],
 			"frequency": {
@@ -2744,7 +2744,7 @@
 			},
 			"level": 9,
 			"traits": [
-				"divine",
+				"divino",
 				"morph",
 				"nefilim"
 			],
@@ -3282,7 +3282,7 @@
 			"page": 103,
 			"level": 4,
 			"traits": [
-				"uncommon",
+				"incomum",
 				"bard"
 			],
 			"prerequisites": "{@class bard|PC1|enigma muse|enigma}, expert in {@skill Occultism|PC1}",
@@ -4179,7 +4179,7 @@
 			"level": 1,
 			"traits": [
 				"cleric",
-				"divine",
+				"divino",
 				"prediction"
 			],
 			"trigger": "You are about to roll a saving throw against a hazard.",
@@ -4356,7 +4356,7 @@
 			"level": 4,
 			"traits": [
 				"cleric",
-				"divine"
+				"divino"
 			],
 			"cost": "Expend a {@spell harm|PC1} or {@spell heal|PC1} spell.",
 			"entries": [
@@ -4450,7 +4450,7 @@
 			"traits": [
 				"cleric",
 				"consecration",
-				"divine",
+				"divino",
 				"exploration"
 			],
 			"prerequisites": "harmful font or healing font",
@@ -4495,7 +4495,7 @@
 			"level": 6,
 			"traits": [
 				"cleric",
-				"divine"
+				"divino"
 			],
 			"trigger": "Your ally is about to roll a saving throw against a magical ability of a creature you're adjacent to.",
 			"requirements": "You are wielding your deity's favored weapon.",
@@ -4667,7 +4667,7 @@
 			"level": 8,
 			"traits": [
 				"cleric",
-				"divine"
+				"divino"
 			],
 			"prerequisites": "holy or unholy trait",
 			"entries": [
@@ -4891,7 +4891,7 @@
 			"level": 12,
 			"traits": [
 				"cleric",
-				"divine"
+				"divino"
 			],
 			"prerequisites": "{@feat Raise Symbol|PC1}",
 			"trigger": "While you have your symbol raised, you are about to take damage from a melee attack.",
@@ -11479,7 +11479,7 @@
 			},
 			"level": 1,
 			"traits": [
-				"arcane",
+				"arcano",
 				"wizard"
 			],
 			"trigger": "A creature Casts a Spell that you have prepared.",
@@ -11717,7 +11717,7 @@
 			},
 			"level": 4,
 			"traits": [
-				"arcane",
+				"arcano",
 				"manipulate",
 				"wizard"
 			],
@@ -11977,7 +11977,7 @@
 			"page": 204,
 			"level": 12,
 			"traits": [
-				"arcane",
+				"arcano",
 				"detection",
 				"wizard"
 			],

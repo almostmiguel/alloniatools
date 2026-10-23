@@ -30,7 +30,7 @@
 			],
 			"features": [
 				{
-					"name": "Olhos aguçados",
+					"name": "Olhos Aguçados",
 					"entries": [
 						"Sua visão é aguçada, permitindo que perceba detalhes pequenos sobre criaturas {@condition ocultado||ocultadas} — ou até mesmo {@condition invisível||invisíveis} — que poderiam passar despercebidos para outras pessoas. Você recebe +2 de bônus de circustância ao utilizar a ação {@action Buscar} para encontrar criaturas {@condition escondido||escondidas} ou {@condition indetectado||indetectadas} que estejam a até 9 metros. Quando visar um alvo que esteja {@condition ocultado} ou {@condition escondido}, reduza a DC do teste simples para {@flatDC 3}, no caso de um alvo {@condition ocultado}, ou {@flatDC 9}, no caso de um escondido."
 					]

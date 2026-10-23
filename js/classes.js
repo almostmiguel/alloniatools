@@ -90,7 +90,7 @@ class ClassesPage extends BaseComponent {
 
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`).title("Atalho: F"),
 			$btnReset: $(`#reset`),
 			namespace: "classes.classes",
 		});
@@ -128,7 +128,7 @@ class ClassesPage extends BaseComponent {
 		this._list.init();
 		this._listFeat.init();
 
-		$(`.initial-message`).text(`Select a class from the list to view it here`);
+		$(`.initial-message`).text(`Selecione uma classe na lista para exibir aqui`);
 
 		this._setClassFromHash(Hist.initialLoad);
 		this._setFeatClassFilters()
@@ -136,7 +136,7 @@ class ClassesPage extends BaseComponent {
 		this._setStateFromHash(Hist.initialLoad);
 
 		const $btnLink = ListUtil.getOrTabRightButton(`btn-feat-link`, `list`, "a");
-		$btnLink.title("View this feat on the Feats page");
+		$btnLink.title("Ver este talento na página de Talentos");
 		const $btnPop = ListUtil.getOrTabRightButton(`btn-popout`, `new-window`);
 		Renderer.hover.bindPopoutButton($btnPop, this._featDataList, null, null, UrlUtil.PG_FEATS);
 		UrlUtil.bindLinkExportButtonMulti(this.filterBox, $(`#btn-link-export-cls`));
@@ -550,7 +550,7 @@ class ClassesPage extends BaseComponent {
 				const href = `${window.location.href.split("#")[0]}#${this._getHashState({state: curState})}`;
 
 				await MiscUtil.pCopyTextToClipboard(href);
-				JqueryUtil.showCopiedEffect($target, "Copied link!");
+				JqueryUtil.showCopiedEffect($target, "Link copiado!");
 			}
 		});
 	}
@@ -970,7 +970,7 @@ class ClassesPage extends BaseComponent {
 							lvlFeaturesFilt.push({
 								name: "general feat",
 								source: cls.source,
-								$lnk: $(`<a href="feats.html#blankhash,flstlevel:max=${ixLvl + 1},flsttype:general=1">general feat</a>`),
+								$lnk: $(`<a href="feats.html#blankhash,flstlevel:max=${ixLvl + 1},flsttype:general=1">talento geral</a>`),
 								preCalc: true,
 							});
 							break;
@@ -979,7 +979,7 @@ class ClassesPage extends BaseComponent {
 							lvlFeaturesFilt.push({
 								name: "skill feat",
 								source: cls.source,
-								$lnk: $(`<a href="feats.html#blankhash,flstlevel:max=${ixLvl + 1},flsttype:skill=1~archetype=2">skill feat</a>`),
+								$lnk: $(`<a href="feats.html#blankhash,flstlevel:max=${ixLvl + 1},flsttype:skill=1~archetype=2">talento de perícia</a>`),
 								preCalc: true,
 							});
 							break;
@@ -988,7 +988,7 @@ class ClassesPage extends BaseComponent {
 							lvlFeaturesFilt.push({
 								name: "ancestry feat",
 								source: cls.source,
-								$lnk: $(`<a href="feats.html#blankhash,flstlevel:max=${ixLvl + 1},flsttype:ancestry=1">ancestry feat</a>`),
+								$lnk: $(`<a href="feats.html#blankhash,flstlevel:max=${ixLvl + 1},flsttype:ancestry=1">talento de ancestralidade</a>`),
 								preCalc: true,
 							});
 							break;
@@ -997,7 +997,7 @@ class ClassesPage extends BaseComponent {
 							lvlFeaturesFilt.push({
 								name: "skill increase",
 								source: cls.source,
-								$lnk: $(`<span>skill increase</span>`),
+								$lnk: $(`<span>incremento de perícia</span>`),
 								preCalc: true,
 							});
 							break;
@@ -1079,10 +1079,10 @@ class ClassesPage extends BaseComponent {
 		});
 
 		$$`<div class="pf2-table pf2-table--advancements">
-			<div class="pf2-table__label">Your</div>
+			<div class="pf2-table__label">Seu</div>
 			<div class="pf2-table__label"></div>
-			<div class="pf2-table__label">Level</div>
-			<div class="pf2-table__label"><span>Class Features${renderer._renderTable_getMinimizeButton()}</span></div>
+			<div class="pf2-table__label">Nível</div>
+			<div class="pf2-table__label"><span>Características de Classe${renderer._renderTable_getMinimizeButton()}</span></div>
 			${metasTblRows.map(it => it.$row)}
 		</div>`.appendTo($wrpTblClass);
 		$wrpTblClass.show();
@@ -1098,18 +1098,18 @@ class ClassesPage extends BaseComponent {
 
 	_render_renderSubclassPrimaryControls ($wrp) {
 		const $btnToggleFeatures = ComponentUiUtil.$getBtnBool(this, "isHideFeatures", {
-			text: "Class Features",
+			text: "Características de Classe",
 			isInverted: true,
-		}).title("Toggle Class Features");
+		}).title("Alternar Características de Classe");
 
-		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Info"}).title("Toggle Class Info");
+		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Informações"}).title("Alternar Informações de Classe");
 
 		const $btnToggleFeats = ComponentUiUtil.$getBtnBool(this, "isShowFeats", {
-			text: "Show Feats",
+			text: "Mostrar Talentos",
 			activeClass: "btn-danger",
-			activeText: "Hide Feats",
-			inactiveText: "Show Feats",
-		}).title("Toggle Feat View").addClass("mb-1");
+			activeText: "Ocultar Talentos",
+			inactiveText: "Mostrar Talentos",
+		}).title("Alternar Visualização de Talentos").addClass("mb-1");
 
 		$$`<div class="flex-v-center m-1 flex-wrap">
 			<div class="mr-2 no-shrink">${$btnToggleFeats}</div>
@@ -1150,9 +1150,9 @@ class ClassesPage extends BaseComponent {
 				$dispCount.off("click");
 				if (list.visibleItems.length) {
 					const cntNotShown = list.items.length - list.visibleItems.length;
-					$dispCount.html(cntNotShown ? `<i class="clickable" title="Adjust your filters to see more.">(${cntNotShown} more not shown)</i>` : "").click(() => this._doSelectAllSubclasses());
+					$dispCount.html(cntNotShown ? `<i class="clickable" title="Ajuste os filtros para ver mais opções.">(${cntNotShown} opções ocultas)</i>` : "").click(() => this._doSelectAllSubclasses());
 				} else if (list.items.length > 1) {
-					$dispCount.html(`<i class="clickable" title="Adjust your filters to see more.">(${list.items.length - 1} subclasses not shown)</i>`).click(() => this._doSelectAllSubclasses());
+					$dispCount.html(`<i class="clickable" title="Ajuste os filtros para ver mais opções.">(${list.items.length - 1} subclasses ocultas)</i>`).click(() => this._doSelectAllSubclasses());
 				} else $dispCount.html("");
 			});
 
@@ -1176,7 +1176,7 @@ class ClassesPage extends BaseComponent {
 	_render_initSubclassControls ($wrp) {
 		const cls = this.activeClass;
 
-		const $btnSelAll = $(`<button class="btn btn-xs btn-default flex-1" title="Select All; Ctrl to Deselect All"><span class="glyphicon glyphicon-check"/></button>`)
+		const $btnSelAll = $(`<button class="btn btn-xs btn-default flex-1" title="Selecionar Tudo; CTRL para Desmarcar Tudo"><span class="glyphicon glyphicon-check"/></button>`)
 			.click(evt => {
 				const allStateKeys = this._getActiveSubclasses().map(sc => UrlUtil.getStateKeySubclass(sc));
 				if (evt.shiftKey) {
@@ -1223,27 +1223,27 @@ class ClassesPage extends BaseComponent {
 			Object.values(this._listsSubclasses).forEach(list => list.visibleItems.filter(it => it.values.stateKey).forEach(it => this._state[it.values.stateKey] = true));
 			$selFilterPreset.val("-1");
 		};
-		const $selFilterPreset = $(`<select class="input-xs form-control cls-tabs__sel-preset mr-2 mb-1 flex-3"><option value="-1" disabled>Filter...</option></select>`)
+		const $selFilterPreset = $(`<select class="input-xs form-control cls-tabs__sel-preset mr-2 mb-1 flex-3"><option value="-1" disabled>Filtrar...</option></select>`)
 			.change(() => {
 				const val = Number($selFilterPreset.val());
 				if (val == null) return;
 				setFilterSet(val)
 			});
-		filterSets.forEach((it, i) => $selFilterPreset.append(`<option value="${i}">${it.name}</option>`));
+		filterSets.forEach((it, i) => $selFilterPreset.append(`<option value="${i}">${Parser.uiToFull(it.name)}</option>`));
 		$selFilterPreset.val("-1");
 
-		const $btnReset = $(`<button class="btn btn-xs btn-default flex-1" title="Reset Selection"><span class="glyphicon glyphicon-refresh"></span></button>`)
+		const $btnReset = $(`<button class="btn btn-xs btn-default flex-1" title="Redefinir Seleção"><span class="glyphicon glyphicon-refresh"></span></button>`)
 			.click(() => {
 				this._proxyAssign("state", "_state", "__state", cls.subclasses.mergeMap(sc => ({[UrlUtil.getStateKeySubclass(sc)]: false})));
 			});
 
-		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowScSources", {$ele: $(`<button class="btn btn-xs btn-default flex-1" title="Show Subclass Sources"><span class="glyphicon glyphicon-book"/></button>`)});
+		const $btnToggleSources = ComponentUiUtil.$getBtnBool(this, "isShowScSources", {$ele: $(`<button class="btn btn-xs btn-default flex-1" title="Mostrar Fontes das Subclasses"><span class="glyphicon glyphicon-book"/></button>`)});
 
-		const $btnShuffle = $(`<button title="Feeling Lucky?" class="btn btn-xs btn-default flex-1"><span class="glyphicon glyphicon-random"/></button>`)
+		const $btnShuffle = $(`<button title="Estou com sorte" class="btn btn-xs btn-default flex-1"><span class="glyphicon glyphicon-random"/></button>`)
 			.click(() => {
 				if (Object.values(this._listsSubclasses).map(l => l.visibleItems.length).reduce((a, b) => a + b, 0) === 0) {
 					return JqueryUtil.doToast({
-						content: "No subclasses to choose from!",
+						content: "Nenhuma subclasse disponível!",
 						type: "warning",
 					});
 				}
@@ -1357,7 +1357,7 @@ class ClassesPage extends BaseComponent {
 	}
 
 	static _render_$getNoContent () {
-		return $(`<div class="pf2-h1-flavor" style="text-align: center">Toggle a button to view class information</div>`)
+		return $(`<div class="pf2-h1-flavor" style="text-align: center">Ative um botão para ver informações de classe</div>`)
 	}
 
 	_getDefaultState () {

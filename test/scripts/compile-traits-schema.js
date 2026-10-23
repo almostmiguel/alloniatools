@@ -29,14 +29,15 @@ function generateTraitSchema (file) {
 
 	// For each trait, add it to the schema.
 	traits.forEach(trait => {
-		// If trait doesn't have ANY category, give it an "Unknown" category.
+		// Match the runtime fallback for uncategorized traits.
 		if (!trait.categories || trait.categories.length === 0) {
-			trait.categories = ["Unknown"];
+			trait.categories = ["mechanics"];
 		}
 
 		// For each category, add it to the schema.
 		trait.categories.forEach(category => {
-			let categoryName = `${category.replace(/[^a-zA-Z ]/g, "").toCamelCase()}Trait`;
+			if (!Object.hasOwn(Parser.TRAIT_CATEGORIES, category)) throw new Error(`Unknown trait category "${category}" on ${trait.name}.`);
+			let categoryName = Parser.traitCategoryToSchemaKey(category);
 
 			// If category doesn't exist, create it.
 			if (!schema.definitions[categoryName]) {

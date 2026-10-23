@@ -13,7 +13,7 @@ class PageFilter {
 		this._sourceFilter = new SourceFilter(opts.sourceFilterOpts);
 		this._reprintedFilter = new Filter({
 			header: "Reprinted",
-			headerHelp: "Older entries with the same name in another source. Red hides older versions; clear shows all versions; blue shows only older versions. Compared using publication dates of entries loaded in this list.",
+			headerHelp: "Entradas antigas com o mesmo nome em outra fonte. Vermelho oculta versões antigas; neutro mostra todas; azul mostra apenas as antigas. A comparação usa as datas de publicação das entradas carregadas nesta lista.",
 			items: ["Reprinted"],
 			deselFn: () => true,
 		});
@@ -163,10 +163,10 @@ class ModalFilter {
 
 		await this._pInit();
 
-		const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">Loading...</i></div>`).appendTo($wrp);
+		const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">Carregando...</i></div>`).appendTo($wrp);
 
-		const $iptSearch = (opts.$iptSearch || $(`<input class="form-control lst__search lst__search--no-border-h h-100" type="search" placeholder="Search...">`)).disableSpellcheck();
-		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">Reset</button>`);
+		const $iptSearch = (opts.$iptSearch || $(`<input class="form-control lst__search lst__search--no-border-h h-100" type="search" placeholder="Buscar...">`)).disableSpellcheck();
+		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">Redefinir</button>`);
 		const $dispNumVisible = $(`<div class="lst__wrp-search-visible no-events flex-vh-center"></div>`);
 
 		const $wrpIptSearch = $$`<div class="w-100 relative">
@@ -181,7 +181,7 @@ class ModalFilter {
 
 		const $wrpFormHeaders = $(`<div class="input-group input-group--bottom flex no-shrink"></div>`);
 		const $cbSelAll = opts.isBuildUi || this._isRadio ? null : $(`<input type="checkbox">`);
-		const $btnSendAllToRight = opts.isBuildUi ? $(`<button class="btn btn-xxs btn-default col-1" title="Add All"><span class="glyphicon glyphicon-arrow-right"></span></button>`) : null;
+		const $btnSendAllToRight = opts.isBuildUi ? $(`<button class="btn btn-xxs btn-default col-1" title="Adicionar Todos"><span class="glyphicon glyphicon-arrow-right"></span></button>`) : null;
 
 		if (!opts.isBuildUi) {
 			if (this._isRadio) $wrpFormHeaders.append(`<label class="btn btn-default btn-xs col-0-5 flex-vh-center" disabled></label>`);
@@ -196,7 +196,7 @@ class ModalFilter {
 		const $wrpForm = $$`<div class="flex-col w-100 mb-1">${$wrpFormTop}${$wrpFormBottom}${$wrpFormHeaders}</div>`;
 		const $wrpList = this._$getWrpList();
 
-		const $btnConfirm = opts.isBuildUi ? null : $(`<button class="btn btn-default">Confirm</button>`);
+		const $btnConfirm = opts.isBuildUi ? null : $(`<button class="btn btn-default">Confirmar</button>`);
 
 		this._list = new List({
 			$iptSearch,
@@ -536,13 +536,13 @@ class FilterBox extends ProxyBase {
 
 		if (this._$btnReset) {
 			this._$btnReset
-				.title("Reset filters. SHIFT to reset everything.")
+				.title("Redefinir filtros. Segure SHIFT para redefinir tudo.")
 				.click((evt) => this.reset(evt.shiftKey));
 		}
 
 		if (this._$wrpFormTop || this._$btnToggleSummaryHidden) {
 			if (!this._$btnToggleSummaryHidden) {
-				this._$btnToggleSummaryHidden = $(`<button class="btn btn-default ${this._isCompact ? "p-2" : ""}" title="Toggle Filter Summary"><span class="glyphicon glyphicon-resize-small"></span></button>`)
+				this._$btnToggleSummaryHidden = $(`<button class="btn btn-default ${this._isCompact ? "p-2" : ""}" title="Alternar Resumo dos Filtros"><span class="glyphicon glyphicon-resize-small"></span></button>`)
 					.prependTo(this._$wrpFormTop);
 			} else if (!this._$btnToggleSummaryHidden.parent().length) {
 				this._$btnToggleSummaryHidden.prependTo(this._$wrpFormTop);
@@ -562,7 +562,7 @@ class FilterBox extends ProxyBase {
 
 		if (this._$wrpFormTop || this._$btnOpen) {
 			if (!this._$btnOpen) {
-				this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">Filter</button>`)
+				this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">Filtrar</button>`)
 					.prependTo(this._$wrpFormTop);
 			} else if (!this._$btnOpen.parent().length) {
 				this._$btnOpen.prependTo(this._$wrpFormTop);
@@ -602,25 +602,25 @@ class FilterBox extends ProxyBase {
 
 		const metaIptSearch = ComponentUiUtil.$getIptStr(
 			this._compSearch, "search",
-			{decorationRight: "clear", asMeta: true, html: `<input class="form-control input-xs" placeholder="Search...">`},
+			{decorationRight: "clear", asMeta: true, html: `<input class="form-control input-xs" placeholder="Buscar...">`},
 		);
 		this._compSearch._addHookBase("search", () => {
 			const searchTerm = this._compSearch._state.search.toLowerCase();
 			this._filters.forEach(f => f.handleSearch(searchTerm));
 		});
 
-		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">Show All</button>`)
+		const $btnShowAllFilters = $(`<button class="btn btn-xs btn-default">Mostrar Tudo</button>`)
 			.click(() => this.showAllFilters());
-		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">Hide All</button>`)
+		const $btnHideAllFilters = $(`<button class="btn btn-xs btn-default">Ocultar Tudo</button>`)
 			.click(() => this.hideAllFilters());
 
-		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="Reset filters. SHIFT to reset everything.">Reset</button>`)
+		const $btnReset = $(`<button class="btn btn-xs btn-default mr-3" title="Redefinir filtros. Segure SHIFT para redefinir tudo.">Redefinir</button>`)
 			.click(evt => this.reset(evt.shiftKey));
 
 		const $btnSettings = $(`<button class="btn btn-xs btn-default mr-3"><span class="glyphicon glyphicon-cog"></span></button>`)
 			.click(() => this._openSettingsModal());
 
-		const $btnSaveAlt = $(`<button class="btn btn-xs btn-primary" title="Save"><span class="glyphicon glyphicon-ok"></span></button>`)
+		const $btnSaveAlt = $(`<button class="btn btn-xs btn-primary" title="Salvar"><span class="glyphicon glyphicon-ok"></span></button>`)
 			.click(() => this._modalMeta.doClose(true));
 
 		const $wrpBtnCombineFilters = $(`<div class="btn-group mr-3"></div>`);
@@ -631,7 +631,7 @@ class FilterBox extends ProxyBase {
 			.appendTo($wrpBtnCombineFilters)
 			.click(() => this._meta.modeCombineFilters = FilterBox._COMBINE_MODES.getNext(this._meta.modeCombineFilters));
 		const hook = () => {
-			$btnCombineFiltersAs.text(this._meta.modeCombineFilters === "custom" ? this._meta.modeCombineFilters.uppercaseFirst() : this._meta.modeCombineFilters.toUpperCase());
+			$btnCombineFiltersAs.text(Parser.uiToFull(this._meta.modeCombineFilters === "custom" ? "Custom" : this._meta.modeCombineFilters.toUpperCase()));
 			if (this._meta.modeCombineFilters === "custom") $wrpBtnCombineFilters.append($btnCombineFilterSettings);
 			else $btnCombineFilterSettings.detach();
 			this._doSaveStateThrottled();
@@ -639,20 +639,20 @@ class FilterBox extends ProxyBase {
 		this._addHook("meta", "modeCombineFilters", hook);
 		hook();
 
-		const $btnSave = $(`<button class="btn btn-primary fltr__btn-close mr-2">Save</button>`)
+		const $btnSave = $(`<button class="btn btn-primary fltr__btn-close mr-2">Salvar</button>`)
 			.click(() => this._modalMeta.doClose(true));
 
-		const $btnCancel = $(`<button class="btn btn-default fltr__btn-close">Cancel</button>`)
+		const $btnCancel = $(`<button class="btn btn-default fltr__btn-close">Cancelar</button>`)
 			.click(() => this._modalMeta.doClose(false));
 
 		$$(this._modalMeta.$modal)`<div class="split mb-2 mt-2 flex-v-center mobile__flex-col">
 			<div class="flex-v-baseline mobile__flex-col">
-				<h4 class="m-0 mr-2 mobile__mb-2">Filters</h4>
+				<h4 class="m-0 mr-2 mobile__mb-2">Filtros</h4>
 				${metaIptSearch.$wrp.addClass("mobile__mb-2")}
 			</div>
 			<div class="flex-v-center mobile__flex-col">
 				<div class="flex-v-center mobile__m-1">
-					<div class="mr-2">Combine as</div>
+					<div class="mr-2">Combinar como</div>
 					${$wrpBtnCombineFilters}
 				</div>
 				<div class="flex-v-center mobile__m-1">
@@ -677,36 +677,36 @@ class FilterBox extends ProxyBase {
 	}
 
 	_openSettingsModal () {
-		const {$modalInner} = UiUtil.getShowModal({title: "Settings"});
+		const {$modalInner} = UiUtil.getShowModal({title: "Configurações"});
 
-		UiUtil.$getAddModalRowCb($modalInner, "Deselect Homebrew Sources by Default", this._meta, "isBrewDefaultHidden");
+		UiUtil.$getAddModalRowCb($modalInner, "Desmarcar Fontes de Conteúdo Próprio por Padrão", this._meta, "isBrewDefaultHidden");
 
 		UiUtil.addModalSep($modalInner);
 
-		UiUtil.$getAddModalRowHeader($modalInner, "Hide summary for filter...", {helpText: "The summary is the small red and blue button panel which appear below the search bar."});
-		this._filters.forEach(f => UiUtil.$getAddModalRowCb($modalInner, f.header, this._minisHidden, f.header));
+		UiUtil.$getAddModalRowHeader($modalInner, "Ocultar resumo do filtro...", {helpText: "O resumo é o painel de botões vermelhos e azuis exibido abaixo da barra de busca."});
+		this._filters.forEach(f => UiUtil.$getAddModalRowCb($modalInner, f.displayHeader, this._minisHidden, f.header));
 
 		UiUtil.addModalSep($modalInner);
 
 		const $rowResetAlwaysSave = UiUtil.$getAddModalRow($modalInner, "div").addClass("pr-2");
-		$rowResetAlwaysSave.append(`<span>Always Save on Close</span>`);
-		$(`<button class="btn btn-xs btn-default">Reset</button>`)
+		$rowResetAlwaysSave.append(`<span>Sempre Salvar ao Fechar</span>`);
+		$(`<button class="btn btn-xs btn-default">Redefinir</button>`)
 			.appendTo($rowResetAlwaysSave)
 			.click(async () => {
 				await StorageUtil.pRemove(FilterBox._STORAGE_KEY_ALWAYS_SAVE_UNCHANGED);
-				JqueryUtil.doToast("Saved!");
+				JqueryUtil.doToast("Salvo!");
 			});
 	}
 
 	_openCombineAsModal () {
-		const {$modalInner} = UiUtil.getShowModal({title: "Filter Combination Logic"});
-		const $btnReset = $(`<button class="btn btn-xs btn-default">Reset</button>`)
+		const {$modalInner} = UiUtil.getShowModal({title: "Lógica de Combinação dos Filtros"});
+		const $btnReset = $(`<button class="btn btn-xs btn-default">Redefinir</button>`)
 			.click(() => {
 				Object.keys(this._combineAs).forEach(k => this._combineAs[k] = "and");
 				$sels.forEach($sel => $sel.val("0"));
 			});
-		UiUtil.$getAddModalRowHeader($modalInner, "Combine filters as...", {$eleRhs: $btnReset});
-		const $sels = this._filters.map(f => UiUtil.$getAddModalRowSel($modalInner, f.header, this._combineAs, f.header, ["and", "or"], {fnDisplay: (it) => it.toUpperCase()}));
+		UiUtil.$getAddModalRowHeader($modalInner, "Combinar filtros como...", {$eleRhs: $btnReset});
+		const $sels = this._filters.map(f => UiUtil.$getAddModalRowSel($modalInner, f.displayHeader, this._combineAs, f.header, ["and", "or"], {fnDisplay: (it) => Parser.uiToFull(it.toUpperCase())}));
 	}
 
 	getValues () {
@@ -755,7 +755,7 @@ class FilterBox extends ProxyBase {
 
 			if (hasChanges) {
 				const isSave = await InputUiUtil.pGetUserBoolean({
-					title: "Unsaved Changes",
+					title: "Alterações Não Salvas",
 					textYesRemember: "Always Save",
 					textYes: "Save",
 					textNo: "Discard",
@@ -1078,6 +1078,7 @@ class FilterBase extends BaseComponent {
 	/**
 	 * @param opts
 	 * @param opts.header Filter header (name)
+	 * @param [opts.displayHeader] Visible label, independent of the saved filter key.
 	 * @param [opts.headerHelp] Filter header help text (tooltip)
 	 */
 	constructor (opts) {
@@ -1085,6 +1086,7 @@ class FilterBase extends BaseComponent {
 		this._filterBox = null;
 
 		this.header = opts.header;
+		this.displayHeader = opts.displayHeader || Parser.uiToFull(opts.header);
 		this._headerHelp = opts.headerHelp;
 
 		this.__meta = {...this.getDefaultMeta()};
@@ -1092,7 +1094,7 @@ class FilterBase extends BaseComponent {
 	}
 
 	_getRenderedHeader () {
-		return `<span ${this._headerHelp ? `title="${this._headerHelp.escapeQuotes()}" class="help--subtle"` : ""}>${this.header}</span>`;
+		return `<span ${this._headerHelp ? `title="${this._headerHelp.escapeQuotes()}" class="help--subtle"` : ""}>${this.displayHeader}</span>`;
 	}
 
 	set filterBox (it) { this._filterBox = it; }
@@ -1277,8 +1279,8 @@ class Filter extends FilterBase {
 		this._items = Filter._getAsFilterItems(opts.items || []);
 		this.__itemsSet = new Set(this._items.map(it => it.item)); // Cache the items as a set for fast exists checking
 		this._nests = opts.nests;
-		this._displayFn = opts.displayFn;
-		this._displayFnMini = opts.displayFnMini;
+		this._displayFn = (value, ...args) => Parser.uiToFull(opts.displayFn ? opts.displayFn(value, ...args) : value);
+		this._displayFnMini = opts.displayFnMini ? (value, ...args) => Parser.uiToFull(opts.displayFnMini(value, ...args)) : null;
 		this._displayFnTitle = opts.displayFnTitle;
 		this._selFn = opts.selFn;
 		this._selFnCache = null;
@@ -1539,7 +1541,7 @@ class Filter extends FilterBase {
 			tag: "div",
 			clazz: `fltr__mini-pill ${this._filterBox.isMinisHidden(this.header) ? "ve-hidden" : ""} ${this._deselFn && this._deselFn(item.item) ? "fltr__mini-pill--default-desel" : ""} ${this._selFn && this._selFn(item.item) ? "fltr__mini-pill--default-sel" : ""}`,
 			html: toDisplay,
-			title: `${this._displayFnTitle ? `${this._displayFnTitle(item.item, item)} (` : ""}Filter: ${this.header}${this._displayFnTitle ? ")" : ""}`,
+			title: `${this._displayFnTitle ? `${this._displayFnTitle(item.item, item)} (` : ""}Filtro: ${this.displayHeader}${this._displayFnTitle ? ")" : ""}`,
 			click: () => {
 				this._state[item.item] = 0;
 				this._filterBox.fireChangeEvent();
@@ -1587,25 +1589,25 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--all w-100`,
 			click: () => this._doSetPillsAll(),
-			html: "All",
+			html: "Todos",
 		});
 		const btnClear = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--clear w-100`,
 			click: () => this._doSetPillsClear(),
-			html: "Clear",
+			html: "Limpar",
 		});
 		const btnNone = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn--none w-100`,
 			click: () => this._doSetPillsNone(),
-			html: "None",
+			html: "Nenhum",
 		});
 		const btnDefault = e_({
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} w-100`,
 			click: () => this._doSetPinsDefault(),
-			html: "Default",
+			html: "Padrão",
 		});
 
 		const wrpStateBtnsOuter = e_({
@@ -1632,9 +1634,9 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--blue fltr__h-btn-logic w-100`,
 			click: () => this._meta.combineBlue = Filter._getNextCombineMode(this._meta.combineBlue),
-			title: `Positive matches mode for this filter. AND requires all blues to match, OR requires at least one blue to match, XOR requires exactly one blue to match.`,
+			title: `Lógica das seleções azuis: E exige todas; OU exige pelo menos uma; OU EXCLUSIVO exige exatamente uma.`,
 		});
-		const hookCombineBlue = () => e_({ele: btnCombineBlue, text: `${this._meta.combineBlue}`.toUpperCase()});
+		const hookCombineBlue = () => e_({ele: btnCombineBlue, text: Parser.uiToFull(this._meta.combineBlue.toUpperCase())});
 		this._addHook("meta", "combineBlue", hookCombineBlue);
 		hookCombineBlue();
 
@@ -1642,9 +1644,9 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--red fltr__h-btn-logic w-100`,
 			click: () => this._meta.combineRed = Filter._getNextCombineMode(this._meta.combineRed),
-			title: `Negative match mode for this filter. AND requires all reds to match, OR requires at least one red to match, XOR requires exactly one red to match.`,
+			title: `Lógica das seleções vermelhas: E exige todas; OU exige pelo menos uma; OU EXCLUSIVO exige exatamente uma.`,
 		});
-		const hookCombineRed = () => e_({ele: btnCombineRed, text: `${this._meta.combineRed}`.toUpperCase()});
+		const hookCombineRed = () => e_({ele: btnCombineRed, text: Parser.uiToFull(this._meta.combineRed.toUpperCase())});
 		this._addHook("meta", "combineRed", hookCombineRed);
 		hookCombineRed();
 
@@ -1652,7 +1654,7 @@ class Filter extends FilterBase {
 			tag: "button",
 			clazz: `btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} ml-2`,
 			click: () => this._meta.isHidden = !this._meta.isHidden,
-			html: "Hide",
+			html: "Ocultar",
 		});
 		const hookShowHide = () => {
 			e_({ele: btnShowHide}).toggleClass("active", this._meta.isHidden);
@@ -2128,7 +2130,7 @@ class Filter extends FilterBase {
 	}
 
 	handleSearch (searchTerm) {
-		const isHeaderMatch = this.header.toLowerCase().includes(searchTerm);
+		const isHeaderMatch = this.displayHeader.toLowerCase().includes(searchTerm);
 
 		if (isHeaderMatch) {
 			this._items.forEach(it => {
@@ -2274,7 +2276,7 @@ class SourceFilter extends Filter {
 		const btnHomebrew = e_({
 			tag: "button",
 			clazz: `btn btn-default w-100 ${opts.isMulti ? "btn-xxs" : "btn-xs"}`,
-			html: `Homebrew`,
+			html: `Conteúdo Próprio`,
 			click: () => this._doSetPinsHomebrew(),
 		});
 
@@ -2408,7 +2410,7 @@ class SourceFilter extends Filter {
 		const btnCancel = e_({
 			tag: "button",
 			clazz: `btn btn-xs btn-default px-1`,
-			html: "Cancel",
+			html: "Cancelar",
 			click: () => {
 				grpBtnsInactive.showVe();
 				wrpWrpSlider.hideVe();
@@ -2419,7 +2421,7 @@ class SourceFilter extends Filter {
 		const btnConfirm = e_({
 			tag: "button",
 			clazz: `btn btn-xs btn-default px-1`,
-			html: "Confirm",
+			html: "Confirmar",
 			click: () => {
 				grpBtnsInactive.showVe();
 				wrpWrpSlider.hideVe();
@@ -2443,7 +2445,7 @@ class SourceFilter extends Filter {
 		const btnShowSlider = e_({
 			tag: "button",
 			clazz: `btn btn-xxs btn-default px-1`,
-			html: "Select by Date",
+			html: "Selecionar por Data",
 			click: () => {
 				grpBtnsInactive.hideVe();
 				wrpWrpSlider.showVe();
@@ -2473,7 +2475,7 @@ class SourceFilter extends Filter {
 		const btnClear = e_({
 			tag: "button",
 			clazz: `btn btn-xxs btn-default px-1`,
-			html: "Clear",
+			html: "Limpar",
 			click: () => {
 				const nxtState = {};
 				Object.keys(this._state)
@@ -2761,17 +2763,17 @@ class RangeFilter extends FilterBase {
 			this,
 			"isUseDropdowns",
 			{
-				$ele: $(`<button class="btn btn-default btn-xs mr-2">Show as Dropdowns</button>`),
+				$ele: $(`<button class="btn btn-default btn-xs mr-2">Mostrar como Menus</button>`),
 				stateName: "meta",
 				stateProp: "_meta",
 			},
 		);
-		const $btnReset = $(`<button class="btn btn-default btn-xs">Reset</button>`).click(() => this.reset());
+		const $btnReset = $(`<button class="btn btn-default btn-xs">Redefinir</button>`).click(() => this.reset());
 		const $wrpBtns = $$`<div>${$btnForceMobile}${$btnReset}</div>`;
 
 		const $wrpSummary = $(`<div class="flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Hide</button>`)
+		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Ocultar</button>`)
 			.click(() => this._meta.isHidden = !this._meta.isHidden);
 		const hkIsHidden = () => {
 			$btnShowHide.toggleClass("active", this._meta.isHidden);
@@ -2802,7 +2804,7 @@ class RangeFilter extends FilterBase {
 	_getDisplayText (value, {isBeyondMax = false, isTooltip = false} = {}) {
 		value = `${this._labels ? this._labelDisplayFn ? this._labelDisplayFn(this._labels[value]) : this._labels[value] : (isTooltip && this._displayFnTooltip) ? this._displayFnTooltip(value) : this._displayFn ? this._displayFn(value) : value}${isBeyondMax ? "+" : ""}`;
 		if (this._suffix) value += this._suffix;
-		return value;
+		return Parser.uiToFull(value);
 	}
 
 	/**
@@ -2986,16 +2988,16 @@ class RangeFilter extends FilterBase {
 
 				this._$btnMiniEq
 					.attr("state", this._state.min === this._state.curMin && this._state.max === this._state.curMax ? FilterBox._PILL_STATES[0] : FilterBox._PILL_STATES[1])
-					.text(`${this.header} = ${this._getDisplayText(this._state.curMin, {isBeyondMax: this._isAllowGreater && this._state.curMin === this._state.max})}`);
+					.text(`${this.displayHeader} = ${this._getDisplayText(this._state.curMin, {isBeyondMax: this._isAllowGreater && this._state.curMin === this._state.max})}`);
 			} else {
 				if (this._state.min !== this._state.curMin) {
 					this._$btnMiniGt.attr("state", FilterBox._PILL_STATES[1])
-						.text(`${this.header} ≥ ${this._getDisplayText(this._state.curMin)}`);
+						.text(`${this.displayHeader} ≥ ${this._getDisplayText(this._state.curMin)}`);
 				} else this._$btnMiniGt.attr("state", FilterBox._PILL_STATES[0]);
 
 				if (this._state.max !== this._state.curMax) {
 					this._$btnMiniLt.attr("state", FilterBox._PILL_STATES[1])
-						.text(`${this.header} ≤ ${this._getDisplayText(this._state.curMax)}`);
+						.text(`${this.displayHeader} ≤ ${this._getDisplayText(this._state.curMax)}`);
 				} else this._$btnMiniLt.attr("state", FilterBox._PILL_STATES[0]);
 
 				this._$btnMiniEq.attr("state", FilterBox._PILL_STATES[0]);
@@ -3334,7 +3336,7 @@ class OptionsFilter extends FilterBase {
 	}
 
 	_$render_$getPill (key) {
-		const displayText = this._displayFn(key);
+		const displayText = Parser.uiToFull(this._displayFn(key));
 
 		const $btnPill = $(`<div class="fltr__pill">${displayText}</div>`)
 			.click(() => {
@@ -3355,11 +3357,11 @@ class OptionsFilter extends FilterBase {
 	}
 
 	_$render_$getMiniPill (key) {
-		const displayTextFull = this._displayFnMini ? this._displayFn(key) : null;
-		const displayText = this._displayFnMini ? this._displayFnMini(key) : this._displayFn(key);
+		const displayTextFull = this._displayFnMini ? Parser.uiToFull(this._displayFn(key)) : null;
+		const displayText = Parser.uiToFull(this._displayFnMini ? this._displayFnMini(key) : this._displayFn(key));
 
 		const $btnMini = $(`<div class="fltr__mini-pill ${this._filterBox.isMinisHidden(this.header) ? "ve-hidden" : ""}" state="${FilterBox._PILL_STATES[this._defaultState[key] === this._state[key] ? 0 : this._state[key] ? 1 : 2]}">${displayText}</div>`)
-			.title(`${displayTextFull ? `${displayTextFull} (` : ""}Filter: ${this.header}${displayTextFull ? ")" : ""}`)
+			.title(`${displayTextFull ? `${displayTextFull} (` : ""}Filtro: ${this.displayHeader}${displayTextFull ? ")" : ""}`)
 			.click(() => {
 				this._state[key] = this._defaultState[key];
 				this._filterBox.fireChangeEvent();
@@ -3375,12 +3377,12 @@ class OptionsFilter extends FilterBase {
 	}
 
 	_$getHeaderControls () {
-		const $btnReset = $(`<button class="btn btn-default btn-xs">Reset</button>`).click(() => this.reset());
+		const $btnReset = $(`<button class="btn btn-default btn-xs">Redefinir</button>`).click(() => this.reset());
 		const $wrpBtns = $$`<div class="flex-v-center">${$btnReset}</div>`;
 
 		const $wrpSummary = $(`<div class="flex-v-center fltr__summary_item fltr__summary_item--include"></div>`).hideVe();
 
-		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Hide</button>`)
+		const $btnShowHide = $(`<button class="btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}">Ocultar</button>`)
 			.click(() => this._meta.isHidden = !this._meta.isHidden);
 		const hkIsHidden = () => {
 			$btnShowHide.toggleClass("active", this._meta.isHidden);
@@ -3571,7 +3573,7 @@ class MultiFilter extends FilterBase {
 			this,
 			"isUseDropdowns",
 			{
-				$ele: $(`<button class="btn btn-default btn-xs ml-2">Show as Dropdowns</button>`),
+				$ele: $(`<button class="btn btn-default btn-xs ml-2">Mostrar como Menus</button>`),
 				stateName: "meta",
 				stateProp: "_meta",
 			},
@@ -3588,7 +3590,7 @@ class MultiFilter extends FilterBase {
 		const btnResetAll = e_({
 			tag: "button",
 			clazz: "btn btn-default btn-xs ml-2",
-			text: "Reset All",
+			text: "Redefinir Tudo",
 			click: () => this._filters.forEach(it => it.reset()),
 		});
 
@@ -3598,7 +3600,7 @@ class MultiFilter extends FilterBase {
 		const btnShowHide = e_({
 			tag: "button",
 			clazz: `btn btn-default btn-xs ml-2 ${this._meta.isHidden ? "active" : ""}`,
-			text: "Hide",
+			text: "Ocultar",
 			click: () => this._meta.isHidden = !this._meta.isHidden,
 		});
 		const wrpControls = e_({tag: "div", clazz: "flex-v-center", children: [wrpSummary, wrpBtns, btnShowHide]});
@@ -3734,9 +3736,9 @@ class TraitsFilter extends MultiFilter {
 	constructor (opts) {
 		opts = opts || {};
 		if (opts.discardCategories === undefined) opts.discardCategories = {};
+		if (opts.header === "Traits" && !opts.displayHeader) opts.displayHeader = "Traços";
 		let filterOpts = opts.filterOpts || {};
-		filterOpts["Rarity"] = filterOpts["Rarity"] || {itemSortFn: SortUtil.ascSortRarity};
-		filterOpts["Alignment"] = filterOpts["Alignment"] || {displayFn: Parser.alignToFull};
+		filterOpts.rarity = filterOpts.rarity || {itemSortFn: SortUtil.ascSortRarity};
 		const filterSortFn = opts.filterSortFn || TraitsFilter._getDefaultFilterSortFn();
 		const categories = Renderer.trait.TRAITS._categories;
 		opts.filters = [];
@@ -3744,7 +3746,7 @@ class TraitsFilter extends MultiFilter {
 
 		categories.filter(k => !k.startsWith("_")).sort(filterSortFn).forEach(cat => {
 			if (opts.discardCategories[cat]) return;
-			filtersByCat[cat] = new Filter({header: cat, ...filterOpts[cat]});
+			filtersByCat[cat] = new Filter({header: cat, displayHeader: Parser.traitCategoryToFull(cat), ...filterOpts[cat]});
 			opts.filters.push(filtersByCat[cat]);
 		});
 
@@ -3755,13 +3757,9 @@ class TraitsFilter extends MultiFilter {
 
 	static _getDefaultFilterSortFn () {
 		return function (a, b) {
-			if (a === "Rarity") return -1;
-			else if (b === "Rarity") return 1;
-			else if (a === "General") return 1;
-			else if (b === "General") return -1;
-			else if (a === "Homebrew") return 1;
-			else if (b === "Homebrew") return -1;
-			else return SortUtil.ascSort(a, b);
+			if (a === "rarity") return -1;
+			else if (b === "rarity") return 1;
+			else return SortUtil.ascSort(Parser.traitCategoryToFull(a), Parser.traitCategoryToFull(b));
 		};
 	}
 
@@ -3771,9 +3769,9 @@ class TraitsFilter extends MultiFilter {
 
 	_getTraitCategories (trait) {
 		let out = new Set();
-		const lookup = Renderer.trait.TRAITS[Parser.getTraitName(trait).toLowerCase()]
+		const lookup = Renderer.trait.getTrait(trait)
 		if (lookup) lookup.categories.forEach(cat => out.add(cat));
-		else out.add("General")
+		else out.add("mechanics")
 		return Array.from(out).filter(it => !this._discardCategories[it]).filter(it => !it.startsWith("_"));
 	}
 

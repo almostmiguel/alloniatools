@@ -139,7 +139,7 @@ class SpellsPage extends ListPage {
 
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`).title("Atalho: F"),
 			$btnReset: $(`#reset`),
 		});
 
@@ -232,8 +232,8 @@ class SpellsPage extends ListPage {
 		this._printView = new PrintModeView({
 			hashKey: "printview",
 			$openBtn: $(`#btn-spellbook`),
-			noneVisibleMsg: "If you wish to view multiple spells, please first make a list",
-			pageTitle: "Spells Book View",
+			noneVisibleMsg: "Para ver várias magias, crie uma lista primeiro.",
+			pageTitle: "Livro de Magias",
 			popTblGetNumShown: ($wrpContent, $dispName, $wrpControls) => {
 				const toShow = ListUtil.getSublistedIds().map(id => this._dataList[id])
 					.sort((a, b) => SortUtil.ascSortLower(a.name, b.name));
@@ -248,8 +248,8 @@ class SpellsPage extends ListPage {
 				if (lastOrder != null) lastOrder = `${lastOrder}`;
 
 				const $selSortMode = $(`<select class="form-control input-sm">
-				<option value="0">Spell Level</option>
-				<option value="1">Alphabetical</option>
+				<option value="0">Nível de Magia</option>
+				<option value="1">Alfabética</option>
 			</select>`)
 					.change(() => {
 						if (!toShow.length && Hist.lastLoadedId != null) return;
@@ -262,7 +262,7 @@ class SpellsPage extends ListPage {
 					});
 				if (lastOrder != null) $selSortMode.val(lastOrder);
 
-				$$`<div class="flex-vh-center ml-3"><div class="mr-2 no-wrap">Sort order:</div>${$selSortMode}</div>`.appendTo($wrpControls);
+				$$`<div class="flex-vh-center ml-3"><div class="mr-2 no-wrap">Ordenar por:</div>${$selSortMode}</div>`.appendTo($wrpControls);
 
 				const renderByLevel = () => {
 					const stack = [];

@@ -141,26 +141,6 @@
 			],
 			"subclasses": [
 				{
-					"name": "Spore",
-					"type": "Druidic Order",
-					"shortName": "Spore",
-					"source": "WoW2",
-					"page": 72,
-					"subclassFeatures": [
-						"Druidic Order|Druid|PC1|Spore|WoW2|1"
-					]
-				},
-				{
-					"name": "Cultivation",
-					"type": "Druidic Order",
-					"shortName": "Cultivation",
-					"source": "WoW2",
-					"page": 72,
-					"subclassFeatures": [
-						"Druidic Order|Druid|PC1|Cultivation|WoW2|1"
-					]
-				},
-				{
 					"name": "Animal",
 					"type": "Druidic Order",
 					"shortName": "Animal",
@@ -202,36 +182,6 @@
 					"page": 126,
 					"subclassFeatures": [
 						"Druidic Order|Druid|PC1|Untamed|PC1|1"
-					]
-				},
-				{
-					"name": "Flame",
-					"type": "Druidic Order",
-					"shortName": "Flame",
-					"source": "SoM",
-					"page": 198,
-					"subclassFeatures": [
-						"Druidic Order|Druid|PC1|Flame|SoM|1"
-					]
-				},
-				{
-					"name": "Stone",
-					"type": "Druidic Order",
-					"shortName": "Stone",
-					"source": "SoM",
-					"page": 198,
-					"subclassFeatures": [
-						"Druidic Order|Druid|PC1|Stone|SoM|1"
-					]
-				},
-				{
-					"name": "Wave",
-					"type": "Druidic Order",
-					"shortName": "Wave",
-					"source": "SoM",
-					"page": 198,
-					"subclassFeatures": [
-						"Druidic Order|Druid|PC1|Wave|SoM|1"
 					]
 				}
 			],

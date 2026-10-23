@@ -8,7 +8,7 @@ class PageFilterVariantRules extends PageFilter {
 		super();
 
 		this._sourceFilter = new SourceFilter();
-		this._ruleCategoryFilter = new Filter({header: "Rule Category", headerHelp: "Variant - Heavily Adds to or Modifies the Game Rules\nOptional - Adds new content to the game\nSubsystem - Rules for running specific types of encounters\nAdventure - Adventure-specific Rulesets"});
+		this._ruleCategoryFilter = new Filter({header: "Rule Category", headerHelp: "Variante — Acrescenta ou modifica significativamente as regras\nOpcional — Adiciona conteúdo ao jogo\nSubsistema — Regras para tipos específicos de encontros\nAventura — Regras específicas de uma aventura"});
 		this._subCategoryFilter = new Filter({
 			header: "Subcategory",
 			nests: {},

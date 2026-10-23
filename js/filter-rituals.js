@@ -57,7 +57,7 @@ class PageFilterRituals extends PageFilter {
 		it._normalisedTime = Parser.getNormalisedTime(it.cast);
 
 		it._fTraits = it.traits.map(t => Parser.getTraitName(t));
-		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) it._fTraits.push("Common");
+		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "rarity")).some(Boolean)) it._fTraits.push(Renderer.trait.getDefaultRarity());
 		it._fTime = Parser.timeToActivityType(it.cast);
 		it._fSndCasters = it.secondaryCasters ? it.secondaryCasters.number : 0;
 		it._fPmCheck = it.primaryCheck.skills || [];

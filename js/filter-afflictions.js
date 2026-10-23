@@ -17,7 +17,7 @@ class PageFilterAfflictions extends PageFilter {
 		it._fSources = SourceFilter.getCompleteFilterSources(it);
 		it._fType = it.type;
 		it._fTraits = it.traits.map(t => Parser.getTraitName(t));
-		if (!it._fTraits.some(t => Renderer.trait.isTraitInCategory(t, "Rarity"))) it._fTraits.push("Common");
+		if (!it._fTraits.some(t => Renderer.trait.isTraitInCategory(t, "rarity"))) it._fTraits.push(Renderer.trait.getDefaultRarity());
 		it._fLvl = PageFilterAfflictions.getFilterLevel(it.level);
 
 		it._fMiscFilter = [];

@@ -759,7 +759,7 @@ class ListUiUtil {
 
 			if (nxtHtml === ListUiUtil.HTML_GLYPHICON_CONTRACT && list.visibleItems.length > 500) {
 				const isSure = await InputUiUtil.pGetUserBoolean({
-					title: "Are You Sure?",
+					title: "Tem certeza?",
 					htmlDescription: `You are about to expand ${list.visibleItems.length} rows. This may seriously degrade performance.<br>Are you sure you want to continue?`,
 				});
 				if (!isSure) return;
@@ -994,7 +994,7 @@ SearchUiUtil.NO_HOVER_CATEGORIES = new Set([
 // based on GM screen's AddMenuSearchTab
 class SearchWidget {
 	static getSearchNoResults () {
-		return `<div class="ui-search__message"><i>No results.</i></div>`;
+		return `<div class="ui-search__message"><i>Nenhum resultado.</i></div>`;
 	}
 
 	static getSearchLoading () {
@@ -1002,7 +1002,7 @@ class SearchWidget {
 	}
 
 	static getSearchEnter () {
-		return `<div class="ui-search__message"><i>Enter a search.</i></div>`;
+		return `<div class="ui-search__message"><i>Digite uma busca.</i></div>`;
 	}
 
 	/**
@@ -1271,7 +1271,7 @@ class SearchWidget {
 					this.__doSearch();
 				});
 
-			this._$iptSearch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search...">`).appendTo($wrpControls);
+			this._$iptSearch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Buscar...">`).appendTo($wrpControls);
 			this._$wrpResults = $(`<div class="ui-search__wrp-results"></div>`).appendTo(this._$rendered);
 
 			let lastSearchTerm = "";
@@ -1388,7 +1388,7 @@ class SearchWidget {
 
 	static _showLoadingModal () {
 		const {$modalInner, doClose} = UiUtil.getShowModal({isPermanent: true});
-		$(`<div class="flex-vh-center w-100 h-100"><span class="dnd-font italic ve-muted">Loading...</span></div>`).appendTo($modalInner);
+		$(`<div class="flex-vh-center w-100 h-100"><span class="dnd-font italic ve-muted">Carregando...</span></div>`).appendTo($modalInner);
 		return doClose;
 	}
 	// endregion
@@ -1434,13 +1434,13 @@ class InputUiUtil {
 
 			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 
 			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Enter a Number",
+				title: opts.title || "Digite um Número",
 				isMinHeight0: true,
 				cbClose: (isDataEntered) => {
 					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
@@ -1512,7 +1512,7 @@ class InputUiUtil {
 			const $btnFalse = $(`<button class="btn btn-default btn-sm flex-v-center"><span class="glyphicon glyphicon-remove mr-2"></span><span>${opts.textNo || "Cancel"}</span></button>`)
 				.click(() => doClose(true, false));
 
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 
 			const {$modalInner, doClose} = UiUtil.getShowModal({
@@ -1561,13 +1561,13 @@ class InputUiUtil {
 
 			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 
 			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Select an Option",
+				title: opts.title || "Selecione uma Opção",
 				isMinHeight0: true,
 				cbClose: (isDataEntered) => {
 					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
@@ -1611,9 +1611,9 @@ class InputUiUtil {
 		return new Promise(resolve => {
 			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 
 			const prop = "formData";
@@ -1631,7 +1631,7 @@ class InputUiUtil {
 
 			let title = opts.title;
 			if (!title) {
-				if (opts.count != null) title = `Choose ${Parser.numberToText(opts.count).uppercaseFirst()}`;
+				if (opts.count != null) title = `Escolha ${Parser.numberToText(opts.count).uppercaseFirst()}`;
 				else if (opts.min != null && opts.max != null) title = `Choose Between ${Parser.numberToText(opts.min).uppercaseFirst()} and ${Parser.numberToText(opts.max).uppercaseFirst()} Options`;
 				else if (opts.min != null) title = `Choose At Least ${Parser.numberToText(opts.min).uppercaseFirst()}`;
 				else title = `Choose At Most ${Parser.numberToText(opts.max).uppercaseFirst()}`;
@@ -1688,7 +1688,7 @@ class InputUiUtil {
 			const onclicks = [];
 
 			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Select an Option",
+				title: opts.title || "Selecione uma Opção",
 				isMinHeight0: true,
 				cbClose: (isDataEntered) => {
 					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
@@ -1721,9 +1721,9 @@ class InputUiUtil {
 
 			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 
 			$$`<div class="flex-v-center flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
@@ -1760,9 +1760,9 @@ class InputUiUtil {
 			if (opts.autocomplete && opts.autocomplete.length) $iptStr.typeahead({source: opts.autocomplete});
 			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 			const {$modalInner, doClose} = UiUtil.getShowModal({
 				title: opts.title || "Enter Text",
@@ -1799,9 +1799,9 @@ class InputUiUtil {
 			if (opts.isCode) $iptStr.addClass("code");
 			const $btnOk = $(`<button class="btn btn-primary mr-2">${opts.buttonText || "OK"}</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 			const {$modalInner, doClose} = UiUtil.getShowModal({
 				title: opts.title || "Enter Text",
@@ -1834,12 +1834,12 @@ class InputUiUtil {
 			const $iptRgb = $(`<input class="form-control mb-2" ${opts.default != null ? `value="${opts.default}"` : ""} type="color">`);
 			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Choose Color",
+				title: opts.title || "Escolha uma Cor",
 				isMinHeight0: true,
 				cbClose: (isDataEntered) => {
 					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
@@ -1958,12 +1958,12 @@ class InputUiUtil {
 
 			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 			const {$modalInner, doClose} = UiUtil.getShowModal({
-				title: opts.title || "Select Direction",
+				title: opts.title || "Selecione uma Direção",
 				isMinHeight0: true,
 				cbClose: (isDataEntered) => {
 					if (typeof isDataEntered === "symbol") return resolve(isDataEntered);
@@ -2031,9 +2031,9 @@ class InputUiUtil {
 
 			const $btnOk = $(`<button class="btn btn-primary mr-2">OK</button>`)
 				.click(() => doClose(true));
-			const $btnCancel = $(`<button class="btn btn-default">Cancel</button>`)
+			const $btnCancel = $(`<button class="btn btn-default">Cancelar</button>`)
 				.click(() => doClose(false));
-			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
+			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Pular</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 			const {$modalInner, doClose} = UiUtil.getShowModal({
 				title: opts.title || "Enter Dice",
@@ -2114,7 +2114,7 @@ class DragReorderUiUtil {
 			});
 		};
 
-		return $(`<div class="m${opts.marginSide || "l"}-2 ui-drag__patch" title="Drag to Reorder">
+		return $(`<div class="m${opts.marginSide || "l"}-2 ui-drag__patch" title="Arraste para Reordenar">
 		<div class="ui-drag__patch-col"><div>&#8729</div><div>&#8729</div><div>&#8729</div></div>
 		<div class="ui-drag__patch-col"><div>&#8729</div><div>&#8729</div><div>&#8729</div></div>
 		</div>`).mousedown(() => doDragRender());
@@ -2172,7 +2172,7 @@ class DragReorderUiUtil {
 			});
 		};
 
-		return $(`<div class="mr-2 ui-drag__patch" title="Drag to Reorder">
+		return $(`<div class="mr-2 ui-drag__patch" title="Arraste para Reordenar">
 		<div class="ui-drag__patch-col"><div>&#8729</div><div>&#8729</div><div>&#8729</div></div>
 		<div class="ui-drag__patch-col"><div>&#8729</div><div>&#8729</div><div>&#8729</div></div>
 		</div>`).mousedown(() => doDragRender());
@@ -2280,9 +2280,9 @@ class SourceUiUtil {
 
 		const $btnCancel = options.isRequired && !isEditMode
 			? null
-			: $(`<button class="btn btn-default ml-2">Cancel</button>`).click(() => options.cbCancel());
+			: $(`<button class="btn btn-default ml-2">Cancelar</button>`).click(() => options.cbCancel());
 
-		const $btnUseExisting = $(`<button class="btn btn-default">Use an Existing Source</button>`)
+		const $btnUseExisting = $(`<button class="btn btn-default">Usar Fonte Existente</button>`)
 			.click(() => {
 				$stageInitial.hide();
 				$stageExisting.show();
@@ -2294,42 +2294,42 @@ class SourceUiUtil {
 		const $stageInitial = $$`<div class="h-100 w-100 flex-vh-center"><div>
 			<h3 class="text-center">${isEditMode ? "Edit Homebrew Source" : "Add a Homebrew Source"}</h3>
 			<div class="row ui-source__row mb-2"><div class="col-12 flex-v-center">
-				<span class="mr-2 ui-source__name help" title="The name or title for the homebrew you wish to create. This could be the name of a book or PDF; for example, 'Bestiary 1'">Title</span>
+				<span class="mr-2 ui-source__name help" title="O nome ou título do conteúdo próprio que deseja criar, como o nome de um livro ou PDF.">Título</span>
 				${$iptName}
 			</div></div>
 			<div class="row ui-source__row mb-2"><div class="col-12 flex-v-center">
-				<span class="mr-2 ui-source__name help" title="An abbreviated form of the title. This will be shown in lists on the site, and in the top-right corner of statblocks or data entries; for example, 'B1'">Abbreviation</span>
+				<span class="mr-2 ui-source__name help" title="Uma abreviação do título, exibida nas listas e no canto superior direito das fichas.">Abreviação</span>
 				${$iptAbv}
 			</div></div>
 			<div class="row ui-source__row mb-2"><div class="col-12 flex-v-center">
-				<span class="mr-2 ui-source__name help" title="This will be used to identify your homebrew universally, so should be unique to you and you alone">JSON Identifier</span>
+				<span class="mr-2 ui-source__name help" title="Identificador único para o seu conteúdo próprio.">Identificador JSON</span>
 				${$iptJson}
 			</div></div>
 			<div class="row ui-source__row mb-2"><div class="col-12 flex-v-center">
-				<span class="mr-2 ui-source__name help" title="A link to the original homebrew, e.g. a GM Binder page">Source URL</span>
+				<span class="mr-2 ui-source__name help" title="Um link para o conteúdo próprio original.">URL da Fonte</span>
 				${$iptUrl}
 			</div></div>
 			<div class="row ui-source__row mb-2"><div class="col-12 flex-v-center">
-				<span class="mr-2 ui-source__name help" title="A comma-separated list of authors, e.g. 'John Doe, Joe Bloggs'">Author(s)</span>
+				<span class="mr-2 ui-source__name help" title="Lista de autores separados por vírgulas.">Autor(es)</span>
 				${$iptAuthors}
 			</div></div>
 			<div class="row ui-source__row mb-2"><div class="col-12 flex-v-center">
-				<span class="mr-2 ui-source__name help" title="A comma-separated list of people who converted the homebrew to Pf2eTools' format, e.g. 'John Doe, Joe Bloggs'">Converted By</span>
+				<span class="mr-2 ui-source__name help" title="Lista de pessoas que converteram o conteúdo para o formato do site, separadas por vírgulas.">Convertido por</span>
 				${$iptConverters}
 			</div></div>
 			<div class="text-center mb-2">${$btnOk}${$btnCancel}</div>
 
-			${!isEditMode && BrewUtil.homebrewMeta.sources && BrewUtil.homebrewMeta.sources.length ? $$`<div class="flex-vh-center mb-3 mt-3"><span class="ui-source__divider"></span>or<span class="ui-source__divider"></span></div>
+			${!isEditMode && BrewUtil.homebrewMeta.sources && BrewUtil.homebrewMeta.sources.length ? $$`<div class="flex-vh-center mb-3 mt-3"><span class="ui-source__divider"></span>ou<span class="ui-source__divider"></span></div>
 			<div class="flex-vh-center">${$btnUseExisting}</div>` : ""}
 		</div></div>`.appendTo(options.$parent);
 
 		const $selExisting = $$`<select class="form-control input-sm">
-			<option disabled>Select</option>
+			<option disabled>Selecionar</option>
 			${(BrewUtil.homebrewMeta.sources || []).sort((a, b) => SortUtil.ascSortLower(a.full, b.full)).map(s => `<option value="${s.json.escapeQuotes()}">${s.full.escapeQuotes()}</option>`)}
 		</select>`.change(() => $selExisting.removeClass("form-control--error"));
 		$selExisting[0].selectedIndex = 0;
 
-		const $btnConfirmExisting = $(`<button class="btn btn-default btn-sm">Confirm</button>`)
+		const $btnConfirmExisting = $(`<button class="btn btn-default btn-sm">Confirmar</button>`)
 			.click(() => {
 				if ($selExisting[0].selectedIndex !== 0) {
 					const sourceJson = $selExisting.val();
@@ -2343,7 +2343,7 @@ class SourceUiUtil {
 				} else $selExisting.addClass("form-control--error");
 			});
 
-		const $btnBackExisting = $(`<button class="btn btn-default btn-sm mr-2">Back</button>`)
+		const $btnBackExisting = $(`<button class="btn btn-default btn-sm mr-2">Voltar</button>`)
 			.click(() => {
 				$selExisting[0].selectedIndex = 0;
 				$stageExisting.hide();
@@ -2351,7 +2351,7 @@ class SourceUiUtil {
 			});
 
 		const $stageExisting = $$`<div class="h-100 w-100 flex-vh-center" style="display: none;"><div>
-			<h3 class="text-center">Select a Homebrew Source</h3>
+			<h3 class="text-center">Selecionar Fonte de Conteúdo Próprio</h3>
 			<div class="row mb-2"><div class="col-12 flex-vh-center">${$selExisting}</div></div>
 			<div class="row"><div class="col-12 flex-vh-center">${$btnBackExisting}${$btnConfirmExisting}</div></div>
 		</div></div>`.appendTo(options.$parent);
@@ -2967,7 +2967,7 @@ class ComponentUiUtil {
 				return $(`<div class="ui-ideco__wrp ui-ideco__wrp--${side} no-events flex-vh-center"><span class="glyphicon glyphicon-search" type="submit"></span></div>`);
 			}
 			case "clear": {
-				return $(`<div class="ui-ideco__wrp ui-ideco__wrp--${side} flex-vh-center clickable" title="Clear"><span class="glyphicon glyphicon-remove"></span></div>`)
+				return $(`<div class="ui-ideco__wrp ui-ideco__wrp--${side} flex-vh-center clickable" title="Limpar"><span class="glyphicon glyphicon-remove"></span></div>`)
 					.click(() => $ipt.val("").change().keydown().keyup());
 			}
 			case "ticker": {
@@ -3078,7 +3078,7 @@ class ComponentUiUtil {
 		const hook = () => {
 			$btn.toggleClass(activeClass, opts.isInverted ? !component[stateProp][prop] : !!component[stateProp][prop]);
 			if (opts.activeTitle || opts.inactiveTitle) $btn.title(component[stateProp][prop] ? (opts.activeTitle || "") : (opts.inactiveTitle || ""));
-			if (opts.activeText || opts.inactiveText) $btn.text(component[stateProp][prop] ? (opts.activeText || "Toggle") : (opts.inactiveText || "Toggle"));
+			if (opts.activeText || opts.inactiveText) $btn.text(Parser.uiToFull(component[stateProp][prop] ? (opts.activeText || "Alternar") : (opts.inactiveText || "Alternar")));
 			if (opts.fnHookPost) opts.fnHookPost(component[stateProp][prop]);
 		};
 		component._addHook(stateName, prop, hook);

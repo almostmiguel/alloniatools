@@ -31,45 +31,30 @@
 						"type": "array",
 						"items": {
 							"type": "string",
-							"oneOf": [
-								{
-									"enum": [
-										"Action & Ability",
-										"Alignment",
-										"Ancestry & Heritage",
-										"Armor",
-										"Class",
-										"Combat",
-										"Creature",
-										"Creature Type",
-										"Effect",
-										"Energy & Element",
-										"Equipment",
-										"Feat",
-										"Settlement",
-										"General",
-										"Gravity",
-										"Hazard",
-										"Item",
-										"Morphic",
-										"Planar",
-										"Rarity",
-										"School",
-										"Tradition",
-										"Scope",
-										"Size",
-										"Spell",
-										"Time",
-										"Weapon"
-									]
-								},
-								{
-									"enum": [
-										"_alignAbv"
-									]
-								}
+							"enum": [
+								"affliction",
+								"ancestry",
+								"armor",
+								"class",
+								"class-specific",
+								"creature type",
+								"elemental",
+								"energy",
+								"equipment",
+								"feat",
+								"hazard",
+								"mechanics",
+								"monster",
+								"planar",
+								"poison",
+								"rarity",
+								"sense",
+								"tradition",
+								"weapon"
 							]
-						}
+						},
+						"minItems": 1,
+						"uniqueItems": true
 					},
 					"variable": {
 						"type": "boolean",

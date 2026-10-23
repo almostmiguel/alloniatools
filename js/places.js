@@ -28,7 +28,7 @@ class PlacesPage extends ListPage {
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border">
 			<span class="bold col-5-5">${it.name}</span>
-			<span class="text-center col-4">${it.category}</span>
+			<span class="text-center col-4">${Parser.uiToFull(it.category)}</span>
 			<span class="col-2-5 text-center ${Parser.sourceJsonToColor(it.source)}" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
@@ -66,7 +66,7 @@ class PlacesPage extends ListPage {
 		const $ele = $(`<li class="row">
 			<a href="#${hash}" class="lst--border">
 				<span class="bold col-7 pl-0">${it.name}</span>
-				<span class="text-center col-5 pr-0">${it.category}</span>
+				<span class="text-center col-5 pr-0">${Parser.uiToFull(it.category)}</span>
 			</a>
 		</li>`)
 			.contextmenu(evt => ListUtil.openSubContextMenu(evt, listItem));

@@ -52,7 +52,7 @@ class PageFilterClasses extends PageFilter {
 	get optionsFilter () { return this._optionsFilter; }
 
 	mutateForFilters (cls, opts) {
-		cls._fRarity = cls.rarity ? cls.rarity.toTitleCase() : "Common";
+		cls._fRarity = cls.rarity ? cls.rarity.toTitleCase() : Renderer.trait.getDefaultRarity();
 		cls.subclasses = cls.subclasses || []
 		cls._fSources = SourceFilter.getCompleteFilterSources(cls);
 		cls._fSourceSubclass = [...new Set([cls.source, ...cls.subclasses.map(it => it.source)])];

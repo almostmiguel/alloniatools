@@ -28,7 +28,7 @@ class AfflictionsPage extends ListPage {
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border">
 			<span class="bold col-6 pl-0">${it.name}</span>
-			<span class="col-3-5 text-center">${it.type ? it.type : "—"}</span>
+			<span class="col-3-5 text-center">${it.type ? Parser.uiToFull(it.type) : "—"}</span>
 			<span class="col-2-5 text-center ${Parser.sourceJsonToColor(it.source)}" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
@@ -66,7 +66,7 @@ class AfflictionsPage extends ListPage {
 		const $ele = $(`<li class="row">
 			<a href="#${hash}" class="lst--border">
 				<span class="bold col-8 pl-0">${it.name}</span>
-				<span class="col-4 pr-0 text-center">${it.type ? it.type : "—"}</span>
+				<span class="col-4 pr-0 text-center">${it.type ? Parser.uiToFull(it.type) : "—"}</span>
 			</a>
 		</li>`)
 			.contextmenu(evt => ListUtil.openSubContextMenu(evt, listItem));

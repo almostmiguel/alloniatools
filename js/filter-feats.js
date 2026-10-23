@@ -11,9 +11,9 @@ class PageFilterFeats extends PageFilter {
 			isLabelled: true,
 		});
 		this._typeFilter = new Filter({ header: "Type", selFn: opts.typeDeselFn });
-		this._ancestryFilter = new Filter({ header: "Ancestry & Heritage" });
+		this._ancestryFilter = new Filter({ header: "Ancestry & Heritage", displayHeader: "Ancestralidade" });
 		this._archetypeFilter = new Filter({ header: "Archetype", items: ["Archetype"] });
-		this._classFilter = new Filter({ header: "Class" });
+		this._classFilter = new Filter({ header: "Class", displayHeader: "Classe" });
 		this._skillFilter = new Filter({ header: "Skill" });
 		/* Unused, for the future
 		this._skillTrainedFilter = new Filter({ header: "Trained" });
@@ -37,11 +37,10 @@ class PageFilterFeats extends PageFilter {
 		this._traitsFilter = new TraitsFilter({
 			header: "Traits",
 			discardCategories: {
-				Class: true,
-				"Ancestry & Heritage": true,
-				"Archetype": true,
-				Creature: true,
-				"Creature Type": true,
+				class: true,
+				ancestry: true,
+				monster: true,
+				"creature type": true,
 			},
 		});
 		this._miscFilter = new Filter({
@@ -57,17 +56,18 @@ class PageFilterFeats extends PageFilter {
 		feat._slPrereq = Renderer.stripTags(feat.prerequisites || `\u2014`).uppercaseFirst();
 		if (feat.prerequisiteArray) feat._slPrereq = Renderer.utils.getPrerequisiteHtml(feat.prerequisite, {isSkipPrefix: true, isListMode: true});
 		feat._fTraits = feat.traits.map(t => Parser.getTraitName(t));
-		if (!feat._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) feat._fTraits.push("Common");
+		if (!feat._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "rarity")).some(Boolean)) feat._fTraits.push(Renderer.trait.getDefaultRarity());
 
 		feat._fType = [];
-		if (Renderer.trait.filterTraitsByCats(feat._fTraits, ["Ancestry & Heritage"]).length) feat._fType.push("Ancestry");
+		if (Renderer.trait.filterTraitsByCats(feat._fTraits, ["ancestry"]).length) feat._fType.push("Ancestry");
 		if (feat.featType?.ancestry?.length) feat._fType.push("Ancestry");
-		if (feat._fTraits.includes("Archetype")) feat._fType.push("Archetype");
-		if (Renderer.trait.filterTraitsByCats(feat._fTraits, ["Class"]).length) feat._fType.push("Class");
-		if (feat._fTraits.includes("General")) feat._fType.push("General");
-		if (feat._fTraits.includes("Skill")) feat._fType.push("Skill");
+		const traitKeys = new Set(feat._fTraits.map(trait => Parser.getTraitKey(trait)));
+		if (traitKeys.has("archetype")) feat._fType.push("Archetype");
+		if (Renderer.trait.filterTraitsByCats(feat._fTraits, ["class"]).length) feat._fType.push("Class");
+		if (traitKeys.has("general")) feat._fType.push("General");
+		if (traitKeys.has("skill")) feat._fType.push("Skill");
 		const slTypeArr = feat._fType.includes("Skill") ? feat._fType.filter(t => t !== "General") : feat._fType;
-		feat._slType = slTypeArr.sort(SortUtil.ascSort).join(", ");
+		feat._slType = slTypeArr.map(Parser.uiToFull).sort(SortUtil.ascSort).join(", ");
 
 		feat._fTime = Parser.timeToActivityType(feat.activity);
 		feat._fMisc = [];
@@ -95,8 +95,8 @@ class PageFilterFeats extends PageFilter {
 		if (typeof (feat._featType.archetype) !== "boolean") this._archetypeFilter.addItem(feat._featType.archetype);
 		if (typeof (feat._featType.skill) !== "boolean") this._skillFilter.addItem(feat._featType.skill);
 
-		this._ancestryFilter.addItem(Renderer.trait.filterTraitsByCats(feat._fTraits, ["Ancestry & Heritage"]));
-		this._classFilter.addItem(Renderer.trait.filterTraitsByCats(feat._fTraits, ["Class"]));
+		this._ancestryFilter.addItem(Renderer.trait.filterTraitsByCats(feat._fTraits, ["ancestry"]));
+		this._classFilter.addItem(Renderer.trait.filterTraitsByCats(feat._fTraits, ["class"]));
 
 		if (feat._fTime != null) this._timeFilter.addItem(feat._fTime);
 		this._sourceFilter.addItem(feat._fSources);

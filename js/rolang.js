@@ -240,7 +240,7 @@ class Ro_Lexer {
 					} else if (opts.isDynamicsOnly) token += c;
 					else {
 						parenCount--;
-						if (parenCount < 0) throw new Error(`Syntax error: closing <code>)</code> without opening <code>(</code> in line <code>${l}</code>`);
+						if (parenCount < 0) throw new Error(`Syntax error: closing <code>)</code> sem abrir <code>(</code> in line <code>${l}</code>`);
 						outputToken();
 						token = ")";
 						outputToken();
@@ -262,7 +262,7 @@ class Ro_Lexer {
 					else if (opts.isDynamicsOnly) token += c;
 					else {
 						braceCount--;
-						if (braceCount < 0) throw new Error(`Syntax error: closing <code>}</code> without opening <code>{</code> in line <code>${l}</code>`);
+						if (braceCount < 0) throw new Error(`Syntax error: closing <code>}</code> sem abrir <code>{</code> in line <code>${l}</code>`);
 						outputToken();
 						token = "}";
 						outputToken();
@@ -344,7 +344,7 @@ class Ro_Parser {
 	_expect (symbol) {
 		const accepted = this._accept(symbol);
 		if (accepted) return accepted;
-		if (this._sym) throw new Error(`Unexpected input: Expected <code>${symbol}</code> but found <code>${this._sym}</code> (line <code>${this._sym.line}</code>)`);
+		if (this._sym) throw new Error(`Unexpected input: Expected <code>${symbol}</code> mas encontrou <code>${this._sym}</code> (line <code>${this._sym.line}</code>)`);
 		else throw new Error(`Unexpected end of input: Expected <code>${symbol}</code>`);
 	}
 

@@ -8,7 +8,7 @@ class PageFilterArchetypes extends PageFilter {
 		this._benefitsFilter = new Filter({header: "Benefits"});
 		this._levelFilter = new Filter({
 			header: "Dedication Level",
-			displayFn: l => `Level ${l}`,
+			displayFn: l => `Nível ${l}`,
 		});
 		this._miscFilter = new Filter({header: "Miscellaneous"});
 	}

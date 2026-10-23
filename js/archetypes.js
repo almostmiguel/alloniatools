@@ -74,7 +74,7 @@ class ArchetypesPage extends BaseComponent {
 			$(`.lst__wrp-search-visible.feats`).html(`${this._listFeat.visibleItems.length}/${this._listFeat.items.length}`);
 		});
 		ListUtil._pBindSublistResizeHandlers($(`.feat-view--resizable`));
-		const $filterSearch = $(`#filter-search-group`).title("Hotkey: f");
+		const $filterSearch = $(`#filter-search-group`).title("Atalho: F");
 
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
@@ -106,11 +106,11 @@ class ArchetypesPage extends BaseComponent {
 		await ListUtil.pLoadState();
 		RollerUtil.addListRollButton(true, null, 0);
 		RollerUtil.addListRollButton(true, {roll: "feat-feelinglucky", reset: "feat-reset", search: "feat-filter-search-group"}, 1);
-		$filterSearch.find(`#reset`).after(`<button class="btn btn-default btn-xs" id="hidesearch">Hide</button>`);
+		$filterSearch.find(`#reset`).after(`<button class="btn btn-default btn-xs" id="hidesearch">Ocultar</button>`);
 		const $listcontainer = $(`#listcontainer`);
-		$listcontainer.prepend(`<div class="col-12" id="showsearch"><button class="btn btn-block btn-default btn-xs" type="button">Show Filter</button><br></div>`);
+		$listcontainer.prepend(`<div class="col-12" id="showsearch"><button class="btn btn-block btn-default btn-xs" type="button">Mostrar Filtros</button><br></div>`);
 		const $btnShowSearch = $(`div#showsearch`);
-		const $btnHideSearch = $(`button#hidesearch`).title("Hide Archetypes Search Bar and Entry List");
+		const $btnHideSearch = $(`button#hidesearch`).title("Ocultar Barra de Busca e Lista de Arquétipos");
 		const $toHide = $listcontainer.children().not(`.feat-view`).not(`#showsearch`);
 		$btnHideSearch.click(() => {
 			$toHide.toggleClass("hidden", true);
@@ -128,7 +128,7 @@ class ArchetypesPage extends BaseComponent {
 		this._list.init();
 		this._listFeat.init();
 
-		$(`.initial-message`).text(`Select an archetype from the list to view it here`);
+		$(`.initial-message`).text(`Selecione um arquétipo na lista para exibir aqui`);
 
 		this._setArchetypeFromHash(Hist.initialLoad);
 		this._setFeatArchetypeFilters()
@@ -137,7 +137,7 @@ class ArchetypesPage extends BaseComponent {
 
 		const $tabsFeats = $(`#tabs-right-feats`);
 		const $btnLink = $(`<a class="ui-tab__btn-tab-head btn btn-default" id="btn-feat-link"><span class="glyphicon glyphicon-list"></span></a>`).appendTo($tabsFeats);
-		$btnLink.title("View this feat on the Feats page");
+		$btnLink.title("Ver este talento na página de Talentos");
 		const $btnPopFeats = $(`<a class="ui-tab__btn-tab-head btn btn-default" id="btn-popout-feat"><span class="glyphicon glyphicon-new-window"></span></a>`).appendTo($tabsFeats);
 		const featPopoutHandlerGenerator = function (toList) {
 			return (evt) => {
@@ -352,7 +352,7 @@ class ArchetypesPage extends BaseComponent {
 			if (target._ !== ixToLoad) {
 				Hist.lastLoadedId = ixToLoad;
 				const arc = this._dataList[ixToLoad];
-				document.title = `${arc ? `${arc.name} Archetype` : "Archetypes"} - Pf2eTools`;
+				document.title = `${arc ? `${arc.name} Arquétipo` : "Archetypes"} - Pf2eTools`;
 				target._ = ixToLoad;
 				this._loadFirstFeat = true;
 			}
@@ -393,7 +393,7 @@ class ArchetypesPage extends BaseComponent {
 			}
 		} else {
 			// This should never occur (failed loads should pick the first list item), but attempt to handle it semi-gracefully
-			$(`#featstats`).empty().append($(`<div class="pf2-h1-flavor text-center">Select a feat from the list to view it here</div>`));
+			$(`#featstats`).empty().append($(`<div class="pf2-h1-flavor text-center">Selecione um talento na lista para exibir aqui</div>`));
 			JqueryUtil.doToast({content: "Could not find the feat to load!", type: "danger"})
 		}
 	}
@@ -681,11 +681,11 @@ class ArchetypesPage extends BaseComponent {
 		MiscUtil.pDefer(hkShowFeats);
 		const $wrpButtons = $(`#toggle-feats`).empty();
 		const $btnToggleFeats = ComponentUiUtil.$getBtnBool(this, "isShowFeats", {
-			text: "Show Feats",
+			text: "Mostrar Talentos",
 			activeClass: "btn-danger",
-			activeText: "Hide Feats",
-			inactiveText: "Show Feats",
-		}).title("Toggle Feat View");
+			activeText: "Ocultar Talentos",
+			inactiveText: "Mostrar Talentos",
+		}).title("Alternar Visualização de Talentos");
 		$btnToggleFeats.prependTo($wrpButtons);
 
 		this._handleFilterChange(false);
@@ -735,7 +735,7 @@ class ArchetypesPage extends BaseComponent {
 	}
 
 	static _render_$getNoContent () {
-		return $(`<div class="pf2-h1-flavor text-center">Select an archetype from the list to view it here</div>`)
+		return $(`<div class="pf2-h1-flavor text-center">Selecione um arquétipo na lista para exibir aqui</div>`)
 	}
 
 	_getDefaultState () {

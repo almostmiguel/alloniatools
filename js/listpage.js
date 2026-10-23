@@ -62,7 +62,7 @@ class ListPage {
 
 		this._filterBox = await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`).title("Atalho: F"),
 			$btnReset: $(`#reset`),
 		});
 
@@ -118,7 +118,7 @@ class ListPage {
 				});
 				const $wrpContent = $(`<div class="pf2-book stats bkv__content-wrp my-4"></div>`).appendTo($modalInner)
 				fnPopulate($wrpContent);
-				const $btnClose = $(`<button class="btn btn-danger btn-sm mt-auto mb-1" style="width: fit-content; align-self: center;">Close</button>`).click(() => doClose()).appendTo($modalInner);
+				const $btnClose = $(`<button class="btn btn-danger btn-sm mt-auto mb-1" style="width: fit-content; align-self: center;">Fechar</button>`).click(() => doClose()).appendTo($modalInner);
 			});
 		}
 

@@ -6,7 +6,7 @@ class Omnisearch {
 
 		const $nav = $(`#navbar`);
 
-		this._$iptSearch = $(`<input class="form-control search omni__input" placeholder="${this._PLACEHOLDER_TEXT}" title="Hotkey: F. Disclaimer: unlikely to search everywhere. Use with caution.">`).disableSpellcheck();
+		this._$iptSearch = $(`<input class="form-control search omni__input" placeholder="${this._PLACEHOLDER_TEXT}" title="Atalho: F. A busca pode não abranger todo o conteúdo do site.">`).disableSpellcheck();
 		const $searchSubmit = $(`<button class="btn btn-default omni__submit" tabindex="-1"><span class="glyphicon glyphicon-search" type="submit"></span></button>`);
 
 		this._$searchInputWrapper = $$`
@@ -221,7 +221,7 @@ class Omnisearch {
 
 	static $getResultLink (r) {
 		const href = r.c === Parser.CAT_ID_PAGE ? r.u : `${Renderer.get().baseUrl}${UrlUtil.categoryToPage(r.c)}#${r.uh || r.u}`;
-		return $(`<a href="${href}" ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s) : ""} class="omni__lnk-name">${r.cf}: ${r.n}${r.a ? `<span class="text-muted"> (${r.a.toTitleCase()})</span>` : ""}</a>`);
+		return $(`<a href="${href}" ${r.h ? this._renderLink_getHoverString(r.c, r.u, r.s) : ""} class="omni__lnk-name">${Parser.uiToFull(r.cf)}: ${r.n}${r.a ? `<span class="text-muted"> (${r.a.toTitleCase()})</span>` : ""}</a>`);
 	}
 
 	static _pDoSearch_renderLinks (results, page = 0) {
@@ -229,7 +229,7 @@ class Omnisearch {
 
 		if (this._$btnToggleUnofficial) this._$btnToggleUnofficial.detach();
 		else {
-			this._$btnToggleUnofficial = $(`<button class="btn btn-default btn-xs mr-2" title="Include unofficial source results" tabindex="-1">Include unofficial</button>`)
+			this._$btnToggleUnofficial = $(`<button class="btn btn-default btn-xs mr-2" title="Incluir resultados de fontes não oficiais" tabindex="-1">Incluir Não Oficiais</button>`)
 				.on("click", () => this._state.isShowUnofficial = !this._state.isShowUnofficial);
 
 			const hkIsUnofficial = () => {
@@ -242,7 +242,7 @@ class Omnisearch {
 
 		if (this._$btnToggleBlacklisted) this._$btnToggleBlacklisted.detach();
 		else {
-			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="Include blacklisted content results" tabindex="-1">Include Blacklisted</button>`)
+			this._$btnToggleBlacklisted = $(`<button class="btn btn-default btn-xs mr-2" title="Incluir resultados de conteúdo bloqueado" tabindex="-1">Incluir Conteúdo Bloqueado</button>`)
 				.on("click", async () => this._state.isShowBlacklisted = !this._state.isShowBlacklisted);
 
 			const hkIsBlacklisted = () => {
@@ -256,7 +256,7 @@ class Omnisearch {
 
 		this._$searchOut.empty();
 
-		const $btnHelp = $(`<button class="btn btn-default btn-xs" title="Help"><span class="glyphicon glyphicon-info-sign"></span></button>`)
+		const $btnHelp = $(`<button class="btn btn-default btn-xs" title="Ajuda"><span class="glyphicon glyphicon-info-sign"></span></button>`)
 			.click(() => this.doShowHelp());
 
 		this._$searchOut.append($(`<div class="text-right"/>`).append([this._$btnToggleUnofficial, this._$btnToggleBlacklisted, $btnHelp]));
@@ -299,7 +299,7 @@ class Omnisearch {
 				});
 				$pgControls.append($prv);
 			} else ($pgControls.append(`<span class="omni__paginate-left">`));
-			$pgControls.append(`<span class="paginate-count">Page ${page + 1}/${Math.ceil(results.length / this._MAX_RESULTS)} (${results.length} results)</span>`);
+			$pgControls.append(`<span class="paginate-count">Página ${page + 1}/${Math.ceil(results.length / this._MAX_RESULTS)} (${results.length} resultados)</span>`);
 			if (results.length - (page * this._MAX_RESULTS) > this._MAX_RESULTS) {
 				const $nxt = $(`<span class="omni__paginate-right has-results-right omni__paginate-ctrl"><span class="glyphicon glyphicon-chevron-right"></span></span>`).on("click", () => {
 					page++;
@@ -315,7 +315,7 @@ class Omnisearch {
 		}
 
 		if (!results.length) {
-			this._$searchOut.append(`<div class="ve-muted"><i>No results found.</i></div>`);
+			this._$searchOut.append(`<div class="ve-muted"><i>Nenhum resultado encontrado.</i></div>`);
 		}
 	}
 	// endregion
@@ -462,7 +462,7 @@ class Omnisearch {
 
 	static addScrollTopFloat () {
 		// "To top" button
-		const $btnToTop = $(`<button class="btn btn-sm btn-default" title="To Top"><span class="glyphicon glyphicon-chevron-up"/></button>`)
+		const $btnToTop = $(`<button class="btn btn-sm btn-default" title="Voltar ao Topo"><span class="glyphicon glyphicon-chevron-up"/></button>`)
 			.click(() => MiscUtil.scrollPageTop());
 
 		const $wrpTop = $$`<div class="bk__to-top">
@@ -479,21 +479,21 @@ class Omnisearch {
 
 	static doShowHelp () {
 		const {$modalInner} = UiUtil.getShowModal({
-			title: "Help",
+			title: "Ajuda",
 			isMinHeight0: true,
 		});
 
 		$modalInner.append(`
-			<p>The following search syntax is available:</p>
+			<p>Você pode usar a seguinte sintaxe de busca:</p>
 			<ul>
-				<li><code>in:&lt;category&gt;</code> where <code>&lt;category&gt;</code> can be &quot;spell&quot;, &quot;item&quot;, &quot;bestiary&quot;, etc.</li>
-				<li><code>source:&lt;abbreviation&gt;</code> where <code>&lt;abbreviation&gt;</code> is an abbreviated source/book name (&quot;CRB&quot;, &quot;Bst&quot;, etc.)</li>
-				<li><code>page:&lt;number&gt;</code> or <code>page:&lt;rangeStart&gt;-&lt;rangeEnd&gt;</code></li>
+				<li><code>in:&lt;category&gt;</code> onde <code>&lt;category&gt;</code> pode ser &quot;spell&quot; (magia), &quot;item&quot;, &quot;bestiary&quot; (bestiário) etc.</li>
+				<li><code>source:&lt;abbreviation&gt;</code> onde <code>&lt;abbreviation&gt;</code> é a abreviação de uma fonte/livro (&quot;CRB&quot;, &quot;Bst&quot; etc.)</li>
+				<li><code>page:&lt;number&gt;</code> ou <code>page:&lt;rangeStart&gt;-&lt;rangeEnd&gt;</code></li>
 			</ul>
 		`);
 	}
 }
-Omnisearch._PLACEHOLDER_TEXT = "Search everywhere...";
+Omnisearch._PLACEHOLDER_TEXT = "Buscar no site...";
 Omnisearch._searchIndex = null;
 Omnisearch._adventureBookLookup = null; // A map of `<sourceLower>: (adventureCatId|bookCatId)`
 Omnisearch._pLoadSearch = null;

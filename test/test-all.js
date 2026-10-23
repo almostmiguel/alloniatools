@@ -22,6 +22,14 @@ async function main () {
 	if (!testsPassed) handleFail();
 	testsPassed = testsPassed && await require("./test-ancestry-feat-filters");
 	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-trait-localization");
+	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-trait-categories");
+	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-trait-list");
+	if (!testsPassed) handleFail();
+	testsPassed = testsPassed && await require("./test-ui-localization");
+	if (!testsPassed) handleFail();
 	process.exit(0);
 }
 

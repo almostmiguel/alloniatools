@@ -246,7 +246,7 @@ const BookUtil = {
 					if ($showHideBtn.data("hidden")) $showHideBtn.click();
 				});
 				// Update the mass expand/collapse button to match
-				$(`.bk__contents-toggle-all`).each((i, e) => $(e).title("Collapse All").text(`[\u2013]`))
+				$(`.bk__contents-toggle-all`).each((i, e) => $(e).title("Recolher Tudo").text(`[\u2013]`))
 			}
 
 			BookUtil.curRender.curBookId = bookId;
@@ -295,10 +295,10 @@ const BookUtil = {
 				BookUtil.curRender.controls.$btnsPrv = BookUtil.curRender.controls.$btnsPrv || [];
 				let $btnPrev;
 				if (BookUtil.referenceId) {
-					$btnPrev = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"/>Previous</button>`)
+					$btnPrev = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"/>Anterior</button>`)
 						.click(() => goToPage(-1));
 				} else {
-					$btnPrev = $(`<a href="#${goToPage(-1, true)}" class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"/>Previous</a>`)
+					$btnPrev = $(`<a href="#${goToPage(-1, true)}" class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"/>Anterior</a>`)
 						.click(() => MiscUtil.scrollPageTop());
 				}
 				$btnPrev
@@ -313,7 +313,7 @@ const BookUtil = {
 
 				if (isTop) {
 					const href = (~BookUtil.curRender.chapter ? BookUtil.thisContents.find(`.bk__contents_show_all`) : BookUtil.thisContents.find(`.bk__contents_header_link`)).attr("href");
-					const $btnEntireBook = $(`<a href="${href}" class="btn btn-xs btn-default no-print ${~BookUtil.curRender.chapter ? "" : "active"}" title="Warning: Slow">View Entire ${BookUtil.contentType.uppercaseFirst()}</a>`);
+					const $btnEntireBook = $(`<a href="${href}" class="btn btn-xs btn-default no-print ${~BookUtil.curRender.chapter ? "" : "active"}" title="Aviso: pode ser lento">${BookUtil.contentType === "campaign" ? "Ver Campanha Completa" : "Ver Documento Completo"}</a>`);
 
 					if (BookUtil._isNarrow == null) {
 						const saved = StorageUtil.syncGetForPage("narrowMode");
@@ -325,7 +325,7 @@ const BookUtil = {
 						$btnToggleNarrow.toggleClass("active", BookUtil._isNarrow);
 						$(`#pagecontent`).toggleClass(`bk__stats--narrow`, BookUtil._isNarrow);
 					};
-					const $btnToggleNarrow = $(`<button class="btn btn-xs btn-default" title="Toggle Narrow Reading Width"><span class="glyphicon glyphicon-resize-small"/></button>`)
+					const $btnToggleNarrow = $(`<button class="btn btn-xs btn-default" title="Alternar Largura de Leitura Reduzida"><span class="glyphicon glyphicon-resize-small"/></button>`)
 						.click(() => {
 							BookUtil._isNarrow = !BookUtil._isNarrow;
 							hdlNarrowUpdate();
@@ -334,16 +334,16 @@ const BookUtil = {
 					hdlNarrowUpdate();
 
 					$$`<div class="no-print flex-v-center btn-group">${$btnEntireBook}${$btnToggleNarrow}</div>`.appendTo($wrpControls);
-				} else $(`<button class="btn btn-xs btn-default no-print">Back to Top</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
+				} else $(`<button class="btn btn-xs btn-default no-print">Voltar ao Topo</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
 
 				const showNxt = ~chapter && chapter < data.length - 1;
 				BookUtil.curRender.controls.$btnsNxt = BookUtil.curRender.controls.$btnsNxt || [];
 				let $btnNext;
 				if (BookUtil.referenceId) {
-					$btnNext = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item">Next<span class="glyphicon glyphicon-chevron-right"/></button>`)
+					$btnNext = $(`<button class="btn btn-xs btn-default bk__nav-head-foot-item">Próxima<span class="glyphicon glyphicon-chevron-right"/></button>`)
 						.click(() => goToPage(1))
 				} else {
-					$btnNext = $(`<a href="#${goToPage(1, true)}" class="btn btn-xs btn-default bk__nav-head-foot-item">Next<span class="glyphicon glyphicon-chevron-right"/></a>`)
+					$btnNext = $(`<a href="#${goToPage(1, true)}" class="btn btn-xs btn-default bk__nav-head-foot-item">Próxima<span class="glyphicon glyphicon-chevron-right"/></a>`)
 						.click(() => MiscUtil.scrollPageTop());
 				}
 				$btnNext
@@ -370,7 +370,7 @@ const BookUtil = {
 					$btnPrev
 						.toggle(showPrev)
 						.appendTo(BookUtil.$wrpFloatControls)
-						.title(BookUtil.contentType === "campaign" ? "Previous Session" : "Previous Chapter");
+						.title(BookUtil.contentType === "campaign" ? "Sessão Anterior" : "Capítulo Anterior");
 					BookUtil.curRender.controls.$btnsPrv.push($btnPrev);
 
 					let $btnNext;
@@ -384,7 +384,7 @@ const BookUtil = {
 					$btnNext
 						.toggle(showNxt)
 						.appendTo(BookUtil.$wrpFloatControls)
-						.title(BookUtil.contentType === "campaign" ? "Next Session" : "Next Chapter");
+						.title(BookUtil.contentType === "campaign" ? "Próxima Sessão" : "Próximo Capítulo");
 					BookUtil.curRender.controls.$btnsNxt.push($btnNext);
 
 					BookUtil.$wrpFloatControls.toggleClass("btn-group", showPrev && showNxt);
@@ -515,7 +515,7 @@ const BookUtil = {
 				const hashParts = [BookUtil.curRender.chapter, text, $this.parent().data("title-relative-index")].map(it => UrlUtil.encodeForHash(it));
 				const toCopy = [`${window.location.href.split("#")[0]}#${BookUtil.curRender.curBookId}`, ...hashParts];
 				await MiscUtil.pCopyTextToClipboard(toCopy.join(HASH_PART_SEP));
-				JqueryUtil.showCopiedEffect($this, "Copied link!");
+				JqueryUtil.showCopiedEffect($this, "Link copiado!");
 			}
 		});
 	},
@@ -677,13 +677,13 @@ const BookUtil = {
 			});
 
 		// region Mobile only "open find bar" buttons
-		const $btnOpenFind = $(`<button class="btn btn-default btn-sm bk__btn-find no-print" title="Find">F</button>`)
+		const $btnOpenFind = $(`<button class="btn btn-default btn-sm bk__btn-find no-print" title="Localizar">F</button>`)
 			.click(evt => {
 				evt.stopPropagation();
 				BookUtil._showSearchBox(indexData, bookId, false);
 			});
 
-		const $btnOpenGoto = $(`<button class="btn btn-default btn-sm bk__btn-goto no-print" title="Go to Page">G</button>`)
+		const $btnOpenGoto = $(`<button class="btn btn-default btn-sm bk__btn-goto no-print" title="Ir para a Página">G</button>`)
 			.click(evt => {
 				evt.stopPropagation();
 				BookUtil._showSearchBox(indexData, bookId, true);
@@ -984,10 +984,10 @@ const BookUtil = {
 					<span class="name">${book.name}</span>
 				</a>
 				<div class="flex-v-center">
-					<a href="#${UrlUtil.encodeForHash(book.id)},-1" class="bk__contents_show_all px-2 py-1px flex-v-center" title="View Entire ${BookUtil.contentType.uppercaseFirst()} (Warning: Slow)">
+					<a href="#${UrlUtil.encodeForHash(book.id)},-1" class="bk__contents_show_all px-2 py-1px flex-v-center" title="Ver Documento Completo (pode ser lento)">
 						<span class="glyphicon glyphicon glyphicon-book" style="top: 0;"/>
 					</a>
-					<span title="Expand All" class="bk__contents-toggle-all px-2 bold py-1px no-select">[+]</span>
+					<span title="Expandir Tudo" class="bk__contents-toggle-all px-2 bold py-1px no-select">[+]</span>
 				</div>
 			</div>
 			${BookUtil.makeContentsBlock(options)}

@@ -72,7 +72,7 @@ class PageFilterItems extends PageFilter {
 		this._traitFilter = new TraitsFilter({
 			header: "Traits",
 			discardCategories: {
-				"Equipment": true,
+				equipment: true,
 			},
 		});
 		this._priceFilter = new RangeFilter({
@@ -96,7 +96,7 @@ class PageFilterItems extends PageFilter {
 			labelDisplayFn: (it) => it === 0.1 ? "L" : it,
 		});
 		this._rangeFilter = new Filter({ header: "Weapon Range", items: ["Melee", "Ranged"] });
-		this._shieldACFilter = new Filter({ header: "AC Bonus", displayFn: it => `${Parser.numToBonus(it)} AC` });
+		this._shieldACFilter = new Filter({ header: "AC Bonus", displayFn: it => `${Parser.numToBonus(it)} CA` });
 		this._hpFilter = new RangeFilter({ header: "HP" });
 		this._btFilter = new RangeFilter({ header: "BT" });
 		this._hardnessFilter = new RangeFilter({ header: "Hardness" });
@@ -161,7 +161,7 @@ class PageFilterItems extends PageFilter {
 		it._fDamage = undefined; // FIXME: set by trait implies
 		this.handleTraitImplies(it, { traitProp: "traits", entityTypes: ["item"] });
 		it._fTraits = (it.traits || []).concat(it?.weaponData?.traits || []).concat(it?.comboWeaponData?.traits || []).map(t => Parser.getTraitName(t));
-		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) it._fTraits.push("Common");
+		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "rarity")).some(Boolean)) it._fTraits.push(Renderer.trait.getDefaultRarity());
 
 		// RuneItem Builder
 		if (it.appliesTo) this._categoriesRuneItems.add(...it.appliesTo);
@@ -253,11 +253,11 @@ class ModalFilterBaseItems extends ModalFilter {
 
 	_$getColumnHeaders () {
 		const btnMeta = [
-			{ sort: "name", text: "Name", width: "4-2" },
-			{ sort: "category", text: "Category", width: "2-2" },
-			{ sort: "price", text: "Price", width: "2" },
-			{ sort: "bulk", text: "Bulk", width: "1-3" },
-			{ sort: "source", text: "Source", width: "1-3" },
+			{ sort: "name", text: "Nome", width: "4-2" },
+			{ sort: "category", text: "Categoria", width: "2-2" },
+			{ sort: "price", text: "Preço", width: "2" },
+			{ sort: "bulk", text: "Volume", width: "1-3" },
+			{ sort: "source", text: "Fonte", width: "1-3" },
 		];
 		return ModalFilter._$getFilterColumnHeaders(btnMeta);
 	}

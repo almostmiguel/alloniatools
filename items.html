@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
 	<meta charset="utf-8">
@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
-	<title>Items - Pf2eTools</title>
+	<title>Itens - Pf2eTools</title>
 
 	<!--PF2ETOOLS_SCRIPT_HEAD_ANCHOR-->
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -19,7 +19,7 @@
 
 	<!-- Embeds -->
 	<meta content="Pf2eTools" property="og:site_name">
-	<meta content="Items" property="og:title">
+	<meta content="Itens" property="og:title">
 	<meta content="https://pf2etools.com/favicon-256x256.png" property="og:image">
 
 	<!-- Favicons -->
@@ -71,8 +71,8 @@
 	<header class="hidden-xs hidden-sm page__header">
 		<div class="container">
 
-			<h1 class="page__title">Items</h1>
-			<p class="page__subtitle">Search by name on the left, click item name to display on the right.</p>
+			<h1 class="page__title">Itens</h1>
+			<p class="page__subtitle">Busque pelo nome à esquerda e selecione um item para exibir à direita.</p>
 		</div>
 	</header>
 
@@ -91,21 +91,21 @@
 							class="glyphicon glyphicon-search" type="submit"></span></div>
 						<div class="lst__wrp-search-visible no-events flex-vh-center"></div>
 					</div>
-					<button class="btn btn-xs btn-default" title="Reset Selection" id="reset"><span class="glyphicon glyphicon-refresh"></span></button>
+					<button class="btn btn-xs btn-default" title="Redefinir Seleção" id="reset"><span class="glyphicon glyphicon-refresh"></span></button>
 				</div>
 				<div id="filtertools" class="input-group input-group--bottom flex no-shrink">
 					<button class="fullborder col-4 sort btn btn-default btn-xs" data-sort="name" data-sortby="asc">
-						Name <span class="caret_wrp"></span></button>
+						Nome <span class="caret_wrp"></span></button>
 					<button class="fullborder col-2-2 sort btn btn-default btn-xs" data-sort="category"
-							data-sortby="asc">Category <span class="caret_wrp"></span></button>
+							data-sortby="asc">Categoria <span class="caret_wrp"></span></button>
 					<button class="fullborder col-1-5 sort btn btn-default btn-xs" data-sort="level"
-							data-sortby="asc">Level <span class="caret_wrp"></span></button>
-					<button class="fullborder col-1-8 sort btn btn-default btn-xs" data-sort="price">Price <span
+							data-sortby="asc">Nível <span class="caret_wrp"></span></button>
+					<button class="fullborder col-1-8 sort btn btn-default btn-xs" data-sort="price">Preço <span
 						class="caret_wrp"></span></button>
 					<button class="fullborder col-1-2 sort btn btn-default btn-xs" data-sort="bulk"
-							data-sortby="asc">Bulk <span class="caret_wrp"></span></button>
+							data-sortby="asc">Volume <span class="caret_wrp"></span></button>
 					<button class="fullborder sort btn btn-default btn-xs ve-grow" data-sort="source"
-							data-sortby="asc">Source <span class="caret_wrp"></span></button>
+							data-sortby="asc">Fonte <span class="caret_wrp"></span></button>
 				</div>
 				<ul class="list list--stats items"></ul>
 			</div>
@@ -113,12 +113,12 @@
 			<div id="contentwrapper" class="view-col itm__wrp-stats" style="flex: 5;">
 				<div id="sublistcontainer" class="sublist sublist--resizable">
 					<div id="sublistsort" class="btn-group sublist__wrp-cols">
-						<button class="col-5-4 sort btn btn-default btn-xs" data-sort="name">Name <span class="caret_wrp"></span></button>
-						<button class="col-2-3 sort btn btn-default btn-xs" data-sort="price">Price <span
+						<button class="col-5-4 sort btn btn-default btn-xs" data-sort="name">Nome <span class="caret_wrp"></span></button>
+						<button class="col-2-3 sort btn btn-default btn-xs" data-sort="price">Preço <span
 							class="caret_wrp"></span></button>
-						<button class="col-2 sort btn btn-default btn-xs" data-sort="bulk">Bulk <span
+						<button class="col-2 sort btn btn-default btn-xs" data-sort="bulk">Volume <span
 							class="caret_wrp"></span></button>
-						<button class="col-2-3 sort btn btn-default btn-xs" data-sort="count">Number <span
+						<button class="col-2-3 sort btn btn-default btn-xs" data-sort="count">Quantidade <span
 							class="caret_wrp"></span></button>
 					</div>
 					<ul id="sublistlist" class="list subitems">
@@ -133,9 +133,9 @@
 					<div id="rigen__wrp-save-controls" class="rigen__visible"></div>
 
 					<div id="rigen__runelist-button" class="btn-group sublist__wrp-cols rigen__visible mt-2">
-						<button class="col-6 sort btn btn-default btn-xs">Name <span class="caret_wrp"></span></button>
-						<button class="col-3 sort btn btn-default btn-xs">Level <span class="caret_wrp"></span></button>
-						<button class="col-3 sort btn btn-default btn-xs">Source <span class="caret_wrp"></span></button>
+						<button class="col-6 sort btn btn-default btn-xs">Nome <span class="caret_wrp"></span></button>
+						<button class="col-3 sort btn btn-default btn-xs">Nível <span class="caret_wrp"></span></button>
+						<button class="col-3 sort btn btn-default btn-xs">Fonte <span class="caret_wrp"></span></button>
 					</div>
 					<ul id="rigen__runelist" class="rigen__visible list"></ul>
 				</div>
@@ -146,18 +146,18 @@
 
 				<div class="wrp-stats-table">
 					<div id="pagecontent" class="stats pf2-stat">
-						<div class="initial-message">Loading...</div>
+						<div class="initial-message">Carregando...</div>
 					</div>
 				</div>
 
 				<div class="text-center wrp-footer-buttons">
-					<button class="btn btn-warning btn-xs mb-1" id="btn-equip-buy" title="Set filters to buy equipment during character creation">Buy Equipment</button>
-					<button class="btn btn-default btn-xs mb-1" id="btn-runebuild--change" title="Change the item you are adding Runes to">Change Base Item</button>
-					<button class="btn btn-success btn-xs hidden mb-1" id="btn-runebuild" title="Add Runes to basic Items">Rune Builder</button>
-					<button class="btn btn-success btn-xs hidden mb-1" id="btn-runebuild--save" title="Save as new Item and exit Runebuilder">Save & Exit</button>
-					<button class="btn btn-danger btn-xs hidden mb-1" id="btn-runebuild--cancel" title="Discard changes and exit Runebuilder">Cancel & Exit</button>
-					<button class="btn btn-default btn-xs mb-1" id="btn-printbook">Printer View</button>
-					<button class="btn btn-default btn-xs mb-1" id="btn-show-table">Table View</button>
+					<button class="btn btn-warning btn-xs mb-1" id="btn-equip-buy" title="Ajustar filtros para comprar equipamento durante a criação de personagem">Comprar Equipamento</button>
+					<button class="btn btn-default btn-xs mb-1" id="btn-runebuild--change" title="Alterar o item que receberá as runas">Alterar Item Base</button>
+					<button class="btn btn-success btn-xs hidden mb-1" id="btn-runebuild" title="Adicionar runas a itens básicos">Construtor de Runas</button>
+					<button class="btn btn-success btn-xs hidden mb-1" id="btn-runebuild--save" title="Salvar como novo item e sair do construtor de runas">Salvar e Sair</button>
+					<button class="btn btn-danger btn-xs hidden mb-1" id="btn-runebuild--cancel" title="Descartar alterações e sair do construtor de runas">Cancelar e Sair</button>
+					<button class="btn btn-default btn-xs mb-1" id="btn-printbook">Visualização de Impressão</button>
+					<button class="btn btn-default btn-xs mb-1" id="btn-show-table">Visualização em Tabela</button>
 				</div>
 			</div>
 		</div>

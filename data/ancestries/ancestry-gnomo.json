@@ -31,7 +31,7 @@
 			],
 			"features": [
 				{
-					"name": "Visão na penumbra",
+					"name": "Visão na Penumbra",
 					"entries": [
 						"Você consegue enxergar na luz fraca como se fosse luz forte, portanto ignora a condição {@condition ocultado} causada por luz fraca."
 					]

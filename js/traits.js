@@ -25,9 +25,15 @@ class TraitsPage extends ListPage {
 
 		const source = Parser.sourceJsonToAbv(it.source);
 		const hash = UrlUtil.autoEncodeHash(it);
+		const category = (it.categories?.length ? it.categories : ["mechanics"])
+			.filter(c => !c.startsWith("_"))
+			.map(c => Parser.traitCategoryToFull(c))
+			.sort(SortUtil.ascSortLower)
+			.join(", ");
 
 		eleLi.innerHTML = `<a href="#${UrlUtil.autoEncodeHash(it)}" class="lst--border">
-			<span class="bold col-10 pl-0">${it.name}</span>
+			<span class="bold col-5 pl-0">${it.name}</span>
+			<span class="col-5 text-center" title="${category.escapeQuotes()}">${category}</span>
 			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)}" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
@@ -38,6 +44,7 @@ class TraitsPage extends ListPage {
 			{
 				hash,
 				source,
+				category,
 				aliases: it.alias ? it.alias.join(" - ") : "",
 			},
 			{
@@ -101,13 +108,13 @@ class TraitsPage extends ListPage {
 		}
 		function buildUsesTab () {
 			const renderer = Renderer.get().setFirstSection(true);
-			$content.append(renderer.render({type: "pf2-h3", name: trt.name, entries: ["This trait is used in the following statblocks."]}));
+			$content.append(renderer.render({type: "pf2-h3", name: trt.name, entries: ["Este traço é usado nas seguintes fichas."]}));
 
 			Object.entries(trtIndex).forEach(([catStr, objects]) => {
 				const cat = Number(catStr);
-				const catName = Parser.CAT_ID_TO_FULL[cat];
+				const catName = Parser.uiToFull(Parser.CAT_ID_TO_FULL[cat]);
 				// FIXME: This doesnt work in many cases. Perhaps index it as well.
-				const catHref = `${UrlUtil.CAT_TO_PAGE[cat]}#${objects[0].u},${trt.categories.map(c => `flst${c}:${trt.name}=1`).join(",")}`;
+				const catHref = `${UrlUtil.CAT_TO_PAGE[cat]}#${objects[0].u},${(trt.categories || []).map(c => `flst${c.toUrlified()}:${trt.name.toUrlified()}=1`).join(",")}`;
 				const $wrapper = $(`<div><a href="${catHref}">${renderer.render({type: "pf2-h4", name: `${catName} (${objects.length})`})}</a></div>`);
 				$wrapper.append(objects.sort((a, b) => SortUtil.ascSortProp("n", a, b)).map(obj => {
 					const hoverStr = `onmouseover="Renderer.hover.pHandleLinkMouseOver(event, this, '${UrlUtil.categoryToHoverPage(cat)}', '${obj.s}', '${obj.u.replace(/'/g, "\\'")}')" onmouseleave="Renderer.hover.handleLinkMouseLeave(event, this)" onmousemove="Renderer.hover.handleLinkMouseMove(event, this)" ${Renderer.hover.getPreventTouchString()}`;

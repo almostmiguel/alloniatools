@@ -4,7 +4,7 @@ window.addEventListener("load", async () => {
 	BookUtil.renderArea = $(`#pagecontent`);
 	try {
 		const data = await DataUtil.loadJSON("data/adventures.json");
-		$(`ul.contents`).append($(`<li><a href="adventures.html" class="lst--border"><span class="name">\u21FD All Campaigns</span></a></li>`));
+		$(`ul.contents`).append($(`<li><a href="adventures.html" class="lst--border"><span class="name">\u21FD Todas as Campanhas</span></a></li>`));
 
 		BookUtil.baseDataUrl = "data/adventure/adventure-";
 		BookUtil.contentType = "campaign";
@@ -19,8 +19,8 @@ window.addEventListener("load", async () => {
 		)).join("");
 		$(`ul.contents`).append(contents);
 		BookUtil.addHeaderHandles(true);
-		$(`.book-head-message`).text("Select a campaign and session from the list on the left.");
-		$(`.book-loading-message`).text(BookUtil.bookIndex.length ? "Select a campaign to begin." : "No campaigns have been added yet.");
+		$(`.book-head-message`).text("Selecione uma campanha e uma sessão na lista à esquerda.");
+		$(`.book-loading-message`).text(BookUtil.bookIndex.length ? "Selecione uma campanha para começar." : "Nenhuma campanha cadastrada.");
 
 		window.onhashchange = BookUtil.booksHashChange;
 		if (window.location.hash.length) BookUtil.booksHashChange();
@@ -28,7 +28,7 @@ window.addEventListener("load", async () => {
 
 		window.dispatchEvent(new Event("toolsLoaded"));
 	} catch (error) {
-		$(`.book-loading-message`).text("Could not load campaigns. Check the campaign index and try again.");
+		$(`.book-loading-message`).text("Não foi possível carregar as campanhas. Confira o índice de campanhas e tente novamente.");
 		throw error;
 	}
 });

@@ -17,7 +17,7 @@ const ListUtil = {
 		const helpText = [];
 
 		if (listOpts.isBindFindHotkey && !ListUtil._isFindHotkeyBound) {
-			helpText.push(`Hotkey: f.`);
+			helpText.push(`Atalho: F.`);
 
 			$(document.body).on("keypress", (evt) => {
 				if (!EventUtil.noModifierKeys(evt) || EventUtil.isInInput(evt)) return;
@@ -48,7 +48,7 @@ const ListUtil = {
 			.click(() => $iptSearch.val("").change().keydown().keyup());
 		const _handleSearchChange = () => {
 			setTimeout(() => {
-				if ($iptSearch.val().length) $btnSearchClear.removeClass("no-events").addClass("clickable").title("Clear").html(`<span class="glyphicon glyphicon-remove"/>`);
+				if ($iptSearch.val().length) $btnSearchClear.removeClass("no-events").addClass("clickable").title("Limpar").html(`<span class="glyphicon glyphicon-remove"/>`);
 				else $btnSearchClear.addClass("no-events").removeClass("clickable").title(null).html(`<span class="glyphicon glyphicon-search" type="submit"/>`);
 			})
 		};
@@ -300,13 +300,13 @@ const ListUtil = {
 
 				await ListUtil.pDoSublistRemove({index: Hist.lastLoadedId, doFinalize: true, customHashId});
 			})
-			.title("Pin (Toggle)");
+			.title("Fixar/Desafixar");
 	},
 
 	bindAddButton: ({fnGetCustomHashId, shiftCount = 20} = {}) => {
 		ListUtil.getOrTabRightButton(`btn-sublist-add`, `plus`)
 			.off("click")
-			.title(`Add (SHIFT for ${shiftCount})`)
+			.title(`Adicionar (SHIFT para ${shiftCount})`)
 			.on("click", evt => {
 				const addCount = evt.shiftKey ? shiftCount : 1;
 				return ListUtil.pDoSublistAdd({
@@ -321,7 +321,7 @@ const ListUtil = {
 	bindSubtractButton: ({fnGetCustomHashId, shiftCount = 20} = {}) => {
 		ListUtil.getOrTabRightButton(`btn-sublist-subtract`, `minus`)
 			.off("click")
-			.title(`Subtract (SHIFT for ${shiftCount})`)
+			.title(`Remover (SHIFT para ${shiftCount})`)
 			.on("click", evt => {
 				const subtractCount = evt.shiftKey ? shiftCount : 1;
 				return ListUtil.pDoSublistSubtract({
@@ -887,10 +887,10 @@ const ListUtil = {
 			});
 			return DataUtil.getCsv(headers, rows);
 		}
-		const $btnCsv = $(`<button class="btn btn-primary mr-3">Download CSV</button>`).click(() => {
+		const $btnCsv = $(`<button class="btn btn-primary mr-3">Baixar CSV</button>`).click(() => {
 			DataUtil.userDownloadText(`${title}.csv`, getAsCsv());
 		}).appendTo($pnlBtns);
-		const $btnCopy = $(`<button class="btn btn-primary">Copy CSV to Clipboard</button>`).click(async () => {
+		const $btnCopy = $(`<button class="btn btn-primary">Copiar CSV para a Área de Transferência</button>`).click(async () => {
 			await MiscUtil.pCopyTextToClipboard(getAsCsv());
 			JqueryUtil.showCopiedEffect($btnCopy);
 		}).appendTo($pnlBtns);
@@ -914,13 +914,13 @@ const ListUtil = {
 	},
 
 	addListShowHide () {
-		$(`#filter-search-group`).find(`#reset`).after(`<button class="btn btn-default btn-xs" id="hidesearch">Hide</button>`);
-		$(`#contentwrapper`).prepend(`<div class="col-12" id="showsearch"><button class="btn btn-block btn-default btn-xs" type="button">Show Filter</button><br></div>`);
+		$(`#filter-search-group`).find(`#reset`).after(`<button class="btn btn-default btn-xs" id="hidesearch">Ocultar</button>`);
+		$(`#contentwrapper`).prepend(`<div class="col-12" id="showsearch"><button class="btn btn-block btn-default btn-xs" type="button">Mostrar Filtros</button><br></div>`);
 
 		const $wrpList = $(`#listcontainer`);
 		const $wrpBtnShowSearch = $("div#showsearch");
 		const $btnHideSearch = $("button#hidesearch");
-		$btnHideSearch.title("Hide Search Bar and Entry List");
+		$btnHideSearch.title("Ocultar Barra de Busca e Lista de Entradas");
 		// collapse/expand search button
 		$btnHideSearch.click(function () {
 			$wrpList.hide();

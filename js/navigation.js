@@ -43,59 +43,59 @@ class NavBar {
 		};
 		document.getElementById("navigation").prepend(btnShowHide);
 
-		this._addElement_li(null, "index.html", "Home", {isRoot: true});
+		this._addElement_li(null, "index.html", "Início", {isRoot: true});
 
 		this._addElement_dropdown(null, NavBar._CAT_RULES);
-		this._addElement_li(NavBar._CAT_RULES, "quickreference.html", "Quick Reference");
-		this._addElement_li(NavBar._CAT_RULES, "variantrules.html", "Rules Glossary");
+		this._addElement_li(NavBar._CAT_RULES, "quickreference.html", "Referência Rápida");
+		this._addElement_li(NavBar._CAT_RULES, "variantrules.html", "Glossário de Regras");
 
 		this._addElement_dropdown(null, NavBar._CAT_PLAYER);
-		this._addElement_li(NavBar._CAT_PLAYER, "ancestries.html", "Ancestries");
-		this._addElement_li(NavBar._CAT_PLAYER, "backgrounds.html", "Backgrounds");
+		this._addElement_li(NavBar._CAT_PLAYER, "ancestries.html", "Ancestralidades");
+		this._addElement_li(NavBar._CAT_PLAYER, "backgrounds.html", "Biografias");
 		this._addElement_li(NavBar._CAT_PLAYER, "classes.html", "Classes");
-		this._addElement_li(NavBar._CAT_PLAYER, "feats.html", "Feats");
+		this._addElement_li(NavBar._CAT_PLAYER, "feats.html", "Talentos");
 		this._addElement_divider(NavBar._CAT_PLAYER);
-		this._addElement_li(NavBar._CAT_PLAYER, "archetypes.html", "Archetypes");
-		this._addElement_li(NavBar._CAT_PLAYER, "companionsfamiliars.html", "Companions & Familiars");
-		this._addElement_li(NavBar._CAT_PLAYER, "familiarabilities.html", "Familiar Abilities");
-		this._addElement_li(NavBar._CAT_PLAYER, "optionalfeatures.html", "Optional Features");
+		this._addElement_li(NavBar._CAT_PLAYER, "archetypes.html", "Arquétipos");
+		this._addElement_li(NavBar._CAT_PLAYER, "companionsfamiliars.html", "Companheiros e Familiares");
+		this._addElement_li(NavBar._CAT_PLAYER, "familiarabilities.html", "Habilidades de Familiar");
+		this._addElement_li(NavBar._CAT_PLAYER, "optionalfeatures.html", "Características Opcionais");
 
 		this._addElement_dropdown(null, NavBar._CAT_GAME_MASTER);
 		this._addElement_dropdown(NavBar._CAT_GAME_MASTER, NavBar._CAT_CAMPAIGNS, {isSide: true, page: "adventures.html", menuClassName: "nav2-campaigns"});
-		this._addElement_li(NavBar._CAT_CAMPAIGNS, "adventures.html", "View All Campaigns", {isSide: true});
+		this._addElement_li(NavBar._CAT_CAMPAIGNS, "adventures.html", "Ver Todas as Campanhas", {isSide: true});
 		this._addElement_divider(NavBar._CAT_GAME_MASTER);
-		this._addElement_li(NavBar._CAT_GAME_MASTER, "events.html", "Events");
-		this._addElement_li(NavBar._CAT_GAME_MASTER, "hazards.html", "Hazards");
-		this._addElement_li(NavBar._CAT_GAME_MASTER, "relicgifts.html", "Relic Gifts");
+		this._addElement_li(NavBar._CAT_GAME_MASTER, "events.html", "Eventos");
+		this._addElement_li(NavBar._CAT_GAME_MASTER, "hazards.html", "Perigos");
+		this._addElement_li(NavBar._CAT_GAME_MASTER, "relicgifts.html", "Dons de Relíquia");
 
 		this._addElement_dropdown(null, NavBar._CAT_REFERENCES);
-		this._addElement_li(NavBar._CAT_REFERENCES, "actions.html", "Actions");
-		this._addElement_li(NavBar._CAT_REFERENCES, "bestiary.html", "Bestiary");
-		this._addElement_li(NavBar._CAT_REFERENCES, "conditions.html", "Conditions");
-		this._addElement_li(NavBar._CAT_REFERENCES, "items.html", "Items");
-		this._addElement_li(NavBar._CAT_REFERENCES, "spells.html", "Spells");
+		this._addElement_li(NavBar._CAT_REFERENCES, "actions.html", "Ações");
+		this._addElement_li(NavBar._CAT_REFERENCES, "bestiary.html", "Bestiário");
+		this._addElement_li(NavBar._CAT_REFERENCES, "conditions.html", "Condições");
+		this._addElement_li(NavBar._CAT_REFERENCES, "items.html", "Itens");
+		this._addElement_li(NavBar._CAT_REFERENCES, "spells.html", "Magias");
 		this._addElement_divider(NavBar._CAT_REFERENCES);
-		this._addElement_li(NavBar._CAT_REFERENCES, "afflictions.html", "Afflictions");
-		this._addElement_li(NavBar._CAT_REFERENCES, "rituals.html", "Rituals");
-		this._addElement_li(NavBar._CAT_REFERENCES, "vehicles.html", "Vehicles");
+		this._addElement_li(NavBar._CAT_REFERENCES, "afflictions.html", "Aflições");
+		this._addElement_li(NavBar._CAT_REFERENCES, "rituals.html", "Rituais");
+		this._addElement_li(NavBar._CAT_REFERENCES, "vehicles.html", "Veículos");
 		this._addElement_divider(NavBar._CAT_REFERENCES);
-		this._addElement_li(NavBar._CAT_REFERENCES, "deities.html", "Deities");
-		this._addElement_li(NavBar._CAT_REFERENCES, "languages.html", "Languages");
-		this._addElement_li(NavBar._CAT_REFERENCES, "places.html", "Planes & Places");
-		this._addElement_li(NavBar._CAT_REFERENCES, "organizations.html", "Organizations");
+		this._addElement_li(NavBar._CAT_REFERENCES, "deities.html", "Divindades");
+		this._addElement_li(NavBar._CAT_REFERENCES, "languages.html", "Idiomas");
+		this._addElement_li(NavBar._CAT_REFERENCES, "places.html", "Planos e Lugares");
+		this._addElement_li(NavBar._CAT_REFERENCES, "organizations.html", "Organizações");
 		this._addElement_divider(NavBar._CAT_REFERENCES);
-		this._addElement_li(NavBar._CAT_REFERENCES, "abilities.html", "Creature Abilities");
-		this._addElement_li(NavBar._CAT_REFERENCES, "traits.html", "Traits");
+		this._addElement_li(NavBar._CAT_REFERENCES, "abilities.html", "Habilidades de Criatura");
+		this._addElement_li(NavBar._CAT_REFERENCES, "traits.html", "Traços");
 
 		this._addElement_dropdown(null, NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "search.html", "Search");
-		this._addElement_li(NavBar._CAT_UTILITIES, "changelog.html", "Changelog");
+		this._addElement_li(NavBar._CAT_UTILITIES, "search.html", "Busca");
+		this._addElement_li(NavBar._CAT_UTILITIES, "changelog.html", "Histórico de Alterações");
 
 		this._addElement_dropdown(null, NavBar._CAT_SETTINGS);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: styleSwitcher.getActiveDayNight() === StyleSwitcher.STYLE_NIGHT ? "Day Mode" : "Night Mode",
+				html: styleSwitcher.getActiveDayNight() === StyleSwitcher.STYLE_NIGHT ? "Modo Claro" : "Modo Escuro",
 				click: (evt) => NavBar.InteractionManager._onClick_button_dayNight(evt),
 				className: "nightModeToggle",
 			},
@@ -103,45 +103,45 @@ class NavBar {
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: styleSwitcher.getActiveWide() === true ? "Disable Wide Mode" : "Enable Wide Mode (Experimental)",
+				html: styleSwitcher.getActiveWide() === true ? "Desativar Modo Amplo" : "Ativar Modo Amplo (Experimental)",
 				click: (evt) => NavBar.InteractionManager._onClick_button_wideMode(evt),
 				className: "wideModeToggle",
-				title: "This feature is unsupported. Expect bugs.",
+				title: "Este recurso é experimental e pode apresentar erros.",
 			},
 		);
 		this._addElement_divider(NavBar._CAT_SETTINGS);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Save State to File",
+				html: "Salvar Dados em Arquivo",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_saveStateFile(evt),
-				title: "Save any locally-stored data (filters, pinned entries, dice macros, etc.) to a file.",
+				title: "Salve os dados locais (filtros, entradas fixadas, macros de dados etc.) em um arquivo.",
 			},
 		);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Load State from File",
+				html: "Carregar Dados de Arquivo",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_loadStateFile(evt),
-				title: "Load previously-saved data (filters, pinned entries, dice macros, etc.) from a file.",
+				title: "Carregue dados salvos anteriormente (filtros, entradas fixadas, macros de dados etc.) de um arquivo.",
 			},
 		);
 		this._addElement_divider(NavBar._CAT_SETTINGS);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Add as App",
+				html: "Instalar Aplicativo",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_addApp(evt),
-				title: "Add the site to your home screen.",
+				title: "Adicione o site à sua tela inicial.",
 			},
 		);
 		this._addElement_divider(NavBar._CAT_SETTINGS);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Clear Offline Cache",
+				html: "Limpar Cache Offline",
 				click: (evt) => NavBar.InteractionManager._pOnClick_button_clearOffline(evt),
-				title: "Clear cached site files and images.",
+				title: "Limpe os arquivos e imagens do site armazenados em cache.",
 			},
 		);
 	}
@@ -166,7 +166,7 @@ class NavBar {
 		const campaigns = (index.adventure || []).slice().sort((a, b) => SortUtil.ascSort(a.published || "9999", b.published || "9999") || SortUtil.ascSortLower(a.name, b.name));
 		if (campaigns.length) {
 			this._addElement_divider(NavBar._CAT_CAMPAIGNS);
-			this._addElement_label(NavBar._CAT_CAMPAIGNS, "Campaigns", {isAddDateSpacer: true});
+			this._addElement_label(NavBar._CAT_CAMPAIGNS, "Campanhas", {isAddDateSpacer: true});
 		}
 		const seenYears = new Set();
 		campaigns.forEach(campaign => {
@@ -175,7 +175,7 @@ class NavBar {
 			const isNewYear = year != null && !seenYears.has(year);
 			if (year != null) seenYears.add(year);
 			if (year == null && !seenYears.has("undated")) {
-				this._addElement_label(NavBar._CAT_CAMPAIGNS, "Undated", {isAddDateSpacer: true});
+				this._addElement_label(NavBar._CAT_CAMPAIGNS, "Sem data", {isAddDateSpacer: true});
 				seenYears.add("undated");
 			}
 			this._addElement_li(
@@ -572,14 +572,14 @@ NavBar._ALT_CHILD_PAGES = {
 	"book.html": "books.html",
 	"adventure.html": "adventures.html",
 };
-NavBar._CAT_RULES = "Rules";
+NavBar._CAT_RULES = "Regras";
 NavBar._CAT_BOOKS = "Books";
-NavBar._CAT_PLAYER = "Player";
-NavBar._CAT_GAME_MASTER = "Game Master";
-NavBar._CAT_CAMPAIGNS = "Campaigns";
-NavBar._CAT_REFERENCES = "References";
-NavBar._CAT_UTILITIES = "Utilities";
-NavBar._CAT_SETTINGS = "Settings";
+NavBar._CAT_PLAYER = "Jogador";
+NavBar._CAT_GAME_MASTER = "Mestre";
+NavBar._CAT_CAMPAIGNS = "Campanhas";
+NavBar._CAT_REFERENCES = "Referências";
+NavBar._CAT_UTILITIES = "Utilitários";
+NavBar._CAT_SETTINGS = "Configurações";
 
 NavBar._navbar = null;
 

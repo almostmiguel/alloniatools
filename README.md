@@ -15,6 +15,8 @@ Install dependencies with `npm install`, build with `npm run build`, and start t
 
 Setting content and rules are maintained directly in `data/`. Campaigns and sessions use the existing adventure data format; see [the campaign guide](docs/campaigns.md) for the example and instructions.
 
+Trait categories use stable internal IDs and Portuguese display labels. See [Trait categories](docs/traits.md) for the supported IDs, assignment guidance, and regeneration commands.
+
 All reference text is edited in `data/quickreference.json`. Its `quickReference` array contains the full reader's sections, and `pageReferences` contains the topic notes shown in each page's Quick Reference tab. Run `npm run gen-all` after editing reader sections; `data/generated/bookref-quick.json` is generated output and should not be edited directly. Rules Glossary entries, including variant rules and subsystems, live in `data/variantrules.json`.
 
 Ancestries and versatile heritages can include an `images` array, such as `"images": ["img/heritages/cambiante.webp"]`. Add the corresponding image file at that path. Images appear only in the Images tab, not beside Mechanics or Info text. Legacy `summary.images` is also supported.

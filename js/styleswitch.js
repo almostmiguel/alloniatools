@@ -25,7 +25,7 @@ class StyleSwitcher {
 		const setMethod = style === StyleSwitcher._STYLE_DAY ? htmlClasses.remove : htmlClasses.add;
 		setMethod.call(htmlClasses, StyleSwitcher.NIGHT_CLASS);
 
-		StyleSwitcher._setButtonText("nightModeToggle", `${style === StyleSwitcher._STYLE_DAY ? "Night" : "Day"} Mode`);
+		StyleSwitcher._setButtonText("nightModeToggle", style === StyleSwitcher._STYLE_DAY ? "Modo Escuro" : "Modo Claro");
 
 		this.currentStylesheet = style;
 		StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_DAY_NIGHT, this.currentStylesheet);
@@ -93,7 +93,7 @@ class StyleSwitcher {
 				document.documentElement.appendChild(eleScript);
 			}
 		}
-		StyleSwitcher._setButtonText("wideModeToggle", isActive ? "Disable Wide Mode" : "Enable Wide Mode (Experimental)");
+		StyleSwitcher._setButtonText("wideModeToggle", isActive ? "Desativar Modo Amplo" : "Ativar Modo Amplo (Experimental)");
 		StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_WIDE, isActive);
 	}
 

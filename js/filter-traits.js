@@ -3,7 +3,7 @@
 class PageFilterTraits extends PageFilter {
 	constructor () {
 		super();
-		this._categoryFilter = new Filter({header: "Categories"});
+		this._categoryFilter = new Filter({header: "Categories", displayHeader: "Categorias", items: Object.keys(Parser.TRAIT_CATEGORIES), displayFn: Parser.traitCategoryToFull, isSortByDisplayItems: true});
 	}
 
 	mutateForFilters (it) {

@@ -278,29 +278,29 @@ class RenderMap {
 					});
 			});
 
-		const $btnZoomMinus = $(`<button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-zoom-out"/> Zoom Out</button>`)
+		const $btnZoomMinus = $(`<button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-zoom-out"/> Diminuir Zoom</button>`)
 			.click(() => zoomChange("out"));
 
-		const $btnZoomPlus = $(`<button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-zoom-in"/> Zoom In</button>`)
+		const $btnZoomPlus = $(`<button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-zoom-in"/> Aumentar Zoom</button>`)
 			.click(() => zoomChange("in"));
 
-		const $btnZoomReset = $(`<button class="btn btn-xs btn-default" title="Reset Zoom"><span class="glyphicon glyphicon-search" type="submit"/> Reset Zoom</button>`)
+		const $btnZoomReset = $(`<button class="btn btn-xs btn-default" title="Redefinir Zoom"><span class="glyphicon glyphicon-search" type="submit"/> Redefinir Zoom</button>`)
 			.click(() => zoomChange("reset"));
 
-		const $btnHelp = $(`<button class="btn btn-xs btn-default ml-auto mr-4" title="Help"><span class="glyphicon glyphicon-info-sign"/> Help</button>`)
+		const $btnHelp = $(`<button class="btn btn-xs btn-default ml-auto mr-4" title="Ajuda"><span class="glyphicon glyphicon-info-sign"/> Ajuda</button>`)
 			.click(() => {
 				const {$modalInner} = UiUtil.getShowModal({
-					title: "Help",
+					title: "Ajuda",
 					isMinHeight0: true,
 				});
 
 				$modalInner.append(`
-					<p><i>Use of the &quot;Open as Popup Window&quot; button in the window title bar is recommended.</i></p>
+					<p><i>Recomendamos usar o botão &quot;Abrir em Janela Separada&quot; na barra de título.</i></p>
 					<ul>
-						<li>Left-click to open an area as a new window.</li>
-						<li><kbd>SHIFT</kbd>-left-click to jump to an area.</li>
-						<li>Right-click and drag to pan.</li>
-						<li><kbd>CTRL</kbd>-scroll to zoom.</li>
+						<li>Clique com o botão esquerdo para abrir uma área em outra janela.</li>
+						<li><kbd>SHIFT</kbd> + clique esquerdo para ir a uma área.</li>
+						<li>Clique com o botão direito e arraste para mover.</li>
+						<li><kbd>CTRL</kbd> + rolagem para ajustar o zoom.</li>
 					</ul>
 				`);
 			});

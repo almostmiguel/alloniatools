@@ -111,7 +111,7 @@ Renderer.dice = {
 			Renderer.dice._showBox();
 			Renderer.dice._$iptRoll.focus();
 		});
-		const $head = $(`<div class="head-roll"><span class="hdr-roll">Dice Roller</span><span class="delete-icon glyphicon glyphicon-remove"></span></div>`)
+		const $head = $(`<div class="head-roll"><span class="hdr-roll">Rolador de Dados</span><span class="delete-icon glyphicon glyphicon-remove"></span></div>`)
 			.on("click", () => {
 				if (!Renderer.dice._panel) Renderer.dice._hideBox();
 			});
@@ -565,7 +565,7 @@ Renderer.dice = {
 						${opts.fnGetMessage ? `<span class="message">${opts.fnGetMessage(result)}</span>` : ""}
 					</div>
 					<div class="out-roll-item-button-wrp">
-						<button title="Copy to input" class="btn btn-default btn-xs btn-copy-roll" onclick="Renderer.dice._$iptRoll.val('${tree.toString().replace(/\s+/g, "")}'); Renderer.dice._$iptRoll.focus()"><span class="glyphicon glyphicon-pencil"></span></button>
+						<button title="Copiar para o Campo" class="btn btn-default btn-xs btn-copy-roll" onclick="Renderer.dice._$iptRoll.val('${tree.toString().replace(/\s+/g, "")}'); Renderer.dice._$iptRoll.focus()"><span class="glyphicon glyphicon-pencil"></span></button>
 					</div>
 				</div>`);
 
@@ -574,7 +574,7 @@ Renderer.dice = {
 			Renderer.dice._scrollBottom();
 			return result;
 		} else {
-			$out.append(`<div class="out-roll-item">Invalid input! Try &quot;/help&quot;</div>`);
+			$out.append(`<div class="out-roll-item">Entrada inválida! Tente &quot;/help&quot;</div>`);
 			Renderer.dice._scrollBottom();
 			return null;
 		}
@@ -630,46 +630,46 @@ Renderer.dice = {
 		if (com === "/help" || com === "/h") {
 			Renderer.dice._showMessage(
 				`<ul class="rll__list">
-					<li>Keep highest; <span class="out-roll-item-code">4d6kh3</span></li>
-					<li>Drop lowest; <span class="out-roll-item-code">4d6dl1</span></li>
-					<li>Drop highest; <span class="out-roll-item-code">3d4dh1</span></li>
-					<li>Keep lowest; <span class="out-roll-item-code">3d4kl1</span></li>
+					<li>Manter os maiores; <span class="out-roll-item-code">4d6kh3</span></li>
+					<li>Descartar os menores; <span class="out-roll-item-code">4d6dl1</span></li>
+					<li>Descartar os maiores; <span class="out-roll-item-code">3d4dh1</span></li>
+					<li>Manter os menores; <span class="out-roll-item-code">3d4kl1</span></li>
 
-					<li>Reroll equal; <span class="out-roll-item-code">2d4r1</span></li>
-					<li>Reroll less; <span class="out-roll-item-code">2d4r&lt;2</span></li>
-					<li>Reroll less or equal; <span class="out-roll-item-code">2d4r&lt;=2</span></li>
-					<li>Reroll greater; <span class="out-roll-item-code">2d4r&gt;2</span></li>
-					<li>Reroll greater equal; <span class="out-roll-item-code">2d4r&gt;=3</span></li>
+					<li>Rerrolar valores iguais; <span class="out-roll-item-code">2d4r1</span></li>
+					<li>Rerrolar valores menores; <span class="out-roll-item-code">2d4r&lt;2</span></li>
+					<li>Rerrolar valores menores ou iguais; <span class="out-roll-item-code">2d4r&lt;=2</span></li>
+					<li>Rerrolar valores maiores; <span class="out-roll-item-code">2d4r&gt;2</span></li>
+					<li>Rerrolar valores maiores ou iguais; <span class="out-roll-item-code">2d4r&gt;=3</span></li>
 
-					<li>Explode equal; <span class="out-roll-item-code">2d4x4</span></li>
-					<li>Explode less; <span class="out-roll-item-code">2d4x&lt;2</span></li>
-					<li>Explode less or equal; <span class="out-roll-item-code">2d4x&lt;=2</span></li>
-					<li>Explode greater; <span class="out-roll-item-code">2d4x&gt;2</span></li>
-					<li>Explode greater equal; <span class="out-roll-item-code">2d4x&gt;=3</span></li>
+					<li>Explodir valores iguais; <span class="out-roll-item-code">2d4x4</span></li>
+					<li>Explodir valores menores; <span class="out-roll-item-code">2d4x&lt;2</span></li>
+					<li>Explodir valores menores ou iguais; <span class="out-roll-item-code">2d4x&lt;=2</span></li>
+					<li>Explodir valores maiores; <span class="out-roll-item-code">2d4x&gt;2</span></li>
+					<li>Explodir valores maiores ou iguais; <span class="out-roll-item-code">2d4x&gt;=3</span></li>
 
-					<li>Count Successes equal; <span class="out-roll-item-code">2d4cs=4</span></li>
-					<li>Count Successes less; <span class="out-roll-item-code">2d4cs&lt;2</span></li>
-					<li>Count Successes less or equal; <span class="out-roll-item-code">2d4cs&lt;=2</span></li>
-					<li>Count Successes greater; <span class="out-roll-item-code">2d4cs&gt;2</span></li>
-					<li>Count Successes greater equal; <span class="out-roll-item-code">2d4cs&gt;=3</span></li>
+					<li>Contar sucessos iguais; <span class="out-roll-item-code">2d4cs=4</span></li>
+					<li>Contar sucessos menores; <span class="out-roll-item-code">2d4cs&lt;2</span></li>
+					<li>Contar sucessos menores ou iguais; <span class="out-roll-item-code">2d4cs&lt;=2</span></li>
+					<li>Contar sucessos maiores; <span class="out-roll-item-code">2d4cs&gt;2</span></li>
+					<li>Contar sucessos maiores ou iguais; <span class="out-roll-item-code">2d4cs&gt;=3</span></li>
 
-					<li>Margin of Success; <span class="out-roll-item-code">2d4ms=4</span></li>
+					<li>Margem de Sucesso; <span class="out-roll-item-code">2d4ms=4</span></li>
 
-					<li>Dice pools; <span class="out-roll-item-code">{2d8, 1d6}</span></li>
-					<li>Dice pools with modifiers; <span class="out-roll-item-code">{1d20+7, 10}kh1</span></li>
+					<li>Conjuntos de dados; <span class="out-roll-item-code">{2d8, 1d6}</span></li>
+					<li>Conjuntos de dados com modificadores; <span class="out-roll-item-code">{1d20+7, 10}kh1</span></li>
 
-					<li>Rounding; <span class="out-roll-item-code">floor(1.5)</span>, <span class="out-roll-item-code">ceil(1.5)</span>, <span class="out-roll-item-code">round(1.5)</span></li>
+					<li>Arredondamento; <span class="out-roll-item-code">floor(1.5)</span>, <span class="out-roll-item-code">ceil(1.5)</span>, <span class="out-roll-item-code">round(1.5)</span></li>
 
-					<li>Average; <span class="out-roll-item-code">avg(8d6)</span></li>
+					<li>Média; <span class="out-roll-item-code">avg(8d6)</span></li>
 
-					<li>Other functions; <span class="out-roll-item-code">sign(1d6-3)</span>, <span class="out-roll-item-code">abs(1d6-3)</span>, ...etc.</li>
+					<li>Outras funções; <span class="out-roll-item-code">sign(1d6-3)</span>, <span class="out-roll-item-code">abs(1d6-3)</span>, ...etc.</li>
 				</ul>
 				Up and down arrow keys cycle input history.<br>
-				Anything before a colon is treated as a label (<span class="out-roll-item-code">Fireball: 6d6</span>)<br>
-Use <span class="out-roll-item-code">${PREF_MACRO} list</span> to list saved macros.<br>
-				Use <span class="out-roll-item-code">${PREF_MACRO} add myName 1d2+3</span> to add (or update) a macro. Macro names should not contain spaces or hashes.<br>
-				Use <span class="out-roll-item-code">${PREF_MACRO} remove myName</span> to remove a macro.<br>
-				Use <span class="out-roll-item-code">#myName</span> to roll a macro.<br>
+				Anything before a colon is treated as a label (<span class="out-roll-item-code">Bola de Fogo: 6d6</span>)<br>
+Use <span class="out-roll-item-code">${PREF_MACRO} list</span> para listar as macros salvas.<br>
+				Use <span class="out-roll-item-code">${PREF_MACRO} add myName 1d2+3</span> para adicionar ou atualizar uma macro. Os nomes não devem conter espaços nem cerquilhas.<br>
+				Use <span class="out-roll-item-code">${PREF_MACRO} remove myName</span> para remover uma macro.<br>
+				Use <span class="out-roll-item-code">#myName</span> para rolar uma macro.<br>
 				Use <span class="out-roll-item-code">/clear</span> to clear the roller.`,
 				Renderer.dice.SYSTEM_USER,
 			);
@@ -858,7 +858,7 @@ Renderer.dice.lang = {
 					break;
 				case ")":
 					self.parenCount--;
-					if (self.parenCount < 0) throw new Error(`Syntax error: closing <code>)</code> without opening <code>(</code>`);
+					if (self.parenCount < 0) throw new Error(`Syntax error: closing <code>)</code> sem abrir <code>(</code>`);
 					this._lex3_outputToken(self);
 					self.token = ")";
 					this._lex3_outputToken(self);
@@ -871,7 +871,7 @@ Renderer.dice.lang = {
 					break;
 				case "}":
 					self.braceCount--;
-					if (self.parenCount < 0) throw new Error(`Syntax error: closing <code>}</code> without opening <code>(</code>`);
+					if (self.parenCount < 0) throw new Error(`Syntax error: closing <code>}</code> sem abrir <code>(</code>`);
 					this._lex3_outputToken(self);
 					self.token = "}";
 					this._lex3_outputToken(self);
@@ -1009,7 +1009,7 @@ Renderer.dice.lang = {
 	_parse3_expect (self, symbol) {
 		const accepted = this._parse3_accept(self, symbol);
 		if (accepted) return accepted;
-		if (self.sym) throw new Error(`Unexpected input: Expected <code>${symbol}</code> but found <code>${self.sym}</code>`);
+		if (self.sym) throw new Error(`Unexpected input: Expected <code>${symbol}</code> mas encontrou <code>${self.sym}</code>`);
 		else throw new Error(`Unexpected end of input: Expected <code>${symbol}</code>`);
 	},
 

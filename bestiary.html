@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
 	<meta charset="utf-8">
@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
-	<title>Bestiary - Pf2eTools</title>
+	<title>Bestiário - Pf2eTools</title>
 
 	<!--PF2ETOOLS_SCRIPT_HEAD_ANCHOR-->
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -18,7 +18,7 @@
 
 	<!-- Embeds -->
 	<meta content="Pf2eTools" property="og:site_name">
-	<meta content="Bestiary" property="og:title">
+	<meta content="Bestiário" property="og:title">
 	<meta content="https://pf2etools.com/favicon-256x256.png" property="og:image">
 
 	<!-- Favicons -->
@@ -159,8 +159,8 @@
 	<header class="hidden-xs hidden-sm page__header">
 		<div class="container">
 
-			<h1 class="page__title">Bestiary</h1>
-			<p class="page__subtitle">Search by name on the left, click creature name to display on the right.</p>
+			<h1 class="page__title">Bestiário</h1>
+			<p class="page__subtitle">Busque pelo nome à esquerda e selecione uma criatura para exibir à direita.</p>
 		</div>
 	</header>
 	<nav class="container page__nav" id="navigation">
@@ -178,14 +178,14 @@
 							class="glyphicon glyphicon-search" type="submit"></span></div>
 						<div class="lst__wrp-search-visible no-events flex-vh-center"></div>
 					</div>
-					<button class="btn btn-xs btn-default" title="Reset Selection" id="reset"><span class="glyphicon glyphicon-refresh"></span></button>
+					<button class="btn btn-xs btn-default" title="Redefinir Seleção" id="reset"><span class="glyphicon glyphicon-refresh"></span></button>
 				</div>
 
 				<div id="filtertools" class="sortlabel input-group input-group--bottom flex no-shrink">
-					<button class="col-4-2 sort btn btn-default btn-xs" data-sort="name">Name<span class="caret_wrp"></span></button>
-					<button class="col-4-1 sort btn btn-default btn-xs" data-sort="type">Type<span class="caret_wrp"></span></button>
-					<button class="col-1-7 sort btn btn-default btn-xs" data-sort="level">Level<span class="caret_wrp"></span></button>
-					<button class="col-2 sort btn btn-default btn-xs ve-grow" data-sort="source">Source<span class="caret_wrp"></span></button>
+					<button class="col-4-2 sort btn btn-default btn-xs" data-sort="name">Nome<span class="caret_wrp"></span></button>
+					<button class="col-4-1 sort btn btn-default btn-xs" data-sort="type">Tipo<span class="caret_wrp"></span></button>
+					<button class="col-1-7 sort btn btn-default btn-xs" data-sort="level">Nível<span class="caret_wrp"></span></button>
+					<button class="col-2 sort btn btn-default btn-xs ve-grow" data-sort="source">Fonte<span class="caret_wrp"></span></button>
 				</div>
 
 				<ul class="list list--stats creatures">
@@ -199,33 +199,33 @@
 						<div class="flex-h-right">
 							<div class="btn-group mr-3">
 								<button class="btn btn-primary ecgen_rng" data-mode="moderate" style="min-width: 135px;"
-										title="Randomly generate a Moderate-threat encounter">Random Moderate
+										title="Gerar encontro aleatório de ameaça moderada">Sortear Moderada
 								</button>
 								<button class="btn btn-primary dropdown-toggle" id="ecgen_dropdown_rng">
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li class="ecgen_rng_trivial" title="Randomly generate a Trivial-threat encounter"><a href="#">Random Trivial</a></li>
-									<li class="ecgen_rng_low" title="Randomly generate a Low-threat encounter"><a href="#">Random Low</a></li>
-									<li class="ecgen_rng_moderate" title="Randomly generate a Moderate-threat encounter"><a href="#">Random Moderate</a></li>
-									<li class="ecgen_rng_severe" title="Randomly generate a Severe-threat encounter"><a href="#">Random Severe</a></li>
-									<li class="ecgen_rng_extreme" title="Randomly generate an Extreme-threat encounter"><a href="#">Random Extreme</a></li>
+									<li class="ecgen_rng_trivial" title="Gerar encontro aleatório de ameaça trivial"><a href="#">Sortear Trivial</a></li>
+									<li class="ecgen_rng_low" title="Gerar encontro aleatório de ameaça baixa"><a href="#">Sortear Baixa</a></li>
+									<li class="ecgen_rng_moderate" title="Gerar encontro aleatório de ameaça moderada"><a href="#">Sortear Moderada</a></li>
+									<li class="ecgen_rng_severe" title="Gerar encontro aleatório de ameaça severa"><a href="#">Sortear Severa</a></li>
+									<li class="ecgen_rng_extreme" title="Randomly generate an Extreme-threat encounter"><a href="#">Sortear Extrema</a></li>
 								</ul>
 							</div>
 
 							<div class="btn-group">
 								<button class="btn btn-primary ecgen_adj" data-mode="moderate" style="min-width: 135px;"
-										title="djust the current encounter difficulty to a Moderate-threat encounter">Adjust to Moderate
+										title="Ajustar o encontro atual para ameaça moderada">Ajustar para Moderada
 								</button>
 								<button class="btn btn-primary dropdown-toggle" id="ecgen_dropdown_adj">
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li class="ecgen_adj_trivial" title="Adjust the current encounter difficulty to a Trivial-threat encounter"><a href="#">Adjust to Trivial</a></li>
-									<li class="ecgen_adj_low" title="Adjust the current encounter difficulty to a Low-threat encounter"><a href="#">Adjust to Low</a></li>
-									<li class="ecgen_adj_moderate" title="Adjust the current encounter difficulty to a Moderate-threat encounter"><a href="#">Adjust to Moderate</a></li>
-									<li class="ecgen_adj_severe" title="Adjust the current encounter difficulty to a Severe-threat encounter"><a href="#">Adjust to Severe</a></li>
-									<li class="ecgen_adj_extreme" title="Adjust the current encounter difficulty to an Extreme-threat encounter"><a href="#">Adjust to Extreme</a></li>
+									<li class="ecgen_adj_trivial" title="Ajustar o encontro atual para ameaça trivial"><a href="#">Ajustar para Trivial</a></li>
+									<li class="ecgen_adj_low" title="Ajustar o encontro atual para ameaça baixa"><a href="#">Ajustar para Baixa</a></li>
+									<li class="ecgen_adj_moderate" title="Ajustar o encontro atual para ameaça moderada"><a href="#">Ajustar para Moderada</a></li>
+									<li class="ecgen_adj_severe" title="Ajustar o encontro atual para ameaça severa"><a href="#">Ajustar para Severa</a></li>
+									<li class="ecgen_adj_extreme" title="Ajustar o encontro atual para ameaça extrema"><a href="#">Ajustar para Extrema</a></li>
 								</ul>
 							</div>
 						</div>
@@ -236,11 +236,11 @@
 
 				<div id="sublistcontainer" class="sublist sublist--resizable">
 					<div id="sublistsort" class="sortlabel btn-group sublist__wrp-cols">
-						<button class="col-5 sort btn btn-default btn-xs" data-sort="name">Name <span class="caret_wrp"></span></button>
-						<button class="col-3-8 sort btn btn-default btn-xs ecgen__hidden" data-sort="type">Type <span class="caret_wrp"></span></button>
+						<button class="col-5 sort btn btn-default btn-xs" data-sort="name">Nome <span class="caret_wrp"></span></button>
+						<button class="col-3-8 sort btn btn-default btn-xs ecgen__hidden" data-sort="type">Tipo <span class="caret_wrp"></span></button>
 						<button class="col-3-8 sort btn btn-default btn-xs ecgen__visible" disabled>&nbsp;</button>
-						<button class="col-1-2 sort btn btn-default btn-xs" data-sort="level">Level <span class="caret_wrp"></span></button>
-						<button class="col-2 sort btn btn-default btn-xs" data-sort="count">Number <span class="caret_wrp"></span></button>
+						<button class="col-1-2 sort btn btn-default btn-xs" data-sort="level">Nível <span class="caret_wrp"></span></button>
+						<button class="col-2 sort btn btn-default btn-xs" data-sort="count">Quantidade <span class="caret_wrp"></span></button>
 					</div>
 					<ul class="list subcreatures">
 						<!-- populate with JS -->
@@ -260,34 +260,34 @@
 				<div id="wrp-pagecontent" class="wrp-stats-table ecgen__hidden">
 					<div id="pagecontent" class="stats pf2-stat monster">
 						<div class="border"></div>
-						<div class="initial-message">Loading...</div>
+						<div class="initial-message">Carregando...</div>
 						<div class="border"></div>
 					</div>
 				</div>
 
 				<div class="text-center wrp-footer-buttons ecgen__hidden">
-					<button class="btn btn-success btn-xs" id="btn-encounterbuild">Encounter Builder</button>
-					<button class="btn btn-default btn-xs btn-profnolvl">Proficiency without Level</button>
-					<button class="btn btn-default btn-xs" id="btn-printbook">Printer View</button>
+					<button class="btn btn-success btn-xs" id="btn-encounterbuild">Construtor de Encontros</button>
+					<button class="btn btn-default btn-xs btn-profnolvl">Proficiência sem Nível</button>
+					<button class="btn btn-default btn-xs" id="btn-printbook">Visualização de Impressão</button>
 				</div>
 
 				<div class="ecgen__visible--flex-col ecgen__wrp pb-1 px-2">
-					<h3 class="mt-1 m-2">Group Info</h3>
+					<h3 class="mt-1 m-2">Informações do Grupo</h3>
 					<div class="flex">
 						<!-- LHS -->
 						<div class="w-70 ecgen__group_lhs">
 							<div class="flex ecgen__players_head_simple">
-								<div class="w-20">Players:</div>
-								<div class="w-20">Level:</div>
+								<div class="w-20">Jogadores:</div>
+								<div class="w-20">Nível:</div>
 							</div>
 
 							<div class="ecgen__players_head_advanced">
-								<div class="ecgen__player_advanced__name_head mr-1 ecgen__player_head_tall">Name</div>
+								<div class="ecgen__player_advanced__name_head mr-1 ecgen__player_head_tall">Nome</div>
 								<div class="ecgen__player_advanced_narrow text-center mr-1 ecgen__player_head_tall">
-									Level
+									Nível
 								</div>
 								<button class="btn btn-primary btn-xs ecgen__advanced_add_col"
-										onclick="encounterBuilder.addAdvancedColumn()" title="Add Column">
+										onclick="encounterBuilder.addAdvancedColumn()" title="Adicionar Coluna">
 									<span class="glyphicon glyphicon-list-alt"></span>
 								</button>
 							</div>
@@ -302,7 +302,7 @@
 							</div>
 
 							<label class="flex-v-center">
-								<div class="mr-2">Advanced Mode</div>
+								<div class="mr-2">Modo Avançado</div>
 								<input type="checkbox" class="ecgen__players_advanced">
 							</label>
 
@@ -315,32 +315,32 @@
 						<!-- RHS -->
 						<div class="w-30 text-right">
 							<div class="ecgen__trivial">Trivial: ? XP</div>
-							<div class="ecgen__low">Low: ? XP</div>
-							<div class="ecgen__moderate">Moderate: ? XP</div>
-							<div class="ecgen__severe">Severe: ? XP</div>
-							<div class="ecgen__extreme">Extreme: ? XP</div>
+							<div class="ecgen__low">Baixa: ? XP</div>
+							<div class="ecgen__moderate">Moderada: ? XP</div>
+							<div class="ecgen__severe">Severa: ? XP</div>
+							<div class="ecgen__extreme">Extrema: ? XP</div>
 						</div>
 					</div>
 
 					<hr class="ecgen__req_creatures hr-1">
 
 					<div class="ecgen__req_creatures">
-						<p class="ecgen__overlevel"><i>WARNING: Encounter includes over-leveled creatures.</i></p>
+						<p class="ecgen__overlevel"><i>AVISO: o encontro inclui criaturas de nível elevado.</i></p>
 						<div class="flex h3">
-							<span class="ecgen__rating">Difficulty: ?</span>
-							<span class="ecgen__xp_total" style="font-size: 0.66em; margin-left: auto !important;">Encounter XP: ?</span>
+							<span class="ecgen__rating">Dificuldade: ?</span>
+							<span class="ecgen__xp_total" style="font-size: 0.66em; margin-left: auto !important;">XP do Encontro: ?</span>
 						</div>
 					</div>
 
 					<hr class="hr-1">
 					<div class="flex-v-center mb-2">
-						<button class="btn btn-primary btn-xs mr-2 ecgen__sv_url">Save to URL</button>
+						<button class="btn btn-primary btn-xs mr-2 ecgen__sv_url">Salvar no Link</button>
 						<div class="btn-group flex-v-center mr-2">
-							<button class="btn btn-primary btn-xs ecgen__sv_file">Save to File</button>
-							<button class="btn btn-primary btn-xs ecgen__ld_file">Load from File</button>
+							<button class="btn btn-primary btn-xs ecgen__sv_file">Salvar em Arquivo</button>
+							<button class="btn btn-primary btn-xs ecgen__ld_file">Carregar de Arquivo</button>
 						</div>
-						<button class="btn btn-primary btn-xs mr-2 ecgen__sv_text">Copy as Text</button>
-						<button class="btn btn-danger btn-xs ecgen__reset">Reset</button>
+						<button class="btn btn-primary btn-xs mr-2 ecgen__sv_text">Copiar como Texto</button>
+						<button class="btn btn-danger btn-xs ecgen__reset">Redefinir</button>
 					</div>
 
 					<div class="flex">

@@ -34,15 +34,15 @@ async function testNavigation () {
 	nav._addElement_button = () => {};
 	nav.highlightCurrentPage = () => {};
 	nav._initElements();
-	assert(dropdowns.some(dropdown => dropdown.parent === "Game Master" && dropdown.name === "Campaigns" && dropdown.opts.isSide));
-	assert(!dropdowns.some(dropdown => dropdown.parent == null && dropdown.name === "Campaigns"));
+	assert(dropdowns.some(dropdown => dropdown.parent === "Mestre" && dropdown.name === "Campanhas" && dropdown.opts.isSide));
+	assert(!dropdowns.some(dropdown => dropdown.parent == null && dropdown.name === "Campanhas"));
 	for (const link of links) assert(fs.existsSync(path.join(__dirname, "..", link.page)), `Missing navigation page: ${link.page}`);
 
 	links.length = 0;
 	await nav._initCampaignElements();
 	assert.deepStrictEqual(links.map(link => link.opts.aHash), ["earlier", "later", "newer", "undated"]);
 	assert.deepStrictEqual(links.map(link => link.opts.date), [2024, null, 2025, null]);
-	assert(links.every(link => link.parent === "Campaigns" && link.opts.isSide && link.opts.isAddDateSpacer));
+	assert(links.every(link => link.parent === "Campanhas" && link.opts.isSide && link.opts.isAddDateSpacer));
 	assert.strictEqual(links[0].opts.color, "#5ab3a8");
 	assert.strictEqual(nav._getCampaignColor(campaigns[1]), nav._getCampaignColor({...campaigns[1], name: "Renamed"}));
 	assert(!nav._getCampaignColor({id: "unsafe", color: "red; invalid"}).includes("invalid"));

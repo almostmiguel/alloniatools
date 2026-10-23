@@ -6,6 +6,7 @@ class PageFilterOptionalFeatures extends PageFilter {
 		this._typeFilter = new Filter({header: "Feature Type"});
 		this._levelFilter = new Filter({
 			header: "Level",
+			displayFn: value => value.replace(/\bLevel\b/g, "Nível"),
 			itemSortFn: SortUtil.ascSortNumericalSuffix,
 			nests: [],
 		});
