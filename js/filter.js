@@ -38,7 +38,7 @@ class PageFilter {
 		opts = opts || {};
 		if (!Renderer.trait.TRAITS) return;
 		(entity[opts.traitProp] || []).forEach(trt => {
-			const lookup = Renderer.trait.TRAITS[Parser.getTraitName(trt).toLowerCase()];
+			const lookup = Renderer.trait.getTrait(trt);
 			if (!lookup || !lookup.implies) return;
 			Object.keys(lookup.implies).filter(it => opts.entityTypes.includes(it))
 				.forEach(key => Object.entries(lookup.implies[key]).forEach(([prop, values]) => {
@@ -1282,6 +1282,8 @@ class Filter extends FilterBase {
 		this._displayFn = (value, ...args) => Parser.uiToFull(opts.displayFn ? opts.displayFn(value, ...args) : value);
 		this._displayFnMini = opts.displayFnMini ? (value, ...args) => Parser.uiToFull(opts.displayFnMini(value, ...args)) : null;
 		this._displayFnTitle = opts.displayFnTitle;
+		// Optional data-driven normalization for legacy saved values and filter links.
+		this._itemKeyFn = opts.itemKeyFn;
 		this._selFn = opts.selFn;
 		this._selFnCache = null;
 		this._deselFn = opts.deselFn;
@@ -1323,7 +1325,14 @@ class Filter extends FilterBase {
 		if (filterState && filterState[this.header]) {
 			const toLoad = filterState[this.header];
 			this.setBaseStateFromLoaded(toLoad);
-			Object.assign(this._state, toLoad.state);
+			if (this._itemKeyFn) {
+				const state = {};
+				Object.entries(toLoad.state || {}).forEach(([key, value]) => {
+					const canonical = this._getStateKey(key) || key;
+					if (!state[canonical] || value) state[canonical] = value;
+				});
+				Object.assign(this._state, state);
+			} else Object.assign(this._state, toLoad.state);
 			Object.assign(this._nestsHidden, toLoad.nestsHidden);
 		}
 	}
@@ -1435,7 +1444,7 @@ class Filter extends FilterBase {
 
 					vals.forEach(v => {
 						const [statePropLower, state] = v.split("=");
-						const stateProp = Object.keys(this._state).find(k => k.toLowerCase() === statePropLower);
+						const stateProp = this._getStateKey(statePropLower);
 						if (stateProp) nxtState[stateProp] = Number(state);
 					});
 					this._setState(nxtState);
@@ -1466,11 +1475,18 @@ class Filter extends FilterBase {
 	setFromValues (values) {
 		if (values[this.header]) {
 			Object.keys(this._state).forEach(k => this._state[k] = 0);
-			Object.assign(this._state, values[this.header]);
+			if (this._itemKeyFn) Object.entries(values[this.header]).forEach(([key, value]) => this.setValue(key, value));
+			else Object.assign(this._state, values[this.header]);
 		}
 	}
 
-	setValue (k, v) { this._state[k] = v; }
+	_getStateKey (key) {
+		const canonical = this._itemKeyFn ? this._itemKeyFn(key) : key;
+		return Object.keys(this._state).find(k => k.toLowerCase() === `${canonical}`.toLowerCase())
+			|| (this._itemKeyFn ? `${canonical}` : undefined);
+	}
+
+	setValue (k, v) { this._state[this._itemKeyFn ? this._getStateKey(k) || k : k] = v; }
 
 	_resetNestsHidden () {
 		if (this._nests) Object.entries(this._nests).forEach(([nestName, nestMeta]) => this._nestsHidden[nestName] = !!nestMeta.isHidden);
@@ -3746,7 +3762,7 @@ class TraitsFilter extends MultiFilter {
 
 		categories.filter(k => !k.startsWith("_")).sort(filterSortFn).forEach(cat => {
 			if (opts.discardCategories[cat]) return;
-			filtersByCat[cat] = new Filter({header: cat, displayHeader: Parser.traitCategoryToFull(cat), ...filterOpts[cat]});
+			filtersByCat[cat] = new Filter({header: cat, displayHeader: Parser.traitCategoryToFull(cat), itemKeyFn: Renderer.trait.getCanonicalName, ...filterOpts[cat]});
 			opts.filters.push(filtersByCat[cat]);
 		});
 
@@ -3781,13 +3797,15 @@ class TraitsFilter extends MultiFilter {
 			const len = item.length;
 			for (let i = 0; i < len; ++i) this.addItem(item[i]);
 		} else {
-			this._getTraitCategories(item).forEach(cat => {
-				this._getFilterFromCategory(cat).addItem(item)
+			const name = Renderer.trait.getCanonicalName(item);
+			this._getTraitCategories(name).forEach(cat => {
+				this._getFilterFromCategory(cat).addItem(name)
 			});
 		}
 	}
 
 	toDisplay (boxState, entryValArr) {
+		entryValArr = (entryValArr || []).map(trait => Renderer.trait.getCanonicalName(trait));
 		const results = [];
 		for (let i = this._filters.length - 1; i >= 0; --i) {
 			const f = this._filters[i];

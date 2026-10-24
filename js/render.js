@@ -6335,6 +6335,12 @@ Renderer.trait = {
 			trait.categories.forEach(c => cats.add(c));
 			loading[trait.name.toLowerCase()] = trait;
 		}
+		// Aliases are data, not translated display labels. Resolve them to one trait.
+		loading._aliases = {};
+		traits.forEach(trait => (trait.alias || []).forEach(alias => {
+			const key = Parser.getTraitName(alias).toLowerCase();
+			if (!loading[key]) loading._aliases[key] = trait.name.toLowerCase();
+		}));
 		loading._categories = Array.from(cats);
 		Renderer.trait.TRAITS = loading;
 	},
@@ -6343,7 +6349,17 @@ Renderer.trait = {
 		const name = Parser.getTraitName(trait).toLowerCase();
 		const traits = Renderer.trait.TRAITS || {};
 		if (traits[name]) return traits[name];
+		if (traits._aliases?.[name]) return traits[traits._aliases[name]];
+		// Also support callers supplying trait definitions directly, without preloading.
+		if (!traits._aliases) {
+			const match = Object.values(traits).find(it => it?.alias?.some(alias => Parser.getTraitName(alias).toLowerCase() === name));
+			if (match) return match;
+		}
 		return (Parser.TRAIT_NAMES_BY_KEY[Parser.getTraitKey(trait)] || []).map(alias => traits[alias.toLowerCase()]).find(Boolean);
+	},
+
+	getCanonicalName (trait) {
+		return Renderer.trait.getTrait(trait)?.name || Parser.getTraitName(trait);
 	},
 
 	getDefaultRarity () {

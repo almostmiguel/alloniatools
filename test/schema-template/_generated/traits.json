@@ -11,9 +11,6 @@
 			"description": "Any Trait in the game.",
 			"anyOf": [
 				{
-					"$ref": "#/definitions/variableTraits"
-				},
-				{
 					"$ref": "#/definitions/poisonTrait"
 				},
 				{
@@ -24,9 +21,6 @@
 				},
 				{
 					"$ref": "#/definitions/classSpecificTrait"
-				},
-				{
-					"$ref": "#/definitions/weaponTrait"
 				},
 				{
 					"$ref": "#/definitions/classTrait"
@@ -45,6 +39,9 @@
 				},
 				{
 					"$ref": "#/definitions/traditionTrait"
+				},
+				{
+					"$ref": "#/definitions/weaponTrait"
 				},
 				{
 					"$ref": "#/definitions/equipmentTrait"
@@ -81,7 +78,7 @@
 				"construto",
 				"dragão",
 				"elemental",
-				"espiritual",
+				"espírito",
 				"eversão",
 				"fada",
 				"fungo",
@@ -91,7 +88,9 @@
 				"limo",
 				"monitor",
 				"morto-vivo",
-				"plant"
+				"planta",
+				"vitalidade",
+				"vitality"
 			]
 		},
 		"monsterTrait": {
@@ -99,19 +98,22 @@
 			"description": "A list of all monster traits.",
 			"enum": [
 				"acéfalo",
+				"ácido",
+				"água",
+				"alquímico",
 				"anfíbio",
 				"anjo",
 				"aquático",
+				"ar",
+				"arcano",
 				"arconte",
 				"azata",
-				"convocado",
 				"daemon",
 				"demônio",
 				"diabo",
 				"dinossauro",
 				"estriga",
-				"etéreo",
-				"lacaio"
+				"etéreo"
 			]
 		},
 		"energyTrait": {
@@ -119,13 +121,16 @@
 			"description": "A list of all energy traits.",
 			"enum": [
 				"ácido",
+				"cold",
 				"eletricidade",
 				"eversão",
 				"fogo",
 				"força",
 				"frio",
+				"sonic",
 				"sônico",
-				"vitalidade"
+				"vitalidade",
+				"vitality"
 			]
 		},
 		"elementalTrait": {
@@ -134,6 +139,7 @@
 			"enum": [
 				"água",
 				"ar",
+				"earth",
 				"fogo",
 				"madeira",
 				"metal",
@@ -146,13 +152,15 @@
 			"enum": [
 				"água",
 				"ar",
+				"earth",
 				"eversão",
 				"fogo",
 				"madeira",
 				"metal",
 				"sombra",
 				"terra",
-				"vitalidade"
+				"vitalidade",
+				"vitality"
 			]
 		},
 		"ancestryTrait": {
@@ -167,6 +175,7 @@
 				"gnomo",
 				"goblin",
 				"hryngar",
+				"human",
 				"humano",
 				"leshy",
 				"nefilim",
@@ -180,18 +189,27 @@
 			"enum": [
 				"alquímico",
 				"apogeu",
+				"armadilha",
 				"bomba",
 				"cajado",
 				"consumível",
 				"elixir",
-				"extradimensional",
+				"illusion",
 				"ilusão",
-				"mágico",
 				"óleo",
 				"pergaminho",
 				"poção",
+				"poison",
 				"varinha",
 				"veneno"
+			]
+		},
+		"weaponTrait": {
+			"type": "string",
+			"description": "A list of all weapon traits.",
+			"enum": [
+				"alquímico",
+				"não letal"
 			]
 		},
 		"traditionTrait": {
@@ -217,13 +235,18 @@
 			"type": "string",
 			"description": "A list of all feat traits.",
 			"enum": [
-				"aditivo",
+				"archetype",
 				"arquétipo",
 				"dedicação",
+				"dedication",
 				"genealogia",
+				"general",
 				"geral",
+				"lineage",
+				"multiclass",
 				"multiclasse",
-				"perícia"
+				"perícia",
+				"skill"
 			]
 		},
 		"mechanicsTrait": {
@@ -231,40 +254,73 @@
 			"description": "A list of all mechanics traits.",
 			"enum": [
 				"ataque",
+				"attack",
 				"aura",
+				"colateral",
 				"concentração",
+				"concentrate",
 				"consagração",
+				"consecration",
 				"convocação",
+				"convocado",
 				"cura",
 				"detecção",
+				"detection",
+				"downtime",
 				"emoção",
+				"emotion",
 				"escuridão",
 				"estrutura",
 				"exploração",
+				"exploration",
 				"extradimensional",
+				"fear",
+				"floreio",
+				"flourish",
+				"foco",
+				"fortune",
 				"fortúnio",
+				"healing",
+				"illusion",
 				"ilusão",
 				"incapacitação",
+				"incapacitation",
 				"infortúnio",
+				"lacaio",
+				"light",
+				"linguistic",
+				"linguístico",
 				"luz",
+				"magical",
+				"mágico",
+				"manipulate",
 				"manuseio",
 				"medo",
 				"mental",
 				"morfia",
+				"morph",
 				"morte",
+				"move",
 				"movimento",
 				"polimorfia",
+				"polymorph",
 				"possessão",
 				"predição",
+				"prediction",
+				"press",
+				"pressão",
 				"profano",
 				"recesso",
 				"revelação",
+				"revelation",
 				"sagrado",
 				"santificado",
+				"secret",
 				"secreto",
 				"sono",
 				"sutil",
 				"teleportação",
+				"teleportation",
 				"truque",
 				"vidência"
 			]
@@ -274,7 +330,7 @@
 			"description": "A list of all sense traits.",
 			"enum": [
 				"auditivo",
-				"linguístico",
+				"auditory",
 				"olfativo",
 				"visual"
 			]
@@ -283,23 +339,22 @@
 			"type": "string",
 			"description": "A list of all class traits.",
 			"enum": [
+				"bard",
 				"bardo",
 				"bruxo",
+				"cleric",
 				"clérigo",
+				"druid",
 				"druida",
+				"fighter",
 				"guerreiro",
 				"ladino",
 				"mago",
-				"patrulheiro"
-			]
-		},
-		"weaponTrait": {
-			"type": "string",
-			"description": "A list of all weapon traits.",
-			"enum": [
-				"bomba",
-				"colateral",
-				"não letal"
+				"patrulheiro",
+				"ranger",
+				"rogue",
+				"witch",
+				"wizard"
 			]
 		},
 		"classSpecificTrait": {
@@ -308,23 +363,26 @@
 			"enum": [
 				"aditivo",
 				"composição",
-				"floreio",
-				"foco",
 				"fúria",
 				"moldamagia",
 				"postura",
-				"pressão",
-				"sortilégio"
+				"sortilégio",
+				"spellshape",
+				"stance"
 			]
 		},
 		"rarityTrait": {
 			"type": "string",
 			"description": "A list of all rarity traits.",
 			"enum": [
+				"common",
 				"comum",
 				"incomum",
+				"rare",
 				"raro",
-				"único"
+				"uncommon",
+				"único",
+				"unique"
 			]
 		},
 		"afflictionTrait": {
@@ -333,6 +391,7 @@
 			"enum": [
 				"doença",
 				"maldição",
+				"poison",
 				"veneno"
 			]
 		},
@@ -341,17 +400,8 @@
 			"description": "A list of all poison traits.",
 			"enum": [
 				"contato",
+				"poison",
 				"veneno"
-			]
-		},
-		"variableTraits": {
-			"type": "string",
-			"description": "A list of all traits with variable values, enclosed in <these 'brackets'>.",
-			"anyOf": [
-				{
-					"type": "string",
-					"pattern": "^aditivo <.*>$"
-				}
 			]
 		}
 	}

@@ -27,7 +27,8 @@
 			"source": "PC1",
 			"page": 452,
 			"categories": [
-				"energy"
+				"energy",
+				"monster"
 			],
 			"entries": [
 				"Efeitos com este traço causam dano de ácido. Criaturas com este traço têm uma conexão com o ácido mágico."
@@ -39,6 +40,7 @@
 			"page": 452,
 			"categories": [
 				"elemental",
+				"monster",
 				"planar"
 			],
 			"entries": [
@@ -62,7 +64,9 @@
 			"source": "PC1",
 			"page": 452,
 			"categories": [
-				"equipment"
+				"equipment",
+				"monster",
+				"weapon"
 			],
 			"entries": [
 				"Itens alquímicos são alimentados por reações de reagentes alquímicos. A menos que seja indicado o contrário, eles não são mágicos e não irradiam uma aura mágica."
@@ -129,6 +133,7 @@
 			"page": 452,
 			"categories": [
 				"elemental",
+				"monster",
 				"planar"
 			],
 			"entries": [
@@ -141,6 +146,7 @@
 			"source": "PC1",
 			"page": 452,
 			"categories": [
+				"monster",
 				"tradition"
 			],
 			"entries": [
@@ -164,6 +170,7 @@
 			"source": "PC1",
 			"page": 453,
 			"categories": [
+				"equipment",
 				"hazard"
 			],
 			"entries": [
@@ -174,6 +181,9 @@
 			"name": "Arquétipo",
 			"source": "PC1",
 			"page": 453,
+			"alias": [
+				"Archetype"
+			],
 			"categories": [
 				"feat"
 			],
@@ -185,6 +195,9 @@
 			"name": "Ataque",
 			"source": "PC1",
 			"page": 453,
+			"alias": [
+				"Attack"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -196,6 +209,9 @@
 			"name": "Auditivo",
 			"source": "PC1",
 			"page": 453,
+			"alias": [
+				"Auditory"
+			],
 			"categories": [
 				"sense"
 			],
@@ -229,6 +245,9 @@
 			"name": "Bardo",
 			"source": "PC1",
 			"page": 453,
+			"alias": [
+				"Bard"
+			],
 			"categories": [
 				"class"
 			],
@@ -252,8 +271,7 @@
 			"source": "PC1",
 			"page": 453,
 			"categories": [
-				"equipment",
-				"weapon"
+				"equipment"
 			],
 			"entries": [
 				"Bombas alquímicas combinam componentes alquímicos voláteis que explodem quando a bomba atinge uma criatura ou objeto. A maioria delas causa dano, embora algumas produzam outros efeitos."
@@ -263,6 +281,9 @@
 			"name": "Bruxo",
 			"source": "PC1",
 			"page": 453,
+			"alias": [
+				"Witch"
+			],
 			"categories": [
 				"class"
 			],
@@ -296,6 +317,9 @@
 			"name": "Clérigo",
 			"source": "PC1",
 			"page": 454,
+			"alias": [
+				"Cleric"
+			],
 			"categories": [
 				"class"
 			],
@@ -318,6 +342,9 @@
 			"name": "Comum",
 			"source": "PC1",
 			"page": 11,
+			"alias": [
+				"Common"
+			],
 			"categories": [
 				"rarity"
 			],
@@ -330,6 +357,9 @@
 			"name": "Concentração",
 			"source": "PC1",
 			"page": 454,
+			"alias": [
+				"Concentrate"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -341,6 +371,9 @@
 			"name": "Consagração",
 			"source": "PC1",
 			"page": 454,
+			"alias": [
+				"Consecration"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -445,7 +478,7 @@
 			"source": "PC1",
 			"page": 301,
 			"categories": [
-				"monster"
+				"mechanics"
 			],
 			"entries": [
 				"Uma criatura convocada por uma magia ou efeito adquire o traço convocado. Criaturas convocadas não podem convocar outras, criar coisas de valor ou conjurar magias que exigem um custo. Elas têm o traço {@trait lacaio}. Se uma criatura convocada tentar {@action Conjurar Magia||Conjurar uma Magia} de um círculo maior do que o que a convocou, a magia de convocação se sobrecarrega, fazendo com que essa magia falhe e a convocação encerre. Caso contrário, a criatura convocada usa as habilidades padrão para o seu tipo. Ela geralmente atacará os seus inimigos com a melhor das suas capacidades. Se você puder se comunicar com ela, poderá tentar comandá-la, mas o Mestre determinará até que ponto ela seguirá seus comandos.",
@@ -456,6 +489,9 @@
 			"name": "Cura",
 			"source": "PC1",
 			"page": 454,
+			"alias": [
+				"Healing"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -478,6 +514,9 @@
 			"name": "Dedicação",
 			"source": "PC1",
 			"page": 215,
+			"alias": [
+				"Dedication"
+			],
 			"categories": [
 				"feat"
 			],
@@ -500,6 +539,9 @@
 			"name": "Detecção",
 			"source": "PC1",
 			"page": 455,
+			"alias": [
+				"Detection"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -577,6 +619,9 @@
 			"name": "Druida",
 			"source": "PC1",
 			"page": 455,
+			"alias": [
+				"Druid"
+			],
 			"categories": [
 				"class"
 			],
@@ -632,6 +677,9 @@
 			"name": "Emoção",
 			"source": "PC1",
 			"page": 455,
+			"alias": [
+				"Emotion"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -651,7 +699,7 @@
 			]
 		},
 		{
-			"name": "Espiritual",
+			"name": "Espírito",
 			"source": "PC1",
 			"page": 456,
 			"categories": [
@@ -713,6 +761,9 @@
 			"name": "Exploração",
 			"source": "PC1",
 			"page": 456,
+			"alias": [
+				"Exploration"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -725,8 +776,7 @@
 			"source": "PC1",
 			"page": 456,
 			"categories": [
-				"mechanics",
-				"equipment"
+				"mechanics"
 			],
 			"entries": [
 				"Este efeito ou item cria um espaço extradimensional. Um efeito extradimensional colocado dentro de outro espaço extradimensional deixa de funcionar até ser removido."
@@ -747,8 +797,11 @@
 			"name": "Floreio",
 			"source": "PC1",
 			"page": 153,
+			"alias": [
+				"Flourish"
+			],
 			"categories": [
-				"class-specific"
+				"mechanics"
 			],
 			"entries": [
 				"Ações com este traço são técnicas especiais que exigem bastante esforço para serem realizadas com frequência. Você pode usar apenas 1 ação com o traço floreio por rodada."
@@ -759,7 +812,7 @@
 			"source": "PC1",
 			"page": 456,
 			"categories": [
-				"class-specific"
+				"mechanics"
 			],
 			"entries": [
 				"Uma magia que pode ser conjurada gastando 1 Ponto de Foco e é automaticamente elevada até metade do seu nível (arredondado para cima)."
@@ -794,6 +847,9 @@
 			"name": "Fortúnio",
 			"source": "PC1",
 			"page": 401,
+			"alias": [
+				"Fortune"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -805,6 +861,9 @@
 			"name": "Frio",
 			"source": "PC1",
 			"page": 457,
+			"alias": [
+				"Cold"
+			],
 			"categories": [
 				"energy"
 			],
@@ -824,20 +883,12 @@
 			]
 		},
 		{
-			"name": "Fúria",
-			"source": "PC1",
-			"page": 457,
-			"categories": [
-				"class-specific"
-			],
-			"entries": [
-				"Você precisa estar em fúria para usar habilidades com o traço fúria, e elas encerram automaticamente quando a fúria acabar."
-			]
-		},
-		{
 			"name": "Genealogia",
 			"source": "PC1",
 			"page": 457,
+			"alias": [
+				"Lineage"
+			],
 			"categories": [
 				"feat"
 			],
@@ -849,6 +900,9 @@
 			"name": "Geral",
 			"source": "PC1",
 			"page": 457,
+			"alias": [
+				"General"
+			],
 			"categories": [
 				"feat"
 			],
@@ -893,6 +947,9 @@
 			"name": "Guerreiro",
 			"source": "PC1",
 			"page": 457,
+			"alias": [
+				"Fighter"
+			],
 			"categories": [
 				"class"
 			],
@@ -904,6 +961,9 @@
 			"name": "Humano",
 			"source": "PC1",
 			"page": 457,
+			"alias": [
+				"Human"
+			],
 			"categories": [
 				"ancestry"
 			],
@@ -937,6 +997,9 @@
 			"name": "Ilusão",
 			"source": "PC1",
 			"page": 457,
+			"alias": [
+				"Illusion"
+			],
 			"categories": [
 				"mechanics",
 				"equipment"
@@ -949,6 +1012,9 @@
 			"name": "Incapacitação",
 			"source": "PC1",
 			"page": 457,
+			"alias": [
+				"Incapacitation"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -960,6 +1026,9 @@
 			"name": "Incomum",
 			"source": "PC1",
 			"page": 11,
+			"alias": [
+				"Uncommon"
+			],
 			"categories": [
 				"rarity"
 			],
@@ -995,7 +1064,7 @@
 			"source": "PC1",
 			"page": 301,
 			"categories": [
-				"monster"
+				"mechanics"
 			],
 			"entries": [
 				"Lacaios são criaturas que servem diretamente a ourtas. Seus lacaios agem no seu turno de combate, uma vez por turno, quando você gastar uma ação para emitir comandos. Para um companheiro animal, você {@action Comanda um Animal}; para um lacaio que é um efeito de magia ou item mágico, como um lacaio {@trait convocado}, você {@action Sustentar||Sustenta} o efeito; se não for especificado outra coisa, você emite um comando verbal como uma ação única com os traços {@trait auditivo} e {@trait concentração}. Se não receberem comandos, os lacaios não fazem nenhuma ação, exceto se defender ou escapar de perigos óbvios. Se ficarem sem ordens por tempo suficiente, normalmente 1 minuto, lacaios {@trait acéfalo||acéfalos} geralmente não agem, animais seguem seus instintos e sapientes agem como bem entenderem. Você só pode ter quatro lacaios sob seu controle ao mesmo tempo.",
@@ -1006,6 +1075,9 @@
 			"name": "Ladino",
 			"source": "PC1",
 			"page": 458,
+			"alias": [
+				"Rogue"
+			],
 			"categories": [
 				"class"
 			],
@@ -1039,8 +1111,11 @@
 			"name": "Linguístico",
 			"source": "PC1",
 			"page": 458,
+			"alias": [
+				"Linguistic"
+			],
 			"categories": [
-				"sense"
+				"mechanics"
 			],
 			"entries": [
 				"Efeitos com este traço dependem da compreensão linguística. Efeitos linguísticos que visem uma criatura funcionam apenas se o alvo compreender o idioma que está sendo usado."
@@ -1050,6 +1125,9 @@
 			"name": "Luz",
 			"source": "PC1",
 			"page": 458,
+			"alias": [
+				"Light"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1074,8 +1152,11 @@
 			"name": "Mágico",
 			"source": "PC1",
 			"page": 459,
+			"alias": [
+				"Magical"
+			],
 			"categories": [
-				"equipment"
+				"mechanics"
 			],
 			"entries": [
 				"Coisas com o traço mágico estão imbuídas com energia mágicas que não estão ligadas a uma tradição de magia específica. Alguns itens ou efeitos estão intimamente ligados a uma tradição. Nesses casos, o item possui o traço {@trait arcano}, {@trait divino}, {@trait ocultista} ou {@trait primal}, em vez do traço mágico. Qualquer um desses traços indica que o item é mágico."
@@ -1085,6 +1166,9 @@
 			"name": "Mago",
 			"source": "PC1",
 			"page": 459,
+			"alias": [
+				"Wizard"
+			],
 			"categories": [
 				"class"
 			],
@@ -1107,6 +1191,9 @@
 			"name": "Manuseio",
 			"source": "PC1",
 			"page": 459,
+			"alias": [
+				"Manipulate"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1129,6 +1216,9 @@
 			"name": "Medo",
 			"source": "PC1",
 			"page": 459,
+			"alias": [
+				"Fear"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1164,6 +1254,9 @@
 			"name": "Moldamagia",
 			"source": "PC1",
 			"page": 302,
+			"alias": [
+				"Spellshape"
+			],
 			"categories": [
 				"class-specific"
 			],
@@ -1186,6 +1279,9 @@
 			"name": "Morfia",
 			"source": "PC1",
 			"page": 301,
+			"alias": [
+				"Morph"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1219,6 +1315,9 @@
 			"name": "Movimento",
 			"source": "PC1",
 			"page": 459,
+			"alias": [
+				"Move"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1230,6 +1329,9 @@
 			"name": "Multiclasse",
 			"source": "PC1",
 			"page": 459,
+			"alias": [
+				"Multiclass"
+			],
 			"categories": [
 				"feat"
 			],
@@ -1318,6 +1420,9 @@
 			"name": "Patrulheiro",
 			"source": "PC1",
 			"page": 460,
+			"alias": [
+				"Ranger"
+			],
 			"categories": [
 				"class"
 			],
@@ -1329,6 +1434,9 @@
 			"name": "Perícia",
 			"source": "PC1",
 			"page": 460,
+			"alias": [
+				"Skill"
+			],
 			"categories": [
 				"feat"
 			],
@@ -1337,7 +1445,7 @@
 			]
 		},
 		{
-			"name": "Plant",
+			"name": "Planta",
 			"source": "PC1",
 			"page": 460,
 			"categories": [
@@ -1362,6 +1470,9 @@
 			"name": "Polimorfia",
 			"source": "PC1",
 			"page": 301,
+			"alias": [
+				"Polymorph"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1388,6 +1499,9 @@
 			"name": "Postura",
 			"source": "PC1",
 			"page": 153,
+			"alias": [
+				"Stance"
+			],
 			"categories": [
 				"class-specific"
 			],
@@ -1399,6 +1513,9 @@
 			"name": "Predição",
 			"source": "PC1",
 			"page": 461,
+			"alias": [
+				"Prediction"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1410,8 +1527,11 @@
 			"name": "Pressão",
 			"source": "PC1",
 			"page": 153,
+			"alias": [
+				"Press"
+			],
 			"categories": [
-				"class-specific"
+				"mechanics"
 			],
 			"entries": [
 				"Ações com este traço permitem que você faça ataques em sequência. Elas só podem ser usadas se você estiver sob efeito de uma penalidade por ataques múltiplos. Você não pode usar ações de pressão fora do seu turno, mesmo se usar a atividade {@action Preparar}.",
@@ -1444,6 +1564,9 @@
 			"name": "Raro",
 			"source": "PC1",
 			"page": 11,
+			"alias": [
+				"Rare"
+			],
 			"categories": [
 				"rarity"
 			],
@@ -1456,6 +1579,9 @@
 			"name": "Recesso",
 			"source": "PC1",
 			"page": 461,
+			"alias": [
+				"Downtime"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1467,6 +1593,9 @@
 			"name": "Revelação",
 			"source": "PC1",
 			"page": 462,
+			"alias": [
+				"Revelation"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1500,6 +1629,9 @@
 			"name": "Secreto",
 			"source": "PC1",
 			"page": 462,
+			"alias": [
+				"Secret"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1523,6 +1655,9 @@
 			"name": "Sônico",
 			"source": "PC1",
 			"page": 462,
+			"alias": [
+				"Sonic"
+			],
 			"categories": [
 				"energy"
 			],
@@ -1567,6 +1702,9 @@
 			"name": "Teleportação",
 			"source": "PC1",
 			"page": 463,
+			"alias": [
+				"Teleportation"
+			],
 			"categories": [
 				"mechanics"
 			],
@@ -1578,6 +1716,9 @@
 			"name": "Terra",
 			"source": "PC1",
 			"page": 463,
+			"alias": [
+				"Earth"
+			],
 			"categories": [
 				"elemental",
 				"planar"
@@ -1602,6 +1743,9 @@
 			"name": "Único",
 			"source": "PC1",
 			"page": 11,
+			"alias": [
+				"Unique"
+			],
 			"categories": [
 				"rarity"
 			],
@@ -1625,6 +1769,9 @@
 			"name": "Veneno",
 			"source": "PC1",
 			"page": 463,
+			"alias": [
+				"Poison"
+			],
 			"categories": [
 				"affliction",
 				"poison",
@@ -1661,7 +1808,11 @@
 			"name": "Vitalidade",
 			"source": "PC1",
 			"page": 463,
+			"alias": [
+				"Vitality"
+			],
 			"categories": [
+				"creature type",
 				"energy",
 				"planar"
 			],
@@ -1673,14 +1824,23 @@
 		{
 			"name": "Aditivo",
 			"source": "PC2",
-			"variable": true,
 			"page": 61,
 			"entries": [
 				"Talentos com o traço aditivo permitem que você gaste ações para adicionar substâncias especiais a bombas ou elixires. Você pode adicionar apenas um aditivo a um único item alquímico, e tentar adicionar outro estraga o item. Normalmente, você só pode usar ações com o traço aditivo ao criar um item {@trait infuso} {@trait alquímico}, e algumas só podem ser usadas com a ação {@action Quick Alchemy}. O traço aditivo é sempre seguido por um nível, como {@trait aditivo <2>}. Um aditivo soma seu nível ao nível do item alquímico que você está modificando; o resultado é o novo nível da mistura. O nível do item resultante da mistura não pode ser superior ao seu nível de alquimia avançada."
 			],
 			"categories": [
-				"class-specific",
-				"feat"
+				"class-specific"
+			]
+		},
+		{
+			"name": "Fúria",
+			"source": "PC2",
+			"page": 75,
+			"categories": [
+				"class-specific"
+			],
+			"entries": [
+				"Você precisa estar em fúria para usar habilidades com o traço fúria, e elas encerram automaticamente quando a fúria acabar."
 			]
 		},
 		{
@@ -1722,7 +1882,7 @@
 			"source": "GMC",
 			"page": 244,
 			"categories": [
-				"weapon"
+				"mechanics"
 			],
 			"entries": [
 				"Algumas armas e efeitos, como as bombas alquímicas, possuem o traço colateral. Ao usar uma arma ou efeito com este traço, você não soma seu modificador de Força ao teste de dano. Uma arma ou efeito com o traço colateral causa o dano colateral indicado ao alvo em caso de falha, sucesso ou sucesso crítico, e a todas as outras criaturas em um raio de 1,5 metros do alvo em caso de sucesso ou sucesso crítico. Em caso de falha crítica, a arma ou o efeito erra completamente, não causando dano algum. Some o dano colateral ao dano inicial contra o alvo antes de aplicar a resistência ou fraqueza do alvo. Você não multiplica o dano colateral em um acerto crítico"

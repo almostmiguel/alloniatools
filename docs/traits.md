@@ -30,6 +30,12 @@ Categories can overlap. For example, a trait can belong to both `elemental` and 
 
 Ancestry and class feat filters depend on `ancestry` and `class`. Rarity detection and sorting depend on `rarity`. Uncategorized or unknown traits fall back to `mechanics` for grouping. Categories do not automatically apply rules effects or turn a spell into a cantrip.
 
+## Nomes alternativos e filtros de talentos
+
+Use `alias` na definição de um traço para reconhecer referências antigas sem criar outra opção no filtro. Por exemplo, `"name": "Auditivo", "alias": ["Auditory"], "categories": ["sense"]` faz as duas grafias usarem o mesmo traço Auditivo, na categoria Sentido. O nome exibido e as categorias vêm sempre dessa definição; os aliases não dependem do dicionário de tradução da interface.
+
+Nos talentos, a seção **Classes** reúne os traços de classe e os arquétipos associados a essas classes. Bardo aparece uma única vez, abrangendo talentos de classe e de seu arquétipo multiclasse. O filtro **Tipo** continua permitindo separar Classe de Arquétipo. Arquétipos que não representam uma classe permanecem na seção Arquétipo.
+
 After editing names or categories, regenerate validation:
 
 ```sh

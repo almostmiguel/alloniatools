@@ -312,11 +312,9 @@ class ClassesPage extends BaseComponent {
 		let names = this._getActiveSubclasses().map(it => it.name);
 		names.push(...this._getActiveSubclasses().map(it => it.traits).filter(Boolean).flat())
 		names.push(this.activeClass.name);
+		const selected = new Set(names.map(name => Renderer.trait.getCanonicalName(name).toLowerCase()));
 		Object.keys(this._featFilter._classFilter.getValues()[this._featFilter._classFilter.header]).forEach(key => {
-			if (!key.startsWith("_")) this._featFilter._classFilter.setValue(key, 0)
-		});
-		names.forEach(name => {
-			this._featFilter._classFilter.setValue(name, 1)
+			if (!key.startsWith("_")) this._featFilter._classFilter.setValue(key, selected.has(key.toLowerCase()) ? 1 : 0);
 		});
 		this._handleFeatFilterChange();
 	}

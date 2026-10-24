@@ -12,8 +12,8 @@ class PageFilterFeats extends PageFilter {
 		});
 		this._typeFilter = new Filter({ header: "Type", selFn: opts.typeDeselFn });
 		this._ancestryFilter = new Filter({ header: "Ancestry & Heritage", displayHeader: "Ancestralidade" });
-		this._archetypeFilter = new Filter({ header: "Archetype", items: ["Archetype"] });
-		this._classFilter = new Filter({ header: "Class", displayHeader: "Classe" });
+		this._archetypeFilter = new Filter({ header: "Archetype" });
+		this._classFilter = new Filter({ header: "Class", displayHeader: "Classes", itemKeyFn: Renderer.trait.getCanonicalName });
 		this._skillFilter = new Filter({ header: "Skill" });
 		/* Unused, for the future
 		this._skillTrainedFilter = new Filter({ header: "Trained" });
@@ -55,8 +55,18 @@ class PageFilterFeats extends PageFilter {
 		feat._fSources = SourceFilter.getCompleteFilterSources(feat);
 		feat._slPrereq = Renderer.stripTags(feat.prerequisites || `\u2014`).uppercaseFirst();
 		if (feat.prerequisiteArray) feat._slPrereq = Renderer.utils.getPrerequisiteHtml(feat.prerequisite, {isSkipPrefix: true, isListMode: true});
-		feat._fTraits = feat.traits.map(t => Parser.getTraitName(t));
+		feat._fTraits = [...new Set((feat.traits || []).map(t => Renderer.trait.getCanonicalName(t)))];
 		if (!feat._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "rarity")).some(Boolean)) feat._fTraits.push(Renderer.trait.getDefaultRarity());
+		feat._fClass = Renderer.trait.filterTraitsByCats(feat._fTraits, ["class"]);
+		feat._fArchetype = [];
+		// Class archetypes belong to the same class selector as ordinary class feats.
+		// Their feat type remains Archetype, so those two kinds can still be separated.
+		const archetypes = Array.isArray(feat._featType.archetype) ? feat._featType.archetype : [];
+		archetypes.forEach(name => {
+			if (Renderer.trait.isTraitInCategory(name, "class")) feat._fClass.push(Renderer.trait.getCanonicalName(name));
+			else feat._fArchetype.push(name);
+		});
+		feat._fClass = [...new Set(feat._fClass)];
 
 		feat._fType = [];
 		if (Renderer.trait.filterTraitsByCats(feat._fTraits, ["ancestry"]).length) feat._fType.push("Ancestry");
@@ -92,11 +102,11 @@ class PageFilterFeats extends PageFilter {
 
 		this._typeFilter.addItem(feat._fType);
 		this._traitsFilter.addItem(feat._fTraits);
-		if (typeof (feat._featType.archetype) !== "boolean") this._archetypeFilter.addItem(feat._featType.archetype);
+		this._archetypeFilter.addItem(feat._fArchetype);
 		if (typeof (feat._featType.skill) !== "boolean") this._skillFilter.addItem(feat._featType.skill);
 
 		this._ancestryFilter.addItem(Renderer.trait.filterTraitsByCats(feat._fTraits, ["ancestry"]));
-		this._classFilter.addItem(Renderer.trait.filterTraitsByCats(feat._fTraits, ["class"]));
+		this._classFilter.addItem(feat._fClass);
 
 		if (feat._fTime != null) this._timeFilter.addItem(feat._fTime);
 		this._sourceFilter.addItem(feat._fSources);
@@ -124,8 +134,8 @@ class PageFilterFeats extends PageFilter {
 			ft._fType,
 			ft.level,
 			ft._fTraits, // Ancestry should be in the traits
-			ft._featType.archetype,
-			ft._fTraits, // Class as well
+			ft._fArchetype,
+			ft._fClass,
 			ft._featType.skill,
 			ft._fTime,
 			ft._fTraits,

@@ -3205,7 +3205,7 @@
 			},
 			"level": 4,
 			"traits": [
-				"auditory",
+				"auditivo",
 				"bard",
 				"concentrate",
 				"spellshape"
@@ -3347,7 +3347,7 @@
 			},
 			"level": 6,
 			"traits": [
-				"auditory",
+				"auditivo",
 				"bard",
 				"concentrate",
 				"spellshape"
@@ -3473,7 +3473,7 @@
 			},
 			"level": 8,
 			"traits": [
-				"auditory",
+				"auditivo",
 				"bard",
 				"concentrate",
 				"spellshape"
@@ -3535,7 +3535,7 @@
 			},
 			"level": 8,
 			"traits": [
-				"auditory",
+				"auditivo",
 				"bard",
 				"concentrate"
 			],
@@ -3590,7 +3590,7 @@
 			},
 			"level": 10,
 			"traits": [
-				"auditory",
+				"auditivo",
 				"bard",
 				"concentrate",
 				"spellshape"
@@ -3863,7 +3863,7 @@
 			},
 			"level": 14,
 			"traits": [
-				"auditory",
+				"auditivo",
 				"bard",
 				"concentrate",
 				"spellshape"
@@ -3883,7 +3883,7 @@
 			},
 			"level": 16,
 			"traits": [
-				"auditory",
+				"auditivo",
 				"bard",
 				"concentrate",
 				"spellshape"
@@ -14575,7 +14575,7 @@
 			},
 			"level": 1,
 			"traits": [
-				"auditory",
+				"auditivo",
 				"concentrate",
 				"emotion",
 				"general",

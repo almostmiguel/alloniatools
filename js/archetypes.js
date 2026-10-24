@@ -243,7 +243,8 @@ class ArchetypesPage extends BaseComponent {
 		const extraFeats = [];
 		for (const arc of archetypes) {
 			this._pageFilter.mutateForFilters(arc)
-			this._featFilter._archetypeFilter.addItem(arc.name);
+			const filter = Renderer.trait.isTraitInCategory(arc.name, "class") ? this._featFilter._classFilter : this._featFilter._archetypeFilter;
+			filter.addItem(Renderer.trait.isTraitInCategory(arc.name, "class") ? Renderer.trait.getCanonicalName(arc.name) : arc.name);
 			const isExcluded = ExcludeUtil.isExcluded(UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ARCHETYPES](arc), "archetype", arc.source);
 			this._pageFilter.addToFilters(arc, isExcluded);
 			if (arc.extraFeats) {
@@ -308,12 +309,14 @@ class ArchetypesPage extends BaseComponent {
 	}
 
 	_setFeatArchetypeFilters () {
-		let names = [];
-		names.push(this.activeArchetype.name);
-		Object.keys(this._featFilter._archetypeFilter.getValues()[this._featFilter._archetypeFilter.header]).forEach(key => {
-			if (!key.startsWith("_")) this._featFilter._archetypeFilter.setValue(key, 0);
+		const isClass = Renderer.trait.isTraitInCategory(this.activeArchetype.name, "class");
+		const name = isClass ? Renderer.trait.getCanonicalName(this.activeArchetype.name) : this.activeArchetype.name;
+		const target = isClass ? this._featFilter._classFilter : this._featFilter._archetypeFilter;
+		[this._featFilter._archetypeFilter, this._featFilter._classFilter].forEach(filter => {
+			Object.keys(filter.getValues()[filter.header]).forEach(key => {
+				if (!key.startsWith("_")) filter.setValue(key, filter === target && key.toLowerCase() === name.toLowerCase() ? 1 : 0);
+			});
 		});
-		names.forEach(name => { this._featFilter._archetypeFilter.setValue(name, 1) });
 		this._handleFeatFilterChange();
 	}
 

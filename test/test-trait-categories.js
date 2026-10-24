@@ -42,9 +42,10 @@ async function testTraitCategories () {
 			SourceUtil,
 			BrewUtil,
 			VeCt,
+			window: {addEventListener () {}},
 			stringMethods: {toUrlified: String.prototype.toUrlified, toTitleCase: String.prototype.toTitleCase, uppercaseFirst: String.prototype.uppercaseFirst, escapeQuotes: String.prototype.escapeQuotes},
 		});
-		const filters = vm.runInContext(`Object.assign(String.prototype, stringMethods);\n${read("js/filter.js")}\n${read("js/filter-feats.js")}\n${read("js/filter-traits.js")}\n({TraitsFilter, PageFilterFeats, PageFilterTraits});`, context);
+		const filters = vm.runInContext(`Object.assign(String.prototype, stringMethods);\n${read("js/filter.js")}\n${read("js/filter-feats.js")}\n${read("js/filter-traits.js")}\n${read("js/classes.js")}\n${read("js/archetypes.js")}\n({TraitsFilter, PageFilterFeats, PageFilterTraits, ClassesPage, ArchetypesPage});`, context);
 		const grouped = new filters.TraitsFilter({header: "Traits"});
 		assert.strictEqual(grouped.displayHeader, "Traços");
 		for (const trait of traits) grouped.addItem(trait.name);
@@ -56,8 +57,22 @@ async function testTraitCategories () {
 		specific.filterBox = {getNamespacedHashKey: key => key};
 		specific.setValue("Composição", 1);
 		assert(specific.getSubHashes().some(hash => hash.startsWith("flstclass-specific:")), "Translated labels must not change filter-link IDs.");
-		assert(grouped._filtersByCat.mechanics.getValues().mechanics["A trait not installed in the dataset"] !== undefined);
+		assert(grouped._filtersByCat.mechanics.getValues().mechanics[Parser.getTraitName("A trait not installed in the dataset")] !== undefined);
 		assert.strictEqual(grouped._filtersByCat.rarity._itemSortFn, SortUtil.ascSortRarity);
+		grouped.addItem("Uncommon");
+		grouped.addItem("incomum");
+		grouped.addItem("auditory");
+		assert.strictEqual(grouped._filtersByCat.rarity._items.filter(it => it.item === "Incomum").length, 1);
+		assert.strictEqual(grouped._filtersByCat.rarity.getValues().rarity.Uncommon, undefined);
+		grouped._filtersByCat.rarity.setStateFromLoaded({rarity: {state: {Uncommon: 1, Incomum: 0}}});
+		assert.strictEqual(grouped._filtersByCat.rarity.getValues().rarity.Incomum, 1, "An old English saved selection must resolve to the single canonical option.");
+		grouped._filtersByCat.rarity.setValue("Uncommon", 0);
+		assert(grouped._filtersByCat.sense.getValues().sense.Auditivo !== undefined);
+		assert.strictEqual(grouped._filtersByCat.mechanics.getValues().mechanics.Auditory, undefined);
+		specific.setValue("Composição", 0);
+		grouped._filtersByCat.sense.setValue("Auditivo", 1);
+		assert(grouped.toDisplay(grouped.getValues(), vm.runInContext(`["auditory"]`, context)), "Canonical trait pills must match untranslated authored traits too.");
+		assert(!grouped.toDisplay(grouped.getValues(), vm.runInContext(`["Visual"]`, context)));
 		const categoryPage = new filters.PageFilterTraits();
 		const categories = categoryPage._categoryFilter;
 		assert.strictEqual(categories.header, "Categories");
@@ -74,6 +89,52 @@ async function testTraitCategories () {
 		featPage.mutateForFilters(ancestryFeat);
 		featPage._addToFilters(ancestryFeat, false);
 		assert(featPage._ancestryFilter.getValues()["Ancestry & Heritage"]["Anão"] !== undefined);
+		const featFiles = Object.values(JSON.parse(read("data/feats/index.json")));
+		context.featJson = JSON.stringify(featFiles.flatMap(file => JSON.parse(read(`data/feats/${file}`)).feat || []));
+		const feats = vm.runInContext(`JSON.parse(featJson)`, context);
+		for (const feat of feats) {
+			featPage.mutateForFilters(feat);
+			featPage._addToFilters(feat, false);
+		}
+		assert.strictEqual(featPage._classFilter.displayHeader, "Classes");
+		featPage._classFilter.setFromSubHashState({flst: ["bard=1"]});
+		assert.strictEqual(featPage._classFilter.getValues().Class.Bardo, 1, "Existing @filter links using Class=bard must keep working.");
+		featPage._classFilter.setValue("Bard", 0);
+		for (const trait of traits.filter(trait => trait.categories.includes("class"))) {
+			assert(featPage._classFilter.getValues().Class[trait.name] !== undefined, `${trait.name}: missing from Classes.`);
+			for (const name of [trait.name, ...(trait.alias || [])]) {
+				assert.strictEqual(featPage._archetypeFilter.getValues().Archetype[name], undefined, `${name}: class names must not be duplicated under Archetype.`);
+				assert.strictEqual(featPage._traitsFilter._filtersByCat.mechanics.getValues().mechanics[name], undefined, `${name}: class names must not fall back to Mechanics.`);
+			}
+		}
+		const bardClassFeat = feats.find(feat => feat._fClass.includes("Bardo") && feat._fType.includes("Class"));
+		const bardArchetypeFeat = feats.find(feat => feat._fClass.includes("Bardo") && feat._fType.includes("Archetype"));
+		const clericFeat = feats.find(feat => feat._fClass.includes("Clérigo"));
+		assert(bardClassFeat && bardArchetypeFeat && clericFeat, "Exercise real class and multiclass-archetype feats.");
+		assert(!bardArchetypeFeat._fType.includes("Class"), "Class association must not turn archetype feats into ordinary class feats.");
+		featPage._classFilter.setValue("Bardo", 1);
+		const classState = featPage._classFilter.getValues();
+		assert(featPage._classFilter.toDisplay(classState, bardClassFeat._fClass));
+		assert(featPage._classFilter.toDisplay(classState, bardArchetypeFeat._fClass));
+		assert(!featPage._classFilter.toDisplay(classState, clericFeat._fClass));
+		featPage._typeFilter.setValue("Class", 1);
+		const typeState = featPage._typeFilter.getValues();
+		assert(featPage._typeFilter.toDisplay(typeState, bardClassFeat._fType));
+		assert(!featPage._typeFilter.toDisplay(typeState, bardArchetypeFeat._fType));
+		filters.ClassesPage.prototype._setFeatClassFilters.call({activeClass: {name: "Bard"}, _getActiveSubclasses: () => [], _featFilter: featPage, _handleFeatFilterChange () {}});
+		assert.strictEqual(featPage._classFilter.getValues().Class.Bardo, 1);
+		assert.strictEqual(featPage._classFilter.getValues().Class.Bard, undefined);
+		filters.ArchetypesPage.prototype._setFeatArchetypeFilters.call({activeArchetype: {name: "Cleric"}, _featFilter: featPage, _handleFeatFilterChange () {}});
+		assert.strictEqual(featPage._classFilter.getValues().Class["Clérigo"], 1);
+		assert.strictEqual(featPage._classFilter.getValues().Class.Bardo, 0);
+		const guild = vm.runInContext(`({name: "Guild Test", traits: ["archetype"], featType: {archetype: ["Test Guild"]}, source: "PC1", level: 2})`, context);
+		featPage.mutateForFilters(guild);
+		featPage._addToFilters(guild, false);
+		assert.deepStrictEqual(Array.from(guild._fArchetype), ["Test Guild"]);
+		assert.strictEqual(guild._fClass.length, 0);
+		filters.ArchetypesPage.prototype._setFeatArchetypeFilters.call({activeArchetype: {name: "Test Guild"}, _featFilter: featPage, _handleFeatFilterChange () {}});
+		assert.strictEqual(featPage._archetypeFilter.getValues().Archetype["Test Guild"], 1);
+		assert.strictEqual(featPage._classFilter.getValues().Class["Clérigo"], 0);
 	} finally {
 		Renderer.trait.TRAITS = savedTraits;
 		DataUtil.loadJSON = savedLoadJSON;
